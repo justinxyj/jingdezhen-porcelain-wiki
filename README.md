@@ -28,7 +28,7 @@
 3. 提交更改并发起 Pull Request
 4. 等待审核通过合并
 
-请阅读 [`CONTRIBUTING.md`](CONTRIBUTING.md) 了解详细贡献指南（即将上线）。
+请阅读 [`CONTRIBUTING.md`](CONTRIBUTING.md) 了解详细贡献指南。
 
 ---
 
