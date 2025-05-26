@@ -59,7 +59,7 @@
 
 如有合作建议或内容反馈，可通过 GitHub Issue 提交，或发送邮件至：
 
-📧 justinxyj@163.com（请替换为实际邮箱）
+📧 justinxyj@163.com
 
 ---
 
