@@ -33,6 +33,7 @@ extra_css:
 extra_javascript:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
   - https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2
+  - javascripts/runtime-config.js
   - javascripts/museum.js
   - javascripts/auth.js
 
