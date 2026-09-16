@@ -32,8 +32,8 @@ extra_css:
   - stylesheets/museum.css
 extra_javascript:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
-  - https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2
   - javascripts/runtime-config.js
+  - https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2
   - javascripts/museum.js
   - javascripts/auth.js
 
@@ -56,6 +56,7 @@ nav:
   - 互动与社区:
       - 登录 / 注册: account.md
       - 编辑知识条目: editor.md
+      - 审核中心: admin.md
       - 数据贡献指南: contribute.md
   - 历史与发展:
       - 历史总览: history/README.md
