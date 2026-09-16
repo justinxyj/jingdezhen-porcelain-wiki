@@ -37,6 +37,7 @@ extra_css:
   - stylesheets/museum-images.css
   - stylesheets/official-gallery.css
   - stylesheets/site-interactions.css
+  - stylesheets/evidence-hub.css
 extra_javascript:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
   - javascripts/runtime-config.js
@@ -46,6 +47,8 @@ extra_javascript:
   - javascripts/wiki-enhancements.js
   - javascripts/wiki-timeline.js
   - javascripts/voices-books.js
+  - javascripts/evidence-hub.js
+  - javascripts/literature-library.js
   - javascripts/museum-images.js
 
 markdown_extensions:
@@ -69,6 +72,10 @@ nav:
   - 文献研究:
       - 研究规范: research/README.md
       - 核心文献库: research/sources.md
+      - 文献总库: research/literature-library.md
+      - 考古资料与时间轴: research/archaeology.md
+      - 研究导览: research/research-hub.md
+      - 世界遗产: research/heritage.md
       - 补充文献库: research/sources-addendum.md
   - 互动与社区:
       - 登录 / 注册: account.md
