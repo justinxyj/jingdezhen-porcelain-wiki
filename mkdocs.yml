@@ -53,6 +53,9 @@ nav:
       - 器物图谱: museum/catalog.md
       - 人物数据库: museum/people.md
       - 图片库: museum/gallery.md
+  - 文献研究:
+      - 研究规范: research/README.md
+      - 核心文献库: research/sources.md
   - 互动与社区:
       - 登录 / 注册: account.md
       - 编辑知识条目: editor.md
@@ -66,6 +69,9 @@ nav:
       - 近现代: history/modern.md
   - 工艺与技术:
       - 工艺总览: craft/README.md
+      - 原料与配方: craft/raw-materials.md
+      - 成型与修整: craft/forming-and-finishing.md
+      - 窑炉与烧成: craft/kiln-firing.md
       - 青花: craft/qinghua.md
       - 粉彩: craft/fencai.md
       - 颜色釉: craft/colored-glaze.md
@@ -77,6 +83,7 @@ nav:
       - 窑址总览: kilns/README.md
       - 御窑厂遗址: kilns/imperial-kiln.md
       - 湖田窑: kilns/hutian-kiln.md
+      - 其他重要遗存: kilns/other-sites.md
       - 当代陶瓷产业空间: kilns/contemporary-ceramic-districts.md
   - 人物与传承: people/README.md
   - 现代景德镇: contemporary/README.md
