@@ -35,6 +35,7 @@ extra_css:
   - stylesheets/wiki.css
   - stylesheets/timeline-comparison.css
   - stylesheets/museum-images.css
+  - stylesheets/official-gallery.css
 extra_javascript:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
   - javascripts/runtime-config.js
