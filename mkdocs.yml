@@ -36,6 +36,7 @@ extra_css:
   - stylesheets/timeline-comparison.css
   - stylesheets/museum-images.css
   - stylesheets/official-gallery.css
+  - stylesheets/site-interactions.css
 extra_javascript:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
   - javascripts/runtime-config.js
@@ -82,7 +83,7 @@ nav:
       - 近现代: history/modern.md
   - 工艺与技术:
       - 工艺总览: craft/README.md
-      - 原料与配方: craft/raw-materials.md
+      - 原料与配方: craft/README.md
       - 成型与修整: craft/forming-and-finishing.md
       - 窑炉与烧成: craft/kiln-firing.md
       - 青花: craft/qinghua.md
