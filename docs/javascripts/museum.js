@@ -1,56 +1,50 @@
-const SITE_ROOT='/jingdezhen-porcelain-wiki/';
-const JDM_DATA={
- timeline:[
-  {slug:'eastern-jin-tang',y:'东晋—唐',title:'新平镇与昌南镇',text:'地方志建置资料记载，东晋称新平镇，唐称昌南镇。地名沿革与窑业史应分别考证。[R07]',link:'history/tang-wudai/'},
-  {slug:'five-dynasties-song',y:'五代—宋',title:'湖田窑与青白瓷',text:'湖田窑考古资料覆盖五代至宋元明多个阶段；宋代青白瓷成为景德镇研究的核心产品之一。[R01][R09][R10]',link:'history/song-yuan/'},
-  {slug:'yuan-blue-white',y:'元',title:'青花与釉下彩绘',text:'景德镇青花釉下彩绘技术在元代进入重要发展阶段，相关工艺与后来的明代青花体系相互衔接。[R16][R19]',link:'craft/qinghua/'},
-  {slug:'ming-imperial-kiln',y:'明',title:'御窑厂与官作体系',text:'御窑厂考古揭示窑炉、作坊、窑具、瓷片堆积和落选品处理等生产遗迹，显示宫廷用瓷生产具有复杂空间与组织结构。[R03]',link:'kilns/imperial-kiln/'},
-  {slug:'qing-colors',y:'清',title:'御窑、彩瓷与颜色釉',text:'清代文献《景德镇陶录》《浮梁县志》记录御窑厂、陶务、陶匠、色料等；粉彩和颜色釉研究显示清代装饰技术继续发展。[R04][R06][R25][R30]',link:'craft/fencai/'},
-  {slug:'modern-industry',y:'1909—1910',title:'近代企业与陶业教育',text:'江西瓷业公司及中国陶业学堂相关资料反映出近代景德镇陶瓷业开始引入企业组织和职业教育机制。[R32]',link:'history/modern/'},
-  {slug:'industry-transition',y:'1949—1966',title:'生产制度与科技转型',text:'这一时期景德镇陶瓷业经历生产管理和科技体系变化，成为传统手工业向现代工业转型的重要案例。[R20]',link:'history/modern/'},
-  {slug:'active-archaeology',y:'2002—2014',title:'御窑厂主动性考古',text:'北京大学等单位开展两次大规模主动性发掘，推动研究从传世器物进一步进入生产遗迹、作坊布局和制度研究。[R03]',link:'kilns/imperial-kiln/'},
-  {slug:'unesco-2026',y:'2026',title:'景德镇手工瓷业遗存列入世界遗产名录',text:'UNESCO将景德镇手工瓷业遗存列入《世界遗产名录》，系列遗产覆盖10—19世纪手工制瓷业的原料、燃料、窑炉、生产组织和城市空间。[R23]',link:'museum/kiln-map/'}
- ],
- kilns:[
-  {slug:'imperial-kiln',name:'御窑厂遗址',type:'官窑遗址',desc:'明清时期景德镇御窑生产体系的重要遗存。',lat:29.2972,lng:117.2019,link:'kilns/imperial-kiln/'},
-  {slug:'hutian-kiln',name:'湖田窑',type:'古窑址',desc:'覆盖五代至宋元明多个阶段，是景德镇窑业考古的重要地点。',lat:29.2864,lng:117.2433,link:'kilns/hutian-kiln/'},
-  {slug:'gaoling-mining',name:'高岭土矿采掘区',type:'原料遗存',desc:'高岭土原料生产体系的重要组成部分。',lat:29.4867,lng:117.5092,link:'kilns/other-sites/'},
-  {slug:'changling-stone',name:'长岭瓷石采掘区',type:'原料遗存',desc:'瓷石开采与原料运输系统的重要组成部分。',lat:29.5625,lng:117.5847,link:'kilns/other-sites/'},
-  {slug:'jiaotan-firewood',name:'焦潭柴窑燃料生产区',type:'燃料遗存',desc:'手工瓷业生产体系中的燃料资源区域。',lat:29.5844,lng:117.1708,link:'kilns/other-sites/'}
- ],
- catalog:[
-  {slug:'qingbai-porcelain',id:'JDP-001',name:'青白瓷',period:'宋—元',craft:'青白釉',tag:'湖田窑研究重点',desc:'景德镇宋代窑业研究的重要产品，湖田窑长期生产并形成丰富的器型与装饰序列。[R01][R09][R10]',fields:{器型:'碗、盘、瓶、枕等',釉色:'青白釉',生产地点:'湖田窑等景德镇窑场'}},
-  {slug:'blue-and-white',id:'JDP-002',name:'青花瓷',period:'元—明清',craft:'釉下彩',tag:'重要装饰体系',desc:'以含钴彩料在胎体上绘画后施釉烧成，元代进入重要发展阶段，明代御窑青花形成丰富的阶段性面貌。[R08][R16][R19]',fields:{装饰:'釉下钴料彩绘',烧成:'施透明釉后高温烧成',相关窑址:'御窑厂、湖田窑等'}},
-  {slug:'fencai',id:'JDP-003',name:'粉彩瓷',period:'清代',craft:'釉上彩',tag:'清代彩瓷',desc:'研究通常把粉彩的形成放在康熙晚期至雍正时期，其工艺受到传统五彩与珐琅彩等因素影响。[R25][R26]',fields:{装饰:'釉上彩绘',时代:'清代',研究重点:'彩料与绘制工艺'}},
-  {slug:'colored-glaze',id:'JDP-004',name:'颜色釉瓷',period:'明清',craft:'颜色釉',tag:'釉色体系',desc:'包括霁红、霁蓝等不同历史品种，呈色与釉层组成、化学成分和烧成工艺有关。[R29][R30]',fields:{品种:'霁红、霁蓝等',核心问题:'釉层组成、呈色与烧成工艺'}}
- ],
- people:[
-  {slug:'tang-ying',name:'唐英',era:'清代',role:'督陶官 / 陶务管理相关人物',desc:'《浮梁县志》《景德镇陶录》等资料均涉及唐英及其与景德镇御窑、陶务相关的文献，是清代景德镇陶瓷史人物数据库的核心条目。[R04][R06]',fields:{身份:'督陶官、陶务管理者',时代:'清代',关联地点:'御窑厂',文献:'《陶成纪事》《景德镇陶录》等'}}
- ],
- entries:[]
-};
-function el(id){return document.getElementById(id)}
-function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
-function path(p){return SITE_ROOT+p.replace(/^\//,'')}
-function entryUrl(type,slug){return path(`entry/?type=${encodeURIComponent(type)}&slug=${encodeURIComponent(slug)}`)}
-function editorUrl(slug){return path(`editor/${slug?`?slug=${encodeURIComponent(slug)}`:''}`)}
-function historyUrl(slug){return path(`history-revisions/${slug?`?slug=${encodeURIComponent(slug)}`:''}`)}
-function sourceUrl(ref){const n=String(ref||'').replace(/[^0-9A-Za-z-]/g,'');return n?path(`research/sources/#${n.toLowerCase()}`):path('research/sources/')}
-function sanitizeHTML(html){const template=document.createElement('template');template.innerHTML=String(html||'');template.content.querySelectorAll('script,style,iframe,object,embed,form').forEach(n=>n.remove());template.content.querySelectorAll('*').forEach(node=>{[...node.attributes].forEach(a=>{if(/^on/i.test(a.name)||a.name==='srcdoc')node.removeAttribute(a.name)});['href','src'].forEach(k=>{if(node.hasAttribute(k)){const v=node.getAttribute(k).trim();if(/^javascript:/i.test(v)||/^data:/i.test(v)&&!/^data:image\/(png|jpeg|jpg|gif|webp);/i.test(v))node.removeAttribute(k)}})});return template.innerHTML}
-function linkRefs(text){return esc(text).replace(/\[(R\d+)\]/g,'<a class="source-ref" href="'+path('research/sources/')+'#$1">[$1]</a>')}
-async function publicDb(){if(!(window.JDM_RUNTIME_CONFIG?.supabaseUrl&&window.JDM_RUNTIME_CONFIG?.supabaseAnonKey&&window.supabase))return null;return window.supabase.createClient(window.JDM_RUNTIME_CONFIG.supabaseUrl,window.JDM_RUNTIME_CONFIG.supabaseAnonKey)}
-async function loadPublishedEntries(){const db=await publicDb();if(!db)return;const {data}=await db.from('entries').select('id,slug,category,zh,en,ja,sources,status,version,updated_at').eq('status','published').order('updated_at',{ascending:false});JDM_DATA.entries=data||[]}
-function staticBy(type,slug){const map={catalog:JDM_DATA.catalog,person:JDM_DATA.people,kiln:JDM_DATA.kilns,timeline:JDM_DATA.timeline};return (map[type]||[]).find(i=>i.slug===slug)}
-function renderTimeline(){const x=el('timeline');if(!x)return;x.innerHTML='<div class="timeline">'+JDM_DATA.timeline.map(i=>`<a class="timeline-item timeline-link" href="${entryUrl('timeline',i.slug)}"><div class="timeline-year">${esc(i.y)}</div><h3>${esc(i.title)}</h3><p>${linkRefs(i.text)}</p><span class="wiki-read-more">打开条目 →</span></a>`).join('')+'</div>'}
-function renderCatalog(){const x=el('catalog-list');if(!x)return;const q=(el('catalog-search')?.value||'').toLowerCase();const staticItems=JDM_DATA.catalog.filter(i=>Object.values(i).join(' ').toLowerCase().includes(q));const dynamic=JDM_DATA.entries.filter(e=>['器物','objects','catalog'].includes(String(e.category).toLowerCase())).map(e=>({slug:e.slug,id:'WIKI',name:e.zh?.title||e.slug,period:'社区条目',craft:e.category,tag:'已审核发布',desc:e.zh?.content||'',dynamic:true}));const items=[...staticItems,...dynamic.filter(d=>!staticItems.some(s=>s.slug===d.slug))];x.innerHTML=items.map(i=>`<a class="catalog-card wiki-card-link" href="${i.dynamic?entryUrl('entry',i.slug):entryUrl('catalog',i.slug)}"><div class="tag">${esc(i.id)}</div><div class="tag">${esc(i.period)}</div><div class="tag">${esc(i.craft)}</div><h3>${esc(i.name)}</h3><p>${linkRefs(i.desc)}</p><span class="wiki-read-more">查看完整条目 →</span></a>`).join('')||'<div class="notice">没有找到匹配器物。</div>'}
-function renderPeople(){const x=el('people-list');if(!x)return;const dynamic=JDM_DATA.entries.filter(e=>['人物','people','person'].includes(String(e.category).toLowerCase())).map(e=>({slug:e.slug,name:e.zh?.title||e.slug,era:'社区条目',role:'已审核知识条目',desc:e.zh?.content||'',dynamic:true}));const items=[...JDM_DATA.people,...dynamic.filter(d=>!JDM_DATA.people.some(p=>p.slug===d.slug))];x.innerHTML=items.map(i=>`<a class="person-card wiki-card-link" href="${i.dynamic?entryUrl('entry',i.slug):entryUrl('person',i.slug)}"><div class="tag">${esc(i.era)}</div><h3>${esc(i.name)}</h3><strong>${esc(i.role)}</strong><p>${linkRefs(i.desc)}</p><span class="wiki-read-more">查看人物条目 →</span></a>`).join('')}
-function initMap(){const x=el('kiln-map');if(!x||typeof L==='undefined')return;const map=L.map(x).setView([29.35,117.30],11);L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap contributors'}).addTo(map);JDM_DATA.kilns.forEach(k=>L.marker([k.lat,k.lng]).addTo(map).bindPopup(`<a href="${entryUrl('kiln',k.slug)}"><b>${esc(k.name)}</b></a><br>${esc(k.type)}<br>${esc(k.desc)}`)))}
-function initWikiChrome(){if(el('jdm-home')||document.querySelector('.wiki-chrome'))return;const main=document.querySelector('.md-content__inner');if(!main)return;const h1=main.querySelector('h1');if(!h1)return;const title=h1.textContent.trim();const box=document.createElement('div');box.className='wiki-chrome';box.innerHTML=`<div class="wiki-breadcrumb"><a href="${path('')}">景德镇陶瓷 Wiki</a><span>›</span><b>${esc(title)}</b></div><div class="wiki-actions"><a href="${editorUrl('')}">✎ 编辑</a><a href="${historyUrl('')}">◷ 版本</a><button type="button" data-wiki-copy>🔗 永久链接</button><a href="${path('recent-changes/')}">↻ 最近更改</a></div>`;main.insertBefore(box,h1);box.querySelector('[data-wiki-copy]').onclick=async()=>{try{await navigator.clipboard.writeText(location.href);box.querySelector('[data-wiki-copy]').textContent='✓ 已复制'}catch{prompt('复制此链接：',location.href)}}}
-function renderEntry(){const root=el('wiki-entry-root');if(!root)return;const params=new URLSearchParams(location.search);const type=params.get('type')||'entry';const slug=params.get('slug')||'';const foundDb=JDM_DATA.entries.find(e=>e.slug===slug);const item=staticBy(type,slug);if(!foundDb&&!item){root.innerHTML='<div class="notice"><b>条目不存在</b><br>这个链接可能已经移动、尚未创建，或需要管理员审核。<div class="hero-actions"><a class="md-button md-button--primary" href="'+path('editor/')+'">创建这个条目</a><a class="md-button" href="'+path('museum/catalog/')+'">返回图谱</a></div></div>';return}const d=foundDb||item;const title=foundDb?(d.zh?.title||slug):(d.name||d.title);const category=foundDb?d.category:(type==='person'?'人物':type==='kiln'?'窑址':type==='timeline'?'历史':'器物');const body=foundDb?sanitizeHTML(d.zh?.content||''):sanitizeHTML(`<p>${linkRefs(d.desc||d.text||'')}</p>`);const fields=foundDb?[]:Object.entries(d.fields||{});const tags=foundDb?[d.category,`第 ${d.version} 版`]:[d.id||'WIKI',d.era||d.period||d.type||category,d.craft||''];root.innerHTML=`<article class="wiki-entry"><header class="wiki-entry-header"><div><div class="wiki-kicker">${esc(category)} · JINGDEZHEN PORCELAIN WIKI</div><h1>${esc(title)}</h1><div class="wiki-entry-tags">${tags.filter(Boolean).map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div></div><div class="wiki-entry-tools"><a class="md-button md-button--primary" href="${foundDb?editorUrl(d.slug):editorUrl('')}${foundDb?'':''}">✎ 编辑条目</a><a class="md-button" href="${historyUrl(foundDb?d.slug:'')}">◷ 历史</a></div></header><div class="wiki-entry-layout"><aside class="wiki-infobox"><div class="wiki-infobox-title">条目信息</div><dl>${fields.map(([k,v])=>`<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')||`<div><dt>状态</dt><dd>已审核发布</dd></div><div><dt>版本</dt><dd>${esc(d.version||1)}</dd></div><div><dt>更新时间</dt><dd>${esc(new Date(d.updated_at||Date.now()).toLocaleDateString('zh-CN'))}</dd></div>`}</dl></aside><div class="wiki-entry-body"><section><h2>正文</h2>${body}</section><section class="wiki-related"><h2>相关条目</h2><div class="wiki-related-grid">${relatedCards(type,slug)}</div></section></div></div></article>`}
-function relatedCards(type,slug){let arr=[];if(type==='person')arr=[...JDM_DATA.catalog.slice(0,3),...JDM_DATA.kilns.slice(0,2)];else if(type==='kiln')arr=[...JDM_DATA.catalog.slice(0,2),JDM_DATA.people[0]];else if(type==='catalog')arr=[...JDM_DATA.people,...JDM_DATA.kilns.slice(0,2)];else arr=[...JDM_DATA.catalog.slice(0,2),JDM_DATA.kilns[0]];return arr.filter(x=>x.slug!==slug).slice(0,4).map(x=>{const t=x.name?('role'in x?'person':'type'in x?'kiln':'catalog'):'entry';return `<a href="${entryUrl(t,x.slug)}"><b>${esc(x.name||x.title)}</b><span>${esc(x.era||x.period||x.type||'知识条目')}</span></a>`}).join('')}
-async function renderHistory(){const root=el('wiki-history-root');if(!root)return;const slug=new URLSearchParams(location.search).get('slug');const db=await publicDb();if(!db){root.innerHTML='<div class="notice">版本系统尚未连接。</div>';return}let q=db.from('entry_revisions').select('id,entry_id,editor_id,version,note,created_at,snapshot').order('created_at',{ascending:false});if(slug){const {data:entry}=await db.from('entries').select('id,slug,zh').eq('slug',slug).maybeSingle();if(!entry){root.innerHTML='<div class="notice">未找到这个条目。</div>';return}q=q.eq('entry_id',entry.id);root.innerHTML=`<h1>${esc(entry.zh?.title||entry.slug)} · 版本历史</h1>`}const {data,error}=await q.limit(50);if(error){root.innerHTML='<div class="notice">历史记录暂时无法读取。请检查数据库权限。</div>';return}root.innerHTML+=(data?.length?`<div class="wiki-history-list">${data.map(r=>`<article><div><b>版本 ${esc(r.version)}</b><span>${esc(new Date(r.created_at).toLocaleString('zh-CN'))}</span></div><p>${esc(r.note||'无编辑摘要')}</p>${r.snapshot?.zh?.title?`<a href="${entryUrl('entry',r.snapshot.slug||'')}">查看该版本条目 →</a>`:''}</article>`).join('')}</div>`:'<div class="notice">暂无公开版本历史。</div>')}
-async function renderRecent(){const root=el('wiki-recent-root');if(!root)return;const db=await publicDb();if(!db){root.innerHTML='<div class="notice">知识库尚未连接。</div>';return}const {data,error}=await db.from('entries').select('slug,category,zh,version,updated_at').eq('status','published').order('updated_at',{ascending:false}).limit(50);if(error){root.innerHTML='<div class="notice">无法读取最近更改。</div>';return}root.innerHTML=data?.length?`<div class="wiki-recent-list">${data.map(r=>`<a href="${entryUrl('entry',r.slug)}"><div><span class="tag">${esc(r.category)}</span><b>${esc(r.zh?.title||r.slug)}</b></div><small>版本 ${esc(r.version)} · ${esc(new Date(r.updated_at).toLocaleString('zh-CN'))}</small></a>`).join('')}</div>`:'<div class="notice">目前还没有公开发布的社区条目。静态博物馆条目仍可直接浏览和编辑提交。</div>'}
-function openJingdezhen(){const intro=el('jdm-intro');if(!intro||intro.classList.contains('zooming')||intro.classList.contains('done'))return;intro.classList.add('zooming');window.setTimeout(()=>{intro.classList.add('done');document.querySelectorAll('.jdm-artifact').forEach((card,i)=>window.setTimeout(()=>card.classList.add('is-revealed'),i*90))},3000)}
-function initHomepage(){const home=el('jdm-home');if(!home)return;const enter=el('jdm-enter'),skip=el('jdm-skip');enter?.addEventListener('click',openJingdezhen);skip?.addEventListener('click',openJingdezhen);window.setTimeout(()=>{if(!document.hidden)openJingdezhen()},5600);document.querySelectorAll('.jdm-artifact').forEach(card=>{card.addEventListener('mouseenter',()=>card.querySelector('.artifact-glow')?.classList.add('is-hot'));card.addEventListener('mouseleave',()=>card.querySelector('.artifact-glow')?.classList.remove('is-hot'))})}
-async function initMuseum(){await loadPublishedEntries();renderTimeline();renderCatalog();renderPeople();initMap();el('catalog-search')?.addEventListener('input',renderCatalog);renderEntry();renderHistory();renderRecent();initWikiChrome();initHomepage()}
-if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initMuseum);else initMuseum();
+/* Museum surfaces are projections of the canonical public entries table. */
+(function(){
+  const ROOT='/jingdezhen-porcelain-wiki/';
+  const esc=s=>String(s??'').replace(/[&<>\"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[m]));
+  const path=p=>ROOT+p.replace(/^\//,'');
+  const entryUrl=e=>window.JDM_KNOWLEDGE?.url(e)||path(`entry/?type=${encodeURIComponent(e?.category||'')}&slug=${encodeURIComponent(e?.slug||'')}`);
+  async function media(){
+    if(!(window.JDM_RUNTIME_CONFIG?.supabaseUrl&&window.JDM_RUNTIME_CONFIG?.supabaseAnonKey&&window.supabase)) return [];
+    const db=window.supabase.createClient(window.JDM_RUNTIME_CONFIG.supabaseUrl,window.JDM_RUNTIME_CONFIG.supabaseAnonKey);
+    const {data}=await db.from('media').select('entry_id,path,title,source,license,creator').eq('status','approved');
+    return data||[];
+  }
+  const mediaMap=list=>{const m=new Map();list.forEach(x=>{if(!m.has(x.entry_id))m.set(x.entry_id,x)});return m};
+  function text(e){return e?.zh?.summary||e?.zh?.content||''}
+  function meta(e){return e?.zh?.meta||{}}
+  function renderCatalog(entries,medias){
+    const root=document.getElementById('catalog-list'); if(!root)return;
+    const q=(document.getElementById('catalog-search')?.value||'').trim().toLowerCase();
+    const items=entries.filter(e=>!q||JSON.stringify(e.zh||{}).toLowerCase().includes(q)||e.slug.includes(q));
+    const mm=mediaMap(medias);
+    root.innerHTML=items.map(e=>{const im=mm.get(e.id);return `<a class="catalog-card wiki-card-link" href="${entryUrl(e)}">${im?`<img src="${esc(im.path)}" alt="${esc(im.title||e.zh?.title||e.slug)}" loading="lazy">`:''}<div class="tag">${esc(e.slug)}</div><div class="tag">${esc(e.zh?.meta?.period||'')}</div><div class="tag">${esc(e.zh?.meta?.craft||e.category)}</div><h3>${esc(e.zh?.title||e.slug)}</h3><p>${esc(text(e))}</p><span class="wiki-read-more">查看完整条目 →</span></a>`}).join('')||'<div class="notice">没有找到匹配器物。</div>';
+  }
+  function renderPeople(entries,medias){
+    const root=document.getElementById('people-list'); if(!root)return;
+    const mm=mediaMap(medias);
+    root.innerHTML=entries.map(e=>{const im=mm.get(e.id);return `<a class="person-card wiki-card-link" href="${entryUrl(e)}">${im?`<div class="person-card-image"><img src="${esc(im.path)}" alt="${esc(im.title||e.zh?.title||e.slug)}" loading="lazy"></div>`:''}<div class="tag">${esc(e.zh?.meta?.era||e.zh?.meta?.period||'知识条目')}</div><h3>${esc(e.zh?.title||e.slug)}</h3><strong>${esc(e.zh?.meta?.role||'人物')}</strong><p>${esc(text(e))}</p><span class="wiki-read-more">查看人物条目 →</span></a>`}).join('');
+  }
+  function renderTimeline(entries){
+    const root=document.getElementById('timeline'); if(!root)return;
+    const rows=entries.filter(e=>meta(e).kind==='history').sort((a,b)=>String(a.zh?.meta?.period||a.slug).localeCompare(String(b.zh?.meta?.period||b.slug),'zh-CN'));
+    root.innerHTML=`<div class="timeline">${rows.map(e=>`<a class="timeline-item timeline-link" href="${entryUrl(e)}"><div class="timeline-year">${esc(e.zh?.meta?.period||'')}</div><h3>${esc(e.zh?.title||e.slug)}</h3><p>${esc(text(e))}</p><span class="wiki-read-more">打开知识条目 →</span></a>`).join('')}</div>`;
+  }
+  function initMap(entries){
+    const root=document.getElementById('kiln-map'); if(!root||typeof L==='undefined')return;
+    const rows=entries.filter(e=>meta(e).map?.lat!=null&&meta(e).map?.lng!=null);
+    const map=L.map(root).setView([29.35,117.30],3);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap contributors'}).addTo(map);
+    rows.forEach(e=>{const m=meta(e).map;L.marker([m.lat,m.lng]).addTo(map).bindPopup(`<a href="${entryUrl(e)}"><b>${esc(e.zh?.title||e.slug)}</b></a><br>${esc(m.country||'')} · ${esc(m.period||'')}<br>${esc(text(e))}`)});
+  }
+  async function init(){
+    if(!window.JDM_KNOWLEDGE)return;
+    const [entries,medias]=await Promise.all([window.JDM_KNOWLEDGE.all(),media()]);
+    renderCatalog(entries.filter(e=>e.category==='器物'),medias);
+    renderPeople(entries.filter(e=>e.category==='人物'),medias);
+    renderTimeline(entries);
+    initMap(entries.filter(e=>e.category==='窑址'));
+    const search=document.getElementById('catalog-search'); if(search)search.addEventListener('input',()=>renderCatalog(entries.filter(e=>e.category==='器物'),medias));
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
