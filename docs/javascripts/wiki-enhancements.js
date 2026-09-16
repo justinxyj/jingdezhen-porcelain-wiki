@@ -1,4 +1,4 @@
-/* Canonical entry renderer. One backend entry + one approved media collection. */
+/* Public knowledge-entry renderer. Internal IDs, relation types and version fields never render. */
 (function(){
   const esc=s=>String(s??'').replace(/[&<>\"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[m]));
   const ROOT='/jingdezhen-porcelain-wiki/';
@@ -6,8 +6,27 @@
   const url=e=>window.JDM_KNOWLEDGE?.url(e)||`${ROOT}entry/?type=${encodeURIComponent(e?.category||'')}&slug=${encodeURIComponent(e?.slug||'')}`;
   const sourceUrl=s=>s&&typeof s==='object'?s.url:'';
   const sourceLabel=s=>s&&typeof s==='object'?s.label||'来源':(typeof s==='string'?s:'来源');
-  function render(root,e,relations){const m=e.zh?.meta||{},im=e.media?.[0],wiki=m.wikiTitle||e.zh?.title||e.slug;root.innerHTML=`<article class="wiki-entry-card"><header class="wiki-entry-header"><div><div class="wiki-entry-kicker">${esc(e.category)} · ${esc(e.slug)}</div><h1>${esc(e.zh?.title||e.slug)}</h1><p>${esc(plain(e.zh?.summary||''))}</p></div>${im?`<figure class="wiki-entry-cover"><img src="${esc(im.path)}" alt="${esc(im.title||e.zh?.title||e.slug)}"><figcaption>${esc(im.title||'')} · ${esc(im.source||'')} · ${esc(im.license||'')}</figcaption></figure>`:''}</header><div class="wiki-entry-meta">${m.period?`<span>${esc(m.period)}</span>`:''}${m.map?.country?`<span>${esc(m.map.country)}</span>`:''}${m.map?.type?`<span>${esc(m.map.type)}</span>`:''}${m.ref?`<span>${esc(m.ref)}</span>`:''}</div><section class="wiki-entry-body"><h2>条目正文</h2><div class="wiki-entry-text">${esc(plain(e.zh?.content||'暂无正文'))}</div></section>${relations.length?`<section class="wiki-entry-relations"><h2>知识网络</h2><div class="wiki-relation-grid">${relations.map(r=>`<a href="${url(r.entry)}"><b>${esc(r.entry.zh?.title||r.entry.slug)}</b><small>${esc(r.relation_type)}${r.note?` · ${esc(r.note)}`:''}</small></a>`).join('')}</div></section>`:''}<section class="wiki-entry-sources"><h2>来源与外部资料</h2><div class="wiki-entry-source-links">${(e.sources||[]).map(s=>{const u=sourceUrl(s);return u?`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(sourceLabel(s))} ↗</a>`:''}).filter(Boolean).join('')||'<span>暂无外部来源。</span>'}<a href="https://zh.wikipedia.org/w/index.php?search=${encodeURIComponent(wiki)}" target="_blank" rel="noopener">维基百科 ↗</a></div></section><footer class="wiki-entry-footer">统一知识条目 · 版本 ${esc(e.version||1)} · 更新于 ${esc(e.updated_at||'')}</footer></article>`}
-  async function loadRelations(db,entryId,entries){if(!db)return[];const {data,error}=await db.from('entry_relations').select('entry_id,related_entry_id,relation_type,note').or(`entry_id.eq.${entryId},related_entry_id.eq.${entryId}`);if(error){console.warn('[JDM relations]',error);return[]}const byId=new Map(entries.map(x=>[x.id,x]));return(data||[]).map(r=>({...r,entry:byId.get(r.entry_id===entryId?r.related_entry_id:r.entry_id)})).filter(r=>r.entry)}
-  async function init(){const root=document.getElementById('wiki-entry-root');if(!root||!window.JDM_KNOWLEDGE)return;const slug=new URLSearchParams(location.search).get('slug');if(!slug){root.innerHTML='<div class="wiki-entry-loading">缺少知识条目 slug。</div>';return}const [e,entries]=await Promise.all([window.JDM_KNOWLEDGE.get(slug),window.JDM_KNOWLEDGE.all()]);if(!e){root.innerHTML='<div class="wiki-entry-loading">没有找到这个已发布的知识条目。</div>';return}const db=window.supabase?.createClient?.(window.JDM_RUNTIME_CONFIG.supabaseUrl,window.JDM_RUNTIME_CONFIG.supabaseAnonKey);const relations=await loadRelations(db,e.id,entries);render(root,e,relations)}
+  function render(root,e,relations){
+    const m=e.zh?.meta||{},im=e.media?.[0],wiki=m.wikiTitle||e.zh?.title||e.slug;
+    root.innerHTML=`<article class="wiki-entry-card"><header class="wiki-entry-header"><div><div class="wiki-entry-kicker">${esc(e.category||'知识')}</div><h1>${esc(e.zh?.title||e.slug)}</h1><p>${esc(plain(e.zh?.summary||''))}</p></div>${im?`<figure class="wiki-entry-cover"><img src="${esc(im.path)}" alt="${esc(im.title||e.zh?.title||e.slug)}"><figcaption>${esc(im.title||'')} · ${esc(im.source||'')} · ${esc(im.license||'')}</figcaption></figure>`:''}</header><div class="wiki-entry-meta">${m.period?`<span>${esc(m.period)}</span>`:''}${m.map?.country?`<span>${esc(m.map.country)}</span>`:''}${m.map?.type?`<span>${esc(m.map.type)}</span>`:''}${m.ref?`<span>${esc(m.ref)}</span>`:''}</div><section class="wiki-entry-body"><h2>条目正文</h2><div class="wiki-entry-text">${esc(plain(e.zh?.content||'暂无正文'))}</div></section>${relations.length?`<section class="wiki-entry-relations"><h2>相关内容</h2><div class="wiki-relation-grid">${relations.map(r=>`<a href="${url(r.entry)}"><b>${esc(r.entry.zh?.title||r.entry.slug)}</b><small>查看相关内容 →</small></a>`).join('')}</div></section>`:''}<section class="wiki-entry-sources"><h2>来源与外部资料</h2><div class="wiki-entry-source-links">${(e.sources||[]).map(s=>{const u=sourceUrl(s);return u?`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(sourceLabel(s))} ↗</a>`:''}).filter(Boolean).join('')||'<span>暂无外部来源。</span>'}<a href="https://zh.wikipedia.org/w/index.php?search=${encodeURIComponent(wiki)}" target="_blank" rel="noopener">维基百科 ↗</a></div></section></article>`;
+  }
+  async function loadRelations(db,entryId,entries){
+    if(!db)return[];
+    const {data,error}=await db.from('entry_relations').select('entry_id,related_entry_id,relation_type,note').or(`entry_id.eq.${entryId},related_entry_id.eq.${entryId}`);
+    if(error){console.warn('[JDM relations]',error);return[]}
+    const byId=new Map(entries.map(x=>[x.id,x]));
+    return(data||[]).map(r=>({...r,entry:byId.get(r.entry_id===entryId?r.related_entry_id:r.entry_id)})).filter(r=>r.entry);
+  }
+  async function init(){
+    const root=document.getElementById('wiki-entry-root');
+    if(!root||!window.JDM_KNOWLEDGE)return;
+    const slug=new URLSearchParams(location.search).get('slug');
+    if(!slug){root.innerHTML='<div class="wiki-entry-loading">没有指定条目。</div>';return}
+    const [e,entries]=await Promise.all([window.JDM_KNOWLEDGE.get(slug),window.JDM_KNOWLEDGE.all()]);
+    if(!e){root.innerHTML='<div class="wiki-entry-loading">没有找到这个公开条目。</div>';return}
+    const db=window.supabase?.createClient?.(window.JDM_RUNTIME_CONFIG.supabaseUrl,window.JDM_RUNTIME_CONFIG.supabaseAnonKey);
+    const relations=await loadRelations(db,e.id,entries);
+    render(root,e,relations);
+  }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
