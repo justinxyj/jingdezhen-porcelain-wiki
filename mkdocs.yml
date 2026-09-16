@@ -45,6 +45,7 @@ extra_javascript:
   - javascripts/auth.js
   - javascripts/wiki-enhancements.js
   - javascripts/wiki-timeline.js
+  - javascripts/voices-books.js
   - javascripts/museum-images.js
 
 markdown_extensions:
@@ -62,6 +63,7 @@ nav:
       - 窑址地图: museum/kiln-map.md
       - 器物图谱: museum/catalog.md
       - 人物数据库: museum/people.md
+      - 名人与书籍评价: museum/voices-and-books.md
       - 图片库: museum/gallery.md
       - 知识条目: entry.md
   - 文献研究:
