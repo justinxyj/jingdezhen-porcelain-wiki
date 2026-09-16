@@ -28,9 +28,11 @@ theme:
         name: 切换到浅色模式
 
 extra_css:
+  - https://unpkg.com/leaflet@1.9.4/dist/leaflet.css
   - stylesheets/museum.css
 extra_javascript:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
+  - https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2
   - javascripts/museum.js
   - javascripts/auth.js
 
