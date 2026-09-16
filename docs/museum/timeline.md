@@ -7,6 +7,8 @@
 
 <div id="timeline"></div>
 
+<script src="../../javascripts/timeline-entry-enhancements.js"></script>
+
 ## 怎么读这条时间轴
 
 - **第一层：景德镇** —— 观察原料、配方、窑炉、器型、装饰、生产组织和贸易。
