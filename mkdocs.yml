@@ -1,0 +1,59 @@
+site_name: Jingdezhen Porcelain Wiki
+site_description: 景德镇陶瓷历史、工艺、器物、窑址与当代文化开放知识库
+site_url: https://justinxyj.github.io/jingdezhen-porcelain-wiki/
+repo_url: https://github.com/justinxyj/jingdezhen-porcelain-wiki
+repo_name: justinxyj/jingdezhen-porcelain-wiki
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: 切换到浅色模式
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - 首页: index.md
+  - 历史与发展:
+      - 历史总览: history/README.md
+      - 唐五代: history/tang-wudai.md
+      - 宋元: history/song-yuan.md
+      - 明清: history/ming-qing.md
+      - 近现代: history/modern.md
+  - 工艺与技术:
+      - 工艺总览: craft/README.md
+      - 青花: craft/qinghua.md
+      - 粉彩: craft/fencai.md
+      - 颜色釉: craft/colored-glaze.md
+  - 器物与美学:
+      - 器物分类: objects/README.md
+      - 纹饰与题材: aesthetics/patterns.md
+      - 釉色与装饰: aesthetics/glazes-and-decoration.md
+  - 窑址与城市空间:
+      - 窑址总览: kilns/README.md
+      - 御窑厂遗址: kilns/imperial-kiln.md
+      - 湖田窑: kilns/hutian-kiln.md
+      - 当代陶瓷产业空间: kilns/contemporary-ceramic-districts.md
+  - 人物与传承: people/README.md
+  - 现代景德镇: contemporary/README.md
