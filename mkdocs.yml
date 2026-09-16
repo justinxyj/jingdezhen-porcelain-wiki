@@ -39,12 +39,12 @@ extra_css:
   - stylesheets/site-interactions.css
   - stylesheets/evidence-hub.css
   - stylesheets/global-kiln-map.css
+  - stylesheets/homepage-apple.css
 extra_javascript:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
   - javascripts/runtime-config.js
   - https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2
   - javascripts/museum.js
-  - javascripts/auth.js
   - javascripts/wiki-enhancements.js
   - javascripts/wiki-timeline.js
   - javascripts/voices-books.js
@@ -52,6 +52,7 @@ extra_javascript:
   - javascripts/literature-library.js
   - javascripts/global-kiln-map.js
   - javascripts/museum-images.js
+  - javascripts/homepage-apple.js
 
 markdown_extensions:
   - admonition
@@ -79,13 +80,6 @@ nav:
       - 研究导览: research/research-hub.md
       - 世界遗产: research/heritage.md
       - 补充文献库: research/sources-addendum.md
-  - 互动与社区:
-      - 登录 / 注册: account.md
-      - 编辑知识条目: editor.md
-      - 版本历史: history-revisions.md
-      - 最近更改: recent-changes.md
-      - 审核中心: admin.md
-      - 数据贡献指南: contribute.md
   - 历史与发展:
       - 历史总览: history/README.md
       - 唐五代: history/tang-wudai.md
