@@ -57,6 +57,7 @@ extra_javascript:
   - javascripts/global-kiln-map.js
   - javascripts/museum-images.js
   - javascripts/homepage-apple.js
+  - javascripts/site-privacy.js
 
 markdown_extensions:
   - admonition
