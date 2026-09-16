@@ -38,6 +38,7 @@ extra_css:
   - stylesheets/official-gallery.css
   - stylesheets/site-interactions.css
   - stylesheets/evidence-hub.css
+  - stylesheets/global-kiln-map.css
 extra_javascript:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
   - javascripts/runtime-config.js
@@ -49,6 +50,7 @@ extra_javascript:
   - javascripts/voices-books.js
   - javascripts/evidence-hub.js
   - javascripts/literature-library.js
+  - javascripts/global-kiln-map.js
   - javascripts/museum-images.js
 
 markdown_extensions:
@@ -91,6 +93,7 @@ nav:
       - 明清: history/ming-qing.md
       - 近现代: history/modern.md
   - 工艺与技术:
+      - 工艺总览: craft/README.md
       - 工艺总览: craft/README.md
       - 原料与配方: craft/raw-materials.md
       - 成型与修整: craft/forming-and-finishing.md
