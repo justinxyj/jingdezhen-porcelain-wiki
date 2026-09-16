@@ -33,6 +33,7 @@ extra_css:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.css
   - stylesheets/museum.css
   - stylesheets/wiki.css
+  - stylesheets/timeline-comparison.css
 extra_javascript:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
   - javascripts/runtime-config.js
@@ -40,6 +41,7 @@ extra_javascript:
   - javascripts/museum.js
   - javascripts/auth.js
   - javascripts/wiki-enhancements.js
+  - javascripts/wiki-timeline.js
 
 markdown_extensions:
   - admonition
