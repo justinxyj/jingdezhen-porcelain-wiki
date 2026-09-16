@@ -1,48 +1,41 @@
-(() => {
-  const ROOT = '/jingdezhen-porcelain-wiki/';
-  const wikiApi = 'https://zh.wikipedia.org/api/rest_v1/page/summary/';
-  const WIKI = title => `https://zh.wikipedia.org/wiki/${encodeURIComponent(title)}`;
-  const DATA = [
-    {slug:'jingdezhen',name:'景德镇窑',country:'中国',period:'10世纪—至今',type:'核心窑业中心',lat:29.2925,lng:117.2036,wiki:'景德镇',intro:'中国最重要的瓷业中心之一。宋元时期青白瓷发展，元明以后青花及官窑体系兴盛，并形成连接原料、燃料、窑炉、作坊、运输和销售的完整生产网络。',ai:'可以把景德镇理解为一个“瓷业城市系统”，而不是一座孤立的窑。它的核心价值在于长期生产、技术创新和高度分工共同形成了规模化瓷业。',source:'UNESCO 2026 世界遗产资料',sourceUrl:'https://whc.unesco.org/en/list/1765/'},
-    {slug:'hutian',name:'湖田窑',country:'中国',period:'五代—明',type:'古窑址群',lat:29.2864,lng:117.2433,wiki:'湖田窑',intro:'景德镇重要古窑址群，遗存覆盖五代、宋、元、明等时期，是研究青白瓷、窑炉、作坊和城市窑业连续发展的关键地点。',ai:'湖田窑是观察景德镇早期崛起的窗口：它把器物、窑炉、作坊和城市环境连接起来，特别适合研究宋元时期景德镇为什么成为重要瓷业中心。',source:'景德镇湖田窑址考古发掘报告',sourceUrl:'https://books.google.com/books/about/%E6%99%AF%E5%BE%B7%E9%8E%AE%E6%B9%96%E7%94%B0%E7%AA%91%E5%9D%80.html?id=JJb20AEACAAJ'},
-    {slug:'imperial',name:'御窑厂遗址',country:'中国',period:'明—清',type:'官窑遗址',lat:29.2972,lng:117.2019,wiki:'御窑厂',intro:'明清景德镇宫廷御用瓷器生产中心。考古发现涉及窑炉、作坊、窑具、瓷片堆积和生产组织，是研究官窑制度的重要遗址。',ai:'御窑厂的重点不是“皇帝用过什么瓷器”这么简单，而是它展示了国家权力如何组织原料、工匠、生产、质量控制和产品流向。',source:'北京大学考古文博学院',sourceUrl:'https://archaeology.pku.edu.cn/info/1030/3492.htm'},
-    {slug:'yue',name:'越窑·上林湖窑址',country:'中国',period:'东汉—宋',type:'青瓷窑址群',lat:30.1306,lng:121.3264,wiki:'越窑',intro:'浙江上林湖一带的古窑址群，是中国早期青瓷生产的重要中心之一。唐五代时期越窑青瓷具有广泛影响。',ai:'越窑可以看作中国青瓷传统的重要源头之一，它与景德镇之间并非简单替代关系，而是长期存在技术、器物和审美传统的传承与转化。',source:'UNESCO 古代中国瓷窑遗址提名资料',sourceUrl:'https://whc.unesco.org/en/tentativelists/5806/'},
-    {slug:'longquan',name:'龙泉窑·大窑',country:'中国',period:'五代—明',type:'青瓷窑址群',lat:27.9378,lng:119.0022,wiki:'龙泉窑',intro:'浙江龙泉重要青瓷窑址群，南宋至明代达到高峰，窑址、作坊、窑具和原料运输环境保存了完整的生产景观。',ai:'龙泉窑最值得看的，是“窑址景观+产品+贸易”三者结合。它说明一个地方窑场如何从区域生产中心发展成跨亚洲贸易网络中的重要节点。',source:'UNESCO 古代中国瓷窑遗址提名资料',sourceUrl:'https://whc.unesco.org/en/tentativelists/5806/'},
-    {slug:'ding',name:'定窑·曲阳',country:'中国',period:'唐—金',type:'白瓷窑址',lat:38.3167,lng:114.7000,wiki:'定窑',intro:'河北曲阳一带的著名白瓷窑场，北宋时期达到高峰，以白瓷、刻花和印花装饰著称。',ai:'定窑代表北方白瓷传统的重要高度。它与景德镇后来白瓷、青白瓷体系的形成可以放在更长的中国白瓷技术史中比较。',source:'中国古代瓷窑遗址研究资料',sourceUrl:'https://whc.unesco.org/en/tentativelists/5806/'},
-    {slug:'ru',name:'汝窑·清凉寺',country:'中国',period:'北宋',type:'青瓷窑址',lat:34.0090,lng:112.8710,wiki:'汝窑',intro:'河南宝丰清凉寺窑址与北宋汝窑研究密切相关，以天青釉等高等级青瓷著称。',ai:'汝窑的研究重点往往集中在窑址、传世品和“官用”性质之间的证据关系，因此很适合展示考古证据如何修正艺术史叙述。',source:'中国古代瓷窑研究资料',sourceUrl:'https://whc.unesco.org/en/tentativelists/5806/'},
-    {slug:'jun',name:'钧窑·禹州',country:'中国',period:'北宋—金元',type:'窑址群',lat:34.1420,lng:113.4710,wiki:'钧窑',intro:'河南禹州地区著名窑业中心，以窑变釉和铜红等釉色传统著称，遗址数量众多。',ai:'钧窑的魅力在于釉色本身就是窑炉技术的结果。它能帮助理解“审美效果”背后其实包含矿物原料、配釉和烧成条件。',source:'中国古代瓷窑研究资料',sourceUrl:'https://whc.unesco.org/en/tentativelists/5806/'},
-    {slug:'yaozhou',name:'耀州窑·黄堡',country:'中国',period:'唐—宋金',type:'青瓷窑址',lat:35.0800,lng:109.0200,wiki:'耀州窑',intro:'陕西铜川黄堡窑址是北方青瓷重要中心，以刻花、印花装饰和青瓷烧造闻名。',ai:'耀州窑特别适合观察北方青瓷技术与装饰风格的演进，也可以与湖田窑青白瓷进行对照。',source:'中国古代瓷窑研究资料',sourceUrl:'https://whc.unesco.org/en/tentativelists/5806/'},
-    {slug:'cizhou',name:'磁州窑·观台',country:'中国',period:'宋—元明',type:'民窑窑址群',lat:36.5600,lng:114.0800,wiki:'磁州窑',intro:'河北磁州窑系重要窑址，民间日用瓷和白地黑花等装饰传统具有代表性。',ai:'磁州窑能让地图不只讲“名窑名品”，还展示民窑、日用瓷和大众市场如何推动陶瓷技术与图像传播。',source:'中国古代瓷窑研究资料',sourceUrl:'https://whc.unesco.org/en/tentativelists/5806/'},
-    {slug:'dehua',name:'德化窑',country:'中国',period:'宋—清',type:'白瓷窑业中心',lat:25.4890,lng:118.2400,wiki:'德化窑',intro:'福建德化白瓷窑业中心，以高质量白瓷和人物塑像传统闻名，并长期参与海外贸易。',ai:'德化窑是理解中国南方白瓷与海上贸易的重要节点，也能与景德镇白瓷体系进行横向比较。',source:'中国陶瓷史与窑址研究资料',sourceUrl:'https://whc.unesco.org/en/document/180501'},
-    {slug:'yixing',name:'宜兴窑',country:'中国',period:'汉—至今',type:'陶器窑业中心',lat:31.3650,lng:119.8230,wiki:'宜兴窑',intro:'江苏宜兴以紫砂陶和传统陶业著名，是中国陶器生产史中与瓷器体系互补的重要产地。',ai:'宜兴提醒我们：陶瓷史不等于瓷器史。不同胎土、烧成温度和器物用途形成了另一条重要技术路线。',source:'宜兴陶瓷史资料',sourceUrl:'https://zh.wikipedia.org/wiki/宜兴窑'},
-    {slug:'gangjin',name:'康津青瓷窑址',country:'韩国',period:'10—14世纪',type:'青瓷窑址群',lat:34.6420,lng:126.7670,wiki:'高麗青磁',intro:'韩国全罗南道康津地区的高丽青瓷窑址群，是东亚青瓷技术交流的重要遗存。',ai:'康津窑址可以放在东亚技术传播链中观察：韩国青瓷的发展与中国越窑等传统存在历史联系，但也形成了自身的器形、釉色与装饰体系。',source:'UNESCO 古代中国瓷窑遗址比较资料',sourceUrl:'https://whc.unesco.org/en/tentativelists/5806/'},
-    {slug:'arita',name:'有田窑·有田烧产区',country:'日本',period:'17世纪—至今',type:'历史窑业中心',lat:33.1800,lng:129.8800,wiki:'有田烧',intro:'日本佐贺县有田地区的瓷业中心，17世纪开始形成成熟瓷业，并受到中国与朝鲜半岛陶瓷技术和贸易的影响。',ai:'有田是观察景德镇影响如何进入日本并被本土化的重要案例，尤其适合研究青花、彩绘、出口贸易与产业组织。',source:'日本有田烧资料',sourceUrl:'https://ja.wikipedia.org/wiki/有田焼'},
-    {slug:'seto',name:'濑户窑',country:'日本',period:'中世—至今',type:'历史窑业中心',lat:35.2230,lng:137.0840,wiki:'瀬戸焼',intro:'日本爱知县濑户地区的历史窑业中心，日本中世陶瓷史的重要产地之一。',ai:'濑户代表日本本土陶瓷生产传统，与有田的瓷器路线不同，能够帮助比较日本不同窑业中心的技术选择。',source:'日本濑户陶瓷资料',sourceUrl:'https://ja.wikipedia.org/wiki/瀬戸焼'},
-    {slug:'sawankhalok',name:'宋加洛窑·Si Satchanalai',country:'泰国',period:'13—16世纪',type:'外销窑址群',lat:17.5160,lng:99.7580,wiki:'Si Satchanalai',intro:'泰国历史陶瓷生产中心之一，以青瓷和黑褐釉陶器著称，产品曾通过海上贸易进入东南亚地区。',ai:'宋加洛窑把地图从东亚继续向南延伸，说明中国陶瓷技术、产品市场与本地窑业之间存在复杂的区域交流。',source:'Si Satchanalai Historical Park资料',sourceUrl:'https://en.wikipedia.org/wiki/Si_Satchanalai'},
-    {slug:'bat-trang',name:'巴特朗陶窑',country:'越南',period:'14世纪—至今',type:'历史窑业中心',lat:20.9800,lng:105.9120,wiki:'Bát Tràng',intro:'越南河内附近的传统陶瓷产区，长期生产日用陶器与外销陶瓷。',ai:'巴特朗体现越南本土陶瓷传统与东亚贸易网络之间的互动，是研究海上陶瓷交流的一个重要节点。',source:'Bát Tràng资料',sourceUrl:'https://en.wikipedia.org/wiki/B%C3%A1t_Tr%C3%A0ng'},
-    {slug:'iznik',name:'伊兹尼克窑',country:'土耳其',period:'15—17世纪',type:'历史瓷陶中心',lat:40.4300,lng:29.7200,wiki:'Iznik pottery',intro:'奥斯曼帝国时期著名陶瓷生产中心，以彩釉陶器、蓝白装饰和复杂植物纹样著称。',ai:'伊兹尼克展示了中国青花瓷图像与技术影响进入伊斯兰世界后产生的再创造，并最终形成独立的奥斯曼装饰语言。',source:'Iznik pottery资料',sourceUrl:'https://en.wikipedia.org/wiki/Iznik_pottery'},
-    {slug:'meissen',name:'迈森窑',country:'德国',period:'18世纪—至今',type:'欧洲硬质瓷中心',lat:51.1610,lng:13.4730,wiki:'Meissen porcelain',intro:'欧洲最早成功生产硬质瓷的中心之一，18世纪初建立，对欧洲瓷器工业发展产生深远影响。',ai:'迈森是“全球瓷器技术史”中非常关键的对照点：欧洲长期追求中国瓷器技术，最终形成自己的硬质瓷生产体系。',source:'Meissen porcelain资料',sourceUrl:'https://en.wikipedia.org/wiki/Meissen_porcelain'},
-    {slug:'sevres',name:'塞夫勒窑',country:'法国',period:'18世纪—至今',type:'皇家瓷业中心',lat:48.8240,lng:2.2080,wiki:'Sèvres porcelain',intro:'法国重要瓷器生产中心，与法国王室、宫廷艺术和18世纪欧洲瓷器文化密切相关。',ai:'塞夫勒体现欧洲瓷器从技术竞争进入宫廷艺术与国家制造体系的过程，可与景德镇御窑制度进行比较。',source:'Sèvres porcelain资料',sourceUrl:'https://en.wikipedia.org/wiki/S%C3%A8vres_porcelain'},
-    {slug:'stoke',name:'斯托克陶瓷产区',country:'英国',period:'18世纪—至今',type:'陶瓷工业中心',lat:53.0027,lng:-2.1794,wiki:'Stoke-on-Trent',intro:'英国重要陶瓷工业中心，聚集韦奇伍德、皇家道尔顿等历史企业，是欧洲工业化陶瓷生产的重要地区。',ai:'斯托克代表陶瓷从手工业向工业化生产转变的路径，与景德镇传统手工业体系形成很好的比较。',source:'Stoke-on-Trent资料',sourceUrl:'https://en.wikipedia.org/wiki/Stoke-on-Trent'},
-    {slug:'delft',name:'代尔夫特陶业中心',country:'荷兰',period:'17—18世纪',type:'历史陶业中心',lat:52.0116,lng:4.3571,wiki:'Delftware',intro:'荷兰代尔夫特历史陶业中心，以仿制和转化中国青花瓷装饰而形成具有欧洲特色的锡釉陶传统。',ai:'代尔夫特是“瓷器全球传播”最直观的案例之一：中国青花图像进入欧洲市场后，被当地陶工吸收并转化为新的产品体系。',source:'Delftware资料',sourceUrl:'https://en.wikipedia.org/wiki/Delftware'}
-  ];
-  const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
-  const root=p=>ROOT+p.replace(/^\//,'');
-  function detail(k){
-    const modal=document.createElement('div');modal.className='global-kiln-modal';modal.innerHTML=`<div class="global-kiln-backdrop" data-close></div><article class="global-kiln-dialog" role="dialog" aria-modal="true"><button class="global-kiln-close" data-close aria-label="关闭">×</button><div class="global-kiln-image" data-image><span>正在加载资料图像…</span></div><div class="global-kiln-content"><div class="global-kiln-tags"><span>${esc(k.country)}</span><span>${esc(k.period)}</span><span>${esc(k.type)}</span></div><h2>${esc(k.name)}</h2><p class="global-kiln-intro">${esc(k.intro)}</p><section class="global-kiln-ai"><b>AI 导览总结</b><p>${esc(k.ai)}</p><small>AI 内容仅用于导览，不替代考古报告、博物馆或学术文献。</small></section><div class="global-kiln-links"><a href="${WIKI(k.wiki)}" target="_blank" rel="noopener">维基百科 →</a><a href="${esc(k.sourceUrl)}" target="_blank" rel="noopener">权威资料 →</a><a href="${root('museum/kiln-map/')}#${esc(k.slug)}">定位此窑址</a></div></div></article></div>`;
-    document.body.appendChild(modal);document.body.classList.add('global-kiln-open');
-    const close=()=>{modal.remove();document.body.classList.remove('global-kiln-open')};modal.querySelectorAll('[data-close]').forEach(n=>n.addEventListener('click',close));document.addEventListener('keydown',function onKey(e){if(e.key==='Escape'){close();document.removeEventListener('keydown',onKey)}});
-    fetch(wikiApi+encodeURIComponent(k.wiki)).then(r=>r.ok?r.json():null).then(d=>{const box=modal.querySelector('[data-image]');if(d?.thumbnail?.source){box.innerHTML=`<img src="${esc(d.thumbnail.source)}" alt="${esc(k.name)}维基百科图片"><small>图片来源：维基百科</small>`}else box.innerHTML='<span>暂无可直接读取的维基百科缩略图</span>'}).catch(()=>{});
+/* Global kiln atlas = map projection of the same canonical entries used everywhere else. */
+(function(){
+  const esc=s=>String(s??'').replace(/[&<>\"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[m]));
+  const wiki=t=>`https://zh.wikipedia.org/wiki/${encodeURIComponent(t||'')}`;
+  const ROOT='/jingdezhen-porcelain-wiki/';
+  const entryUrl=e=>window.JDM_KNOWLEDGE?.url(e)||`${ROOT}entry/?type=${encodeURIComponent(e.category)}&slug=${encodeURIComponent(e.slug)}`;
+  async function getMedia(){
+    if(!(window.JDM_RUNTIME_CONFIG?.supabaseUrl&&window.JDM_RUNTIME_CONFIG?.supabaseAnonKey&&window.supabase))return[];
+    const db=window.supabase.createClient(window.JDM_RUNTIME_CONFIG.supabaseUrl,window.JDM_RUNTIME_CONFIG.supabaseAnonKey);
+    const {data}=await db.from('media').select('entry_id,path,title,source,license,creator').eq('status','approved');return data||[];
   }
-  function init(){
-    const host=document.getElementById('kiln-map');if(!host||typeof L==='undefined')return;
-    host.innerHTML='<div class="global-kiln-map-toolbar"><input id="global-kiln-search" type="search" placeholder="搜索窑址、国家、窑业类型…"><div><button class="is-active" data-kiln-filter="all">全部</button><button data-kiln-filter="China">中国</button><button data-kiln-filter="East Asia">东亚</button><button data-kiln-filter="Global">世界</button></div></div><div class="global-kiln-map-canvas" id="global-kiln-map-canvas"></div><div class="global-kiln-list" id="global-kiln-list"></div>';
-    const map=L.map('global-kiln-map-canvas',{worldCopyJump:true}).setView([30,80],2);L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap contributors'}).addTo(map);
-    const markers=L.layerGroup().addTo(map);const list=host.querySelector('#global-kiln-list');let filter='all';
-    const region=k=>k.country==='中国'?'China':['韩国','日本'].includes(k.country)?'East Asia':'Global';
-    function render(){const q=(host.querySelector('#global-kiln-search').value||'').toLowerCase();markers.clearLayers();const items=DATA.filter(k=>(filter==='all'||region(k)===filter)&&`${k.name} ${k.country} ${k.type} ${k.period}`.toLowerCase().includes(q));items.forEach(k=>{const m=L.marker([k.lat,k.lng]).addTo(markers);m.bindTooltip(k.name,{direction:'top'});m.on('click',()=>detail(k));});list.innerHTML=items.map(k=>`<button class="global-kiln-list-item" data-kiln="${esc(k.slug)}"><b>${esc(k.name)}</b><span>${esc(k.country)} · ${esc(k.period)}</span></button>`).join('');list.querySelectorAll('[data-kiln]').forEach(b=>b.addEventListener('click',()=>{const k=DATA.find(x=>x.slug===b.dataset.kiln);if(k){map.setView([k.lat,k.lng],7);detail(k)}}));}
-    host.querySelector('#global-kiln-search').addEventListener('input',render);host.querySelectorAll('[data-kiln-filter]').forEach(b=>b.addEventListener('click',()=>{host.querySelectorAll('[data-kiln-filter]').forEach(x=>x.classList.remove('is-active'));b.classList.add('is-active');filter=b.dataset.kilnFilter;render()}));render();
-    setTimeout(()=>map.invalidateSize(),300);
+  function init(entries,mediaRows){
+    const root=document.getElementById('kiln-map');if(!root||typeof L==='undefined')return;
+    const media=new Map();mediaRows.forEach(m=>{if(!media.has(m.entry_id))media.set(m.entry_id,m)});
+    const rows=entries.filter(e=>e.category==='窑址'&&e.zh?.meta?.map?.lat!=null&&e.zh?.meta?.map?.lng!=null);
+    root.innerHTML=`<div class="global-kiln-map-toolbar"><input id="global-kiln-search" placeholder="搜索窑址、国家、年代或类型……"><div><button class="is-active" data-region="all">全部</button><button data-region="中国">中国</button><button data-region="东亚">东亚</button><button data-region="全球">全球</button></div></div><div id="global-kiln-map-canvas" class="global-kiln-map-canvas"></div><div id="global-kiln-list" class="global-kiln-list"></div><div id="global-kiln-modal"></div>`;
+    const map=L.map('global-kiln-map-canvas').setView([25,110],2);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap contributors'}).addTo(map);
+    const markers=new Map();
+    const region=e=>{const c=e.zh?.meta?.map?.country||'';if(c.startsWith('中国'))return '中国';if(c.includes('韩国')||c.includes('日本'))return '东亚';return '全球'};
+    function visible(e,q,r){const hay=JSON.stringify(e.zh||{}).toLowerCase();return (!q||hay.includes(q))&&(r==='all'||region(e)===r)}
+    function open(e){
+      const m=e.zh?.meta?.map||{}, im=media.get(e.id), wikiTitle=e.zh?.meta?.wikiTitle||e.zh?.title||e.slug;
+      const modal=document.getElementById('global-kiln-modal');
+      modal.innerHTML=`<div class="global-kiln-modal"><div class="global-kiln-backdrop" data-close></div><article class="global-kiln-dialog"><button class="global-kiln-close" data-close>×</button><div class="global-kiln-image">${im?`<img src="${esc(im.path)}" alt="${esc(im.title||e.zh?.title||e.slug)}"><small>${esc(im.source||'官方资料')}</small>`:'<span>该条目暂未配置图片</span>'}</div><div class="global-kiln-content"><div class="global-kiln-tags"><span>${esc(m.country||'')}</span><span>${esc(m.period||'')}</span><span>${esc(m.type||'窑业中心')}</span></div><h2>${esc(e.zh?.title||e.slug)}</h2><p class="global-kiln-intro">${esc(e.zh?.content||'')}</p><div class="global-kiln-ai"><b>知识库摘要</b><p>${esc(e.zh?.summary||'')}</p><small>内容来自同一后端知识条目；地图只是它的空间投影。</small></div><div class="global-kiln-links"><a href="${entryUrl(e)}">进入站内知识条目 →</a><a href="${wiki(wikiTitle)}" target="_blank" rel="noopener">维基百科 ↗</a>${e.sources?.[0]?.url?`<a href="${esc(e.sources[0].url)}" target="_blank" rel="noopener">权威来源 ↗</a>`:''}</div></div></article></div>`;
+      modal.querySelectorAll('[data-close]').forEach(x=>x.addEventListener('click',()=>{modal.innerHTML='';document.body.classList.remove('global-kiln-open')}));document.body.classList.add('global-kiln-open');
+    }
+    function render(){
+      const q=(document.getElementById('global-kiln-search')?.value||'').trim().toLowerCase();const active=document.querySelector('.global-kiln-map-toolbar button.is-active')?.dataset.region||'all';
+      markers.forEach((marker,e)=>{if(visible(e,q,active))marker.addTo(map);else map.removeLayer(marker)});
+      const list=document.getElementById('global-kiln-list');list.innerHTML=rows.filter(e=>visible(e,q,active)).map(e=>{const m=e.zh.meta.map;return `<button class="global-kiln-list-item" data-slug="${esc(e.slug)}"><b>${esc(e.zh?.title||e.slug)}</b><span>${esc(m.country||'')} · ${esc(m.period||'')}</span></button>`}).join('');
+      list.querySelectorAll('[data-slug]').forEach(btn=>btn.addEventListener('click',()=>{const e=rows.find(x=>x.slug===btn.dataset.slug);if(!e)return;const m=e.zh.meta.map;map.flyTo([m.lat,m.lng],Math.max(map.getZoom(),5),{duration:.7});open(e)}));
+    }
+    rows.forEach(e=>{const m=e.zh.meta.map;const marker=L.marker([m.lat,m.lng]).bindTooltip(e.zh?.title||e.slug,{direction:'top'}).on('click',()=>open(e));markers.set(e,marker)});
+    document.getElementById('global-kiln-search').addEventListener('input',render);
+    document.querySelectorAll('.global-kiln-map-toolbar button').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.global-kiln-map-toolbar button').forEach(b=>b.classList.remove('is-active'));btn.classList.add('is-active');render()}));
+    render();
   }
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+  async function boot(){if(!window.JDM_KNOWLEDGE)return;const [entries,media]=await Promise.all([window.JDM_KNOWLEDGE.all(),getMedia()]);init(entries,media)}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
 })();
