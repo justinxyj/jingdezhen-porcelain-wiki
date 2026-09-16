@@ -1,9 +1,12 @@
 # 景德镇文献总库
 
-<div class="people-hero">
-  <div class="eyebrow">EVIDENCE · 文献</div>
-  <h2>从古籍、地方志，到考古与现代研究。</h2>
-  <p>把每一条关于景德镇陶瓷的知识放回原始材料、研究成果与历史语境中阅读。</p>
+<div class="museum-hero">
+  <div>
+    <div class="eyebrow">EVIDENCE · 文献</div>
+    <h1>从古籍、地方志，到考古与现代研究。</h1>
+    <p>把每一条关于景德镇陶瓷的知识放回原始材料、研究成果与历史语境中阅读。</p>
+  </div>
+  <div class="museum-hero-mark">文字<br>与证据</div>
 </div>
 
 <div class="library-toolbar">
