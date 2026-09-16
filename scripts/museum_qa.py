@@ -25,14 +25,16 @@ for path in (DOCS / 'javascripts').glob('*.js'):
         errors.append(f'{path}: legacy generic Met image URL remains')
 
 # Navigation target existence check.
+# MkDocs supports both flat entries and nested `- Label: target` mappings.
 mk = ROOT / 'mkdocs.yml'
 if mk.exists():
     text = mk.read_text(encoding='utf-8')
-    for raw in re.findall(r'(?m)^\s*-\s+[^:]+:\s*([^\n]+)$', text):
+    for label, raw in re.findall(r'(?m)^\s*-\s+(.+?):\s*([^\n]+)$', text):
         target = raw.strip().strip('"\'')
-        if target.endswith('.md') and not (DOCS / target).exists() and not target.startswith('http'):
-            # Nested nav entries are resolved relative to docs/.
-            errors.append(f'mkdocs.yml: missing nav target {target}')
+        if target.endswith('.md') and not target.startswith(('http://', 'https://')):
+            candidate = DOCS / target
+            if not candidate.exists():
+                errors.append(f'mkdocs.yml: missing nav target {target} (label: {label.strip()})')
 
 # Ensure the public image policy is present.
 policy = DOCS / 'javascripts' / 'media-policy.js'
