@@ -33,6 +33,7 @@ extra_css:
   - stylesheets/museum.css
   - stylesheets/wiki.css
   - stylesheets/timeline-comparison.css
+  - stylesheets/timeline-interactive.css
   - stylesheets/museum-images.css
   - stylesheets/official-gallery.css
   - stylesheets/site-interactions.css
