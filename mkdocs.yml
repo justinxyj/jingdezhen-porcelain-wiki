@@ -83,7 +83,7 @@ nav:
       - 近现代: history/modern.md
   - 工艺与技术:
       - 工艺总览: craft/README.md
-      - 原料与配方: craft/README.md
+      - 原料与配方: craft/raw-materials.md
       - 成型与修整: craft/forming-and-finishing.md
       - 窑炉与烧成: craft/kiln-firing.md
       - 青花: craft/qinghua.md
