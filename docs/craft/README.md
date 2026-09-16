@@ -1,33 +1,27 @@
 # 制瓷工艺概览
 
-景德镇制瓷是一套由**原料加工、成型、修整、装饰、施釉、装烧与烧成**等环节组成的生产体系。历史时期不同，工序和分工也会变化，因此 Wiki 不把某个固定数字当作所有时代都适用的“标准工序”。[R08][R19]
+<div class="museum-hero">
+  <div>
+    <div class="eyebrow">CRAFT · 工艺</div>
+    <h1>一件瓷器，是许多道工序共同完成的作品。</h1>
+    <p>从原料、制泥、成型到装饰、施釉与烧成，沿着工艺链理解景德镇陶瓷是怎样被制作出来的。</p>
+  </div>
+  <div class="museum-hero-mark">手艺<br>成器</div>
+</div>
 
 ## 工艺链
 
-1. 原料采集与加工
-2. 制泥、练泥与坯料准备
-3. 成型
-4. 利坯、修足与干燥
-5. 装饰
-6. 施釉
-7. 装烧与烧成
-8. 检选、整理与后续加工
+<div class="museum-grid">
+  <a class="museum-card wiki-card-link" href="raw-materials/"><span>01 · MATERIALS</span><h3>原料与配方</h3><p>瓷石、高岭土与坯料体系。</p><span class="wiki-read-more">探索原料</span></a>
+  <a class="museum-card wiki-card-link" href="forming-and-finishing/"><span>02 · FORMING</span><h3>成型与修整</h3><p>拉坯、利坯、修足与干燥。</p><span class="wiki-read-more">探索成型</span></a>
+  <a class="museum-card wiki-card-link" href="kiln-firing/"><span>03 · FIRING</span><h3>窑炉与烧成</h3><p>窑炉结构、装烧与高温烧成。</p><span class="wiki-read-more">探索烧成</span></a>
+  <a class="museum-card wiki-card-link" href="qinghua/"><span>04 · BLUE & WHITE</span><h3>青花</h3><p>钴料、胎釉与青花装饰。</p><span class="wiki-read-more">进入青花</span></a>
+  <a class="museum-card wiki-card-link" href="fencai/"><span>05 · FENCAI</span><h3>粉彩</h3><p>彩料与细密设色体系。</p><span class="wiki-read-more">进入粉彩</span></a>
+  <a class="museum-card wiki-card-link" href="colored-glaze/"><span>06 · GLAZES</span><h3>颜色釉</h3><p>不同釉色与烧成条件。</p><span class="wiki-read-more">进入颜色釉</span></a>
+</div>
 
-## 历史上的专业分工
+## 工艺并不是固定不变的
 
-国家级非遗资料指出，明清时期景德镇手工制瓷形成了高度细化的分工体系，原料、成型、装饰、施釉、烧成和辅助环节相互衔接。[R19]
+景德镇制瓷是一套由原料加工、成型、修整、装饰、施釉、装烧与烧成等环节组成的生产体系。不同历史时期的工序与分工会发生变化。[R08][R19]
 
-清代《景德镇陶录》则以“陶务”作为独立章节，记录窑户、工种、作坊以及生产管理等内容，反映当时已经形成较成熟的行业知识体系。[R04]
-
-## 技术专题
-
-- [原料与配方](raw-materials.md)
-- [成型与修整](forming-and-finishing.md)
-- [窑炉与烧成](kiln-firing.md)
-- [青花](qinghua.md)
-- [粉彩](fencai.md)
-- [颜色釉](colored-glaze.md)
-
-## 研究原则
-
-一个工艺术语只有在明确年代和证据来源后才能写成历史事实。例如“二元配方始于元代”在现代研究中存在不同判定标准，Wiki 应同时呈现研究结论和争议，而不是把单一说法当成定论。[R11]
+明清时期，景德镇形成了高度细化的专业分工；《景德镇陶录》也记录了窑户、工种、作坊与生产管理等内容。[R04][R19]
