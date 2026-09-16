@@ -1,0 +1,9 @@
+/* Official museum image presentation */
+.compare-specimen.has-official-image{position:relative;overflow:hidden}
+.compare-specimen.has-official-image .specimen-stage{min-height:250px;background:linear-gradient(145deg,#f5f2e8,#e9e4d7);padding:18px}
+.official-museum-image{display:block;width:100%;height:250px;object-fit:contain;border-radius:14px;filter:saturate(.98) contrast(1.01);transition:transform .45s ease,filter .45s ease}
+.compare-specimen.has-official-image:hover .official-museum-image{transform:scale(1.025);filter:saturate(1.04) contrast(1.03)}
+.museum-image-credit{display:inline-flex;align-items:center;gap:6px;margin:0 14px 14px;color:#526274;font-size:.68rem;line-height:1.35;text-decoration:none;border-bottom:1px solid rgba(82,98,116,.22)}
+.museum-image-credit::before{content:'◈';font-size:.7rem}
+.museum-image-credit:hover{color:#173d67;border-bottom-color:#173d67}
+@media(max-width:650px){.compare-specimen.has-official-image .specimen-stage{min-height:210px;padding:12px}.official-museum-image{height:210px}}
