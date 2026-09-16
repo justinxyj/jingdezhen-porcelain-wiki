@@ -15,6 +15,8 @@ theme:
     - search.suggest
     - search.highlight
     - content.code.copy
+    - content.action.edit
+    - content.action.view
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -53,6 +55,7 @@ nav:
       - 器物图谱: museum/catalog.md
       - 人物数据库: museum/people.md
       - 图片库: museum/gallery.md
+      - 知识条目: entry.md
   - 文献研究:
       - 研究规范: research/README.md
       - 核心文献库: research/sources.md
@@ -60,6 +63,8 @@ nav:
   - 互动与社区:
       - 登录 / 注册: account.md
       - 编辑知识条目: editor.md
+      - 版本历史: history-revisions.md
+      - 最近更改: recent-changes.md
       - 审核中心: admin.md
       - 数据贡献指南: contribute.md
   - 历史与发展:
