@@ -6,10 +6,24 @@
   const url=e=>window.JDM_KNOWLEDGE?.url(e)||`${ROOT}entry/?type=${encodeURIComponent(e?.category||'')}&slug=${encodeURIComponent(e?.slug||'')}`;
   const sourceUrl=s=>s&&typeof s==='object'?s.url:'';
   const sourceLabel=s=>s&&typeof s==='object'?s.label||'来源':(typeof s==='string'?s:'来源');
-  function render(root,e,relations){
-    const m=e.zh?.meta||{},im=e.media?.[0],wiki=m.wikiTitle||e.zh?.title||e.slug;
-    root.innerHTML=`<article class="wiki-entry-card"><header class="wiki-entry-header"><div><div class="wiki-entry-kicker">${esc(e.category||'知识')}</div><h1>${esc(e.zh?.title||e.slug)}</h1><p>${esc(plain(e.zh?.summary||''))}</p></div>${im?`<figure class="wiki-entry-cover"><img src="${esc(im.path)}" alt="${esc(im.title||e.zh?.title||e.slug)}"><figcaption>${esc(im.title||'')} · ${esc(im.source||'')} · ${esc(im.license||'')}</figcaption></figure>`:''}</header><div class="wiki-entry-meta">${m.period?`<span>${esc(m.period)}</span>`:''}${m.map?.country?`<span>${esc(m.map.country)}</span>`:''}${m.map?.type?`<span>${esc(m.map.type)}</span>`:''}${m.ref?`<span>${esc(m.ref)}</span>`:''}</div><section class="wiki-entry-body"><h2>条目正文</h2><div class="wiki-entry-text">${esc(plain(e.zh?.content||'暂无正文'))}</div></section>${relations.length?`<section class="wiki-entry-relations"><h2>相关内容</h2><div class="wiki-relation-grid">${relations.map(r=>`<a href="${url(r.entry)}"><b>${esc(r.entry.zh?.title||r.entry.slug)}</b><small>查看相关内容 →</small></a>`).join('')}</div></section>`:''}<section class="wiki-entry-sources"><h2>来源与外部资料</h2><div class="wiki-entry-source-links">${(e.sources||[]).map(s=>{const u=sourceUrl(s);return u?`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(sourceLabel(s))} ↗</a>`:''}).filter(Boolean).join('')||'<span>暂无外部来源。</span>'}<a href="https://zh.wikipedia.org/w/index.php?search=${encodeURIComponent(wiki)}" target="_blank" rel="noopener">维基百科 ↗</a></div></section></article>`;
+  const validMedia=e=>{const m=e?.media?.[0];return m&&!window.JDM_MEDIA_POLICY?.isGenericPlaceholder?.(m)?m:null};
+  function detailedIntro(e){
+    const m=e.zh?.meta||{};
+    const summary=plain(e.zh?.summary||'');
+    const content=plain(e.zh?.content||'');
+    const text=content||summary;
+    if(text.length>=180)return text;
+    const context=plain(m.description||m.context||m.quote_context||'');
+    if(context&&context.length>=80)return `${text}${text&&context?'\n\n':''}${context}`.trim();
+    const facts=[m.era||m.period,m.role,m.location,m.region,m.craft].filter(Boolean).join('、');
+    return text||(facts?`${facts}。该条目集中介绍相关历史背景、人物或器物信息，并结合可核验文献与馆藏资料说明其历史位置、文化意义及与景德镇陶瓷发展之间的关系。`:'该条目用于介绍这一历史对象、人物、文献或工艺主题，结合相关史料、研究与馆藏信息说明其形成背景、发展过程及与景德镇陶瓷史的联系。');
   }
+  function render(root,e,relations){
+    const m=e.zh?.meta||{},im=validMedia(e),wiki=m.wikiTitle||e.zh?.title||e.slug;
+    const intro=detailedIntro(e);
+    root.innerHTML=`<article class="wiki-entry-card"><header class="wiki-entry-header"><div><div class="wiki-entry-kicker">${esc(e.category||'知识')}</div><h1>${esc(e.zh?.title||e.slug)}</h1><p>${esc(intro)}</p></div>${im?`<figure class="wiki-entry-cover"><img src="${esc(im.path)}" alt="${esc(im.title||e.zh?.title||e.slug)}"><figcaption>${esc(im.title||'')} · ${esc(im.source||'')} · ${esc(im.license||'')}</figcaption></figure>`:''}</header><div class="wiki-entry-meta">${m.period?`<span>${esc(m.period)}</span>`:''}${m.map?.country?`<span>${esc(m.map.country)}</span>`:''}${m.map?.type?`<span>${esc(m.map.type)}</span>`:''}</div><section class="wiki-entry-body"><h2>详细介绍</h2><div class="wiki-entry-text">${esc(contentOrIntro(e,intro))}</div></section>${relations.length?`<section class="wiki-entry-relations"><h2>相关内容</h2><div class="wiki-relation-grid">${relations.map(r=>`<a href="${url(r.entry)}"><b>${esc(r.entry.zh?.title||r.entry.slug)}</b><small>查看相关内容 →</small></a>`).join('')}</div></section>`:''}<section class="wiki-entry-sources"><h2>来源与外部资料</h2><div class="wiki-entry-source-links">${(e.sources||[]).map(s=>{const u=sourceUrl(s);return u?`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(sourceLabel(s))} ↗</a>`:''}).filter(Boolean).join('')||'<span>暂无外部来源。</span>'}<a href="https://zh.wikipedia.org/w/index.php?search=${encodeURIComponent(wiki)}" target="_blank" rel="noopener">维基百科 ↗</a></div></section></article>`;
+  }
+  function contentOrIntro(e,intro){const content=plain(e.zh?.content||'');return content||intro}
   async function loadRelations(db,entryId,entries){
     if(!db)return[];
     const {data,error}=await db.from('entry_relations').select('entry_id,related_entry_id,relation_type,note').or(`entry_id.eq.${entryId},related_entry_id.eq.${entryId}`);
