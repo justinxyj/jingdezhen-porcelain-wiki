@@ -23,10 +23,12 @@
           <a class="jdm-text-link" href="#story" data-scroll>了解景德镇 <b>↓</b></a>
         </div>
       </div>
-      <div class="jdm-v2-hero-vessel jdm-reveal" aria-label="元代景德镇青花瓷">
+      <div class="jdm-v2-hero-vessel jdm-reveal" aria-label="景德镇青花瓷">
         <div class="jdm-vessel-halo"></div>
-        <img src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/42490/177595/main-image" alt="元代景德镇窑青花莲池纹玉壶春瓶" loading="eager">
-        <div class="jdm-vessel-caption">元 · 景德镇窑<br><small>青花莲池纹玉壶春瓶 · The Met Open Access</small></div>
+        <div class="jdm-home-vessel-stage">
+          <div class="jdm-vessel-fallback" aria-hidden="true"><span>景德镇</span><b>青花</b><small>PORCELAIN</small></div>
+        </div>
+        <div class="jdm-vessel-caption">景德镇青花瓷<br><small>以核验馆藏为依据展示</small></div>
       </div>
       <div class="jdm-scroll-note">SCROLL TO EXPLORE <span>↓</span></div>
     </section>
@@ -48,7 +50,7 @@
         <div class="jdm-v2-product-grid">
           <a class="jdm-v2-product jdm-v2-product-blue jdm-reveal" href="museum/catalog/">
             <div class="jdm-product-copy"><span>01 · ARTIFACTS</span><h3>器物</h3><p>从青白瓷、青花到粉彩与颜色釉，沿着器型、胎釉与纹饰阅读一件瓷器。</p><strong>进入器物图谱 →</strong></div>
-            <img src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/42490/177595/main-image" alt="青花瓷" loading="lazy">
+            <div class="jdm-home-card-artifact" aria-hidden="true"><span>青花</span></div>
           </a>
           <a class="jdm-v2-product jdm-v2-product-ink jdm-reveal" href="museum/people/">
             <div class="jdm-product-copy"><span>02 · PEOPLE</span><h3>人物</h3><p>工匠、督陶官与瓷画家，让技术、制度与审美拥有具体的人。</p><strong>进入人物数据库 →</strong></div>
@@ -70,9 +72,9 @@
           <p>钴料、胎土、透明釉与高温烧成，共同创造了最具全球辨识度的中国陶瓷视觉语言之一。</p>
           <a class="jdm-pill jdm-pill-light" href="craft/qinghua/">深入了解青花 <b>→</b></a>
         </div>
-        <div class="jdm-blue-vessel jdm-reveal">
+        <div class="jdm-blue-vessel jdm-reveal" aria-hidden="true">
           <div class="jdm-blue-orbit"></div>
-          <img src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/42490/177595/main-image" alt="青花瓷细节" loading="lazy">
+          <div class="jdm-home-blue-disc"><span>青花</span></div>
         </div>
       </div>
     </section>
