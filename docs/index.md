@@ -57,14 +57,14 @@
         <a class="jdm-artifact artifact-craft" href="craft/" data-label="工艺">
           <span class="artifact-glow"></span><span class="porcelain-bowl"></span><b>工艺</b><small>Techniques</small>
         </a>
-        <a class="jdm-artifact artifact-literature" href="research/sources/" data-label="文献">
+        <a class="jdm-artifact artifact-literature" href="research/literature-library/" data-label="文献">
           <span class="artifact-glow"></span><span class="porcelain-jar vase-blue"></span><b>文献</b><small>Literature</small>
         </a>
         <a class="jdm-artifact artifact-gallery" href="museum/gallery/" data-label="图片库">
           <span class="artifact-glow"></span><span class="porcelain-bottle"></span><b>图片库</b><small>Gallery</small>
         </a>
-        <a class="jdm-artifact artifact-map" href="museum/kiln-map/" data-label="地图">
-          <span class="artifact-glow"></span><span class="porcelain-tall-vase"></span><b>地图</b><small>Map</small>
+        <a class="jdm-artifact artifact-map" href="research/heritage/" data-label="遗产">
+          <span class="artifact-glow"></span><span class="porcelain-tall-vase"></span><b>遗产</b><small>Heritage</small>
         </a>
       </div>
       <div class="jdm-scroll-hint">探索馆藏 <span>↓</span></div>
@@ -79,12 +79,15 @@
       <div class="jdm-feature-panel">
         <div class="feature-bottle"></div><div><div class="panel-kicker">FEATURED OBJECT · 本期器物</div><h2>青花瓷</h2><p>以釉下彩绘为核心的景德镇重要装饰体系。</p><a href="museum/catalog/">查看器物图谱 →</a></div>
       </div>
-      <div class="jdm-map-panel"><div class="panel-kicker">HERITAGE MAP · 遗产地图</div><h2>五个组成部分</h2><p>从原料、燃料到窑炉与城市生产中心，理解完整的瓷业系统。</p><a href="museum/kiln-map/">打开地图 →</a></div>
+      <div class="jdm-map-panel"><div class="panel-kicker">HERITAGE MAP · 遗产地图</div><h2>五个组成部分</h2><p>从原料、燃料到窑炉与城市生产中心，理解完整的瓷业系统。</p><a href="research/heritage/">打开遗产 →</a></div>
     </section>
 
-    <section class="jdm-evidence">
-      <div><strong>考古</strong><span>发掘报告</span></div><div><strong>文献</strong><span>地方志与古籍</span></div><div><strong>研究</strong><span>学术论文</span></div><div><strong>遗产</strong><span>UNESCO 与官方资料</span></div>
-      <p>本 Wiki 的正式知识只进入有出处、可追溯、可核验的内容。<br><a href="research/sources/">查看核心文献库 →</a></p>
+    <section class="jdm-evidence" aria-label="证据与研究入口">
+      <button class="jdm-evidence-card" type="button" data-evidence="archaeology" tabindex="0"><strong>考古</strong><span>官方考古资料<br>发掘报告 · 时间轴</span></button>
+      <button class="jdm-evidence-card" type="button" data-evidence="literature" tabindex="0"><strong>文献</strong><span>古籍 · 地方志 · 考古报告<br>学术论文 · 在线阅读</span></button>
+      <button class="jdm-evidence-card" type="button" data-evidence="research" tabindex="0"><strong>研究</strong><span>把考古与文献连接起来<br>普通读者也能看懂的研究入口</span></button>
+      <button class="jdm-evidence-card" type="button" data-evidence="heritage" tabindex="0"><strong>遗产</strong><span>UNESCO 世界遗产<br>五个组成部分 · 官方文件</span></button>
+      <p>本 Wiki 的正式知识只进入有出处、可追溯、可核验的内容。<br><a href="research/literature-library/">查看完整文献总库 →</a> · <a href="research/archaeology/">查看考古资料 →</a> · <a href="research/heritage/">查看世界遗产 →</a></p>
     </section>
   </div>
 </div>
