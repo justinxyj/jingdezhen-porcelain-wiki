@@ -1,10 +1,33 @@
-/* Public-facing historical reception cards. Backend implementation details stay hidden. */
+/* Public-facing reception archive: quotations first, sources second. */
 (function(){
   const esc=s=>String(s??'').replace(/[&<>\"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[m]));
-  const wiki=t=>`https://zh.wikipedia.org/w/index.php?search=${encodeURIComponent(t||'')}`;
   const plain=s=>{const d=document.createElement('div');d.innerHTML=String(s||'');return d.textContent||d.innerText||''};
-  function firstObjectSource(e){const s=(e.sources||[]).find(x=>x&&typeof x==='object'&&x.url);return s?.url||''}
-  function card(e,i){const m=e.zh?.meta||{},im=e.media?.[0],source=firstObjectSource(e);return `<article class="voice-card" data-index="${i}"><div class="voice-image-wrap">${im?`<img class="voice-wiki-image" src="${esc(im.path)}" alt="${esc(im.title||e.zh?.title||e.slug)}" loading="lazy">`:'<div class="voice-image-fallback">暂无已核验图片</div>'}</div><div class="voice-card-body"><div class="voice-tags"><span>${esc(m.era||m.period||'历史时期')}</span>${m.ref?`<span>${esc(m.ref)}</span>`:''}</div><h2>${esc(e.zh?.title||e.slug)}</h2>${m.author?`<p class="voice-author">作者：${esc(m.author)}</p>`:''}<blockquote>${esc(plain(e.zh?.content||e.zh?.summary||''))}</blockquote><div class="voice-ai"><b>摘要</b><p>${esc(plain(e.zh?.summary||''))}</p></div><div class="voice-actions"><a href="${window.JDM_KNOWLEDGE.url(e)}">查看详情 →</a>${source?`<a href="${esc(source)}" target="_blank" rel="noopener">资料出处 ↗</a>`:''}<a href="${wiki(m.wikiTitle||e.zh?.title)}" target="_blank" rel="noopener">维基百科 ↗</a></div></div></article>`}
-  function init(){const root=document.getElementById('voices-books-root');if(!root||!window.JDM_KNOWLEDGE)return;window.JDM_KNOWLEDGE.all().then(entries=>{const docs=entries.filter(e=>e.category==='文献');root.innerHTML=`<div class="voice-filter"><button class="is-active" data-filter="all">全部</button><button data-filter="book">书籍</button><button data-filter="document">文献</button><button data-filter="research">研究</button><input id="voice-search" type="search" placeholder="搜索文献、作者或关键词…"></div><div class="voices-grid" id="voices-grid">${docs.map((e,i)=>card(e,i)).join('')}</div>`;const grid=root.querySelector('#voices-grid'),search=root.querySelector('#voice-search'),buttons=[...root.querySelectorAll('.voice-filter button')];let filter='all';function apply(){const q=(search.value||'').toLowerCase();docs.forEach((e,i)=>{const el=grid.children[i],kind=e.zh?.meta?.kind||'',hay=JSON.stringify(e.zh||{}).toLowerCase();el.style.display=(!q||hay.includes(q))&&(filter==='all'||kind===filter||(!kind&&filter==='document'))?'':'none'})}search.addEventListener('input',apply);buttons.forEach(b=>b.addEventListener('click',()=>{buttons.forEach(x=>x.classList.remove('is-active'));b.classList.add('is-active');filter=b.dataset.filter;apply()}));});}
+  const meta=e=>e?.zh?.meta||{};
+  const isPerson=e=>e.category==='人物';
+  const isLiterature=e=>e.category==='文献';
+  const hasReception=e=>!!(meta(e).quote||meta(e).quotation||meta(e).evaluation||meta(e).voiceQuote||meta(e).assessment||meta(e).review);
+  function quoteOf(e){const m=meta(e);return m.quote||m.quotation||m.evaluation||m.voiceQuote||m.assessment||m.review||plain(e.zh?.content||e.zh?.summary||'');}
+  function titleOf(e){return e?.zh?.title||e?.slug||'未命名';}
+  function sourceOf(e){const m=meta(e);const s=(e.sources||[]).find(x=>x&&typeof x==='object'&&x.url);return {url:s?.url||'',label:s?.label||s?.title||(m.author?`${m.author}《${titleOf(e)}》`:`《${titleOf(e)}》`)};}
+  function card(e,i,type){
+    const m=meta(e),im=e.media?.[0],q=quoteOf(e),src=sourceOf(e);
+    const subject=type==='literature'?'书中评价':'人物评价';
+    const title=titleOf(e);
+    const attribution=type==='literature'?(m.author?`作者：${m.author}`:'书籍 / 文献'):(m.role?m.role:'人物');
+    return `<article class="reception-card ${type==='person'?'reception-person-card':'reception-text-card'}" data-index="${i}"><div class="reception-card-main">${im?`<img class="reception-thumb" src="${esc(im.path)}" alt="${esc(im.title||title)}" loading="lazy">`:''}<div class="reception-context"><span class="reception-type">${subject}</span>${m.era||m.period?`<span class="reception-era">${esc(m.era||m.period)}</span>`:''}<blockquote>“${esc(plain(q))}”</blockquote><h3>${esc(title)}</h3><p class="reception-speaker">${esc(attribution)}</p><div class="reception-source"><span>来源</span>${src.url?`<a href="${esc(src.url)}" target="_blank" rel="noopener">${esc(src.label)} ↗</a>`:`<span>${esc(src.label)}</span>`}</div></div></div></article>`;
+  }
+  function init(){
+    const root=document.getElementById('voices-books-root');
+    if(!root||!window.JDM_KNOWLEDGE)return;
+    window.JDM_KNOWLEDGE.all().then(entries=>{
+      const people=entries.filter(isPerson).filter(hasReception);
+      const books=entries.filter(isLiterature).filter(hasReception);
+      root.innerHTML=`<div class="reception-intro"><span class="reception-kicker">VOICES · 评价史</span><h2>先读评价，再看出处。</h2><p>这里的主角是“评价”本身。每一条记录先呈现关于景德镇的原文，再在下方标明说话的人、书籍或文献来源。</p></div><div class="reception-tabs"><button class="is-active" data-view="all">全部评价</button><button data-view="literature">书籍与文献</button><button data-view="person">名人评价</button></div><div class="reception-grid" id="reception-grid">${books.map((e,i)=>card(e,i,'literature')).join('')}${people.map((e,i)=>card(e,books.length+i,'person')).join('')}</div><div class="reception-empty" id="reception-empty" hidden>目前还没有可展示的评价。</div>`;
+      const grid=root.querySelector('#reception-grid'),empty=root.querySelector('#reception-empty'),tabs=[...root.querySelectorAll('.reception-tabs button')];
+      function apply(view){let count=0;[...grid.children].forEach(el=>{const p=el.classList.contains('reception-person-card');const ok=view==='all'||(view==='person'&&p)||(view==='literature'&&!p);el.style.display=ok?'':'none';if(ok)count++});empty.hidden=count>0;}
+      tabs.forEach(b=>b.addEventListener('click',()=>{tabs.forEach(x=>x.classList.remove('is-active'));b.classList.add('is-active');apply(b.dataset.view)}));
+      apply('all');
+    });
+  }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
