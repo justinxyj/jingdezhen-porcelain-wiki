@@ -39,6 +39,7 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2
   - javascripts/museum.js
   - javascripts/auth.js
+  - javascripts/wiki-enhancements.js
 
 markdown_extensions:
   - admonition
