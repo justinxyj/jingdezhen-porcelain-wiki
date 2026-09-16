@@ -5,7 +5,12 @@
   const mediaState=(v)=>({verified:'已核验',unreviewed:'待核验',rejected:'已拒绝',expired:'已过期'}[v]||v||'未设置');
   async function getDb(){
     if(!(window.JDM_RUNTIME_CONFIG?.supabaseUrl&&window.JDM_RUNTIME_CONFIG?.supabaseAnonKey&&window.supabase))throw new Error('Supabase 配置不可用');
-    return window.supabase.createClient(window.JDM_RUNTIME_CONFIG.supabaseUrl,window.JDM_RUNTIME_CONFIG.supabaseAnonKey);
+    const db=window.supabase.createClient(window.JDM_RUNTIME_CONFIG.supabaseUrl,window.JDM_RUNTIME_CONFIG.supabaseAnonKey);
+    const {data:{user}}=await db.auth.getUser();
+    if(!user)throw new Error('馆长后台需要登录');
+    const {data:profile}=await db.from('profiles').select('role').eq('id',user.id).maybeSingle();
+    if(profile?.role!=='admin')throw new Error('当前账号没有馆长后台权限');
+    return db;
   }
   async function load(){
     const db=await getDb();
@@ -22,9 +27,7 @@
     const mediaByEntry=new Map();media.forEach(m=>{if(!mediaByEntry.has(m.entry_id))mediaByEntry.set(m.entry_id,[]);mediaByEntry.get(m.entry_id).push(m)});
     const issues=[];
     entries.forEach(e=>{
-      const title=e.zh?.title||e.slug;
-      const body=e.zh?.content||'';
-      const summary=e.zh?.summary||'';
+      const title=e.zh?.title||e.slug,body=e.zh?.content||'',summary=e.zh?.summary||'';
       if(!title)issues.push(['entry','缺少标题',e.slug]);
       if(!body)issues.push(['entry','缺少正文',e.slug]);
       if(!summary)issues.push(['entry','缺少简介',e.slug]);
