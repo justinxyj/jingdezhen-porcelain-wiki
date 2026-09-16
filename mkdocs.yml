@@ -44,6 +44,7 @@ extra_javascript:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
   - javascripts/runtime-config.js
   - https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2
+  - javascripts/knowledge-store.js
   - javascripts/museum.js
   - javascripts/wiki-enhancements.js
   - javascripts/wiki-timeline.js
@@ -98,12 +99,17 @@ nav:
   - 器物与美学:
       - 器物分类: objects/README.md
       - 纹饰与题材: aesthetics/patterns.md
-      - 釉色与装饰: aesthetics/glazes-and-decoration.md
   - 窑址与城市空间:
       - 窑址总览: kilns/README.md
-      - 御窑厂遗址: kilns/imperial-kiln.md
+      - 御窑厂: kilns/imperial-kiln.md
       - 湖田窑: kilns/hutian-kiln.md
-      - 其他重要遗存: kilns/other-sites.md
-      - 当代陶瓷产业空间: kilns/contemporary-ceramic-districts.md
-  - 人物与传承: people/README.md
-  - 现代景德镇: contemporary/README.md
+      - 其他窑址与矿料: kilns/other-sites.md
+  - 人物与传承:
+      - 人物总览: people/README.md
+  - 现代景德镇:
+      - 现代总览: contemporary/README.md
+      - 教育与研究: contemporary/education.md
+      - 产业与社会: contemporary/industry.md
+      - 当代艺术: contemporary/art.md
+      - 世界遗产与保护: contemporary/heritage.md
+      - 数字化与未来: contemporary/future.md
