@@ -40,6 +40,7 @@ extra_css:
   - stylesheets/evidence-hub.css
   - stylesheets/global-kiln-map.css
   - stylesheets/homepage-apple.css
+  - stylesheets/museum-apple.css
 extra_javascript:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
   - javascripts/runtime-config.js
