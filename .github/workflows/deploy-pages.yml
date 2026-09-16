@@ -30,15 +30,6 @@ jobs:
       - name: Install dependencies
         run: pip install mkdocs-material
 
-      - name: Inject public runtime config
-        env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
-        run: |
-          cat > docs/javascripts/runtime-config.js <<EOF
-          window.JDM_RUNTIME_CONFIG = { supabaseUrl: '${SUPABASE_URL}', supabaseAnonKey: '${SUPABASE_ANON_KEY}' };
-          EOF
-
       - name: Build site
         run: mkdocs build
 
