@@ -56,6 +56,7 @@ nav:
   - 文献研究:
       - 研究规范: research/README.md
       - 核心文献库: research/sources.md
+      - 补充文献库: research/sources-addendum.md
   - 互动与社区:
       - 登录 / 注册: account.md
       - 编辑知识条目: editor.md
