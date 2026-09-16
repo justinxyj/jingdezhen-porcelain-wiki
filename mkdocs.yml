@@ -41,6 +41,7 @@ extra_css:
   - stylesheets/global-kiln-map.css
   - stylesheets/homepage-apple.css
   - stylesheets/museum-apple.css
+  - stylesheets/curator.css
 extra_javascript:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
   - javascripts/runtime-config.js
@@ -57,6 +58,8 @@ extra_javascript:
   - javascripts/global-kiln-map.js
   - javascripts/museum-images.js
   - javascripts/homepage-apple.js
+  - javascripts/source-audit.js
+  - javascripts/museum-admin.js
   - javascripts/site-privacy.js
 
 markdown_extensions:
