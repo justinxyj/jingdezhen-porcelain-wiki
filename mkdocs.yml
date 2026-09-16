@@ -1,5 +1,5 @@
-site_name: Jingdezhen Porcelain Wiki
-site_description: 景德镇陶瓷历史、工艺、器物、窑址与当代文化开放知识库
+site_name: 景德镇陶瓷数字博物馆 · Jingdezhen Porcelain Wiki
+site_description: 景德镇陶瓷历史、工艺、器物、窑址、人物与当代文化数字博物馆
 site_url: https://justinxyj.github.io/jingdezhen-porcelain-wiki/
 repo_url: https://github.com/justinxyj/jingdezhen-porcelain-wiki
 repo_name: justinxyj/jingdezhen-porcelain-wiki
@@ -11,6 +11,7 @@ theme:
     - navigation.tabs
     - navigation.sections
     - navigation.top
+    - navigation.tracking
     - search.suggest
     - search.highlight
     - content.code.copy
@@ -26,6 +27,13 @@ theme:
         icon: material/weather-night
         name: 切换到浅色模式
 
+extra_css:
+  - stylesheets/museum.css
+extra_javascript:
+  - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
+  - javascripts/museum.js
+  - javascripts/auth.js
+
 markdown_extensions:
   - admonition
   - attr_list
@@ -35,6 +43,17 @@ markdown_extensions:
 
 nav:
   - 首页: index.md
+  - 数字博物馆:
+      - 博物馆总览: museum/index.md
+      - 历史时间轴: museum/timeline.md
+      - 窑址地图: museum/kiln-map.md
+      - 器物图谱: museum/catalog.md
+      - 人物数据库: museum/people.md
+      - 图片库: museum/gallery.md
+  - 互动与社区:
+      - 登录 / 注册: account.md
+      - 编辑知识条目: editor.md
+      - 数据贡献指南: contribute.md
   - 历史与发展:
       - 历史总览: history/README.md
       - 唐五代: history/tang-wudai.md
