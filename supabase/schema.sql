@@ -1,4 +1,4 @@
--- Jingdezhen Porcelain Digital Museum: wiki data model
+-- Jingdezhen Porcelain Digital Museum: canonical knowledge graph data model
 create extension if not exists pgcrypto;
 
 create table if not exists public.profiles (
@@ -21,6 +21,18 @@ create table if not exists public.entries (
   updated_by uuid references auth.users(id),
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
+);
+
+-- Canonical graph edges. Timeline, map, people, objects and literature all resolve to entries,
+-- and cross-page relationships are represented here instead of being duplicated in Markdown/JS.
+create table if not exists public.entry_relations (
+  entry_id uuid not null references public.entries(id) on delete cascade,
+  related_entry_id uuid not null references public.entries(id) on delete cascade,
+  relation_type text not null check (relation_type in ('related','person','object','kiln','craft','period','source')),
+  note text,
+  created_at timestamptz not null default now(),
+  primary key(entry_id, related_entry_id, relation_type),
+  check(entry_id <> related_entry_id)
 );
 
 create table if not exists public.edits (
@@ -69,18 +81,29 @@ create table if not exists public.favorites (
   primary key(user_id, entry_id)
 );
 
+create index if not exists entries_category_status_idx on public.entries(category,status);
+create index if not exists entry_relations_related_idx on public.entry_relations(related_entry_id);
+create index if not exists media_entry_status_idx on public.media(entry_id,status);
+
 alter table public.profiles enable row level security;
 alter table public.entries enable row level security;
+alter table public.entry_relations enable row level security;
 alter table public.edits enable row level security;
 alter table public.entry_revisions enable row level security;
 alter table public.media enable row level security;
 alter table public.favorites enable row level security;
 
--- Public can read published knowledge and its published revision history.
+-- Public can read published knowledge, graph edges and approved media.
 create policy "entries_public_read" on public.entries for select
   using (status='published' or auth.uid()=updated_by or is_staff());
 
 create policy "entries_staff_write" on public.entries for all
+  using (is_staff()) with check (is_staff());
+
+create policy "entry_relations_public_read" on public.entry_relations for select
+  using (exists (select 1 from public.entries e where e.id=entry_relations.entry_id and e.status='published'));
+
+create policy "entry_relations_staff_write" on public.entry_relations for all
   using (is_staff()) with check (is_staff());
 
 create policy "edits_insert" on public.edits for insert
