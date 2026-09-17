@@ -4,9 +4,8 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / 'docs'
-
 errors = []
-warnings = []
+ warnings = []
 
 # Markdown page hygiene
 for path in DOCS.rglob('*.md'):
@@ -25,16 +24,19 @@ for path in (DOCS / 'javascripts').glob('*.js'):
         errors.append(f'{path}: legacy generic Met image URL remains')
 
 # Navigation target existence check.
-# MkDocs supports both flat entries and nested `- Label: target` mappings.
+# MkDocs nav targets are relative to docs_dir. Resolve both the normal docs-relative
+# form and a repository-relative fallback so this guard catches real missing targets
+# without depending on the current working directory.
 mk = ROOT / 'mkdocs.yml'
 if mk.exists():
     text = mk.read_text(encoding='utf-8')
     for label, raw in re.findall(r'(?m)^\s*-\s+(.+?):\s*([^\n]+)$', text):
         target = raw.strip().strip('"\'')
-        if target.endswith('.md') and not target.startswith(('http://', 'https://')):
-            candidate = DOCS / target
-            if not candidate.exists():
-                errors.append(f'mkdocs.yml: missing nav target {target} (label: {label.strip()})')
+        if not target.endswith('.md') or target.startswith(('http://', 'https://')):
+            continue
+        candidates = [DOCS / target, ROOT / target]
+        if not any(candidate.exists() for candidate in candidates):
+            errors.append(f'mkdocs.yml: missing nav target - {label.strip()}: {target}')
 
 # Ensure the public image policy is present.
 policy = DOCS / 'javascripts' / 'media-policy.js'
