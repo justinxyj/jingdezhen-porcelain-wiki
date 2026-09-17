@@ -45,6 +45,7 @@ extra_css:
   - stylesheets/people.css
   - stylesheets/reception.css
   - stylesheets/timeline-details.css
+  - stylesheets/technology-tree.css
 extra_javascript:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
   - javascripts/runtime-config.js
@@ -60,6 +61,7 @@ extra_javascript:
   - javascripts/evidence-hub.js
   - javascripts/literature-library.js
   - javascripts/global-kiln-map.js
+  - javascripts/technology-tree.js
   - javascripts/museum-images.js
   - javascripts/homepage-apple.js
   - javascripts/source-audit.js
@@ -100,6 +102,7 @@ nav:
       - 近现代: history/modern.md
   - 工艺与技术:
       - 工艺总览: craft/README.md
+      - 制瓷技术树: craft/technology-tree.md
       - 原料与配方: craft/raw-materials.md
       - 成型与修整: craft/forming-and-finishing.md
       - 窑炉与烧成: craft/kiln-firing.md
