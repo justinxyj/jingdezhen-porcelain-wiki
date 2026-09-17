@@ -1,44 +1,57 @@
 # 现代景德镇
 
-<div class="museum-hero">
-  <div>
-    <div class="eyebrow">CONTEMPORARY · 近现代</div>
-    <h1>从传统瓷业，到今天的陶瓷城市。</h1>
-    <p>现代景德镇并不是一段与历史切断的“新时期”。教育、产业、艺术、遗产保护和数字化仍然与这座城市千年来形成的制瓷传统相互连接。</p>
+<div class="modern-hero">
+  <div class="modern-hero-copy">
+    <div class="modern-eyebrow">CONTEMPORARY · 近现代</div>
+    <h1>传统没有停在窑火熄灭的那一刻。</h1>
+    <p>今天的景德镇，是一座同时拥有生产、教育、艺术、遗产保护、文化旅游与数字知识网络的陶瓷城市。</p>
+    <div class="modern-hero-actions"><a class="modern-primary" href="#modern-map">从今天开始探索 →</a><a class="modern-secondary" href="../">回到历史总览</a></div>
   </div>
-  <div class="museum-hero-mark">今日<br>瓷都</div>
+  <div class="modern-hero-orbit" aria-hidden="true"><div class="modern-orbit orbit-1"></div><div class="modern-orbit orbit-2"></div><div class="modern-orbit orbit-3"></div><div class="modern-core">瓷<br><small>CERAMIC CITY</small></div></div>
 </div>
 
-<div class="museum-stats">
-  <div><strong>教育</strong><span>高校与科研</span></div>
-  <div><strong>产业</strong><span>生产与城市</span></div>
-  <div><strong>艺术</strong><span>传统与当代</span></div>
-  <div><strong>遗产</strong><span>保护与传承</span></div>
-</div>
+<div class="modern-stat-strip"><div><strong>教育</strong><span>高校 · 科研 · 传承</span></div><div><strong>产业</strong><span>生产 · 设计 · 市场</span></div><div><strong>艺术</strong><span>工作室 · 展览 · 交流</span></div><div><strong>遗产</strong><span>考古 · 保护 · 社区</span></div></div>
 
-## 探索现代景德镇
+<section id="modern-map" class="modern-explorer">
+  <div class="modern-section-head"><div><span class="modern-section-kicker">THE CITY TODAY</span><h2>把“现代景德镇”拆成五个入口。</h2></div><p>不再把现代景德镇写成一篇平铺直叙的说明文，而是从城市今天仍在发生的五种活动进入。</p></div>
+  <div class="modern-grid">
+    <a class="modern-card modern-card-large" href="education/"><span>01 · EDUCATION</span><h3>教育与研究</h3><p>从师徒传承到高校、实验室与博物馆，陶瓷知识如何被学习、研究与继续创造。</p><b>进入教育与研究 →</b><div class="modern-card-mark">学</div></a>
+    <a class="modern-card" href="industry/"><span>02 · INDUSTRY</span><h3>产业与社会</h3><p>作坊、企业、设计、消费和城市空间共同构成今天的陶瓷产业生态。</p><b>进入产业与社会 →</b><div class="modern-card-mark">业</div></a>
+    <a class="modern-card" href="art/"><span>03 · ART</span><h3>当代艺术</h3><p>泥、釉、器型和烧成继续成为当代艺术家可以工作的材料与语言。</p><b>进入当代艺术 →</b><div class="modern-card-mark">艺</div></a>
+    <a class="modern-card" href="heritage/"><span>04 · HERITAGE</span><h3>世界遗产与保护</h3><p>从单座窑址转向原料、运输、生产、城市空间与传统技艺的整体保护。</p><b>进入遗产与保护 →</b><div class="modern-card-mark">遗</div></a>
+    <a class="modern-card modern-card-wide" href="future/"><span>05 · FUTURE</span><h3>数字化与未来</h3><p>让器物、人物、窑址、地图和文献彼此连接，让景德镇拥有可以持续生长的数字记忆。</p><b>进入数字化与未来 →</b><div class="modern-card-mark">数</div></a>
+  </div>
+</section>
 
-<div class="museum-grid">
-  <a class="museum-card wiki-card-link" href="education/"><span>EDUCATION · 教育</span><h3>教育与研究</h3><p>高校、科研、材料实验与传统技艺传承共同构成现代陶瓷知识体系。</p><span class="wiki-read-more">进入教育与研究 →</span></a>
-  <a class="museum-card wiki-card-link" href="industry/"><span>INDUSTRY · 产业</span><h3>产业与社会</h3><p>传统作坊、现代生产、艺术工作室、文化旅游和城市生活彼此交织。</p><span class="wiki-read-more">进入产业与社会 →</span></a>
-  <a class="museum-card wiki-card-link" href="art/"><span>ART · 艺术</span><h3>当代艺术</h3><p>传统泥土、釉料、工艺与现代艺术创作产生新的表达方式。</p><span class="wiki-read-more">进入当代艺术 →</span></a>
-  <a class="museum-card wiki-card-link" href="heritage/"><span>HERITAGE · 遗产</span><h3>世界遗产与保护</h3><p>从单个窑址转向原料、生产、城市和传统技艺组成的完整系统。</p><span class="wiki-read-more">进入遗产保护 →</span></a>
-  <a class="museum-card wiki-card-link" href="future/"><span>FUTURE · 未来</span><h3>数字化与未来</h3><p>数据库、地图、高清影像与开放资料正在重新连接景德镇的知识。</p><span class="wiki-read-more">进入数字未来 →</span></a>
-</div>
+<section class="modern-flow">
+  <div class="modern-section-head"><div><span class="modern-section-kicker">A LIVING SYSTEM</span><h2>现代，不是“历史之后”。</h2></div></div>
+  <div class="modern-flow-line"><div><i>01</i><strong>学习</strong><span>知识进入课堂</span></div><div><i>02</i><strong>生产</strong><span>技术进入城市</span></div><div><i>03</i><strong>创作</strong><span>传统进入当代</span></div><div><i>04</i><strong>保护</strong><span>遗产进入社区</span></div><div><i>05</i><strong>连接</strong><span>资料进入网络</span></div></div>
+  <p class="modern-flow-note">景德镇的现代性并不意味着与过去切断。相反，现代教育、产业、艺术、遗产与数字化，持续重新组织千年来积累的材料、工艺、知识与城市空间。</p>
+</section>
 
-## 今天的景德镇
+<section class="modern-feature modern-feature-dark">
+  <div><span class="modern-section-kicker">WORLD HERITAGE</span><h2>看见一整座城市，<br>而不只是一件瓷器。</h2><p>世界遗产框架把原料、燃料、窑炉、生产组织、运输与城市空间放回同一条叙事链。现代景德镇也因此拥有了连接考古、教育、产业与文化生活的新入口。</p><a class="modern-primary modern-primary-light" href="heritage/">查看遗产保护 →</a></div>
+  <div class="modern-feature-graph" aria-hidden="true"><div class="feature-node node-a">矿料</div><div class="feature-node node-b">窑炉</div><div class="feature-node node-c">作坊</div><div class="feature-node node-d">城市</div><div class="feature-node node-e">技艺</div><div class="feature-line fl-a"></div><div class="feature-line fl-b"></div><div class="feature-line fl-c"></div><div class="feature-line fl-d"></div></div>
+</section>
 
-景德镇今天仍然以陶瓷为重要的城市文化与产业基础，但其社会结构已经远远超出传统窑厂。教育、研究、艺术创作、文化遗产、展览、文旅和数字文化共同参与塑造新的陶瓷城市。
+<section class="modern-closing">
+  <span class="modern-section-kicker">KEEP EXPLORING</span>
+  <h2>从今天，再回到千年。</h2>
+  <p>现代景德镇只是整个知识网络中的一个切片。沿着时间、空间、人物与器物继续向前。</p>
+  <div class="modern-closing-actions"><a href="../">历史与发展 →</a><a href="../../museum/timeline/">时间轴 →</a><a href="../../museum/kiln-map/">窑址地图 →</a><a href="../../museum/catalog/">器物图谱 →</a></div>
+</section>
 
-UNESCO 在2026年将“景德镇手工瓷业遗存”列入《世界遗产名录》，其五个组成部分共同展示10至19世纪景德镇手工瓷业在原料、运输、窑炉、生产组织与城市空间上的完整体系。遗产保护同时涉及考古遗址、历史建筑、道路、码头、矿区、燃料林以及持续存在的非物质文化遗产实践。citeturn123137search2turn123137search0
-
-## 一座仍在变化的陶瓷城市
-
-<div class="museum-grid">
-  <div class="museum-card"><span>01</span><h3>从窑厂到校园</h3><p>陶瓷知识进入高校、科研机构和专业课程，传统技艺获得新的研究和教学环境。</p></div>
-  <div class="museum-card"><span>02</span><h3>从生产到创作</h3><p>现代景德镇同时容纳制造、设计、艺术陶瓷和个人工作室。</p></div>
-  <div class="museum-card"><span>03</span><h3>从遗址到遗产系统</h3><p>保护对象从单座古窑扩展到矿料、交通、城市空间和社会组织。</p></div>
-  <div class="museum-card"><span>04</span><h3>从实物到数字记忆</h3><p>器物、人物、文献、地图和图像正在被组织成可以持续更新的数字知识网络。</p></div>
-</div>
-
-<div class="museum-toolbar"><a class="jdm-pill" href="heritage/">查看世界遗产 →</a><a class="jdm-text-link" href="future/">进入数字未来 →</a></div>
+<style>
+.modern-hero{position:relative;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(340px,.9fr);gap:36px;align-items:center;min-height:540px;padding:56px 52px;margin:0 0 24px;border-radius:34px;overflow:hidden;background:radial-gradient(circle at 73% 43%,rgba(61,120,164,.35),transparent 28%),linear-gradient(135deg,#071a35 0,#163c5b 56%,#e8e0cf 160%);color:#f7f3eb;box-shadow:0 28px 70px rgba(7,26,53,.16)}
+.modern-hero-copy{position:relative;z-index:2;max-width:720px}.modern-eyebrow,.modern-section-kicker{font-size:11px;letter-spacing:.18em;font-weight:800}.modern-eyebrow{color:#d8c188}.modern-hero h1{font-size:clamp(48px,7vw,88px);line-height:.94;letter-spacing:-.07em;margin:13px 0 20px;font-weight:700}.modern-hero p{max-width:680px;color:#d4dfe8;font-size:18px;line-height:1.8}.modern-hero-actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:24px}.modern-primary,.modern-secondary{display:inline-flex;align-items:center;padding:11px 16px;border-radius:999px;text-decoration:none!important;font-size:12px;font-weight:750}.modern-primary{background:#e6cb8b;color:#071a35!important}.modern-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(230,203,139,.2)}.modern-secondary{border:1px solid rgba(255,255,255,.24);color:#fff!important}.modern-secondary:hover{background:rgba(255,255,255,.08)}.modern-primary-light{background:#fff0c6;color:#071a35!important}
+.modern-hero-orbit{position:relative;aspect-ratio:1;max-width:430px;width:100%;justify-self:center}.modern-orbit{position:absolute;inset:6%;border:1px solid rgba(234,213,167,.35);border-radius:50%;animation:modernSpin 20s linear infinite}.orbit-2{inset:16%;border-color:rgba(179,213,237,.3);animation-duration:15s;animation-direction:reverse}.orbit-3{inset:30%;border-color:rgba(255,255,255,.16);animation-duration:11s}.modern-core{position:absolute;inset:33%;border-radius:50%;display:grid;place-items:center;text-align:center;font-family:Georgia,"Noto Serif SC",serif;font-size:72px;line-height:.8;color:#f2d99d;background:radial-gradient(circle,#204966,#0c2236 74%);box-shadow:0 0 60px rgba(102,165,203,.18),inset 0 0 45px rgba(0,0,0,.28)}.modern-core small{font:8px Arial,sans-serif;letter-spacing:.22em;color:#b7cbd8;margin-top:5px}@keyframes modernSpin{to{transform:rotate(360deg)}}
+.modern-stat-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(7,26,53,.08);border:1px solid rgba(7,26,53,.08);border-radius:21px;overflow:hidden;box-shadow:0 12px 35px rgba(7,26,53,.05);margin-bottom:44px}.modern-stat-strip>div{background:#fff;padding:25px 18px;text-align:center}.modern-stat-strip strong{display:block;font-size:26px;color:#1455b8}.modern-stat-strip span{display:block;margin-top:6px;font-size:11px;color:#7a899b}
+.modern-explorer,.modern-flow,.modern-closing{margin:0 0 58px}.modern-section-head{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:22px}.modern-section-head h2{margin:7px 0 0;font-size:clamp(30px,4vw,54px);line-height:1;letter-spacing:-.055em;color:#071a35}.modern-section-head p{max-width:480px;margin:0;color:#718198;line-height:1.75;font-size:13px}.modern-section-kicker{color:#1455b8}
+.modern-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.modern-card{position:relative;display:block;min-height:245px;padding:25px;border-radius:24px;overflow:hidden;text-decoration:none!important;color:#10233f;background:linear-gradient(145deg,#fff,#f4f7fb);border:1px solid rgba(7,26,53,.08);box-shadow:0 12px 35px rgba(7,26,53,.055);transition:transform .25s,box-shadow .25s,border-color .25s}.modern-card:hover{transform:translateY(-5px);box-shadow:0 22px 48px rgba(7,26,53,.1);border-color:rgba(20,85,184,.22)}.modern-card>span{font-size:10px;letter-spacing:.1em;color:#7690aa;font-weight:700}.modern-card h3{font-size:30px;letter-spacing:-.045em;margin:16px 0 9px}.modern-card p{max-width:520px;color:#687990;line-height:1.75;font-size:13px}.modern-card b{position:absolute;left:25px;bottom:22px;font-size:12px;color:#1455b8}.modern-card-mark{position:absolute;right:20px;top:17px;font-family:Georgia,"Noto Serif SC",serif;font-size:92px;color:rgba(20,85,184,.06);line-height:1}.modern-card-large{grid-row:span 2;min-height:505px;background:linear-gradient(155deg,#eef5ff 0,#fff 65%)}.modern-card-wide{grid-column:span 2;background:linear-gradient(145deg,#f5f0e3,#fff 72%)}
+.modern-flow-line{display:grid;grid-template-columns:repeat(5,1fr);position:relative;padding:12px 0 6px}.modern-flow-line:before{content:"";position:absolute;left:9%;right:9%;top:41px;height:1px;background:rgba(20,85,184,.17)}.modern-flow-line>div{position:relative;text-align:center}.modern-flow-line i{display:grid;place-items:center;width:28px;height:28px;margin:0 auto 15px;border-radius:50%;background:#fff;border:1px solid rgba(20,85,184,.22);font:10px Arial,sans-serif;font-style:normal;color:#1455b8;box-shadow:0 0 0 7px #fff}.modern-flow-line strong{display:block;font-size:19px;color:#17304f}.modern-flow-line span{display:block;margin-top:4px;font-size:11px;color:#8290a1}.modern-flow-note{max-width:860px;margin:30px auto 0;padding:22px 24px;border-left:4px solid #d3b775;background:#f7f4eb;color:#67758a;line-height:1.85;border-radius:0 16px 16px 0}
+.modern-feature{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:center;padding:52px;margin:0 -1rem 58px;border-radius:32px;overflow:hidden}.modern-feature-dark{background:linear-gradient(145deg,#071a35,#143f5c 70%,#153047);color:#fff}.modern-feature h2{font-size:clamp(36px,5vw,62px);line-height:.98;letter-spacing:-.06em;margin:10px 0 18px}.modern-feature p{max-width:620px;color:#bfd0dd;line-height:1.85}.modern-feature .modern-section-kicker{color:#e1ca8e}.modern-feature-graph{position:relative;min-height:320px}.feature-node{position:absolute;display:grid;place-items:center;width:94px;height:94px;border-radius:50%;border:1px solid rgba(239,214,157,.42);background:rgba(255,255,255,.05);color:#f0dbad;font-size:13px;backdrop-filter:blur(6px)}.node-a{left:4%;top:8%}.node-b{right:7%;top:5%}.node-c{left:44%;top:37%}.node-d{left:3%;bottom:5%}.node-e{right:5%;bottom:8%}.feature-line{position:absolute;height:1px;background:linear-gradient(90deg,rgba(239,214,157,.05),rgba(239,214,157,.5),rgba(239,214,157,.05));transform-origin:left center}.fl-a{left:19%;top:28%;width:58%;transform:rotate(15deg)}.fl-b{left:22%;top:61%;width:56%;transform:rotate(-17deg)}.fl-c{left:47%;top:52%;width:42%;transform:rotate(-35deg)}.fl-d{left:50%;top:51%;width:38%;transform:rotate(31deg)}
+.modern-closing{text-align:center;padding:12px 0 22px}.modern-closing h2{font-size:clamp(38px,5vw,66px);letter-spacing:-.06em;line-height:.98;margin:10px 0 12px;color:#071a35}.modern-closing p{max-width:620px;margin:0 auto;color:#74839a;line-height:1.8}.modern-closing-actions{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:20px}.modern-closing-actions a{padding:9px 13px;border:1px solid rgba(20,85,184,.13);border-radius:999px;color:#1455b8;text-decoration:none;font-size:11px;font-weight:700;background:#fff}.modern-closing-actions a:hover{background:#eef5ff}
+@media(max-width:900px){.modern-hero{grid-template-columns:1fr;padding:40px 28px}.modern-hero-orbit{max-width:330px}.modern-grid{grid-template-columns:1fr 1fr}.modern-card-large{grid-row:auto;min-height:300px}.modern-card-wide{grid-column:auto}.modern-feature{grid-template-columns:1fr;padding:38px 28px}.modern-feature-graph{min-height:270px}.modern-flow-line{grid-template-columns:1fr;gap:20px;padding-bottom:0}.modern-flow-line:before{left:50%;right:auto;top:20px;bottom:20px;width:1px;height:auto}.modern-flow-line>div{display:grid;grid-template-columns:1fr 40px 1fr;align-items:center}.modern-flow-line i{grid-column:2;grid-row:1}.modern-flow-line strong{text-align:right;grid-column:1;grid-row:1}.modern-flow-line span{text-align:left;grid-column:3;grid-row:1}.modern-section-head{align-items:start;flex-direction:column;gap:10px}}
+@media(max-width:620px){.modern-stat-strip{grid-template-columns:1fr 1fr}.modern-grid{grid-template-columns:1fr}.modern-card-wide{grid-column:auto}.modern-hero{padding:32px 20px;min-height:auto}.modern-hero h1{font-size:48px}.modern-hero-orbit{max-width:280px}.modern-feature{margin-left:-.5rem;margin-right:-.5rem;border-radius:24px}.modern-card{min-height:220px}}
+@media(prefers-color-scheme:dark){.modern-stat-strip>div{background:#18232b}.modern-card{background:linear-gradient(145deg,#18232b,#202c35);border-color:rgba(155,190,214,.13);color:#eff4f7}.modern-card p{color:#a9bac8}.modern-card h3{color:#f0f4f7}.modern-card-mark{color:rgba(159,194,223,.08)}.modern-section-head h2,.modern-closing h2{color:#eef4f7}.modern-flow-note{background:#302d25;color:#bdc9d4}.modern-closing-actions a{background:#18232b;color:#9fc2df;border-color:rgba(155,190,214,.14)}}
+</style>
