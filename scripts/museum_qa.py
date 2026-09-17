@@ -5,7 +5,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / 'docs'
 errors = []
- warnings = []
+warnings = []
 
 # Markdown page hygiene
 for path in DOCS.rglob('*.md'):
