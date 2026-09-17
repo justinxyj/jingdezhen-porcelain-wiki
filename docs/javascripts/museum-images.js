@@ -1,27 +1,31 @@
-/* Public museum image layer.
- * Uses only canonical media rendered by the page; no hidden data-copy overrides.
- */
+/* Public museum image layer. */
 (function(){
-  const esc=s=>String(s??'').replace(/[&<>\"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[m]));
-  function applyCredits(){
-    document.querySelectorAll('.official-museum-image').forEach(img=>{
-      img.setAttribute('loading','lazy');
-      img.setAttribute('decoding','async');
-    });
+  const PLACEHOLDER_MET='https://collectionapi.metmuseum.org/api/collection/v1/iiif/42490/177595/main-image';
+  const badSrc=s=>{const v=String(s||'');return v===PLACEHOLDER_MET||/42490\/177595\/main-image/.test(v)};
+  function sanitizeImage(img){
+    if(!img)return;
+    const src=img.getAttribute('src')||'';
+    if(badSrc(src)){
+      img.removeAttribute('src');
+      img.setAttribute('data-image-invalid','1');
+      img.closest('.official-gallery-card,.compare-node,.compare-specimen,.wiki-entry-cover')?.classList.add('image-unavailable');
+      return;
+    }
+    img.setAttribute('loading','lazy');img.setAttribute('decoding','async');
+    img.addEventListener('error',()=>{
+      img.removeAttribute('src');img.setAttribute('data-image-invalid','1');
+      img.closest('.official-gallery-card,.compare-node,.compare-specimen,.wiki-entry-cover')?.classList.add('image-unavailable');
+    },{once:true});
+  }
+  function apply(){
+    document.querySelectorAll('img').forEach(sanitizeImage);
+    document.querySelectorAll('.official-museum-image').forEach(img=>{img.setAttribute('loading','lazy');img.setAttribute('decoding','async')});
     document.querySelectorAll('.compare-specimen.has-official-image').forEach(card=>{
       if(card.querySelector('.museum-image-credit'))return;
-      const img=card.querySelector('img');
-      const src=img?.dataset?.sourceUrl;
-      if(!src)return;
-      const credit=document.createElement('a');
-      credit.className='museum-image-credit';
-      credit.href=src;
-      credit.target='_blank';
-      credit.rel='noopener noreferrer';
-      credit.textContent='查看馆藏来源 ↗';
-      card.appendChild(credit);
+      const img=card.querySelector('img');const src=img?.dataset?.sourceUrl;if(!src)return;
+      const credit=document.createElement('a');credit.className='museum-image-credit';credit.href=src;credit.target='_blank';credit.rel='noopener noreferrer';credit.textContent='查看馆藏来源 ↗';card.appendChild(credit);
     });
   }
-  function init(){applyCredits();window.setTimeout(applyCredits,300);window.setTimeout(applyCredits,900)}
+  function init(){apply();window.setTimeout(apply,300);window.setTimeout(apply,900)}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();
