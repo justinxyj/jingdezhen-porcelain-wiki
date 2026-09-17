@@ -44,6 +44,7 @@ extra_css:
   - stylesheets/curator.css
   - stylesheets/people.css
   - stylesheets/reception.css
+  - stylesheets/timeline-details.css
 extra_javascript:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
   - javascripts/runtime-config.js
@@ -54,6 +55,7 @@ extra_javascript:
   - javascripts/wiki-enhancements.js
   - javascripts/wiki-timeline.js
   - javascripts/timeline-interactive.js
+  - javascripts/timeline-details.js
   - javascripts/voices-books.js
   - javascripts/evidence-hub.js
   - javascripts/literature-library.js
