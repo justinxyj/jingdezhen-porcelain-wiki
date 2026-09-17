@@ -28,10 +28,16 @@
   function personName(e){const m=meta(e);return clean(m.name||m.person||m.author||titleOf(e));}
   function eraValue(e){return clean(meta(e).era||meta(e).period||'');}
   function sortEntries(a,b){return eraValue(a).localeCompare(eraValue(b),'zh-CN')||titleOf(a).localeCompare(titleOf(b),'zh-CN');}
+  function resolveImage(raw){
+    const value=clean(raw); if(!value)return '';
+    if(/^https:\/\/collectionapi\.metmuseum\.org\/api\/collection\/v1\/iiif\/42490\/177595\/main-image(?:\?.*)?$/.test(value)) return '';
+    return value;
+  }
   function card(e,i,type){
-    const m=meta(e),im=e.media?.[0],q=clean(quoteOf(e)),src=sourceOf(e,type),translation=clean(m.quote_translation||m.translation||'');
-    const title=type==='literature'?titleOf(e):personName(e),speaker=type==='literature'?clean(m.author||'作者'):titleOf(e),relation=type==='literature'?'书中评价':'名人评价';
-    return `<article class="reception-card ${type==='person'?'reception-person-card':'reception-text-card'}" data-index="${i}"><div class="reception-card-main">${im?`<img class="reception-thumb" src="${esc(im.path)}" alt="${esc(im.title||title)}" loading="lazy">`:''}<div class="reception-context"><div class="reception-card-top"><span class="reception-type">${relation}</span>${eraValue(e)?`<span class="reception-era">${esc(eraValue(e))}</span>`:''}</div><blockquote>“${esc(q)}”</blockquote>${translation?`<p class="reception-translation">${esc(translation)}</p>`:''}<h3>${esc(title)}</h3><p class="reception-speaker">${esc(speaker)}</p>${m.quote_work?`<p class="reception-work">${esc(clean(m.quote_work))}</p>`:''}${m.quote_context?`<p class="reception-context-note">${esc(clean(m.quote_context))}</p>`:''}<div class="reception-source"><span>来源</span>${src.url?`<a href="${esc(src.url)}" target="_blank" rel="noopener">${esc(src.label)} ↗</a>`:`<span>${esc(src.label)}</span>`}</div></div></div></article>`;
+    const m=meta(e),rawIm=e.media?.[0],im=resolveImage(rawIm?.path),q=clean(quoteOf(e)),src=sourceOf(e,type),translation=clean(m.quote_translation||m.translation||'');
+    const title=type==='literature'?titleOf(e):personName(e),relation=type==='literature'?'书中评价':'名人评价';
+    const speaker=type==='literature'?clean(m.author||'作者'):'';
+    return `<article class="reception-card ${type==='person'?'reception-person-card':'reception-text-card'}" data-index="${i}"><div class="reception-card-main">${im?`<img class="reception-thumb" src="${esc(im)}" alt="${esc(rawIm?.title||title)}" loading="lazy" decoding="async">`:''}<div class="reception-context"><div class="reception-card-top"><span class="reception-type">${relation}</span>${eraValue(e)?`<span class="reception-era">${esc(eraValue(e))}</span>`:''}</div><blockquote>“${esc(q)}”</blockquote>${translation?`<p class="reception-translation">${esc(translation)}</p>`:''}<h3>${esc(title)}</h3>${speaker?`<p class="reception-speaker">${esc(speaker)}</p>`:''}${m.quote_work?`<p class="reception-work">${esc(clean(m.quote_work))}</p>`:''}${m.quote_context?`<p class="reception-context-note">${esc(clean(m.quote_context))}</p>`:''}<div class="reception-source"><span>来源</span>${src.url?`<a href="${esc(src.url)}" target="_blank" rel="noopener">${esc(src.label)} ↗</a>`:`<span>${esc(src.label)}</span>`}</div></div></div></article>`;
   }
   function init(){
     const root=document.getElementById('voices-books-root');if(!root||!window.JDM_KNOWLEDGE)return;
