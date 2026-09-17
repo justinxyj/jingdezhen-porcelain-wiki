@@ -16,21 +16,22 @@ for token, files in seen.items():
     if len(files) > 3 and any(x in token.lower() for x in ('placeholder','noimage','no-image','42490/177595')):
         errors.append(f'legacy or placeholder URL repeated: {token}')
 
-# Every explicit local Markdown href in docs should point to an existing target where possible.
+# Validate explicit markdown links relative to the file containing the link.
+# Directory links are valid when their index.md or README.md exists.
 for path in DOCS.rglob('*.md'):
     text = path.read_text(encoding='utf-8')
     for href in re.findall(r'\]\((?!https?://|mailto:)([^)#]+)(?:#[^)]+)?\)', text):
-        if href.startswith('/') or href.startswith('../'):
-            target = (path.parent / href).resolve()
-        else:
-            target = (path.parent / href).resolve()
-        if target.suffix == '.md' and not target.exists():
-            errors.append(f'{path}: missing markdown link target {href}')
-        elif target.suffix == '' and not target.exists() and not (target / 'index.md').exists():
-            # MkDocs directory links are usually represented by a directory index.
-            errors.append(f'{path}: missing local link target {href}')
+        href = href.strip()
+        target = (path.parent / href).resolve()
+        if target.suffix == '.md':
+            if not target.exists():
+                errors.append(f'{path}: missing markdown link target {href}')
+        elif not target.exists():
+            # MkDocs renders directory links from index.md. README.md is also accepted
+            # because several source sections use README as their canonical overview.
+            if not ((target / 'index.md').exists() or (target / 'README.md').exists()):
+                errors.append(f'{path}: missing local link target {href}')
 
-# No committed build output.
 if (ROOT / 'site').exists():
     errors.append('generated site/ directory should not be committed')
 
