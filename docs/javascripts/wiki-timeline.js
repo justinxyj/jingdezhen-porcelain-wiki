@@ -7,18 +7,21 @@
   const text=e=>{const v=e?.zh?.content||e?.zh?.summary||'';const d=document.createElement('div');d.innerHTML=String(v);return d.textContent||d.innerText||''};
   const title=e=>e?.zh?.title||e?.slug||'';
   const validMedia=e=>{const m=e?.media?.[0];return m&&!window.JDM_MEDIA_POLICY?.isGenericPlaceholder?.(m)?m:null};
+  const periodOf=e=>String(meta(e).map?.period||meta(e).period||'').trim();
+  const eraName=(id, fallback)=>({tang:'唐',song:'宋',yuan:'元',ming:'明',qing:'清',modern:'近现代'}[id]||fallback);
   function node(e){
     const m=meta(e),map=m.map||{},im=validMedia(e);
+    const period=periodOf(e), country=map.country||e.category||'';
     return `<a class="compare-node ${im?'has-media':'no-media'}" data-entry-slug="${esc(e.slug)}" href="${url(e)}" aria-label="打开${esc(title(e))}">
-      ${im?`<div class="compare-node-media"><img src="${esc(im.path)}" alt="${esc(im.title||title(e))}" loading="lazy"></div>`:''}
-      <div class="compare-node-body"><div class="compare-node-kicker">${esc(map.country||e.category||'')}</div><b>${esc(title(e))}</b><strong>${esc(map.period||m.period||'')}</strong><p>${esc(text(e))}</p></div>
+      ${im?`<div class="compare-node-media"><img src="${esc(im.path)}" alt="${esc(im.title||title(e))}" loading="lazy" decoding="async"></div>`:''}
+      <div class="compare-node-body"><div class="compare-node-kicker">${esc(country)}</div><b>${esc(title(e))}</b>${period?`<strong class="compare-node-period">${esc(period)}</strong>`:''}<p>${esc(text(e))}</p></div>
     </a>`;
   }
   function lane(label,rows,cls){return `<section class="compare-lane ${cls}"><header><span>${esc(label)}</span><b>${rows.length}</b></header><div class="compare-lane-grid">${rows.map(node).join('')||'<div class="compare-empty">这一时期暂无可展示的节点。</div>'}</div></section>`}
   function works(rows){
     if(!rows.length)return '';
     const usable=rows.slice(0,6);
-    return `<section class="compare-works"><header><span>同期代表性器物</span><small>点击进入器物详情</small></header><div class="compare-specimen-grid">${usable.map(e=>{const im=validMedia(e);return `<a class="compare-specimen" href="${url(e)}">${im?`<div class="specimen-stage"><img src="${esc(im.path)}" alt="${esc(im.title||title(e))}" loading="lazy"></div>`:''}<div class="specimen-meta"><b>${esc(title(e))}</b><small>${esc(meta(e).map?.country||'景德镇')}</small><span>${esc(meta(e).craft||e.category)}</span><p>${esc(text(e))}</p></div></a>`}).join('')}</div></section>`;
+    return `<section class="compare-works"><header><span>同期代表性器物</span><small>点击进入器物详情</small></header><div class="compare-specimen-grid">${usable.map(e=>{const im=validMedia(e);return `<a class="compare-specimen" href="${url(e)}">${im?`<div class="specimen-stage"><img src="${esc(im.path)}" alt="${esc(im.title||title(e))}" loading="lazy" decoding="async"></div>`:''}<div class="specimen-meta"><b>${esc(title(e))}</b><small>${esc(meta(e).map?.country||'景德镇')}</small><span>${esc(meta(e).craft||e.category)}</span><p>${esc(text(e))}</p></div></a>`}).join('')}</div></section>`;
   }
   function render(entries){
     let root=document.querySelector('.timeline-comparison-root');
@@ -29,7 +32,8 @@
       const china=related.filter(e=>(meta(e).timeline||[]).some(t=>t.era===id&&t.lane==='china'));
       const world=related.filter(e=>(meta(e).timeline||[]).some(t=>t.era===id&&t.lane==='world'));
       const objs=entries.filter(e=>meta(e).kind==='object'&&(meta(e).timeline||[]).some(t=>t.era===id));
-      return `<article class="compare-era" id="era-${id}"><div class="compare-era-heading"><div><span>${esc(period)}</span><h2>${esc(focus)}</h2></div><small>${related.length} 个历史节点</small></div><div class="compare-axis"><span>景德镇</span><i></i><span>中国其他窑业</span><i></i><span>世界</span></div>${lane('景德镇',jdz,'lane-jdz')}${lane('中国其他窑业',china,'lane-china')}${lane('世界其他地区',world,'lane-world')}${works(objs)}</article>`;
+      const eraLabel=eraName(id,period.split('·')[0]);
+      return `<article class="compare-era" id="era-${id}"><div class="compare-era-heading"><div><span>${esc(eraLabel)}</span><h2>${esc(period)}</h2></div><small>${related.length} 个历史节点</small></div><div class="compare-axis"><span>景德镇</span><i></i><span>中国其他窑业</span><i></i><span>世界</span></div>${lane('景德镇',jdz,'lane-jdz')}${lane('中国其他窑业',china,'lane-china')}${lane('世界其他地区',world,'lane-world')}${works(objs)}</article>`;
     }).join('');
   }
   function init(){if(!window.JDM_KNOWLEDGE)return;window.JDM_KNOWLEDGE.all().then(render)}
