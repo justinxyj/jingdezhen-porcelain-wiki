@@ -42,6 +42,8 @@ extra_css:
   - stylesheets/homepage-apple.css
   - stylesheets/museum-apple.css
   - stylesheets/curator.css
+  - stylesheets/people.css
+  - stylesheets/reception.css
 extra_javascript:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
   - javascripts/runtime-config.js
@@ -113,7 +115,7 @@ nav:
   - 人物与传承:
       - 人物总览: people/README.md
   - 现代景德镇:
-      - 现代总览: contemporary/README.md
+      - 现代总览: contemporary/index.md
       - 教育与研究: contemporary/education.md
       - 产业与社会: contemporary/industry.md
       - 当代艺术: contemporary/art.md
