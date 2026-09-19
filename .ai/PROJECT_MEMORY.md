@@ -135,3 +135,31 @@ Canonical Content Admission → 正式内容准入
 - **Entry 术语固定规则**：从现在开始，项目文案、页面 UI、测试输出、阶段说明以及后续对话中，凡指代正式知识条目，一律使用英文 **Entry**；不要再使用“知识条目”作为该产品术语。必要时可以解释 Entry 是正式知识内容的单个入口，但不改名。
 - **验证语言规则**：以后向用户汇报 GitHub Pages 验证时，不直接使用用户不熟悉的英文测试术语。必须同时用中文解释实际含义。例如：`deployed Pages smoke` = **“部署到线上后的自动页面检查”**，意思是系统把新版本发布到 GitHub Pages 后，用浏览器自动打开首页、七大世界、Entry、工具等页面，检查页面能否正常打开、有没有浏览器报错、有没有 4xx/5xx、有没有横向溢出，以及关键探索路径能不能走通。
 - **当前验证标准**：优先向用户报告“构建检查 / 线上部署 / 线上页面自动检查 / 数据权限检查”四类结果，并明确是“通过、失败还是进行中”。不要只报 workflow、job、smoke 等内部英文状态。
+
+
+## 2026-09-20 Phase 5-2 第三大块启动
+当前开发块：**知识世界内部的探索闭环**。
+
+目标：
+**Knowledge World → Entry → 相关 Entry / 时代 / 空间 / 工艺 → 下一 Entry → 知识网络**
+
+本轮已完成：
+- Entry Detail 改为消费现有 `entryNetworkContext()` 聚合层，不新增 Supabase 生产事实。
+- Entry 显示所属 Knowledge World，可返回对应世界。
+- Entry 增加同一时代、空间语境、相关工艺的连续探索入口。
+- 探索上下文失败时，Entry 主体仍可正常显示。
+- Pages 浏览器检查从“World → Entry”升级为“World → Entry → Entry”。
+
+本轮明确不做：
+- 不新增第 8 个 Knowledge World。
+- 不修改 entry_worlds、entry_relations、recommendations 等生产事实。
+- 不为了增加数量继续堆关系。
+- 不重新设计七个世界。
+- 不做大规模 CSS 重构。
+
+第三大块 Done Criteria：
+1. 七个 Knowledge World 都能进入 Entry。
+2. 每个世界至少存在一条可继续进入另一 Entry 的路径。
+3. Entry 至少提供关系 / 推荐 / 时代 / 空间等一种以上连续探索方式。
+4. World → Entry → Entry 自动检查全部通过。
+5. 构建检查、线上部署、线上页面自动检查、数据权限检查均通过后收口。
