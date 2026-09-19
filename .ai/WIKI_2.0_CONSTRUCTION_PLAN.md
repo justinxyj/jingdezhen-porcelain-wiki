@@ -381,3 +381,28 @@
 - 大规模 CSS 清理
 
 原因：先把“路怎么走”改正确，再改“路上的房子”。
+
+
+## 13. Phase 4 当前施工状态（2026-09-20）
+
+Phase 3B / 3C 已完成，进入 Phase 4：知识网络与产品体验升级。
+
+### Phase 4A 已完成
+- knowledge graph 全局读取层：nodes + edges。
+- 关系探索页从概念占位升级为生产数据驱动。
+- 核心节点范围：149 entries + 7 worlds；底层 source/media/craft_process/timeline 继续留在统一图谱中。
+- 用户操作：搜索、category 筛选、节点点击、邻接节点继续探索、Entry Detail 跳转。
+- 响应式 / dark mode 样式已加入。
+
+### Phase 4A 验收门槛
+- [x] 不修改生产事实数据。
+- [x] 不改变 316 条 World mappings。
+- [x] 不改变 Phase 3B A+ / A recommendation gate。
+- [x] 图谱生产回归：485 nodes / 1,309 edges / 0 orphan edges。
+- [ ] Pages 部署后浏览器 smoke。
+
+### Phase 4B 排序
+1. 七大知识世界动态化：代表条目 + 世界内探索。
+2. Entry Detail 2.0：把历史 / 空间 / 工艺 / 人物 / 文献 / 继续探索统一成实体知识页面。
+3. 全站搜索与发现统一进入 Entry。
+4. 全球陶瓷网络升级为时间 + 空间 + 关系联动。
