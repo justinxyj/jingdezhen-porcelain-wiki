@@ -28,10 +28,17 @@
 - [x] 验证关系按稳定 ID 加载
 
 ## P1 — 工程质量
-- [ ] 核验 mkdocs strict / Museum QA
-- [ ] 核验 Pages 部署可观察性
+- [x] 核验 mkdocs strict / Museum QA
+- [x] 核验 Pages 部署可观察性
 - [x] 对齐公共媒体前端审核门槛：只加载 approved + verified
+- [x] 数据库层阻止普通用户伪造 approved/verified 媒体
+- [x] 公共媒体改走列最小化的 media_public 视图
 - [ ] 对齐 schema / migration / frontend data contract
+- [x] 修复 knowledge-store API 异常静默空数组
+- [x] 详情页改为定向 entry + 有上限关系查询
+- [x] 外部图片恢复增加超时、有限重试、缓存与并发上限
+- [x] 移除 site-privacy 文本误删逻辑
+- [x] 降低 timeline MutationObserver 全量扫描
 - [ ] 审核剩余 SECURITY DEFINER function WARN
 
 ## P2 — 内容
