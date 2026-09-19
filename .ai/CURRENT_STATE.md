@@ -270,3 +270,13 @@
 - 关系探索器首屏聚焦 entry + world 核心节点；source / media / craft_process / timeline 等底层节点仍保留在统一图谱中，不在第一屏全部展开。
 - Phase 4A 不修改生产事实数据，也不修改 Phase 2B Semantic Freeze、Phase 3B A+ / A recommendation gate 或 22 条相关推荐。
 - 下一步：部署后浏览器 smoke；通过后进入 Phase 4B 的七大世界动态化与 Entry 2.0。
+
+
+## 2026-09-20 — Phase 4B / 七大知识世界动态化
+- 七个世界页现在由 JDM_KNOWLEDGE.worldOverview() 驱动。
+- 动态概览包含世界定义、primary/secondary 数量、类别分布、代表性条目与 Connected Worlds。
+- Connected Worlds 仅由真实 entry_worlds 重叠计算，不新增 World mapping。
+- Phase 2B 保持 149 published / 149 primary / 167 secondary / 316 total mappings。
+- Phase 4A 保持 485 nodes / 1,309 edges / 0 orphan edges。
+- Phase 3C 保持 22 条相关推荐，A+ / A 推荐门槛不变。
+- Phase 4B 待 Pages 部署后完成七个世界页面浏览器 smoke。
