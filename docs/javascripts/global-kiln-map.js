@@ -32,6 +32,17 @@
     rows.forEach(e=>{const m=e.zh.meta.map,marker=L.marker([m.lat,m.lng]).bindTooltip(e.zh?.title||'窑址',{direction:'top'}).on('click',()=>open(e));markers.set(e,marker)});
     document.getElementById('global-kiln-search').addEventListener('input',render);document.querySelectorAll('.global-kiln-map-toolbar button').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.global-kiln-map-toolbar button').forEach(b=>b.classList.remove('is-active'));btn.classList.add('is-active');render()}));render();
   }
-  async function boot(){if(!window.JDM_KNOWLEDGE)return;init(await window.JDM_KNOWLEDGE.all())}
+  function removeLiteralNewlineArtifacts(){
+    const root=document.querySelector('main')||document.body;
+    if(!root)return;
+    const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);
+    const nodes=[];
+    let node;
+    while(node=walker.nextNode()){
+      if(String(node.nodeValue||'').trim()==='\\n')nodes.push(node);
+    }
+    nodes.forEach(node=>node.remove());
+  }
+  async function boot(){removeLiteralNewlineArtifacts();if(!window.JDM_KNOWLEDGE)return;init(await window.JDM_KNOWLEDGE.all())}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
 })();
