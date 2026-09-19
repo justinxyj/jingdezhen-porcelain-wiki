@@ -44,7 +44,7 @@
         '<div class="catalog-card-actions"><a href="'+entryUrl(e)+'">查看知识条目 →</a><a href="'+global+'">全球网络 →</a></div></div></article>';
     }).join('')||'<div class="notice">没有找到符合条件的器物。</div>';
   }
-  function eraLabel(x){return ({tang:'唐五代',song:'宋',yuan:'元',ming:'明',qing:'清',modern:'近现代'}[x]||x||'')}
+  function eraLabel(x){return ({tang:'唐五代',song:'宋',yuan:'元',ming:'明',qing:'清','near-modern':'近代',modern:'现代'}[x]||x||'')}
 
   function renderPeople(items){
     const root=document.getElementById('people-list');if(!root)return;
