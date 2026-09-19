@@ -46,8 +46,8 @@ body:has(.jdm-apple-home) .jdm-brand span:last-child{font-size:10px;margin-top:5
 
 /* Wiki 2.0 Sprint A — knowledge worlds, museum tools and network layer. */
 .jdm-knowledge-worlds{background:#fff}
-.jdm-world-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:54px}
-.jdm-world-card{position:relative;min-height:235px;padding:26px;border-radius:24px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;text-decoration:none!important;color:#10233f;border:1px solid rgba(7,26,53,.08);background:linear-gradient(145deg,#fff,#f4f7fb);box-shadow:0 12px 32px rgba(7,26,53,.045);transition:transform .25s,box-shadow .25s,border-color .25s}
+.jdm-world-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;margin-top:54px}
+.jdm-world-card{grid-column:span 2;position:relative;min-height:235px;padding:26px;border-radius:24px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;text-decoration:none!important;color:#10233f;border:1px solid rgba(7,26,53,.08);background:linear-gradient(145deg,#fff,#f4f7fb);box-shadow:0 12px 32px rgba(7,26,53,.045);transition:transform .25s,box-shadow .25s,border-color .25s}
 .jdm-world-card:before{content:"";position:absolute;width:170px;height:170px;right:-55px;top:-55px;border-radius:50%;background:rgba(20,85,184,.08)}
 .jdm-world-card:hover{transform:translateY(-5px);box-shadow:0 22px 48px rgba(7,26,53,.1);border-color:rgba(20,85,184,.2)}
 .jdm-world-card span{position:absolute;left:26px;top:23px;font-size:9px;letter-spacing:.16em;font-weight:800;color:#7890aa}
@@ -60,7 +60,7 @@ body:has(.jdm-apple-home) .jdm-brand span:last-child{font-size:10px;margin-top:5
 .jdm-world-space{background:linear-gradient(145deg,#eef7f4,#fff)}
 .jdm-world-people{background:linear-gradient(145deg,#f1edff,#fff)}
 .jdm-world-evidence{background:linear-gradient(145deg,#f8f3e8,#fff)}
-.jdm-world-modern{grid-column:span 2;background:linear-gradient(145deg,#eaf1f8,#fff)}
+.jdm-world-modern{grid-column:3 / span 2;background:linear-gradient(145deg,#eaf1f8,#fff)}
 .jdm-tool-links{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}
 .jdm-tool-links a{display:flex;justify-content:space-between;align-items:center;padding:16px 18px;border-radius:16px;background:#fff;border:1px solid rgba(7,26,53,.08);color:#17304f;text-decoration:none!important;font-size:12px;font-weight:700;box-shadow:0 8px 22px rgba(7,26,53,.04)}
 .jdm-tool-links a:hover{border-color:rgba(20,85,184,.2);color:#1455b8}
@@ -79,9 +79,9 @@ body:has(.jdm-apple-home) .jdm-brand span:last-child{font-size:10px;margin-top:5
 [data-md-color-scheme="slate"] .jdm-world-evidence{background:linear-gradient(145deg,#3a3327,#202f3a)}
 [data-md-color-scheme="slate"] .jdm-world-modern{background:linear-gradient(145deg,#203342,#202f3a)}
 [data-md-color-scheme="slate"] .jdm-tool-links a{background:#182731;color:#edf3f7;border-color:rgba(190,210,225,.13)}
-@media(max-width:1000px){.jdm-world-grid{grid-template-columns:repeat(2,1fr)}.jdm-world-modern{grid-column:span 2}.jdm-tool-links{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:1000px){.jdm-world-grid{grid-template-columns:repeat(2,1fr)}.jdm-world-card{grid-column:auto}.jdm-world-modern{grid-column:span 2}.jdm-tool-links{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:850px){.jdm-network-graphic{min-height:410px}.jdm-network-graphic .node{width:74px;height:74px;font-size:12px}}
-@media(max-width:600px){.jdm-world-grid{grid-template-columns:1fr}.jdm-world-modern{grid-column:auto}.jdm-world-card{min-height:205px}.jdm-tool-links{grid-template-columns:1fr}.jdm-network-graphic{min-height:340px}.jdm-network-graphic .node{width:66px;height:66px}.jdm-network-graphic .n1{left:0}.jdm-network-graphic .n2{right:0}.jdm-network-graphic .n3{left:39%;top:33%}.jdm-network-graphic .n4{left:0}.jdm-network-graphic .n5{right:0}.jdm-network-graphic .n6{left:39%}}
+@media(max-width:600px){.jdm-world-grid{grid-template-columns:1fr}.jdm-world-card,.jdm-world-modern{grid-column:auto}.jdm-world-card{min-height:205px}.jdm-tool-links{grid-template-columns:1fr}.jdm-network-graphic{min-height:340px}.jdm-network-graphic .node{width:66px;height:66px}.jdm-network-graphic .n1{left:0}.jdm-network-graphic .n2{right:0}.jdm-network-graphic .n3{left:39%;top:33%}.jdm-network-graphic .n4{left:0}.jdm-network-graphic .n5{right:0}.jdm-network-graphic .n6{left:39%}}
 
 /* Phase 5-2: Knowledge World journey */
 .jdm-world-journey{background:#f7f9fc;padding:44px 24px 12px}.jdm-journey-map{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:center;gap:18px;color:#526783;font-size:14px;font-weight:650}.jdm-journey-map span{padding:10px 16px;border:1px solid rgba(7,26,53,.09);border-radius:999px;background:rgba(255,255,255,.8);box-shadow:0 8px 24px rgba(7,26,53,.06)}.jdm-journey-map i{width:46px;height:1px;background:linear-gradient(90deg,rgba(20,85,184,.12),rgba(20,85,184,.65));position:relative}.jdm-journey-map i:after{content:"";position:absolute;right:0;top:-3px;width:6px;height:6px;border-top:1px solid var(--jdm-blue);border-right:1px solid var(--jdm-blue);transform:rotate(45deg)}.jdm-journey-world{color:#6f7f95!important}.jdm-journey-china{color:#42668f!important}.jdm-journey-jdz{color:#1455b8!important;background:#edf5ff!important}.jdm-journey-blue{color:#fff!important;background:linear-gradient(135deg,#1455b8,#0b3f91)!important;border-color:transparent!important}
