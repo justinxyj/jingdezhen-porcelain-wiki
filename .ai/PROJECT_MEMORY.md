@@ -163,3 +163,34 @@ Canonical Content Admission → 正式内容准入
 3. Entry 至少提供关系 / 推荐 / 时代 / 空间等一种以上连续探索方式。
 4. World → Entry → Entry 自动检查全部通过。
 5. 构建检查、线上部署、线上页面自动检查、数据权限检查均通过后收口。
+
+
+## 2026-09-20 Phase 5-2 正式收口（权威状态）
+
+**Phase 5-2：知识世界首页与内部探索闭环 —— CLOSED。**
+
+本阶段最终完成：
+- 首页形成 世界 → 中国 → 景德镇 → 青花 → 七大 Knowledge World 的入口路径。
+- 七大 Knowledge World 统一接入动态 Entry 浏览与继续探索入口。
+- Entry Detail 接入现有 entryNetworkContext()，形成时代、空间、工艺、关系/推荐等连续探索路径。
+- 浏览器自动检查升级为真实 World → Entry → Entry 路径验证；不再要求每个世界的第一个 Entry 必须具备出口，而是在前 12 个 Entry 中寻找真实可用路径，避免测试误报。
+- 首页桌面/移动端、核心工具、七大世界、Entry、知识网络及全球网络均通过线上自动检查。
+
+### 本阶段最终验证
+- 构建检查：**通过**（Validate run 35464910487）
+- 线上部署：**通过**（Deploy run 35464910445）
+- 线上页面自动检查：**通过**（Deploy run 35464910445）
+- 数据权限检查：**通过**（Deploy run 35464910445）
+- 最终提交：`7c0f7fc9d9a6f5a1973c6fc967e8851bbc1a8e3c`
+
+### 本阶段明确没有做
+- 没有新增第 8 个 Knowledge World。
+- 没有修改 entry_worlds、entry_relations、recommendations 等生产知识事实。
+- 没有为了数量堆关系或 Secondary 映射。
+- 没有进行大规模 CSS 重构。
+- 没有提前进行全站最终发布封版。
+
+### 下一阶段
+Phase 5-2 已关闭。后续进入新的工作块前，必须先定义该工作块的用户目标、最短探索路径、Done Criteria 与明确不做事项；不得自动把 Phase 5-2 重新打开。
+
+**唯一项目记忆状态以本节为当前阶段最终状态。**
