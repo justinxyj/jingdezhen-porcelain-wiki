@@ -54,7 +54,7 @@
   }
   function rememberError(err){state={status:'error',error:err,updatedAt:Date.now()};console.error('[JDM knowledge]',err)}
   async function hydrateEntry(db,e){
-    const media=await query((d,s)=>d.from('media_public').select('id,entry_id,path,title,source,license,creator,captured_at,location,created_at,usage_type,source_tier,is_primary,canonical_key,source_url,source_type').eq('entry_id',e.id).order('is_primary',{ascending:false}).order('source_tier',{ascending:true}).order('created_at',{ascending:true}).abortSignal(s));
+    const media=window.JDM_CONTRACT.mediaList(await query((d,s)=>d.from('media_public').select('id,entry_id,path,title,source,license,creator,captured_at,location,created_at,usage_type,source_tier,is_primary,canonical_key,source_url,source_type').eq('entry_id',e.id).order('is_primary',{ascending:false}).order('source_tier',{ascending:true}).order('created_at',{ascending:true}).abortSignal(s)));
     const ctx=await query((d,s)=>d.from('timeline_context').select('entry_id,historical_role,relationship_to_jingdezhen,official_summary,official_image_url,official_image_credit,official_source_title,official_source_url,official_institution,source_tier,reviewed_at').eq('entry_id',e.id).limit(1).abortSignal(s));
     return {...e,media:canonicalMedia(media),timelineContext:ctx[0]||null};
   }
