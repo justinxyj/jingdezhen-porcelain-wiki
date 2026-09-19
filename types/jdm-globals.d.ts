@@ -28,12 +28,12 @@ declare global {
       worlds(): Promise<Database['public']['Tables']['knowledge_worlds']['Row'][]>;
       byWorld(worldSlug: string, options?: { limit?: number; role?: string | null }): Promise<unknown[]>;
       worldOverview(worldSlug: string, options?: { limit?: number; featured?: number }): Promise<unknown>;
-      entryContext(entryId: string, options?: { relationLimit?: number }): Promise<unknown>;
+      entryContext(entryId: string, options?: { relationLimit?: number }): Promise<{relations: any[]; related: number; error?: unknown}>;
       entryNetworkContext(entryId: string, options?: { timelineLimit?: number; spaceLimit?: number }): Promise<unknown>;
       objectAtlas(options?: { limit?: number }): Promise<unknown[]>;
       personAtlas(options?: { limit?: number }): Promise<unknown[]>;
       graph(options?: { nodeType?: string | null; nodeId?: string | null; limit?: number; edgeLimit?: number; includeEdges?: boolean }): Promise<unknown>;
-      recommendations(entryId: string, options?: { limit?: number }): Promise<unknown[]>;
+      recommendations(entryId: string, options?: { limit?: number }): Promise<any[]>;
       eraGroup(entry: unknown, timeline?: unknown): string;
       searchEntries(term: string, options?: unknown): Promise<unknown[]>;
       searchDiscovery(term: string, options?: unknown): Promise<unknown[]>;
