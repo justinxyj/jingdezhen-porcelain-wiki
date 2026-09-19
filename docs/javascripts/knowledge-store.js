@@ -117,7 +117,16 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
     const byId=new Map(entries.map(e=>[e.id,e]));
     return rows.map(r=>({...r,entry:byId.get(String(r.target_node_id||'').replace(/^entry:/,''))})).filter(r=>r.entry);
   }
-  async function graph({nodeType=null,nodeId=null,limit=500}={}){\n    if(nodeId){\n      const edges=await query((db,s)=>db.from('knowledge_graph_edges').select('source_node_id,target_node_id,edge_type,rationale,display_order,metadata').or('source_node_id.eq.'+nodeId+',target_node_id.eq.'+nodeId).order('edge_type',{ascending:true}).order('display_order',{ascending:true}).limit(limit).abortSignal(s));\n      const ids=[...new Set([nodeId,...edges.flatMap(e=>[e.source_node_id,e.target_node_id])])];\n      const nodes=ids.length?await query((db,s)=>db.from('knowledge_graph_nodes').select('node_type,node_id,label,category,summary,metadata').in('node_id',ids).limit(limit).abortSignal(s)):[];\n      return {nodes,edges};\n    }\n    const nodes=await query((db,s)=>{let q=db.from('knowledge_graph_nodes').select('node_type,node_id,label,category,summary,metadata').order('node_type',{ascending:true}).order('node_id',{ascending:true}).limit(limit).abortSignal(s);if(nodeType)q=q.eq('node_type',nodeType);return q});\n    return {nodes,edges:[]};\n  }
+  async function graph({nodeType=null,nodeId=null,limit=500}={}){
+    if(nodeId){
+      const edges=await query((db,s)=>db.from('knowledge_graph_edges').select('source_node_id,target_node_id,edge_type,rationale,display_order,metadata').or('source_node_id.eq.'+nodeId+',target_node_id.eq.'+nodeId).order('edge_type',{ascending:true}).order('display_order',{ascending:true}).limit(limit).abortSignal(s));
+      const ids=[...new Set([nodeId,...edges.flatMap(e=>[e.source_node_id,e.target_node_id])])];
+      const nodes=ids.length?await query((db,s)=>db.from('knowledge_graph_nodes').select('node_type,node_id,label,category,summary,metadata').in('node_id',ids).limit(limit).abortSignal(s)):[];
+      return {nodes,edges};
+    }
+    const nodes=await query((db,s)=>{let q=db.from('knowledge_graph_nodes').select('node_type,node_id,label,category,summary,metadata').order('node_type',{ascending:true}).order('node_id',{ascending:true}).limit(limit).abortSignal(s);if(nodeType)q=q.eq('node_type',nodeType);return q});
+    return {nodes,edges:[]};
+  }
   async function byCategory(category,limit=250){return list({category,limit})}
   function url(e){return e?'/jingdezhen-porcelain-wiki/entry/?type='+encodeURIComponent(e.category)+'&slug='+encodeURIComponent(e.slug):'/jingdezhen-porcelain-wiki/'}
   window.JDM_KNOWLEDGE={all,get,list,worlds,byWorld,graph,recommendations,byCategory,url,state:()=>({...state}),reset:()=>{allPromise=null;cache.clear();state={status:'idle',error:null,updatedAt:null}}};
