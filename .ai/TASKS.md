@@ -182,3 +182,13 @@
 - [x] 最终推荐池回归：8 条高置信候选
 - [x] 新增推荐质量门槛 migration
 - [x] Phase 3B-3：第一批高置信 entry-specific 关系证据扩充（4 条）\n- [x] Phase 3B-3 第二轮：证据筛选并处理 9 条关系（6 条补证据、3 条删除）\n- [ ] Phase 3B-3：继续按证据强度扩充人物/历史/器物/窑址关系，并重新扩容推荐池
+
+
+## Phase 3B-3 第三轮 — 证据等级与人物关系深审
+- [x] 为 entry_relations 建立 A+ / A / B / C / D evidence_grade 字段
+- [x] knowledge_graph_edges 携带 evidence_grade 元数据
+- [x] recommendation view 改为只消费 A+ / A 关系，不再依赖 note 长度作为唯一门槛
+- [x] 清理人物→器物 / 人物→窑址通用占位关系
+- [x] 新增唐英→雍正仿钧新紫釉天球瓶的 entry-specific 人物→器物关系
+- [x] 将张松茂→粉彩瓷校正为 B：关系合理，但现有证据不足以达到推荐级
+- [ ] 继续对唐英、年希尧、郎廷极、臧应选、王琦、王步、田鹤仙、王锡良、刘远长、黄云鹏等人物寻找 A+/A 级具体器物/窑址证据
