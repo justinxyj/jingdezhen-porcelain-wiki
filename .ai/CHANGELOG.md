@@ -303,3 +303,11 @@
 - 增加统一搜索入口，避免时间轴成为孤立工具。
 - 新增响应式 / dark mode 控件样式。
 - 未修改 World mappings、entry_relations 或 recommendation gate。
+
+
+## 2026-09-20 — Phase 4E-2 / 窑址地图 2.0
+- 窑址地图保持 canonical Entry 为唯一内容来源。
+- 地图筛选结果显示实时条目计数。
+- 地点详情从单一“查看详情”升级为 Entry / 全球网络 / 统一搜索三路继续探索。
+- 未修改生产窑址事实、World mappings、entry_relations 或 recommendation gate。
+- 加入统一空间发现说明与响应式样式。
