@@ -115,3 +115,11 @@
 - H4 公共知识查询继续采用服务端分页和稳定排序；后续可进一步拆分列表字段与详情字段。
 - H5 PR 校验不再依赖生产 Supabase；生产 ACL smoke 移到 main/post-deploy 路径。
 - M1 核心浏览器 JS 开始启用 checkJs，另保留严格 TS contract config。
+
+
+## Sprint B — 七大知识世界统一入口（2026-09-19）
+- 新增 knowledge_worlds 与 entry_worlds，将网站知识世界从 entries.category 中独立出来。
+- 149/149 个已发布条目均已挂载一个 primary knowledge world；当前共 406 条 primary/secondary mapping。
+- 七大知识世界：历史与发展、工艺与技术、器物与美学、窑址与城市空间、人物与传承、文献与研究、现代景德镇。
+- 7 个知识世界入口页已接入动态条目浏览器，显示核心条目与跨世界关联入口。
+- knowledge-store.js 新增 worlds() / byWorld()；新增 world-browser.js 与 world-browser.css。
