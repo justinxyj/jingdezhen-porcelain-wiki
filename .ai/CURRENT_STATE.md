@@ -259,3 +259,14 @@
 - GitHub Pages 数据恢复后完成浏览器侧人工 smoke；Phase 3C 正式关闭。
 - Phase 3B recommendation gate 继续冻结为 A+ / A；Phase 2B Semantic Freeze 的 316 条 World mappings 保持不变。
 - 后续高价值关系继续走 canonical content admission；不再在 Phase 3C 继续扩展推荐规则。
+
+
+## 2026-09-20 — Phase 4A / 知识网络第一阶段
+- Phase 3C 已收口，项目正式进入 Phase 4：知识网络与产品体验升级。
+- 第一阶段先建设真实“关系探索”产品，而不是继续扩充推荐算法。
+- `JDM_KNOWLEDGE.graph()` 现在支持全局 nodes + edges 读取，且 node/edge limit 分离；nodeId 局部邻域读取保持不变。
+- 新增关系探索器：搜索、核心类别筛选、节点点击、邻接节点继续探索、统一 Entry Detail 跳转。
+- 当前生产知识图谱：485 nodes / 1,309 edges / 0 orphan edges。
+- 关系探索器首屏聚焦 entry + world 核心节点；source / media / craft_process / timeline 等底层节点仍保留在统一图谱中，不在第一屏全部展开。
+- Phase 4A 不修改生产事实数据，也不修改 Phase 2B Semantic Freeze、Phase 3B A+ / A recommendation gate 或 22 条相关推荐。
+- 下一步：部署后浏览器 smoke；通过后进入 Phase 4B 的七大世界动态化与 Entry 2.0。
