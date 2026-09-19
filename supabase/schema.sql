@@ -91,6 +91,7 @@ create table if not exists public.favorites (
 );
 
 create index if not exists entries_category_status_idx on public.entries(category,status);
+create index if not exists entries_published_updated_idx on public.entries(updated_at desc, id) where status = 'published';
 create index if not exists entry_relations_related_idx on public.entry_relations(related_entry_id);
 create index if not exists media_entry_status_idx on public.media(entry_id,status);
 create index if not exists media_review_state_idx on public.media(review_state,status);
