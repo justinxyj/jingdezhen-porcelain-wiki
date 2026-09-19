@@ -7,12 +7,45 @@
   const entryUrl=e=>window.JDM_KNOWLEDGE?.url(e)||path(`entry/?type=${encodeURIComponent(e?.category||'')}&slug=${encodeURIComponent(e?.slug||'')}`);
   function text(e){return plain(e?.zh?.summary||e?.zh?.content||'')}
   function meta(e){return e?.zh?.meta||{}}
-  function renderCatalog(entries){
+  function relationLinks(rows,label){
+    return rows.slice(0,3).map(e=>'<a href="'+entryUrl(e)+'">'+esc(e.zh?.title||e.slug)+'</a>').join('');
+  }
+  function renderCatalog(items){
     const root=document.getElementById('catalog-list');if(!root)return;
     const q=(document.getElementById('catalog-search')?.value||'').trim().toLowerCase();
-    const items=entries.filter(e=>!q||JSON.stringify(e.zh||{}).toLowerCase().includes(q));
-    root.innerHTML=items.map(e=>{const im=e.media?.[0],m=meta(e);return `<a class="catalog-card wiki-card-link" href="${entryUrl(e)}">${im?`<img data-museum-image="1" src="${esc(im.path)}" alt="${esc(im.title||e.zh?.title||'器物图片')}" loading="lazy">`:''}${m.period?`<div class="tag">${esc(m.period)}</div>`:''}<div class="tag">${esc(m.craft||e.category||'器物')}</div><h3>${esc(e.zh?.title||'未命名器物')}</h3><p>${esc(text(e))}</p><span class="wiki-read-more">查看完整条目 →</span></a>`}).join('')||'<div class="notice">没有找到匹配器物。</div>';
+    const era=(document.getElementById('catalog-era')?.value||'').trim();
+    const craft=(document.getElementById('catalog-craft')?.value||'').trim();
+    const type=(document.getElementById('catalog-type')?.value||'').trim();
+    const filtered=items.filter(x=>{
+      const e=x.entry,m=meta(e),hay=JSON.stringify(e.zh||'').toLowerCase();
+      const timeline=x.timeline||[];
+      const eraOk=!era||timeline.some(t=>t?.era===era);
+      const craftText=String(x.craft||m.craft||'').toLowerCase();
+      const craftOk=!craft||craftText.includes(craft.toLowerCase())||x.craftProcesses?.some(p=>String(p.label||'').toLowerCase().includes(craft.toLowerCase()));
+      const typeText=String(m.kind||m.type||e.category||'').toLowerCase();
+      const typeOk=!type||typeText.includes(type.toLowerCase());
+      return (!q||hay.includes(q))&&eraOk&&craftOk&&typeOk;
+    });
+    const count=document.getElementById('catalog-count');if(count)count.textContent='显示 '+filtered.length+' / '+items.length+' 件器物';
+    root.innerHTML=filtered.map(x=>{
+      const e=x.entry,im=e.media?.[0],m=meta(e),world=(x.worlds||[])[0],era=(x.timeline||[]).map(t=>t?.era).filter(Boolean)[0];
+      const people=relationLinks(x.people,'人物'),kilns=relationLinks(x.kilns,'窑址'),docs=relationLinks(x.documents,'文献');
+      const crafts=(x.craftProcesses||[]).slice(0,3).map(p=>'<a href="'+path('craft/technology-tree/')+'">'+esc(p.label||'工艺')+'</a>').join('');
+      const global=path('network/global/?slug='+encodeURIComponent(e.slug));
+      return '<article class="catalog-card catalog-card-v2">'+
+        (im?'<a href="'+entryUrl(e)+'"><img data-museum-image="1" src="'+esc(im.path)+'" alt="'+esc(im.title||e.zh?.title||'器物图片')+'" loading="lazy"></a>':'')+
+        '<div class="catalog-card-body">'+
+        '<div class="catalog-card-tags">'+(m.period?'<span class="tag">'+esc(m.period)+'</span>':'')+(era?'<span class="tag">'+esc(eraLabel(era))+'</span>':'')+(world?'<span class="tag">'+esc(world.short_title||world.title)+'</span>':'')+'</div>'+
+        '<h3><a href="'+entryUrl(e)+'">'+esc(e.zh?.title||'未命名器物')+'</a></h3><p>'+esc(text(e).slice(0,180))+'</p>'+
+        (crafts?'<div class="catalog-knowledge-row"><b>工艺</b>'+crafts+'</div>':'')+
+        (people?'<div class="catalog-knowledge-row"><b>人物</b>'+people+'</div>':'')+
+        (kilns?'<div class="catalog-knowledge-row"><b>窑址</b>'+kilns+'</div>':'')+
+        (docs?'<div class="catalog-knowledge-row"><b>文献</b>'+docs+'</div>':'')+
+        '<div class="catalog-card-actions"><a href="'+entryUrl(e)+'">查看知识条目 →</a><a href="'+global+'">全球网络 →</a></div></div></article>';
+    }).join('')||'<div class="notice">没有找到符合条件的器物。</div>';
   }
+  function eraLabel(x){return ({tang:'唐五代',song:'宋',yuan:'元',ming:'明',qing:'清',modern:'近现代'}[x]||x||'')}
+
   function renderPeople(entries){
     const root=document.getElementById('people-list');if(!root)return;
     root.innerHTML=entries.map(e=>{const im=e.media?.[0],m=meta(e);return `<a class="person-card wiki-card-link" href="${entryUrl(e)}">${im?`<div class="person-card-image"><img data-museum-image="1" src="${esc(im.path)}" alt="${esc(im.title||e.zh?.title||'人物图片')}" loading="lazy"></div>`:''}${m.era||m.period?`<div class="tag">${esc(m.era||m.period)}</div>`:''}<h3>${esc(e.zh?.title||'未命名人物')}</h3><strong>${esc(m.role||'人物')}</strong><p>${esc(text(e))}</p><span class="wiki-read-more">查看人物条目 →</span></a>`}).join('')||'<div class="notice">暂无人物内容。</div>';
@@ -51,13 +84,14 @@
     const roots=[document.getElementById('catalog-list'),document.getElementById('people-list'),document.getElementById('timeline')];
     try{
       const [objects,people,history]=await Promise.all([
-        window.JDM_KNOWLEDGE.byCategory('器物',250),
+        window.JDM_KNOWLEDGE.objectAtlas({limit:250}),
         window.JDM_KNOWLEDGE.byCategory('人物',250),
         window.JDM_KNOWLEDGE.list({limit:500})
       ]);
       if(seq!==initSeq)return;
       renderCatalog(objects);renderPeople(people);renderTimeline(history);
       const search=document.getElementById('catalog-search');if(search&&!search.dataset.bound){search.dataset.bound='1';let raf=0;search.addEventListener('input',()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(()=>renderCatalog(objects))})}
+      ['catalog-era','catalog-craft','catalog-type'].forEach(id=>document.getElementById(id)?.addEventListener('change',()=>renderCatalog(objects)));
     }catch(error){if(seq===initSeq)roots.forEach(root=>renderError(root,error))}
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
