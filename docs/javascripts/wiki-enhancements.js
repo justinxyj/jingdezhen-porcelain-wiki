@@ -24,18 +24,25 @@
     root.innerHTML=`<article class="wiki-entry-card"><header class="wiki-entry-header"><div><div class="wiki-entry-kicker">${esc(e.category||'知识')}</div><h1>${esc(e.zh?.title||e.slug)}</h1><p>${esc(intro)}</p></div>${im?`<figure class="wiki-entry-cover"><img data-museum-image="1" src="${esc(im.path)}" alt="${esc(im.title||e.zh?.title||e.slug)}"><figcaption>${esc(im.title||'')} · ${esc(im.source||'')} · ${esc(im.license||'')}</figcaption></figure>`:''}</header><div class="wiki-entry-meta">${m.period?`<span>${esc(m.period)}</span>`:''}${m.map?.country?`<span>${esc(m.map.country)}</span>`:''}${m.map?.type?`<span>${esc(m.map.type)}</span>`:''}</div><section class="wiki-entry-body"><h2>详细介绍</h2><div class="wiki-entry-text">${esc(contentOrIntro(e,intro))}</div></section>${relations.length?`<section class="wiki-entry-relations"><h2>相关内容</h2><div class="wiki-relation-grid">${relations.map(r=>`<a href="${url(r.entry)}"><b>${esc(r.entry.zh?.title||r.entry.slug)}</b><small>查看相关内容 →</small></a>`).join('')}</div></section>`:''}<section class="wiki-entry-sources"><h2>来源与外部资料</h2><div class="wiki-entry-source-links">${(e.sources||[]).map(s=>{const u=sourceUrl(s);return u?`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(sourceLabel(s))} ↗</a>`:''}).filter(Boolean).join('')||'<span>暂无外部来源。</span>'}<a href="https://zh.wikipedia.org/w/index.php?search=${encodeURIComponent(wiki)}" target="_blank" rel="noopener">维基百科 ↗</a></div></section></article>`;
   }
   function contentOrIntro(e,intro){const content=plain(e.zh?.content||'');return content||intro}
+  const UUID_RE=/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
   async function loadRelations(db,entryId){
-    if(!db)return{relations:[],error:new Error('知识库连接不可用')};
+    if(!db)return{relations:[],truncated:false,error:new Error('知识库连接不可用')};
+    if(!UUID_RE.test(String(entryId||''))){const e=new Error('条目标识格式异常，无法加载相关内容。');e.code='JDM_ENTRY_ID_CONTRACT';return{relations:[],truncated:false,error:e}}
     try{
-      const relationQuery=(d,s)=>d.from('entry_relations').select('entry_id,related_entry_id,relation_type,note').or(`entry_id.eq.${entryId},related_entry_id.eq.${entryId}`).limit(100).abortSignal(s);
-      const relRows=window.JDM_AUTH?.request?await window.JDM_AUTH.request(relationQuery):await relationQuery(db,new AbortController().signal).then(r=>{if(r.error)throw r.error;return r.data||[]});
+      const relationQuery=(field,d,s)=>d.from('entry_relations').select('entry_id,related_entry_id,relation_type,note').eq(field,entryId).order('relation_type',{ascending:true}).order('related_entry_id',{ascending:true}).range(0,100).abortSignal(s);
+      const [outgoing,incoming]=await Promise.all([
+        window.JDM_AUTH?.request?window.JDM_AUTH.request((d,s)=>relationQuery('entry_id',d,s)):relationQuery('entry_id',db,new AbortController().signal).then(r=>{if(r.error)throw r.error;return r.data||[]}),
+        window.JDM_AUTH?.request?window.JDM_AUTH.request((d,s)=>relationQuery('related_entry_id',d,s)):relationQuery('related_entry_id',db,new AbortController().signal).then(r=>{if(r.error)throw r.error;return r.data||[]})
+      ]);
+      const relRows=[...outgoing,...incoming].filter((r,i,a)=>i===a.findIndex(x=>x.entry_id===r.entry_id&&x.related_entry_id===r.related_entry_id&&x.relation_type===r.relation_type));
+      const truncated=outgoing.length===101||incoming.length===101;
       const ids=[...new Set(relRows.map(r=>r.entry_id===entryId?r.related_entry_id:r.entry_id))];
-      if(!ids.length)return{relations:[],error:null};
-      const entryQuery=(d,s)=>d.from('entries').select('id,slug,category,zh,en,ja,sources,status,version,updated_at').eq('status','published').in('id',ids).limit(100).abortSignal(s);
+      if(!ids.length)return{relations:[],truncated,error:null};
+      const entryQuery=(d,s)=>d.from('entries').select('id,slug,category,zh,en,ja,sources,status,version,updated_at').eq('status','published').in('id',ids).order('updated_at',{ascending:false}).limit(101).abortSignal(s);
       const entryRows=window.JDM_AUTH?.request?await window.JDM_AUTH.request(entryQuery):await entryQuery(db,new AbortController().signal).then(r=>{if(r.error)throw r.error;return r.data||[]});
       const byId=new Map(entryRows.map(x=>[x.id,x]));
-      return{relations:relRows.map(r=>({...r,entry:byId.get(r.entry_id===entryId?r.related_entry_id:r.entry_id)})).filter(r=>r.entry),error:null};
-    }catch(error){return{relations:[],error}}
+      return{relations:relRows.map(r=>({...r,entry:byId.get(r.entry_id===entryId?r.related_entry_id:r.entry_id)})).filter(r=>r.entry),truncated,error:null};
+    }catch(error){return{relations:[],truncated:false,error}}
   }
   function renderRelationWarning(root){
     const note=document.createElement('div');
@@ -60,9 +67,10 @@
       const e=await window.JDM_KNOWLEDGE.get(slug);
       if(!e){root.innerHTML='<div class="wiki-entry-loading">没有找到这个公开条目。</div>';return}
       const db=window.supabase?.createClient?.(window.JDM_RUNTIME_CONFIG.supabaseUrl,window.JDM_RUNTIME_CONFIG.supabaseAnonKey);
-      const {relations,error}=await loadRelations(db,e.id);
+      const {relations,error,truncated}=await loadRelations(db,e.id);
       render(root,e,relations);
       if(error)renderRelationWarning(root);
+      if(truncated){const note=document.createElement('div');note.className='wiki-entry-relation-warning';note.setAttribute('role','status');note.textContent='相关内容较多，当前仅显示前 200 条唯一关系。';root.querySelector('.wiki-entry-card')?.appendChild(note)}
     }catch(error){renderLoadError(root,error)}
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
