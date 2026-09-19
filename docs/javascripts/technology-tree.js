@@ -18,15 +18,19 @@
     const root=document.getElementById('porcelain-tech-tree');if(!root)return;
     const nodes=document.getElementById('tech-tree-nodes'),svg=document.getElementById('tech-tree-links'),detail=document.getElementById('tech-tree-detail');
     const supa=db();if(!supa){detail.innerHTML='<div class="tech-tree-detail-empty">暂时无法连接工艺数据库。</div>';return}
-    supa.from('craft_processes').select('id,sequence,slug,name_zh,category,category_name,description_zh,historical_period,tools_zh,materials_zh,output_zh,source_title,source_url,source_institution,source_tier,image_url,image_credit,image_source_url,image_status,image_license,image_creator').order('sequence',{ascending:true}).then(({data,error})=>{
-      if(error||!data||data.length!==72){detail.innerHTML='<div class="tech-tree-detail-empty">工艺数据暂时不可用，请稍后再试。</div>';return}
-      const DATA=data;const byId=new Map(DATA.map(x=>[x.id,x]));
+    const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),10000);
+    supa.from('craft_processes').select('id,sequence,slug,name_zh,category,category_name,description_zh,historical_period,tools_zh,materials_zh,output_zh,source_title,source_url,source_institution,source_tier,image_url,image_credit,image_source_url,image_status,image_license,image_creator').order('sequence',{ascending:true}).range(0,499).abortSignal(controller.signal).then(({data,error})=>{
+      clearTimeout(timer);
+      if(error||!data){detail.innerHTML='<div class="tech-tree-detail-empty" role="alert">工艺数据暂时无法加载。<button type="button" class="tech-retry">重新加载</button></div>';detail.querySelector('.tech-retry')?.addEventListener('click',init);return}
+      if(!data.length){detail.innerHTML='<div class="tech-tree-detail-empty" role="alert">当前没有可用工艺数据。</div>';return}
+      const DATA=data;
+      const completeness=DATA.length===72?'':'<div class="tech-data-warning" role="status">当前工艺目录返回 '+DATA.length+' 道记录，标准目录应为 72 道；已显示当前可用数据，后台完整性检查需要复核。</div>';const byId=new Map(DATA.map(x=>[x.id,x]));
       const filters=[['all','全部72道'],...Array.from(new Map(DATA.map(x=>[x.category,x.category_name])).entries()).map(([id,name])=>[id,name])];
       const toolbar=root.querySelector('.tech-tree-filters');
       toolbar.innerHTML=filters.map(([id,name])=>'<button class="'+(id==='all'?'is-active':'')+'" data-filter="'+esc(id)+'">'+esc(name)+'</button>').join('');
       function matches(x,f,q){return(f==='all'||x.category===f)&&(!q||`${x.name_zh}${x.category_name}${x.description_zh}`.toLowerCase().includes(q))}
       function render(f='all',q=''){
-        nodes.innerHTML=filters.slice(1).filter(g=>f==='all'||g[0]===f).map(g=>'<section class="tech-tree-group" data-group="'+esc(g[0])+'"><header><span>'+esc(g[1])+'</span><b>'+DATA.filter(x=>x.category===g[0]).length+'道</b></header><div class="tech-tree-group-nodes">'+DATA.filter(x=>x.category===g[0]&&matches(x,f,q)).map(x=>'<button class="tech-node tech-'+esc(x.category)+'" data-id="'+esc(x.id)+'"><i>'+x.sequence+'</i><span>'+esc(x.name_zh)+'</span></button>').join('')+'</div></section>').join('')||'<div class="notice">没有匹配的工序。</div>';
+        nodes.innerHTML=completeness+filters.slice(1).filter(g=>f==='all'||g[0]===f).map(g=>'<section class="tech-tree-group" data-group="'+esc(g[0])+'"><header><span>'+esc(g[1])+'</span><b>'+DATA.filter(x=>x.category===g[0]).length+'道</b></header><div class="tech-tree-group-nodes">'+DATA.filter(x=>x.category===g[0]&&matches(x,f,q)).map(x=>'<button class="tech-node tech-'+esc(x.category)+'" data-id="'+esc(x.id)+'"><i>'+x.sequence+'</i><span>'+esc(x.name_zh)+'</span></button>').join('')+'</div></section>').join('')||'<div class="notice">没有匹配的工序。</div>';
         draw();nodes.querySelectorAll('.tech-node').forEach(b=>b.onclick=()=>select(b.dataset.id));
       }
       function draw(){requestAnimationFrame(()=>{svg.innerHTML='';const rr=root.getBoundingClientRect();svg.setAttribute('viewBox',`0 0 ${root.clientWidth} ${Math.max(500,nodes.offsetHeight)}`);const visible=Array.from(nodes.querySelectorAll('.tech-node'));for(let i=0;i<visible.length-1;i++){const A=visible[i].getBoundingClientRect(),B=visible[i+1].getBoundingClientRect(),x1=A.right-rr.left,y1=A.top+A.height/2-rr.top,x2=B.left-rr.left,y2=B.top+B.height/2-rr.top,dx=Math.max(20,(x2-x1)*.35),p=document.createElementNS('http://www.w3.org/2000/svg','path');p.setAttribute('d',`M${x1} ${y1} C${x1+dx} ${y1} ${x2-dx} ${y2} ${x2} ${y2}`);p.classList.add('tech-link');svg.appendChild(p)}})}
