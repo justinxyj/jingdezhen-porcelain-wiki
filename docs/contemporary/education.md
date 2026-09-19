@@ -32,6 +32,6 @@
 
 ## 与世界遗产的关系
 
-2026年列入世界遗产名录的“景德镇手工瓷业遗存”强调了原料获取、运输、窑炉技术、生产组织和城市空间之间的完整联系。这也意味着当代教育与研究不仅关注一件器物，还可以从整个生产系统理解景德镇。citeturn123137search2turn123137search0
+2026年列入世界遗产名录的“景德镇手工瓷业遗存”强调了原料获取、运输、窑炉技术、生产组织和城市空间之间的完整联系。这也意味着当代教育与研究不仅关注一件器物，还可以从整个生产系统理解景德镇。[UNESCO 世界遗产资料](https://whc.unesco.org/en/list/1765/)
 
 <div class="museum-toolbar"><a class="jdm-pill" href="../heritage/">查看世界遗产 →</a><a class="jdm-text-link" href="../../research/literature-library/">进入文献总库 →</a></div>
