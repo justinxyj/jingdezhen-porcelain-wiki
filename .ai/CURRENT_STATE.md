@@ -290,3 +290,14 @@
 - 首页、七大知识世界、关系探索、Entry Detail 均有统一搜索入口；关系网络自身搜索仍用于筛选 Entry 核心节点，但不产生第二套搜索数据源。
 - 当前完整产品链路：搜索 → Entry 知识节点 → 七大世界 / 关系网络 / 相关推荐。
 - Phase 4B 统一搜索代码已完成 JS syntax regression；Pages browser smoke 仍待部署后人工确认。
+
+
+## 2026-09-20 — Phase 4C / 全球陶瓷网络
+- 全球陶瓷网络已成为 Entry 中心的综合探索层，而不是普通地图页。
+- `JDM_KNOWLEDGE.entryNetworkContext()` 当前聚合：知识条目、知识世界、craft_process、timeline、map、entry_relations、相关推荐。
+- 当前生产数据可用范围：149 published Entry；58 条带时间元数据；41 条带空间坐标；50 条 timeline_context；72 个 craft_process 节点；1,309 条统一知识图谱边。
+- 时间层按现有 `timeline` 的 era / lane 展示：景德镇、中国其他窑业、世界其他地区。
+- 空间层使用现有窑址坐标，点击空间节点进入对应知识条目；不把地图本身当作新的知识源。
+- 工艺层通过 `craft_process:historically_important_for` 图谱边连接到现有 72 道工艺流程。
+- 相关推荐仍严格受 A+ / A gate 控制；全球网络只是消费这些关系，不改变其资格。
+- Phase 4C 代码已通过 JS syntax regression；Pages browser smoke 仍待线上部署确认。
