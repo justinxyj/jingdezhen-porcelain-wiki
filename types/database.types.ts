@@ -750,7 +750,28 @@ export type Database = {
       }
     }
     Views: {
-      [_ in never]: never
+      knowledge_graph_edges: {
+        Row: {
+          display_order: number | null
+          edge_type: string | null
+          metadata: Json | null
+          rationale: string | null
+          source_node_id: string | null
+          target_node_id: string | null
+        }
+        Relationships: []
+      }
+      knowledge_graph_nodes: {
+        Row: {
+          category: string | null
+          label: string | null
+          metadata: Json | null
+          node_id: string | null
+          node_type: string | null
+          summary: string | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
       is_staff: { Args: never; Returns: boolean }
