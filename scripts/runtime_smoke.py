@@ -5,8 +5,8 @@ from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
 text=(ROOT/"docs/javascripts/runtime-config.js").read_text(encoding="utf-8")
-URL=re.search(r"supabaseUrl:\s*'([^']+)'",text).group(1)
-KEY=re.search(r"supabaseAnonKey:\s*'([^']+)'",text).group(1)
+URL=os.environ.get("SUPABASE_URL") or re.search(r"supabaseUrl:\s*'([^']+)'",text).group(1)
+KEY=os.environ.get("SUPABASE_KEY") or re.search(r"supabaseAnonKey:\s*'([^']+)'",text).group(1)
 HEADERS={"apikey":KEY,"Accept":"application/json"}
 
 def get(path, params=None):
@@ -53,9 +53,18 @@ def blocked(path,select="id"):
 def check_sensitive():
     rev=blocked("entry_revisions")
     media=blocked("media","verification_note")
-    print(f"PASS revisions_blocked={rev} media_internal_field_blocked={media}")
+    drafts=blocked("entries","id,slug,status")
+    print(f"PASS revisions_blocked={rev} media_internal_field_blocked={media} drafts_blocked={drafts}")
+
+def check_acl():
+    check_entries()
+    check_media()
+    check_sensitive()
+    print("PASS public ACL snapshot")
 
 parser=argparse.ArgumentParser()
-parser.add_argument("--check",choices=["entries","media","craft","sensitive"],required=True)
+parser.add_argument("--check",choices=["entries","media","craft","sensitive","acl"],required=True)
 args=parser.parse_args()
-{"entries":check_entries,"media":check_media,"craft":check_craft,"sensitive":check_sensitive}[args.check]()
+{"entries":check_entries,"media":check_media,"craft":check_craft,"sensitive":check_sensitive,"acl":check_acl}[args.check]()
+
+
