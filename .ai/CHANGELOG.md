@@ -388,3 +388,12 @@
 - 器物、人物、窑址、文献只通过既有 entry_craft_processes / entry_relations 聚合。
 - 时代使用统一 eraGroup；空间使用现有 Entry map metadata。
 - 未修改 Phase 2B World Freeze、Phase 3B A+ / A recommendation gate 或任何 production relationship。
+
+
+## 2026-09-20 — Phase 4E-5 Craft Relation Deep Audit
+- 对原 289 条工序→Entry 关系进行深审。
+- 删除 204 条宽泛“完整生产链/72步总关联/技术链继续存在/后段工序”占位关系，保留 85 条具体历史、技术或遗址语义关系。
+- 新增 20 条器物→工序直接证据关系、12 条御窑厂遗址→工序关系、9 条人物→工序关系。
+- 当前 entry_craft_processes 为 126 条：历史 85 / 器物 20 / 人物 9 / 窑址 12；宽泛占位关系为 0。
+- 证据来自景德镇市人民政府、文化和旅游部/恭王府博物馆、故宫博物院及地方志资料；每条新增关系保留来源元数据。
+- 这轮没有修改 World mappings，也没有修改 Phase 3B A+ / A recommendation gate；craft relation 仍属于图谱/探索层，不自动进入相关推荐。
