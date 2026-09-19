@@ -54,6 +54,7 @@ extra_css:
   - stylesheets/technology-tree.css
   - stylesheets/world-browser.css
   - stylesheets/network-explorer.css
+  - stylesheets/entry-search.css
 extra_javascript:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
   - javascripts/runtime-config.js
@@ -62,6 +63,7 @@ extra_javascript:
   - javascripts/media-policy.js
   - javascripts/data-contract.js
   - javascripts/knowledge-store.js
+  - javascripts/entry-search.js
   - javascripts/world-browser.js
   - javascripts/network-explorer.js
   - javascripts/museum.js
@@ -130,6 +132,7 @@ nav:
           - 当代艺术: contemporary/art.md
           - 世界遗产与保护: contemporary/heritage.md
           - 数字化与未来: contemporary/future.md
+  - 统一搜索: search.md
   - 数字博物馆:
       - 博物馆总览: museum/index.md
       - 历史时间轴: museum/timeline.md
