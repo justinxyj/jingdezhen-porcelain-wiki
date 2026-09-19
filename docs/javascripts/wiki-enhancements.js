@@ -27,11 +27,11 @@
   async function loadRelations(db,entryId){
     if(!db)return{relations:[],error:new Error('知识库连接不可用')};
     try{
-      const relRes=await db.from('entry_relations').select('entry_id,related_entry_id,relation_type,note').or(`entry_id.eq.${entryId},related_entry_id.eq.${entryId}`).limit(100).abortSignal(AbortSignal.timeout(8000));
+      const relationQuery=(d,s)=>d.from('entry_relations').select('entry_id,related_entry_id,relation_type,note').or(`entry_id.eq.${entryId},related_entry_id.eq.${entryId}`).limit(100).abortSignal(s); const relRes=window.JDM_AUTH?.request?await window.JDM_AUTH.request(relationQuery):await relationQuery(db,new AbortController().signal);
       if(relRes.error)throw relRes.error;
       const ids=[...new Set((relRes.data||[]).map(r=>r.entry_id===entryId?r.related_entry_id:r.entry_id))];
       if(!ids.length)return{relations:[],error:null};
-      const entryRes=await db.from('entries').select('id,slug,category,zh,en,ja,sources,status,version,updated_at').eq('status','published').in('id',ids).limit(100).abortSignal(AbortSignal.timeout(8000));
+      const entryQuery=(d,s)=>d.from('entries').select('id,slug,category,zh,en,ja,sources,status,version,updated_at').eq('status','published').in('id',ids).limit(100).abortSignal(s); const entryRes=window.JDM_AUTH?.request?await window.JDM_AUTH.request(entryQuery):await entryQuery(db,new AbortController().signal);
       if(entryRes.error)throw entryRes.error;
       const byId=new Map((entryRes.data||[]).map(x=>[x.id,x]));
       return{relations:(relRes.data||[]).map(r=>({...r,entry:byId.get(r.entry_id===entryId?r.related_entry_id:r.entry_id)})).filter(r=>r.entry),error:null};
