@@ -128,4 +128,4 @@
 
 - [x] Sprint B Phase 2：第一轮语义审校，删除冗余人物自链接并修正现代/历史主入口与明显错配
 - [x] Sprint B Phase 2B：完成 395 条映射深层语义审校，删除 23 条低价值 secondary，精修 12 条 rationale
-- [ ] Sprint B Phase 2C：重点复核人物—历史、全球窑址—历史、文献—主题世界边界，并补缺失关系
+- [x] Sprint B Phase 2C：完成逐条人物→历史、全球窑址→历史深审；清理低价值 secondary、精修 rationale 并完成 production 回归
