@@ -484,3 +484,17 @@ Round 2 采用“宁缺毋滥”原则：
 3. 现代传承人不得因“复原/仿制某传统品种”而被写成古代馆藏器物作者。
 4. 缺少 canonical Entry 的代表作品，先进入 Canonical Content Admission 候选池，不直接创建幽灵关系。
 5. A+/A recommendation gate 不因 craft relation 深审而放宽。
+
+
+## Project-wide Scope Rule — effective 2026-09-20
+后续所有 Phase / Sprint 遵循“够用即收口”原则：
+1. 优先解决用户真正可感知的知识发现问题，不为完整性而无限增加关系。
+2. 同一问题最多进行有限轮深审；当边际知识增益明显下降时直接封版。
+3. 不为了增加数字、节点、关系数量而扩张数据。
+4. 边缘案例进入后续 Backlog / Canonical Content Admission，不反向阻塞已完成 Phase。
+5. 每个 Phase 必须定义明确的 Done Criteria；达到标准后直接进入下一阶段。
+6. 后续阶段优先做端到端体验、知识路径和核心内容，而不是重复微调底层关系。
+
+## Phase 5 — Knowledge World / 知识世界层
+Phase 5 正式启动。目标从“建设知识基础设施”转向“让知识网络成为可探索的世界”。
+首个阶段：Phase 5-1 Knowledge World Architecture。
