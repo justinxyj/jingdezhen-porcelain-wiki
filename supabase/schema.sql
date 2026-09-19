@@ -214,7 +214,7 @@ create policy "users_create_own_profile" on public.profiles for insert
   with check (auth.uid()=id);
 
 -- Runtime hardening:
--- is_staff() is SECURITY INVOKER and remains executable by authenticated because RLS policies call it.
+-- is_staff() remains SECURITY DEFINER because RLS policies call it and profiles RLS would recurse under invoker semantics.
 -- handle_new_user() is a trigger-only SECURITY DEFINER helper.
 -- review_edit(...) is a transactional staff helper, not a public RPC entry point.
 revoke execute on function public.handle_new_user() from public, anon, authenticated;
