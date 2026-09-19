@@ -18,10 +18,10 @@
     const facts=[m.era||m.period,m.role,m.location,m.region,m.craft].filter(Boolean).join('、');
     return text||(facts?`${facts}。该条目集中介绍相关历史背景、人物或器物信息，并结合可核验文献与馆藏资料说明其历史位置、文化意义及与景德镇陶瓷发展之间的关系。`:'该条目用于介绍这一历史对象、人物、文献或工艺主题，结合相关史料、研究与馆藏信息说明其形成背景、发展过程及与景德镇陶瓷史的联系。');
   }
-  function render(root,e,relations){
+  function render(root,e,relations,recommendations){
     const m=e.zh?.meta||{},im=validMedia(e),wiki=m.wikiTitle||e.zh?.title||e.slug;
     const intro=detailedIntro(e);
-    root.innerHTML=`<article class="wiki-entry-card"><header class="wiki-entry-header"><div><div class="wiki-entry-kicker">${esc(e.category||'知识')}</div><h1>${esc(e.zh?.title||e.slug)}</h1><p>${esc(intro)}</p></div>${im?`<figure class="wiki-entry-cover"><img data-museum-image="1" src="${esc(im.path)}" alt="${esc(im.title||e.zh?.title||e.slug)}"><figcaption>${esc(im.title||'')} · ${esc(im.source||'')} · ${esc(im.license||'')}</figcaption></figure>`:''}</header><div class="wiki-entry-meta">${m.period?`<span>${esc(m.period)}</span>`:''}${m.map?.country?`<span>${esc(m.map.country)}</span>`:''}${m.map?.type?`<span>${esc(m.map.type)}</span>`:''}</div><section class="wiki-entry-body"><h2>详细介绍</h2><div class="wiki-entry-text">${esc(contentOrIntro(e,intro))}</div></section>${relations.length?`<section class="wiki-entry-relations"><h2>相关内容</h2><div class="wiki-relation-grid">${relations.map(r=>`<a href="${url(r.entry)}"><b>${esc(r.entry.zh?.title||r.entry.slug)}</b><small>查看相关内容 →</small></a>`).join('')}</div></section>`:''}<section class="wiki-entry-sources"><h2>来源与外部资料</h2><div class="wiki-entry-source-links">${(e.sources||[]).map(s=>{const u=sourceUrl(s);return u?`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(sourceLabel(s))} ↗</a>`:''}).filter(Boolean).join('')||'<span>暂无外部来源。</span>'}<a href="https://zh.wikipedia.org/w/index.php?search=${encodeURIComponent(wiki)}" target="_blank" rel="noopener">维基百科 ↗</a></div></section></article>`;
+    root.innerHTML=`<article class="wiki-entry-card"><header class="wiki-entry-header"><div><div class="wiki-entry-kicker">${esc(e.category||'知识')}</div><h1>${esc(e.zh?.title||e.slug)}</h1><p>${esc(intro)}</p></div>${im?`<figure class="wiki-entry-cover"><img data-museum-image="1" src="${esc(im.path)}" alt="${esc(im.title||e.zh?.title||e.slug)}"><figcaption>${esc(im.title||'')} · ${esc(im.source||'')} · ${esc(im.license||'')}</figcaption></figure>`:''}</header><div class="wiki-entry-meta">${m.period?`<span>${esc(m.period)}</span>`:''}${m.map?.country?`<span>${esc(m.map.country)}</span>`:''}${m.map?.type?`<span>${esc(m.map.type)}</span>`:''}</div><section class="wiki-entry-body"><h2>详细介绍</h2><div class="wiki-entry-text">${esc(contentOrIntro(e,intro))}</div></section>${recommendations.length?`<section class="wiki-entry-recommendations"><div class="wiki-entry-section-kicker">知识探索</div><h2>你可能还想了解</h2><p class="wiki-recommendation-intro">从当前条目继续探索相关知识。</p><div class="wiki-recommendation-grid">${recommendations.map(r=>`<a class="wiki-recommendation-card" href="${url(r.entry)}"><span class="wiki-recommendation-category">${esc(r.target_category||r.entry.category||"知识")}</span><b>${esc(r.target_label||r.entry.zh?.title||r.entry.slug)}</b><small>${esc(r.reason||"相关知识入口")} →</small></a>`).join("")}</div></section>`:""}${w.slice(start,end)}<section class="wiki-entry-sources"><h2>来源与外部资料</h2><div class="wiki-entry-source-links">${(e.sources||[]).map(s=>{const u=sourceUrl(s);return u?`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(sourceLabel(s))} ↗</a>`:''}).filter(Boolean).join('')||'<span>暂无外部来源。</span>'}<a href="https://zh.wikipedia.org/w/index.php?search=${encodeURIComponent(wiki)}" target="_blank" rel="noopener">维基百科 ↗</a></div></section></article>`;
   }
   function contentOrIntro(e,intro){const content=plain(e.zh?.content||'');return content||intro}
   const UUID_RE=/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
@@ -68,9 +68,13 @@
     try{
       const e=await window.JDM_KNOWLEDGE.get(slug);
       if(!e){root.innerHTML='<div class="wiki-entry-loading">没有找到这个公开条目。</div>';return}
-      const {relations,error,truncated}=await loadRelations(e.id);
+      const [relationResult,recommendationsResult]=await Promise.all([loadRelations(e.id),window.JDM_KNOWLEDGE.recommendations(e.id,{limit:8}).catch(error=>({error}))]);
+      const {relations,error,truncated}=relationResult;
+      const recommendations=Array.isArray(recommendationsResult)?recommendationsResult:[];
+      const recommendationError=Array.isArray(recommendationsResult)?null:recommendationsResult.error;
       if(seq!==initSeq)return;
-      render(root,e,relations);
+      render(root,e,relations,recommendations);
+      if(recommendationError){const note=document.createElement('div');note.className='wiki-entry-recommendation-warning';note.setAttribute('role','status');note.textContent='相关推荐暂时无法加载，其他知识内容仍可正常浏览。';root.querySelector('.wiki-entry-card')?.appendChild(note);}
       if(error)renderRelationWarning(root);
       if(truncated){const note=document.createElement('div');note.className='wiki-entry-relation-warning';note.setAttribute('role','status');note.textContent='相关内容较多，当前仅显示前 200 条唯一关系。';root.querySelector('.wiki-entry-card')?.appendChild(note)}
     }catch(error){renderLoadError(root,error)}
