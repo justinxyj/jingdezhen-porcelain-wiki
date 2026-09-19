@@ -37,8 +37,15 @@ alter policy "media_staff_update" on public.media to authenticated using (privat
 alter policy "profiles_staff_select" on public.profiles to authenticated using (private.is_staff());
 alter policy "timeline_context_staff_write" on public.timeline_context to authenticated using (private.is_staff()) with check (private.is_staff());
 
-revoke all on function public.is_staff() from public, anon, authenticated;
-drop function if exists public.is_staff();
+do $
+begin
+  if exists (select 1 from pg_proc p join pg_namespace n on n.oid=p.pronamespace
+             where n.nspname='public' and p.proname='is_staff'
+               and pg_get_function_identity_arguments(p.oid)='') then
+    revoke all on function public.is_staff() from public, anon, authenticated;
+    drop function public.is_staff();
+  end if;
+end $;
 
 
 drop view if exists public.media_public;
