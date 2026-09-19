@@ -108,8 +108,8 @@
   }
   function renderError(root,error){
     if(!root)return;
-    const code=esc(error?.code||error?.status||'NETWORK');
-    root.innerHTML='<div class="notice" role="alert">知识数据暂时无法加载（'+code+'）。<button type="button" class="jdm-retry">重新加载</button></div>';
+    const info=window.JDM_AUTH?.describeError?.(error)||{code:error?.code||error?.status||'NETWORK',message:'知识数据暂时无法加载，请稍后重试。'};
+    root.innerHTML='<div class="notice" role="alert">'+esc(info.message)+'（'+esc(info.code)+'）<button type="button" class="jdm-retry">重新加载</button></div>';
     root.querySelector('.jdm-retry')?.addEventListener('click',()=>init());
   }
   let initSeq=0;
