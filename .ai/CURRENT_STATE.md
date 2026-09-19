@@ -192,3 +192,13 @@
 - 每条推荐带 reason + weight，避免“只给你一个相关条目但说不清为什么”。
 - knowledge-store.js 新增 JDM_KNOWLEDGE.recommendations(entryId,{limit})。
 - 下一步：Phase 3B 推荐质量人工审校与详情页 UI 接入；随后再进入 Phase 3C 更复杂的多跳知识路径。
+
+## Phase 3B-2 — 推荐质量审校（2026-09-19）
+- 完成分层压力测试：人物、历史、器物、窑址、文献等类别均抽样检查实际推荐结果。
+- 发现“共享 World”不能直接作为相关推荐：会把同一研究世界的大量人物/文献/窑址互相批量推荐，知识上虽同域但用户路径过宽；已从最终 recommendation view 移除，仅保留在知识图谱/探索层。
+- 发现“共享 craft_process”也不能直接作为相关推荐：当前 entry_craft_processes 中大量历史条目共享工艺流程，直接会产生“两个历史时期因为共同工序而互推”的误导；已从最终 recommendation view 移除。
+- 发现 entry_relation 中大量 person/kiln/related 关系的 note 是通用占位描述；这些关系不再自动进入相关推荐。仅保留 source/object，或具有明确、非通用说明的 person/kiln/related 关系。
+- 最终生产推荐池收敛为 8 条高置信候选：3 source、3 object、1 related、1 kiln；这是质量门槛结果，不追求数量。
+- recommendation view 仍保持 security_invoker；Phase 2B 的 316 条 World mappings 未修改。
+- 新增 migration：supabase/migrations/20260919140000_phase_3b2_recommendation_quality_gate.sql。
+- 下一步应补充更细粒度、entry-specific 的关系证据后再扩大推荐池；不要通过放宽共享 World/共享工艺规则来凑数量。
