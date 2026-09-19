@@ -155,27 +155,34 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
     return {nodes,edges};
   }
   let searchIndexPromise=null;
-  async function searchEntries(term,{limit=20}={}) {
+  async function searchEntries(term,{limit=20,category=null,worldSlug=null,era=null}={}) {
     const q=String(term||'').trim().toLowerCase();
     if(!q)return [];
     if(!searchIndexPromise){
       searchIndexPromise=query((db,s)=>db.from('entries').select('id,slug,category,zh,en,ja,sources,status,version,updated_at').eq('status','published').order('id',{ascending:true}).abortSignal(s));
     }
     const rows=await searchIndexPromise;
-    const scored=rows.map(e=>{
+    let candidates=rows;
+    if(category)candidates=candidates.filter(e=>String(e.category||'')===String(category));
+    if(era)candidates=candidates.filter(e=>Array.isArray(e.zh?.meta?.timeline)&&e.zh.meta.timeline.some(x=>x?.era===era));
+    if(worldSlug){
+      const links=await queryEntriesWorlds(candidates.map(e=>e.id));
+      const allowed=new Set(links.filter(x=>x.world_slug===worldSlug).map(x=>x.entry_id));
+      candidates=candidates.filter(e=>allowed.has(e.id));
+    }
+    const scored=candidates.map(e=>{
       const title=String(e.zh?.title||'').toLowerCase();
       const summary=String(e.zh?.summary||'').toLowerCase();
       const content=String(e.zh?.content||'').toLowerCase();
       const slug=String(e.slug||'').toLowerCase();
-      const category=String(e.category||'').toLowerCase();
+      const categoryText=String(e.category||'').toLowerCase();
+      const enTitle=String(e.en?.title||'').toLowerCase();
+      const jaTitle=String(e.ja?.title||'').toLowerCase();
       let score=0;
-      if(title===q)score+=1000;
-      else if(title.startsWith(q))score+=700;
-      else if(title.includes(q))score+=500;
-      if(category===q)score+=420;
-      else if(category.includes(q))score+=220;
-      if(slug===q)score+=400;
-      else if(slug.includes(q))score+=160;
+      if(title===q)score+=1000; else if(title.startsWith(q))score+=700; else if(title.includes(q))score+=500;
+      if(categoryText===q)score+=420; else if(categoryText.includes(q))score+=220;
+      if(slug===q)score+=400; else if(slug.includes(q))score+=160;
+      if(enTitle===q||jaTitle===q)score+=360; else if(enTitle.includes(q)||jaTitle.includes(q))score+=180;
       if(summary.includes(q))score+=90;
       if(content.includes(q))score+=35;
       return score?{...e,_searchScore:score}:null;
@@ -183,8 +190,8 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
     scored.sort((a,b)=>b._searchScore-a._searchScore||String(a.zh?.title||'').localeCompare(String(b.zh?.title||''),'zh-Hans-CN'));
     return scored.slice(0,Math.max(1,Math.min(50,Number(limit)||20))).map(({_searchScore,...e})=>e);
   }
-  async function searchDiscovery(term,{limit=12,recommendationLimit=3}={}) {
-    const entries=await searchEntries(term,{limit});
+  async function searchDiscovery(term,{limit=12,recommendationLimit=3,category=null,worldSlug=null,era=null}={}) {
+    const entries=await searchEntries(term,{limit,category,worldSlug,era});
     if(!entries.length)return [];
     const ids=entries.map(e=>e.id);
     const [links,worldRows]=await Promise.all([
@@ -198,8 +205,7 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
       const world=worldsBySlug.get(x.world_slug);
       if(world)worldByEntry.get(x.entry_id).push({...world,role:x.role,rationale:x.rationale});
     });
-    const enriched=await Promise.all(entries.map(async e=>({...e,worlds:worldByEntry.get(e.id)||[],recommendations:await recommendations(e.id,{limit:recommendationLimit})})));
-    return enriched;
+    return Promise.all(entries.map(async e=>({...e,worlds:worldByEntry.get(e.id)||[],recommendations:await recommendations(e.id,{limit:recommendationLimit})})));
   }
   async function queryEntriesWorlds(ids){
     return ids.length?await query((db,s)=>db.from('entry_worlds').select('entry_id,world_slug,role,rationale').in('entry_id',ids).order('role',{ascending:true}).order('display_order',{ascending:true}).abortSignal(s)):[];
