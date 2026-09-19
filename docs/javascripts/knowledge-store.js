@@ -183,8 +183,8 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
     scored.sort((a,b)=>b._searchScore-a._searchScore||String(a.zh?.title||'').localeCompare(String(b.zh?.title||''),'zh-Hans-CN'));
     return scored.slice(0,Math.max(1,Math.min(50,Number(limit)||20))).map(({_searchScore,...e})=>e);
   }
-  async function searchDiscovery(query,{limit=12,recommendationLimit=3}={}) {
-    const entries=await searchEntries(query,{limit});
+  async function searchDiscovery(term,{limit=12,recommendationLimit=3}={}) {
+    const entries=await searchEntries(term,{limit});
     if(!entries.length)return [];
     const ids=entries.map(e=>e.id);
     const [links,worldRows]=await Promise.all([
