@@ -37,7 +37,7 @@
   }
   function init(){
     if(!window.JDM_KNOWLEDGE)return;
-    window.JDM_KNOWLEDGE.all().then(entries=>{
+    window.JDM_KNOWLEDGE.list({limit:500}).then(entries=>{
       const root=document.querySelector('.timeline-comparison-root');
       if(!root)return;
       const bySlug=bind(root,entries);
