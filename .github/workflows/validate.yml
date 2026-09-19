@@ -26,6 +26,9 @@ jobs:
       - name: Run museum QA
         run: python scripts/museum_qa.py
 
+      - name: Run security static smoke
+        run: python scripts/security_static_smoke.py
+
       # Production Supabase smoke is a post-deploy check; PR validation must not depend on live production data.
       - name: Supabase smoke — public ACL (main only)
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
