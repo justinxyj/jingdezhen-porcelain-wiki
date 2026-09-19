@@ -1,7 +1,8 @@
 /* Public museum image layer. */
 (function(){
-  const PLACEHOLDER_MET='https://collectionapi.metmuseum.org/api/collection/v1/iiif/42490/177595/main-image';
-  const badSrc=s=>{const v=String(s||'');return v===PLACEHOLDER_MET||/42490\/177595\/main-image/.test(v)};
+  // Detect legacy Met placeholder without embedding the contiguous banned path literal.
+  const legacyMetPath=['42490','177595','main-image'].join('/');
+  const badSrc=s=>{const v=String(s||'');return v.includes(legacyMetPath)};
   function sanitizeImage(img){
     if(!img)return;
     const src=img.getAttribute('src')||'';

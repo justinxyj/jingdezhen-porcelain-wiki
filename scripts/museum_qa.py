@@ -42,9 +42,10 @@ if js_root.exists():
 mk = ROOT / "mkdocs.yml"
 if mk.exists():
     text = read_text(mk)
-    for label, raw in re.findall(r"(?m)^\s*-\s+(.+?):\s*([^\n]+)$", text):
+    # Same-line targets only: do not let \s after ":" swallow the next YAML child line.
+    for label, raw in re.findall(r"(?m)^\s*-\s+([^:\n]+):[ \t]+(\S+\.md)\s*$", text):
         target = raw.strip().strip("\"'")
-        if not target.endswith(".md") or target.startswith(("http://", "https://")):
+        if target.startswith(("http://", "https://")):
             continue
         candidate = DOCS / target
         if not candidate.is_file():
