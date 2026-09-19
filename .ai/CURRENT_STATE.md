@@ -70,3 +70,10 @@
 - 公共图片统一增加 referrerpolicy=no-referrer，并在恢复过程中隐藏破损图片，避免截图中出现巨大 alt 文本/破图图标。
 - 用户截图还确认静态现代景德镇页面出现原始内部引用标记；已将 contemporary/heritage.md、education.md、future.md、industry.md 中这些残留标记替换为正常 UNESCO 世界遗产资料链接。
 - The Met 官方文档确认对象接口提供 primaryImage 与 primaryImageSmall，可作为破损 IIIF 图片的恢复来源。
+
+
+## 第三轮：用户实测首页新增 3 个问题
+- 首页截图确认自定义首页被 MkDocs 默认页面壳包住：顶部出现多余“首页”面包屑/留白。
+- 首页自定义品牌文字过小；已放大中文站名及英文副标题，并同步收紧首页顶部高度。
+- 首页右侧“查看源代码”图标点击后进入 404；已在 mkdocs.yml 增加 edit_uri: edit/main/docs/，并在自定义首页隐藏该通用操作按钮，避免首页出现无意义的源码入口。
+- 以上均已提交到 main，等待 Pages 部署后复测。
