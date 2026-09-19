@@ -80,8 +80,9 @@
       results.innerHTML=data.results.map(card).join('')||'<div class="jdm-search-empty">没有符合当前条件的知识条目。试试清除筛选。</div>';
       document.getElementById('jdm-search-suggestions')?.setAttribute('hidden','');
     }catch(error){
-      status.textContent='搜索暂时不可用。';
-      results.innerHTML='<div class="jdm-search-error">知识索引加载失败（'+esc(error?.code||error?.status||'NETWORK')+'）。请稍后重试。</div>';
+      const info=window.JDM_AUTH?.describeError?.(error)||{code:error?.code||error?.status||'NETWORK',message:'知识索引加载失败，请稍后重试。'};
+      status.textContent=info.message;
+      results.innerHTML='<div class="jdm-search-error">'+esc(info.message)+'（'+esc(info.code)+'）</div>';
     }
     setActiveButtons();
   }
