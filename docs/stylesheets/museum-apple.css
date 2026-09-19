@@ -12,3 +12,32 @@
 .timeline-method-note{border:0!important;border-radius:26px!important;padding:24px 26px!important;background:linear-gradient(145deg,#eef5ff,#f8fbff)!important;color:#536a87!important;box-shadow:0 12px 35px rgba(7,26,53,.05)}
 @media(max-width:850px){.museum-hero{grid-template-columns:1fr;padding:42px 28px}.museum-hero-mark{justify-self:start}.museum-stats{grid-template-columns:repeat(2,1fr)}.catalog-grid,.official-people-grid,.people-grid,.gallery-grid,.official-gallery-grid{grid-template-columns:1fr}.wiki-entry-header{grid-template-columns:1fr!important}.wiki-relation-grid{grid-template-columns:1fr}.wiki-entry-card{padding:22px;border-radius:24px}.wiki-entry-card h1{font-size:42px!important}.wiki-entry-cover{max-width:520px}.wiki-entry-header>div:first-child>p{font-size:16px}}
 @media(max-width:560px){.museum-stats strong{font-size:28px}.timeline{padding-left:22px}.timeline-item:before{left:-30px}.md-content>h1{font-size:44px}.museum-hero h1{font-size:50px}}
+
+/* Third-round dark-mode pass: custom museum surfaces must follow Material's explicit slate scheme. */
+[data-md-color-scheme="slate"] .md-content{color:#e7edf2}
+[data-md-color-scheme="slate"] .md-content>p{color:#b6c4d1}
+[data-md-color-scheme="slate"] .museum-hero{background:linear-gradient(145deg,#172738,#101b26 55%,#0d151d);color:#eef4f8;box-shadow:0 22px 60px rgba(0,0,0,.28)}
+[data-md-color-scheme="slate"] .museum-hero p{color:#b8c7d4}
+[data-md-color-scheme="slate"] .museum-hero-mark{color:#9ec3ff;background:rgba(25,43,59,.72);border-color:rgba(158,195,255,.25)}
+[data-md-color-scheme="slate"] .museum-stats{background:rgba(190,210,225,.14);border-color:rgba(190,210,225,.14)}
+[data-md-color-scheme="slate"] .museum-stats div{background:#121d27}
+[data-md-color-scheme="slate"] .museum-stats span{color:#9eafbd}
+[data-md-color-scheme="slate"] .museum-toolbar input{background:#111c25;color:#e7edf2;border-color:rgba(158,195,255,.2)}
+[data-md-color-scheme="slate"] .catalog-card,[data-md-color-scheme="slate"] .person-card,[data-md-color-scheme="slate"] .gallery-card,[data-md-color-scheme="slate"] .official-gallery-card{background:#121d27;color:#e7edf2;border-color:rgba(190,210,225,.14);box-shadow:0 14px 38px rgba(0,0,0,.22)}
+[data-md-color-scheme="slate"] .catalog-card p,[data-md-color-scheme="slate"] .person-card p{color:#b4c2ce}
+[data-md-color-scheme="slate"] .tag{background:#1b3147;color:#bcd7f5}
+[data-md-color-scheme="slate"] .timeline{border-color:rgba(158,195,255,.22)}
+[data-md-color-scheme="slate"] .timeline-item:before{box-shadow:0 0 0 7px #1b3147}
+[data-md-color-scheme="slate"] .timeline-item p{color:#b4c2ce}
+[data-md-color-scheme="slate"] #kiln-map{border-color:rgba(190,210,225,.14);box-shadow:0 18px 45px rgba(0,0,0,.22)}
+[data-md-color-scheme="slate"] .wiki-entry-card{background:#121d27;color:#e7edf2;border-color:rgba(190,210,225,.14);box-shadow:0 18px 55px rgba(0,0,0,.28)}
+[data-md-color-scheme="slate"] .wiki-entry-header>div:first-child>p{color:#b7c5d1}
+[data-md-color-scheme="slate"] .wiki-entry-cover{background:#172838}
+[data-md-color-scheme="slate"] .wiki-entry-cover figcaption{background:#15232f;color:#aebdca}
+[data-md-color-scheme="slate"] .wiki-entry-meta span{background:#1b3147;color:#bcd7f5}
+[data-md-color-scheme="slate"] .wiki-entry-text{color:#d6e0e7}
+[data-md-color-scheme="slate"] .wiki-relation-grid a{background:#14222d;border-color:rgba(190,210,225,.14)}
+[data-md-color-scheme="slate"] .wiki-relation-grid b{color:#e7edf2}
+[data-md-color-scheme="slate"] .wiki-relation-grid small{color:#9eafbd}
+[data-md-color-scheme="slate"] .wiki-entry-source-links a{background:#1b3147;color:#9ec3ff!important}
+[data-md-color-scheme="slate"] .timeline-method-note{background:linear-gradient(145deg,#172738,#101b26)!important;color:#b9c8d4!important}
