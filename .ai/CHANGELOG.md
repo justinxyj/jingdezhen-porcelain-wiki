@@ -132,3 +132,15 @@
 - 固化 Primary / Secondary / rationale / 多世界密度 / World 边界 / 推荐系统 / 后续生产变更门槛。
 - Phase 2B Final Audit 至此完成，316 mappings 进入 Semantic Freeze。
 - 下一阶段：Phase 3 知识图谱、相关条目与可解释推荐系统。
+
+
+## 2026-09-19 — Phase 3A / 知识图谱节点与边统一模型
+- 建立 public.knowledge_graph_nodes 与 public.knowledge_graph_edges 两个 security_invoker 只读视图。
+- 将 entry、knowledge world、category、source、verified public media、72 craft_process、50 timeline context 统一为节点。
+- 将 entry_worlds、entry_relations、entry_craft_processes、craft_process_relations、timeline、media/source 等关系统一为边；保留 world rationale。
+- source 节点按 URL 去重，并补齐条目、媒体、工序、时间轴四类来源通路。
+- docs/javascripts/knowledge-store.js 新增 graph()，网站可按 nodeType/nodeId 获取图谱节点或局部邻域。
+- 生产验证：485 nodes、1,378 edges、0 orphan edges；Phase 2B 仍为 149 primary + 167 secondary = 316 mappings。
+- 新增 migration：supabase/migrations/20260919131220_phase_3a_unified_knowledge_graph_views.sql
+- 新增 migration：supabase/migrations/20260919132000_phase_3a_source_node_completion.sql
+- 新增 .ai/PHASE_3A_KNOWLEDGE_GRAPH_MODEL.md
