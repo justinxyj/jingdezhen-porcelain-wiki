@@ -91,3 +91,16 @@
 - 2026-09-19 用户实测发现历史时间轴排序错误：原实现按空的 meta.period 字符串排序，导致数据库返回顺序把 1949—1966、2002—2014、2026 等近现代节点排在最前。
 - 已修复 museum.js：按 timeline era + 标题起始年份进行稳定的历史排序，并明确将“东晋—唐”置于“五代—宋”之前；近现代 1909、1949、2002、2026 节点排到后段。
 - 时间轴排序修复 commit：fb5349a4d307cb62c7902bdba5c85c25685cfd05。
+
+
+## 2026-09-19 — 新一轮静态审计修复
+- H-1：auth-manager 认证刷新失败现在统一产生 AUTH_EXPIRED / 401 错误，保留 cause/details，不再被原始 refresh 错误覆盖。
+- H-2 / M-6：详情关系查询改为严格 UUID 校验 + entry_id / related_entry_id 两路结构化查询，稳定排序、去重，并能识别超过 200 条关系的截断。
+- M-1：历史节点新增结构化 meta.timeline_sort_year；museum.js 优先按数值排序，period 只负责展示。
+- M-2：evidence-hub 改用 textContent 创建弹窗内容，并对白名单站内/HTTPS URL 做协议与域名校验。
+- M-5：外部图片恢复增加 pagehide AbortController、失败短期负缓存、Met 对象 ID 严格校验，并记录 Commons 候选来源/对象 ID。
+- M-7：生产 EXPLAIN 已确认关系查询命中 entry_relations_entry_type_idx、媒体查询命中 partial verified index；公开 entries 列表新增 published_updated 索引。
+- H-3：生产新增 media 每条目单主图唯一约束、entry_revisions(entry_id,version) 唯一约束、关系类型索引；review_edit 本身已有行锁+同事务 revision 写入；新增回归测试并在生产事务回滚验证通过。
+- SECURITY DEFINER：handle_new_user / review_edit 已撤销 public/anon/authenticated EXECUTE；is_staff 必须继续 SECURITY DEFINER，否则 profiles_staff_select 会导致 RLS 递归，因此该安全边界保留并固定 search_path。
+- M-4：TypeScript 数据库/错误/时间轴契约已加强，tsconfig 开启 strict/noImplicitAny/strictNullChecks；当前仍是“类型契约层”，不是整套浏览器 JS 已迁移为 TS。
+- Pages smoke 增加 unhandledrejection 检测及时间轴前两节点顺序断言。
