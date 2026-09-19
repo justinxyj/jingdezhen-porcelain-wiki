@@ -60,7 +60,14 @@
   }
   async function list({category=null,limit=250,offset=0}={}){
     const rows=await query((db,s)=>{let q=db.from('entries').select('id,slug,category,zh,en,ja,sources,status,version,updated_at').eq('status','published').order('updated_at',{ascending:false}).range(offset,offset+limit-1).abortSignal(s);if(category)q=q.eq('category',category);return q});
-    rows.forEach(e=>cache.set(e.slug,e));return rows;
+    if(!rows.length)return [];
+    const ids=rows.map(e=>e.id);
+    const media=await query((db,s)=>db.from('media_public').select('id,entry_id,path,title,source,license,creator,captured_at,location,created_at,usage_type,source_tier,is_primary,canonical_key,source_url,source_type').in('entry_id',ids).order('is_primary',{ascending:false}).order('source_tier',{ascending:true}).abortSignal(s));
+    const contexts=await query((db,s)=>db.from('timeline_context').select('entry_id,historical_role,relationship_to_jingdezhen,official_summary,official_image_url,official_image_credit,official_source_title,official_source_url,official_institution,source_tier,reviewed_at').in('entry_id',ids).abortSignal(s));
+    const mm=new Map();media.forEach(m=>{if(!mm.has(m.entry_id))mm.set(m.entry_id,[]);mm.get(m.entry_id).push(m)});
+    const cm=new Map(contexts.map(x=>[x.entry_id,x]));
+    const result=rows.map(e=>({...e,media:canonicalMedia(mm.get(e.id)||[]),timelineContext:cm.get(e.id)||null}));
+    result.forEach(e=>cache.set(e.slug,e));return result;
   }
   async function all(){
     if(allPromise)return allPromise;
