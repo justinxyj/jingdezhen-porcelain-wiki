@@ -389,3 +389,20 @@
 - [x] 增加响应式 / dark mode 的工艺知识关联样式。
 - [x] JS syntax regression：knowledge-store / technology-tree 通过。
 - [ ] Pages browser smoke：72 工序筛选、单步详情、上下游跳转、关联知识条目、人物/器物/窑址/文献出口、移动端、深色模式。
+
+
+## Phase 4E-5 First-Round Closeout — 2026-09-20
+- [x] 72 道工序统一读取层、上下游导航、技术原理、材料、工具、产出、时代与 Entry / 全球网络出口完成。
+- [x] 用户已完成第一轮线上检查；Phase 4E-5 第一轮正式收口。
+- [x] 第一轮未新增生产知识事实，不修改 72 道工序 canonical 数据、entry_craft_processes 或 craft_process_relations。
+- [x] CI：Museum QA、Supabase public ACL smoke、TypeScript contract / JS typecheck、MkDocs build 均通过。
+
+## Phase 4E-5 Deepening — 材料 → 器物 → 时代 → 窑址 → 人物
+- [x] craftProcessContext() 扩展材料线索、器物、人物、窑址、文献、时代与空间聚合。
+- [x] 单道工序详情增加“知识链”路径展示：材料 → 器物 → 时代 → 窑址 → 人物。
+- [x] 材料使用 canonical craft_processes.materials_zh 的原始字段分词展示，不建立未经来源支持的独立材料实体。
+- [x] 器物 / 人物 / 窑址 / 文献继续从既有 entry_craft_processes + entry_relations 事实关系聚合。
+- [x] 时代继续使用 canonical eraGroup 逻辑；空间继续使用 Entry 的既有 map metadata。
+- [x] 增加关联条目、时代与空间的深层出口，并保留全球网络继续探索。
+- [x] JS syntax regression：knowledge-store / technology-tree 通过。
+- [ ] Pages browser smoke：重点检查材料线索、器物/时代/窑址/人物路径、移动端与深色模式。
