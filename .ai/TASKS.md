@@ -250,3 +250,15 @@
 - [x] 增加桌面 / 移动端 Entry Detail 2.0 布局。
 - [x] JavaScript syntax regression passed.
 - [ ] Pages 部署后完成 Entry Detail 2.0 浏览器 smoke。
+
+
+## Phase 4B — 统一搜索与发现层（2026-09-20）
+
+- [x] 新增统一 Entry 搜索数据层 JDM_KNOWLEDGE.searchEntries()：所有公开搜索结果以 published Entry 为唯一候选源。
+- [x] 新增 JDM_KNOWLEDGE.searchDiscovery()：搜索结果同时补充所属知识世界与高置信相关推荐。
+- [x] 新增独立统一搜索页 search.md，搜索结果全部进入 canonical Entry Detail。
+- [x] 首页、七大知识世界、关系探索、Entry Detail 均接入统一“搜索知识”入口；Material 页面由全局搜索启动器统一注入。
+- [x] 关系探索搜索入口明确收敛到 Entry 知识节点；关系图仍承担邻接探索，不另建第二套内容搜索索引。
+- [x] 搜索结果可继续进入知识世界、关系网络与相关推荐，形成“搜索 → Entry → 世界 / 关系 / 推荐”的连续路径。
+- [x] JS syntax regression：knowledge-store / entry-search / world-browser / wiki-enhancements / network-explorer 全部通过。
+- [ ] Pages deployment browser smoke：验证首页、七世界、关系网络、Entry Detail 的统一搜索入口及搜索结果跳转。
