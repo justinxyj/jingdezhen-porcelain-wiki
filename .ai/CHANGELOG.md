@@ -257,3 +257,13 @@
 - Phase 3B A+ / A recommendation gate 保持不变。
 - 新增响应式 Entry Detail 2.0 样式；JavaScript syntax regression passed。
 - Pages browser smoke 待部署后完成。
+
+
+## 2026-09-20 — Phase 4B / 统一搜索与发现层
+- 新增 JDM_KNOWLEDGE.searchEntries()，以 149 个 published Entry 建立轻量统一搜索索引；按标题、类别、slug、摘要、正文进行确定性排序，不加载媒体与时间轴作为搜索前置依赖。
+- 新增 JDM_KNOWLEDGE.searchDiscovery()，在搜索结果层补充真实 entry_worlds 世界归属及现有 A+ / A 推荐结果。
+- 新增 search.md + entry-search.js + entry-search.css，所有搜索结果统一指向 canonical Entry Detail URL。
+- 首页、七大世界、关系探索、Entry Detail 增加统一搜索入口；全局启动器覆盖普通 Material 页面，首页自定义导航也会显示搜索入口。
+- 关系网络继续保留图谱搜索，但搜索对象明确为 Entry 核心知识节点，不再形成独立内容搜索体系。
+- 用户路径正式固定为：搜索 → Entry → 世界 → 关系网络 → 相关推荐。
+- 未修改 Phase 2B World Freeze、Phase 3B A+ / A recommendation gate 或生产事实数据。
