@@ -319,10 +319,10 @@
       query((db,s)=>db.from('entry_relations').select('entry_id,related_entry_id,relation_type,note').in('entry_id',ids).order('relation_type',{ascending:true}).abortSignal(s)),
       query((db,s)=>db.from('knowledge_graph_edges').select('source_node_id,target_node_id,edge_type,rationale,metadata').in('source_node_id',ids.map(id=>'entry:'+id)).eq('edge_type','craft_process:historically_important_for').abortSignal(s))
     ]);
-    const worldRows=worldResult.status==='fulfilled'?worldResult.value:[];
-    const worldDefs=worldDefResult.status==='fulfilled'?worldDefResult.value:[];
+    const worldRows=worldResult;
+    const worldDefs=worldDefResult;
     const relations=relationResult;
-    const craftEdges=craftResult.status==='fulfilled'?craftResult.value:[];
+    const craftEdges=craftResult;
     const relatedIds=[...new Set(relations.map(r=>r.related_entry_id).filter(Boolean))];
     const relatedRows=relatedIds.length?await query((db,s)=>db.from('entries').select('id,slug,category,zh,en,ja,status').eq('status','published').in('id',relatedIds).abortSignal(s)):[];
     const craftIds=[...new Set(craftEdges.map(r=>String(r.target_node_id||'')).filter(x=>x.startsWith('craft:')))];
@@ -378,7 +378,7 @@
     ]);
     const entries=entryResult;
     const worlds=worldResult;
-    const relations=relationResult.status==='fulfilled'?relationResult.value:[];
+    const relations=relationResult;
     const targetIds=[...new Set(relations.map(x=>x.related_entry_id).filter(Boolean))];
     const targets=targetIds.length?await query((db,s)=>db.from('entries').select('id,slug,category,zh,en,ja,status').eq('status','published').in('id',targetIds).abortSignal(s)):[]; 
     const byEntry=new Map(entries.map(e=>[e.id,e]));
