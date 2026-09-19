@@ -26,17 +26,10 @@ jobs:
       - name: Run museum QA
         run: python scripts/museum_qa.py
 
-      - name: Supabase smoke — published entries
-        run: python scripts/runtime_smoke.py --check entries
-
-      - name: Supabase smoke — public media
-        run: python scripts/runtime_smoke.py --check media
-
-      - name: Supabase smoke — 72 craft processes
-        run: python scripts/runtime_smoke.py --check craft
-
-      - name: Supabase smoke — sensitive tables
-        run: python scripts/runtime_smoke.py --check sensitive
+      # Production Supabase smoke is a post-deploy check; PR validation must not depend on live production data.
+      - name: Supabase smoke — public ACL (main only)
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: python scripts/runtime_smoke.py --check acl
 
       - name: Setup Node
         uses: actions/setup-node@v4
