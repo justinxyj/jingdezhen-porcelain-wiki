@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Anonymous Supabase runtime smoke checks using the browser-safe publishable key."""
-import argparse, json, re, urllib.error, urllib.parse, urllib.request
+import argparse, json, os, re, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
