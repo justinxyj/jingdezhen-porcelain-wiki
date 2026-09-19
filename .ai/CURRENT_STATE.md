@@ -406,3 +406,11 @@
 - 当前高价值关系重点：青花瓷 / 青白瓷 / 成化斗彩鸡缸杯 / 颜色釉瓷；王步 / 黄云鹏 / 唐英；御窑厂遗址烧成与窑具工序。
 - 相关推荐仍只消费 entry_relations 的 A+ / A，不因本轮 craft 关系增加而改变推荐资格。
 - Phase 2B Semantic Freeze 与 316 World mappings 保持不变。
+
+
+## 2026-09-20 — Phase 4E-5 Craft Relation Deep Audit Round 2
+- 具体人物↔器物关系进入 A+/A 证据审查。
+- 新增：郎廷极→颜色釉瓷 A+；唐英→颜色釉瓷 A。
+- 保留唐英→雍正仿钧新紫釉天球瓶 A，不把生产管理证据升级为个人作者证据。
+- 黄云鹏→元青花三顾茅庐纹罐暂缓，原因是该具体器物尚未作为 canonical Entry 纳入知识库；不得用代表作品文字直接制造不存在的 Entry 边。
+- 当前 entry_relations 102，recommendations 24；World mappings 316 不变。
