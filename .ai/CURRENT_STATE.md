@@ -118,6 +118,18 @@
 - 7 个知识世界入口页已接入动态条目浏览器，显示核心条目与跨世界关联入口。
 - knowledge-store.js 新增 worlds() / byWorld()；新增 world-browser.js 与 world-browser.css。
 
+## Sprint B Phase 2C — 人物→历史 / 全球窑址→历史深层语义审校（2026-09-19）
+- 生产层逐条复核完成，准入标准：从“历史与发展”世界进入该条目后，必须形成具体、可解释的历史知识路径，而不是仅因人物/窑址具有年代属性或地域相关性就挂载。
+- 人物→历史 secondary：37 → **9**。删除 28 条主要为纪念性/观察性人物、现代文化人物及更适合研究世界或人物世界的入口。
+- 全球窑址/空间→历史 secondary：41 → **17**。删除 24 条过宽的区域/国家级陶瓷节点与主要用于空间比较的条目。
+- 总 mapping：372 → **320（149 primary + 171 secondary）**；149 个 published 条目仍全部保持恰好一个 primary。
+- 本轮保留的人物历史入口实际为9条：陈淯、杜重远、郎廷极、年希尧、沈德符、沈怀清、唐英、童宾、王泽洪。
+- 已为保留的人物与核心窑址重写具体 rationale，删除通用模板句。
+- GitHub migration：`supabase/migrations/20260919213000_sprint_b_phase_2c_people_history_global_kiln_history.sql`；production migration 已成功应用，并完成 mapping/cardinality 回归查询。
+- UNESCO 2026 正式资料确认景德镇手工瓷业遗存由5个组成部分构成，覆盖10—19世纪生产系统以及原料、窑址、燃料、空间组织、技术与社会组织，因此高岭土矿、长岭、焦潭、湖田等保留入口具有直接历史系统依据。
+- 有田资料确认17世纪有田瓷业快速发展并出现景德镇式样的本土化，可作为东亚技术与贸易史入口。
+- Frank B. Lentz 的1920年实地文章具有史料价值，但本轮将其保留在 research 语义而非历史导航入口，避免研究者与历史节点重复占位。
+- 未修改 entries / entry_relations 主体数据，不 force-push、不重写历史；本轮仅治理 entry_worlds 语义层。
 ## Sprint B Phase 2B — 深层语义审校（2026-09-19）
 - 审校标准改为：secondary 必须是“从这个知识世界进入该条目”的真实用户路径，而不是数据库 category 的重复映射。
 - 生产 mapping 已由 395 收敛为 **372（149 primary + 223 secondary）**，149 个已发布条目全部保留且每条恰好一个 primary。
