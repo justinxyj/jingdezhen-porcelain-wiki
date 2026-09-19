@@ -12,12 +12,8 @@ language sql
 stable
 security definer
 set search_path = public
-as $
-  select exists(
-    select 1 from public.profiles
-    where id = auth.uid() and role in ('reviewer','admin')
-  );
-$;
+as 'select exists(select 1 from public.profiles where id = auth.uid() and role in (''reviewer'',''admin''));';
+
 revoke all on function private.is_staff() from public;
 grant execute on function private.is_staff() to authenticated, service_role;
 
