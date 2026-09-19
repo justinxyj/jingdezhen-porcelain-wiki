@@ -350,7 +350,7 @@
     return await query((db,s)=>db.from('craft_processes').select('id,sequence,slug,name_zh,category,category_name,description_zh,historical_period,tools_zh,materials_zh,output_zh,source_title,source_url,source_institution,source_tier,image_url,image_credit,image_source_url,image_status,image_license,image_creator').order('sequence',{ascending:true}).limit(n).abortSignal(s));
   }
 
-  async function craftProcessContext(processId,{entryLimit=12,relationLimit=60}={}) {
+  async function craftProcessContext(processId,{entryLimit=40,relationLimit=300}={}) {
     const id=String(processId||'');
     if(!/^[0-9a-f-]{36}$/i.test(id))throw new Error('JDM_CRAFT_PROCESS_ID_CONTRACT');
     const processResult=await query((db,s)=>db.from('craft_processes').select('id,sequence,slug,name_zh,category,category_name,description_zh,historical_period,tools_zh,materials_zh,output_zh,source_title,source_url,source_institution,source_tier,image_url,image_credit,image_source_url,image_status,image_license,image_creator').eq('id',id).limit(1).abortSignal(s));
@@ -385,6 +385,8 @@
       const eras=[...new Set(timeline.map(t=>eraGroupFor(e,t)).filter(Boolean))];
       return eras[0]||eraGroupFor(e);
     };
+    const materialTokens=String(process.materials_zh||'').split(/[、，,；;\/]/).map(x=>x.trim()).filter(Boolean);
+    const materialLabels=[...new Set(materialTokens)];
     const enriched=linkRows.map(link=>{
       const entry=byEntry.get(link.entry_id);
       if(!entry)return null;
@@ -413,12 +415,21 @@
       previous:previous?neighborMap.get(previous)||null:null,
       next:next?neighborMap.get(next)||null:null,
       entries:enriched,
+      materials:materialLabels,
+      objects:[...new Map(enriched.flatMap(x=>x.objects).map(e=>[e.id,e])).values()],
+      people:[...new Map(enriched.flatMap(x=>x.people).map(e=>[e.id,e])).values()],
+      kilns:[...new Map(enriched.flatMap(x=>x.kilns).map(e=>[e.id,e])).values()],
+      documents:[...new Map(enriched.flatMap(x=>x.documents).map(e=>[e.id,e])).values()],
+      eras:[...new Set(enriched.map(x=>x.era).filter(Boolean))],
+      mappedEntries:[...new Map(enriched.filter(x=>x.map).map(x=>[x.entry.id,x.entry])).values()],
       stats:{
         entries:enriched.length,
         people:[...new Set(enriched.flatMap(x=>x.people.map(e=>e.id)))].length,
         objects:[...new Set(enriched.flatMap(x=>x.objects.map(e=>e.id)))].length,
         kilns:[...new Set(enriched.flatMap(x=>x.kilns.map(e=>e.id)))].length,
-        documents:[...new Set(enriched.flatMap(x=>x.documents.map(e=>e.id)))].length
+        documents:[...new Set(enriched.flatMap(x=>x.documents.map(e=>e.id)))].length,
+        eras:[...new Set(enriched.map(x=>x.era).filter(Boolean))].length,
+        spaces:[...new Set(enriched.filter(x=>x.map).map(x=>x.entry.id))].length
       }
     };
   }
