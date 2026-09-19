@@ -327,7 +327,7 @@
     relations.forEach(r=>{if(!relationByEntry.has(r.entry_id))relationByEntry.set(r.entry_id,[]);const e=related.get(r.related_entry_id);if(e)relationByEntry.get(r.entry_id).push({...r,entry:e})});
     craftEdges.forEach(r=>{if(!craftByEntry.has(r.source_node_id))craftByEntry.set(r.source_node_id,[]);const node=crafts.get(r.target_node_id);if(node)craftByEntry.get(r.source_node_id).push({...node,rationale:r.rationale})});
     return objects.map(e=>{
-      const m=(/** @type {any} */ (e.zh))?.meta||{};
+      const zh=/** @type {any} */ (e.zh); const m=zh?.meta||{};
       const rel=relationByEntry.get(e.id)||[];
       return {
         entry:e,
