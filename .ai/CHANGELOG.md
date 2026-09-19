@@ -236,3 +236,14 @@
 - `docs/network/relations.md` 从概念占位页升级为真实生产关系探索器。
 - 当前生产图谱复核：485 nodes / 1,309 edges / 0 orphan edges。
 - Phase 4A 未修改 entries、entry_relations、entry_worlds、recommendation gate 或任何生产事实关系。
+
+
+## 2026-09-20 — Phase 4B / 七大知识世界动态化
+- 七个世界入口从“动态条目列表”升级为动态世界概览。
+- `JDM_KNOWLEDGE.worldOverview()` 读取 `knowledge_worlds`、冻结后的 `entry_worlds` 与 published `entries`，返回世界定义、primary/secondary 数量、类别分布、代表性入口及跨世界连接。
+- 七个世界页现在根据生产数据动态展示核心条目数、跨世界入口数、当前连接数与代表性知识入口。
+- Connected Worlds 根据同一 entry 的真实跨世界 mapping 计算，不新增或推断任何 World 关系。
+- 世界页代表入口直接进入统一 Entry Detail；原有核心条目与 secondary 入口浏览继续保留。
+- 新增响应式 / dark mode 世界概览样式。
+- 本阶段未修改 `entry_worlds`、`entries`、`entry_relations` 或 Phase 3 recommendation gate。
+- Pages 浏览器 smoke 待部署后完成。
