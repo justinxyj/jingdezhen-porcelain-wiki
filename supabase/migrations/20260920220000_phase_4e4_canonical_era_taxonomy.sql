@@ -38,3 +38,33 @@ SET zh = jsonb_set(
 WHERE status='published'
   AND jsonb_typeof(zh->'meta'->'timeline')='array'
   AND zh->'meta'->'timeline' @> '[{"era":"modern"}]'::jsonb;
+
+-- Existing person records without a legacy era label are assigned to the
+-- canonical group from their documented historical role, without overwriting
+-- the original era field.
+UPDATE public.entries
+SET zh = jsonb_set(
+  COALESCE(zh,'{}'::jsonb),
+  '{meta,era_group}',
+  to_jsonb(CASE slug
+    WHEN 'tang-ying' THEN 'qing'
+    WHEN 'nian-xiyao' THEN 'qing'
+    WHEN 'zang-yingxuan' THEN 'qing'
+    WHEN 'lang-tingji' THEN 'qing'
+    WHEN 'tong-bin' THEN 'ming'
+    WHEN 'wang-bu' THEN 'near-modern'
+    WHEN 'wang-qi' THEN 'near-modern'
+    WHEN 'tian-hexian' THEN 'near-modern'
+    WHEN 'zhang-songmao' THEN 'modern'
+    WHEN 'wang-xiliang' THEN 'modern'
+    WHEN 'qin-xilin' THEN 'modern'
+    WHEN 'huang-yunpeng' THEN 'modern'
+    WHEN 'liu-yuanchang' THEN 'modern'
+    WHEN 'zhan-shaolin' THEN 'modern'
+    ELSE zh->'meta'->>'era_group'
+  END),
+  true
+)
+WHERE status='published'
+  AND category='人物'
+  AND slug IN ('tang-ying','nian-xiyao','zang-yingxuan','lang-tingji','tong-bin','wang-bu','wang-qi','tian-hexian','zhang-songmao','wang-xiliang','qin-xilin','huang-yunpeng','liu-yuanchang','zhan-shaolin');
