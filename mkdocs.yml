@@ -56,6 +56,7 @@ extra_javascript:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
   - javascripts/runtime-config.js
   - https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2
+  - javascripts/auth-manager.js
   - javascripts/media-policy.js
   - javascripts/knowledge-store.js
   - javascripts/museum.js
