@@ -68,3 +68,17 @@
 
 - [x] 第三轮：修复历史时间轴按数据库更新时间排序导致的年代倒序
 - [x] 第三轮：历史时间轴按时代与起始年份排序，“东晋—唐”第一，“五代—宋”第二，1909/1949/2002/2026 等近现代节点置后
+
+
+## 新一轮审计修复
+- [x] H-1 认证过期错误统一为 AUTH_EXPIRED / 401
+- [x] H-2 关系查询严格 UUID 校验并移除动态 OR filter
+- [x] H-3 主媒体/Revision 版本唯一约束与事务回归测试
+- [x] M-1 历史时间轴改用结构化 timeline_sort_year
+- [x] M-2 evidence-hub 安全 DOM 渲染与 URL 白名单
+- [x] M-3 目录搜索重绘降频到 animation frame
+- [x] M-4 strict TypeScript 数据契约与错误契约
+- [x] M-5 外部图片恢复生命周期中止、负缓存、对象 ID 校验
+- [x] M-6 关系稳定排序、去重、截断提示
+- [x] M-7 核心查询 EXPLAIN + 生产索引验证
+- [ ] M-4 浏览器核心 JS 全量迁移 TypeScript（当前不作为阻塞项，现阶段保留 JS + strict contract）
