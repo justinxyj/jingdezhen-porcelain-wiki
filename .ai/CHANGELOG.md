@@ -172,3 +172,12 @@
 - 证据分别核对景德镇皇窑陶瓷艺术博物馆、文化和旅游部恭王府博物馆/景德镇中国陶瓷博物馆、现有条目定位、故宫博物院资料。
 - 生产关系 note 已更新；对应 migration：`supabase/migrations/20260919210000_phase_3b3_relation_evidence_expansion.sql`。
 - 本阶段原则：先证据、后扩容；没有明确事实依据的关系继续留在图谱/探索层，不为了增加推荐数量强行补理由。
+
+
+## 2026-09-19 — Phase 3B-3 第二轮 / 证据可得性筛选
+- 对人物→器物、人物→窑址、历史→器物、历史→窑址弱关系进行第二轮证据筛选。
+- A 类新增/精修 6 条 entry-specific evidence：王琦→粉彩瓷、唐英→粉彩瓷、明：御窑厂与官作体系→青花瓷、清：御窑/彩瓷与颜色釉→粉彩瓷、明：御窑厂与官作体系→御窑厂遗址、清：御窑/彩瓷与颜色釉→御窑厂遗址。
+- C 类删除 3 条时间上不可能成立的历史→御窑厂遗址关系：东晋—唐、五代—宋、元→明清御窑厂遗址。故宫资料记载御窑厂始建于明洪武二年（1369）。
+- B 类关系暂不进入推荐：即便知识上可能相关，只要当前没有足够 entry-specific 证据，继续保留在事实图谱层。
+- 生产回归：149 entries、149 primary、167 secondary、316 total mappings；recommendation pool 68，其中 person 6 / kiln 3 / related 3 / source 3 / object 3。
+- migration：supabase/migrations/20260919223000_phase_3b3_round2_evidence_screening.sql
