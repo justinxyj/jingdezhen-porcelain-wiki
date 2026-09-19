@@ -1,5 +1,17 @@
--- G29 batch1 content seed (S3/S4). Does NOT change RLS.
--- Apply only with founder approval / service_role. Idempotent upserts by slug.
+-- G29 batch1 content seed (S3/S4) — for director MCP apply (NO service_role to bots).
+-- Does NOT change RLS / policies / Secrets.
+-- Scope only: blue-and-white summary; INSERT/UPSERT met-1991-253-33 (Met 42490 NOT 42491);
+--   optional media + relation. Does NOT touch freeze-list 13 persons.
+-- Idempotent. Expected effects on first apply:
+--   UPDATE entries blue-and-white → 1 row
+--   INSERT/UPSERT entries met-1991-253-33 → 1 row
+--   INSERT media (if missing) → 0..1 row
+--   INSERT entry_relations (if missing) → 0..1 row
+--
+-- Repo paths:
+--   /workspace/jingdezhen-wiki/ops/g29_s3_s4_content_seed_MCP.sql  (handoff)
+--   supabase/migrations/20260919_g29_s3_s4_content_seed.sql         (PR #7)
+--   https://github.com/justinxyj/jingdezhen-porcelain-wiki/pull/7
 
 BEGIN;
 
@@ -90,3 +102,14 @@ WHERE a.slug = 'met-1991-253-33' AND b.slug = 'blue-and-white'
   );
 
 COMMIT;
+
+
+-- --- verify (run after COMMIT; report these counts) ---
+-- SELECT slug, length(zh->>'summary') AS summary_len, sources
+-- FROM public.entries WHERE slug IN ('blue-and-white','met-1991-253-33');
+-- SELECT count(*) AS media_n FROM public.media m
+--   JOIN public.entries e ON e.id=m.entry_id WHERE e.slug='met-1991-253-33';
+-- SELECT count(*) AS rel_n FROM public.entry_relations r
+--   JOIN public.entries a ON a.id=r.entry_id
+--   JOIN public.entries b ON b.id=r.related_entry_id
+--  WHERE a.slug='met-1991-253-33' AND b.slug='blue-and-white';
