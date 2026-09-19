@@ -42,8 +42,9 @@ def check_craft():
     if len(data)!=72: raise RuntimeError(f"craft_processes expected 72 rows, got {len(data)}")
     print("PASS craft_processes=72")
 
-def blocked(path,select="id"):
-    status,data=get(path,{"select":select,"limit":"1"})
+def blocked(path,select="id",extra=None):
+    params={"select":select,"limit":"1"};params.update(extra or {})
+    status,data=get(path,params)
     if status in (400,401,403,404): return status
     if status==200:
         if data: raise RuntimeError(f"{path}: protected data was anonymously readable")
@@ -53,7 +54,7 @@ def blocked(path,select="id"):
 def check_sensitive():
     rev=blocked("entry_revisions")
     media=blocked("media","verification_note")
-    drafts=blocked("entries","id,slug,status")
+    drafts=blocked("entries","id,slug,status",{"status":"neq.published"})
     print(f"PASS revisions_blocked={rev} media_internal_field_blocked={media} drafts_blocked={drafts}")
 
 def check_acl():
