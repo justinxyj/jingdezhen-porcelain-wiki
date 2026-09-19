@@ -74,7 +74,7 @@
     state={status:'loading',error:null,updatedAt:state.updatedAt};
     allPromise=(async()=>{
       const entries=window.JDM_CONTRACT.entries(await paged(db=>db.from('entries').select('id,slug,category,zh,en,ja,sources,status,version,updated_at').eq('status','published').order('updated_at',{ascending:false})));
-const media=window.JDM_CONTRACT?.mediaList(await paged(db=>db.from('media_public').select('id,entry_id,path,title,source,license,creator,captured_at,location,created_at,usage_type,source_tier,is_primary,canonical_key,source_url,source_type').order('is_primary',{ascending:false}).order('source_tier',{ascending:true}).order('created_at',{ascending:true})));
+const media=window.JDM_CONTRACT.mediaList(await paged(db=>db.from('media_public').select('id,entry_id,path,title,source,license,creator,captured_at,location,created_at,usage_type,source_tier,is_primary,canonical_key,source_url,source_type').order('is_primary',{ascending:false}).order('source_tier',{ascending:true}).order('created_at',{ascending:true})));
 const contexts=await paged(db=>db.from('timeline_context').select('entry_id,historical_role,relationship_to_jingdezhen,official_summary,official_image_url,official_image_credit,official_source_title,official_source_url,official_institution,source_tier,reviewed_at').order('source_tier',{ascending:true}));
       const mm=new Map();media.forEach(m=>{if(!mm.has(m.entry_id))mm.set(m.entry_id,[]);mm.get(m.entry_id).push(m)});
       const cm=new Map(contexts.map(c=>[c.entry_id,c]));
@@ -87,7 +87,7 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
     const hit=cache.get(slug);if(hit)return hit;
     try{
       state={status:'loading',error:null,updatedAt:state.updatedAt};
-      const entries=await query((db,s)=>db.from('entries').select('id,slug,category,zh,en,ja,sources,status,version,updated_at').eq('status','published').eq('slug',slug).limit(1).abortSignal(s));
+      const entries=window.JDM_CONTRACT.entries(await query((db,s)=>db.from('entries').select('id,slug,category,zh,en,ja,sources,status,version,updated_at').eq('status','published').eq('slug',slug).limit(1).abortSignal(s)));
       if(!entries[0]){state={status:'ready',error:null,updatedAt:Date.now()};return null}
       const row=await hydrateEntry(client(),entries[0]);cache.set(slug,row);state={status:'ready',error:null,updatedAt:Date.now()};return row;
     }catch(err){rememberError(err);throw err}
