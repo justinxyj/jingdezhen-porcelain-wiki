@@ -68,7 +68,18 @@ with sync_playwright() as p:
         browser_cards.first.wait_for(state="visible",timeout=20000)
         if browser_cards.count()<1:
             raise RuntimeError(f"{name} has no world entries")
-        print("PASS",name,"entries",browser_cards.count())
+        explore=page.locator("[data-world-browser] .jdm-world-explore-link")
+        if explore.count()<2:
+            raise RuntimeError(f"{name} has no unified exploration exits")
+        first_href=browser_cards.first.get_attribute("href")
+        if not first_href:
+            raise RuntimeError(f"{name} first entry has no canonical href")
+        page.goto(base+first_href.lstrip("/"),wait_until="networkidle",timeout=30000)
+        page.locator("#wiki-entry-root").first.wait_for(state="visible",timeout=20000)
+        exits=page.locator(".wiki-entry-v2-card a, .wiki-recommendation-card, .wiki-entry-source-links a")
+        if exits.count()<1:
+            raise RuntimeError(f"{name} entry has no continuation exit")
+        print("PASS",name,"entries",browser_cards.count(),"entry-path")
 
     page.goto(base+"museum/timeline/",wait_until="domcontentloaded",timeout=30000)
     titles=page.locator(".timeline-item h3").all_text_contents()
