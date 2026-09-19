@@ -23,6 +23,8 @@
 - [ ] 复核 Issue #2
 - [x] 检查核心 entry/media 真实数据通路
 - [ ] 清理错误复用媒体，同时保留来源与审计记录
+- [x] 修复 Met 馆藏图旧硬编码屏蔽
+- [x] 72 工序前端改为读取 canonical craft_processes
 - [x] 验证关系按稳定 ID 加载
 
 ## P1 — 工程质量
