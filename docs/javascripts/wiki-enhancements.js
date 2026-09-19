@@ -86,13 +86,19 @@
     try{
       const e=await window.JDM_KNOWLEDGE.get(slug);
       if(!e){root.innerHTML='<div class="wiki-entry-loading">没有找到这个公开条目。</div>';return}
-      const network=await window.JDM_KNOWLEDGE.entryNetworkContext(e.id,{timelineLimit:8,spaceLimit:12});
+      const network=await window.JDM_KNOWLEDGE.entryNetworkContext(e.id,{timelineLimit:8,spaceLimit:12}).catch(async networkError=>{
+        const [ctx,recs]=await Promise.all([
+          window.JDM_KNOWLEDGE.entryContext(e.id,{relationLimit:100}).catch(()=>({relations:[]})),
+          window.JDM_KNOWLEDGE.recommendations(e.id,{limit:8}).catch(()=>[])
+        ]);
+        return {entry:e,worlds:[],relations:ctx.relations||[],recommendations:Array.isArray(recs)?recs:[],timelinePeers:[],spaceEntries:[],craftProcesses:[],networkError};
+      });
       if(!network){root.innerHTML='<div class="wiki-entry-loading">没有找到这个公开 Entry。</div>';return}
       const error=null; const truncated=false;
       if(seq!==initSeq)return;
       render(root,e,network);
       const relations=network.relations||[], recommendations=network.recommendations||[];
-      const recommendationError=null;
+      const recommendationError=network.networkError?network.networkError:null;
       if(recommendationError){const note=document.createElement('div');note.className='wiki-entry-recommendation-warning';note.setAttribute('role','status');note.textContent='相关推荐暂时无法加载，其他知识内容仍可正常浏览。';root.querySelector('.wiki-entry-card')?.appendChild(note);}
       if(error)renderRelationWarning(root);
       if(truncated){const note=document.createElement('div');note.className='wiki-entry-relation-warning';note.setAttribute('role','status');note.textContent='相关内容较多，当前仅显示前 200 条唯一关系。';root.querySelector('.wiki-entry-card')?.appendChild(note)}
