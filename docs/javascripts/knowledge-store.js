@@ -170,7 +170,7 @@
   function eraGroupFor(e,t=null){
     const m=e?.zh?.meta||{}, raw=String(t?.era||m.era_group||m.era||m.period||'').trim();
     const title=String(e?.zh?.title||'');
-    const yearMatch=title.match(/((?:18|19|20)\\d{2})/);
+    const yearMatch=title.match(/((?:18|19|20)\d{2})/);
     const year=yearMatch?Number(yearMatch[1]):null;
     if(raw==='tang'||/唐/.test(raw))return 'tang';
     if(raw==='song'||/宋/.test(raw))return 'song';
@@ -261,12 +261,16 @@
     const people=(await byCategory('人物',limit)).filter(e=>e?.status==='published');
     if(!people.length)return [];
     const ids=people.map(e=>e.id);
-    const [worldRows,worldDefs,relationRows,craftEdges]=await Promise.all([
+    const [worldResult,worldDefResult,relationResult,craftResult]=await Promise.allSettled([
       query((db,s)=>db.from('entry_worlds').select('entry_id,world_slug,role,rationale').in('entry_id',ids).abortSignal(s)),
       query((db,s)=>db.from('knowledge_worlds').select('slug,title,short_title,display_order').order('display_order',{ascending:true}).abortSignal(s)),
       query((db,s)=>db.from('entry_relations').select('entry_id,related_entry_id,relation_type,note').or('entry_id.in.('+ids.join(',')+'),related_entry_id.in.('+ids.join(',')+')').order('relation_type',{ascending:true}).abortSignal(s)),
       query((db,s)=>db.from('knowledge_graph_edges').select('source_node_id,target_node_id,edge_type,rationale,metadata').in('source_node_id',ids.map(id=>'entry:'+id)).eq('edge_type','craft_process:historically_important_for').abortSignal(s))
     ]);
+    const worldRows=worldResult.status==='fulfilled'?worldResult.value:[];
+    const worldDefs=worldDefResult.status==='fulfilled'?worldDefResult.value:[];
+    const relationRows=relationResult.status==='fulfilled'?relationResult.value:[];
+    const craftEdges=craftResult.status==='fulfilled'?craftResult.value:[];
     const otherIds=[...new Set(relationRows.flatMap(r=>[r.entry_id,r.related_entry_id]).filter(id=>id&&!ids.includes(id)))];
     const otherRows=otherIds.length?await query((db,s)=>db.from('entries').select('id,slug,category,zh,en,ja,status').eq('status','published').in('id',otherIds).abortSignal(s)):[];
     const craftIds=[...new Set(craftEdges.map(r=>String(r.target_node_id||'')).filter(x=>x.startsWith('craft:')))];
@@ -301,12 +305,16 @@
     const objects=(await byCategory('器物',limit)).filter(e=>e?.status==='published');
     if(!objects.length)return [];
     const ids=objects.map(e=>e.id);
-    const [worldRows,worldDefs,relations,craftEdges]=await Promise.all([
+    const [worldResult,worldDefResult,relationResult,craftResult]=await Promise.allSettled([
       query((db,s)=>db.from('entry_worlds').select('entry_id,world_slug,role,rationale').in('entry_id',ids).abortSignal(s)),
       query((db,s)=>db.from('knowledge_worlds').select('slug,title,short_title,display_order').order('display_order',{ascending:true}).abortSignal(s)),
       query((db,s)=>db.from('entry_relations').select('entry_id,related_entry_id,relation_type,note').in('entry_id',ids).order('relation_type',{ascending:true}).abortSignal(s)),
       query((db,s)=>db.from('knowledge_graph_edges').select('source_node_id,target_node_id,edge_type,rationale,metadata').in('source_node_id',ids.map(id=>'entry:'+id)).eq('edge_type','craft_process:historically_important_for').abortSignal(s))
     ]);
+    const worldRows=worldResult.status==='fulfilled'?worldResult.value:[];
+    const worldDefs=worldDefResult.status==='fulfilled'?worldDefResult.value:[];
+    const relations=relationResult.status==='fulfilled'?relationResult.value:[];
+    const craftEdges=craftResult.status==='fulfilled'?craftResult.value:[];
     const relatedIds=[...new Set(relations.map(r=>r.related_entry_id).filter(Boolean))];
     const relatedRows=relatedIds.length?await query((db,s)=>db.from('entries').select('id,slug,category,zh,en,ja,status').eq('status','published').in('id',relatedIds).abortSignal(s)):[];
     const craftIds=[...new Set(craftEdges.map(r=>String(r.target_node_id||'')).filter(x=>x.startsWith('craft:')))];
