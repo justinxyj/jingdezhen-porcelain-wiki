@@ -12,3 +12,28 @@
 [data-md-color-scheme="slate"] .tech-detail-source{border-color:rgba(190,210,225,.14)}
 [data-md-color-scheme="slate"] .tech-link{stroke:rgba(190,210,225,.22)}
 @media(max-width:520px){.tech-tree-stage{margin-left:-8px;margin-right:-8px;border-radius:18px;padding:12px}.tech-tree-nodes{min-width:500px;grid-template-columns:repeat(2,minmax(170px,1fr));gap:10px}.tech-node{min-height:44px;padding:7px 8px}.tech-tree-detail{margin-left:-8px;margin-right:-8px;border-radius:18px}.tech-tree-hero h1{font-size:2rem}}
+
+/* Phase 4E-5 unified knowledge path. */
+.tech-detail-section{margin-top:18px;padding:16px 18px;border-radius:14px;background:rgba(120,90,55,.06)}
+.tech-detail-section b,.tech-detail-grid b,.tech-detail-network>b{display:block;margin-bottom:8px}
+.tech-detail-section p{margin:0}
+.tech-detail-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:14px}
+.tech-detail-grid>div{padding:13px;border:1px solid rgba(120,90,55,.14);border-radius:12px;background:rgba(255,255,255,.4)}
+.tech-detail-grid span{display:block;line-height:1.55}
+.tech-detail-network{margin-top:20px;padding:18px;border-top:1px solid rgba(120,90,55,.14)}
+.tech-network-stats{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.tech-network-stats span{padding:7px 10px;border-radius:999px;background:rgba(120,90,55,.08);font-size:.82rem}
+.tech-detail-network p{margin:.5rem 0 0;opacity:.72}
+.tech-entry-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}
+.tech-entry-card{padding:16px;border:1px solid rgba(120,90,55,.14);border-radius:16px;background:rgba(255,255,255,.55)}
+.tech-entry-card-head{display:flex;justify-content:space-between;gap:8px;font-size:.74rem;opacity:.68}
+.tech-entry-card h4{margin:.5rem 0;font-size:1.05rem}
+.tech-entry-card p{font-size:.86rem;line-height:1.6;margin:.5rem 0}
+.tech-entry-signals{font-size:.76rem;opacity:.65}
+.tech-entry-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+.tech-entry-actions a{font-weight:700;text-decoration:underline;text-underline-offset:3px}
+[data-md-color-scheme="slate"] .tech-detail-section{background:rgba(190,210,225,.06)}
+[data-md-color-scheme="slate"] .tech-detail-grid>div,.tech-entry-card{background:rgba(24,36,45,.72);border-color:rgba(190,210,225,.14)}
+[data-md-color-scheme="slate"] .tech-network-stats span{background:rgba(190,210,225,.08)}
+@media(max-width:800px){.tech-detail-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tech-entry-grid{grid-template-columns:1fr}}
+@media(max-width:520px){.tech-detail-grid{grid-template-columns:1fr}}
