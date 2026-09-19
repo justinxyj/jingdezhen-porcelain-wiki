@@ -284,3 +284,13 @@
 - 用户完成线上浏览器 Smoke Test，确认全球陶瓷网络实际部署正常。
 - 器物、人物、窑址三类 Entry 的时间 / 空间 / 关系 / 推荐链路均验证通过。
 - Phase 4C 第一轮正式收口；未修改 Phase 2B Semantic Freeze、Phase 3B recommendation gate 或生产关系证据规则。
+
+
+## 2026-09-20 — Phase 4D / 统一搜索与知识发现系统第一轮
+- 将 `JDM_KNOWLEDGE.searchEntries()` 扩展为统一发现索引：支持 category / world / era / lane / hasMap / hasTimeline。
+- 新增 `searchDiscoveryPage()`，统一返回 results / total / facets；原 `searchDiscovery()` 保持结果数组兼容。
+- 空关键词现在可以进入“知识浏览”模式，覆盖当前 149 个 published canonical entries，而不是只能输入文本后检索。
+- 搜索页新增知识世界、条目类型、时代、景德镇/中国其他窑业/世界其他地区、空间坐标、时间轴等筛选。
+- 结果卡继续连接 Entry Detail、关系网络、全球陶瓷网络与 A+/A 相关推荐；搜索本身不改变推荐资格。
+- URL 保存 q / world / category / era / lane / map / time，允许用户复制一个发现状态继续访问。
+- 当前阶段未新增或修改生产知识事实数据；Phase 2B Semantic Freeze 与 Phase 3B recommendation gate 保持不变。
