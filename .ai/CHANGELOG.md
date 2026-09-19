@@ -226,3 +226,13 @@
 - 前端 JavaScript 语法回归通过：knowledge-store.js、wiki-enhancements.js 均可正常解析。
 - Phase 3C 未修改 Phase 3B 推荐资格规则，也未修改 316 条 World mappings。
 - Phase 3C 正式收口；下一阶段转入 Phase 4 / 后续产品建设。
+
+
+## 2026-09-20 — Phase 4A / 知识网络第一阶段
+- Phase 4 正式启动，第一批工作聚焦“知识网络与产品体验升级”，不修改生产事实数据。
+- `JDM_KNOWLEDGE.graph()` 增加全局 edge 读取能力，并将 node limit 与 edge limit 分离；保留 nodeId 局部邻域查询能力。
+- 新增 `docs/javascripts/network-explorer.js`：直接读取生产 knowledge graph，支持核心节点搜索、类别筛选、节点选择、邻接继续探索及 Entry Detail 跳转。
+- 新增 `docs/stylesheets/network-explorer.css`：完成桌面、移动端与 dark mode 的知识网络界面。
+- `docs/network/relations.md` 从概念占位页升级为真实生产关系探索器。
+- 当前生产图谱复核：485 nodes / 1,309 edges / 0 orphan edges。
+- Phase 4A 未修改 entries、entry_relations、entry_worlds、recommendation gate 或任何生产事实关系。
