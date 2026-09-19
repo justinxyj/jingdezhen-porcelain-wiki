@@ -294,3 +294,12 @@
 - 结果卡继续连接 Entry Detail、关系网络、全球陶瓷网络与 A+/A 相关推荐；搜索本身不改变推荐资格。
 - URL 保存 q / world / category / era / lane / map / time，允许用户复制一个发现状态继续访问。
 - 当前阶段未新增或修改生产知识事实数据；Phase 2B Semantic Freeze 与 Phase 3B recommendation gate 保持不变。
+
+
+## 2026-09-20 — Phase 4E / 数字博物馆工具层统一：时间轴 2.0
+- 时间轴继续以 canonical Entry 为唯一内容来源，未新增历史事实。
+- 新增时代筛选与三条空间 lane 筛选。
+- 时间轴节点保持 Entry Detail 为 canonical destination，并继续衔接全球陶瓷网络。
+- 增加统一搜索入口，避免时间轴成为孤立工具。
+- 新增响应式 / dark mode 控件样式。
+- 未修改 World mappings、entry_relations 或 recommendation gate。
