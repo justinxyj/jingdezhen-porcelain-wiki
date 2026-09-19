@@ -18,6 +18,8 @@ declare global {
       refresh(): Promise<unknown>;
       request<T>(factory: (db: any, signal: AbortSignal) => Promise<{ data: T; error?: unknown }>, options?: { retryAuth?: boolean; timeoutMs?: number }): Promise<T>;
       signOut(): Promise<void>;
+      safeHref(raw: unknown, options?: { allowHttp?: boolean }): string;
+      describeError(error: unknown): { code: string; kind: string; message: string; action: string };
       state(): { status: string; session: unknown; user: unknown; lastEvent: unknown };
     };
     JDM_KNOWLEDGE?: {
@@ -28,7 +30,7 @@ declare global {
       worlds(): Promise<Database['public']['Tables']['knowledge_worlds']['Row'][]>;
       byWorld(worldSlug: string, options?: { limit?: number; role?: string | null }): Promise<unknown[]>;
       worldOverview(worldSlug: string, options?: { limit?: number; featured?: number }): Promise<unknown>;
-      entryContext(entryId: string, options?: { relationLimit?: number }): Promise<{relations: any[]; related: number; error?: unknown}>;
+      entryContext(entryId: string, options?: { relationLimit?: number }): Promise<{relations: unknown[]; related: number; truncated?: boolean; limit?: number; error?: unknown}>;
       entryNetworkContext(entryId: string, options?: { timelineLimit?: number; spaceLimit?: number }): Promise<unknown>;
       craftProcesses(options?: { limit?: number }): Promise<any[]>;
       craftProcessContext(processId: string, options?: { entryLimit?: number; relationLimit?: number }): Promise<any>;
