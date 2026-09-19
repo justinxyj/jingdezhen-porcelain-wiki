@@ -34,6 +34,10 @@ if js_root.exists():
             warnings.append(f"{path}: possible internal/backend wording in public JS")
         if re.search(r"42490/177595/main-image", text):
             errors.append(f"{path}: legacy generic Met image URL remains")
+        if path.name == "museum-admin.js":
+            for forbidden in ("confidence,", "editorial_status", "reviewed_at", "verification_status", "from('sources')"):
+                if forbidden in text:
+                    errors.append(f"{path}: references retired schema field/table - {forbidden}")
 
 
 # Navigation target existence check.
