@@ -81,11 +81,13 @@
 
 ## 2026-09-19 — 安全与前端数据层第二阶段
 - 生产 media RLS 已收紧：公共读取必须同时满足 status='approved' 与 review_state='verified'。
-- 普通 authenticated 用户的媒体 INSERT 现在被数据库策略强制限制为 pending / pending、verified_at=NULL、is_primary=false；staff 才能直接插入审核态媒体。
-- 已创建并上线 public.media_public 公共视图，仅暴露网页所需媒体字段；anon 已撤销对 public.media 直接 SELECT，网页改走该公共视图。
-- 生产核验：media_public 当前返回 108 条公开媒体；anon 对 media 表无 SELECT 权限、对 media_public 有 SELECT 权限。
-- knowledge-store.js 不再把 API 异常静默转换为空数组；错误会进入明确 error 状态并由详情页显示重试入口。
-- 详情页已从“整库 all()”改为按 slug 定向读取，关系查询限制 100 条并按关系 ID 再取 published entries。
-- museum-images.js 增加 8 秒超时、一次有限重试、缓存去重与最多 3 个并发恢复任务。
-- site-privacy.js 删除了通用文本匹配删节点逻辑；timeline-interactive.js 改为只处理新增 DOM 节点。
-- 最新 main：0feb980；Validate #85 成功；Pages #369 成功。
+- 普通 authenticated 用户的媒体 INSERT 已被数据库策略强制限制为 pending / pending、verified_at=NULL、is_primary=false；staff 才能直接插入审核态媒体。
+- 曾尝试通过 public.media_public 视图隔离媒体字段，但实际 PostgREST 运行验证发现该视图在当前 API 配置下不可稳定访问；最终采用更直接的列级权限方案。
+- 当前生产公共媒体通路：anon 对 public.media 无表级 SELECT，仅获得网页所需安全列的 SELECT 权限；RLS 同时要求 status='approved' 且 review_state='verified'。内部字段（如 verification_note、verified_at、uploader_id、review_state、status）不会通过匿名查询返回。
+- knowledge-store.js 已加入明确错误状态、请求超时、有限分页及运行时数据契约校验；详情读取按 slug 定向查询。
+- museum-images.js 已加入超时、有限重试、缓存去重、并发上限，并只监听带 data-museum-image 标记的图片。
+- site-privacy.js 已删除通用文本匹配删节点逻辑；timeline-interactive.js 只处理新增 DOM 节点。
+- 已补充 Python runtime smoke 与 Pages Playwright smoke，CI 分开验证 entries/media/craft/sensitive 及首页、目录、时间轴、72 工序、详情页。
+- 2026-09-19 用户实测发现历史时间轴排序错误：原实现按空的 meta.period 字符串排序，导致数据库返回顺序把 1949—1966、2002—2014、2026 等近现代节点排在最前。
+- 已修复 museum.js：按 timeline era + 标题起始年份进行稳定的历史排序，并明确将“东晋—唐”置于“五代—宋”之前；近现代 1909、1949、2002、2026 节点排到后段。
+- 时间轴排序修复 commit：fb5349a4d307cb62c7902bdba5c85c25685cfd05。
