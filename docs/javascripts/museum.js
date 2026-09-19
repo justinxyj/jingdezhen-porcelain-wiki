@@ -11,11 +11,11 @@
     const root=document.getElementById('catalog-list');if(!root)return;
     const q=(document.getElementById('catalog-search')?.value||'').trim().toLowerCase();
     const items=entries.filter(e=>!q||JSON.stringify(e.zh||{}).toLowerCase().includes(q));
-    root.innerHTML=items.map(e=>{const im=e.media?.[0],m=meta(e);return `<a class="catalog-card wiki-card-link" href="${entryUrl(e)}">${im?`<img src="${esc(im.path)}" alt="${esc(im.title||e.zh?.title||'器物图片')}" loading="lazy">`:''}${m.period?`<div class="tag">${esc(m.period)}</div>`:''}<div class="tag">${esc(m.craft||e.category||'器物')}</div><h3>${esc(e.zh?.title||'未命名器物')}</h3><p>${esc(text(e))}</p><span class="wiki-read-more">查看完整条目 →</span></a>`}).join('')||'<div class="notice">没有找到匹配器物。</div>';
+    root.innerHTML=items.map(e=>{const im=e.media?.[0],m=meta(e);return `<a class="catalog-card wiki-card-link" href="${entryUrl(e)}">${im?`<img data-museum-image="1" src="${esc(im.path)}" alt="${esc(im.title||e.zh?.title||'器物图片')}" loading="lazy">`:''}${m.period?`<div class="tag">${esc(m.period)}</div>`:''}<div class="tag">${esc(m.craft||e.category||'器物')}</div><h3>${esc(e.zh?.title||'未命名器物')}</h3><p>${esc(text(e))}</p><span class="wiki-read-more">查看完整条目 →</span></a>`}).join('')||'<div class="notice">没有找到匹配器物。</div>';
   }
   function renderPeople(entries){
     const root=document.getElementById('people-list');if(!root)return;
-    root.innerHTML=entries.map(e=>{const im=e.media?.[0],m=meta(e);return `<a class="person-card wiki-card-link" href="${entryUrl(e)}">${im?`<div class="person-card-image"><img src="${esc(im.path)}" alt="${esc(im.title||e.zh?.title||'人物图片')}" loading="lazy"></div>`:''}${m.era||m.period?`<div class="tag">${esc(m.era||m.period)}</div>`:''}<h3>${esc(e.zh?.title||'未命名人物')}</h3><strong>${esc(m.role||'人物')}</strong><p>${esc(text(e))}</p><span class="wiki-read-more">查看人物条目 →</span></a>`}).join('')||'<div class="notice">暂无人物内容。</div>';
+    root.innerHTML=entries.map(e=>{const im=e.media?.[0],m=meta(e);return `<a class="person-card wiki-card-link" href="${entryUrl(e)}">${im?`<div class="person-card-image"><img data-museum-image="1" src="${esc(im.path)}" alt="${esc(im.title||e.zh?.title||'人物图片')}" loading="lazy"></div>`:''}${m.era||m.period?`<div class="tag">${esc(m.era||m.period)}</div>`:''}<h3>${esc(e.zh?.title||'未命名人物')}</h3><strong>${esc(m.role||'人物')}</strong><p>${esc(text(e))}</p><span class="wiki-read-more">查看人物条目 →</span></a>`}).join('')||'<div class="notice">暂无人物内容。</div>';
   }
   function renderTimeline(entries){
     const root=document.getElementById('timeline');if(!root)return;
