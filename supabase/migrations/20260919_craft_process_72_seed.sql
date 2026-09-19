@@ -12,7 +12,7 @@ INSERT INTO public.craft_processes
 (sequence, slug, name_zh, category, category_name, description_zh,
  historical_period, tools_zh, materials_zh, output_zh, source_title, source_url,
  source_institution, source_tier, image_url, image_credit, image_source_url,
- image_source_type, image_status)
+ image_source_type, image_status, image_license, image_creator, image_search_query, image_review_note)
 VALUES
 (1,'mining','采矿','material','原料','从瓷土、瓷石等矿源取得制瓷原料，是生产链起点。','传统制瓷体系长期工序','采掘工具','瓷土、瓷石等矿料','原矿原料','景德镇手工制瓷技艺','https://www.ihchina.cn/Article/Index/detail?id=14270','中国非物质文化遗产网',1,'https://www.xinhuanet.com/politics/20260725/39351a0d75ef4846b01af614c016b2bf/2026072539351a0d75ef4846b01af614c016b2bf_45aa148150364c28a17c83bbf03f2b0e.JPG','新华社｜高岭土开采现场','https://www.xinhuanet.com/politics/20260725/39351a0d75ef4846b01af614c016b2bf/c.html','official_stage_representative','verified'),
 (2,'ore-selection','选矿','material','原料','按矿物质量和用途挑选适合后续加工的原料。','传统制瓷体系长期工序','筛选、拣选工具','矿石、瓷土','选定原料','景德镇手工制瓷技艺','https://www.ihchina.cn/Article/Index/detail?id=14270','中国非物质文化遗产网',1,NULL,NULL,NULL,'official_stage_representative','pending_review'),
@@ -86,6 +86,69 @@ VALUES
 (70,'kiln-firing','烧窑','kiln','装烧与烧成','控制燃料、温度、气氛和火候完成烧成。','传统烧成体系','柴窑、窑工工具','燃料、装窑器物','烧成瓷器','景德镇陶瓷文化生态保护区总体规划','https://www.jdz.gov.cn/zwgk/zfgb/2024n/d3q/szfwj_3307/t958190.shtml','景德镇市人民政府',1,'https://www.xinhuanet.com/politics/20260725/39351a0d75ef4846b01af614c016b2bf/2026072539351a0d75ef4846b01af614c016b2bf_3b26201898234bfaa6a8d8725c24b3c5.jpg','新华社｜古窑烧窑现场','https://www.xinhuanet.com/politics/20260725/39351a0d75ef4846b01af614c016b2bf/c.html','official_stage_representative','verified'),
 (71,'kiln-receiving','收兜脚','kiln','装烧与烧成','完成烧窑末段的窑内收尾操作。','传统烧成体系','窑工工具','烧成器物','待冷却窑品','景德镇陶瓷文化生态保护区总体规划','https://www.jdz.gov.cn/zwgk/zfgb/2024n/d3q/szfwj_3307/t958190.shtml','景德镇市人民政府',1,NULL,NULL,NULL,'official_stage_representative','pending_review'),
 (72,'cooling','停火冷却','kiln','装烧与烧成','结束烧成并控制降温，待安全状态后开窑。','传统烧成体系','窑炉、温度观察工具','烧成瓷器','成品瓷器','景德镇手工制瓷技艺','https://www.ihchina.cn/Article/Index/detail?id=14270','中国非物质文化遗产网',1,'https://www.xinhuanet.com/politics/20260725/39351a0d75ef4846b01af614c016b2bf/2026072539351a0d75ef4846c016b2bf_3b26201898234bfaa6a8d8725c24b3c5.jpg','新华社｜烧窑阶段代表照片（非独立冷却步骤摄影）','https://www.xinhuanet.com/politics/20260725/39351a0d75ef4846b01af614c016b2bf/c.html','official_stage_representative','verified');
+
+
+-- Commons candidates identified during media-governance review.
+-- These are representative process images, not claims of Jingdezhen-specific historical practice.
+UPDATE public.craft_processes SET
+  image_url='https://commons.wikimedia.org/wiki/Special:FilePath/Throwing_clay_on_a_pottery_wheel.jpg',
+  image_credit='Wikimedia Commons｜Throwing clay on a pottery wheel',
+  image_source_url='https://commons.wikimedia.org/wiki/File:Throwing_clay_on_a_pottery_wheel.jpg',
+  image_source_type='commons_candidate',
+  image_status='pending_review',
+  image_license='CC BY-SA 4.0',
+  image_creator='Drbones1950',
+  image_search_query='pottery wheel throwing clay',
+  image_review_note='通用陶轮拉坯示例；用于说明动作，不证明为景德镇特定工序。'
+WHERE sequence IN (24,25,26);
+
+UPDATE public.craft_processes SET
+  image_url='https://commons.wikimedia.org/wiki/Special:FilePath/Glaze_Spraying_di_Kilang_Claytan.png',
+  image_credit='Wikimedia Commons｜Glaze Spraying di Kilang Claytan',
+  image_source_url='https://commons.wikimedia.org/wiki/File:Glaze_Spraying_di_Kilang_Claytan.png',
+  image_source_type='commons_candidate',
+  image_status='pending_review',
+  image_license='CC BY-SA 4.0',
+  image_creator='Encik Tekateki',
+  image_search_query='ceramic glazing glaze spraying',
+  image_review_note='现代陶瓷喷釉示例；只对应“喷釉”动作，不等同于景德镇传统手工喷釉。'
+WHERE sequence=55;
+
+UPDATE public.craft_processes SET
+  image_url='https://commons.wikimedia.org/wiki/Special:FilePath/Cazette2.JPG',
+  image_credit='Wikimedia Commons｜Cazette2.JPG',
+  image_source_url='https://commons.wikimedia.org/wiki/Category:Saggars',
+  image_source_type='commons_candidate',
+  image_status='pending_review',
+  image_license='待核对原文件页面',
+  image_creator=NULL,
+  image_search_query='saggar saggars kiln furniture ceramic',
+  image_review_note='匣钵（saggar）通用示例；使用前需按原文件页再次核对作者与许可。'
+WHERE sequence IN (61,62,63,64,65);
+
+UPDATE public.craft_processes SET
+  image_url='https://commons.wikimedia.org/wiki/Special:FilePath/A_kiln_at_Jingdezhen.jpg',
+  image_credit='Wikimedia Commons｜A kiln at Jingdezhen',
+  image_source_url='https://commons.wikimedia.org/wiki/File:A_kiln_at_Jingdezhen.jpg',
+  image_source_type='commons_candidate',
+  image_status='pending_review',
+  image_license='CC BY-SA 4.0',
+  image_creator='Pauloleong2002',
+  image_search_query='Jingdezhen kiln',
+  image_review_note='景德镇窑炉照片；适合作为烧窑/冷却阶段代表图，而非逐步操作摄影。'
+WHERE sequence IN (66,67,68,69,70,71,72);
+
+UPDATE public.craft_processes SET
+  image_url='https://commons.wikimedia.org/wiki/Special:FilePath/Jingdezhen_Porcelain_(10180352655).jpg',
+  image_credit='Wikimedia Commons｜Jingdezhen Porcelain (10180352655)',
+  image_source_url='https://commons.wikimedia.org/wiki/File:Jingdezhen_Porcelain_(10180352655).jpg',
+  image_source_type='commons_candidate',
+  image_status='pending_review',
+  image_license='CC0 1.0',
+  image_creator='Gary Todd',
+  image_search_query='Jingdezhen porcelain museum',
+  image_review_note='景德镇瓷器成品示例，适合作为烧成后产出/成品视觉资料，不对应单一工序动作。'
+WHERE sequence=72;
 
 INSERT INTO public.craft_process_relations(process_id, related_process_id, relation_type, note)
 SELECT p.id, p2.id, 'precedes', '数字化主流程相邻节点'
