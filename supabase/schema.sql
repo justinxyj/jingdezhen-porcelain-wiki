@@ -150,11 +150,9 @@ create policy "edits_staff_update" on public.edits
   for update to authenticated
   using (public.is_staff()) with check (public.is_staff());
 
-create policy "revisions_public_read" on public.entry_revisions
-  for select to anon, authenticated
-  using (
-    exists (select 1 from public.entries e where e.id = entry_revisions.entry_id and e.status = 'published')
-  );
+create policy "revisions_staff_read" on public.entry_revisions
+  for select to authenticated
+  using (public.is_staff());
 
 create policy "revisions_staff_insert" on public.entry_revisions
   for insert to authenticated
