@@ -165,3 +165,10 @@
 4. primary 是条目的主叙事归属，不因 secondary 改变。
 5. 不以减少数量为目标，只删除缺乏独立知识增益的关系。
 6. Phase 3 推荐系统只能消费冻结后的 mapping，不在推荐层重新推断 world 归属。
+
+
+## Phase 2B Semantic Freeze — 已正式固化
+- `.ai/SEMANTIC_FREEZE_RULES.md` 已加入 main，作为 entry_worlds 后续编辑与 Phase 3 推荐系统的语义底座。
+- Phase 2B Final Audit + Semantic Freeze 已完成；当前 149 published / 149 primary / 167 secondary / 316 total mappings。
+- 后续 entry_worlds 变更必须遵守冻结规则并完成 migration + AI memory + production regression。
+- 下一阶段：Phase 3 知识图谱、相关条目与可解释推荐系统。
