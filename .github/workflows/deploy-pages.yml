@@ -31,7 +31,7 @@ jobs:
         run: pip install mkdocs-material
 
       - name: Build site
-        run: mkdocs build
+        run: mkdocs build --strict
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -67,3 +67,6 @@ jobs:
         env:
           SITE_URL: ${{ steps.deployment.outputs.page_url }}
         run: python scripts/pages_smoke.py
+
+      - name: Post-deploy Supabase ACL smoke
+        run: python scripts/runtime_smoke.py --check acl
