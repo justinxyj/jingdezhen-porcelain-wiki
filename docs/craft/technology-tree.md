@@ -6,6 +6,8 @@
 
 <div class="tech-official-source"><div><b>官方全流程图</b><span>景德镇市人民政府 · 2026-07-31</span></div><a href="https://www.jdz.gov.cn/zwzx/jrcd/t1100183.shtml" target="_blank" rel="noopener">查看《从一块泥到一件瓷，景德镇手工瓷业全流程图解》 ↗</a></div>
 
+<div class="tech-discovery-note"><strong>工艺知识发现</strong><br>从一道工序继续追踪它关联的知识条目、材料、技术作用、器物、时代、窑址、人物与文献；进入具体知识条目后，还可以继续前往全球陶瓷网络。工序负责回答“怎么做”，知识网络负责回答“它与什么相连”。</div>
+
 <div id="porcelain-tech-tree" class="porcelain-tech-tree">
 <div class="tech-tree-toolbar"><input id="tech-tree-search" type="search" placeholder="搜索72道工序：揉泥、拉坯、利坯、青花、施釉、烧窑……" aria-label="搜索72道制瓷工序"><div class="tech-tree-filters"><button class="is-active" data-filter="all">全部72道</button><button data-filter="material">原料</button><button data-filter="kneading">制泥</button><button data-filter="forming">成型与修整</button><button data-filter="decoration">坯体与彩绘</button><button data-filter="glaze">施釉</button><button data-filter="kiln">装烧与烧成</button></div></div>
 <div class="tech-tree-stage" aria-label="景德镇72道制瓷工序技术树"><svg id="tech-tree-links" class="tech-tree-links" aria-hidden="true"></svg><div id="tech-tree-nodes" class="tech-tree-nodes"></div></div>
