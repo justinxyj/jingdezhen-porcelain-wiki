@@ -155,8 +155,8 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
     return {nodes,edges};
   }
   let searchIndexPromise=null;
-  async function searchEntries(query,{limit=20}={}) {
-    const q=String(query||'').trim().toLowerCase();
+  async function searchEntries(term,{limit=20}={}) {
+    const q=String(term||'').trim().toLowerCase();
     if(!q)return [];
     if(!searchIndexPromise){
       searchIndexPromise=query((db,s)=>db.from('entries').select('id,slug,category,zh,en,ja,sources,status,version,updated_at').eq('status','published').order('id',{ascending:true}).abortSignal(s));
