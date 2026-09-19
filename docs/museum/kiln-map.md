@@ -9,7 +9,8 @@
   <div class="museum-hero-mark">地图<br>世界</div>
 </div>
 
-<div class="kiln-discovery-note"><strong>统一空间发现</strong><br>窑址地图现在以知识条目为唯一内容来源。点击地点后，可以继续进入知识条目、全球网络与统一搜索；地图负责回答“在哪里”，知识节点负责回答“它与什么相连”。</div>\n<div id="kiln-map"></div>
+<div class="kiln-discovery-note"><strong>统一空间发现</strong><br>窑址地图现在以知识条目为唯一内容来源。点击地点后，可以继续进入知识条目、全球网络与统一搜索；地图负责回答“在哪里”，知识节点负责回答“它与什么相连”。</div>
+<div id="kiln-map"></div>
 
 ## 怎么使用
 
