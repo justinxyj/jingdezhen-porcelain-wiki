@@ -126,7 +126,7 @@
     const ids=[...new Set(relations.flatMap(r=>[r.entry_id,r.related_entry_id]).filter(x=>x!==id))];
     const related=ids.length?await query((db,s)=>db.from('entries').select('id,slug,category,zh,en,ja,sources,status,version,updated_at').eq('status','published').in('id',ids).abortSignal(s)):[];
     const byId=new Map(related.map(e=>[e.id,e]));
-    return {relations:relations.map(r=>({...r,entry:byId.get(r.entry_id===id?r.related_entry_id:r.entry_id)})).filter(r=>r.entry),related:related.length};
+    return {relations:relations.map(r=>({...r,entry:byId.get(r.entry_id===id?r.related_entry_id:r.entry_id)})).filter(r=>r.entry),related:related.length,truncated:relations.length>=relationLimit,limit:relationLimit};
   }
   async function worldOverview(worldSlug,{limit=250,featured=8}={}){
     if(!worldSlug)return null;
@@ -142,7 +142,7 @@
     const count=new Map();allLinks.forEach(x=>count.set(x.world_slug,(count.get(x.world_slug)||0)+1));
     const connections=worlds.filter(w=>count.has(w.slug)).map(w=>({...w,count:count.get(w.slug)})).sort((a,b)=>b.count-a.count||a.display_order-b.display_order).slice(0,6);
     const categories=[...new Set(items.map(x=>x.category).filter(Boolean))];
-    return {world,items,primary:items.filter(x=>x.worldRole==='primary').length,secondary:items.filter(x=>x.worldRole==='secondary').length,categories,connections,featured:items.slice(0,featured)};
+    return {world,items,primary:items.filter(x=>x.worldRole==='primary').length,secondary:items.filter(x=>x.worldRole==='secondary').length,categories,connections,featured:items.slice(0,featured),truncated:links.length>=limit,limit};
   }
   async function recommendations(entryId,{limit=12}={}){
     const nodeId=entryId.startsWith('entry:')?entryId:'entry:'+entryId;
@@ -432,6 +432,8 @@
       mappedEntries:[...new Map(enriched.filter(x=>x.map).map(x=>[x.entry.id,x.entry])).values()],
       stats:{
         entries:enriched.length,
+        truncatedEntries:linkRows.length>=entryLimit,
+        truncatedRelations:relations.length>=relationLimit,
         people:[...new Set(enriched.flatMap(x=>x.people.map(e=>e.id)))].length,
         objects:[...new Set(enriched.flatMap(x=>x.objects.map(e=>e.id)))].length,
         kilns:[...new Set(enriched.flatMap(x=>x.kilns.map(e=>e.id)))].length,
