@@ -8,16 +8,22 @@
     if(window.JDM_MEDIA_POLICY?.isGenericPlaceholder?.(m))return null;
     return m;
   }
+  function bindNode(node,bySlug){
+    if(node.nodeType!==1)return;
+    const targets=node.matches?.('[data-entry-slug]')?[node]:[...node.querySelectorAll?.('[data-entry-slug]')||[]];
+    targets.forEach(target=>{
+      if(target.dataset.timelineBound==='1')return;
+      const e=bySlug.get(target.dataset.entrySlug);if(!e)return;
+      target.dataset.timelineBound='1';
+      target.addEventListener('click',ev=>{if(ev.ctrlKey||ev.metaKey||ev.shiftKey||ev.altKey)return;ev.preventDefault();open(e)});
+      target.addEventListener('keydown',ev=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();open(e)}});
+      target.setAttribute('role','button');target.setAttribute('tabindex','0');
+    });
+  }
   function bind(root,entries){
     const bySlug=new Map(entries.map(e=>[e.slug,e]));
-    root.querySelectorAll('[data-entry-slug]').forEach(node=>{
-      if(node.dataset.timelineBound==='1')return;
-      const e=bySlug.get(node.dataset.entrySlug);if(!e)return;
-      node.dataset.timelineBound='1';
-      node.addEventListener('click',ev=>{if(ev.ctrlKey||ev.metaKey||ev.shiftKey||ev.altKey)return;ev.preventDefault();open(e)});
-      node.addEventListener('keydown',ev=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();open(e)}});
-      node.setAttribute('role','button');node.setAttribute('tabindex','0');
-    });
+    root.querySelectorAll('[data-entry-slug]').forEach(node=>bindNode(node,bySlug));
+    return bySlug;
   }
   function open(e){
     const m=e.zh?.meta||{},im=validMedia(e),wikiTitle=m.wikiTitle||e.zh?.title||e.slug,source=(e.sources||[]).find(x=>x&&typeof x==='object'&&x.url)?.url||'';
@@ -32,11 +38,13 @@
   function init(){
     if(!window.JDM_KNOWLEDGE)return;
     window.JDM_KNOWLEDGE.all().then(entries=>{
-      const attach=()=>{const root=document.querySelector('.timeline-comparison-root');if(root)bind(root,entries)};
-      attach();
-      const target=document.getElementById('timeline')||document.body;
-      const observer=new MutationObserver(attach);
-      observer.observe(target,{childList:true,subtree:true});
+      const root=document.querySelector('.timeline-comparison-root');
+      if(!root)return;
+      const bySlug=bind(root,entries);
+      const observer=new MutationObserver(mutations=>{
+        mutations.forEach(m=>m.addedNodes.forEach(node=>bindNode(node,bySlug)));
+      });
+      observer.observe(root,{childList:true,subtree:true});
     }).catch(error=>{
       const root=document.querySelector('.timeline-comparison-root');
       if(root)root.insertAdjacentHTML('afterbegin','<div class="wiki-entry-error" role="alert">时间轴内容暂时无法加载，请稍后重试。<button type="button">重新加载</button></div>');
