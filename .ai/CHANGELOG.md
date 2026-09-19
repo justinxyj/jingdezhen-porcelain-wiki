@@ -20,12 +20,10 @@
 - Added migration supabase/migrations/20260919090000_secure_media_candidate_tables.sql to GitHub main.
 - Security Advisor now reports only INFO for these two tables (RLS enabled with no policies), plus pre-existing function/auth WARNs.
 
-
 ## 2026-09-19 — 第三轮上线验收：图片与引用残留修复
 - 用户真实上线截图发现大量卡片/详情图片破损，确认生产媒体中存在无效 The Met /???/main-image 路径。
 - museum-images.js 增加动态图片错误恢复：The Met Object API → Wikimedia Commons → 明确占位图，并覆盖异步新增 DOM。
 - 修复现代景德镇四个页面残留的内部 cite 标记，统一改为正常 UNESCO 资料链接。
-
 
 ## 2026-09-19 — 第三轮：媒体审核边界与前端韧性
 - 生产 media 公共 RLS 从仅 status='approved' 收紧为 status='approved' AND review_state='verified'。
@@ -37,7 +35,6 @@
 - site-privacy.js 删除通用文本匹配删除 DOM 的逻辑；timeline-interactive.js 改为只处理新增节点。
 - Validate #85 与 Pages #369 均成功。
 
-
 ## 2026-09-19 — 审计问题 H-1/H-2/H-3/M-1~M-7 修复
 - 认证刷新失败不再覆盖 AUTH_EXPIRED。
 - 关系查询改为 UUID 校验、双索引路径、稳定排序、去重和截断提示。
@@ -48,7 +45,6 @@
 - strict TypeScript contract 层增强。
 - Pages smoke 增加 unhandledrejection 与历史顺序检查。
 
-
 ## 2026-09-19 — S1/S2/H1-H5/M1 审计修复
 - 以生产实时权限为准建立 canonical public ACL。
 - 馆长后台查询与生产 schema 对齐。
@@ -57,13 +53,11 @@
 - PR 不再依赖线上 Supabase；main/post-deploy 执行公开 ACL smoke。
 - 核心 JS 开启 checkJs，strict contracts 保持独立。
 
-
 ## 2026-09-19 — Sprint B / 七大知识世界统一入口
 - Added editorial knowledge_worlds + entry_worlds layer independent from entry categories.
 - Mapped all 149 published entries; 406 primary/secondary mappings currently exist.
 - Connected all seven world landing pages to live world-aware entry browsing.
 - Refreshed generated Supabase TypeScript contracts.
-
 
 ## 2026-09-19 — Sprint B Phase 2B / 深层语义审校
 - 以“secondary 是否值得用户从该知识世界进入”为准入标准，完成第一轮深层语义清洗。
@@ -71,10 +65,9 @@
 - 删除 23 条低价值关系：现代人物→历史 8、人物→器物 11、现代人物→研究 1、现代荣誉/纪念性人物→现代景德镇 3。
 - 保留具有明确解释路径的历史人物、工艺人物、代表性器物、研究文献、历史节点和全球窑址/陶瓷空间。
 - 精修 12 条过于通用的 rationale，改为具体用户入口价值。
-- 生产校验：149 published / 149 primary / 226 secondary；无重复 entry-world 边；无 primary cardinality 异常；单条 entry 最多 3 个 secondary。
+- 生产校验：149 published / 149 primary / 226 secondary；无重复 entry-world 边；无 primary cardinality 异常。
 - 新增迁移：supabase/migrations/20260919193000_sprint_b_phase_2b_semantic_cleanup.sql
 - 新增迁移：supabase/migrations/20260919194000_sprint_b_phase_2b_rationale_precision.sql
-
 
 ## 2026-09-19 — Sprint B Phase 2C / 人物→历史、全球窑址→历史深审
 - 完成生产层逐条深审并应用 migration `supabase/migrations/20260919213000_sprint_b_phase_2c_people_history_global_kiln_history.sql`。
@@ -85,13 +78,38 @@
 - 完成 production mapping/cardinality 回归：149 published、149 primary、171 secondary，primary cardinality 无异常。
 - UNESCO 2026 与有田资料用于复核景德镇产业链、东亚技术/贸易史桥接；Frank B. Lentz 调整为 research 入口而非 history 入口。
 
-
 ## 2026-09-19 — Sprint B Phase 2B 深层语义续审
 - 以“是否值得用户从该知识世界进入”作为 secondary 唯一准入原则继续清洗生产层。
-- 当前 production：149 published / 149 primary / 174 secondary / 323 total mappings。
+- 当前生产：149 published / 149 primary / 174 secondary / 323 total mappings。
 - 删除 4 条弱入口：杜重远→工艺、景德镇窑→研究、马基利→研究、濑户窑→历史。
 - 新增 8 条明确入口：6 条核心生产链窑址→工艺、r11→空间、r18→空间。
 - 继续精修人物→历史与人物→工艺的 entry-specific rationale。
 - 生产回归：published coverage 149/149、primary 149/149、无重复 entry-world 边、无 primary cardinality 异常。
 - GitHub migration：supabase/migrations/20260919220000_sprint_b_phase_2b_deep_semantic_pass.sql
-- AI 下一步：按人物→研究/工艺、文献→器物/工艺/空间、全球窑址→研究、历史→器物/空间四个边界继续逐条审校，再冻结映射层进入知识图谱/推荐系统。
+- 下一步进入四个剩余边界的逐条语义审校。
+
+## 2026-09-19 — Sprint B Phase 2B 四边界逐条语义审校完成
+- 对当前 production secondary 做四个剩余边界的逐条复核：
+  1. 人物 → 研究 / 工艺；
+  2. 文献 → 器物 / 工艺 / 空间；
+  3. 全球窑址/窑业空间 → 研究；
+  4. 历史 → 器物 / 空间。
+- 删除 7 条低价值 secondary：
+  - 郭沫若 → 研究；
+  - 刘远长、占绍林、秦锡麟 → 工艺；
+  - 焦潭柴窑燃料生产区、长岭瓷石采掘区、高岭土矿采掘区 → 研究。
+- 保留并逐条重写：
+  - 人物→研究 12 条；
+  - 人物→工艺 10 条；
+  - 比较研究型窑址→研究 12 条；
+  - 文献→工艺 13 条；
+  - 文献→器物 12 条；
+  - 文献→空间 10 条；
+  - 历史→器物 4 条；
+  - 历史→空间 5 条。
+- 本轮没有新增 secondary；目标是收敛泛化关系、保留可解释入口。
+- 生产回归：149 published / 149 primary / 167 secondary / 316 total mappings；重复 entry-world 边 0；primary cardinality anomalies 0。
+- 新增迁移：supabase/migrations/20260919230000_sprint_b_phase_2b_boundary_semantic_audit.sql
+- 2026 UNESCO 世界遗产决定用于复核五个组成部分及原料、燃料、窑址、生产中心、运输和技术演化之间的整体生产系统关系。
+- 四个边界现已完成；下一步是映射冻结前总体验收，不应再机械按 category 批量删除。
+
