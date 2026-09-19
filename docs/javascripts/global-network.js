@@ -4,7 +4,7 @@
   const esc=s=>String(s??'').replace(/[&<>\"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[m]));
   const text=s=>{const d=document.createElement('div');d.innerHTML=String(s||'');return d.textContent||d.innerText||''};
   const entryUrl=e=>window.JDM_KNOWLEDGE?.url(e)||ROOT+'entry/?slug='+encodeURIComponent(e?.slug||'');
-  const eraLabels={tang:'唐五代',song:'宋',yuan:'元',ming:'明',qing:'清',modern:'近现代'};
+  const eraLabels={tang:'唐五代',song:'宋',yuan:'元',ming:'明',qing:'清','near-modern':'近代',modern:'现代'};
   let entries=[];
   function card(e,extra=''){return '<a class="jdm-gn-card" href="'+entryUrl(e)+'"><div><span>'+esc(e.category||'知识条目')+'</span><h4>'+esc(e.zh?.title||e.slug)+'</h4>'+extra+'</div><b>→</b></a>'}
   function relationCard(r){const e=r.entry;if(!e)return '';return '<a class="jdm-gn-relation" href="'+entryUrl(e)+'"><span>'+esc(r.relation_type||'关联')+'</span><strong>'+esc(e.zh?.title||e.slug)+'</strong><small>'+esc(r.note||'从当前知识条目继续探索。')+'</small></a>'}
