@@ -30,6 +30,16 @@
     }
   };
 
+  const safeHref = (value) => {
+    const raw=String(value||'').trim();
+    try{
+      const u=new URL(raw,location.href);
+      if(u.origin===location.origin&&(u.protocol==='https:'||u.protocol==='http:'))return u.href;
+      if(u.protocol==='https:'&&['whc.unesco.org','www.unesco.org'].includes(u.hostname))return u.href;
+    }catch(_){}
+    return '#';
+  };
+
   const open = (key) => {
     const data = DATA[key];
     if (!data) return;
@@ -44,7 +54,13 @@
       document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
     }
     const content = modal.querySelector('#evidence-modal-content');
-    content.innerHTML = `<p class="evidence-modal-eyebrow">${data.eyebrow}</p><h2 id="evidence-modal-title">${data.title}</h2><p class="evidence-modal-text">${data.text}</p><ul>${data.facts.map(x => `<li>${x}</li>`).join('')}</ul><a class="evidence-modal-primary" href="${data.href}">进入完整资料库 <span>→</span></a>`;
+    content.replaceChildren();
+    const p1=document.createElement('p');p1.className='evidence-modal-eyebrow';p1.textContent=data.eyebrow;
+    const h2=document.createElement('h2');h2.id='evidence-modal-title';h2.textContent=data.title;
+    const p2=document.createElement('p');p2.className='evidence-modal-text';p2.textContent=data.text;
+    const ul=document.createElement('ul');data.facts.forEach(fact=>{const li=document.createElement('li');li.textContent=fact;ul.appendChild(li)});
+    const link=document.createElement('a');link.className='evidence-modal-primary';link.textContent='进入完整资料库 →';link.href=safeHref(data.href);
+    content.append(p1,h2,p2,ul,link);
     modal.classList.add('is-open');
     document.body.classList.add('evidence-modal-open');
   };
