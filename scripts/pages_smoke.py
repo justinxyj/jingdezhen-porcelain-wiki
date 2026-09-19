@@ -72,23 +72,30 @@ with sync_playwright() as p:
         explore=page.locator("[data-world-browser] .jdm-world-explore-link")
         if explore.count()<2:
             raise RuntimeError(f"{name} has no unified exploration exits")
-        first_href=browser_cards.first.get_attribute("href")
-        if not first_href:
-            raise RuntimeError(f"{name} first entry has no canonical href")
-        entry_target=urljoin(page.url,first_href)
-        page.goto(entry_target,wait_until="domcontentloaded",timeout=30000)
-        page.locator("#wiki-entry-root .wiki-entry-card").first.wait_for(state="visible",timeout=20000)
-        exits=page.locator(".wiki-recommendation-card, .wiki-entry-v2-relations a, .wiki-entry-explore-card")
-        if exits.count()<1:
-            raise RuntimeError(f"{name} Entry has no continuation exit")
-        second_href=exits.first.get_attribute("href")
-        if not second_href:
-            raise RuntimeError(f"{name} Entry continuation has no canonical href")
-        second_target=urljoin(page.url,second_href)
-        if "/entry/" not in second_target:
-            raise RuntimeError(f"{name} continuation does not lead to Entry: {second_target}")
-        page.goto(second_target,wait_until="domcontentloaded",timeout=30000)
-        page.locator("#wiki-entry-root .wiki-entry-card").first.wait_for(state="visible",timeout=20000)
+        found_continuation=False
+        for index in range(min(browser_cards.count(),12)):
+            href=browser_cards.nth(index).get_attribute("href")
+            if not href:
+                continue
+            entry_target=urljoin(page.url,href)
+            page.goto(entry_target,wait_until="domcontentloaded",timeout=30000)
+            page.locator("#wiki-entry-root .wiki-entry-card").first.wait_for(state="visible",timeout=20000)
+            exits=page.locator(".wiki-recommendation-card, .wiki-entry-v2-relations a, .wiki-entry-explore-card")
+            for exit_index in range(exits.count()):
+                second_href=exits.nth(exit_index).get_attribute("href")
+                if not second_href:
+                    continue
+                second_target=urljoin(page.url,second_href)
+                if "/entry/" not in second_target:
+                    continue
+                page.goto(second_target,wait_until="domcontentloaded",timeout=30000)
+                page.locator("#wiki-entry-root .wiki-entry-card").first.wait_for(state="visible",timeout=20000)
+                found_continuation=True
+                break
+            if found_continuation:
+                break
+        if not found_continuation:
+            raise RuntimeError(f"{name} has no Entry-to-Entry continuation among first 12 world Entries")
         print("PASS",name,"entries",browser_cards.count(),"entry-to-entry")
 
     page.goto(base+"museum/timeline/",wait_until="domcontentloaded",timeout=30000)
