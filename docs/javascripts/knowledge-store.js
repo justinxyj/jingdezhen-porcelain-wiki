@@ -33,14 +33,14 @@
     }catch(error){throw normalizeError(error)}
     finally{ctl.clear()}
   }
-  async function paged(builderFactory,{pageSize=500,maxPages=20}={}){
+  async function paged(builderFactory,{pageSize=500,maxPages=4}={}){
     const out=[];
     for(let page=0;page<maxPages;page++){
       const rows=await query((db,signal)=>builderFactory(db).range(page*pageSize,(page+1)*pageSize-1).abortSignal(signal));
       out.push(...rows);
       if(rows.length<pageSize)return out;
     }
-    const e=new Error('公开知识数据超过安全分页上限，请拆分页面查询');e.code='JDM_PAGE_LIMIT';throw e;
+    const e=new Error('公开知识数据超过安全分页上限（2000 条），请改用定向分页查询。');e.code='JDM_PAGE_LIMIT';e.kind='limit';throw e;
   }
   function badMedia(m){
     if(window.JDM_MEDIA_POLICY?.isUsable&&!window.JDM_MEDIA_POLICY.isUsable(m))return true;
