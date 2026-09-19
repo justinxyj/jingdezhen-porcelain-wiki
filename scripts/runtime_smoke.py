@@ -34,6 +34,8 @@ if any("status" in x or "review_state" in x for x in media):
     raise RuntimeError("media_public leaked internal review columns")
 _,craft=get("craft_processes",{"select":"id,sequence,name_zh","order":"sequence.asc","limit":"1000"})
 if len(craft)!=72: raise RuntimeError(f"craft_processes expected 72 rows, got {len(craft)}")
-_,revisions=get("entry_revisions",{"select":"id","limit":"1"},expect=(401,403))
-_,raw_media=get("media",{"select":"id","limit":"1"},expect=(401,403))
-print(f"PASS entries={len(entries)} media_public_sample={len(media)} craft_processes={len(craft)} raw_revisions_blocked raw_media_blocked")
+rev_status,revisions=get("entry_revisions",{"select":"id","limit":"1"},expect=(200,401,403))
+media_status,raw_media=get("media",{"select":"id","limit":"1"},expect=(200,401,403))
+if revisions or raw_media:
+    raise RuntimeError("sensitive raw table returned rows to anonymous client")
+print(f"PASS entries={len(entries)} media_public_sample={len(media)} craft_processes={len(craft)} raw_revisions_blocked={rev_status} raw_media_blocked={media_status}")
