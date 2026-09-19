@@ -10,3 +10,5 @@
 [data-md-color-scheme="slate"] .global-kiln-map-toolbar input,[data-md-color-scheme="slate"] .global-kiln-map-toolbar button,[data-md-color-scheme="slate"] .global-kiln-list-item{background:#18232b;color:#e7edf2;border-color:rgba(200,220,235,.16)}
 [data-md-color-scheme="slate"] .global-kiln-map-toolbar button.is-active{background:#8ab4ff;color:#0b1720;border-color:#8ab4ff}
 [data-md-color-scheme="slate"] .global-kiln-tags span{color:#b8cee0}
+
+.global-kiln-count{font-size:.68rem;opacity:.58;align-self:center;margin-left:.2rem}.global-kiln-map-toolbar>div{align-items:center}
