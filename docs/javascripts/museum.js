@@ -22,6 +22,24 @@
     const rows=entries.filter(e=>meta(e).kind==='history').sort((a,b)=>String(meta(a).period||'').localeCompare(String(meta(b).period||''),'zh-CN'));
     root.innerHTML=`<div class="timeline">${rows.map(e=>`<a class="timeline-item timeline-link" href="${entryUrl(e)}"><div class="timeline-year">${esc(meta(e).period||'')}</div><h3>${esc(e.zh?.title||'未命名节点')}</h3><p>${esc(text(e))}</p><span class="wiki-read-more">打开详情 →</span></a>`).join('')}</div>`;
   }
-  async function init(){if(!window.JDM_KNOWLEDGE)return;const entries=await window.JDM_KNOWLEDGE.all();const objects=entries.filter(e=>e.category==='器物'),people=entries.filter(e=>e.category==='人物');renderCatalog(objects);renderPeople(people);renderTimeline(entries);const search=document.getElementById('catalog-search');if(search)search.addEventListener('input',()=>renderCatalog(objects))}
+  function renderError(root,error){
+    if(!root)return;
+    const code=esc(error?.code||error?.status||'NETWORK');
+    root.innerHTML='<div class="notice" role="alert">知识数据暂时无法加载（'+code+'）。<button type="button" class="jdm-retry">重新加载</button></div>';
+    root.querySelector('.jdm-retry')?.addEventListener('click',()=>init());
+  }
+  async function init(){
+    if(!window.JDM_KNOWLEDGE)return;
+    const roots=[document.getElementById('catalog-list'),document.getElementById('people-list'),document.getElementById('timeline')];
+    try{
+      const [objects,people,history]=await Promise.all([
+        window.JDM_KNOWLEDGE.byCategory('器物',250),
+        window.JDM_KNOWLEDGE.byCategory('人物',250),
+        window.JDM_KNOWLEDGE.list({limit:500})
+      ]);
+      renderCatalog(objects);renderPeople(people);renderTimeline(history);
+      const search=document.getElementById('catalog-search');if(search&&!search.dataset.bound){search.dataset.bound='1';search.addEventListener('input',()=>renderCatalog(objects))}
+    }catch(error){roots.forEach(root=>renderError(root,error))}
+  }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
