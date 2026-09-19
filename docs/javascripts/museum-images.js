@@ -1,24 +1,98 @@
 /* Public museum image layer. */
 (function(){
-  // Images are governed by their source/review policy; do not hard-code-block a legitimate museum URL.
+  const RECOVERED = 'data-image-recovered';
+
+  function metObjectId(src){
+    const m=String(src||'').match(/collectionapi\.metmuseum\.org\/api\/collection\/v1\/iiif\/(\d+)\//i);
+    return m?.[1]||'';
+  }
+  function metObjectIdFromSource(src){
+    const m=String(src||'').match(/metmuseum\.org\/art\/collection\/search\/(\d+)/i);
+    return m?.[1]||'';
+  }
+  function setVisible(img){
+    img.removeAttribute('data-image-invalid');
+    img.classList.remove('jdm-image-recovering');
+    img.style.visibility='visible';
+  }
+  function setFallback(img,label){
+    const safe=String(label||'景德镇陶瓷').replace(/[&<>]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[m]));
+    const svg='<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800"><rect width="1200" height="800" fill="#eef3f8"/><path d="M470 610c0-150 50-235 130-235s130 85 130 235" fill="#d8e1ea"/><path d="M500 610h200M520 375c20-70 55-105 80-105s60 35 80 105" fill="none" stroke="#7d91a5" stroke-width="18"/><text x="600" y="700" text-anchor="middle" font-family="sans-serif" font-size="30" fill="#53687d">'+safe+'</text><text x="600" y="742" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#8192a3">图片来源暂不可用</text></svg>';
+    img.src='data:image/svg+xml;charset=UTF-8,'+encodeURIComponent(svg);
+    img.dataset.imageFallback='1';
+    setVisible(img);
+  }
+  async function fetchMetImage(objectId){
+    if(!objectId)return null;
+    try{
+      const r=await fetch('https://collectionapi.metmuseum.org/public/collection/v1/objects/'+encodeURIComponent(objectId),{headers:{Accept:'application/json'}});
+      if(!r.ok)return null;
+      const j=await r.json();
+      return j?.primaryImageSmall||j?.primaryImage||null;
+    }catch(_){return null}
+  }
+  async function fetchCommonsImage(query){
+    if(!query)return null;
+    try{
+      const api='https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch='+encodeURIComponent(query)+'&gsrnamespace=6&gsrlimit=1&prop=imageinfo&iiprop=url&iiurlwidth=1200&format=json&origin=*';
+      const r=await fetch(api,{headers:{Accept:'application/json'}});
+      if(!r.ok)return null;
+      const j=await r.json();
+      const page=Object.values(j?.query?.pages||{})[0];
+      const info=page?.imageinfo?.[0];
+      return info?.thumburl||info?.url||null;
+    }catch(_){return null}
+  }
+  async function recover(img){
+    if(!img||img.dataset[RECOVERED]||img.dataset.imageFallback)return;
+    img.dataset[RECOVERED]='1';
+    img.classList.add('jdm-image-recovering');
+    img.setAttribute('referrerpolicy','no-referrer');
+
+    const original=img.dataset.originalSrc||img.currentSrc||img.getAttribute('src')||'';
+    const sourceUrl=img.dataset.sourceUrl||img.closest('[data-source-url]')?.dataset.sourceUrl||'';
+    const objectId=metObjectId(original)||metObjectIdFromSource(sourceUrl);
+    let next=await fetchMetImage(objectId);
+
+    if(next){
+      img.addEventListener('load',()=>setVisible(img),{once:true});
+      img.src=next;
+      return;
+    }
+
+    const label=(img.getAttribute('alt')||'').replace(/\s*·\s*The Met Open Access.*$/i,'').trim();
+    next=await fetchCommonsImage(objectId?('Met object ID '+objectId):label);
+    if(!next&&label)next=await fetchCommonsImage(label+' porcelain ceramics');
+    if(next){
+      img.addEventListener('load',()=>setVisible(img),{once:true});
+      img.src=next;
+      return;
+    }
+
+    setFallback(img,label||'景德镇陶瓷');
+  }
   function sanitizeImage(img){
-    if(!img)return;
-    const src=img.getAttribute('src')||'';
-        img.setAttribute('loading','lazy');img.setAttribute('decoding','async');
-    img.addEventListener('error',()=>{
-      img.removeAttribute('src');img.setAttribute('data-image-invalid','1');
-      img.closest('.official-gallery-card,.compare-node,.compare-specimen,.wiki-entry-cover')?.classList.add('image-unavailable');
-    },{once:true});
+    if(!img||img.dataset.imageBound)return;
+    img.dataset.imageBound='1';
+    img.dataset.originalSrc=img.getAttribute('src')||'';
+    img.setAttribute('loading','lazy');
+    img.setAttribute('decoding','async');
+    img.setAttribute('referrerpolicy','no-referrer');
+    img.addEventListener('error',()=>recover(img),{once:false});
+    if(img.complete&&img.naturalWidth===0&&img.getAttribute('src'))recover(img);
   }
   function apply(){
     document.querySelectorAll('img').forEach(sanitizeImage);
-    document.querySelectorAll('.official-museum-image').forEach(img=>{img.setAttribute('loading','lazy');img.setAttribute('decoding','async')});
+    document.querySelectorAll('.official-museum-image').forEach(img=>{img.setAttribute('loading','lazy');img.setAttribute('decoding','async');img.setAttribute('referrerpolicy','no-referrer')});
     document.querySelectorAll('.compare-specimen.has-official-image').forEach(card=>{
       if(card.querySelector('.museum-image-credit'))return;
       const img=card.querySelector('img');const src=img?.dataset?.sourceUrl;if(!src)return;
       const credit=document.createElement('a');credit.className='museum-image-credit';credit.href=src;credit.target='_blank';credit.rel='noopener noreferrer';credit.textContent='查看馆藏来源 ↗';card.appendChild(credit);
     });
   }
-  function init(){apply();window.setTimeout(apply,300);window.setTimeout(apply,900)}
+  function init(){
+    apply();
+    new MutationObserver(apply).observe(document.body,{childList:true,subtree:true});
+  }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();
