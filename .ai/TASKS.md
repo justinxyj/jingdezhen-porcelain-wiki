@@ -116,4 +116,4 @@
 - [x] 首页加入七大知识世界入口
 - [x] 首页统一数字博物馆工具入口
 - [x] 新增知识网络总览 / 关系探索 / 全球陶瓷网络入口
-- [ ] Sprint A：MkDocs strict / Pages smoke / 移动端回归验收
+- [ ] Sprint A：MkDocs strict / Pages smoke / 移动端回归验收（当前修复中：上一轮 QA 误报网络页面路径）
