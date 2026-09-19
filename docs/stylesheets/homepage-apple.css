@@ -86,3 +86,12 @@ body:has(.jdm-apple-home) .jdm-brand span:last-child{font-size:10px;margin-top:5
 /* Phase 5-2: Knowledge World journey */
 .jdm-world-journey{background:#f7f9fc;padding:44px 24px 12px}.jdm-journey-map{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:center;gap:18px;color:#526783;font-size:14px;font-weight:650}.jdm-journey-map span{padding:10px 16px;border:1px solid rgba(7,26,53,.09);border-radius:999px;background:rgba(255,255,255,.8);box-shadow:0 8px 24px rgba(7,26,53,.06)}.jdm-journey-map i{width:46px;height:1px;background:linear-gradient(90deg,rgba(20,85,184,.12),rgba(20,85,184,.65));position:relative}.jdm-journey-map i:after{content:"";position:absolute;right:0;top:-3px;width:6px;height:6px;border-top:1px solid var(--jdm-blue);border-right:1px solid var(--jdm-blue);transform:rotate(45deg)}.jdm-journey-world{color:#6f7f95!important}.jdm-journey-china{color:#42668f!important}.jdm-journey-jdz{color:#1455b8!important;background:#edf5ff!important}.jdm-journey-blue{color:#fff!important;background:linear-gradient(135deg,#1455b8,#0b3f91)!important;border-color:transparent!important}
 @media(max-width:850px){.jdm-world-journey{padding:28px 16px 4px}.jdm-journey-map{gap:7px;font-size:11px}.jdm-journey-map span{padding:8px 9px}.jdm-journey-map i{width:16px}}
+
+/* Phase 5-2 layout correction: keep homepage content centered inside MkDocs/Material shells. */
+.jdm-apple-home .jdm-v2-container{display:block;width:min(1180px,calc(100% - 48px))!important;max-width:1180px!important;margin-left:auto!important;margin-right:auto!important}
+.jdm-apple-home .jdm-v2-timeline>.jdm-v2-container{width:min(1180px,calc(100% - 48px))!important;margin-inline:auto!important}
+.jdm-apple-home .jdm-v2-timeline .jdm-v2-era-list{width:min(1040px,100%)!important;max-width:1040px!important;margin-left:auto!important;margin-right:auto!important}
+.jdm-apple-home .jdm-v2-products>.jdm-v2-container,
+.jdm-apple-home .jdm-v2-intro>.jdm-v2-container,
+.jdm-apple-home .jdm-v2-blue-story>.jdm-v2-container,
+.jdm-apple-home .jdm-v2-map>.jdm-v2-container{margin-inline:auto!important}
