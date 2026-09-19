@@ -412,3 +412,10 @@
 - Established project-wide anti-overengineering rule: future phases must avoid excessive granularity, repeated audits, and low-marginal-value refinements; prefer coherent end-to-end user value and close a phase once its acceptance criteria are met.
 - Deferred canonical content candidates such as 郎窑红梅瓶 and 元青花三顾茅庐纹罐 to Phase 5 Content Admission.
 - Phase 5 starts with Knowledge World / 知识世界层.
+
+
+## 2026-09-20 — Phase 5-2 Knowledge World Home
+- 首页开始从“网站首页”转为“景德镇知识世界入口”。
+- 增加世界→中国→景德镇→青花的视觉路径，并保留七大知识世界真实入口。
+- 本轮只改首页体验层与用户可见文案，不新增生产知识事实。
+- 用户可见英文产品术语开始统一中文化。
