@@ -9,6 +9,5 @@
 - [Object Catalog](../museum/catalog.md)
 - [People Database](../museum/people.md)
 - [Image Archive](../museum/gallery.md)
-- [Account / Sign in](../account.md)
 
 The long-term data model stores Chinese, English and Japanese fields separately so that translations can be reviewed and cited independently.
