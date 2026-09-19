@@ -35,13 +35,18 @@
     modal.querySelector('.jdm-timeline-close').onclick=close;modal.querySelector('.jdm-timeline-backdrop').onclick=close;
     const onKey=ev=>{if(ev.key==='Escape'){close();document.removeEventListener('keydown',onKey)}};document.addEventListener('keydown',onKey);
   }
+  let initSeq=0;
+  let observer=null;
   function init(){
+    const seq=++initSeq;
+    observer?.disconnect();observer=null;
     if(!window.JDM_KNOWLEDGE)return;
     window.JDM_KNOWLEDGE.list({limit:500}).then(entries=>{
       const root=document.querySelector('.timeline-comparison-root');
       if(!root)return;
+      if(seq!==initSeq)return;
       const bySlug=bind(root,entries);
-      const observer=new MutationObserver(mutations=>{
+      observer=new MutationObserver(mutations=>{
         mutations.forEach(m=>m.addedNodes.forEach(node=>bindNode(node,bySlug)));
       });
       observer.observe(root,{childList:true,subtree:true});
