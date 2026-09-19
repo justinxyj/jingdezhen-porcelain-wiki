@@ -170,7 +170,7 @@ create policy "revisions_staff_insert" on public.entry_revisions
   for insert to authenticated
   with check (auth.uid() = editor_id and public.is_staff());
 
-create policy "media_public_read" on public.media
+create policy "media_public_verified_read" on public.media
   for select to anon, authenticated
   using (status = 'approved' and review_state = 'verified');
 
@@ -222,6 +222,10 @@ revoke execute on function public.review_edit(uuid,text,text) from public, anon,
 grant execute on function public.is_staff() to authenticated, service_role;
 
 revoke all on table public.media from anon;
+revoke all on table public.entry_revisions from anon;
+revoke all on table public.edits from anon;
+revoke all on table public.favorites from anon;
+revoke all on table public.profiles from anon;
 grant select (
   id, entry_id, path, title, source, license, creator, captured_at, location,
   created_at, usage_type, source_tier, is_primary, canonical_key, source_url, source_type
