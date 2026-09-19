@@ -26,5 +26,19 @@ jobs:
       - name: Run museum QA
         run: python scripts/museum_qa.py
 
+      - name: Supabase runtime smoke test
+        run: python scripts/runtime_smoke.py
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install type-check dependencies
+        run: npm install --no-package-lock
+
+      - name: Type check core JavaScript
+        run: npm run typecheck
+
       - name: Build site
         run: mkdocs build --strict
