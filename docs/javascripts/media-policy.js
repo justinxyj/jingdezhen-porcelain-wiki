@@ -20,7 +20,6 @@
       if(!p)return true;
       if(reject.test(`${t} ${s}`))return true;
       if(/placeholder|no[-_ ]image|noimage|blank|transparent/i.test(p))return true;
-      if(/42490\/177595\/main-image/.test(p))return true;
       return false;
     },
     isUsable(media){
