@@ -57,15 +57,24 @@ def check_sensitive():
     drafts=blocked("entries","id,slug,status",{"status":"neq.published"})
     print(f"PASS revisions_blocked={rev} media_internal_field_blocked={media} drafts_blocked={drafts}")
 
+def check_worlds():
+    worlds=expect_ok("knowledge_worlds",{"select":"slug,title,display_order","order":"display_order.asc","limit":"20"})
+    if len(worlds)!=7: raise RuntimeError(f"knowledge_worlds expected 7 rows, got {len(worlds)}")
+    links=expect_ok("entry_worlds",{"select":"entry_id,world_slug,role","limit":"1000"})
+    if len({x["entry_id"] for x in links})!=149: raise RuntimeError("not all 149 published entries are mapped to a knowledge world")
+    if sum(1 for x in links if x["role"]=="primary")!=149: raise RuntimeError("expected exactly one primary world for each published entry")
+    print(f"PASS knowledge_worlds=7 mapped_entries=149 mappings={len(links)}")
+
 def check_acl():
     check_entries()
     check_media()
     check_sensitive()
+    check_worlds()
     print("PASS public ACL snapshot")
 
 parser=argparse.ArgumentParser()
-parser.add_argument("--check",choices=["entries","media","craft","sensitive","acl"],required=True)
+parser.add_argument("--check",choices=["entries","media","craft","sensitive","worlds","acl"],required=True)
 args=parser.parse_args()
-{"entries":check_entries,"media":check_media,"craft":check_craft,"sensitive":check_sensitive,"acl":check_acl}[args.check]()
+{"entries":check_entries,"media":check_media,"craft":check_craft,"sensitive":check_sensitive,"worlds":check_worlds,"acl":check_acl}[args.check]()
 
 
