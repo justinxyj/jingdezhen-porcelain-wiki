@@ -217,3 +217,12 @@
 - Added responsive and dark-mode-compatible styling plus graceful recommendation-load failure handling.
 - Phase 3B remains closed; no recommendation eligibility rules or World mappings were changed in Phase 3C.
 - Deployment/browser smoke remains the final verification step.
+
+
+## 2026-09-20 — Phase 3C Closeout
+- GitHub Pages 数据加载恢复后完成 Entry Detail 推荐功能线上人工 smoke verification。
+- 推荐区“你可能还想了解”可正常显示，推荐卡片可正常进入目标 Entry Detail；本轮未发现推荐导航断链。
+- 生产推荐数据复核：149 published entries；22 recommendations；18 个来源条目；0 orphan source；0 orphan target；0 duplicate recommendation edges。
+- 前端 JavaScript 语法回归通过：knowledge-store.js、wiki-enhancements.js 均可正常解析。
+- Phase 3C 未修改 Phase 3B 推荐资格规则，也未修改 316 条 World mappings。
+- Phase 3C 正式收口；下一阶段转入 Phase 4 / 后续产品建设。
