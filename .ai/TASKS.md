@@ -82,3 +82,18 @@
 - [x] M-6 关系稳定排序、去重、截断提示
 - [x] M-7 核心查询 EXPLAIN + 生产索引验证
 - [ ] M-4 浏览器核心 JS 全量迁移 TypeScript（当前不作为阻塞项，现阶段保留 JS + strict contract）
+
+
+## 本轮审计
+- [x] S1 核验并统一最终 media 公共访问架构
+- [x] S2 建立 canonical public ACL migration + ACL smoke
+- [x] H1 修复馆长后台 schema drift
+- [x] H2 详情关系查询统一认证请求层
+- [x] H3 初始化/Observer 生命周期治理
+- [x] H4 保持分页与稳定排序，继续关注数据增长
+- [x] H5 PR 与生产 smoke 解耦
+- [x] M1 核心 JS 开启 checkJs；严格 contract 单独配置
+- [x] M2 evidence-hub 安全 DOM 渲染
+- [x] M3 动态重绘降频
+- [x] M4 动态 HTML 安全边界
+- [x] M5 外部图片生命周期/负缓存
