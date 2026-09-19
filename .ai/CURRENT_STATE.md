@@ -218,3 +218,14 @@
 - 当前 production recommendation pool：68 条；shared World/shared craft_process 仍不进入相关推荐。
 - 当前推荐直接关系构成：person 6、kiln 3、related 3、source 3、object 3。
 - B 类继续留在图谱/探索层，不能仅凭“看起来合理”进入推荐。
+
+
+## Phase 3B-3 第三轮状态（2026-09-19）
+- entry_relations 已正式加入 evidence_grade：A+ / A / B / C / D。
+- A+：直接、强 entry-specific 证据；A：权威机构/馆藏/研究资料足以支撑具体关系；B：关系合理但证据不足；C：过宽、模板化或缺乏独立知识价值；D：事实冲突/不成立，应删除或作为缺失关系审计标记。
+- knowledge_graph_edges.metadata 现在保留 evidence_grade，因此图谱层可以区分“存在关系”与“证据强度”。
+- knowledge_recommendations 已改为只消费 A+ / A；不再以 note 长度作为最终推荐资格。
+- 第三轮清理了人物→器物 / 人物→窑址的通用占位关系；保留的 B 关系继续存在于图谱/探索层，但不进入相关推荐。
+- 新增高价值关系：唐英→雍正仿钧新紫釉天球瓶，A 级。故宫博物院资料将该器物置于清代景德镇御窑生产背景，同时记载唐英自雍正六年驻御窑厂并长期管理窑务。citeturn0search5turn0search1
+- 当前 Phase 2B World Freeze 不变：149 published / 149 primary / 167 secondary / 316 total mappings。
+- 下一步：继续攻克年希尧、郎廷极、臧应选、王锡良、刘远长、黄云鹏等人物→具体器物/窑址；优先寻找 A+/A 级、可直接解释用户“为什么推荐这个条目”的证据。
