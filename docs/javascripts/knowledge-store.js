@@ -291,7 +291,7 @@
     const peopleByEra=new Map();
     people.forEach(e=>{const era=eraGroupFor(e);if(!era)return;if(!peopleByEra.has(era))peopleByEra.set(era,[]);peopleByEra.get(era).push(e)});
     return people.map(e=>{
-      const m=e.zh?.meta||{}, rel=relationsByPerson.get(e.id)||[], era=eraGroupFor(e);
+      const zh=/** @type {any} */ (e.zh); const m=zh?.meta||{}, rel=relationsByPerson.get(e.id)||[], era=eraGroupFor(e);
       const works=rel.filter(r=>r.target?.category==='器物').map(r=>r.target);
       const kilns=rel.filter(r=>r.target?.category==='窑址').map(r=>r.target);
       const documents=rel.filter(r=>r.target?.category==='文献').map(r=>r.target);
