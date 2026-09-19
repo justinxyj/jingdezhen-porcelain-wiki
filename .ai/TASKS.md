@@ -275,4 +275,10 @@
 - [x] 关系与相关推荐继续沿用 Phase 3B 冻结的知识图谱与 A+ / A 推荐规则。
 - [x] 全局网络保持知识条目为唯一 canonical 内容入口；地图只是空间呈现层。
 - [x] JS syntax regression：knowledge-store / global-network 通过。
-- [ ] Pages deployment browser smoke：验证器物、人物、窑址三类 Entry 的时间 / 空间 / 关系 / 推荐链路。
+- [x] Pages deployment browser smoke：用户已实际检查线上部署，验证器物、人物、窑址三类 Entry 的时间 / 空间 / 关系 / 推荐链路正常。
+
+
+## Phase 4C Closeout
+- [x] 全球陶瓷网络线上 Smoke Test 完成。
+- [x] 器物 / 人物 / 窑址三类 Entry 的时间、空间、关系、推荐链路均确认正常。
+- [x] Phase 4C 第一轮正式封版。
