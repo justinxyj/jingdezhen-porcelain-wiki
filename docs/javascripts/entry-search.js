@@ -1,4 +1,4 @@
-/* Phase 4D: unified knowledge discovery UI — one index, multiple discovery paths, one canonical Entry destination. */
+/* Phase 4D: 统一知识发现界面 — 一个索引，多条发现路径，一个统一知识条目出口。 */
 (function(){
   const ROOT='/jingdezhen-porcelain-wiki/';
   const SEARCH_URL=ROOT+'search/';
@@ -103,12 +103,17 @@
     button?.addEventListener('click',submit);
     input?.addEventListener('input',()=>suggest(input.value.trim()));
     input?.addEventListener('keydown',e=>{if(e.key==='Enter')submit();if(e.key==='Escape'){document.getElementById('jdm-search-suggestions')?.setAttribute('hidden','');}});
-    page.querySelectorAll('[data-search-example]').forEach(b=>b.addEventListener('click',()=>{if(input)input.value=b.dataset.searchExample;submit();}));
-    page.querySelectorAll('[data-search-world]').forEach(b=>b.addEventListener('click',()=>{state.world=b.dataset.searchWorld||'';run();}));
-    page.querySelectorAll('[data-search-category]').forEach(b=>b.addEventListener('click',()=>toggleFilter('category',b.dataset.searchCategory||'')));
-    page.querySelectorAll('[data-search-era]').forEach(b=>b.addEventListener('click',()=>toggleFilter('era',b.dataset.searchEra||'')));
-    page.querySelectorAll('[data-search-lane]').forEach(b=>b.addEventListener('click',()=>toggleFilter('lane',b.dataset.searchLane||'')));
-    page.querySelectorAll('[data-search-signal]').forEach(b=>b.addEventListener('click',()=>{const key=b.dataset.searchSignal==='map'?'hasMap':'hasTimeline';state[key]=state[key]==='true'?'':'true';run();}));
+    page.querySelectorAll('[data-search-example]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();if(input)b.dataset.searchExample&&(input.value=b.dataset.searchExample);submit();}));
+    page.addEventListener('click',e=>{
+      const el=e.target.closest?.('[data-search-world],[data-search-category],[data-search-era],[data-search-lane],[data-search-signal]');
+      if(!el)return;
+      e.preventDefault();
+      if(el.dataset.searchWorld!==undefined){state.world=el.dataset.searchWorld||'';run();return;}
+      if(el.dataset.searchCategory!==undefined){toggleFilter('category',el.dataset.searchCategory||'');return;}
+      if(el.dataset.searchEra!==undefined){toggleFilter('era',el.dataset.searchEra||'');return;}
+      if(el.dataset.searchLane!==undefined){toggleFilter('lane',el.dataset.searchLane||'');return;}
+      if(el.dataset.searchSignal!==undefined){const key=el.dataset.searchSignal==='map'?'hasMap':'hasTimeline';state[key]=state[key]==='true'?'':'true';run();}
+    });
     document.getElementById('jdm-search-clear')?.addEventListener('click',clearFilters);
     document.addEventListener('keydown',e=>{if((e.key==='/'||e.key==='s')&&document.activeElement!==input&&!e.ctrlKey&&!e.metaKey){e.preventDefault();input?.focus();}});
     setActiveButtons();
