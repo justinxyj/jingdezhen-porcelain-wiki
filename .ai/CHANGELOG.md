@@ -405,3 +405,10 @@
 - 唐英→雍正仿钧新紫釉天球瓶继续保持 A，避免把“主持御窑生产体系”误写成“个人制作者”。
 - 王步、王琦、田鹤仙、黄云鹏均未被强行连接到现有古代馆藏具体器物；黄云鹏的代表作品“元青花三顾茅庐纹罐”暂因缺少对应 canonical Entry 而保持为人物→青花瓷层级。
 - 当前 entry_relations 102 条，A+/A/B/C = 5/19/1/77；recommendations 24。
+
+
+## 2026-09-20 — Phase 4E Final Closeout / Phase 5 Kickoff
+- Phase 4E formally closed after Round 2.
+- Established project-wide anti-overengineering rule: future phases must avoid excessive granularity, repeated audits, and low-marginal-value refinements; prefer coherent end-to-end user value and close a phase once its acceptance criteria are met.
+- Deferred canonical content candidates such as 郎窑红梅瓶 and 元青花三顾茅庐纹罐 to Phase 5 Content Admission.
+- Phase 5 starts with Knowledge World / 知识世界层.
