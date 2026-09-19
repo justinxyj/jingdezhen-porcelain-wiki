@@ -37,3 +37,7 @@
 [data-md-color-scheme="slate"] .tech-network-stats span{background:rgba(190,210,225,.08)}
 @media(max-width:800px){.tech-detail-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tech-entry-grid{grid-template-columns:1fr}}
 @media(max-width:520px){.tech-detail-grid{grid-template-columns:1fr}}
+
+.tech-discovery-note{margin:18px 0;padding:16px 18px;border:1px solid rgba(120,90,55,.14);border-radius:16px;background:rgba(120,90,55,.06)}
+.tech-discovery-note strong{color:var(--md-primary-fg-color)}
+[data-md-color-scheme="slate"] .tech-discovery-note{background:rgba(190,210,225,.06);border-color:rgba(190,210,225,.14)}
