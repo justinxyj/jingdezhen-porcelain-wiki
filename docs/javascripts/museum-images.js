@@ -1,19 +1,12 @@
 /* Public museum image layer. */
 (function(){
-  const PLACEHOLDER_MET='https://collectionapi.metmuseum.org/api/collection/v1/iiif/42490/177595/main-image';
-  const badSrc=s=>{const v=String(s||'');return v===PLACEHOLDER_MET||/42490\/177595\/main-image/.test(v)};
   function sanitizeImage(img){
     if(!img)return;
-    const src=img.getAttribute('src')||'';
-    if(badSrc(src)){
+    img.setAttribute('loading','lazy');
+    img.setAttribute('decoding','async');
+    img.addEventListener('error',()=>{
       img.removeAttribute('src');
       img.setAttribute('data-image-invalid','1');
-      img.closest('.official-gallery-card,.compare-node,.compare-specimen,.wiki-entry-cover')?.classList.add('image-unavailable');
-      return;
-    }
-    img.setAttribute('loading','lazy');img.setAttribute('decoding','async');
-    img.addEventListener('error',()=>{
-      img.removeAttribute('src');img.setAttribute('data-image-invalid','1');
       img.closest('.official-gallery-card,.compare-node,.compare-specimen,.wiki-entry-cover')?.classList.add('image-unavailable');
     },{once:true});
   }

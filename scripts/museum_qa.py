@@ -37,12 +37,14 @@ if js_root.exists():
 
 
 # Navigation target existence check.
+# Match md targets on the same YAML line only: after ":" allow spaces/tabs,
+# not newlines (or parent section keys swallow the next nested "- label: file.md").
 # MkDocs interprets nav targets relative to docs_dir. This is the only location
 # that matters for the site's real build, so do not use repository-root fallback.
 mk = ROOT / "mkdocs.yml"
 if mk.exists():
     text = read_text(mk)
-    for label, raw in re.findall(r"(?m)^\s*-\s+(.+?):\s*([^\n]+)$", text):
+    for label, raw in re.findall(r"(?m)^\s*-\s+(.+?):[ \t]*([^\n]+)$", text):
         target = raw.strip().strip("\"'")
         if not target.endswith(".md") or target.startswith(("http://", "https://")):
             continue
