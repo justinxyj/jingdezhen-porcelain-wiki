@@ -89,7 +89,7 @@
     const title=String(e?.zh?.title||''),m=meta(e),timeline=Array.isArray(m.timeline)?m.timeline:[];
     const structured=Number(m.timeline_sort_year);
     if(Number.isFinite(structured))return [structured,title];
-    const yearMatch=title.match(/(\\d{3,4})/);
+    const yearMatch=title.match(/(\d{3,4})/);
     if(yearMatch)return [Number(yearMatch[1]),title];
     const era=timeline[0]?.era||'';
     const eraRank={tang:1000,song:2000,yuan:3000,ming:4000,qing:5000,modern:6000};
@@ -104,7 +104,7 @@
       if(ka[0]!==kb[0])return ka[0]-kb[0];
       return ka[1].localeCompare(kb[1],'zh-CN');
     });
-    root.innerHTML=`<div class="timeline">${rows.map(e=>`<a class="timeline-item timeline-link" href="${entryUrl(e)}"><div class="timeline-year">${esc(meta(e).period||String(e.zh?.title||'').match(/\\d{3,4}(?:[—–-]\\d{3,4})?/u)?.[0]||'')}</div><h3>${esc(e.zh?.title||'未命名节点')}</h3><p>${esc(text(e))}</p><span class="wiki-read-more">打开详情 →</span></a>`).join('')}</div>`;
+    root.innerHTML=`<div class="timeline">${rows.map(e=>`<a class="timeline-item timeline-link" href="${entryUrl(e)}"><div class="timeline-year">${esc(meta(e).period||String(e.zh?.title||'').match(/\d{3,4}(?:[—–-]\d{3,4})?/u)?.[0]||'')}</div><h3>${esc(e.zh?.title||'未命名节点')}</h3><p>${esc(text(e))}</p><span class="wiki-read-more">打开详情 →</span></a>`).join('')}</div>`;
   }
   function renderError(root,error){
     if(!root)return;
