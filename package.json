@@ -5,6 +5,7 @@
     "typecheck": "tsc --noEmit -p tsconfig.json"
   },
   "devDependencies": {
-    "typescript": "5.9.2"
+    "typescript": "5.9.2",
+    "playwright": "1.55.0"
   }
 }
