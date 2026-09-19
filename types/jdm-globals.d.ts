@@ -25,6 +25,8 @@ declare global {
       get(slug: string): Promise<Database['public']['Tables']['entries']['Row'] | null>;
       list(options?: { category?: string | null; limit?: number; offset?: number }): Promise<unknown[]>;
       byCategory(category: string, limit?: number): Promise<unknown[]>;
+      worlds(): Promise<Database['public']['Tables']['knowledge_worlds']['Row'][]>;
+      byWorld(worldSlug: string, options?: { limit?: number; role?: string | null }): Promise<unknown[]>;
       url(entry: { category: string; slug: string }): string;
       state(): { status: string; error: unknown; updatedAt: number | null };
       reset(): void;
@@ -34,6 +36,8 @@ declare global {
       media(value: unknown): Database['public']['Tables']['media']['Row'];
       entries(value: unknown[]): Database['public']['Tables']['entries']['Row'][];
       mediaList(value: unknown[]): Database['public']['Tables']['media']['Row'][];
+      world(value: unknown): Database['public']['Tables']['knowledge_worlds']['Row'];
+      worlds(value: unknown[]): Database['public']['Tables']['knowledge_worlds']['Row'][];
     };
     JDM_MEDIA_POLICY?: {
       isUsable?(media: unknown): boolean;
