@@ -166,7 +166,7 @@
   function eraGroupFor(e,t=null){
     const m=e?.zh?.meta||{}, raw=String(t?.era||m.era_group||m.era||m.period||'').trim();
     const title=String(e?.zh?.title||'');
-    const yearMatch=title.match(/(1[89]\\d{2}|20\\d{2})/);
+    const yearMatch=title.match(/((?:18|19|20)\\d{2})/);
     const year=yearMatch?Number(yearMatch[1]):null;
     if(raw==='tang'||/唐/.test(raw))return 'tang';
     if(raw==='song'||/宋/.test(raw))return 'song';
@@ -175,7 +175,7 @@
     if(raw==='qing'||/清/.test(raw)||/18世纪/.test(raw))return 'qing';
     if(raw==='near-modern'||/近代|近现代|民国|19世纪|20世纪初/.test(raw))return 'near-modern';
     if(raw==='modern'||/现代/.test(raw)||/20世纪/.test(raw))return (year&&year>=1840&&year<=1948)?'near-modern':'modern';
-    if(year&&year>=1911&&year<=1948)return 'near-modern';
+    if(year&&year>=1840&&year<=1948)return 'near-modern';
     if(year&&year>=1949)return 'modern';
     return raw;
   }
