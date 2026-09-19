@@ -318,3 +318,11 @@
 - 结果继续连接 Entry Detail、关系网络、全球陶瓷网络、相关推荐；未改变 A+ / A 推荐门槛。
 - URL 可复现发现状态；当前生产数据未发生变更。
 - Phase 4D 第一轮代码已完成；待 Pages browser smoke 后再封第一轮。
+
+
+## Phase 4E — 数字博物馆工具层统一：时间轴 2.0（2026-09-20）
+- 时间轴已接入统一 Discovery 思路：时代 + 空间筛选。
+- 继续消费 published canonical Entry 的 timeline metadata；当前有时间数据的公开条目为 58 个。
+- 时间轴节点可进入 Entry Detail，并继续进入全球网络。
+- 当前第一轮未修改生产知识事实数据。
+- 待 Pages browser smoke 后封版。
