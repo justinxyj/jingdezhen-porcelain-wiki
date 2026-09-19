@@ -111,7 +111,11 @@ create index if not exists media_public_verified_entry_created_idx
 -- Canonical media boundary: current media.path/source_url values are HTTPS resource URLs.
 alter table public.media drop constraint if exists media_path_https_check;
 alter table public.media add constraint media_path_https_check
-  check (path ~* '^https://[^[:space:]<>"]+
+  check (path ~* '^https://[^[:space:]<>"]+$');
+alter table public.media drop constraint if exists media_source_url_https_check;
+alter table public.media add constraint media_source_url_https_check
+  check (source_url is null or btrim(source_url) = '' or source_url ~* '^https://[^[:space:]<>"]+$');
+
 
 alter table public.profiles enable row level security;
 alter table public.entries enable row level security;
@@ -228,12 +232,19 @@ revoke execute on function public.review_edit(uuid,text,text) from public, anon,
 create schema if not exists private;
 create or replace function private.is_staff()
 returns boolean
-language sql stable security definer set search_path = public
-as $
-  select exists(select 1 from public.profiles where id = auth.uid() and role in ('reviewer','admin'));
-$;
+language sql
+stable
+security definer
+set search_path = public
+as $$
+  select exists(
+    select 1 from public.profiles
+    where id = auth.uid() and role in ('reviewer','admin')
+  );
+$$;
 revoke all on function private.is_staff() from public;
 grant execute on function private.is_staff() to authenticated, service_role;
+
 
 revoke all on table public.media from anon;
 revoke all on table public.entry_revisions from anon;
