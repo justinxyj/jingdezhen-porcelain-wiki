@@ -14,6 +14,21 @@
     e.kind=e.status===401?'auth':e.status===403?'forbidden':e.name==='AbortError'?'timeout':(e.message||'').toLowerCase().includes('network')?'network':'server';
     return e;
   }
+  function safeHref(raw,{allowHttp=false}={}){
+    const value=String(raw??'').trim();
+    if(!value)return '';
+    try{
+      const base=window.location?.href||'https://localhost/';
+      const url=new URL(value,base);
+      const protocol=url.protocol.toLowerCase();
+      const sameOrigin=url.origin===window.location.origin;
+      if(protocol==='javascript:'||protocol==='data:'||protocol==='vbscript:'||protocol==='file:'||protocol==='blob:')return '';
+      if(sameOrigin&&(protocol==='http:'||protocol==='https:'))return url.href;
+      if(protocol==='https:')return url.href;
+      if(protocol==='http:'&&allowHttp)return url.href;
+    }catch(_){return ''}
+    return '';
+  }
   function getClient(){
     if(client)return client;
     const c=window.JDM_RUNTIME_CONFIG;
@@ -78,5 +93,5 @@
     authState={status:'signed_out',session:null,user:null,lastEvent:'SIGNED_OUT'};
   }
   function getState(){return {...authState}}
-  window.JDM_AUTH={getClient,session,user,refresh,request,signOut,state:getState};
+  window.JDM_AUTH={getClient,session,user,refresh,request,signOut,state:getState,safeHref};
 })();
