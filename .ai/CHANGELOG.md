@@ -25,3 +25,14 @@
 - 用户真实上线截图发现大量卡片/详情图片破损，确认生产媒体中存在无效 The Met /???/main-image 路径。
 - museum-images.js 增加动态图片错误恢复：The Met Object API → Wikimedia Commons → 明确占位图，并覆盖异步新增 DOM。
 - 修复现代景德镇四个页面残留的内部 cite 标记，统一改为正常 UNESCO 资料链接。
+
+
+## 2026-09-19 — 第三轮：媒体审核边界与前端韧性
+- 生产 media 公共 RLS 从仅 status='approved' 收紧为 status='approved' AND review_state='verified'。
+- 普通 authenticated 用户插入媒体时只能写 pending/pending、verified_at=NULL、is_primary=false；staff 保留审核态写入能力。
+- 新增 public.media_public 公共视图，仅暴露公开网页需要的媒体字段；anon 撤销 media 表 SELECT，公共网页改读视图。
+- knowledge-store.js 改为显式 error 状态、10 秒请求超时，并对详情页使用按 slug 定向查询。
+- wiki-enhancements.js 增加核心加载错误与关系加载失败的用户提示及重试；关系查询上限 100。
+- museum-images.js 增加 8 秒超时、一次有限重试、缓存去重与最多 3 路并发。
+- site-privacy.js 删除通用文本匹配删除 DOM 的逻辑；timeline-interactive.js 改为只处理新增节点。
+- Validate #85 与 Pages #369 均成功。
