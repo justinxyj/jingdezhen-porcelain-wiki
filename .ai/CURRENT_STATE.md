@@ -384,3 +384,14 @@
 - 新增 craftProcesses() / craftProcessContext()，把工序与上下游、材料、技术作用、产出、时代及已有 Entry 关系接入统一知识发现层。
 - 当前生产工艺基线：72 craft_processes / 289 entry_craft_processes / 71 craft_process_relations。
 - Phase 4E-5 尚待 Pages browser smoke，不能视为最终封版。
+
+
+## 2026-09-20 — Phase 4E-5 First-Round Closeout / Deepening
+- Phase 4E-5 第一轮正式收口。
+- 当前工艺生产基线：72 craft_processes / 289 entry_craft_processes / 71 craft_process_relations。
+- 第一轮后继续进入深层知识链：材料 → 器物 → 时代 → 窑址 → 人物。
+- craftProcessContext() 已扩展为上述路径的统一聚合层。
+- 材料展示来自 canonical craft_processes.materials_zh；未建立第二材料事实源。
+- 器物 / 人物 / 窑址 / 文献来自既有 Entry 关系；时代使用 canonical era_group；空间使用既有 map metadata。
+- 当前未修改生产知识事实或 recommendation gate。
+- Deepening 页面已完成代码与 CI 验证，待 Pages browser smoke 后继续收口。
