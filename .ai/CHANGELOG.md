@@ -181,3 +181,13 @@
 - B 类关系暂不进入推荐：即便知识上可能相关，只要当前没有足够 entry-specific 证据，继续保留在事实图谱层。
 - 生产回归：149 entries、149 primary、167 secondary、316 total mappings；recommendation pool 68，其中 person 6 / kiln 3 / related 3 / source 3 / object 3。
 - migration：supabase/migrations/20260919223000_phase_3b3_round2_evidence_screening.sql
+
+
+## 2026-09-19 — Phase 3B-3 第三轮：证据等级化与人物关系深审
+- 在 entry_relations 增加 evidence_grade：A+ / A / B / C / D。
+- 将证据判断从 note 长度升级为证据等级；knowledge_graph_edges 将等级写入 metadata，knowledge_recommendations 只允许 A+ / A。
+- 清理人物→器物 / 人物→窑址的通用占位关系，避免“人物—知识关联”继续伪装成可解释推荐。
+- 新增唐英→雍正仿钧新紫釉天球瓶的人物→器物关系，证据等级 A；故宫博物院资料同时提供该器物的清代御窑背景与唐英督陶事实。citeturn0search5turn0search1
+- 将张松茂→粉彩瓷降为 B：现有条目语义支持关系，但当前没有足够 entry-specific 的外部证据支撑推荐级 A。
+- 故宫博物院资料确认郎廷极与郎窑红釉之间存在直接命名与督陶关系，可作为后续 A+/A 具体器物关系扩充的证据方向。citeturn1search0turn1search1
+- 新增 migrations：20260919235000_phase_3b3_round3_evidence_grades.sql、20260919235500_phase_3b3_round3_graph_evidence_metadata.sql、20260919235600_phase_3b3_round3_grade_calibration.sql。
