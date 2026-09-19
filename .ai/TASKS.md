@@ -406,3 +406,15 @@
 - [x] 增加关联条目、时代与空间的深层出口，并保留全球网络继续探索。
 - [x] JS syntax regression：knowledge-store / technology-tree 通过。
 - [ ] Pages browser smoke：重点检查材料线索、器物/时代/窑址/人物路径、移动端与深色模式。
+
+
+## Phase 4E-5 Craft Relation Deep Audit — 2026-09-20
+- [x] 审查 72 道工序的 289 条原始 Entry 关联，发现其中 204 条属于“完整生产链 / 72步总关联 / 技术链继续存在 / 后段工序”类宽泛占位关系。
+- [x] 删除上述 204 条宽泛关系；保留 85 条具有明确历史阶段、技术或遗址语义的关系。
+- [x] 新增 20 条器物↔工序直接证据关系：青花瓷、青白瓷、成化斗彩鸡缸杯、颜色釉瓷。
+- [x] 新增 12 条御窑厂遗址↔工序直接空间/生产证据关系。
+- [x] 新增 9 条人物↔工序直接证据关系：王步 1、黄云鹏 5、唐英 3。
+- [x] 当前 entry_craft_processes：126；其中历史 85、器物 20、人物 9、窑址 12；宽泛占位关系 0。
+- [x] 所有新增关系均带 source_url / source_institution / source_tier / reviewed_at；未放宽相关推荐 A+ / A gate。
+- [x] migration：supabase/migrations/20260920035000_phase_4e5_craft_relation_deep_audit.sql。
+- [ ] Pages browser smoke：检查工序详情中的器物、人物、窑址路径及全球网络邻接。
