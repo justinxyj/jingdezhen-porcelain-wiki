@@ -428,3 +428,22 @@
 - Knowledge World Home 已开始实施：世界→中国→景德镇→青花→七大知识世界→知识条目/继续探索。
 - 本轮不修改生产知识数据。
 - 用户可见英文产品术语统一中文化。
+
+## 2026-09-20 — Final security/performance hardening pass
+
+- S-1 / H-4：历史 RLS migration 与 canonical schema 的权限漂移已收口；中间 `media_public` 路径标记为历史并由最终 migration 清理。
+- `is_staff()` 已从公开 `public` schema 移入 `private.is_staff()`，固定 `search_path=public`，仅 authenticated/service_role 可执行；anon 不可执行；所有 staff RLS policy 已切换到 private helper。
+- H-1：`knowledge-store.js` 请求层统一委托 `JDM_AUTH.request()`，401 refresh 失败最终统一为 `AUTH_EXPIRED / 401 / auth`。
+- H-2 / M-2 / M-3：新增共享 `safeHref()`；时间轴来源、媒体、Entry Detail 来源/图片均拒绝危险协议并减少动态 HTML 注入面。
+- H-3：搜索 Discovery 推荐改为 source-node 批量读取 + target Entry 批量读取，取消逐条 recommendations N+1；搜索建议增加 debounce 与过期结果序列保护。
+- H-4：Entry Detail 不再通过 `all()` 计算时间轴/空间邻居，改为数据库定向 peer functions；全量缓存上限从 10,000 收紧为 2,000。
+- H-5：数据库回归测试改为 private.is_staff SECURITY DEFINER + 固定 search_path + anon 不可执行 + profiles 不允许普通用户 UPDATE。
+- M-1：核心浏览器 JS 已扩大到 checkJs 范围，并开启 strict / noImplicitAny / strictNullChecks。
+- M-2：时间轴 modal 改用 DOM API；纯文本不再通过 innerHTML 解析。
+- M-3：museum filter 使用单一事件委托，避免重复绑定。
+- M-4：统一错误分类接口提供 401/403/429/timeout/network/config 用户行动提示。
+- M-5：entryContext / worldOverview / craftProcessContext 返回截断状态；Entry Detail 对关系截断显示提示。
+- M-6：graph(nodeId) 增加严格节点标识白名单；动态 PostgREST 路径不再接受任意 nodeId。
+- 当前媒体架构核验：生产没有 Storage bucket，当前 `media.path` 为 HTTPS 资源 URL；因此未虚构新增 Storage 上传系统，而是补充数据库 HTTPS 约束与管理员端安全边界。
+- 新增 `scripts/security_static_smoke.py`，已加入 CI Validate。
+- 生产 Supabase 最终迁移 `final_security_performance_hardening`、`finalize_private_is_staff_security_boundary` 均已执行并核验。
