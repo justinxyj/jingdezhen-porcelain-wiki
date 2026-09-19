@@ -10,6 +10,7 @@
   const laneLabel=x=>({jdz:'景德镇',china:'中国其他窑业',world:'世界其他地区'}[x]||x);
   const categoryLabel=x=>({人物:'人物与传承',历史:'历史与发展',器物:'器物与美学',文献:'文献与研究',窑址:'窑址与城市空间'}[x]||x||'知识');
   const state={q:'',world:'',category:'',era:'',lane:'',hasMap:'',hasTimeline:''};
+  let runSeq=0,suggestTimer=0;
 
   function syncUrl(){
     const p=new URLSearchParams();
@@ -63,6 +64,7 @@
   }
 
   async function run(){
+    const seq=++runSeq;
     const status=document.getElementById('jdm-search-status'),results=document.getElementById('jdm-search-results'),count=document.getElementById('jdm-search-count');
     if(!status||!results)return;
     syncUrl();
@@ -70,6 +72,7 @@
     results.innerHTML='<div class="jdm-search-loading">正在整理知识世界、时代、空间与关系……</div>';
     try{
       const data=await window.JDM_KNOWLEDGE.searchDiscoveryPage(state.q,{limit:12,recommendationLimit:3,worldSlug:state.world||null,category:state.category||null,era:state.era||null,lane:state.lane||null,hasMap:state.hasMap?state.hasMap==='true':null,hasTimeline:state.hasTimeline?state.hasTimeline==='true':null});
+      if(seq!==runSeq)return;
       if(count)count.textContent=String(data.total||0);
       const filters=selectedFilters();
       const filterText=Object.keys(filters).length?' · 已应用 '+Object.keys(filters).length+' 项筛选':'';
@@ -101,7 +104,7 @@
     if(input)input.value=state.q;
     const submit=()=>{state.q=String(input?.value||'').trim();run();};
     button?.addEventListener('click',submit);
-    input?.addEventListener('input',()=>suggest(input.value.trim()));
+    input?.addEventListener('input',()=>{clearTimeout(suggestTimer);suggestTimer=setTimeout(()=>suggest(input.value.trim()),180)});
     input?.addEventListener('keydown',e=>{if(e.key==='Enter')submit();if(e.key==='Escape'){document.getElementById('jdm-search-suggestions')?.setAttribute('hidden','');}});
     page.querySelectorAll('[data-search-example]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();if(input)b.dataset.searchExample&&(input.value=b.dataset.searchExample);submit();}));
     page.addEventListener('click',e=>{
