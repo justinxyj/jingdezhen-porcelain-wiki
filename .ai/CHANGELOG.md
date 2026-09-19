@@ -74,3 +74,13 @@
 - 生产校验：149 published / 149 primary / 226 secondary；无重复 entry-world 边；无 primary cardinality 异常；单条 entry 最多 3 个 secondary。
 - 新增迁移：supabase/migrations/20260919193000_sprint_b_phase_2b_semantic_cleanup.sql
 - 新增迁移：supabase/migrations/20260919194000_sprint_b_phase_2b_rationale_precision.sql
+
+
+## 2026-09-19 — Sprint B Phase 2C / 人物→历史、全球窑址→历史深审
+- 完成生产层逐条深审并应用 migration `supabase/migrations/20260919213000_sprint_b_phase_2c_people_history_global_kiln_history.sql`。
+- 人物→历史 secondary：37 → 9；全球窑址/空间→历史 secondary：41 → 17。
+- 总 mapping：372 → 320（149 primary + 171 secondary）。
+- 删除主要为“人物身份/年代本身不构成历史入口”以及“全球区域比较节点过宽”的关系。
+- 为保留历史入口重写 entry-specific rationale，消除模板化理由。
+- 完成 production mapping/cardinality 回归：149 published、149 primary、171 secondary，primary cardinality 无异常。
+- UNESCO 2026 与有田资料用于复核景德镇产业链、东亚技术/贸易史桥接；Frank B. Lentz 调整为 research 入口而非 history 入口。
