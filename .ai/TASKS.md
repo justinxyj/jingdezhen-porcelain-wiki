@@ -117,3 +117,10 @@
 - [x] 首页统一数字博物馆工具入口
 - [x] 新增知识网络总览 / 关系探索 / 全球陶瓷网络入口
 - [ ] Sprint A：MkDocs strict / Pages smoke / 移动端回归验收（当前修复中：上一轮 QA 误报网络页面路径）
+
+
+- [x] Sprint B：建立七大知识世界独立数据层
+- [x] Sprint B：149 个已发布条目全部挂载 primary world
+- [x] Sprint B：建立 secondary cross-world mappings
+- [x] Sprint B：7 个世界入口接入动态条目浏览器
+- [ ] Sprint B 后续：逐条人工复核 406 条 mapping 的语义准确性并补充缺失跨世界关系
