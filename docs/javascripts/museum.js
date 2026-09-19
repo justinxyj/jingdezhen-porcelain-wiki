@@ -112,7 +112,7 @@
     root.innerHTML='<div class="notice" role="alert">'+esc(info.message)+'（'+esc(info.code)+'）<button type="button" class="jdm-retry">重新加载</button></div>';
     root.querySelector('.jdm-retry')?.addEventListener('click',()=>init());
   }
-  let initSeq=0;
+  let initSeq=0,filterData={objects:[],people:[]};
   async function init(){
     const seq=++initSeq;
     if(!window.JDM_KNOWLEDGE)return;
@@ -126,7 +126,7 @@
       if(seq!==initSeq)return;
       renderCatalog(objects);renderPeople(people);renderTimeline(history);
       const search=document.getElementById('catalog-search');if(search&&!search.dataset.bound){search.dataset.bound='1';let raf=0;search.addEventListener('input',()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(()=>renderCatalog(objects))})}
-      const filterRoot=document.getElementById('catalog-list')?.parentElement?.parentElement||document.body;filterRoot.__jdmMuseumData={objects,people};if(!filterRoot.dataset.filtersBound){filterRoot.dataset.filtersBound='1';filterRoot.addEventListener('change',event=>{const id=event.target?.id,constData=filterRoot.__jdmMuseumData||{};if(['catalog-era','catalog-craft','catalog-type'].includes(id))renderCatalog(constData.objects||[]);if(['people-era','people-role','people-world'].includes(id))renderPeople(constData.people||[])})}
+      filterData={objects,people};const filterRoot=document.getElementById('catalog-list')?.parentElement?.parentElement||document.body;if(!filterRoot.dataset.filtersBound){filterRoot.dataset.filtersBound='1';filterRoot.addEventListener('change',event=>{const id=event.target?.id;if(['catalog-era','catalog-craft','catalog-type'].includes(id))renderCatalog(filterData.objects);if(['people-era','people-role','people-world'].includes(id))renderPeople(filterData.people)})}
       const personSearch=document.getElementById('people-search');if(personSearch&&!personSearch.dataset.bound){personSearch.dataset.bound='1';let raf=0;personSearch.addEventListener('input',()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(()=>renderPeople(people))})}
 
     }catch(error){if(seq===initSeq)roots.forEach(root=>renderError(root,error))}
