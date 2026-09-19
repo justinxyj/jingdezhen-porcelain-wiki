@@ -191,3 +191,11 @@
 - 将张松茂→粉彩瓷降为 B：现有条目语义支持关系，但当前没有足够 entry-specific 的外部证据支撑推荐级 A。
 - 故宫博物院资料确认郎廷极与郎窑红釉之间存在直接命名与督陶关系，可作为后续 A+/A 具体器物关系扩充的证据方向。citeturn1search0turn1search1
 - 新增 migrations：20260919235000_phase_3b3_round3_evidence_grades.sql、20260919235500_phase_3b3_round3_graph_evidence_metadata.sql、20260919235600_phase_3b3_round3_grade_calibration.sql。
+
+
+## 2026-09-20 — Phase 3B-3 第四轮：A+ 高价值关系
+- 新增/校正 4 条 A+ 关系：郎廷极→御窑厂遗址、年希尧→御窑厂遗址、臧应选→御窑厂遗址、黄云鹏→青花瓷。
+- 郎廷极的 A+ 证据来自故宫博物院郎窑红梅瓶条目：郎窑红因康熙时期御器厂督陶官郎廷极得名；故宫展览资料同时将臧应选、郎廷极、年希尧、唐英列为清代景德镇御窑督陶官。citeturn0search0turn1search6
+- 黄云鹏的 A+ 证据来自文化部非遗资料：明确记载其从事青花瓷创作、仿古瓷及古陶瓷研究，并列出“元青花三顾茅庐纹罐”等代表作品。citeturn0search4
+- 本轮没有为了制造 A+ 而把“人物→粉彩瓷”等泛关系升级为具体器物关系；当前数据库缺少部分应有的具体作品节点，因此暂不伪造目标节点。
+- 新增 migration：supabase/migrations/20260920002000_phase_3b3_round4_high_value_relations.sql
