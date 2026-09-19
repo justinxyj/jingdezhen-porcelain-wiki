@@ -149,3 +149,15 @@
 - [x] 固化 `.ai/SEMANTIC_FREEZE_RULES.md`
 - [x] 明确 Primary / Secondary / rationale / 多世界 / 推荐系统语义门槛
 - [x] 固化后续 entry_worlds 生产变更与回归要求
+
+
+## Phase 3A — 知识图谱节点与边统一模型
+- [x] 建立 knowledge_graph_nodes 统一节点视图
+- [x] 建立 knowledge_graph_edges 统一关系视图
+- [x] 接入 entry / world / category / source / media / craft_process / timeline
+- [x] source 按公开 URL 去重并形成稳定节点 ID
+- [x] 公共媒体仅纳入 approved + verified
+- [x] graph API 接入 knowledge-store.js，可按节点类型/节点 ID读取
+- [x] 生产回归：485 nodes / 1,378 edges / 0 orphan edges
+- [x] 同步 .ai/PHASE_3A_KNOWLEDGE_GRAPH_MODEL.md 与 migration
+- [ ] Phase 3B：相关条目候选生成与可解释推荐规则
