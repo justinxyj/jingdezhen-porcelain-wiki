@@ -108,6 +108,15 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
     const byId=new Map(entries.map(e=>[e.id,e]));
     return links.map(link=>({...link,entry:byId.get(link.entry_id)})).filter(x=>x.entry).map(x=>({...x.entry,worldRole:x.role,worldRationale:x.rationale,worldOrder:x.display_order}));
   }
+  async function entryContext(entryId,{relationLimit=100}={}){
+    const id=String(entryId||'');
+    if(!/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(id))throw Object.assign(new Error('条目标识格式异常'),{code:'JDM_ENTRY_ID_CONTRACT'});
+    const relations=await query((db,s)=>db.from('entry_relations').select('entry_id,related_entry_id,relation_type,note').or('entry_id.eq.'+id+',related_entry_id.eq.'+id).order('relation_type',{ascending:true}).order('related_entry_id',{ascending:true}).limit(relationLimit).abortSignal(s));
+    const ids=[...new Set(relations.flatMap(r=>[r.entry_id,r.related_entry_id]).filter(x=>x!==id))];
+    const related=ids.length?await query((db,s)=>db.from('entries').select('id,slug,category,zh,en,ja,sources,status,version,updated_at').eq('status','published').in('id',ids).abortSignal(s)):[];
+    const byId=new Map(related.map(e=>[e.id,e]));
+    return {relations:relations.map(r=>({...r,entry:byId.get(r.entry_id===id?r.related_entry_id:r.entry_id)})).filter(r=>r.entry),related:related.length};
+  }
   async function worldOverview(worldSlug,{limit=250,featured=8}={}){
     if(!worldSlug)return null;
     const worlds=await window.JDM_CONTRACT?.worlds(await query((db,s)=>db.from('knowledge_worlds').select('slug,title,short_title,description,display_order').order('display_order',{ascending:true}).abortSignal(s)))||[];
@@ -147,5 +156,5 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
   }
   async function byCategory(category,limit=250){return list({category,limit})}
   function url(e){return e?'/jingdezhen-porcelain-wiki/entry/?type='+encodeURIComponent(e.category)+'&slug='+encodeURIComponent(e.slug):'/jingdezhen-porcelain-wiki/'}
-  window.JDM_KNOWLEDGE={all,get,list,worlds,byWorld,worldOverview,graph,recommendations,byCategory,url,state:()=>({...state}),reset:()=>{allPromise=null;cache.clear();state={status:'idle',error:null,updatedAt:null}}};
+  window.JDM_KNOWLEDGE={all,get,list,worlds,byWorld,worldOverview,entryContext,graph,recommendations,byCategory,url,state:()=>({...state}),reset:()=>{allPromise=null;cache.clear();state={status:'idle',error:null,updatedAt:null}}};
 })();
