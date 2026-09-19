@@ -11,3 +11,5 @@
 - 可靠传记、馆藏或研究资料
 
 人物评价如存在不同观点，应注明来源和时代背景。
+
+<section class="jdm-world-browser" data-world-browser="people" aria-label="知识世界条目"></section>
