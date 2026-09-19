@@ -27,14 +27,14 @@
   async function loadRelations(db,entryId){
     if(!db)return{relations:[],error:new Error('知识库连接不可用')};
     try{
-      const relationQuery=(d,s)=>d.from('entry_relations').select('entry_id,related_entry_id,relation_type,note').or(`entry_id.eq.${entryId},related_entry_id.eq.${entryId}`).limit(100).abortSignal(s); const relRes=window.JDM_AUTH?.request?await window.JDM_AUTH.request(relationQuery):await relationQuery(db,new AbortController().signal);
-      if(relRes.error)throw relRes.error;
-      const ids=[...new Set((relRes.data||[]).map(r=>r.entry_id===entryId?r.related_entry_id:r.entry_id))];
+      const relationQuery=(d,s)=>d.from('entry_relations').select('entry_id,related_entry_id,relation_type,note').or(`entry_id.eq.${entryId},related_entry_id.eq.${entryId}`).limit(100).abortSignal(s);
+      const relRows=window.JDM_AUTH?.request?await window.JDM_AUTH.request(relationQuery):await relationQuery(db,new AbortController().signal).then(r=>{if(r.error)throw r.error;return r.data||[]});
+      const ids=[...new Set(relRows.map(r=>r.entry_id===entryId?r.related_entry_id:r.entry_id))];
       if(!ids.length)return{relations:[],error:null};
-      const entryQuery=(d,s)=>d.from('entries').select('id,slug,category,zh,en,ja,sources,status,version,updated_at').eq('status','published').in('id',ids).limit(100).abortSignal(s); const entryRes=window.JDM_AUTH?.request?await window.JDM_AUTH.request(entryQuery):await entryQuery(db,new AbortController().signal);
-      if(entryRes.error)throw entryRes.error;
-      const byId=new Map((entryRes.data||[]).map(x=>[x.id,x]));
-      return{relations:(relRes.data||[]).map(r=>({...r,entry:byId.get(r.entry_id===entryId?r.related_entry_id:r.entry_id)})).filter(r=>r.entry),error:null};
+      const entryQuery=(d,s)=>d.from('entries').select('id,slug,category,zh,en,ja,sources,status,version,updated_at').eq('status','published').in('id',ids).limit(100).abortSignal(s);
+      const entryRows=window.JDM_AUTH?.request?await window.JDM_AUTH.request(entryQuery):await entryQuery(db,new AbortController().signal).then(r=>{if(r.error)throw r.error;return r.data||[]});
+      const byId=new Map(entryRows.map(x=>[x.id,x]));
+      return{relations:relRows.map(r=>({...r,entry:byId.get(r.entry_id===entryId?r.related_entry_id:r.entry_id)})).filter(r=>r.entry),error:null};
     }catch(error){return{relations:[],error}}
   }
   function renderRelationWarning(root){
