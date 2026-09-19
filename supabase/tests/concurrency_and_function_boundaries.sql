@@ -40,16 +40,22 @@ declare v_definer boolean;
 begin
   select prosecdef into v_definer
   from pg_proc p join pg_namespace n on n.oid=p.pronamespace
-  where n.nspname='public' and p.proname='is_staff'
+  where n.nspname='private' and p.proname='is_staff'
     and pg_get_function_identity_arguments(p.oid)='';
-  if not v_definer then raise exception 'is_staff must remain SECURITY DEFINER'; end if;
+  if not v_definer then raise exception 'private.is_staff must be SECURITY DEFINER'; end if;
   if not exists (
     select 1 from pg_proc p join pg_namespace n on n.oid=p.pronamespace
-    where n.nspname='public' and p.proname='is_staff'
+    where n.nspname='private' and p.proname='is_staff'
       and pg_get_function_identity_arguments(p.oid)=''
       and 'search_path=public' = any(coalesce(p.proconfig, array[]::text[]))
-  ) then raise exception 'is_staff search_path must be pinned to public'; end if;
-  if has_function_privilege('anon','public.is_staff()','EXECUTE') then raise exception 'anon must not execute is_staff'; end if;
+  ) then raise exception 'private.is_staff search_path must be pinned to public'; end if;
+  if has_function_privilege('anon','private.is_staff()','EXECUTE') then raise exception 'anon must not execute private.is_staff'; end if;
+  if not has_function_privilege('authenticated','private.is_staff()','EXECUTE') then raise exception 'authenticated RLS caller must execute private.is_staff'; end if;
+  if exists (
+    select 1 from pg_policies
+    where schemaname='public' and tablename='profiles' and cmd='UPDATE'
+      and 'authenticated' = any(roles)
+  ) then raise exception 'profiles must not expose an authenticated UPDATE policy'; end if;
 end $$;
 
 rollback;
