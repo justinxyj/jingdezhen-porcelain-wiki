@@ -1,4 +1,5 @@
 import os
+from urllib.parse import urljoin
 from playwright.sync_api import sync_playwright
 
 base=(os.environ.get("SITE_URL") or "https://justinxyj.github.io/jingdezhen-porcelain-wiki/").rstrip("/")+"/"
@@ -74,12 +75,21 @@ with sync_playwright() as p:
         first_href=browser_cards.first.get_attribute("href")
         if not first_href:
             raise RuntimeError(f"{name} first entry has no canonical href")
-        browser_cards.first.click()
-        page.locator("#wiki-entry-root").first.wait_for(state="attached",timeout=20000)
-        exits=page.locator(".wiki-entry-v2-card a, .wiki-recommendation-card, .wiki-entry-source-links a")
+        entry_target=urljoin(page.url,first_href)
+        page.goto(entry_target,wait_until="domcontentloaded",timeout=30000)
+        page.locator("#wiki-entry-root .wiki-entry-card").first.wait_for(state="visible",timeout=20000)
+        exits=page.locator(".wiki-recommendation-card, .wiki-entry-v2-relations a, .wiki-entry-explore-card")
         if exits.count()<1:
-            raise RuntimeError(f"{name} entry has no continuation exit")
-        print("PASS",name,"entries",browser_cards.count(),"entry-path")
+            raise RuntimeError(f"{name} Entry has no continuation exit")
+        second_href=exits.first.get_attribute("href")
+        if not second_href:
+            raise RuntimeError(f"{name} Entry continuation has no canonical href")
+        second_target=urljoin(page.url,second_href)
+        if "/entry/" not in second_target:
+            raise RuntimeError(f"{name} continuation does not lead to Entry: {second_target}")
+        page.goto(second_target,wait_until="domcontentloaded",timeout=30000)
+        page.locator("#wiki-entry-root .wiki-entry-card").first.wait_for(state="visible",timeout=20000)
+        print("PASS",name,"entries",browser_cards.count(),"entry-to-entry")
 
     page.goto(base+"museum/timeline/",wait_until="domcontentloaded",timeout=30000)
     titles=page.locator(".timeline-item h3").all_text_contents()
