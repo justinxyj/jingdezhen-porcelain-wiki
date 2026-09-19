@@ -57,13 +57,8 @@
       query((d,s)=>d.from('media').select('id,entry_id,path,title,source,license,creator,captured_at,location,created_at,usage_type,source_tier,is_primary,canonical_key,source_url,source_type').eq('entry_id',e.id).order('is_primary',{ascending:false}).order('source_tier',{ascending:true}).order('created_at',{ascending:true}).abortSignal(s)),
       query((d,s)=>d.from('timeline_context').select('entry_id,historical_role,relationship_to_jingdezhen,official_summary,official_image_url,official_image_credit,official_source_title,official_source_url,official_institution,source_tier,reviewed_at').eq('entry_id',e.id).limit(1).abortSignal(s))
     ]);
-    if(mediaResult.status!=='fulfilled'||ctxResult.status!=='fulfilled'){
-      const failed=[];if(mediaResult.status!=='fulfilled')failed.push('media');if(ctxResult.status!=='fulfilled')failed.push('timelineContext');
-      const error=Object.assign(new Error('条目关联数据部分加载失败'),{code:'JDM_PARTIAL_DATA',kind:'partial',failed});
-      throw error;
-    }
-    const media=window.JDM_CONTRACT.mediaList(mediaResult.value);
-    const ctx=ctxResult.value;
+    const media=window.JDM_CONTRACT.mediaList(mediaResult);
+    const ctx=ctxResult;
     return {...e,media:canonicalMedia(media),timelineContext:ctx[0]||null,dataStatus:{status:'complete',failed:[]}};
   }
   async function list({category=null,limit=250,offset=0}={}){
@@ -74,12 +69,8 @@
       query((db,s)=>db.from('media').select('id,entry_id,path,title,source,license,creator,captured_at,location,created_at,usage_type,source_tier,is_primary,canonical_key,source_url,source_type').in('entry_id',ids).order('is_primary',{ascending:false}).order('source_tier',{ascending:true}).order('created_at',{ascending:true}).order('id',{ascending:true}).abortSignal(s)),
       query((db,s)=>db.from('timeline_context').select('entry_id,historical_role,relationship_to_jingdezhen,official_summary,official_image_url,official_image_credit,official_source_title,official_source_url,official_institution,source_tier,reviewed_at').in('entry_id',ids).abortSignal(s))
     ]);
-    if(mediaResult.status!=='fulfilled'||contextResult.status!=='fulfilled'){
-      const failed=[];if(mediaResult.status!=='fulfilled')failed.push('media');if(contextResult.status!=='fulfilled')failed.push('timelineContext');
-      throw Object.assign(new Error('列表关联数据加载失败'),{code:'JDM_PARTIAL_DATA',kind:'partial',failed});
-    }
-    const media=window.JDM_CONTRACT.mediaList(mediaResult.value);
-    const contexts=contextResult.value;
+    const media=window.JDM_CONTRACT.mediaList(mediaResult);
+    const contexts=contextResult;
     const mm=new Map();media.forEach(m=>{if(!mm.has(m.entry_id))mm.set(m.entry_id,[]);mm.get(m.entry_id).push(m)});
     const cm=new Map(contexts.map(x=>[x.entry_id,x]));
     const result=rows.map(e=>({...e,media:canonicalMedia(mm.get(e.id)||[]),timelineContext:cm.get(e.id)||null}));
