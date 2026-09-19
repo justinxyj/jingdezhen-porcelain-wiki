@@ -208,3 +208,12 @@
 - Recommendation eligibility is now frozen at A+ / A. B and C remain available to the knowledge graph/exploration layer but are excluded from direct recommendations.
 - Phase 2B Semantic Freeze remains unchanged; no entry_world mapping was modified during Phase 3B closeout.
 - Phase 3B is considered complete. Further high-value relations should be handled as canonical content admission or separate product work rather than extending recommendation heuristics indefinitely.
+
+
+## 2026-09-20 — Phase 3C / Entry Detail Recommendations
+- Entry detail pages now consume the frozen `knowledge_recommendations` view through `JDM_KNOWLEDGE.recommendations()`.
+- Recommendation targets are hydrated to published entries and rendered as stable navigable cards; internal graph IDs are not exposed in the UI.
+- Each entry displays up to 8 high-confidence recommendations, with category, target title, and the stored explanation/reason.
+- Added responsive and dark-mode-compatible styling plus graceful recommendation-load failure handling.
+- Phase 3B remains closed; no recommendation eligibility rules or World mappings were changed in Phase 3C.
+- Deployment/browser smoke remains the final verification step.
