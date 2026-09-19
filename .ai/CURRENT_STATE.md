@@ -375,3 +375,12 @@
 - 修复 Atlas 辅助查询字段错误，并让 media / timeline_context 失败时降级，不再阻断核心知识条目渲染。
 - canonical era 边界统一为 1840–1948 近代、1949 起现代；公开时代标签为唐五代 / 宋 / 元 / 明 / 清 / 近代 / 现代。
 - Phase 4E-4 仍处于“修复后待线上回归”状态，不能视为已封版。
+
+## 2026-09-20 — Phase 4E-4 Closeout / Phase 4E-5 Start
+- Phase 4E-4 人物数据库 2.0 正式收口。
+- 人物时代体系：唐五代 / 宋 / 元 / 明 / 清 / 近代 / 现代；近代 1840–1948，1949 起现代。
+- 公开人物：51 published；era_group 缺失 0。
+- Phase 4E-5 已启动：72 道工序继续以 craft_processes 为 canonical 主数据源。
+- 新增 craftProcesses() / craftProcessContext()，把工序与上下游、材料、技术作用、产出、时代及已有 Entry 关系接入统一知识发现层。
+- 当前生产工艺基线：72 craft_processes / 289 entry_craft_processes / 71 craft_process_relations。
+- Phase 4E-5 尚待 Pages browser smoke，不能视为最终封版。
