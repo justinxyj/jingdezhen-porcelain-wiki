@@ -14,7 +14,7 @@
     allPromise=(async()=>{
       const db=client();if(!db)return[];
       const {data:entries,error:e}=await db.from('entries').select('id,slug,category,zh,en,ja,sources,status,version,updated_at').eq('status','published').order('updated_at',{ascending:false});if(e)throw e;
-      const {data:media,error:me}=await db.from('media').select('id,entry_id,path,title,source,license,creator,status,created_at,usage_type,source_tier,is_primary,verification_note,verified_at').eq('status','approved').order('is_primary',{ascending:false}).order('source_tier',{ascending:true}).order('created_at',{ascending:true});if(me)throw me;
+      const {data:media,error:me}=await db.from('media').select('id,entry_id,path,title,source,license,creator,status,review_state,created_at,usage_type,source_tier,is_primary,verification_note,verified_at').eq('status','approved').eq('review_state','verified').order('is_primary',{ascending:false}).order('source_tier',{ascending:true}).order('created_at',{ascending:true});if(me)throw me;
       let contexts=[];const ctxRes=await db.from('timeline_context').select('entry_id,historical_role,relationship_to_jingdezhen,official_summary,official_image_url,official_image_credit,official_source_title,official_source_url,official_institution,source_tier,reviewed_at').order('source_tier',{ascending:true});if(!ctxRes.error)contexts=ctxRes.data||[];
       const mm=new Map();(media||[]).forEach(m=>{if(!mm.has(m.entry_id))mm.set(m.entry_id,[]);mm.get(m.entry_id).push(m)});
       const cm=new Map((contexts||[]).map(c=>[c.entry_id,c]));
