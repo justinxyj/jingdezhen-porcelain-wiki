@@ -35,6 +35,12 @@
 - 关系读取实测可用：anon 对 blue-and-white 可读取 30 条关系。
 - G29 的 Met 条目目前有 1 条媒体记录但 review_state=pending，因此按新规则不会公开显示，符合审核门槛。
 
+## 第二轮验收新增发现
+- `museum-images.js` 仍存在针对 Met 42490 图片的旧硬编码拦截；已删除，避免再次把合法馆藏图当作占位图屏蔽。
+- 72 道工序页面此前使用前端硬编码的 72 个名称/描述，与生产 `craft_processes` 表存在双份数据源风险。
+- 已将 `technology-tree.js` 改为从生产 `craft_processes` 读取 72 道工序；只有 `image_status=verified` 时才使用数据库图片，待审核工序继续使用明确标注的阶段代表图。
+- 已实测 anon 可读取生产 `craft_processes` 72 条。
+
 ## 当前重点
 1. 完成 CI / Pages 实时核验。
 2. 继续复核 /entry/、时间轴、器物目录、人物页、图片库的真实行为。
