@@ -17,10 +17,29 @@
     const root=document.getElementById('people-list');if(!root)return;
     root.innerHTML=entries.map(e=>{const im=e.media?.[0],m=meta(e);return `<a class="person-card wiki-card-link" href="${entryUrl(e)}">${im?`<div class="person-card-image"><img data-museum-image="1" src="${esc(im.path)}" alt="${esc(im.title||e.zh?.title||'人物图片')}" loading="lazy"></div>`:''}${m.era||m.period?`<div class="tag">${esc(m.era||m.period)}</div>`:''}<h3>${esc(e.zh?.title||'未命名人物')}</h3><strong>${esc(m.role||'人物')}</strong><p>${esc(text(e))}</p><span class="wiki-read-more">查看人物条目 →</span></a>`}).join('')||'<div class="notice">暂无人物内容。</div>';
   }
+  function timelineSortKey(e){
+    const title=String(e?.zh?.title||'');
+    const metaInfo=meta(e);
+    const timeline=Array.isArray(metaInfo.timeline)?metaInfo.timeline:[];
+    const era=timeline[0]?.era||'';
+    const eraRank={tang:10,song:20,yuan:30,ming:40,qing:50,modern:60};
+    const yearMatch=title.match(/(\\d{3,4})/);
+    const year=yearMatch?Number(yearMatch[1]):999999;
+    // 时代字段用于解决古代节点没有数字年份的问题；同一时代再按标题中的起始年份排序。
+    // “东晋—唐”与“五代—宋”都归入早期阶段，但前者必须先于后者。
+    if(/东晋/.test(title))return [0,0,title];
+    if(/五代/.test(title))return [1,0,title];
+    if(year<999999)return [eraRank[era]??55,year,title];
+    return [eraRank[era]??55,500000,title];
+  }
   function renderTimeline(entries){
     const root=document.getElementById('timeline');if(!root)return;
-    const rows=entries.filter(e=>meta(e).kind==='history').sort((a,b)=>String(meta(a).period||'').localeCompare(String(meta(b).period||''),'zh-CN'));
-    root.innerHTML=`<div class="timeline">${rows.map(e=>`<a class="timeline-item timeline-link" href="${entryUrl(e)}"><div class="timeline-year">${esc(meta(e).period||'')}</div><h3>${esc(e.zh?.title||'未命名节点')}</h3><p>${esc(text(e))}</p><span class="wiki-read-more">打开详情 →</span></a>`).join('')}</div>`;
+    const rows=entries.filter(e=>meta(e).kind==='history').sort((a,b)=>{
+      const ka=timelineSortKey(a),kb=timelineSortKey(b);
+      for(let i=0;i<2;i++){if(ka[i]!==kb[i])return ka[i]-kb[i]}
+      return ka[2].localeCompare(kb[2],'zh-CN');
+    });
+    root.innerHTML=`<div class="timeline">${rows.map(e=>`<a class="timeline-item timeline-link" href="${entryUrl(e)}"><div class="timeline-year">${esc(meta(e).period||String(e.zh?.title||'').match(/\\d{3,4}(?:[—–-]\\d{3,4})?/u)?.[0]||'')}</div><h3>${esc(e.zh?.title||'未命名节点')}</h3><p>${esc(text(e))}</p><span class="wiki-read-more">打开详情 →</span></a>`).join('')}</div>`;
   }
   function renderError(root,error){
     if(!root)return;
