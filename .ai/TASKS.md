@@ -55,7 +55,6 @@
 - [x] 第三轮：加强 72 工序与窑址地图移动端布局
 - [ ] 第三轮：取得可用浏览器/截图能力后完成上线网页像素级验收
 
-
 - [x] 第三轮：修复用户实测的大量 The Met 图片破损问题（运行时对象 API + Commons 恢复 + 动态图片监听）
 - [x] 第三轮：清除静态页面残留的内部 cite 标记
 - [ ] 第三轮：等待最新图片修复版本部署后，重新按截图场景验收器物目录与详情弹窗
@@ -65,10 +64,8 @@
 - [x] 第三轮：修复首页源码按钮 404（edit_uri + 首页隐藏）
 - [ ] 第三轮：部署后复测首页三项问题
 
-
 - [x] 第三轮：修复历史时间轴按数据库更新时间排序导致的年代倒序
 - [x] 第三轮：历史时间轴按时代与起始年份排序，“东晋—唐”第一，“五代—宋”第二，1909/1949/2002/2026 等近现代节点置后
-
 
 ## 新一轮审计修复
 - [x] H-1 认证过期错误统一为 AUTH_EXPIRED / 401
@@ -82,7 +79,6 @@
 - [x] M-6 关系稳定排序、去重、截断提示
 - [x] M-7 核心查询 EXPLAIN + 生产索引验证
 - [ ] M-4 浏览器核心 JS 全量迁移 TypeScript（当前不作为阻塞项，现阶段保留 JS + strict contract）
-
 
 ## 本轮审计
 - [x] S1 核验并统一最终 media 公共访问架构
@@ -98,7 +94,6 @@
 - [x] M4 动态 HTML 安全边界
 - [x] M5 外部图片生命周期/负缓存
 
-
 ## Wiki 2.0 全站改造
 - [x] 完成《Wiki 2.0 最终信息架构蓝图》
 - [x] 完成《Wiki 2.0 全站改造施工清单》并固化到 .ai/WIKI_2.0_CONSTRUCTION_PLAN.md
@@ -109,8 +104,6 @@
 - [ ] Sprint E：补全知识关系网络
 - [ ] Sprint F：旧入口清理、视觉统一与全站发布验收
 
-
-
 ### Sprint A — 导航与首页重构
 - [x] 顶部导航改为“探索景德镇 / 数字博物馆 / 知识网络”三层结构
 - [x] 首页加入七大知识世界入口
@@ -118,18 +111,23 @@
 - [x] 新增知识网络总览 / 关系探索 / 全球陶瓷网络入口
 - [ ] Sprint A：MkDocs strict / Pages smoke / 移动端回归验收（当前修复中：上一轮 QA 误报网络页面路径）
 
+### Sprint B
+- [x] 建立七大知识世界独立数据层
+- [x] 149 个已发布条目全部挂载 primary world
+- [x] 建立 secondary cross-world mappings
+- [x] 7 个世界入口接入动态条目浏览器
+- [x] Phase 2：第一轮语义审校
+- [x] Phase 2B：第一轮深层语义清洗（395 → 372）
+- [x] Phase 2C：人物→历史、全球窑址→历史边界深审（并入连续 Phase 2B 记录）
+- [x] Phase 2B 深层语义续审：生产 323 mappings（149 primary + 174 secondary）
+- [x] Phase 2B：人物→研究/工艺边界逐条审校
+- [x] Phase 2B：文献→器物/工艺/空间边界逐条审校
+- [x] Phase 2B：全球窑址→研究边界逐条审校
+- [x] Phase 2B：历史→器物/空间边界逐条审校
+- [ ] Phase 2B：映射冻结前总体验收与知识图谱/推荐系统可解释入口语义规则
+- [ ] Phase 3：知识图谱与相关条目
 
-- [x] Sprint B：建立七大知识世界独立数据层
-- [x] Sprint B：149 个已发布条目全部挂载 primary world
-- [x] Sprint B：建立 secondary cross-world mappings
-- [x] Sprint B：7 个世界入口接入动态条目浏览器
-- [x] Sprint B Phase 2：第一轮语义审校
-- [x] Sprint B Phase 2B：第一轮深层语义清洗（395 → 372）
-- [x] Sprint B Phase 2C：人物→历史、全球窑址→历史边界深审（已并入当前 Phase 2B 连续审校记录）
-- [x] Sprint B Phase 2B 深层语义续审：当前生产 323 mappings（149 primary + 174 secondary）
-- [ ] Sprint B Phase 2B 深层语义续审：完成人物→研究/工艺边界
-- [ ] Sprint B Phase 2B 深层语义续审：完成文献→器物/工艺/空间边界
-- [ ] Sprint B Phase 2B 深层语义续审：完成全球窑址→研究边界
-- [ ] Sprint B Phase 2B 深层语义续审：完成历史→器物/空间边界
-- [ ] Sprint B Phase 2B：建立知识图谱/推荐系统可解释的入口语义规则
-- [ ] Sprint B Phase 3：知识图谱与相关条目
+## Phase 2B 最新生产回归
+- 当前：149 published / 149 primary / 167 secondary / 316 total mappings
+- 重复 entry-world 边：0
+- primary cardinality anomalies：0
