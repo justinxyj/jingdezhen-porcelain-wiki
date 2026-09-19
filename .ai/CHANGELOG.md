@@ -311,3 +311,12 @@
 - 地点详情从单一“查看详情”升级为 Entry / 全球网络 / 统一搜索三路继续探索。
 - 未修改生产窑址事实、World mappings、entry_relations 或 recommendation gate。
 - 加入统一空间发现说明与响应式样式。
+
+
+## 2026-09-20 — Phase 4E-3 / 器物图谱 2.0
+- 器物图谱从单纯馆藏卡片升级为知识发现入口。
+- 新增 objectAtlas 聚合层：世界、关系、工艺、时代、空间。
+- 器物卡片可继续发现人物、窑址、文献、工艺，并进入统一知识条目与全球网络。
+- 增加时代 / 工艺 / 器物类型筛选及匹配数量。
+- 未修改生产器物事实、World mappings、entry_relations 或 recommendation gate。
+- 用户界面全部采用中文知识发现术语。
