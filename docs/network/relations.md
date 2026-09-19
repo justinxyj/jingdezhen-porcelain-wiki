@@ -11,9 +11,9 @@
 
 <div class="network-explorer" id="jdm-network-explorer">
   <div class="network-toolbar" role="search">
-    <a class="network-unified-search" href="/jingdezhen-porcelain-wiki/search/">⌕ 统一搜索 Entry</a>
+    <a class="network-unified-search" href="/jingdezhen-porcelain-wiki/search/">⌕ 统一搜索知识条目</a>
     <label class="network-search">
-      <span>搜索 Entry 知识节点</span>
+      <span>搜索知识节点</span>
       <input id="network-search-input" type="search" placeholder="例如：唐英、青花、御窑厂、郎廷极" autocomplete="off">
     </label>
     <label class="network-filter">
@@ -51,7 +51,7 @@
       <div class="network-empty">
         <span>SELECT A NODE</span>
         <h3>点击一个节点</h3>
-        <p>查看它连接到哪些知识，并从这里进入统一 Entry Detail 页面。</p>
+        <p>查看它连接到哪些知识，并从这里进入统一知识条目页面。</p>
       </div>
     </aside>
   </div>
