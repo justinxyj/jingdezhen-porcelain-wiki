@@ -1,7 +1,8 @@
 /* Timeline interaction: each historical card opens one detail modal. */
 (function(){
   const esc=s=>String(s??'').replace(/[&<>\"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[m]));
-  const text=s=>{const d=document.createElement('div');d.innerHTML=String(s||'');return d.textContent||d.innerText||''};
+  const text=s=>{const parsed=new DOMParser().parseFromString(String(s||''),'text/html');return parsed.body.textContent||''};
+  const safeHref=raw=>window.JDM_AUTH?.safeHref?.(raw)||'';
   function validMedia(e){
     const m=e?.media?.[0];
     if(!m)return null;
@@ -26,11 +27,24 @@
     return bySlug;
   }
   function open(e){
-    const m=e.zh?.meta||{},im=validMedia(e),wikiTitle=m.wikiTitle||e.zh?.title||e.slug,source=(e.sources||[]).find(x=>x&&typeof x==='object'&&x.url)?.url||'';
+    const m=e.zh?.meta||{},im=validMedia(e),wikiTitle=m.wikiTitle||e.zh?.title||e.slug,source=safeHref((e.sources||[]).find(x=>x&&typeof x==='object'&&x.url)?.url||''),wikiHref=safeHref('https://zh.wikipedia.org/w/index.php?search='+encodeURIComponent(wikiTitle));
     document.querySelectorAll('.jdm-timeline-modal').forEach(x=>x.remove());
     const modal=document.createElement('div');modal.className='jdm-timeline-modal is-open';
-    modal.innerHTML=`<div class="jdm-timeline-backdrop"></div><article class="jdm-timeline-dialog"><button class="jdm-timeline-close" aria-label="关闭">×</button><div class="jdm-timeline-detail">${im?`<div class="jdm-timeline-image"><img data-museum-image="1" src="${esc(im.path)}" alt="${esc(im.title||e.zh?.title||e.slug)}"></div>`:''}<div class="jdm-timeline-copy"><div class="detail-overline">历史节点</div><h3>${esc(e.zh?.title||e.slug)}</h3><div class="detail-meta">${m.period?`<span>${esc(m.period)}</span>`:''}${m.map?.country?`<span>${esc(m.map.country)}</span>`:''}</div><p>${esc(text(e.zh?.content||''))}</p>${e.zh?.summary?`<div class="ai-summary"><b>简介</b><p>${esc(text(e.zh.summary))}</p></div>`:''}<div class="jdm-timeline-actions">${source?`<a class="secondary" href="${esc(source)}" target="_blank" rel="noopener">来源 ↗</a>`:''}<a class="secondary" href="https://zh.wikipedia.org/w/index.php?search=${encodeURIComponent(wikiTitle)}" target="_blank" rel="noopener">维基百科 ↗</a></div></div></div></article></div>`;
-    document.body.appendChild(modal);document.body.classList.add('jdm-timeline-open');
+    const backdrop=document.createElement('div');backdrop.className='jdm-timeline-backdrop';
+    const dialog=document.createElement('article');dialog.className='jdm-timeline-dialog';
+    const closeButton=document.createElement('button');closeButton.className='jdm-timeline-close';closeButton.type='button';closeButton.setAttribute('aria-label','关闭');closeButton.textContent='×';
+    const detail=document.createElement('div');detail.className='jdm-timeline-detail';
+    if(im){const wrap=document.createElement('div');wrap.className='jdm-timeline-image';const img=document.createElement('img');img.dataset.museumImage='1';img.src=safeHref(im.path)||im.path;img.alt=String(im.title||e.zh?.title||e.slug);wrap.appendChild(img);detail.appendChild(wrap)}
+    const copy=document.createElement('div');copy.className='jdm-timeline-copy';
+    const overline=document.createElement('div');overline.className='detail-overline';overline.textContent='历史节点';copy.appendChild(overline);
+    const title=document.createElement('h3');title.textContent=String(e.zh?.title||e.slug);copy.appendChild(title);
+    const meta=document.createElement('div');meta.className='detail-meta';if(m.period){const s=document.createElement('span');s.textContent=String(m.period);meta.appendChild(s)}if(m.map?.country){const s=document.createElement('span');s.textContent=String(m.map.country);meta.appendChild(s)}copy.appendChild(meta);
+    const p=document.createElement('p');p.textContent=text(e.zh?.content||'');copy.appendChild(p);
+    if(e.zh?.summary){const box=document.createElement('div');box.className='ai-summary';const b=document.createElement('b');b.textContent='简介';const sp=document.createElement('p');sp.textContent=text(e.zh.summary);box.append(b,sp);copy.appendChild(box)}
+    const actions=document.createElement('div');actions.className='jdm-timeline-actions';
+    if(source){const a=document.createElement('a');a.className='secondary';a.href=source;a.target='_blank';a.rel='noopener noreferrer';a.textContent='来源 ↗';actions.appendChild(a)}
+    if(wikiHref){const a=document.createElement('a');a.className='secondary';a.href=wikiHref;a.target='_blank';a.rel='noopener noreferrer';a.textContent='维基百科 ↗';actions.appendChild(a)}
+    copy.appendChild(actions);detail.appendChild(copy);dialog.append(closeButton,detail);modal.append(backdrop,dialog);document.body.appendChild(modal);document.body.classList.add('jdm-timeline-open');
     const close=()=>{modal.remove();document.body.classList.remove('jdm-timeline-open')};
     modal.querySelector('.jdm-timeline-close').onclick=close;modal.querySelector('.jdm-timeline-backdrop').onclick=close;
     const onKey=ev=>{if(ev.key==='Escape'){close();document.removeEventListener('keydown',onKey)}};document.addEventListener('keydown',onKey);
