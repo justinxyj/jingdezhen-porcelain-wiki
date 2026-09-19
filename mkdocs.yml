@@ -55,6 +55,7 @@ extra_css:
   - stylesheets/world-browser.css
   - stylesheets/network-explorer.css
   - stylesheets/entry-search.css
+  - stylesheets/global-network.css
 extra_javascript:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
   - javascripts/runtime-config.js
@@ -64,6 +65,7 @@ extra_javascript:
   - javascripts/data-contract.js
   - javascripts/knowledge-store.js
   - javascripts/entry-search.js
+  - javascripts/global-network.js
   - javascripts/world-browser.js
   - javascripts/network-explorer.js
   - javascripts/museum.js
