@@ -104,3 +104,14 @@
 - SECURITY DEFINER：handle_new_user / review_edit 已撤销 public/anon/authenticated EXECUTE；is_staff 必须继续 SECURITY DEFINER，否则 profiles_staff_select 会导致 RLS 递归，因此该安全边界保留并固定 search_path。
 - M-4：TypeScript 数据库/错误/时间轴契约已加强，tsconfig 开启 strict/noImplicitAny/strictNullChecks；当前仍是“类型契约层”，不是整套浏览器 JS 已迁移为 TS。
 - Pages smoke 增加 unhandledrejection 检测及时间轴前两节点顺序断言。
+
+
+## 2026-09-19 — S1/S2/H1-H5/M1-M5 审计修复
+- S1 经生产实时核验后，确认当前最终架构不是 media_public view，而是 public.media 的列级匿名 SELECT + RLS；anon 表级 SELECT 被撤销，但安全公开列拥有 column grant，因此直接查询 media 是可用且已通过线上 ACL smoke。knowledge-store 保持直接 media 查询并与生产最终架构一致，不重新引入已验证不可稳定访问的 media_public view。
+- S2 新增 canonical public ACL migration：明确 media 仅 approved+verified 可公开，anon 不可读 revisions/edits/favorites/profiles，敏感媒体字段无 anon column grant；新增 public_acl_snapshot.sql。
+- H1 馆长后台已按当前生产 schema 重写，不再查询不存在的 confidence/editorial_status/reviewed_at/verification_status 字段或 sources 表；来源从 entries.sources JSONB 派生。
+- H2 详情关系查询统一走 JDM_AUTH.request，不再创建第二个 Supabase client/fallback 请求层。
+- H3 museum/wiki/timeline 重试初始化加入序列号/observer 清理，避免旧请求覆盖新结果；site-privacy observer 改为单例。
+- H4 公共知识查询继续采用服务端分页和稳定排序；后续可进一步拆分列表字段与详情字段。
+- H5 PR 校验不再依赖生产 Supabase；生产 ACL smoke 移到 main/post-deploy 路径。
+- M1 核心浏览器 JS 开始启用 checkJs，另保留严格 TS contract config。
