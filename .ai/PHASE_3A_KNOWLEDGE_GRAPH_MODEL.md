@@ -48,3 +48,6 @@ docs/javascripts/knowledge-store.js 新增 JDM_KNOWLEDGE.graph({nodeType,nodeId,
 
 ## 本阶段不做
 不做黑盒推荐、不改变 316 条冻结 mapping、不修改原始 entry_relation。
+
+## Phase 3B-2 推荐质量结论
+知识图谱中的“存在路径”不等于“应该推荐”。共享 World 与共享工艺流程目前只适合作为探索/图谱导航关系，不直接进入相关推荐；相关推荐优先消费有明确 entry-specific 证据的直接关系。
