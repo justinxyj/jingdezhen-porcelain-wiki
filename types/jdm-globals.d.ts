@@ -30,6 +30,8 @@ declare global {
       worldOverview(worldSlug: string, options?: { limit?: number; featured?: number }): Promise<unknown>;
       entryContext(entryId: string, options?: { relationLimit?: number }): Promise<{relations: any[]; related: number; error?: unknown}>;
       entryNetworkContext(entryId: string, options?: { timelineLimit?: number; spaceLimit?: number }): Promise<unknown>;
+      craftProcesses(options?: { limit?: number }): Promise<any[]>;
+      craftProcessContext(processId: string, options?: { entryLimit?: number; relationLimit?: number }): Promise<any>;
       objectAtlas(options?: { limit?: number }): Promise<unknown[]>;
       personAtlas(options?: { limit?: number }): Promise<unknown[]>;
       graph(options?: { nodeType?: string | null; nodeId?: string | null; limit?: number; edgeLimit?: number; includeEdges?: boolean }): Promise<unknown>;
