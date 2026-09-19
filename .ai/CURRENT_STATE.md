@@ -183,3 +183,12 @@
 - source 已覆盖 entry / media / craft_process / timeline 的公开来源并按 URL 去重。
 - 生产公共媒体仍严格遵守 approved + verified；内部候选媒体不进入图谱。
 - Phase 3A 已完成“统一模型 + 网站可调用接口”；下一阶段进入 Phase 3B 相关条目候选与可解释推荐。
+
+## 2026-09-19 — Phase 3B / 相关条目候选生成与可解释推荐
+- Phase 3A 图谱基础保持：485 nodes / 1,378 edges / 0 orphan edges。
+- 新增 knowledge_recommendations：从直接关系、共享 World、共享工艺流程生成可解释候选。
+- 当前生产候选总量 12,140 条；不是 12,140 个最终推荐，而是供页面按 entry 再筛选的候选池。
+- 直接关系优先；共享 primary World 次之；共享 secondary World/共享工艺作为较弱桥接。
+- 每条推荐带 reason + weight，避免“只给你一个相关条目但说不清为什么”。
+- knowledge-store.js 新增 JDM_KNOWLEDGE.recommendations(entryId,{limit})。
+- 下一步：Phase 3B 推荐质量人工审校与详情页 UI 接入；随后再进入 Phase 3C 更复杂的多跳知识路径。
