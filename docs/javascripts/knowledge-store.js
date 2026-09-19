@@ -38,6 +38,18 @@
     if(error){console.warn('[JDM craft process relations]',error);return[]}
     return data||[];
   }
+  async function craftMediaCandidates(processId){
+    const db=client();if(!db||!processId)return[];
+    const {data,error}=await db.from('craft_media_candidates').select('id,process_id,image_url,source_url,source_type,source_tier,title,creator,license,match_scope,review_status,note').eq('process_id',processId).order('source_tier',{ascending:true});
+    if(error){console.warn('[JDM craft media candidates]',error);return[]}
+    return data||[];
+  }
+  async function timelineMediaCandidates(entryId){
+    const db=client();if(!db||!entryId)return[];
+    const {data,error}=await db.from('timeline_media_candidates').select('id,entry_id,image_url,source_url,source_type,source_tier,title,creator,license,review_status,note').eq('entry_id',entryId).order('source_tier',{ascending:true});
+    if(error){console.warn('[JDM timeline media candidates]',error);return[]}
+    return data||[];
+  }
   async function entryCraftProcesses(entryId){
     const db=client();if(!db||!entryId)return[];
     const {data,error}=await db.from('entry_craft_processes').select('entry_id,process_id,relation_type,note,source_url,source_institution,source_tier,reviewed_at').eq('entry_id',entryId);
@@ -47,5 +59,5 @@
   async function get(slug){const hit=cache.get(slug);if(hit)return hit;return(await all()).find(e=>e.slug===slug)||null}
   async function byCategory(category){return(await all()).filter(e=>e.category===category)}
   function url(e){return e?`/jingdezhen-porcelain-wiki/entry/?type=${encodeURIComponent(e.category)}&slug=${encodeURIComponent(e.slug)}`:'/jingdezhen-porcelain-wiki/'}
-  window.JDM_KNOWLEDGE={all,get,byCategory,url,craftProcesses,craftProcessRelations,entryCraftProcesses,reset:()=>{allPromise=null;processPromise=null;cache.clear()}};
+  window.JDM_KNOWLEDGE={all,get,byCategory,url,craftProcesses,craftProcessRelations,craftMediaCandidates,timelineMediaCandidates,entryCraftProcesses,reset:()=>{allPromise=null;processPromise=null;cache.clear()}};
 })();
