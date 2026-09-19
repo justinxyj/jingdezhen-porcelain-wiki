@@ -28,3 +28,6 @@
 ## 文献库
 
 - [核心文献与在线资料](sources.md)
+
+
+<section class="jdm-world-browser" data-world-browser="research" aria-label="知识世界条目"></section>
