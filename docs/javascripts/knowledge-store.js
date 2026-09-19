@@ -155,6 +155,23 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
     return {nodes,edges};
   }
   let searchIndexPromise=null;
+  function eraGroupFor(e,t=null){
+    const m=e?.zh?.meta||{}, raw=String(t?.era||m.era_group||m.era||m.period||'').trim();
+    const title=String(e?.zh?.title||'');
+    const yearMatch=title.match(/(1[89]\\d{2}|20\\d{2})/);
+    const year=yearMatch?Number(yearMatch[1]):null;
+    if(raw==='tang'||/唐/.test(raw))return 'tang';
+    if(raw==='song'||/宋/.test(raw))return 'song';
+    if(raw==='yuan'||/元/.test(raw))return 'yuan';
+    if(raw==='ming'||/明/.test(raw))return 'ming';
+    if(raw==='qing'||/清/.test(raw)||/18世纪/.test(raw))return 'qing';
+    if(raw==='near-modern'||/近代|近现代|民国|19世纪|20世纪初/.test(raw))return 'near-modern';
+    if(raw==='modern'||/现代/.test(raw)||/20世纪/.test(raw))return (year&&year>=1911&&year<=1948)?'near-modern':'modern';
+    if(year&&year>=1911&&year<=1948)return 'near-modern';
+    if(year&&year>=1949)return 'modern';
+    return raw;
+  }
+
   async function searchEntries(term,{limit=20,category=null,worldSlug=null,era=null,lane=null,hasMap=null,hasTimeline=null}={}) {
     const q=String(term||'').trim().toLowerCase();
     if(!searchIndexPromise){
@@ -163,7 +180,7 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
     const rows=await searchIndexPromise;
     let candidates=rows;
     if(category)candidates=candidates.filter(e=>String(e.category||'')===String(category));
-    if(era)candidates=candidates.filter(e=>Array.isArray(e.zh?.meta?.timeline)&&e.zh.meta.timeline.some(x=>x?.era===era));
+    if(era)candidates=candidates.filter(e=>{const t=Array.isArray(e.zh?.meta?.timeline)?e.zh.meta.timeline:[];return t.some(x=>eraGroupFor(e,x)===era)||eraGroupFor(e)===era;});
     if(lane)candidates=candidates.filter(e=>Array.isArray(e.zh?.meta?.timeline)&&e.zh.meta.timeline.some(x=>x?.lane===lane));
     if(hasTimeline!==null&&hasTimeline!==undefined)candidates=candidates.filter(e=>Array.isArray(e.zh?.meta?.timeline)&&e.zh.meta.timeline.length>0===Boolean(hasTimeline));
     if(hasMap!==null&&hasMap!==undefined)candidates=candidates.filter(e=>Boolean(e.zh?.meta?.map?.lat!=null&&e.zh?.meta?.map?.lng!=null)===Boolean(hasMap));
@@ -219,7 +236,7 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
       mapped:entries.filter(e=>e.zh?.meta?.map?.lat!=null&&e.zh?.meta?.map?.lng!=null).length,
       timed:entries.filter(e=>Array.isArray(e.zh?.meta?.timeline)&&e.zh.meta.timeline.length).length
     };
-    const results=await Promise.all(entries.slice(0,Math.max(1,Math.min(24,Number(limit)||12))).map(async e=>({...e,worlds:worldByEntry.get(e.id)||[],recommendations:await recommendations(e.id,{limit:recommendationLimit}),discovery:{score:0,hasMap:Boolean(e.zh?.meta?.map?.lat!=null&&e.zh?.meta?.map?.lng!=null),hasTimeline:Boolean(Array.isArray(e.zh?.meta?.timeline)&&e.zh.meta.timeline.length),eras:[...new Set((e.zh?.meta?.timeline||[]).map(x=>x?.era).filter(Boolean))],lanes:[...new Set((e.zh?.meta?.timeline||[]).map(x=>x?.lane).filter(Boolean))]}})));
+    const results=await Promise.all(entries.slice(0,Math.max(1,Math.min(24,Number(limit)||12))).map(async e=>({...e,worlds:worldByEntry.get(e.id)||[],recommendations:await recommendations(e.id,{limit:recommendationLimit}),discovery:{score:0,hasMap:Boolean(e.zh?.meta?.map?.lat!=null&&e.zh?.meta?.map?.lng!=null),hasTimeline:Boolean(Array.isArray(e.zh?.meta?.timeline)&&e.zh.meta.timeline.length),eras:[...new Set(((e.zh?.meta?.timeline||[]).map(x=>eraGroupFor(e,x)).filter(Boolean).length?((e.zh?.meta?.timeline||[]).map(x=>eraGroupFor(e,x)).filter(Boolean)):[eraGroupFor(e)]).filter(Boolean))],lanes:[...new Set((e.zh?.meta?.timeline||[]).map(x=>x?.lane).filter(Boolean))]}})));
     return {results,total:entries.length,facets};
   }
   async function searchDiscovery(term,options={}) {
@@ -256,9 +273,9 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
     });
     craftEdges.forEach(r=>{const id=r.source_node_id;if(!craftsByPerson.has(id))craftsByPerson.set(id,[]);const node=crafts.get(r.target_node_id);if(node)craftsByPerson.get(id).push({...node,rationale:r.rationale})});
     const peopleByEra=new Map();
-    people.forEach(e=>{const era=String(e.zh?.meta?.era||e.zh?.meta?.period||'').trim();if(!era)return;if(!peopleByEra.has(era))peopleByEra.set(era,[]);peopleByEra.get(era).push(e)});
+    people.forEach(e=>{const era=eraGroupFor(e);if(!era)return;if(!peopleByEra.has(era))peopleByEra.set(era,[]);peopleByEra.get(era).push(e)});
     return people.map(e=>{
-      const m=e.zh?.meta||{}, rel=relationsByPerson.get(e.id)||[], era=String(m.era||m.period||'').trim();
+      const m=e.zh?.meta||{}, rel=relationsByPerson.get(e.id)||[], era=eraGroupFor(e);
       const works=rel.filter(r=>r.target?.category==='器物').map(r=>r.target);
       const kilns=rel.filter(r=>r.target?.category==='窑址').map(r=>r.target);
       const documents=rel.filter(r=>r.target?.category==='文献').map(r=>r.target);
