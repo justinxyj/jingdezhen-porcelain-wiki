@@ -32,8 +32,8 @@
 - [x] 核验 Pages 部署可观察性
 - [x] 对齐公共媒体前端审核门槛：只加载 approved + verified
 - [x] 数据库层阻止普通用户伪造 approved/verified 媒体
-- [x] 公共媒体改走列最小化的 media_public 视图
-- [ ] 对齐 schema / migration / frontend data contract
+- [x] 公共媒体改为列最小化的 `media` 直读 + RLS，避免公开内部审核字段
+- [x] 对齐 schema / migration / frontend data contract
 - [x] 修复 knowledge-store API 异常静默空数组
 - [x] 详情页改为定向 entry + 有上限关系查询
 - [x] 外部图片恢复增加超时、有限重试、缓存与并发上限
@@ -64,3 +64,7 @@
 - [x] 第三轮：放大首页自定义品牌文字
 - [x] 第三轮：修复首页源码按钮 404（edit_uri + 首页隐藏）
 - [ ] 第三轮：部署后复测首页三项问题
+
+
+- [x] 第三轮：修复历史时间轴按数据库更新时间排序导致的年代倒序
+- [x] 第三轮：历史时间轴按时代与起始年份排序，“东晋—唐”第一，“五代—宋”第二，1909/1949/2002/2026 等近现代节点置后
