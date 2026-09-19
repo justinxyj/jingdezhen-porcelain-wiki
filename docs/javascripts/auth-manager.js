@@ -3,6 +3,7 @@
 (function(){
   let client=null;
   let authSubscription=null;
+  let refreshPromise=null;
   let authState={status:'unknown',session:null,user:null,lastEvent:null};
 
   function normalizeError(error){
@@ -38,10 +39,14 @@
   }
   async function user(){const s=await session();return s?.user||null}
   async function refresh(){
-    const db=getClient();
-    const {data,error}=await db.auth.refreshSession();
-    if(error)throw normalizeError(error);
-    return data.session||null;
+    if(refreshPromise)return refreshPromise;
+    refreshPromise=(async()=>{
+      const db=getClient();
+      const {data,error}=await db.auth.refreshSession();
+      if(error)throw normalizeError(error);
+      return data.session||null;
+    })().finally(()=>{refreshPromise=null});
+    return refreshPromise;
   }
   function authExpired(cause){
     const e=new Error('登录状态已失效，请重新登录');
