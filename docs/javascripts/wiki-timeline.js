@@ -1,7 +1,7 @@
 /* Phase 4E — unified museum timeline: time is a filterable discovery layer, not a separate content island. */
 (function(){
   const esc=s=>String(s??'').replace(/[&<>\"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[m]));
-  const eras=[['tang','唐','618–907','成熟白瓷、青瓷体系形成与跨区域交流'],['song','宋','960–1279','多窑系并立，器物审美与技术高度分化'],['yuan','元','1271–1368','青花与全球贸易网络发生关键变化'],['ming','明','1368–1644','御窑制度、青花与彩瓷体系高度发展'],['qing','清','1644–1911','粉彩、珐琅彩、颜色釉与全球消费市场扩张'],['near-modern','近代','1911–1948','传统手工业、近代企业、教育与技术转型'],['modern','现代','1949–至今','科技、教育科研、艺术陶瓷与当代全球设计体系']];
+  const eras=[['tang','唐','618–907','成熟白瓷、青瓷体系形成与跨区域交流'],['song','宋','960–1279','多窑系并立，器物审美与技术高度分化'],['yuan','元','1271–1368','青花与全球贸易网络发生关键变化'],['ming','明','1368–1644','御窑制度、青花与彩瓷体系高度发展'],['qing','清','1644–1911','粉彩、珐琅彩、颜色釉与全球消费市场扩张'],['near-modern','近代','1840–1948','传统手工业、近代企业、教育与技术转型'],['modern','现代','1949–至今','科技、教育科研、艺术陶瓷与当代全球设计体系']];
   const url=e=>window.JDM_KNOWLEDGE?.url(e)||`/jingdezhen-porcelain-wiki/entry/?type=${encodeURIComponent(e.category)}&slug=${encodeURIComponent(e.slug)}`;
   const meta=e=>e?.zh?.meta||{};
   const title=e=>e?.zh?.title||e?.slug||'';
