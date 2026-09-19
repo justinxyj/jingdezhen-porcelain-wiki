@@ -43,3 +43,42 @@ body:has(.jdm-apple-home) .jdm-brand span:last-child{font-size:10px;margin-top:5
   body:has(.jdm-apple-home) .jdm-brand-cn{font-size:17px}
   body:has(.jdm-apple-home) .jdm-brand span:last-child{font-size:8px}
 }
+
+/* Wiki 2.0 Sprint A — knowledge worlds, museum tools and network layer. */
+.jdm-knowledge-worlds{background:#fff}
+.jdm-world-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:54px}
+.jdm-world-card{position:relative;min-height:235px;padding:26px;border-radius:24px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;text-decoration:none!important;color:#10233f;border:1px solid rgba(7,26,53,.08);background:linear-gradient(145deg,#fff,#f4f7fb);box-shadow:0 12px 32px rgba(7,26,53,.045);transition:transform .25s,box-shadow .25s,border-color .25s}
+.jdm-world-card:before{content:"";position:absolute;width:170px;height:170px;right:-55px;top:-55px;border-radius:50%;background:rgba(20,85,184,.08)}
+.jdm-world-card:hover{transform:translateY(-5px);box-shadow:0 22px 48px rgba(7,26,53,.1);border-color:rgba(20,85,184,.2)}
+.jdm-world-card span{position:absolute;left:26px;top:23px;font-size:9px;letter-spacing:.16em;font-weight:800;color:#7890aa}
+.jdm-world-card h3{font-size:27px;letter-spacing:-.045em;margin:0 0 8px}
+.jdm-world-card p{font-size:12px;line-height:1.7;color:#718198;margin:0 0 14px;max-width:290px}
+.jdm-world-card b{font-size:11px;color:#1455b8}
+.jdm-world-history{background:linear-gradient(145deg,#eef5ff,#fff)}
+.jdm-world-craft{background:linear-gradient(145deg,#f3f0e7,#fff)}
+.jdm-world-object{background:linear-gradient(145deg,#eaf3ff,#fff)}
+.jdm-world-space{background:linear-gradient(145deg,#eef7f4,#fff)}
+.jdm-world-people{background:linear-gradient(145deg,#f1edff,#fff)}
+.jdm-world-evidence{background:linear-gradient(145deg,#f8f3e8,#fff)}
+.jdm-world-modern{grid-column:span 2;background:linear-gradient(145deg,#eaf1f8,#fff)}
+.jdm-tool-links{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}
+.jdm-tool-links a{display:flex;justify-content:space-between;align-items:center;padding:16px 18px;border-radius:16px;background:#fff;border:1px solid rgba(7,26,53,.08);color:#17304f;text-decoration:none!important;font-size:12px;font-weight:700;box-shadow:0 8px 22px rgba(7,26,53,.04)}
+.jdm-tool-links a:hover{border-color:rgba(20,85,184,.2);color:#1455b8}
+.jdm-network-graphic{position:relative;min-height:520px}
+.jdm-network-graphic .node{position:absolute;z-index:2;display:grid;place-items:center;width:92px;height:92px;border-radius:50%;border:1px solid rgba(160,200,255,.38);background:rgba(255,255,255,.06);color:#eaf3ff;font-size:14px;box-shadow:0 0 40px rgba(80,145,225,.12)}
+.jdm-network-graphic .n1{left:10%;top:8%}.jdm-network-graphic .n2{right:9%;top:15%}.jdm-network-graphic .n3{left:42%;top:34%}.jdm-network-graphic .n4{left:4%;bottom:13%}.jdm-network-graphic .n5{right:5%;bottom:9%}.jdm-network-graphic .n6{left:42%;bottom:0}
+.jdm-network-graphic .line{position:absolute;z-index:1;height:1px;background:linear-gradient(90deg,rgba(180,215,255,.05),rgba(180,215,255,.5),rgba(180,215,255,.05));transform-origin:left center;width:48%}
+.jdm-network-graphic .l1{left:22%;top:25%;transform:rotate(12deg)}.jdm-network-graphic .l2{left:48%;top:28%;transform:rotate(-12deg)}.jdm-network-graphic .l3{left:17%;top:57%;transform:rotate(-19deg)}.jdm-network-graphic .l4{left:51%;top:57%;transform:rotate(17deg)}.jdm-network-graphic .l5{left:48%;top:62%;transform:rotate(48deg)}.jdm-network-graphic .l6{left:28%;top:61%;transform:rotate(118deg)}
+[data-md-color-scheme="slate"] .jdm-world-card{color:#edf3f7;background:linear-gradient(145deg,#182731,#202f3a);border-color:rgba(190,210,225,.13)}
+[data-md-color-scheme="slate"] .jdm-world-card p{color:#aebdca}
+[data-md-color-scheme="slate"] .jdm-world-history{background:linear-gradient(145deg,#1b344d,#202f3a)}
+[data-md-color-scheme="slate"] .jdm-world-craft{background:linear-gradient(145deg,#302f29,#202a31)}
+[data-md-color-scheme="slate"] .jdm-world-object{background:linear-gradient(145deg,#1c3650,#202f3a)}
+[data-md-color-scheme="slate"] .jdm-world-space{background:linear-gradient(145deg,#1c3836,#202f3a)}
+[data-md-color-scheme="slate"] .jdm-world-people{background:linear-gradient(145deg,#302a42,#202f3a)}
+[data-md-color-scheme="slate"] .jdm-world-evidence{background:linear-gradient(145deg,#3a3327,#202f3a)}
+[data-md-color-scheme="slate"] .jdm-world-modern{background:linear-gradient(145deg,#203342,#202f3a)}
+[data-md-color-scheme="slate"] .jdm-tool-links a{background:#182731;color:#edf3f7;border-color:rgba(190,210,225,.13)}
+@media(max-width:1000px){.jdm-world-grid{grid-template-columns:repeat(2,1fr)}.jdm-world-modern{grid-column:span 2}.jdm-tool-links{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:850px){.jdm-network-graphic{min-height:410px}.jdm-network-graphic .node{width:74px;height:74px;font-size:12px}}
+@media(max-width:600px){.jdm-world-grid{grid-template-columns:1fr}.jdm-world-modern{grid-column:auto}.jdm-world-card{min-height:205px}.jdm-tool-links{grid-template-columns:1fr}.jdm-network-graphic{min-height:340px}.jdm-network-graphic .node{width:66px;height:66px}.jdm-network-graphic .n1{left:0}.jdm-network-graphic .n2{right:0}.jdm-network-graphic .n3{left:39%;top:33%}.jdm-network-graphic .n4{left:0}.jdm-network-graphic .n5{right:0}.jdm-network-graphic .n6{left:39%}}
