@@ -161,3 +161,14 @@
 - [x] 生产回归：485 nodes / 1,378 edges / 0 orphan edges
 - [x] 同步 .ai/PHASE_3A_KNOWLEDGE_GRAPH_MODEL.md 与 migration
 - [ ] Phase 3B：相关条目候选生成与可解释推荐规则
+
+
+## Phase 3B — 相关条目候选生成与可解释推荐
+- [x] 建立 knowledge_recommendations 可解释候选视图
+- [x] 直接关系优先于共享世界/共享工艺桥接关系
+- [x] 保留推荐 reason 与 weight，不使用黑盒模型
+- [x] 去重：同一来源条目到同一目标条目只保留最高优先级路径
+- [x] knowledge-store.js 新增 recommendations(entryId,{limit})
+- [x] 生产验证：12,140 条去重后的候选关系
+- [x] 未修改 Phase 2B 冻结的 316 条 World mappings
+- [ ] Phase 3B 下一轮：人工审校推荐质量、增加时间轴/来源桥接规则，并接入条目详情页
