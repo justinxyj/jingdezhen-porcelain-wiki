@@ -108,6 +108,22 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
     const byId=new Map(entries.map(e=>[e.id,e]));
     return links.map(link=>({...link,entry:byId.get(link.entry_id)})).filter(x=>x.entry).map(x=>({...x.entry,worldRole:x.role,worldRationale:x.rationale,worldOrder:x.display_order}));
   }
+  async function worldOverview(worldSlug,{limit=250,featured=8}={}){
+    if(!worldSlug)return null;
+    const worlds=await window.JDM_CONTRACT?.worlds(await query((db,s)=>db.from('knowledge_worlds').select('slug,title,short_title,description,display_order').order('display_order',{ascending:true}).abortSignal(s)))||[];
+    const world=worlds.find(w=>w.slug===worldSlug);if(!world)return null;
+    const links=await query((db,s)=>db.from('entry_worlds').select('entry_id,world_slug,role,display_order,rationale').eq('world_slug',worldSlug).order('role',{ascending:true}).order('display_order',{ascending:true}).order('entry_id',{ascending:true}).limit(limit).abortSignal(s));
+    if(!links.length)return {world,items:[],primary:0,secondary:0,categories:[],connections:[]};
+    const ids=links.map(x=>x.entry_id);
+    const entries=window.JDM_CONTRACT?.entries(await query((db,s)=>db.from('entries').select('id,slug,category,zh,en,ja,sources,status,version,updated_at').eq('status','published').in('id',ids).abortSignal(s)))||[];
+    const byId=new Map(entries.map(e=>[e.id,e]));
+    const items=links.map(x=>({...byId.get(x.entry_id),worldRole:x.role,worldRationale:x.rationale,worldOrder:x.display_order})).filter(x=>x.id);
+    const allLinks=await query((db,s)=>db.from('entry_worlds').select('entry_id,world_slug,role').in('entry_id',ids).neq('world_slug',worldSlug).limit(Math.max(500,ids.length*3)).abortSignal(s));
+    const count=new Map();allLinks.forEach(x=>count.set(x.world_slug,(count.get(x.world_slug)||0)+1));
+    const connections=worlds.filter(w=>count.has(w.slug)).map(w=>({...w,count:count.get(w.slug)})).sort((a,b)=>b.count-a.count||a.display_order-b.display_order).slice(0,6);
+    const categories=[...new Set(items.map(x=>x.category).filter(Boolean))];
+    return {world,items,primary:items.filter(x=>x.worldRole==='primary').length,secondary:items.filter(x=>x.worldRole==='secondary').length,categories,connections,featured:items.slice(0,featured)};
+  }
   async function recommendations(entryId,{limit=12}={}){
     const nodeId=entryId.startsWith('entry:')?entryId:'entry:'+entryId;
     const rows=await query((db,s)=>db.from('knowledge_recommendations').select('source_node_id,target_node_id,target_label,target_category,edge_type,reason,weight').eq('source_node_id',nodeId).order('weight',{ascending:false}).order('target_label',{ascending:true}).limit(limit).abortSignal(s));
@@ -131,5 +147,5 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
   }
   async function byCategory(category,limit=250){return list({category,limit})}
   function url(e){return e?'/jingdezhen-porcelain-wiki/entry/?type='+encodeURIComponent(e.category)+'&slug='+encodeURIComponent(e.slug):'/jingdezhen-porcelain-wiki/'}
-  window.JDM_KNOWLEDGE={all,get,list,worlds,byWorld,graph,recommendations,byCategory,url,state:()=>({...state}),reset:()=>{allPromise=null;cache.clear();state={status:'idle',error:null,updatedAt:null}}};
+  window.JDM_KNOWLEDGE={all,get,list,worlds,byWorld,worldOverview,graph,recommendations,byCategory,url,state:()=>({...state}),reset:()=>{allPromise=null;cache.clear();state={status:'idle',error:null,updatedAt:null}}};
 })();
