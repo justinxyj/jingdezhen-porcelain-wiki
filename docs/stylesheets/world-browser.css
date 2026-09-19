@@ -42,3 +42,5 @@
 @media(max-width:900px){.jdm-world-overview-main{grid-template-columns:1fr}.jdm-world-featured-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.jdm-world-overview{padding:18px;border-radius:20px}.jdm-world-overview h2{font-size:25px}.jdm-world-overview-stats{grid-template-columns:repeat(3,1fr)}.jdm-world-featured-grid{grid-template-columns:1fr}}
 @media(prefers-color-scheme:dark){.jdm-world-overview{background:linear-gradient(135deg,rgba(49,104,166,.16),rgba(27,37,44,.9));border-color:rgba(155,190,214,.13)}.jdm-world-overview h2,.jdm-world-featured-head strong,.jdm-world-featured-card b{color:#eef4f7}.jdm-world-overview p,.jdm-world-featured-head span{color:#a9bac8}.jdm-world-stat,.jdm-world-featured-card,.jdm-world-connection{background:#172229;border-color:rgba(155,190,214,.12);color:#eef4f7}.jdm-world-stat strong{color:#eef4f7}}
+
+.jdm-world-search-link{margin:-4px 0 12px}.jdm-world-search-link a{display:inline-flex;padding:7px 11px;border-radius:999px;background:#1455b8;color:#fff!important;text-decoration:none!important;font-size:10px;font-weight:800}.jdm-world-search-link a:hover{transform:translateY(-1px)}
