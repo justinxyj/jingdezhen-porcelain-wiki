@@ -674,7 +674,7 @@ language sql stable security invoker set search_path = public
 as $$
   with candidates as (
     select distinct e.* from public.entries e
-    left join public.entry_relations r on r.related_entry_id=e.id and r.entry_id=p_entry_id
+    left join public.entry_relations r on ((r.related_entry_id=e.id and r.entry_id=p_entry_id) or (r.entry_id=e.id and r.related_entry_id=p_entry_id))
     where e.status='published' and e.id<>p_entry_id
       and e.zh->'meta'->'map'->>'lat' is not null
       and e.zh->'meta'->'map'->>'lng' is not null
