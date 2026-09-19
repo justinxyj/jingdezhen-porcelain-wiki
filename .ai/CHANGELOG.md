@@ -358,3 +358,18 @@
 - 修正 canonical era helper 的近代边界为 1840–1948，1949 起为现代；全球网络与统一搜索的时代标签同步改为“近代 / 现代”。
 - Supabase 核心数据复核：149 published entries、133 media、50 timeline_context；51 个人物的 era_group 均已存在。
 - 本轮未修改知识事实、World mappings 或 recommendation gate。
+
+## 2026-09-20 — Phase 4E-4 Closeout / 人物数据库 2.0
+- 人物数据库 2.0 正式收口。
+- 公开时代体系固定为唐五代 / 宋 / 元 / 明 / 清 / 近代 / 现代；近代 1840–1948，1949 起现代。
+- 51 位 published 人物的 era_group 均已规范化。
+- 人物数据库、历史时间轴、窑址地图、器物图谱、名人与书籍、知识条目恢复后完成线上回归确认。
+- 未修改生产知识事实、316 条 World mappings 或 A+ / A recommendation gate。
+
+## 2026-09-20 — Phase 4E-5 / 工艺与 72 道工序 2.0
+- 保持 craft_processes 为 72 道工序 canonical 主数据源。
+- 新增 JDM_KNOWLEDGE.craftProcesses() 与 craftProcessContext()。
+- 工序详情现在聚合技术原理与作用、材料、工具、产出、时代、上下游工序，以及已有知识条目的器物/人物/窑址/文献/空间关联。
+- 工序关联继续只消费既有 entry_craft_processes 与 entry_relations，不为了产品展示新增推断关系。
+- 工序详情增加知识条目与全球陶瓷网络继续探索出口。
+- Phase 3B recommendation gate 与 Phase 2B Semantic Freeze 未改变。
