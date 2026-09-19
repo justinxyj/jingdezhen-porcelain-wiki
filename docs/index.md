@@ -1,12 +1,12 @@
 <div class="jdm-apple-home jdm-home-v2" id="jdm-apple-home">
-  <nav class="jdm-nav" aria-label="主导航">
+  <nav class="jdm-nav" aria-label="首页导航">
     <div class="jdm-nav-inner">
       <a class="jdm-brand" href="./"><span class="jdm-brand-cn">景德镇陶瓷数字博物馆</span><span>JINGDEZHEN PORCELAIN WIKI</span></a>
       <div class="jdm-nav-links">
-        <a href="#story" data-scroll>故事</a>
-        <a href="#collection" data-scroll>馆藏</a>
+        <a href="#worlds" data-scroll>探索</a>
+        <a href="#collection" data-scroll>博物馆</a>
         <a href="#timeline" data-scroll>时间</a>
-        <a href="museum/kiln-map/" class="jdm-nav-cta">全球窑址</a>
+        <a href="network/" class="jdm-nav-cta">知识网络</a>
       </div>
     </div>
   </nav>
@@ -19,8 +19,8 @@
         <h1>青花，<br><em>不止于蓝。</em></h1>
         <p>一座城市、千年窑火与一个连接世界的陶瓷文明。</p>
         <div class="jdm-hero-actions">
-          <a class="jdm-pill" href="museum/catalog/">探索馆藏 <b>→</b></a>
-          <a class="jdm-text-link" href="#story" data-scroll>了解景德镇 <b>↓</b></a>
+          <a class="jdm-pill" href="museum/catalog/">探索器物 <b>→</b></a>
+          <a class="jdm-text-link" href="#worlds" data-scroll>进入七大知识世界 <b>↓</b></a>
         </div>
       </div>
       <div class="jdm-v2-hero-vessel jdm-reveal" aria-label="景德镇青花瓷">
@@ -33,33 +33,48 @@
       <div class="jdm-scroll-note">SCROLL TO EXPLORE <span>↓</span></div>
     </section>
 
-    <section id="story" class="jdm-v2-intro">
+    <section id="worlds" class="jdm-v2-intro jdm-knowledge-worlds">
       <div class="jdm-v2-container">
-        <div class="jdm-section-label jdm-reveal">THE CITY · 这座城市</div>
-        <h2 class="jdm-v2-display jdm-reveal">你看到的是一件瓷器。<br><span>我们看到的是一整套文明系统。</span></h2>
-        <p class="jdm-v2-lead jdm-reveal">从瓷石与高岭土，到制泥、成型、绘画、施釉、烧成，再到运输与全球贸易。景德镇不是单一的“产地”，而是一套持续运转的知识、技术、制度与人的网络。</p>
+        <div class="jdm-section-label jdm-reveal">SEVEN KNOWLEDGE WORLDS · 七大知识世界</div>
+        <h2 class="jdm-v2-display jdm-reveal">从一件瓷器出发，<br><span>进入一整套文明系统。</span></h2>
+        <p class="jdm-v2-lead jdm-reveal">以器物为入口，以时间解释变化，以工艺解释制造，以空间解释城市，以人物解释传承，以文献建立证据，以现代景德镇回答今天。</p>
+        <div class="jdm-world-grid jdm-reveal">
+          <a class="jdm-world-card jdm-world-history" href="history/"><span>01 · WHEN</span><h3>历史与发展</h3><p>沿着千年窑火，看见生产、制度、贸易与城市如何变化。</p><b>进入历史 →</b></a>
+          <a class="jdm-world-card jdm-world-craft" href="craft/"><span>02 · HOW</span><h3>工艺与技术</h3><p>从瓷石、高岭土到成型、施釉与烧成，理解一件瓷器怎样诞生。</p><b>进入工艺 →</b></a>
+          <a class="jdm-world-card jdm-world-object" href="objects/"><span>03 · WHAT</span><h3>器物与美学</h3><p>从器型、胎釉、纹饰与色彩进入景德镇的物质世界。</p><b>进入器物 →</b></a>
+          <a class="jdm-world-card jdm-world-space" href="kilns/"><span>04 · WHERE</span><h3>窑址与城市空间</h3><p>原料、燃料、窑址、作坊与城市共同构成制瓷空间系统。</p><b>进入空间 →</b></a>
+          <a class="jdm-world-card jdm-world-people" href="people/"><span>05 · WHO</span><h3>人物与传承</h3><p>工匠、督陶官、艺术家、教育者与研究者，让历史拥有具体的人。</p><b>进入人物 →</b></a>
+          <a class="jdm-world-card jdm-world-evidence" href="research/"><span>06 · EVIDENCE</span><h3>文献与研究</h3><p>古籍、地方志、考古资料与馆藏来源，建立知识的证据链。</p><b>进入文献 →</b></a>
+          <a class="jdm-world-card jdm-world-modern" href="contemporary/"><span>07 · TODAY</span><h3>现代景德镇</h3><p>教育、产业、艺术、遗产与数字化，让陶瓷文明继续发生。</p><b>进入今天 →</b></a>
+        </div>
       </div>
     </section>
 
     <section id="collection" class="jdm-v2-products">
       <div class="jdm-v2-container">
         <div class="jdm-v2-section-head jdm-reveal">
-          <div><div class="jdm-section-label">EXPLORE · 探索</div><h2>从一件器物开始。</h2></div>
-          <a class="jdm-text-link" href="museum/catalog/">查看全部馆藏 →</a>
+          <div><div class="jdm-section-label">DIGITAL MUSEUM · 数字博物馆</div><h2>用工具，换一种方式看景德镇。</h2></div>
+          <a class="jdm-text-link" href="museum/">进入博物馆总览 →</a>
         </div>
-        <div class="jdm-v2-product-grid">
+        <div class="jdm-v2-product-grid jdm-museum-tool-grid">
           <a class="jdm-v2-product jdm-v2-product-blue jdm-reveal" href="museum/catalog/">
-            <div class="jdm-product-copy"><span>01 · ARTIFACTS</span><h3>器物</h3><p>从青白瓷、青花到粉彩与颜色釉，沿着器型、胎釉与纹饰阅读一件瓷器。</p><strong>进入器物图谱 →</strong></div>
+            <div class="jdm-product-copy"><span>01 · ARTIFACTS</span><h3>器物图谱</h3><p>从青白瓷、青花到粉彩与颜色釉，沿着器型、胎釉与纹饰阅读器物。</p><strong>进入器物图谱 →</strong></div>
             <div class="jdm-home-card-artifact" aria-hidden="true"><span>青花</span></div>
           </a>
-          <a class="jdm-v2-product jdm-v2-product-ink jdm-reveal" href="museum/people/">
-            <div class="jdm-product-copy"><span>02 · PEOPLE</span><h3>人物</h3><p>工匠、督陶官与瓷画家，让技术、制度与审美拥有具体的人。</p><strong>进入人物数据库 →</strong></div>
-            <div class="jdm-people-graphic" aria-hidden="true"><div>人</div><i></i><i></i><i></i></div>
+          <a class="jdm-v2-product jdm-v2-product-ink jdm-reveal" href="museum/timeline/">
+            <div class="jdm-product-copy"><span>02 · TIME</span><h3>千年时间轴</h3><p>把景德镇放回中国与世界陶瓷史的同一条时间线上。</p><strong>打开时间轴 →</strong></div>
+            <div class="jdm-people-graphic" aria-hidden="true"><div>时</div><i></i><i></i><i></i></div>
           </a>
-          <a class="jdm-v2-product jdm-v2-product-paper jdm-reveal" href="research/literature-library/">
-            <div class="jdm-product-copy"><span>03 · EVIDENCE</span><h3>文献</h3><p>古籍、地方志、考古资料与馆藏来源，把知识重新放回证据链。</p><strong>进入文献总库 →</strong></div>
-            <div class="jdm-paper-stack" aria-hidden="true"><div>陶<br>说</div><div>景<br>德<br>镇<br>陶<br>录</div><div>THE<br>PORCELAIN<br>WORLD</div></div>
+          <a class="jdm-v2-product jdm-v2-product-paper jdm-reveal" href="museum/kiln-map/">
+            <div class="jdm-product-copy"><span>03 · SPACE</span><h3>全球窑址地图</h3><p>窑址、陶瓷城市、原料产地与全球网络，在同一张地图上重新连接。</p><strong>打开全球地图 →</strong></div>
+            <div class="jdm-paper-stack" aria-hidden="true"><div>景<br>德<br>镇</div><div>WORLD<br>KILN<br>ATLAS</div><div>SPACE</div></div>
           </a>
+        </div>
+        <div class="jdm-tool-links jdm-reveal">
+          <a href="museum/people/"><span>人物数据库</span><b>→</b></a>
+          <a href="craft/technology-tree/"><span>72道工艺流程</span><b>→</b></a>
+          <a href="museum/gallery/"><span>图片馆</span><b>→</b></a>
+          <a href="entry/"><span>知识条目</span><b>→</b></a>
         </div>
       </div>
     </section>
@@ -67,14 +82,14 @@
     <section class="jdm-v2-blue-story">
       <div class="jdm-v2-container jdm-blue-story-grid">
         <div class="jdm-reveal">
-          <div class="jdm-overline">BLUE &amp; WHITE · 青花</div>
-          <h2>白如玉。<br><span>蓝如海。</span></h2>
-          <p>钴料、胎土、透明釉与高温烧成，共同创造了最具全球辨识度的中国陶瓷视觉语言之一。</p>
-          <a class="jdm-pill jdm-pill-light" href="craft/qinghua/">深入了解青花 <b>→</b></a>
+          <div class="jdm-overline">KNOWLEDGE NETWORK · 知识网络</div>
+          <h2>知识不是孤岛。<br><span>它们彼此相连。</span></h2>
+          <p>人物连接器物，历史连接窑址，工艺连接材料，文献连接证据。Wiki 2.0 正在把已经存在的知识逐步组织成一张可以继续探索的网络。</p>
+          <a class="jdm-pill jdm-pill-light" href="network/">进入知识网络 <b>→</b></a>
         </div>
-        <div class="jdm-blue-vessel jdm-reveal" aria-hidden="true">
-          <div class="jdm-blue-orbit"></div>
-          <div class="jdm-home-blue-disc"><span>青花</span></div>
+        <div class="jdm-network-graphic jdm-reveal" aria-hidden="true">
+          <span class="node n1">历史</span><span class="node n2">器物</span><span class="node n3">人物</span><span class="node n4">工艺</span><span class="node n5">窑址</span><span class="node n6">文献</span>
+          <i class="line l1"></i><i class="line l2"></i><i class="line l3"></i><i class="line l4"></i><i class="line l5"></i><i class="line l6"></i>
         </div>
       </div>
     </section>
