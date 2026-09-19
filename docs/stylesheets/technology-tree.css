@@ -41,3 +41,27 @@
 .tech-discovery-note{margin:18px 0;padding:16px 18px;border:1px solid rgba(120,90,55,.14);border-radius:16px;background:rgba(120,90,55,.06)}
 .tech-discovery-note strong{color:var(--md-primary-fg-color)}
 [data-md-color-scheme="slate"] .tech-discovery-note{background:rgba(190,210,225,.06);border-color:rgba(190,210,225,.14)}
+
+.tech-pathway{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr auto 1fr;align-items:center;gap:8px;margin:18px 0}
+.tech-pathway-step{padding:13px 10px;text-align:center;border:1px solid rgba(120,90,55,.14);border-radius:14px;background:rgba(120,90,55,.05)}
+.tech-pathway-step span{display:block;font-size:.76rem;opacity:.7}.tech-pathway-step b{display:block;margin-top:4px;font-size:1.2rem}
+.tech-pathway>i{font-style:normal;opacity:.45;text-align:center}
+.tech-materials{margin-top:16px;padding:16px 18px;border-radius:14px;background:rgba(120,90,55,.045)}
+.tech-material-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.tech-material-chip{padding:7px 11px;border-radius:999px;background:rgba(120,90,55,.09);font-size:.82rem}
+.tech-path-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}
+.tech-path-card{padding:15px;border:1px solid rgba(120,90,55,.14);border-radius:15px;background:rgba(255,255,255,.42)}
+.tech-path-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}.tech-path-head span{font-size:.76rem;opacity:.65}
+.tech-path-items{display:flex;flex-wrap:wrap;gap:7px}
+.tech-path-items a,.tech-space-list a{padding:6px 9px;border-radius:8px;background:rgba(120,90,55,.06);font-size:.8rem;text-decoration:none}
+.tech-path-items a:hover,.tech-space-list a:hover{text-decoration:underline}
+.tech-path-items small{width:100%;opacity:.65;margin-top:5px}
+.tech-era-space{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.tech-era-space>section{padding:15px;border:1px solid rgba(120,90,55,.14);border-radius:15px}
+.tech-era-list,.tech-space-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.tech-era-list span{padding:6px 9px;border-radius:999px;background:rgba(120,90,55,.08);font-size:.8rem}
+.tech-space-list a{background:rgba(120,90,55,.06)}
+[data-md-color-scheme="slate"] .tech-pathway-step,[data-md-color-scheme="slate"] .tech-materials,[data-md-color-scheme="slate"] .tech-path-card,[data-md-color-scheme="slate"] .tech-era-space>section{background:rgba(24,36,45,.68);border-color:rgba(190,210,225,.14)}
+[data-md-color-scheme="slate"] .tech-material-chip,[data-md-color-scheme="slate"] .tech-path-items a,[data-md-color-scheme="slate"] .tech-space-list a{background:rgba(190,210,225,.08)}
+@media(max-width:900px){.tech-pathway{grid-template-columns:repeat(5,1fr)}.tech-pathway>i{display:none}}
+@media(max-width:650px){.tech-path-grid,.tech-era-space{grid-template-columns:1fr}.tech-pathway{grid-template-columns:repeat(2,1fr);gap:8px}.tech-pathway-step:last-child{grid-column:1/-1}}
