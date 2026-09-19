@@ -233,3 +233,48 @@ grant select (
 
 revoke select on table public.entry_revisions from anon;
 grant select on table public.entry_revisions to authenticated;
+
+
+-- Wiki 2.0 editorial information architecture: knowledge worlds are separate from entry categories.
+create table if not exists public.knowledge_worlds (
+  slug text primary key,
+  title text not null,
+  short_title text not null,
+  description text not null,
+  display_order integer not null unique,
+  created_at timestamptz not null default now()
+);
+
+create table if not exists public.entry_worlds (
+  entry_id uuid not null references public.entries(id) on delete cascade,
+  world_slug text not null references public.knowledge_worlds(slug) on delete cascade,
+  role text not null check (role in ('primary','secondary')),
+  display_order integer not null default 0,
+  rationale text,
+  created_at timestamptz not null default now(),
+  primary key (entry_id, world_slug)
+);
+
+create unique index if not exists entry_worlds_one_primary_idx
+  on public.entry_worlds(entry_id) where role = 'primary';
+create index if not exists entry_worlds_world_order_idx
+  on public.entry_worlds(world_slug, role, display_order, entry_id);
+
+alter table public.knowledge_worlds enable row level security;
+alter table public.entry_worlds enable row level security;
+
+create policy "knowledge_worlds_public_read" on public.knowledge_worlds
+  for select to anon, authenticated using (true);
+
+create policy "entry_worlds_public_published_read" on public.entry_worlds
+  for select to anon, authenticated
+  using (
+    exists (
+      select 1 from public.entries e
+      where e.id = entry_worlds.entry_id
+        and e.status = 'published'
+    )
+  );
+
+grant select on table public.knowledge_worlds to anon, authenticated;
+grant select on table public.entry_worlds to anon, authenticated;
