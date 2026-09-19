@@ -125,3 +125,10 @@
 - 新增 migration：supabase/migrations/20260919233000_sprint_b_phase_2b_final_audit_rationale_normalization.sql。
 - Final Audit 通过，entry_worlds 达到语义冻结门槛。
 - 下一步：正式固化 Phase 2B semantic freeze 规则与变更门槛，然后进入 Phase 3 知识图谱与相关条目。
+
+
+## 2026-09-19 — Phase 2B Semantic Freeze 正式固化
+- 新增 `.ai/SEMANTIC_FREEZE_RULES.md`。
+- 固化 Primary / Secondary / rationale / 多世界密度 / World 边界 / 推荐系统 / 后续生产变更门槛。
+- Phase 2B Final Audit 至此完成，316 mappings 进入 Semantic Freeze。
+- 下一阶段：Phase 3 知识图谱、相关条目与可解释推荐系统。
