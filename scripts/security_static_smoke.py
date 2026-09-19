@@ -27,6 +27,8 @@ if "const allEntries=await all()" in store:
     errors.append("entryNetworkContext still performs full all() scan")
 if "entry_timeline_peers" not in store or "entry_space_peers" not in store:
     errors.append("targeted Entry peer RPCs not wired")
+if "const idLike=/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(key);" not in store or "return idLike?q.eq('id',key):q.eq('slug',key);" not in store:
+    errors.append("Entry Detail get() must resolve both slug and UUID inputs")
 if "JDM_NODE_ID_CONTRACT" not in store:
     errors.append("graph node-id contract missing")
 if "is_staff must be SECURITY INVOKER" in tests:
