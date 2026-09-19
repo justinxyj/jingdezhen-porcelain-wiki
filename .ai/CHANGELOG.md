@@ -350,3 +350,11 @@
 - 新增人物 era_group 规范化字段；原始 era 文本不被覆盖。
 - 1911—1948 时间节点归入近代，1949 年起归入现代；原始 timeline 保留。
 - 推荐、世界映射、知识关系均未改变。
+
+
+## 2026-09-20 — Phase 4E-4 / 公开知识面恢复修复
+- 修复人物与器物 Atlas 聚合层对 `knowledge_graph_nodes` 字段的错误引用，统一读取 `node_id`。
+- 加固 `knowledge-store`：核心 published entries 不再因 media / timeline_context 辅助查询失败而整体阻断；Entry 单条 hydrate 同样采用非阻断降级。
+- 修正 canonical era helper 的近代边界为 1840–1948，1949 起为现代；全球网络与统一搜索的时代标签同步改为“近代 / 现代”。
+- Supabase 核心数据复核：149 published entries、133 media、50 timeline_context；51 个人物的 era_group 均已存在。
+- 本轮未修改知识事实、World mappings 或 recommendation gate。
