@@ -24,3 +24,6 @@
 ## 研究一件器物
 
 记录器型与尺寸，观察胎、釉、足部和制作痕迹，再核对装饰、出土地点、收藏记录和专业图录。必要时结合科学检测。单一特征通常不足以完成可靠断代或真伪判断。[R03][R16]
+
+
+<section class="jdm-world-browser" data-world-browser="objects" aria-label="知识世界条目"></section>
