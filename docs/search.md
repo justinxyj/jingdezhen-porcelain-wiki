@@ -1,9 +1,9 @@
 <div class="jdm-search-page" data-entry-search>
   <div class="jdm-search-hero">
     <div>
-      <div class="eyebrow">ENTRY DISCOVERY · 统一知识搜索</div>
+      <div class="eyebrow">知识发现 · 统一搜索</div>
       <h1>从一个词，进入一整个知识网络。</h1>
-      <p>搜索只负责找到正确的 Entry 知识节点；世界、关系网络与相关推荐都从这个节点继续展开。</p>
+      <p>搜索只负责找到正确的 知识条目；世界、关系网络与相关推荐都从这个节点继续展开。</p>
     </div>
   </div>
   <div class="jdm-search-box" role="search">
@@ -19,6 +19,6 @@
       <button type="button" data-search-example="郎廷极">郎廷极</button>
     </div>
   </div>
-  <div class="jdm-search-status" id="jdm-search-status" aria-live="polite">输入关键词，搜索 149 个公开 Entry 知识节点。</div>
+  <div class="jdm-search-status" id="jdm-search-status" aria-live="polite">输入关键词，搜索 149 个公开 知识条目。</div>
   <div class="jdm-search-results" id="jdm-search-results"></div>
 </div>
