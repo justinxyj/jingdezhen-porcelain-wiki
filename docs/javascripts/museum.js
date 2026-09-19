@@ -126,7 +126,7 @@
       if(seq!==initSeq)return;
       renderCatalog(objects);renderPeople(people);renderTimeline(history);
       const search=document.getElementById('catalog-search');if(search&&!search.dataset.bound){search.dataset.bound='1';let raf=0;search.addEventListener('input',()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(()=>renderCatalog(objects))})}
-      if(!page.dataset.filtersBound){page.dataset.filtersBound='1';page.addEventListener('change',event=>{const id=event.target?.id;if(['catalog-era','catalog-craft','catalog-type'].includes(id))renderCatalog(objects);if(['people-era','people-role','people-world'].includes(id))renderPeople(people)})}
+      const filterRoot=document.getElementById('catalog-list')?.parentElement?.parentElement||document.body;filterRoot.__jdmMuseumData={objects,people};if(!filterRoot.dataset.filtersBound){filterRoot.dataset.filtersBound='1';filterRoot.addEventListener('change',event=>{const id=event.target?.id,constData=filterRoot.__jdmMuseumData||{};if(['catalog-era','catalog-craft','catalog-type'].includes(id))renderCatalog(constData.objects||[]);if(['people-era','people-role','people-world'].includes(id))renderPeople(constData.people||[])})}
       const personSearch=document.getElementById('people-search');if(personSearch&&!personSearch.dataset.bound){personSearch.dataset.bound='1';let raf=0;personSearch.addEventListener('input',()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(()=>renderPeople(people))})}
 
     }catch(error){if(seq===initSeq)roots.forEach(root=>renderError(root,error))}
