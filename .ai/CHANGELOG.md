@@ -199,3 +199,12 @@
 - 黄云鹏的 A+ 证据来自文化部非遗资料：明确记载其从事青花瓷创作、仿古瓷及古陶瓷研究，并列出“元青花三顾茅庐纹罐”等代表作品。citeturn0search4
 - 本轮没有为了制造 A+ 而把“人物→粉彩瓷”等泛关系升级为具体器物关系；当前数据库缺少部分应有的具体作品节点，因此暂不伪造目标节点。
 - 新增 migration：supabase/migrations/20260920002000_phase_3b3_round4_high_value_relations.sql
+
+
+## 2026-09-20 — Phase 3B Closeout
+- Phase 3B-3 Round 4 completed and the final A+ evidence-grade calibration was persisted as migration `supabase/migrations/20260920003000_phase_3b_closeout_round4_grade_calibration.sql`.
+- Final production state: 149 published entries; 149 primary world mappings; 167 secondary world mappings; 316 total mappings.
+- Final recommendation pool: 22. Evidence grades: A+ 4, A 18, B 1, C 77.
+- Recommendation eligibility is now frozen at A+ / A. B and C remain available to the knowledge graph/exploration layer but are excluded from direct recommendations.
+- Phase 2B Semantic Freeze remains unchanged; no entry_world mapping was modified during Phase 3B closeout.
+- Phase 3B is considered complete. Further high-value relations should be handled as canonical content admission or separate product work rather than extending recommendation heuristics indefinitely.
