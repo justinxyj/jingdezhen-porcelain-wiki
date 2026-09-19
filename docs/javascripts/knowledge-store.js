@@ -92,7 +92,23 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
       const row=await hydrateEntry(client(),entries[0]);cache.set(slug,row);state={status:'ready',error:null,updatedAt:Date.now()};return row;
     }catch(err){rememberError(err);throw err}
   }
+  async function worlds(){
+    return window.JDM_CONTRACT?.worlds(await query((db,s)=>db.from('knowledge_worlds').select('slug,title,short_title,description,display_order').order('display_order',{ascending:true}).abortSignal(s)))||[];
+  }
+  async function byWorld(worldSlug,{limit=250,role=null}={}){
+    if(!worldSlug)return [];
+    const links=await query((db,s)=>{
+      let q=db.from('entry_worlds').select('entry_id,world_slug,role,display_order,rationale').eq('world_slug',worldSlug).order('role',{ascending:true}).order('display_order',{ascending:true}).order('entry_id',{ascending:true}).limit(limit).abortSignal(s);
+      if(role)q=q.eq('role',role);
+      return q;
+    });
+    if(!links.length)return [];
+    const ids=links.map(x=>x.entry_id);
+    const entries=window.JDM_CONTRACT?.entries(await query((db,s)=>db.from('entries').select('id,slug,category,zh,en,ja,sources,status,version,updated_at').eq('status','published').in('id',ids).abortSignal(s)))||[];
+    const byId=new Map(entries.map(e=>[e.id,e]));
+    return links.map(link=>({...link,entry:byId.get(link.entry_id)})).filter(x=>x.entry).map(x=>({...x.entry,worldRole:x.role,worldRationale:x.rationale,worldOrder:x.display_order}));
+  }
   async function byCategory(category,limit=250){return list({category,limit})}
   function url(e){return e?'/jingdezhen-porcelain-wiki/entry/?type='+encodeURIComponent(e.category)+'&slug='+encodeURIComponent(e.slug):'/jingdezhen-porcelain-wiki/'}
-  window.JDM_KNOWLEDGE={all,get,list,byCategory,url,state:()=>({...state}),reset:()=>{allPromise=null;cache.clear();state={status:'idle',error:null,updatedAt:null}}};
+  window.JDM_KNOWLEDGE={all,get,list,worlds,byWorld,byCategory,url,state:()=>({...state}),reset:()=>{allPromise=null;cache.clear();state={status:'idle',error:null,updatedAt:null}}};
 })();
