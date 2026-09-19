@@ -53,6 +53,8 @@
       try{
         const refreshed=await refresh();
         if(refreshed)return request(factory,{retryAuth:false});
+        await signOut();
+        throw Object.assign(new Error('登录状态已失效，请重新登录'),{code:'AUTH_EXPIRED',status:401});
       }catch(refreshError){
         await signOut();
         throw normalizeError(refreshError);
