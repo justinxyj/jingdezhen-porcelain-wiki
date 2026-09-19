@@ -202,3 +202,11 @@
 - recommendation view 仍保持 security_invoker；Phase 2B 的 316 条 World mappings 未修改。
 - 新增 migration：supabase/migrations/20260919140000_phase_3b2_recommendation_quality_gate.sql。
 - 下一步应补充更细粒度、entry-specific 的关系证据后再扩大推荐池；不要通过放宽共享 World/共享工艺规则来凑数量。
+
+
+## Phase 3B-3 — 高质量关系证据扩充（进行中）
+- Phase 3B-2 的推荐质量门槛保持不变：shared World 与 shared craft_process 不进入相关推荐；通用 person/kiln/related rationale 不进入推荐。
+- 第一批已完成 4 条 entry-specific 证据补强：王步→青花瓷、田鹤仙→粉彩瓷、张松茂→粉彩瓷、唐英→御窑厂遗址。
+- 生产 note 已更新并完成回读验证。
+- 新增 migration：`supabase/migrations/20260919210000_phase_3b3_relation_evidence_expansion.sql`。
+- 下一步：继续筛选有明确来源/条目事实支撑的人物↔器物、人物↔窑址、历史↔器物、历史↔窑址、文献↔人物等关系；每条先补证据，再重新计算 recommendation pool。
