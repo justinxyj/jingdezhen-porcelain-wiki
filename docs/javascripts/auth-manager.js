@@ -47,7 +47,7 @@
     const db=getClient();
     let result;
     try{result=await factory(db)}catch(error){throw normalizeError(error)}
-    if(!result?.error)return result;
+    if(!result?.error)return result?.data;
     const err=normalizeError(result.error);
     if(retryAuth&&err.status===401){
       try{
