@@ -61,3 +61,12 @@
 - 增强窑址地图移动端高度与层级隔离。
 - 为首页、/entry/、时间轴、72 工序及旧博物馆组件增加 Material Slate 夜间模式专用颜色，修复深色背景上的深色文字问题。
 - 72 工序移动端进一步收紧横向内容宽度与详情卡布局。
+
+
+## 第三轮验收：用户实测新增问题
+- 用户上线截图确认：器物目录、人物/窑址相关卡片和详情弹窗存在大量“图片区域有但图片不显示”的问题。
+- 生产 media 中发现 13 个 The Met 对象 ID 使用了无效的 /???/main-image 路径；另有大量媒体复用了 42490/177595 视觉索引图。
+- 已修复公共图片层：所有动态创建的 img 现在都会被 MutationObserver 纳入治理；The Met IIIF 失败时自动按对象 ID查询 The Met Open Access API，取得 primaryImageSmall/primaryImage；再失败时尝试 Wikimedia Commons；最终才显示无破图图标的明确占位图。
+- 公共图片统一增加 referrerpolicy=no-referrer，并在恢复过程中隐藏破损图片，避免截图中出现巨大 alt 文本/破图图标。
+- 用户截图还确认静态现代景德镇页面出现原始内部引用标记；已将 contemporary/heritage.md、education.md、future.md、industry.md 中这些残留标记替换为正常 UNESCO 世界遗产资料链接。
+- The Met 官方文档确认对象接口提供 primaryImage 与 primaryImageSmall，可作为破损 IIIF 图片的恢复来源。
