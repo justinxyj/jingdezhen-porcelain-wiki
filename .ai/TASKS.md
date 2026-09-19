@@ -428,3 +428,11 @@
 - [x] 未强行建立 王步 / 王琦 / 田鹤仙 / 黄云鹏 → 现有古代馆藏具体器物的作者/制作关系；黄云鹏的“元青花三顾茅庐纹罐”为代表作品，但当前知识库尚无该具体器物节点，暂不伪造关系。
 - [x] entry_relations：102；A+ 5 / A 19 / B 1 / C 77；相关推荐 24。
 - [ ] 具体器物节点 Round 3：优先评估“郎窑红梅瓶 / 郎窑红釉琵琶尊 / 元青花三顾茅庐纹罐”等是否进入 Canonical Content Admission。
+
+
+## Phase 4E Final Closeout / Phase 5 Kickoff — 2026-09-20
+- [x] Phase 4E-5 Round 2 stopped at the agreed scope boundary; no further recursive deep audit.
+- [x] Phase 4E formally closed.
+- [x] Future work must follow the new anti-overengineering rule: prioritize high-value user-visible knowledge paths, stop when marginal knowledge gain becomes low, and avoid repeated micro-audits.
+- [x] “郎窑红梅瓶”“元青花三顾茅庐纹罐”等进入 Phase 5 Canonical Content Admission pool，不阻塞 Phase 4E closeout。
+- [ ] Phase 5-1 Knowledge World architecture.
