@@ -102,8 +102,8 @@
 ## Wiki 2.0 全站改造
 - [x] 完成《Wiki 2.0 最终信息架构蓝图》
 - [x] 完成《Wiki 2.0 全站改造施工清单》并固化到 .ai/WIKI_2.0_CONSTRUCTION_PLAN.md
-- [ ] Sprint A：重构顶部导航与首页入口
-- [ ] Sprint B：统一七大知识世界入口
+- [x] Sprint A：重构顶部导航与首页入口
+- [x] Sprint B：统一七大知识世界入口
 - [ ] Sprint C：统一数字博物馆工具层
 - [ ] Sprint D：统一 /entry/ 知识节点页 2.0
 - [ ] Sprint E：补全知识关系网络
@@ -118,11 +118,6 @@
 - [x] 新增知识网络总览 / 关系探索 / 全球陶瓷网络入口
 - [ ] Sprint A：MkDocs strict / Pages smoke / 移动端回归验收（当前修复中：上一轮 QA 误报网络页面路径）
 
-
-- [x] Sprint B：建立七大知识世界独立数据层
-- [x] Sprint B：149 个已发布条目全部挂载 primary world
-- [x] Sprint B：建立 secondary cross-world mappings
-- [x] Sprint B：7 个世界入口接入动态条目浏览器
 
 - [x] Sprint B：建立七大知识世界独立数据层
 - [x] Sprint B：149 个已发布条目全部挂载 primary world
