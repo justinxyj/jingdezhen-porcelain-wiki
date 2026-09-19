@@ -6,9 +6,11 @@
     selectors.forEach(sel=>root.querySelectorAll(sel).forEach(el=>el.remove()));
     if(root.nodeType===1&&root.matches?.(selectors.join(',')))root.remove();
   }
+  let observer=null;
   function init(){
+    if(observer)return;
     clean();
-    const observer=new MutationObserver(mutations=>{
+    observer=new MutationObserver(mutations=>{
       mutations.forEach(m=>m.addedNodes.forEach(node=>{
         if(node.nodeType!==1)return;
         clean(node);
