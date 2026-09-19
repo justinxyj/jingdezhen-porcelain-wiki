@@ -143,3 +143,9 @@
 - [x] semantic freeze gate：通过
 - [ ] Phase 2B：正式固化 semantic freeze 规则与变更门槛
 - [ ] Phase 3：知识图谱与相关条目
+
+
+## Phase 2B Semantic Freeze
+- [x] 固化 `.ai/SEMANTIC_FREEZE_RULES.md`
+- [x] 明确 Primary / Secondary / rationale / 多世界 / 推荐系统语义门槛
+- [x] 固化后续 entry_worlds 生产变更与回归要求
