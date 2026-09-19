@@ -52,6 +52,7 @@ extra_css:
   - stylesheets/reception.css
   - stylesheets/timeline-details.css
   - stylesheets/technology-tree.css
+  - stylesheets/world-browser.css
 extra_javascript:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
   - javascripts/runtime-config.js
@@ -60,6 +61,7 @@ extra_javascript:
   - javascripts/media-policy.js
   - javascripts/data-contract.js
   - javascripts/knowledge-store.js
+  - javascripts/world-browser.js
   - javascripts/museum.js
   - javascripts/wiki-enhancements.js
   - javascripts/wiki-timeline.js
