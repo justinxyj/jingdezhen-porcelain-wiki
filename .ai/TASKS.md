@@ -21,13 +21,14 @@
 
 ## P1 — Canonical Entry / Media
 - [ ] 复核 Issue #2
-- [ ] 检查 entry/timeline/media 真实行为
+- [x] 检查核心 entry/media 真实数据通路
 - [ ] 清理错误复用媒体，同时保留来源与审计记录
-- [ ] 验证关系按稳定 ID 加载
+- [x] 验证关系按稳定 ID 加载
 
 ## P1 — 工程质量
 - [ ] 核验 mkdocs strict / Museum QA
 - [ ] 核验 Pages 部署可观察性
+- [x] 对齐公共媒体前端审核门槛：只加载 approved + verified
 - [ ] 对齐 schema / migration / frontend data contract
 - [ ] 审核剩余 SECURITY DEFINER function WARN
 
