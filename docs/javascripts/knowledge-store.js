@@ -166,7 +166,7 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
     if(raw==='ming'||/明/.test(raw))return 'ming';
     if(raw==='qing'||/清/.test(raw)||/18世纪/.test(raw))return 'qing';
     if(raw==='near-modern'||/近代|近现代|民国|19世纪|20世纪初/.test(raw))return 'near-modern';
-    if(raw==='modern'||/现代/.test(raw)||/20世纪/.test(raw))return (year&&year>=1911&&year<=1948)?'near-modern':'modern';
+    if(raw==='modern'||/现代/.test(raw)||/20世纪/.test(raw))return (year&&year>=1840&&year<=1948)?'near-modern':'modern';
     if(year&&year>=1911&&year<=1948)return 'near-modern';
     if(year&&year>=1949)return 'modern';
     return raw;
