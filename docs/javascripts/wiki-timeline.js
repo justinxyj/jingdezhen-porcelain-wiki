@@ -5,7 +5,7 @@
   const url=e=>window.JDM_KNOWLEDGE?.url(e)||`/jingdezhen-porcelain-wiki/entry/?type=${encodeURIComponent(e.category)}&slug=${encodeURIComponent(e.slug)}`;
   const meta=e=>e?.zh?.meta||{};
   const title=e=>e?.zh?.title||e?.slug||'';
-  function eraGroup(e,t){return window.JDM_KNOWLEDGE?.eraGroup?.(e,t)||((t?.era==='modern'&&/(190[0-9]|191[0-9]|192[0-9]|193[0-9]|194[0-8])/.test(title(e)))?'near-modern':t?.era);}
+  function eraGroup(e,t){return window.JDM_KNOWLEDGE?.eraGroup?.(e,t)||((t?.era==='modern'&&/(18[4-9][0-9]|19[0-4][0-8])/.test(title(e)))?'near-modern':t?.era);}
   const text=s=>{const d=document.createElement('div');d.innerHTML=String(s||'');return d.textContent||d.innerText||''};
   const validMedia=e=>{const m=e?.media?.[0];return m&&!window.JDM_MEDIA_POLICY?.isGenericPlaceholder?.(m)?m:null};
   const periodOf=e=>String(meta(e).map?.period||meta(e).period||'').trim();
