@@ -36,7 +36,7 @@ _,craft=get("craft_processes",{"select":"id,sequence,name_zh","order":"sequence.
 if len(craft)!=72: raise RuntimeError(f"craft_processes expected 72 rows, got {len(craft)}")
 def get_blocked(path, select="id"):
     qs=urllib.parse.urlencode({"select":select,"limit":"1"})
-    req=urllib.request.Request(f"{url}/rest/v1/{path}?{qs}",headers={"apikey":key,"Authorization":f"Bearer {key}","Accept":"application/json"})
+    req=urllib.request.Request(f"{url}/rest/v1/{path}?{qs}",headers={"apikey":key,"Accept":"application/json"})
     try:
         with urllib.request.urlopen(req,timeout=10) as res:
             status=res.status; body=res.read().decode()
