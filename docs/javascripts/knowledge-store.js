@@ -183,7 +183,7 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
     scored.sort((a,b)=>b._searchScore-a._searchScore||String(a.zh?.title||'').localeCompare(String(b.zh?.title||''),'zh-Hans-CN'));
     return scored.slice(0,Math.max(1,Math.min(50,Number(limit)||20))).map(({_searchScore,...e})=>e);
   }
-  async function searchDiscovery(query,{limit=12,recommendations=3}={}) {
+  async function searchDiscovery(query,{limit=12,recommendationLimit=3}={}) {
     const entries=await searchEntries(query,{limit});
     if(!entries.length)return [];
     const ids=entries.map(e=>e.id);
@@ -198,7 +198,7 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
       const world=worldsBySlug.get(x.world_slug);
       if(world)worldByEntry.get(x.entry_id).push({...world,role:x.role,rationale:x.rationale});
     });
-    const enriched=await Promise.all(entries.map(async e=>({...e,worlds:worldByEntry.get(e.id)||[],recommendations:await recommendations(e.id,{limit:recommendations})})));
+    const enriched=await Promise.all(entries.map(async e=>({...e,worlds:worldByEntry.get(e.id)||[],recommendations:await recommendations(e.id,{limit:recommendationLimit})})));
     return enriched;
   }
   async function queryEntriesWorlds(ids){
