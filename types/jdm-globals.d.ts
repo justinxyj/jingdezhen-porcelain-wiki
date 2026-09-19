@@ -19,6 +19,7 @@ declare global {
       state(): any;
     };
     JDM_KNOWLEDGE?: any;
+    JDM_CONTRACT?: any;
     JDM_MEDIA_POLICY?: any;
   }
 }
