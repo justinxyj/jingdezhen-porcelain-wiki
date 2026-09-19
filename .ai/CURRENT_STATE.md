@@ -422,3 +422,9 @@
 - Project-wide scope rule: do not over-refine. A phase should close when its core user-visible objective, data integrity, and regression checks are satisfied. Remaining edge cases move forward as bounded backlog rather than reopening the phase.
 - Canonical content candidates: 郎窑红梅瓶、元青花三顾茅庐纹罐等，deferred to Phase 5 Content Admission.
 - Next phase: Phase 5 Knowledge World / 知识世界层.
+
+
+## 2026-09-20 — Phase 5-2
+- Knowledge World Home 已开始实施：世界→中国→景德镇→青花→七大知识世界→知识条目/继续探索。
+- 本轮不修改生产知识数据。
+- 用户可见英文产品术语统一中文化。
