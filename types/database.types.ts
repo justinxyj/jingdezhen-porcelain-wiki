@@ -1,5 +1,10 @@
 export type Json = string | number | boolean | null | { [key: string]: Json | undefined } | Json[];
 
+export type EntryStatus = 'draft' | 'published' | 'archived';
+export type MediaReviewState = 'pending' | 'verified' | 'rejected';
+export type MediaStatus = 'pending' | 'approved' | 'rejected';
+export type UserRole = 'user' | 'reviewer' | 'admin';
+
 export interface Entry {
   id: string;
   slug: string;
@@ -8,8 +13,10 @@ export interface Entry {
   en: Record<string, Json>;
   ja: Record<string, Json>;
   sources: Json[];
-  status: 'draft' | 'published' | 'archived';
+  status: EntryStatus;
   version: number;
+  updated_by?: string | null;
+  created_at?: string;
   updated_at: string;
 }
 
@@ -75,4 +82,43 @@ export interface CraftProcess {
   image_status: 'verified' | 'pending_review' | 'rejected' | string;
   image_license: string | null;
   image_creator: string | null;
+}
+
+export interface Database {
+  public: {
+    Tables: {
+      entries: { Row: Entry };
+      media: { Row: Media };
+      timeline_context: { Row: TimelineContext };
+      entry_relations: { Row: EntryRelation };
+      craft_processes: { Row: CraftProcess };
+    };
+  };
+}
+
+export type JDMRequestErrorCode =
+  | 'AUTH_EXPIRED'
+  | 'AUTH_FORBIDDEN'
+  | 'AUTH_REQUIRED'
+  | 'JDM_CONFIG_MISSING'
+  | 'JDM_ENTRY_CONTRACT'
+  | 'JDM_MEDIA_CONTRACT'
+  | 'JDM_PAGE_LIMIT'
+  | 'RATE_LIMITED'
+  | 'NETWORK_ERROR'
+  | 'TIMEOUT'
+  | 'JDM_REQUEST_ERROR';
+
+export interface JDMRequestError extends Error {
+  code: JDMRequestErrorCode;
+  status: number;
+  kind: 'auth' | 'forbidden' | 'config' | 'network' | 'timeout' | 'server';
+  cause?: unknown;
+  details?: unknown;
+}
+
+export interface TimelineMeta {
+  period?: string;
+  timeline_sort_year?: number;
+  timeline?: Array<{ era?: string; lane?: 'jdz' | 'china' | 'world' }>;
 }
