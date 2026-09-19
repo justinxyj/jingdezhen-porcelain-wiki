@@ -30,10 +30,10 @@
 
 ## 馆藏例（Open Access）
 
-例：Met 1991.253.33《Vase with lotus pond scene》（Yuan，Jingdezhen ware，Public Domain）——字段样板见动态专条 slug：`met-1991-253-33`。
+例：Met 1991.253.33《Vase with lotus pond scene》（Yuan，Jingdezhen ware，Public Domain）——字段样板见动态专条 `met-1991-253-33`。
 
-- 馆藏页：https://www.metmuseum.org/art/collection/search/42490  
-- 相关工艺总述：本页；动态词条：动态词条 slug：`blue-and-white`（线上 `/entry/?slug=blue-and-white`）
+- 馆藏页：https://www.metmuseum.org/art/collection/search/42490
+- 相关：本页工艺总述；动态 slug `blue-and-white`（`/entry/?slug=blue-and-white`）、`met-1991-253-33`
 
 ## 研究注意
 
