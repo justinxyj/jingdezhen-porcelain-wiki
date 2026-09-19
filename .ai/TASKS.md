@@ -218,4 +218,5 @@
 - [x] Recommendation targets are hydrated to published canonical entries before rendering, so cards use stable entry URLs rather than internal graph IDs.
 - [x] Added “你可能还想了解” recommendation section with up to 8 high-confidence recommendations per entry.
 - [x] Added responsive recommendation-card styling and graceful failure messaging; existing entry/relation content remains usable if recommendations fail.
-- [ ] Pages deployment / browser smoke: verify recommendation cards, target navigation, mobile layout, and dark mode after deployment.
+- [x] Pages deployment / browser smoke: verify recommendation cards, target navigation, mobile layout, and dark mode after deployment.
+- [x] Phase 3C closeout: production recommendation UI verified after Pages data recovery; 22 recommendation targets resolve to published canonical entries.
