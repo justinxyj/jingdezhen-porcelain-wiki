@@ -66,7 +66,7 @@
       observer.observe(root,{childList:true,subtree:true});
     }).catch(error=>{
       const root=document.querySelector('.timeline-comparison-root');
-      if(root)root.insertAdjacentHTML('afterbegin','<div class="wiki-entry-error" role="alert">时间轴内容暂时无法加载，请稍后重试。<button type="button">重新加载</button></div>');
+      if(root){const info=window.JDM_AUTH?.describeError?.(error)||{message:'时间轴内容暂时无法加载，请稍后重试。',code:'NETWORK'};root.insertAdjacentHTML('afterbegin','<div class="wiki-entry-error" role="alert">'+esc(info.message)+'（'+esc(info.code)+'）<button type="button">重新加载</button></div>');}
       const button=root?.querySelector('.wiki-entry-error button');
       if(button)button.onclick=()=>{window.JDM_KNOWLEDGE.reset();location.reload()};
       console.error('[JDM timeline]',error);
