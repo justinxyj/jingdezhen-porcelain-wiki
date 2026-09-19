@@ -1,26 +1,25 @@
-# 全球陶瓷网络
+<div class="jdm-global-network" data-global-network>
+  <section class="jdm-global-network-hero">
+    <div class="jdm-global-network-eyebrow">GLOBAL CERAMIC NETWORK · 全球陶瓷网络</div>
+    <h1>从一件瓷器，<br><span>看见它所处的世界。</span></h1>
+    <p>这里不是一张普通地图。它把知识条目、人物、工艺、时间、窑址与世界陶瓷中心放到同一条探索路径中。</p>
+  </section>
 
-<div class="museum-hero">
-  <div>
-    <div class="eyebrow">GLOBAL CERAMIC NETWORK · 全球陶瓷网络</div>
-    <h1>从景德镇出发，看见世界陶瓷如何互相影响。</h1>
-    <p>这里把窑址、陶瓷城市、原料、技术传播与贸易交流放进同一个全球视野。空间浏览以数字博物馆地图为入口，知识关系逐步在这里汇聚。</p>
-  </div>
-  <div class="museum-hero-mark">世界<br>陶瓷</div>
+  <section class="jdm-global-network-search" aria-label="选择知识条目">
+    <label for="jdm-global-network-input">从一个知识条目开始</label>
+    <div class="jdm-global-network-search-row">
+      <input id="jdm-global-network-input" type="search" autocomplete="off" placeholder="搜索唐英、青花瓷、御窑厂、郎廷极或具体器物……">
+      <button id="jdm-global-network-search-button" type="button">进入网络</button>
+    </div>
+    <div id="jdm-global-network-search-results" class="jdm-global-network-search-results"></div>
+    <div class="jdm-global-network-hints">
+      <button type="button" data-global-example="唐英">唐英</button>
+      <button type="button" data-global-example="青花瓷">青花瓷</button>
+      <button type="button" data-global-example="御窑厂遗址">御窑厂遗址</button>
+      <button type="button" data-global-example="元青花折枝花纹八棱瓶">具体器物</button>
+    </div>
+  </section>
+
+  <div id="jdm-global-network-status" class="jdm-global-network-status" aria-live="polite">选择一个知识条目，开始沿着时间、空间与关系探索。</div>
+  <div id="jdm-global-network-content"></div>
 </div>
-
-<div class="museum-grid">
-  <a class="museum-card wiki-card-link" href="../museum/kiln-map/">
-    <span>ATLAS · 地图</span><h3>全球窑址地图</h3><p>直接在地图上查看中国、东亚、东南亚、西亚与欧洲的重要陶瓷节点。</p><span class="wiki-read-more">打开地图 →</span>
-  </a>
-  <a class="museum-card wiki-card-link" href="../kilns/">
-    <span>SITES · 空间</span><h3>窑址与陶瓷城市</h3><p>从具体遗址进入区域窑业与城市生产空间。</p><span class="wiki-read-more">查看空间知识 →</span>
-  </a>
-  <a class="museum-card wiki-card-link" href="../museum/timeline/">
-    <span>TIME · 时间</span><h3>全球时间轴</h3><p>把景德镇与其他陶瓷生产中心放在同一时间尺度上比较。</p><span class="wiki-read-more">打开时间轴 →</span>
-  </a>
-</div>
-
-## 全球网络的建设原则
-
-这里不把“影响世界”写成单向传播故事，而是关注器物、技术、原料、制度、贸易和审美之间的双向与多向联系。具体判断以考古资料、博物馆馆藏、学术研究和其他可靠来源为依据。
