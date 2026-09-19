@@ -9,7 +9,7 @@ declare global {
       supabaseAnonKey: string;
     };
     supabase?: {
-      createClient(url: string, key: string, options?: unknown): unknown;
+      createClient(url: string, key: string, options?: unknown): any;
     };
     JDM_AUTH?: {
       getClient(): unknown;
