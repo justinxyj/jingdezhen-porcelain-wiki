@@ -172,3 +172,14 @@
 - Phase 2B Final Audit + Semantic Freeze 已完成；当前 149 published / 149 primary / 167 secondary / 316 total mappings。
 - 后续 entry_worlds 变更必须遵守冻结规则并完成 migration + AI memory + production regression。
 - 下一阶段：Phase 3 知识图谱、相关条目与可解释推荐系统。
+
+
+## 2026-09-19 — Phase 3A / 知识图谱节点与边统一模型
+- Phase 2B Semantic Freeze 保持不变：149 published / 149 primary / 167 secondary / 316 total mappings。
+- 新增 public.knowledge_graph_nodes / public.knowledge_graph_edges，作为网站统一知识网络读取层；原始 entries、entry_worlds、entry_relations、media、craft_processes、timeline 等事实表不被替代。
+- 当前统一图谱：485 nodes / 1,378 edges / 0 orphan edges。
+- 节点类型：entry 149、world 7、category 5、source 94、media 108、craft_process 72、timeline 50。
+- knowledge-store.js 新增 JDM_KNOWLEDGE.graph({nodeType,nodeId,limit})，支持全局节点读取和按 nodeId 获取直接邻接边。
+- source 已覆盖 entry / media / craft_process / timeline 的公开来源并按 URL 去重。
+- 生产公共媒体仍严格遵守 approved + verified；内部候选媒体不进入图谱。
+- Phase 3A 已完成“统一模型 + 网站可调用接口”；下一阶段进入 Phase 3B 相关条目候选与可解释推荐。
