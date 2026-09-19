@@ -14,6 +14,7 @@
 - 已确认 Phase B 核心公开读取 RLS 已生效；anon 无 is_staff() EXECUTE。
 - 已确认生产数据：entries 149、media 133、entry_relations 169、timeline_context 50、craft_processes 72、craft_process_relations 71、entry_craft_processes 289。
 - 已确认 G29 动态条目已进入生产。
+- 已确认 anon 实际可读取核心公开层：149 entries、124 approved media、169 relations、50 timeline_context。
 - CI / Pages 当前仍需单独取得最新可验证运行结果。
 
 ## 本次安全修复
@@ -25,9 +26,18 @@
 - 已在 GitHub main 增加迁移记录：supabase/migrations/20260919090000_secure_media_candidate_tables.sql。
 - Supabase Security Advisor 的原 RLS-disabled ERROR 已消失；剩余为“RLS 已启用但无 policy”的 INFO，这是预期的内部封锁状态。
 
+## 本次网站真实功能验收发现并修复
+- 验收发现前端 knowledge-store 原先只按 media.status='approved' 过滤，没有按 review_state='verified' 过滤，存在把“待审核媒体”送入公共网页的风险。
+- 已修复为只加载 status='approved' 且 review_state='verified' 的媒体。
+- 验收发现 media-policy.js 对 The Met 的真实馆藏图 42490/177595/main-image 有硬编码拒绝；该图同时存在 verified 记录，因此会导致真实馆藏图在网页中被错误隐藏。
+- 已移除该硬编码拒绝。
+- GitHub 最新 main 已包含上述两项修复：56377dd / 5f5784c。
+- 关系读取实测可用：anon 对 blue-and-white 可读取 30 条关系。
+- G29 的 Met 条目目前有 1 条媒体记录但 review_state=pending，因此按新规则不会公开显示，符合审核门槛。
+
 ## 当前重点
 1. 完成 CI / Pages 实时核验。
-2. 复核 Issue #2 媒体债与 /entry/ 实际行为。
+2. 继续复核 /entry/、时间轴、器物目录、人物页、图片库的真实行为。
 3. 审核剩余 SECURITY DEFINER function WARN，不机械修改。
 4. 再进入媒体清理与 72 工序图片核验。
 
