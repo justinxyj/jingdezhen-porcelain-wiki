@@ -5,9 +5,9 @@
     "allowJs": true,
     "checkJs": true,
     "noEmit": true,
-    "strict": false,
-    "noImplicitAny": false,
-    "strictNullChecks": false,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
     "skipLibCheck": true,
     "types": []
   },
@@ -17,6 +17,13 @@
     "docs/javascripts/auth-manager.js",
     "docs/javascripts/knowledge-store.js",
     "docs/javascripts/museum-admin.js",
-    "docs/javascripts/wiki-enhancements.js"
+    "docs/javascripts/wiki-enhancements.js",
+    "docs/javascripts/timeline-interactive.js",
+    "docs/javascripts/entry-search.js",
+    "docs/javascripts/network-explorer.js",
+    "docs/javascripts/museum.js",
+    "docs/javascripts/museum-images.js",
+    "docs/javascripts/technology-tree.js",
+    "docs/javascripts/global-network.js"
   ]
 }
