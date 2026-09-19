@@ -40,6 +40,6 @@
     root.querySelector('#curator-refresh').onclick=()=>init(root);
   }
   async function init(root){root.innerHTML='<div class="curator-loading">正在读取馆藏数据……</div>';try{render(root,await load())}catch(err){const code=esc(err?.code||err?.status||'UNKNOWN');root.innerHTML=`<div class="curator-error" role="alert"><h2>${esc(err.message||'后台加载失败')}</h2><p>错误代码：${code}</p><button type="button" id="curator-auth-retry">重新检查</button></div>`;root.querySelector('#curator-auth-retry')?.addEventListener('click',()=>init(root))}}
-  function boot(){const root=document.getElementById('curator-root');if(root)init(root)}
+  function boot(){const root=document.getElementById('curator-root');if(!root)return;window.addEventListener('jdm:auth',event=>{if(event.detail?.event==='SIGNED_OUT')root.innerHTML='<div class="curator-error" role="alert"><h2>登录状态已失效</h2><p>请重新登录后再使用馆长后台。</p></div>'});init(root)}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
 })();
