@@ -97,3 +97,15 @@
 - [x] M3 动态重绘降频
 - [x] M4 动态 HTML 安全边界
 - [x] M5 外部图片生命周期/负缓存
+
+
+## Wiki 2.0 全站改造
+- [x] 完成《Wiki 2.0 最终信息架构蓝图》
+- [x] 完成《Wiki 2.0 全站改造施工清单》并固化到 .ai/WIKI_2.0_CONSTRUCTION_PLAN.md
+- [ ] Sprint A：重构顶部导航与首页入口
+- [ ] Sprint B：统一七大知识世界入口
+- [ ] Sprint C：统一数字博物馆工具层
+- [ ] Sprint D：统一 /entry/ 知识节点页 2.0
+- [ ] Sprint E：补全知识关系网络
+- [ ] Sprint F：旧入口清理、视觉统一与全站发布验收
+
