@@ -55,3 +55,6 @@
 @media(max-width:620px){.modern-stat-strip{grid-template-columns:1fr 1fr}.modern-grid{grid-template-columns:1fr}.modern-card-wide{grid-column:auto}.modern-hero{padding:32px 20px;min-height:auto}.modern-hero h1{font-size:48px}.modern-hero-orbit{max-width:280px}.modern-feature{margin-left:-.5rem;margin-right:-.5rem;border-radius:24px}.modern-card{min-height:220px}}
 @media(prefers-color-scheme:dark){.modern-stat-strip>div{background:#18232b}.modern-card{background:linear-gradient(145deg,#18232b,#202c35);border-color:rgba(155,190,214,.13);color:#eff4f7}.modern-card p{color:#a9bac8}.modern-card h3{color:#f0f4f7}.modern-card-mark{color:rgba(159,194,223,.08)}.modern-section-head h2,.modern-closing h2{color:#eef4f7}.modern-flow-note{background:#302d25;color:#bdc9d4}.modern-closing-actions a{background:#18232b;color:#9fc2df;border-color:rgba(155,190,214,.14)}}
 </style>
+
+
+<section class="jdm-world-browser" data-world-browser="contemporary" aria-label="知识世界条目"></section>
