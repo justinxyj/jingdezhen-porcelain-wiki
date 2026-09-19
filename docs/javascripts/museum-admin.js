@@ -9,7 +9,7 @@
     const {data:{user}}=await db.auth.getUser();
     if(!user)throw Object.assign(new Error('馆长后台需要登录，请重新登录'),{code:'AUTH_REQUIRED',status:401});
     const result=window.JDM_AUTH?.request
-      ? await window.JDM_AUTH.request(d=>d.from('profiles').select('role').eq('id',user.id).maybeSingle())
+      ? await window.JDM_AUTH.request(/** @type {any} */ (d)=>d.from('profiles').select('role').eq('id',user.id).maybeSingle())
       : (await db.from('profiles').select('role').eq('id',user.id).maybeSingle()).data;
     const profile=result;
     if(profile?.role!=='admin')throw Object.assign(new Error('当前账号没有馆长后台权限'),{code:'AUTH_FORBIDDEN',status:403});
@@ -20,8 +20,8 @@
     const request=window.JDM_AUTH?.request;
     if(!request)throw Object.assign(new Error('统一认证请求层不可用，请刷新页面后重试'),{code:'JDM_AUTH_MISSING'});
     const [entries,media]=await Promise.all([
-      request(d=>d.from('entries').select('id,slug,category,zh,status,updated_at').order('updated_at',{ascending:false}).limit(250)),
-      request(d=>d.from('media').select('id,entry_id,path,title,source,license,status,review_state,is_primary,verified_at').order('created_at',{ascending:false}).limit(500))
+      request(/** @type {any} */ (d)=>d.from('entries').select('id,slug,category,zh,status,updated_at').order('updated_at',{ascending:false}).limit(250)),
+      request(/** @type {any} */ (d)=>d.from('media').select('id,entry_id,path,title,source,license,status,review_state,is_primary,verified_at').order('created_at',{ascending:false}).limit(500))
     ]);
     const normalizedEntries=(entries||[]).map(e=>({...e,confidence:e.zh?.meta?.confidence||null,editorial_status:e.zh?.meta?.editorial_status||e.status,reviewed_at:e.zh?.meta?.reviewed_at||null}));
     const normalizedMedia=(media||[]).map(m=>({...m,verification_status:m.review_state,reviewed_at:m.verified_at||null}));
