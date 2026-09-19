@@ -93,42 +93,81 @@ alter table public.entry_revisions enable row level security;
 alter table public.media enable row level security;
 alter table public.favorites enable row level security;
 
--- Public can read published knowledge, graph edges and approved media.
-create policy "entries_public_read" on public.entries for select
-  using (status='published' or auth.uid()=updated_by or is_staff());
+-- Phase B final state: public SELECT without is_staff(); staff policies TO authenticated.
+-- See migration 20260919_rls_phase_b_public_select_without_is_staff.sql
 
-create policy "entries_staff_write" on public.entries for all
-  using (is_staff()) with check (is_staff());
+create policy "entries_public_read" on public.entries
+  for select to anon, authenticated
+  using (status = 'published');
 
-create policy "entry_relations_public_read" on public.entry_relations for select
-  using (exists (select 1 from public.entries e where e.id=entry_relations.entry_id and e.status='published'));
+create policy "entries_owner_read" on public.entries
+  for select to authenticated
+  using (auth.uid() = updated_by);
 
-create policy "entry_relations_staff_write" on public.entry_relations for all
-  using (is_staff()) with check (is_staff());
+create policy "entries_staff_read" on public.entries
+  for select to authenticated
+  using (public.is_staff());
 
-create policy "edits_insert" on public.edits for insert
-  with check (auth.uid()=author_id);
+create policy "entries_staff_write" on public.entries
+  for all to authenticated
+  using (public.is_staff()) with check (public.is_staff());
 
-create policy "edits_own_select" on public.edits for select
-  using (auth.uid()=author_id or is_staff());
+create policy "entry_relations_public_read" on public.entry_relations
+  for select to anon, authenticated
+  using (
+    exists (select 1 from public.entries e where e.id = entry_relations.entry_id and e.status = 'published')
+    and exists (select 1 from public.entries e2 where e2.id = entry_relations.related_entry_id and e2.status = 'published')
+  );
 
-create policy "edits_staff_update" on public.edits for update
-  using (is_staff()) with check (is_staff());
+create policy "entry_relations_staff_write" on public.entry_relations
+  for all to authenticated
+  using (public.is_staff()) with check (public.is_staff());
 
-create policy "revisions_staff_insert" on public.entry_revisions for insert
-  with check (auth.uid()=editor_id and is_staff());
+create policy "edits_insert" on public.edits
+  for insert to authenticated
+  with check (auth.uid() = author_id);
 
-create policy "revisions_public_read" on public.entry_revisions for select
-  using (exists (select 1 from public.entries e where e.id=entry_revisions.entry_id and e.status='published'));
+create policy "edits_own_select" on public.edits
+  for select to authenticated
+  using (auth.uid() = author_id);
 
-create policy "media_insert" on public.media for insert
-  with check (auth.uid()=uploader_id);
+create policy "edits_staff_select" on public.edits
+  for select to authenticated
+  using (public.is_staff());
 
-create policy "media_public_read" on public.media for select
-  using (status='approved' or auth.uid()=uploader_id or is_staff());
+create policy "edits_staff_update" on public.edits
+  for update to authenticated
+  using (public.is_staff()) with check (public.is_staff());
 
-create policy "media_staff_update" on public.media for update
-  using (is_staff()) with check (is_staff());
+create policy "revisions_public_read" on public.entry_revisions
+  for select to anon, authenticated
+  using (
+    exists (select 1 from public.entries e where e.id = entry_revisions.entry_id and e.status = 'published')
+  );
+
+create policy "revisions_staff_insert" on public.entry_revisions
+  for insert to authenticated
+  with check (auth.uid() = editor_id and public.is_staff());
+
+create policy "media_public_read" on public.media
+  for select to anon, authenticated
+  using (status = 'approved');
+
+create policy "media_owner_read" on public.media
+  for select to authenticated
+  using (auth.uid() = uploader_id);
+
+create policy "media_staff_read" on public.media
+  for select to authenticated
+  using (public.is_staff());
+
+create policy "media_insert" on public.media
+  for insert to authenticated
+  with check (auth.uid() = uploader_id);
+
+create policy "media_staff_update" on public.media
+  for update to authenticated
+  using (public.is_staff()) with check (public.is_staff());
 
 create policy "users_manage_own_favorites" on public.favorites for all
   using (auth.uid()=user_id) with check (auth.uid()=user_id);
@@ -141,4 +180,4 @@ create policy "users_create_own_profile" on public.profiles for insert
 
 -- The database also contains SECURITY DEFINER helpers handle_new_user(), is_staff()
 -- and review_edit(p_edit_id, p_action, p_note), with search_path pinned to public.
--- Keep their EXECUTE privileges restricted to the roles required by the auth flow.
+-- Phase B: REVOKE EXECUTE ON is_staff() FROM anon/PUBLIC; GRANT TO authenticated, service_role.
