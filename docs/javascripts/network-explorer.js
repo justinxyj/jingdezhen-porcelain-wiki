@@ -38,6 +38,7 @@
         if(type!=='all'&&n.node_type==='entry'&&nodeCategory(n)!==type)return false;
         if(type!=='all'&&n.node_type==='world')return false;
         if(query){
+          if(n.node_type!=='entry')return false;
           const hay=(label(n)+' '+nodeCategory(n)+' '+String(n.summary||'')).toLowerCase();
           if(!hay.includes(query.toLowerCase()))return false;
         }
@@ -161,7 +162,7 @@
       list.querySelectorAll('[data-node]').forEach(b=>b.addEventListener('click',()=>selectNode(b.dataset.node)));
     }
 
-    search.addEventListener('input',()=>{query=search.value.trim();draw();});
+    search.addEventListener('input',()=>{query=search.value.trim();draw();if(query){const match=visibleNodes().find(n=>n.node_type==='entry');if(match)selectNode(match.node_id);}});
     filter.addEventListener('change',()=>{type=filter.value;draw();});
     reset.addEventListener('click',()=>{query='';type='all';search.value='';filter.value='all';active=null;detail.innerHTML='<div class="network-empty"><span>SELECT A NODE</span><h3>点击一个节点</h3><p>查看它连接到哪些知识，并从这里进入统一 Entry Detail 页面。</p></div>';draw();});
 
