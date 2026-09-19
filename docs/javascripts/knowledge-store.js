@@ -155,9 +155,8 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
     return {nodes,edges};
   }
   let searchIndexPromise=null;
-  async function searchEntries(term,{limit=20,category=null,worldSlug=null,era=null}={}) {
+  async function searchEntries(term,{limit=20,category=null,worldSlug=null,era=null,lane=null,hasMap=null,hasTimeline=null}={}) {
     const q=String(term||'').trim().toLowerCase();
-    if(!q)return [];
     if(!searchIndexPromise){
       searchIndexPromise=query((db,s)=>db.from('entries').select('id,slug,category,zh,en,ja,sources,status,version,updated_at').eq('status','published').order('id',{ascending:true}).abortSignal(s));
     }
@@ -165,6 +164,9 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
     let candidates=rows;
     if(category)candidates=candidates.filter(e=>String(e.category||'')===String(category));
     if(era)candidates=candidates.filter(e=>Array.isArray(e.zh?.meta?.timeline)&&e.zh.meta.timeline.some(x=>x?.era===era));
+    if(lane)candidates=candidates.filter(e=>Array.isArray(e.zh?.meta?.timeline)&&e.zh.meta.timeline.some(x=>x?.lane===lane));
+    if(hasTimeline!==null&&hasTimeline!==undefined)candidates=candidates.filter(e=>Array.isArray(e.zh?.meta?.timeline)&&e.zh.meta.timeline.length>0===Boolean(hasTimeline));
+    if(hasMap!==null&&hasMap!==undefined)candidates=candidates.filter(e=>Boolean(e.zh?.meta?.map?.lat!=null&&e.zh?.meta?.map?.lng!=null)===Boolean(hasMap));
     if(worldSlug){
       const links=await queryEntriesWorlds(candidates.map(e=>e.id));
       const allowed=new Set(links.filter(x=>x.world_slug===worldSlug).map(x=>x.entry_id));
@@ -179,20 +181,23 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
       const enTitle=String(e.en?.title||'').toLowerCase();
       const jaTitle=String(e.ja?.title||'').toLowerCase();
       let score=0;
-      if(title===q)score+=1000; else if(title.startsWith(q))score+=700; else if(title.includes(q))score+=500;
-      if(categoryText===q)score+=420; else if(categoryText.includes(q))score+=220;
-      if(slug===q)score+=400; else if(slug.includes(q))score+=160;
-      if(enTitle===q||jaTitle===q)score+=360; else if(enTitle.includes(q)||jaTitle.includes(q))score+=180;
-      if(summary.includes(q))score+=90;
-      if(content.includes(q))score+=35;
-      return score?{...e,_searchScore:score}:null;
-    }).filter(Boolean);
+      if(!q)score=1;
+      else{
+        if(title===q)score+=1000; else if(title.startsWith(q))score+=700; else if(title.includes(q))score+=500;
+        if(categoryText===q)score+=420; else if(categoryText.includes(q))score+=220;
+        if(slug===q)score+=400; else if(slug.includes(q))score+=160;
+        if(enTitle===q||jaTitle===q)score+=360; else if(enTitle.includes(q)||jaTitle.includes(q))score+=180;
+        if(summary.includes(q))score+=90;
+        if(content.includes(q))score+=35;
+      }
+      return {...e,_searchScore:score};
+    });
     scored.sort((a,b)=>b._searchScore-a._searchScore||String(a.zh?.title||'').localeCompare(String(b.zh?.title||''),'zh-Hans-CN'));
-    return scored.slice(0,Math.max(1,Math.min(50,Number(limit)||20))).map(({_searchScore,...e})=>e);
+    return scored.slice(0,Math.max(1,Math.min(100,Number(limit)||20))).map(({_searchScore,...e})=>e);
   }
-  async function searchDiscovery(term,{limit=12,recommendationLimit=3,category=null,worldSlug=null,era=null}={}) {
-    const entries=await searchEntries(term,{limit,category,worldSlug,era});
-    if(!entries.length)return [];
+  async function searchDiscoveryPage(term,{limit=12,recommendationLimit=3,category=null,worldSlug=null,era=null,lane=null,hasMap=null,hasTimeline=null}={}) {
+    const entries=await searchEntries(term,{limit:100,category,worldSlug,era,lane,hasMap,hasTimeline});
+    if(!entries.length)return {results:[],total:0,facets:{categories:[],eras:[],lanes:[]}};
     const ids=entries.map(e=>e.id);
     const [links,worldRows]=await Promise.all([
       queryEntriesWorlds(ids),
@@ -205,7 +210,20 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
       const world=worldsBySlug.get(x.world_slug);
       if(world)worldByEntry.get(x.entry_id).push({...world,role:x.role,rationale:x.rationale});
     });
-    return Promise.all(entries.map(async e=>({...e,worlds:worldByEntry.get(e.id)||[],recommendations:await recommendations(e.id,{limit:recommendationLimit})})));
+    const facetCount=(values)=>{const m=new Map();values.forEach(v=>{if(v)m.set(v,(m.get(v)||0)+1)});return [...m.entries()].map(([value,count])=>({value,count})).sort((a,b)=>b.count-a.count||String(a.value).localeCompare(String(b.value),'zh-Hans-CN'))};
+    const facets={
+      categories:facetCount(entries.map(e=>e.category)),
+      eras:facetCount(entries.flatMap(e=>Array.isArray(e.zh?.meta?.timeline)?e.zh.meta.timeline.map(x=>x?.era):[])),
+      lanes:facetCount(entries.flatMap(e=>Array.isArray(e.zh?.meta?.timeline)?e.zh.meta.timeline.map(x=>x?.lane):[])),
+      worlds:facetCount(links.map(x=>x.world_slug)),
+      mapped:entries.filter(e=>e.zh?.meta?.map?.lat!=null&&e.zh?.meta?.map?.lng!=null).length,
+      timed:entries.filter(e=>Array.isArray(e.zh?.meta?.timeline)&&e.zh.meta.timeline.length).length
+    };
+    const results=await Promise.all(entries.slice(0,Math.max(1,Math.min(24,Number(limit)||12))).map(async e=>({...e,worlds:worldByEntry.get(e.id)||[],recommendations:await recommendations(e.id,{limit:recommendationLimit}),discovery:{score:0,hasMap:Boolean(e.zh?.meta?.map?.lat!=null&&e.zh?.meta?.map?.lng!=null),hasTimeline:Boolean(Array.isArray(e.zh?.meta?.timeline)&&e.zh.meta.timeline.length),eras:[...new Set((e.zh?.meta?.timeline||[]).map(x=>x?.era).filter(Boolean))],lanes:[...new Set((e.zh?.meta?.timeline||[]).map(x=>x?.lane).filter(Boolean))]}})));
+    return {results,total:entries.length,facets};
+  }
+  async function searchDiscovery(term,options={}) {
+    return (await searchDiscoveryPage(term,options)).results;
   }
   async function queryEntriesWorlds(ids){
     return ids.length?await query((db,s)=>db.from('entry_worlds').select('entry_id,world_slug,role,rationale').in('entry_id',ids).order('role',{ascending:true}).order('display_order',{ascending:true}).abortSignal(s)):[];
@@ -261,5 +279,5 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
   }
   async function byCategory(category,limit=250){return list({category,limit})}
   function url(e){return e?'/jingdezhen-porcelain-wiki/entry/?type='+encodeURIComponent(e.category)+'&slug='+encodeURIComponent(e.slug):'/jingdezhen-porcelain-wiki/'}
-  window.JDM_KNOWLEDGE={all,get,list,worlds,byWorld,worldOverview,entryContext,entryNetworkContext,graph,recommendations,searchEntries,searchDiscovery,byCategory,url,state:()=>({...state}),reset:()=>{allPromise=null;searchIndexPromise=null;cache.clear();state={status:'idle',error:null,updatedAt:null}}};
+  window.JDM_KNOWLEDGE={all,get,list,worlds,byWorld,worldOverview,entryContext,entryNetworkContext,graph,recommendations,searchEntries,searchDiscovery,searchDiscoveryPage,byCategory,url,state:()=>({...state}),reset:()=>{allPromise=null;searchIndexPromise=null;cache.clear();state={status:'idle',error:null,updatedAt:null}}};
 })();
