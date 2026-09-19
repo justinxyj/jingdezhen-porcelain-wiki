@@ -43,16 +43,19 @@
     if(error)throw normalizeError(error);
     return data.session||null;
   }
-  async function request(factory,{retryAuth=true}={}){
+  async function request(factory,{retryAuth=true,timeoutMs=10000}={}){
     const db=getClient();
+    const controller=new AbortController();
+    const timer=setTimeout(()=>controller.abort(),timeoutMs);
     let result;
-    try{result=await factory(db)}catch(error){throw normalizeError(error)}
+    try{result=await factory(db,controller.signal)}catch(error){throw normalizeError(error)}
+    finally{clearTimeout(timer)}
     if(!result?.error)return result?.data;
     const err=normalizeError(result.error);
     if(retryAuth&&err.status===401){
       try{
         const refreshed=await refresh();
-        if(refreshed)return request(factory,{retryAuth:false});
+        if(refreshed)return request(factory,{retryAuth:false,timeoutMs});
         await signOut();
         throw Object.assign(new Error('登录状态已失效，请重新登录'),{code:'AUTH_EXPIRED',status:401});
       }catch(refreshError){
