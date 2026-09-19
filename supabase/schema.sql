@@ -220,3 +220,6 @@ grant select (
   id, entry_id, path, title, source, license, creator, captured_at, location,
   created_at, usage_type, source_tier, is_primary, canonical_key, source_url, source_type
 ) on table public.media to anon;
+
+revoke select on table public.entry_revisions from anon;
+grant select on table public.entry_revisions to authenticated;
