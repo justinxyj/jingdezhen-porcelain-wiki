@@ -16,7 +16,7 @@ declare global {
       session(): Promise<unknown>;
       user(): Promise<unknown>;
       refresh(): Promise<unknown>;
-      request<T>(factory: (db: unknown, signal: AbortSignal) => Promise<{ data: T; error?: unknown }>, options?: { retryAuth?: boolean; timeoutMs?: number }): Promise<T>;
+      request<T>(factory: (db: any, signal: AbortSignal) => Promise<{ data: T; error?: unknown }>, options?: { retryAuth?: boolean; timeoutMs?: number }): Promise<T>;
       signOut(): Promise<void>;
       state(): { status: string; session: unknown; user: unknown; lastEvent: unknown };
     };
