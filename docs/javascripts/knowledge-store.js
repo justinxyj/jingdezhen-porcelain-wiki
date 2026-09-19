@@ -228,6 +228,46 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
   async function queryEntriesWorlds(ids){
     return ids.length?await query((db,s)=>db.from('entry_worlds').select('entry_id,world_slug,role,rationale').in('entry_id',ids).order('role',{ascending:true}).order('display_order',{ascending:true}).abortSignal(s)):[];
   }
+  async function objectAtlas({limit=250}={}) {
+    const objects=(await byCategory('器物',limit)).filter(e=>e?.status==='published');
+    if(!objects.length)return [];
+    const ids=objects.map(e=>e.id);
+    const [worldRows,worldDefs,relations,craftEdges]=await Promise.all([
+      query((db,s)=>db.from('entry_worlds').select('entry_id,world_slug,role,rationale').in('entry_id',ids).abortSignal(s)),
+      query((db,s)=>db.from('knowledge_worlds').select('slug,title,short_title,display_order').order('display_order',{ascending:true}).abortSignal(s)),
+      query((db,s)=>db.from('entry_relations').select('entry_id,related_entry_id,relation_type,note').in('entry_id',ids).order('relation_type',{ascending:true}).abortSignal(s)),
+      query((db,s)=>db.from('knowledge_graph_edges').select('source_node_id,target_node_id,edge_type,rationale,metadata').in('source_node_id',ids.map(id=>'entry:'+id)).eq('edge_type','craft_process:historically_important_for').abortSignal(s))
+    ]);
+    const relatedIds=[...new Set(relations.map(r=>r.related_entry_id).filter(Boolean))];
+    const relatedRows=relatedIds.length?await query((db,s)=>db.from('entries').select('id,slug,category,zh,en,ja,status').eq('status','published').in('id',relatedIds).abortSignal(s)):[];
+    const craftIds=[...new Set(craftEdges.map(r=>String(r.target_node_id||'')).filter(x=>x.startsWith('craft:')))];
+    const craftRows=craftIds.length?await query((db,s)=>db.from('knowledge_graph_nodes').select('id,label,node_type,metadata').in('id',craftIds).abortSignal(s)):[];
+    const worlds=new Map(worldDefs.map(w=>[w.slug,w]));
+    const related=new Map(relatedRows.map(e=>[e.id,e]));
+    const crafts=new Map(craftRows.map(e=>[e.id,e]));
+    const worldByEntry=new Map(), relationByEntry=new Map(), craftByEntry=new Map();
+    worldRows.forEach(w=>{if(!worldByEntry.has(w.entry_id))worldByEntry.set(w.entry_id,[]);const d=worlds.get(w.world_slug);if(d)worldByEntry.get(w.entry_id).push({...d,role:w.role,rationale:w.rationale})});
+    relations.forEach(r=>{if(!relationByEntry.has(r.entry_id))relationByEntry.set(r.entry_id,[]);const e=related.get(r.related_entry_id);if(e)relationByEntry.get(r.entry_id).push({...r,entry:e})});
+    craftEdges.forEach(r=>{if(!craftByEntry.has(r.source_node_id))craftByEntry.set(r.source_node_id,[]);const node=crafts.get(r.target_node_id);if(node)craftByEntry.get(r.source_node_id).push({...node,rationale:r.rationale})});
+    return objects.map(e=>{
+      const m=e.zh?.meta||{};
+      const rel=relationByEntry.get(e.id)||[];
+      return {
+        entry:e,
+        worlds:worldByEntry.get(e.id)||[],
+        relations:rel,
+        people:rel.filter(r=>r.entry?.category==='人物').map(r=>r.entry),
+        kilns:rel.filter(r=>r.entry?.category==='窑址').map(r=>r.entry),
+        documents:rel.filter(r=>r.entry?.category==='文献').map(r=>r.entry),
+        craftProcesses:craftByEntry.get('entry:'+e.id)||[],
+        timeline:Array.isArray(m.timeline)?m.timeline:[],
+        map:m.map||null,
+        period:m.period||m.era||'',
+        craft:m.craft||''
+      };
+    });
+  }
+
   async function entryNetworkContext(entryId,{timelineLimit=12,spaceLimit=24}={}) {
     const allEntries=await all();
     const id=String(entryId||'');
@@ -279,5 +319,5 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
   }
   async function byCategory(category,limit=250){return list({category,limit})}
   function url(e){return e?'/jingdezhen-porcelain-wiki/entry/?type='+encodeURIComponent(e.category)+'&slug='+encodeURIComponent(e.slug):'/jingdezhen-porcelain-wiki/'}
-  window.JDM_KNOWLEDGE={all,get,list,worlds,byWorld,worldOverview,entryContext,entryNetworkContext,graph,recommendations,searchEntries,searchDiscovery,searchDiscoveryPage,byCategory,url,state:()=>({...state}),reset:()=>{allPromise=null;searchIndexPromise=null;cache.clear();state={status:'idle',error:null,updatedAt:null}}};
+  window.JDM_KNOWLEDGE={all,get,list,worlds,byWorld,worldOverview,entryContext,entryNetworkContext,objectAtlas,graph,recommendations,searchEntries,searchDiscovery,searchDiscoveryPage,byCategory,url,state:()=>({...state}),reset:()=>{allPromise=null;searchIndexPromise=null;cache.clear();state={status:'idle',error:null,updatedAt:null}}};
 })();
