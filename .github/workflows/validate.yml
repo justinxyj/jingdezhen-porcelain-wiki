@@ -46,7 +46,7 @@ jobs:
       - name: Install type-check dependencies
         run: npm install --no-package-lock
 
-      - name: Type check core JavaScript
+      - name: Type check database contracts
         run: npm run typecheck
 
       - name: Build site
