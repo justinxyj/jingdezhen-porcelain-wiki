@@ -74,6 +74,9 @@ create table if not exists public.media (
   created_at timestamptz not null default now()
 );
 
+-- Process image provenance fields are added by migration 20260919_media_governance_candidates.sql.
+
+
 create table if not exists public.favorites (
   user_id uuid references auth.users(id) on delete cascade,
   entry_id uuid references public.entries(id) on delete cascade,
