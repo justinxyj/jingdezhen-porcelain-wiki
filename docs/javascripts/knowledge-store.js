@@ -228,6 +228,46 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
   async function queryEntriesWorlds(ids){
     return ids.length?await query((db,s)=>db.from('entry_worlds').select('entry_id,world_slug,role,rationale').in('entry_id',ids).order('role',{ascending:true}).order('display_order',{ascending:true}).abortSignal(s)):[];
   }
+  async function personAtlas({limit=250}={}) {
+    const people=(await byCategory('人物',limit)).filter(e=>e?.status==='published');
+    if(!people.length)return [];
+    const ids=people.map(e=>e.id);
+    const [worldRows,worldDefs,relationRows,craftEdges]=await Promise.all([
+      query((db,s)=>db.from('entry_worlds').select('entry_id,world_slug,role,rationale').in('entry_id',ids).abortSignal(s)),
+      query((db,s)=>db.from('knowledge_worlds').select('slug,title,short_title,display_order').order('display_order',{ascending:true}).abortSignal(s)),
+      query((db,s)=>db.from('entry_relations').select('entry_id,related_entry_id,relation_type,note').or('entry_id.in.('+ids.join(',')+'),related_entry_id.in.('+ids.join(',')+')').order('relation_type',{ascending:true}).abortSignal(s)),
+      query((db,s)=>db.from('knowledge_graph_edges').select('source_node_id,target_node_id,edge_type,rationale,metadata').in('source_node_id',ids.map(id=>'entry:'+id)).eq('edge_type','craft_process:historically_important_for').abortSignal(s))
+    ]);
+    const otherIds=[...new Set(relationRows.flatMap(r=>[r.entry_id,r.related_entry_id]).filter(id=>id&&!ids.includes(id)))];
+    const otherRows=otherIds.length?await query((db,s)=>db.from('entries').select('id,slug,category,zh,en,ja,status').eq('status','published').in('id',otherIds).abortSignal(s)):[];
+    const craftIds=[...new Set(craftEdges.map(r=>String(r.target_node_id||'')).filter(x=>x.startsWith('craft:')))];
+    const craftRows=craftIds.length?await query((db,s)=>db.from('knowledge_graph_nodes').select('id,label,node_type,metadata').in('id',craftIds).abortSignal(s)):[];
+    const worlds=new Map(worldDefs.map(w=>[w.slug,w])), byOther=new Map(otherRows.map(e=>[e.id,e])), crafts=new Map(craftRows.map(e=>[e.id,e]));
+    const worldByPerson=new Map(), relationsByPerson=new Map(), craftsByPerson=new Map();
+    worldRows.forEach(w=>{if(!worldByPerson.has(w.entry_id))worldByPerson.set(w.entry_id,[]);const d=worlds.get(w.world_slug);if(d)worldByPerson.get(w.entry_id).push({...d,role:w.role,rationale:w.rationale})});
+    relationRows.forEach(r=>{
+      const owner=ids.includes(r.entry_id)?r.entry_id:ids.includes(r.related_entry_id)?r.related_entry_id:null;
+      if(!owner)return;
+      const targetId=owner===r.entry_id?r.related_entry_id:r.entry_id;
+      const target=byOther.get(targetId);
+      if(!target)return;
+      if(!relationsByPerson.has(owner))relationsByPerson.set(owner,[]);
+      relationsByPerson.get(owner).push({...r,target,fromOwner:owner===r.entry_id});
+    });
+    craftEdges.forEach(r=>{const id=r.source_node_id;if(!craftsByPerson.has(id))craftsByPerson.set(id,[]);const node=crafts.get(r.target_node_id);if(node)craftsByPerson.get(id).push({...node,rationale:r.rationale})});
+    const peopleByEra=new Map();
+    people.forEach(e=>{const era=String(e.zh?.meta?.era||e.zh?.meta?.period||'').trim();if(!era)return;if(!peopleByEra.has(era))peopleByEra.set(era,[]);peopleByEra.get(era).push(e)});
+    return people.map(e=>{
+      const m=e.zh?.meta||{}, rel=relationsByPerson.get(e.id)||[], era=String(m.era||m.period||'').trim();
+      const works=rel.filter(r=>r.target?.category==='器物').map(r=>r.target);
+      const kilns=rel.filter(r=>r.target?.category==='窑址').map(r=>r.target);
+      const documents=rel.filter(r=>r.target?.category==='文献').map(r=>r.target);
+      const relatedPeople=rel.filter(r=>r.target?.category==='人物').map(r=>r.target);
+      const sameEra=(peopleByEra.get(era)||[]).filter(x=>x.id!==e.id).slice(0,4);
+      return {entry:e,worlds:worldByPerson.get(e.id)||[],relations:rel,works,kilns,documents,relatedPeople,sameEra,craftProcesses:craftsByPerson.get('entry:'+e.id)||[],era,role:m.role||'',map:m.map||null};
+    });
+  }
+
   async function objectAtlas({limit=250}={}) {
     const objects=(await byCategory('器物',limit)).filter(e=>e?.status==='published');
     if(!objects.length)return [];
@@ -319,5 +359,5 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
   }
   async function byCategory(category,limit=250){return list({category,limit})}
   function url(e){return e?'/jingdezhen-porcelain-wiki/entry/?type='+encodeURIComponent(e.category)+'&slug='+encodeURIComponent(e.slug):'/jingdezhen-porcelain-wiki/'}
-  window.JDM_KNOWLEDGE={all,get,list,worlds,byWorld,worldOverview,entryContext,entryNetworkContext,objectAtlas,graph,recommendations,searchEntries,searchDiscovery,searchDiscoveryPage,byCategory,url,state:()=>({...state}),reset:()=>{allPromise=null;searchIndexPromise=null;cache.clear();state={status:'idle',error:null,updatedAt:null}}};
+  window.JDM_KNOWLEDGE={all,get,list,worlds,byWorld,worldOverview,entryContext,entryNetworkContext,objectAtlas,personAtlas,graph,recommendations,searchEntries,searchDiscovery,searchDiscoveryPage,byCategory,url,state:()=>({...state}),reset:()=>{allPromise=null;searchIndexPromise=null;cache.clear();state={status:'idle',error:null,updatedAt:null}}};
 })();
