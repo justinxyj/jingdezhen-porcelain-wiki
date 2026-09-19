@@ -56,3 +56,10 @@
 - 重试、MutationObserver 生命周期加固。
 - PR 不再依赖线上 Supabase；main/post-deploy 执行公开 ACL smoke。
 - 核心 JS 开启 checkJs，strict contracts 保持独立。
+
+
+## 2026-09-19 — Sprint B / 七大知识世界统一入口
+- Added editorial knowledge_worlds + entry_worlds layer independent from entry categories.
+- Mapped all 149 published entries; 406 primary/secondary mappings currently exist.
+- Connected all seven world landing pages to live world-aware entry browsing.
+- Refreshed generated Supabase TypeScript contracts.
