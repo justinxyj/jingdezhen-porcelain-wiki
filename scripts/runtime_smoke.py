@@ -16,7 +16,7 @@ key=re.search(r"supabaseAnonKey:\s*'([^']+)'",text).group(1)
 
 def get(path, params=None, expect=(200,)):
     qs=urllib.parse.urlencode(params or {})
-    req=urllib.request.Request(f"{url}/rest/v1/{path}?{qs}",headers={"apikey":key,"Authorization":f"Bearer {key}","Accept":"application/json"})
+    req=urllib.request.Request(f"{url}/rest/v1/{path}?{qs}",headers={"apikey":key,"Accept":"application/json"})
     try:
         with urllib.request.urlopen(req,timeout=10) as res:
             status=res.status; body=res.read().decode()
