@@ -62,6 +62,14 @@ with sync_playwright() as p:
             raise RuntimeError(f"{name} has horizontal overflow")
         print("PASS",name)
 
+    for name,path in [("历史世界","history/"),("工艺世界","craft/"),("器物世界","objects/"),("空间世界","kilns/"),("人物世界","people/"),("文献世界","research/"),("现代世界","contemporary/")]:
+        page.goto(base+path,wait_until="networkidle",timeout=30000)
+        browser_cards=page.locator("[data-world-browser] .jdm-world-entry-card")
+        browser_cards.first.wait_for(state="visible",timeout=20000)
+        if browser_cards.count()<1:
+            raise RuntimeError(f"{name} has no world entries")
+        print("PASS",name,"entries",browser_cards.count())
+
     page.goto(base+"museum/timeline/",wait_until="domcontentloaded",timeout=30000)
     titles=page.locator(".timeline-item h3").all_text_contents()
     expected=["东晋—唐：新平镇与昌南镇","五代—宋：湖田窑与青白瓷"]
