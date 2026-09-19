@@ -231,8 +231,12 @@
 - [x] 增加桌面 / 移动端 / dark mode 网络探索样式。
 - [ ] Pages 部署后完成 Phase 4A 浏览器 smoke。
 
-### Phase 4B — 下一阶段
-- [ ] 七大知识世界首页进一步动态化：代表条目、世界内关系与继续探索。
-- [ ] /entry/ 2.0：历史、空间、工艺、人物、文献、继续探索模块统一化。
-- [ ] 搜索与发现：从全站搜索直接进入统一知识节点。
-- [ ] 全球陶瓷网络：从“地图入口”升级为空间 + 时间 + 知识关系联动。
+### Phase 4B — 七大知识世界动态化
+- [x] 七大世界入口统一接入 live `knowledge_worlds + entry_worlds + entries` 数据。
+- [x] 新增 `JDM_KNOWLEDGE.worldOverview()`：动态读取世界定义、核心条目、跨世界入口、类别分布与世界间连接。
+- [x] 七个世界页动态显示核心条目数、跨世界入口数、当前连接数。
+- [x] 七个世界页动态生成代表性知识入口，并直接进入统一 Entry Detail。
+- [x] 七个世界页动态显示 Connected Worlds，按真实 entry-world 重叠关系建立继续探索路径。
+- [x] 保持 Phase 2B Semantic Freeze：本阶段只读取冻结 mapping，不重新推断或修改 world 归属。
+- [x] 增加桌面 / 移动端 / dark mode 的世界概览与代表入口样式。
+- [ ] Pages 部署后完成七个世界页面浏览器 smoke。
