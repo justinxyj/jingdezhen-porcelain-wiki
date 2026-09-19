@@ -99,7 +99,7 @@
       render(root,e,network);
       const relations=network.relations||[], recommendations=network.recommendations||[];
       const recommendationError=network.networkError?network.networkError:null;
-      if(recommendationError){const note=document.createElement('div');note.className='wiki-entry-recommendation-warning';note.setAttribute('role','status');note.textContent='相关推荐暂时无法加载，其他知识内容仍可正常浏览。';root.querySelector('.wiki-entry-card')?.appendChild(note);}
+      if(recommendationError){const note=document.createElement('div');note.className='wiki-entry-recommendation-warning';note.setAttribute('role','status');note.textContent='部分扩展探索信息暂时无法加载，当前 Entry 仍可正常浏览。';root.querySelector('.wiki-entry-card')?.appendChild(note);}
       if(error)renderRelationWarning(root);
       if(truncated){const note=document.createElement('div');note.className='wiki-entry-relation-warning';note.setAttribute('role','status');note.textContent='相关内容较多，当前仅显示前 200 条唯一关系。';root.querySelector('.wiki-entry-card')?.appendChild(note)}
     }catch(error){renderLoadError(root,error)}
