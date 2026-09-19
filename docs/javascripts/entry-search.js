@@ -6,7 +6,7 @@
   const plain=s=>{const d=document.createElement('div');d.innerHTML=String(s||'');return d.textContent||d.innerText||''};
   const entryUrl=e=>window.JDM_KNOWLEDGE?.url(e)||ROOT+'entry/?slug='+encodeURIComponent(e?.slug||'');
   const worldUrl=slug=>ROOT+({'history':'history/','craft':'craft/','objects':'objects/','space':'kilns/','people':'people/','research':'research/','contemporary':'contemporary/'}[slug]||'');
-  const eraLabel=x=>({tang:'唐五代',song:'宋',yuan:'元',ming:'明',qing:'清',modern:'近现代'}[x]||x);
+  const eraLabel=x=>({tang:'唐五代',song:'宋',yuan:'元',ming:'明',qing:'清','near-modern':'近代',modern:'现代'}[x]||x);
   const laneLabel=x=>({jdz:'景德镇',china:'中国其他窑业',world:'世界其他地区'}[x]||x);
   const categoryLabel=x=>({人物:'人物与传承',历史:'历史与发展',器物:'器物与美学',文献:'文献与研究',窑址:'窑址与城市空间'}[x]||x||'知识');
   const state={q:'',world:'',category:'',era:'',lane:'',hasMap:'',hasTimeline:''};
