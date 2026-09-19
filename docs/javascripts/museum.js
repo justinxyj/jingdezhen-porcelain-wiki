@@ -71,7 +71,7 @@
       return '<article class="person-card person-card-v2">'+
         (im?'<a href="'+entryUrl(e)+'" class="person-card-image"><img data-museum-image="1" src="'+esc(im.path)+'" alt="'+esc(im.title||e.zh?.title||'人物图片')+'" loading="lazy"></a>':'')+
         '<div class="person-card-body">'+
-        '<div class="person-card-tags">'+(x.era?'<span class="tag">'+esc(x.era)+'</span>':'')+(x.worlds?.[0]?'<span class="tag">'+esc(x.worlds[0].short_title||x.worlds[0].title)+'</span>':'')+'</div>'+
+        '<div class="person-card-tags">'+(x.era?'<span class="tag">'+esc(eraLabel(x.era))+'</span>':'')+(x.worlds?.[0]?'<span class="tag">'+esc(x.worlds[0].short_title||x.worlds[0].title)+'</span>':'')+'</div>'+
         '<h3><a href="'+entryUrl(e)+'">'+esc(e.zh?.title||'未命名人物')+'</a></h3>'+
         (x.role?'<strong>'+esc(x.role)+'</strong>':'')+
         '<p>'+esc(text(e).slice(0,180))+'</p>'+
