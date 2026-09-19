@@ -418,3 +418,13 @@
 - [x] 所有新增关系均带 source_url / source_institution / source_tier / reviewed_at；未放宽相关推荐 A+ / A gate。
 - [x] migration：supabase/migrations/20260920035000_phase_4e5_craft_relation_deep_audit.sql。
 - [ ] Pages browser smoke：检查工序详情中的器物、人物、窑址路径及全球网络邻接。
+
+
+## Phase 4E-5 Craft Relation Deep Audit Round 2 — 2026-09-20
+- [x] 复核具体人物↔器物 A+/A 关系，不把“同风格/同年代/同工艺”误当作人物对具体古代器物的直接归属。
+- [x] 新增 郎廷极 → 颜色釉瓷，A+：故宫明确说明郎窑红因郎廷极督理景德镇窑务而得名，且郎窑红属于红釉/颜色釉体系。
+- [x] 新增 唐英 → 颜色釉瓷，A：故宫资料记录唐英主持御窑期间仿古创新釉彩达到57种。
+- [x] 保留 唐英 → 雍正仿钧新紫釉天球瓶 A，不升级为 A+；现有证据证明其处于唐英主持的御窑生产体系，但未直接证明该具体器物由唐英个人制作。
+- [x] 未强行建立 王步 / 王琦 / 田鹤仙 / 黄云鹏 → 现有古代馆藏具体器物的作者/制作关系；黄云鹏的“元青花三顾茅庐纹罐”为代表作品，但当前知识库尚无该具体器物节点，暂不伪造关系。
+- [x] entry_relations：102；A+ 5 / A 19 / B 1 / C 77；相关推荐 24。
+- [ ] 具体器物节点 Round 3：优先评估“郎窑红梅瓶 / 郎窑红釉琵琶尊 / 元青花三顾茅庐纹罐”等是否进入 Canonical Content Admission。
