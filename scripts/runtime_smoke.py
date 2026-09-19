@@ -4,6 +4,7 @@ import json
 import sys
 import urllib.parse
 import urllib.request
+import urllib.error
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -28,7 +29,7 @@ def get(path, params=None, expect=(200,)):
 
 _,entries=get("entries",{"select":"id,slug,status","status":"eq.published","limit":"5"})
 if not entries: raise RuntimeError("published entries query returned no rows")
-_,media=get("media_public",{"select":"id,entry_id,status,review_state","limit":"5"})
+_,media=get("media_public",{"select":"id,entry_id,path","limit":"5"})
 if any("status" in x or "review_state" in x for x in media):
     raise RuntimeError("media_public leaked internal review columns")
 _,craft=get("craft_processes",{"select":"id,sequence,name_zh","order":"sequence.asc","limit":"1000"})
