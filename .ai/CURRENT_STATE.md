@@ -301,3 +301,10 @@
 - 工艺层通过 `craft_process:historically_important_for` 图谱边连接到现有 72 道工艺流程。
 - 相关推荐仍严格受 A+ / A gate 控制；全球网络只是消费这些关系，不改变其资格。
 - Phase 4C 代码已通过 JS syntax regression；Pages browser smoke 仍待线上部署确认。
+
+
+## Phase 4C Closeout — 2026-09-20
+- 全球陶瓷网络第一轮已正式封版。
+- 线上 Smoke Test 已完成，器物 / 人物 / 窑址三类 Entry 的时间、空间、关系、推荐链路正常。
+- 当前产品链路已形成：Entry → 工艺 → 时间 → 空间 → 人物/文献/其他关系 → A+/A 推荐 → 全球网络继续探索。
+- 下一阶段重点转向统一搜索与发现体验，以及全球网络更深层的跨世界 / 跨时代探索。
