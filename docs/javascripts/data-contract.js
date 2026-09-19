@@ -14,6 +14,12 @@
     }
     return x;
   }
+  function world(x){
+    if(!x||typeof x.slug!=='string'||typeof x.title!=='string'||typeof x.display_order!=='number'){
+      throw fail('JDM_WORLD_CONTRACT','知识世界数据结构异常',{slug:x?.slug});
+    }
+    return x;
+  }
   function list(items,validator){return (items||[]).map(validator)}
-  window.JDM_CONTRACT={entry,media,entries:items=>list(items,entry),mediaList:items=>list(items,media)};
+  window.JDM_CONTRACT={entry,media,world,entries:items=>list(items,entry),mediaList:items=>list(items,media),worlds:items=>list(items,world)};
 })();
