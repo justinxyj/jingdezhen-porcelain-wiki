@@ -108,7 +108,8 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
     const byId=new Map(entries.map(e=>[e.id,e]));
     return links.map(link=>({...link,entry:byId.get(link.entry_id)})).filter(x=>x.entry).map(x=>({...x.entry,worldRole:x.role,worldRationale:x.rationale,worldOrder:x.display_order}));
   }
+  async function graph({nodeType=null,nodeId=null,limit=500}={}){\n    let nodes=await query((db,s)=>{let q=db.from('knowledge_graph_nodes').select('node_type,node_id,label,category,summary,metadata').order('node_type',{ascending:true}).order('node_id',{ascending:true}).limit(limit).abortSignal(s);if(nodeType)q=q.eq('node_type',nodeType);if(nodeId)q=q.eq('node_id',nodeId);return q});\n    let edges=[];\n    if(nodeId){\n      edges=await query((db,s)=>db.from('knowledge_graph_edges').select('source_node_id,target_node_id,edge_type,rationale,display_order,metadata').or('source_node_id.eq.'+nodeId+',target_node_id.eq.'+nodeId).order('edge_type',{ascending:true}).order('display_order',{ascending:true}).limit(limit).abortSignal(s));\n    }\n    return {nodes,edges};\n  }
   async function byCategory(category,limit=250){return list({category,limit})}
   function url(e){return e?'/jingdezhen-porcelain-wiki/entry/?type='+encodeURIComponent(e.category)+'&slug='+encodeURIComponent(e.slug):'/jingdezhen-porcelain-wiki/'}
-  window.JDM_KNOWLEDGE={all,get,list,worlds,byWorld,byCategory,url,state:()=>({...state}),reset:()=>{allPromise=null;cache.clear();state={status:'idle',error:null,updatedAt:null}}};
+  window.JDM_KNOWLEDGE={all,get,list,worlds,byWorld,graph,byCategory,url,state:()=>({...state}),reset:()=>{allPromise=null;cache.clear();state={status:'idle',error:null,updatedAt:null}}};
 })();
