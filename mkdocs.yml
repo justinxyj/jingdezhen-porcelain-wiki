@@ -85,52 +85,58 @@ markdown_extensions:
 
 nav:
   - 首页: index.md
+  - 探索景德镇:
+      - 历史与发展:
+          - 历史总览: history/README.md
+          - 唐五代: history/tang-wudai.md
+          - 宋元: history/song-yuan.md
+          - 明清: history/ming-qing.md
+          - 近现代: history/modern.md
+      - 工艺与技术:
+          - 工艺总览: craft/README.md
+          - 制瓷技术树: craft/technology-tree.md
+          - 原料与配方: craft/raw-materials.md
+          - 成型与修整: craft/forming-and-finishing.md
+          - 窑炉与烧成: craft/kiln-firing.md
+          - 青花: craft/qinghua.md
+          - 粉彩: craft/fencai.md
+          - 颜色釉: craft/colored-glaze.md
+      - 器物与美学:
+          - 器物分类: objects/README.md
+          - 纹饰与题材: aesthetics/patterns.md
+      - 窑址与城市空间:
+          - 窑址总览: kilns/README.md
+          - 御窑厂: kilns/imperial-kiln.md
+          - 湖田窑: kilns/hutian-kiln.md
+          - 其他窑址与矿料: kilns/other-sites.md
+      - 人物与传承:
+          - 人物总览: people/README.md
+      - 文献与研究:
+          - 研究规范: research/README.md
+          - 核心文献库: research/sources.md
+          - 文献总库: research/literature-library.md
+          - 考古资料与时间轴: research/archaeology.md
+          - 研究导览: research/research-hub.md
+          - 世界遗产: research/heritage.md
+          - 补充文献库: research/sources-addendum.md
+      - 现代景德镇:
+          - 现代总览: contemporary/index.md
+          - 教育与研究: contemporary/education.md
+          - 产业与社会: contemporary/industry.md
+          - 当代艺术: contemporary/art.md
+          - 世界遗产与保护: contemporary/heritage.md
+          - 数字化与未来: contemporary/future.md
   - 数字博物馆:
       - 博物馆总览: museum/index.md
       - 历史时间轴: museum/timeline.md
       - 窑址地图: museum/kiln-map.md
       - 器物图谱: museum/catalog.md
       - 人物数据库: museum/people.md
-      - 名人与书籍评价: museum/voices-and-books.md
-      - 图片库: museum/gallery.md
+      - 工艺流程: craft/technology-tree.md
+      - 图片馆: museum/gallery.md
+      - 名人与书籍: museum/voices-and-books.md
       - 知识条目: entry.md
-  - 文献研究:
-      - 研究规范: research/README.md
-      - 核心文献库: research/sources.md
-      - 文献总库: research/literature-library.md
-      - 考古资料与时间轴: research/archaeology.md
-      - 研究导览: research/research-hub.md
-      - 世界遗产: research/heritage.md
-      - 补充文献库: research/sources-addendum.md
-  - 历史与发展:
-      - 历史总览: history/README.md
-      - 唐五代: history/tang-wudai.md
-      - 宋元: history/song-yuan.md
-      - 明清: history/ming-qing.md
-      - 近现代: history/modern.md
-  - 工艺与技术:
-      - 工艺总览: craft/README.md
-      - 制瓷技术树: craft/technology-tree.md
-      - 原料与配方: craft/raw-materials.md
-      - 成型与修整: craft/forming-and-finishing.md
-      - 窑炉与烧成: craft/kiln-firing.md
-      - 青花: craft/qinghua.md
-      - 粉彩: craft/fencai.md
-      - 颜色釉: craft/colored-glaze.md
-  - 器物与美学:
-      - 器物分类: objects/README.md
-      - 纹饰与题材: aesthetics/patterns.md
-  - 窑址与城市空间:
-      - 窑址总览: kilns/README.md
-      - 御窑厂: kilns/imperial-kiln.md
-      - 湖田窑: kilns/hutian-kiln.md
-      - 其他窑址与矿料: kilns/other-sites.md
-  - 人物与传承:
-      - 人物总览: people/README.md
-  - 现代景德镇:
-      - 现代总览: contemporary/index.md
-      - 教育与研究: contemporary/education.md
-      - 产业与社会: contemporary/industry.md
-      - 当代艺术: contemporary/art.md
-      - 世界遗产与保护: contemporary/heritage.md
-      - 数字化与未来: contemporary/future.md
+  - 知识网络:
+      - 知识网络总览: network/README.md
+      - 关系探索: network/relations.md
+      - 全球陶瓷网络: network/global.md
