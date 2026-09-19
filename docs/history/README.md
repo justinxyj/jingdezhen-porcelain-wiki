@@ -38,3 +38,6 @@
   <a class="museum-card wiki-card-link" href="ming-qing/"><span>MING · QING</span><h3>明清</h3><p>御窑、彩瓷与全球贸易网络。</p><span class="wiki-read-more">进入时代</span></a>
   <a class="museum-card wiki-card-link" href="modern/"><span>MODERN</span><h3>近现代</h3><p>传统手工业、工业化与当代转型。</p><span class="wiki-read-more">进入时代</span></a>
 </div>
+
+
+<section class="jdm-world-browser" data-world-browser="history" aria-label="知识世界条目"></section>
