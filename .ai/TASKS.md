@@ -312,3 +312,14 @@
 - [x] 页面明确“地图负责空间阅读，Entry 负责知识关系”的产品边界。
 - [x] JS syntax regression：global-kiln-map 通过。
 - [ ] Pages 浏览器 smoke：地图加载、搜索/区域筛选、地点弹层、Entry/全球网络跳转、移动端、深色模式。
+
+
+## Phase 4E-3 — 器物图谱 2.0（第一轮）
+- [x] 器物浏览继续使用 published canonical 知识条目，不建立第二套器物事实源。
+- [x] 新增 `JDM_KNOWLEDGE.objectAtlas()`，一次性聚合器物的知识世界、关系、工艺、时间与空间上下文。
+- [x] 器物图谱支持关键词、时代、工艺、器物类型筛选。
+- [x] 器物卡片展示工艺、人物、窑址、文献等已存在关系，并可继续进入知识条目。
+- [x] 器物卡片增加全球网络继续探索入口。
+- [x] 移动端 / 响应式筛选与卡片布局已加入。
+- [x] JS syntax regression：knowledge-store / museum 通过。
+- [ ] Pages 浏览器 smoke：筛选、关系跳转、全球网络、移动端、深色模式。
