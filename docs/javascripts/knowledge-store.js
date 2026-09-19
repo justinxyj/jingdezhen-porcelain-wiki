@@ -26,7 +26,7 @@
     if(processPromise)return processPromise;
     processPromise=(async()=>{
       const db=client();if(!db)return[];
-      const {data,error}=await db.from('craft_processes').select('id,sequence,slug,name_zh,category,category_name,description_zh,historical_period,tools_zh,materials_zh,output_zh,source_title,source_url,source_institution,source_tier,image_url,image_credit,image_source_url,image_source_type,image_status,reviewed_at').neq('image_status','rejected').order('sequence',{ascending:true});
+      const {data,error}=await db.from('craft_processes').select('id,sequence,slug,name_zh,category,category_name,description_zh,historical_period,tools_zh,materials_zh,output_zh,source_title,source_url,source_institution,source_tier,image_url,image_credit,image_creator,image_license,image_search_query,image_review_note,image_source_url,image_source_type,image_status,reviewed_at').neq('image_status','rejected').order('sequence',{ascending:true});
       if(error){console.warn('[JDM craft processes]',error);return[]}
       return data||[];
     })();
