@@ -25,21 +25,21 @@
   }
   function contentOrIntro(e,intro){const content=plain(e.zh?.content||'');return content||intro}
   const UUID_RE=/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
-  async function loadRelations(db,entryId){
-    if(!db)return{relations:[],truncated:false,error:new Error('知识库连接不可用')};
+  async function loadRelations(entryId){
+    if(!window.JDM_AUTH?.request)return{relations:[],truncated:false,error:Object.assign(new Error('统一认证请求层不可用，请刷新页面后重试'),{code:'JDM_AUTH_MISSING'})};
     if(!UUID_RE.test(String(entryId||''))){const e=new Error('条目标识格式异常，无法加载相关内容。');e.code='JDM_ENTRY_ID_CONTRACT';return{relations:[],truncated:false,error:e}}
     try{
       const relationQuery=(field,d,s)=>d.from('entry_relations').select('entry_id,related_entry_id,relation_type,note').eq(field,entryId).order('relation_type',{ascending:true}).order('related_entry_id',{ascending:true}).range(0,100).abortSignal(s);
       const [outgoing,incoming]=await Promise.all([
-        window.JDM_AUTH?.request?window.JDM_AUTH.request((d,s)=>relationQuery('entry_id',d,s)):relationQuery('entry_id',db,new AbortController().signal).then(r=>{if(r.error)throw r.error;return r.data||[]}),
-        window.JDM_AUTH?.request?window.JDM_AUTH.request((d,s)=>relationQuery('related_entry_id',d,s)):relationQuery('related_entry_id',db,new AbortController().signal).then(r=>{if(r.error)throw r.error;return r.data||[]})
+        window.JDM_AUTH.request((d,s)=>relationQuery('entry_id',d,s)),
+        window.JDM_AUTH.request((d,s)=>relationQuery('related_entry_id',d,s))
       ]);
       const relRows=[...outgoing,...incoming].filter((r,i,a)=>i===a.findIndex(x=>x.entry_id===r.entry_id&&x.related_entry_id===r.related_entry_id&&x.relation_type===r.relation_type));
       const truncated=outgoing.length===101||incoming.length===101;
       const ids=[...new Set(relRows.map(r=>r.entry_id===entryId?r.related_entry_id:r.entry_id))];
       if(!ids.length)return{relations:[],truncated,error:null};
       const entryQuery=(d,s)=>d.from('entries').select('id,slug,category,zh,en,ja,sources,status,version,updated_at').eq('status','published').in('id',ids).order('updated_at',{ascending:false}).limit(101).abortSignal(s);
-      const entryRows=window.JDM_AUTH?.request?await window.JDM_AUTH.request(entryQuery):await entryQuery(db,new AbortController().signal).then(r=>{if(r.error)throw r.error;return r.data||[]});
+      const entryRows=await window.JDM_AUTH.request(entryQuery);
       const byId=new Map(entryRows.map(x=>[x.id,x]));
       return{relations:relRows.map(r=>({...r,entry:byId.get(r.entry_id===entryId?r.related_entry_id:r.entry_id)})).filter(r=>r.entry),truncated,error:null};
     }catch(error){return{relations:[],truncated:false,error}}
@@ -57,7 +57,9 @@
     root.innerHTML=`<div class="wiki-entry-error" role="alert"><h2>知识内容暂时无法加载</h2><p>网络或数据服务出现异常（${code}）。请稍后重试。</p><button type="button">重新加载</button></div>`;
     root.querySelector('button').onclick=()=>{window.JDM_KNOWLEDGE.reset();init()};
   }
+  let initSeq=0;
   async function init(){
+    const seq=++initSeq;
     const root=document.getElementById('wiki-entry-root');
     if(!root||!window.JDM_KNOWLEDGE)return;
     const slug=new URLSearchParams(location.search).get('slug');
@@ -66,8 +68,8 @@
     try{
       const e=await window.JDM_KNOWLEDGE.get(slug);
       if(!e){root.innerHTML='<div class="wiki-entry-loading">没有找到这个公开条目。</div>';return}
-      const db=window.supabase?.createClient?.(window.JDM_RUNTIME_CONFIG.supabaseUrl,window.JDM_RUNTIME_CONFIG.supabaseAnonKey);
-      const {relations,error,truncated}=await loadRelations(db,e.id);
+      const {relations,error,truncated}=await loadRelations(e.id);
+      if(seq!==initSeq)return;
       render(root,e,relations);
       if(error)renderRelationWarning(root);
       if(truncated){const note=document.createElement('div');note.className='wiki-entry-relation-warning';note.setAttribute('role','status');note.textContent='相关内容较多，当前仅显示前 200 条唯一关系。';root.querySelector('.wiki-entry-card')?.appendChild(note)}
