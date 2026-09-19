@@ -23,3 +23,23 @@
 [data-md-color-scheme="slate"] .jdm-footer{background:#121d27;border-color:rgba(190,210,225,.14)}
 [data-md-color-scheme="slate"] .jdm-footer small{color:#aebdca}
 @media(max-width:600px){[data-md-color-scheme="slate"] .jdm-v2-hero h1{font-size:clamp(48px,16vw,82px)}[data-md-color-scheme="slate"] .jdm-v2-hero-copy p{font-size:17px}}
+
+
+/* Third-round homepage shell cleanup:
+   remove the generic MkDocs page chrome on the custom landing page,
+   enlarge the custom brand, and prevent the source-view action from
+   creating a confusing dead-end on the homepage. */
+body:has(.jdm-apple-home) .md-path,
+body:has(.jdm-apple-home) .md-content__button,
+body:has(.jdm-apple-home) .md-content__inner > .md-content__button{display:none!important}
+body:has(.jdm-apple-home) .md-content__inner{padding-top:0!important}
+body:has(.jdm-apple-home) .md-content{padding-top:0!important}
+body:has(.jdm-apple-home) .jdm-apple-home{margin-top:0!important}
+body:has(.jdm-apple-home) .jdm-nav-inner{min-height:72px;height:72px}
+body:has(.jdm-apple-home) .jdm-brand-cn{font-size:20px;line-height:1.05}
+body:has(.jdm-apple-home) .jdm-brand span:last-child{font-size:10px;margin-top:5px}
+@media(max-width:850px){
+  body:has(.jdm-apple-home) .jdm-nav-inner{height:64px;min-height:64px;padding:0 18px}
+  body:has(.jdm-apple-home) .jdm-brand-cn{font-size:17px}
+  body:has(.jdm-apple-home) .jdm-brand span:last-child{font-size:8px}
+}
