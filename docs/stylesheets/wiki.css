@@ -35,3 +35,24 @@
 .wiki-entry-v2-relations small{font-size:.72rem;line-height:1.55;opacity:.65}
 @media(max-width:900px){.wiki-entry-v2-grid{grid-template-columns:1fr}.wiki-entry-v2-rail{position:static;display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.wiki-entry-v2-rail,.wiki-entry-v2-relations{grid-template-columns:1fr}.wiki-entry-v2-section{margin-top:2rem}}
+
+
+/* Phase 5-2: Entry exploration loop */
+.wiki-entry-world-path{margin:16px 0 20px;padding:12px 14px;border:1px solid rgba(20,85,184,.11);border-radius:14px;background:rgba(20,85,184,.035)}
+.wiki-entry-world-path>span{display:block;margin-bottom:8px;font-size:9px;font-weight:800;letter-spacing:.12em;color:#6d8096}
+.wiki-entry-world-path>div{display:flex;flex-wrap:wrap;gap:7px}
+.wiki-entry-world-link{display:inline-flex;align-items:center;padding:7px 10px;border-radius:999px;background:#fff;border:1px solid rgba(20,85,184,.13);color:#1455b8!important;text-decoration:none!important;font-size:10px;font-weight:750}
+.wiki-entry-explore-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.wiki-entry-explore-card,.wiki-entry-craft-list>a{display:flex;flex-direction:column;gap:5px;padding:13px 14px;border:1px solid rgba(7,26,53,.08);border-radius:14px;background:#fff;text-decoration:none!important;color:#10233f;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+.wiki-entry-explore-card:hover,.wiki-entry-craft-list>a:hover{transform:translateY(-2px);border-color:rgba(20,85,184,.24);box-shadow:0 10px 22px rgba(20,85,184,.07)}
+.wiki-entry-explore-card span,.wiki-entry-craft-list span{font-size:8px;letter-spacing:.08em;color:#7b8ea3}
+.wiki-entry-explore-card b,.wiki-entry-craft-list b{font-size:13px;line-height:1.45}
+.wiki-entry-explore-card small,.wiki-entry-craft-list small{font-size:9px;color:#74869a}
+.wiki-entry-craft-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+@media(max-width:760px){.wiki-entry-explore-grid,.wiki-entry-craft-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.wiki-entry-explore-grid,.wiki-entry-craft-list{grid-template-columns:1fr}.wiki-entry-world-path{margin-top:12px}}
+@media(prefers-color-scheme:dark){
+  .wiki-entry-world-path{background:rgba(49,104,166,.10);border-color:rgba(155,190,214,.13)}
+  .wiki-entry-world-link,.wiki-entry-explore-card,.wiki-entry-craft-list>a{background:#172229;border-color:rgba(155,190,214,.12);color:#eef4f7}
+  .wiki-entry-explore-card span,.wiki-entry-craft-list span,.wiki-entry-explore-card small,.wiki-entry-craft-list small{color:#a9bac8}
+}
