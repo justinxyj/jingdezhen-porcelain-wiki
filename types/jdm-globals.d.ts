@@ -18,7 +18,7 @@ declare global {
       refresh(): Promise<unknown>;
       request<T>(factory: (db: unknown, signal: AbortSignal) => Promise<{ data: T; error?: unknown }>, options?: { retryAuth?: boolean; timeoutMs?: number }): Promise<T>;
       signOut(): Promise<void>;
-      state(): { status: string; error: unknown; updatedAt: number | null };
+      state(): { status: string; session: unknown; user: unknown; lastEvent: unknown };
     };
     JDM_KNOWLEDGE?: {
       all(): Promise<Database['public']['Tables']['entries']['Row'][]>;
@@ -26,6 +26,7 @@ declare global {
       list(options?: { category?: string | null; limit?: number; offset?: number }): Promise<unknown[]>;
       byCategory(category: string, limit?: number): Promise<unknown[]>;
       url(entry: { category: string; slug: string }): string;
+      state(): { status: string; error: unknown; updatedAt: number | null };
       reset(): void;
     };
     JDM_CONTRACT?: {
