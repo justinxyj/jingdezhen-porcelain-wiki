@@ -162,9 +162,13 @@ create policy "media_public_read" on public.media
   for select to anon, authenticated
   using (status = 'approved' and review_state = 'verified');
 
-create policy "media_owner_read" on public.media
+create policy "media_owner_public_read" on public.media
   for select to authenticated
-  using (auth.uid() = uploader_id);
+  using (
+    auth.uid() = uploader_id
+    and status = 'approved'
+    and review_state = 'verified'
+  );
 
 create policy "media_staff_read" on public.media
   for select to authenticated
@@ -187,15 +191,6 @@ create policy "media_staff_insert" on public.media
 create policy "media_staff_update" on public.media
   for update to authenticated
   using (public.is_staff()) with check (public.is_staff());
-
-create or replace view public.media_public
-with (security_invoker = true, security_barrier = true)
-as
-select
-  id, entry_id, path, title, source, license, creator, captured_at, location,
-  created_at, usage_type, source_tier, is_primary, canonical_key, source_url, source_type
-from public.media
-where status = 'approved' and review_state = 'verified';
 
 create policy "users_manage_own_favorites" on public.favorites for all
   using (auth.uid()=user_id) with check (auth.uid()=user_id);
