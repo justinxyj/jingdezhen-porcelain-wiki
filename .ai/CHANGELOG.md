@@ -144,3 +144,12 @@
 - 新增 migration：supabase/migrations/20260919131220_phase_3a_unified_knowledge_graph_views.sql
 - 新增 migration：supabase/migrations/20260919132000_phase_3a_source_node_completion.sql
 - 新增 .ai/PHASE_3A_KNOWLEDGE_GRAPH_MODEL.md
+
+
+## 2026-09-19 — Phase 3B / 相关条目候选生成与可解释推荐
+- 建立 public.knowledge_recommendations security_invoker 视图。
+- 推荐来源分三层：直接知识边、共享知识世界、共享工艺流程；直接关系优先级高于桥接关系。
+- 每条候选保留 target、关系类型、reason、weight；同一 source/target 只保留最高优先级路径。
+- 新增 knowledge-store.js recommendations()，网站可以按 entryId 读取有限数量的相关条目。
+- 生产验证：12,140 条去重候选；Phase 2B 的 149 primary + 167 secondary = 316 mappings 未改变。
+- 当前仍未将推荐卡片直接插入页面；本阶段完成的是“推荐引擎数据层 + 可解释理由接口”。
