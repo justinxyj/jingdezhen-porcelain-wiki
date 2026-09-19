@@ -9,7 +9,7 @@
   <div class="museum-hero-mark">千年<br>窑火</div>
 </div>
 
-<div id="timeline"></div>
+<div class="timeline-method-note"><strong>统一时间发现</strong><br>时间轴现在直接使用统一知识条目数据。你可以按时代或空间筛选；点击节点进入 canonical Entry Detail，再继续进入关系网络、全球陶瓷网络与相关推荐。</div>\n<div id="timeline" class="timeline-comparison-root"></div>
 
 ## 怎么读
 
