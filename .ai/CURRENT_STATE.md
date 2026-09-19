@@ -248,3 +248,14 @@
 - Final Round 4 A+ relations: 郎廷极→御窑厂遗址、年希尧→御窑厂遗址、臧应选→御窑厂遗址、黄云鹏→青花瓷.
 - Specific missing object nodes such as 郎窑红梅瓶、元青花三顾茅庐纹罐 are intentionally deferred to future canonical content admission rather than keeping Phase 3B open indefinitely.
 - Recommendation UI has not yet been added to entry detail pages; this is a separate product/frontend task.
+
+
+## Phase 3C — Entry Detail Recommendations Closed (2026-09-20)
+- Entry Detail 已正式接入冻结后的 `knowledge_recommendations`。
+- “你可能还想了解”推荐区在线上页面可正常显示；推荐卡片可进入目标 Entry Detail。
+- 生产复核：149 published entries；22 recommendations；18 recommendation sources；0 orphan sources；0 orphan targets；0 duplicate recommendation edges。
+- recommendation target 全部为 published canonical entries；不向前端暴露内部 graph ID 作为导航目标。
+- knowledge-store.js 与 wiki-enhancements.js JavaScript 语法回归通过。
+- GitHub Pages 数据恢复后完成浏览器侧人工 smoke；Phase 3C 正式关闭。
+- Phase 3B recommendation gate 继续冻结为 A+ / A；Phase 2B Semantic Freeze 的 316 条 World mappings 保持不变。
+- 后续高价值关系继续走 canonical content admission；不再在 Phase 3C 继续扩展推荐规则。
