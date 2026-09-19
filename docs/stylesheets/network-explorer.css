@@ -54,3 +54,5 @@
 [data-md-color-scheme="slate"] .network-canvas-wrap{background:radial-gradient(circle at 50% 50%,rgba(55,116,185,.12),transparent 62%)}
 @media(max-width:900px){.network-layout{grid-template-columns:1fr}.network-node-list{grid-template-columns:repeat(3,minmax(0,1fr))}.network-canvas{min-height:480px}}
 @media(max-width:600px){.network-toolbar{grid-template-columns:1fr}.network-canvas{min-height:380px}.network-node-list{grid-template-columns:repeat(2,minmax(0,1fr))}.network-panel-head{padding:14px}.network-detail{min-height:240px}.network-node-label{font-size:9px}}
+
+.network-unified-search{display:inline-flex;align-items:center;justify-content:center;padding:8px 12px;border-radius:999px;background:rgba(20,85,184,.08);color:#1455b8!important;text-decoration:none!important;font-size:.72rem;font-weight:800;grid-column:1/-1}.network-unified-search:hover{background:rgba(20,85,184,.14)}
