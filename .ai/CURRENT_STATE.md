@@ -15,7 +15,7 @@
 - 已确认生产数据：entries 149、media 133、entry_relations 169、timeline_context 50、craft_processes 72、craft_process_relations 71、entry_craft_processes 289。
 - 已确认 G29 动态条目已进入生产。
 - 已确认 anon 实际可读取核心公开层：149 entries、124 approved media、169 relations、50 timeline_context。
-- CI / Pages 当前仍需单独取得最新可验证运行结果。
+- CI / Pages 已取得最新可验证运行结果：Validate run #85 成功；Pages run #369 成功，对应 main commit 0feb980。
 
 ## 本次安全修复
 - 发现 public.craft_media_candidates 与 public.timeline_media_candidates 在生产中 RLS 关闭。
@@ -77,3 +77,15 @@
 - 首页自定义品牌文字过小；已放大中文站名及英文副标题，并同步收紧首页顶部高度。
 - 首页右侧“查看源代码”图标点击后进入 404；已在 mkdocs.yml 增加 edit_uri: edit/main/docs/，并在自定义首页隐藏该通用操作按钮，避免首页出现无意义的源码入口。
 - 以上均已提交到 main，等待 Pages 部署后复测。
+
+
+## 2026-09-19 — 安全与前端数据层第二阶段
+- 生产 media RLS 已收紧：公共读取必须同时满足 status='approved' 与 review_state='verified'。
+- 普通 authenticated 用户的媒体 INSERT 现在被数据库策略强制限制为 pending / pending、verified_at=NULL、is_primary=false；staff 才能直接插入审核态媒体。
+- 已创建并上线 public.media_public 公共视图，仅暴露网页所需媒体字段；anon 已撤销对 public.media 直接 SELECT，网页改走该公共视图。
+- 生产核验：media_public 当前返回 108 条公开媒体；anon 对 media 表无 SELECT 权限、对 media_public 有 SELECT 权限。
+- knowledge-store.js 不再把 API 异常静默转换为空数组；错误会进入明确 error 状态并由详情页显示重试入口。
+- 详情页已从“整库 all()”改为按 slug 定向读取，关系查询限制 100 条并按关系 ID 再取 published entries。
+- museum-images.js 增加 8 秒超时、一次有限重试、缓存去重与最多 3 个并发恢复任务。
+- site-privacy.js 删除了通用文本匹配删节点逻辑；timeline-interactive.js 改为只处理新增 DOM 节点。
+- 最新 main：0feb980；Validate #85 成功；Pages #369 成功。
