@@ -123,9 +123,9 @@
 - [x] Sprint B：149 个已发布条目全部挂载 primary world
 - [x] Sprint B：建立 secondary cross-world mappings
 - [x] Sprint B：7 个世界入口接入动态条目浏览器
-- [x] Sprint B 后续：完成 Phase 2B 深层语义审校，395 → 375 mapping
+- [x] Sprint B 后续：完成 Phase 2B 深层语义审校，395 → 372 mapping
 - [ ] Sprint B Phase 2C：继续审校 375 条 mapping 的边界并补真正缺失的跨世界关系
 
 - [x] Sprint B Phase 2：第一轮语义审校，删除冗余人物自链接并修正现代/历史主入口与明显错配
-- [x] Sprint B Phase 2B：完成 395 条映射深层语义审校，删除 20 条低价值 secondary，精修 12 条 rationale
+- [x] Sprint B Phase 2B：完成 395 条映射深层语义审校，删除 23 条低价值 secondary，精修 12 条 rationale
 - [ ] Sprint B Phase 2C：重点复核人物—历史、全球窑址—历史、文献—主题世界边界，并补缺失关系
