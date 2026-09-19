@@ -34,8 +34,23 @@ if any("status" in x or "review_state" in x for x in media):
     raise RuntimeError("media_public leaked internal review columns")
 _,craft=get("craft_processes",{"select":"id,sequence,name_zh","order":"sequence.asc","limit":"1000"})
 if len(craft)!=72: raise RuntimeError(f"craft_processes expected 72 rows, got {len(craft)}")
-rev_status,revisions=get("entry_revisions",{"select":"id","limit":"1"},expect=(200,401,403))
-media_status,raw_media=get("media",{"select":"id","limit":"1"},expect=(200,401,403))
-if revisions or raw_media:
-    raise RuntimeError("sensitive raw table returned rows to anonymous client")
+def get_blocked(path):
+    qs=urllib.parse.urlencode({"select":"id","limit":"1"})
+    req=urllib.request.Request(f"{url}/rest/v1/{path}?{qs}",headers={"apikey":key,"Authorization":f"Bearer {key}","Accept":"application/json"})
+    try:
+        with urllib.request.urlopen(req,timeout=10) as res:
+            status=res.status; body=res.read().decode()
+    except urllib.error.HTTPError as exc:
+        status=exc.code; body=exc.read().decode()
+    if status in (401,403,404):
+        return status
+    if status==200:
+        data=json.loads(body) if body else []
+        if data:
+            raise RuntimeError(f"{path}: sensitive rows are anonymously readable")
+        return status
+    raise RuntimeError(f"{path}: unexpected status {status}: {body[:300]}")
+
+rev_status=get_blocked("entry_revisions")
+media_status=get_blocked("media")
 print(f"PASS entries={len(entries)} media_public_sample={len(media)} craft_processes={len(craft)} raw_revisions_blocked={rev_status} raw_media_blocked={media_status}")
