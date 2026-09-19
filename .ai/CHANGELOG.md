@@ -36,3 +36,14 @@
 - museum-images.js 增加 8 秒超时、一次有限重试、缓存去重与最多 3 路并发。
 - site-privacy.js 删除通用文本匹配删除 DOM 的逻辑；timeline-interactive.js 改为只处理新增节点。
 - Validate #85 与 Pages #369 均成功。
+
+
+## 2026-09-19 — 审计问题 H-1/H-2/H-3/M-1~M-7 修复
+- 认证刷新失败不再覆盖 AUTH_EXPIRED。
+- 关系查询改为 UUID 校验、双索引路径、稳定排序、去重和截断提示。
+- 历史时间轴加入结构化 timeline_sort_year。
+- evidence-hub 改为安全 DOM 渲染。
+- 外部图片恢复增加页面生命周期中止、负缓存和对象 ID 校验。
+- 生产增加主媒体唯一性、revision 版本唯一性和关系类型索引，并通过事务回归测试。
+- strict TypeScript contract 层增强。
+- Pages smoke 增加 unhandledrejection 与历史顺序检查。
