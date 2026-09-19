@@ -376,5 +376,5 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
   }
   async function byCategory(category,limit=250){return list({category,limit})}
   function url(e){return e?'/jingdezhen-porcelain-wiki/entry/?type='+encodeURIComponent(e.category)+'&slug='+encodeURIComponent(e.slug):'/jingdezhen-porcelain-wiki/'}
-  window.JDM_KNOWLEDGE={all,get,list,worlds,byWorld,worldOverview,entryContext,entryNetworkContext,objectAtlas,personAtlas,graph,recommendations,searchEntries,searchDiscovery,searchDiscoveryPage,byCategory,url,state:()=>({...state}),reset:()=>{allPromise=null;searchIndexPromise=null;cache.clear();state={status:'idle',error:null,updatedAt:null}}};
+  window.JDM_KNOWLEDGE={all,get,list,worlds,byWorld,worldOverview,entryContext,entryNetworkContext,objectAtlas,personAtlas,graph,recommendations,eraGroup,searchEntries,searchDiscovery,searchDiscoveryPage,byCategory,url,state:()=>({...state}),reset:()=>{allPromise=null;searchIndexPromise=null;cache.clear();state={status:'idle',error:null,updatedAt:null}}};
 })();
