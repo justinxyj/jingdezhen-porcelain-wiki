@@ -369,3 +369,9 @@
 - Supabase 已写入规范化 era_group；原始时代文字与原始 timeline 保留。
 
 - 近代边界统一按 1840—1948 处理，1949 年起为现代；晚清至民国的近代条目因此进入近代筛选。
+
+## 2026-09-20 — Phase 4E-4 公开知识面恢复修复
+- 公开数据本身完整：149 published entries、133 media、50 timeline_context；人物 51 条且 era_group 缺失数为 0。
+- 修复 Atlas 辅助查询字段错误，并让 media / timeline_context 失败时降级，不再阻断核心知识条目渲染。
+- canonical era 边界统一为 1840–1948 近代、1949 起现代；公开时代标签为唐五代 / 宋 / 元 / 明 / 清 / 近代 / 现代。
+- Phase 4E-4 仍处于“修复后待线上回归”状态，不能视为已封版。
