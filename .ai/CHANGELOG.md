@@ -47,3 +47,12 @@
 - 生产增加主媒体唯一性、revision 版本唯一性和关系类型索引，并通过事务回归测试。
 - strict TypeScript contract 层增强。
 - Pages smoke 增加 unhandledrejection 与历史顺序检查。
+
+
+## 2026-09-19 — S1/S2/H1-H5/M1 审计修复
+- 以生产实时权限为准建立 canonical public ACL。
+- 馆长后台查询与生产 schema 对齐。
+- 详情页统一认证请求层，修复重复 client。
+- 重试、MutationObserver 生命周期加固。
+- PR 不再依赖线上 Supabase；main/post-deploy 执行公开 ACL smoke。
+- 核心 JS 开启 checkJs，strict contracts 保持独立。
