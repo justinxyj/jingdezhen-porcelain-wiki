@@ -52,18 +52,18 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - name: Setup Python for browser smoke
+        uses: actions/setup-python@v5
         with:
-          node-version: "20"
+          python-version: "3.12"
 
-      - name: Install browser smoke dependencies
-        run: npm install --no-package-lock
+      - name: Install Playwright
+        run: pip install playwright
 
       - name: Install Chromium
-        run: npx playwright install --with-deps chromium
+        run: python -m playwright install --with-deps chromium
 
       - name: Smoke test deployed Pages
         env:
           SITE_URL: ${{ steps.deployment.outputs.page_url }}
-        run: node scripts/pages_smoke.mjs
+        run: python scripts/pages_smoke.py
