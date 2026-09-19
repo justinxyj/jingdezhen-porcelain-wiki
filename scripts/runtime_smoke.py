@@ -1,56 +1,61 @@
 #!/usr/bin/env python3
-"""Public Supabase runtime smoke test. Uses only the browser-safe publishable key."""
-import json
-import sys
-import urllib.parse
-import urllib.request
-import urllib.error
+"""Anonymous Supabase runtime smoke checks using the browser-safe publishable key."""
+import argparse, json, re, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
-config=json.loads("null") if False else None
 text=(ROOT/"docs/javascripts/runtime-config.js").read_text(encoding="utf-8")
-import re
-url=re.search(r"supabaseUrl:\s*'([^']+)'",text).group(1)
-key=re.search(r"supabaseAnonKey:\s*'([^']+)'",text).group(1)
+URL=re.search(r"supabaseUrl:\s*'([^']+)'",text).group(1)
+KEY=re.search(r"supabaseAnonKey:\s*'([^']+)'",text).group(1)
+HEADERS={"apikey":KEY,"Accept":"application/json"}
 
-def get(path, params=None, expect=(200,)):
+def get(path, params=None):
     qs=urllib.parse.urlencode(params or {})
-    req=urllib.request.Request(f"{url}/rest/v1/{path}?{qs}",headers={"apikey":key,"Accept":"application/json"})
+    req=urllib.request.Request(f"{URL}/rest/v1/{path}?{qs}",headers=HEADERS)
     try:
         with urllib.request.urlopen(req,timeout=10) as res:
             status=res.status; body=res.read().decode()
     except urllib.error.HTTPError as exc:
         status=exc.code; body=exc.read().decode()
-    if status not in expect:
-        raise RuntimeError(f"{path}: expected {expect}, got {status}: {body[:300]}")
-    try:return status,json.loads(body) if body else None
-    except json.JSONDecodeError:return status,body
+    try: data=json.loads(body) if body else []
+    except json.JSONDecodeError: data=body
+    return status,data
 
-_,entries=get("entries",{"select":"id,slug,status","status":"eq.published","limit":"5"})
-if not entries: raise RuntimeError("published entries query returned no rows")
-_,media=get("media_public",{"select":"id,entry_id,path","limit":"5"})
-if any("status" in x or "review_state" in x for x in media):
-    raise RuntimeError("media_public leaked internal review columns")
-_,craft=get("craft_processes",{"select":"id,sequence,name_zh","order":"sequence.asc","limit":"1000"})
-if len(craft)!=72: raise RuntimeError(f"craft_processes expected 72 rows, got {len(craft)}")
-def get_blocked(path, select="id"):
-    qs=urllib.parse.urlencode({"select":select,"limit":"1"})
-    req=urllib.request.Request(f"{url}/rest/v1/{path}?{qs}",headers={"apikey":key,"Accept":"application/json"})
-    try:
-        with urllib.request.urlopen(req,timeout=10) as res:
-            status=res.status; body=res.read().decode()
-    except urllib.error.HTTPError as exc:
-        status=exc.code; body=exc.read().decode()
-    if status in (400,401,403,404):
-        return status
+def expect_ok(path,params):
+    status,data=get(path,params)
+    if status!=200: raise RuntimeError(f"{path}: expected 200, got {status}: {str(data)[:300]}")
+    return data
+
+def check_entries():
+    data=expect_ok("entries",{"select":"id,slug,status","status":"eq.published","limit":"5"})
+    if not data: raise RuntimeError("published entries query returned no rows")
+    print(f"PASS entries={len(data)}")
+
+def check_media():
+    data=expect_ok("media_public",{"select":"id,entry_id,path","limit":"5"})
+    if any("status" in x or "review_state" in x for x in data):
+        raise RuntimeError("media_public leaked internal review columns")
+    print(f"PASS media_public={len(data)}")
+
+def check_craft():
+    data=expect_ok("craft_processes",{"select":"id,sequence,name_zh","order":"sequence.asc","limit":"1000"})
+    if len(data)!=72: raise RuntimeError(f"craft_processes expected 72 rows, got {len(data)}")
+    print("PASS craft_processes=72")
+
+def blocked(path,select="id"):
+    status,data=get(path,{"select":select,"limit":"1"})
+    if status in (400,401,403,404): return status
     if status==200:
-        data=json.loads(body) if body else []
-        if data:
-            raise RuntimeError(f"{path}: protected field was anonymously readable")
+        if data: raise RuntimeError(f"{path}: protected data was anonymously readable")
         return status
-    raise RuntimeError(f"{path}: unexpected status {status}: {body[:300]}")
+    raise RuntimeError(f"{path}: unexpected status {status}: {str(data)[:300]}")
 
-rev_status=get_blocked("entry_revisions")
-media_status=get_blocked("media","verification_note")
-print(f"PASS entries={len(entries)} media_public_sample={len(media)} craft_processes={len(craft)} raw_revisions_blocked={rev_status} media_internal_field_blocked={media_status}")
+def check_sensitive():
+    rev=blocked("entry_revisions")
+    media=blocked("media","verification_note")
+    print(f"PASS revisions_blocked={rev} media_internal_field_blocked={media}")
+
+parser=argparse.ArgumentParser()
+parser.add_argument("--check",choices=["entries","media","craft","sensitive"],required=True)
+args=parser.parse_args()
+{"entries":check_entries,"media":check_media,"craft":check_craft,"sensitive":check_sensitive}[args.check]()
