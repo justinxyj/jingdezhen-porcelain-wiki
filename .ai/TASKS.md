@@ -303,3 +303,12 @@
 - [x] 移动端 / dark mode 筛选控件样式已加入。
 - [x] JS syntax regression：wiki-timeline / timeline-details 通过。
 - [ ] Pages 浏览器 smoke：时代筛选、空间筛选、节点跳转、移动端、深色模式。
+
+
+## Phase 4E-2 — 窑址地图 2.0（第一轮）
+- [x] 窑址地图继续消费 published canonical Entry 的空间数据，不建立第二套窑址事实源。
+- [x] 地图结果增加 live count，并继续支持国家/区域与关键词筛选。
+- [x] 地点弹层统一连接 Entry Detail、全球陶瓷网络、统一搜索。
+- [x] 页面明确“地图负责空间阅读，Entry 负责知识关系”的产品边界。
+- [x] JS syntax regression：global-kiln-map 通过。
+- [ ] Pages 浏览器 smoke：地图加载、搜索/区域筛选、地点弹层、Entry/全球网络跳转、移动端、深色模式。
