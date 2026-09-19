@@ -46,10 +46,45 @@
   }
   function eraLabel(x){return ({tang:'唐五代',song:'宋',yuan:'元',ming:'明',qing:'清',modern:'近现代'}[x]||x||'')}
 
-  function renderPeople(entries){
+  function renderPeople(items){
     const root=document.getElementById('people-list');if(!root)return;
-    root.innerHTML=entries.map(e=>{const im=e.media?.[0],m=meta(e);return `<a class="person-card wiki-card-link" href="${entryUrl(e)}">${im?`<div class="person-card-image"><img data-museum-image="1" src="${esc(im.path)}" alt="${esc(im.title||e.zh?.title||'人物图片')}" loading="lazy"></div>`:''}${m.era||m.period?`<div class="tag">${esc(m.era||m.period)}</div>`:''}<h3>${esc(e.zh?.title||'未命名人物')}</h3><strong>${esc(m.role||'人物')}</strong><p>${esc(text(e))}</p><span class="wiki-read-more">查看人物条目 →</span></a>`}).join('')||'<div class="notice">暂无人物内容。</div>';
+    const q=(document.getElementById('people-search')?.value||'').trim().toLowerCase();
+    const era=(document.getElementById('people-era')?.value||'').trim();
+    const role=(document.getElementById('people-role')?.value||'').trim();
+    const world=(document.getElementById('people-world')?.value||'').trim();
+    const filtered=items.filter(x=>{
+      const e=x.entry,m=meta(e),hay=JSON.stringify(e.zh||'').toLowerCase();
+      const eraOk=!era||String(x.era||'').includes(era);
+      const roleText=String(x.role||m.role||'').toLowerCase();
+      const roleOk=!role||roleText.includes(role.toLowerCase());
+      const worldOk=!world||(x.worlds||[]).some(w=>w.slug===world);
+      return (!q||hay.includes(q))&&eraOk&&roleOk&&worldOk;
+    });
+    const count=document.getElementById('people-count');if(count)count.textContent='显示 '+filtered.length+' / '+items.length+' 位人物';
+    root.innerHTML=filtered.map(x=>{
+      const e=x.entry,im=e.media?.[0],m=meta(e);
+      const works=relationLinks(x.works,'代表作品'),kilns=relationLinks(x.kilns,'窑址'),docs=relationLinks(x.documents,'文献');
+      const craft=(x.craftProcesses||[]).slice(0,3).map(p=>'<a href="'+path('craft/technology-tree/')+'">'+esc(p.label||'工艺')+'</a>').join('');
+      const same=(x.sameEra||[]).slice(0,3).map(p=>'<a href="'+entryUrl(p)+'">'+esc(p.zh?.title||p.slug)+'</a>').join('');
+      const global=path('network/global/?slug='+encodeURIComponent(e.slug));
+      const relation=(x.relatedPeople||[]).slice(0,3).map(p=>'<a href="'+entryUrl(p)+'">'+esc(p.zh?.title||p.slug)+'</a>').join('');
+      return '<article class="person-card person-card-v2">'+
+        (im?'<a href="'+entryUrl(e)+'" class="person-card-image"><img data-museum-image="1" src="'+esc(im.path)+'" alt="'+esc(im.title||e.zh?.title||'人物图片')+'" loading="lazy"></a>':'')+
+        '<div class="person-card-body">'+
+        '<div class="person-card-tags">'+(x.era?'<span class="tag">'+esc(x.era)+'</span>':'')+(x.worlds?.[0]?'<span class="tag">'+esc(x.worlds[0].short_title||x.worlds[0].title)+'</span>':'')+'</div>'+
+        '<h3><a href="'+entryUrl(e)+'">'+esc(e.zh?.title||'未命名人物')+'</a></h3>'+
+        (x.role?'<strong>'+esc(x.role)+'</strong>':'')+
+        '<p>'+esc(text(e).slice(0,180))+'</p>'+
+        (craft?'<div class="person-knowledge-row"><b>工艺</b>'+craft+'</div>':'')+
+        (works?'<div class="person-knowledge-row"><b>作品</b>'+works+'</div>':'')+
+        (kilns?'<div class="person-knowledge-row"><b>窑址</b>'+kilns+'</div>':'')+
+        (docs?'<div class="person-knowledge-row"><b>文献</b>'+docs+'</div>':'')+
+        (relation?'<div class="person-knowledge-row"><b>关联人物</b>'+relation+'</div>':'')+
+        (same?'<div class="person-knowledge-row"><b>同时代</b>'+same+'</div>':'')+
+        '<div class="person-card-actions"><a href="'+entryUrl(e)+'">查看知识条目 →</a><a href="'+global+'">全球网络 →</a></div></div></article>';
+    }).join('')||'<div class="notice">没有找到符合条件的人物。</div>';
   }
+
   function timelineSortKey(e){
     const title=String(e?.zh?.title||''),m=meta(e),timeline=Array.isArray(m.timeline)?m.timeline:[];
     const structured=Number(m.timeline_sort_year);
@@ -85,13 +120,15 @@
     try{
       const [objects,people,history]=await Promise.all([
         window.JDM_KNOWLEDGE.objectAtlas({limit:250}),
-        window.JDM_KNOWLEDGE.byCategory('人物',250),
+        window.JDM_KNOWLEDGE.personAtlas({limit:250}),
         window.JDM_KNOWLEDGE.list({limit:500})
       ]);
       if(seq!==initSeq)return;
       renderCatalog(objects);renderPeople(people);renderTimeline(history);
       const search=document.getElementById('catalog-search');if(search&&!search.dataset.bound){search.dataset.bound='1';let raf=0;search.addEventListener('input',()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(()=>renderCatalog(objects))})}
       ['catalog-era','catalog-craft','catalog-type'].forEach(id=>document.getElementById(id)?.addEventListener('change',()=>renderCatalog(objects)));
+      const personSearch=document.getElementById('people-search');if(personSearch&&!personSearch.dataset.bound){personSearch.dataset.bound='1';let raf=0;personSearch.addEventListener('input',()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(()=>renderPeople(people))})}
+      ['people-era','people-role','people-world'].forEach(id=>document.getElementById(id)?.addEventListener('change',()=>renderPeople(people)));
     }catch(error){if(seq===initSeq)roots.forEach(root=>renderError(root,error))}
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
