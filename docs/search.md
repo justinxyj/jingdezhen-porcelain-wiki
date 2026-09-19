@@ -57,7 +57,8 @@
         <a href="?era=yuan#jdm-search-results" data-search-era="yuan">元</a>
         <a href="?era=ming#jdm-search-results" data-search-era="ming">明</a>
         <a href="?era=qing#jdm-search-results" data-search-era="qing">清</a>
-        <a href="?era=modern#jdm-search-results" data-search-era="modern">近现代</a>
+        <a href="?era=modern#jdm-search-results" data-search-era="near-modern">近代</a>
+        <a href="?era=modern#jdm-search-results" data-search-era="modern">现代</a>
         <a href="?lane=jdz#jdm-search-results" data-search-lane="jdz">景德镇</a>
         <a href="?lane=china#jdm-search-results" data-search-lane="china">中国其他窑业</a>
         <a href="?lane=world#jdm-search-results" data-search-lane="world">世界其他地区</a>
