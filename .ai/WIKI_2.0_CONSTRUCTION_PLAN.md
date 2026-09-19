@@ -475,3 +475,12 @@ Phase 4C 第一轮已完成线上 Smoke Test 并正式封版。全球陶瓷网�
 4. 窑址必须有明确生产空间、窑具、烧成或工序考古/制度证据。
 5. 每条新增关系保留来源元数据。
 6. 工序关系属于知识图谱/探索层；不得绕过 Phase 3B A+ / A recommendation gate。
+
+
+## Phase 4E-5 Round 2 — A+/A Person–Object Evidence
+Round 2 采用“宁缺毋滥”原则：
+1. 人物与具体古代器物之间，只有来源明确说明人物制作、主持生产该具体器物，或明确将该器物作为其代表作品时，才建立 A+/A。
+2. 人物只是督陶官/管理者，不自动等于具体器物作者。
+3. 现代传承人不得因“复原/仿制某传统品种”而被写成古代馆藏器物作者。
+4. 缺少 canonical Entry 的代表作品，先进入 Canonical Content Admission 候选池，不直接创建幽灵关系。
+5. A+/A recommendation gate 不因 craft relation 深审而放宽。
