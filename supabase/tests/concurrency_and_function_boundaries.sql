@@ -42,7 +42,14 @@ begin
   from pg_proc p join pg_namespace n on n.oid=p.pronamespace
   where n.nspname='public' and p.proname='is_staff'
     and pg_get_function_identity_arguments(p.oid)='';
-  if v_definer then raise exception 'is_staff must be SECURITY INVOKER'; end if;
+  if not v_definer then raise exception 'is_staff must remain SECURITY DEFINER'; end if;
+  if not exists (
+    select 1 from pg_proc p join pg_namespace n on n.oid=p.pronamespace
+    where n.nspname='public' and p.proname='is_staff'
+      and pg_get_function_identity_arguments(p.oid)=''
+      and 'search_path=public' = any(coalesce(p.proconfig, array[]::text[]))
+  ) then raise exception 'is_staff search_path must be pinned to public'; end if;
+  if has_function_privilege('anon','public.is_staff()','EXECUTE') then raise exception 'anon must not execute is_staff'; end if;
 end $$;
 
 rollback;
