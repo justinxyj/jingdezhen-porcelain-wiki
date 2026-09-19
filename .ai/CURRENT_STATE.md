@@ -237,3 +237,14 @@
 - 故宫博物院直接记录郎廷极与郎窑红之间的命名关系，并有具体郎窑红梅瓶馆藏条目；当前 Wiki 尚无对应的“郎窑红梅瓶”具体器物节点，因此下一轮应先补 canonical object entry，再建立 A+ 人物→器物边。citeturn0search0
 - 文化部资料明确给出黄云鹏的代表作品“元青花三顾茅庐纹罐”；当前 Wiki 同样缺少该具体器物节点，因此先保持黄云鹏→青花瓷 A+，不跨节点虚构具体器物关系。citeturn0search4
 - World Freeze 保持 149 primary / 167 secondary / 316 total mappings。
+
+
+## Phase 3B — Closed (2026-09-20)
+- Phase 3B recommendation system is now frozen after Round 4 evidence review.
+- Production recommendation pool: 22.
+- Evidence-grade distribution: A+ 4 / A 18 / B 1 / C 77.
+- Recommendation gate: only A+ / A relations are eligible; B / C remain graph/exploration-only.
+- World mappings remain frozen at 149 primary / 167 secondary / 316 total; no Phase 3B change altered entry_worlds.
+- Final Round 4 A+ relations: 郎廷极→御窑厂遗址、年希尧→御窑厂遗址、臧应选→御窑厂遗址、黄云鹏→青花瓷.
+- Specific missing object nodes such as 郎窑红梅瓶、元青花三顾茅庐纹罐 are intentionally deferred to future canonical content admission rather than keeping Phase 3B open indefinitely.
+- Recommendation UI has not yet been added to entry detail pages; this is a separate product/frontend task.
