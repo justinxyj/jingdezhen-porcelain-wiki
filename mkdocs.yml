@@ -3,6 +3,7 @@ site_description: 景德镇陶瓷历史、工艺、器物、窑址、人物与�
 site_url: https://justinxyj.github.io/jingdezhen-porcelain-wiki/
 repo_url: https://github.com/justinxyj/jingdezhen-porcelain-wiki
 repo_name: justinxyj/jingdezhen-porcelain-wiki
+edit_uri: edit/main/docs/
 
 # README.md conflicts with index.md in the same directory under MkDocs.
 exclude_docs: |
