@@ -220,3 +220,19 @@
 - [x] Added responsive recommendation-card styling and graceful failure messaging; existing entry/relation content remains usable if recommendations fail.
 - [x] Pages deployment / browser smoke: verify recommendation cards, target navigation, mobile layout, and dark mode after deployment.
 - [x] Phase 3C closeout: production recommendation UI verified after Pages data recovery; 22 recommendation targets resolve to published canonical entries.
+
+
+## Phase 4 — 知识网络与产品体验升级
+### Phase 4A — 知识网络第一阶段
+- [x] 将统一 knowledge graph edges 暴露给前端知识网络探索器。
+- [x] 建立“关系探索”真实生产数据读取层，不再停留在概念占位页。
+- [x] 支持核心节点搜索、category 筛选、节点点击、邻接关系继续探索。
+- [x] 核心节点统一进入 Entry Detail；知识世界节点保留为探索节点。
+- [x] 增加桌面 / 移动端 / dark mode 网络探索样式。
+- [ ] Pages 部署后完成 Phase 4A 浏览器 smoke。
+
+### Phase 4B — 下一阶段
+- [ ] 七大知识世界首页进一步动态化：代表条目、世界内关系与继续探索。
+- [ ] /entry/ 2.0：历史、空间、工艺、人物、文献、继续探索模块统一化。
+- [ ] 搜索与发现：从全站搜索直接进入统一知识节点。
+- [ ] 全球陶瓷网络：从“地图入口”升级为空间 + 时间 + 知识关系联动。
