@@ -397,3 +397,11 @@
 - 当前 entry_craft_processes 为 126 条：历史 85 / 器物 20 / 人物 9 / 窑址 12；宽泛占位关系为 0。
 - 证据来自景德镇市人民政府、文化和旅游部/恭王府博物馆、故宫博物院及地方志资料；每条新增关系保留来源元数据。
 - 这轮没有修改 World mappings，也没有修改 Phase 3B A+ / A recommendation gate；craft relation 仍属于图谱/探索层，不自动进入相关推荐。
+
+
+## 2026-09-20 — Phase 4E-5 Craft Relation Deep Audit Round 2
+- 完成具体人物↔器物 A+/A 深审。
+- 新增 2 条高证据关系：郎廷极→颜色釉瓷（A+）、唐英→颜色釉瓷（A）。
+- 唐英→雍正仿钧新紫釉天球瓶继续保持 A，避免把“主持御窑生产体系”误写成“个人制作者”。
+- 王步、王琦、田鹤仙、黄云鹏均未被强行连接到现有古代馆藏具体器物；黄云鹏的代表作品“元青花三顾茅庐纹罐”暂因缺少对应 canonical Entry 而保持为人物→青花瓷层级。
+- 当前 entry_relations 102 条，A+/A/B/C = 5/19/1/77；recommendations 24。
