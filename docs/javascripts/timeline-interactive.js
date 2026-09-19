@@ -29,6 +29,21 @@
     modal.querySelector('.jdm-timeline-close').onclick=close;modal.querySelector('.jdm-timeline-backdrop').onclick=close;
     const onKey=ev=>{if(ev.key==='Escape'){close();document.removeEventListener('keydown',onKey)}};document.addEventListener('keydown',onKey);
   }
-  function init(){if(!window.JDM_KNOWLEDGE)return;window.JDM_KNOWLEDGE.all().then(entries=>{const attach=()=>{const root=document.querySelector('.timeline-comparison-root');if(root)bind(root,entries)};attach();const target=document.getElementById('timeline')||document.body;const observer=new MutationObserver(attach);observer.observe(target,{childList:true,subtree:true});});}
+  function init(){
+    if(!window.JDM_KNOWLEDGE)return;
+    window.JDM_KNOWLEDGE.all().then(entries=>{
+      const attach=()=>{const root=document.querySelector('.timeline-comparison-root');if(root)bind(root,entries)};
+      attach();
+      const target=document.getElementById('timeline')||document.body;
+      const observer=new MutationObserver(attach);
+      observer.observe(target,{childList:true,subtree:true});
+    }).catch(error=>{
+      const root=document.querySelector('.timeline-comparison-root');
+      if(root)root.insertAdjacentHTML('afterbegin','<div class="wiki-entry-error" role="alert">时间轴内容暂时无法加载，请稍后重试。<button type="button">重新加载</button></div>');
+      const button=root?.querySelector('.wiki-entry-error button');
+      if(button)button.onclick=()=>{window.JDM_KNOWLEDGE.reset();location.reload()};
+      console.error('[JDM timeline]',error);
+    });
+  }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
