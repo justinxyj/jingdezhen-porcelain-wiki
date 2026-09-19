@@ -5,8 +5,8 @@
       "ES2022",
       "DOM"
     ],
-    "allowJs": true,
-    "checkJs": true,
+    "allowJs": false,
+    "checkJs": false,
     "noEmit": true,
     "strict": false,
     "skipLibCheck": true,
@@ -14,8 +14,6 @@
   },
   "include": [
     "types/**/*.d.ts",
-    "types/database.types.ts",
-    "docs/javascripts/auth-manager.js",
-    "docs/javascripts/knowledge-store.js"
+    "types/database.types.ts"
   ]
 }
