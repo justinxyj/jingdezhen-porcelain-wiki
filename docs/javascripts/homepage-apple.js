@@ -34,7 +34,7 @@
       sections.forEach(s=>navIO.observe(s));
     }
 
-    root.querySelectorAll('.jdm-v2-product').forEach(card=>{
+    root.querySelectorAll('.jdm-v2-product, .jdm-world-card').forEach(card=>{
       card.addEventListener('pointermove',e=>{
         if(reduce||window.innerWidth<850)return;
         const r=card.getBoundingClientRect();
