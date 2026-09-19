@@ -345,6 +345,79 @@
     });
   }
 
+  async function craftProcessContext(processId,{entryLimit=12,relationLimit=60}={}) {
+    const id=String(processId||'');
+    if(!/^[0-9a-f-]{36}$/i.test(id))throw new Error('JDM_CRAFT_PROCESS_ID_CONTRACT');
+    const processResult=await query((db,s)=>db.from('craft_processes').select('id,sequence,slug,name_zh,category,category_name,description_zh,historical_period,tools_zh,materials_zh,output_zh,source_title,source_url,source_institution,source_tier,image_url,image_credit,image_source_url,image_status,image_license,image_creator').eq('id',id).limit(1).abortSignal(s));
+    const process=processResult[0];
+    if(!process)return null;
+    const [neighborResult,linkResult]=await Promise.allSettled([
+      query((db,s)=>db.from('craft_process_relations').select('process_id,related_process_id,relation_type,note').or('process_id.eq.'+id+',related_process_id.eq.'+id).order('relation_type',{ascending:true}).abortSignal(s)),
+      query((db,s)=>db.from('entry_craft_processes').select('entry_id,process_id,relation_type,note').eq('process_id',id).limit(entryLimit).abortSignal(s))
+    ]);
+    const neighborRows=neighborResult.status==='fulfilled'?neighborResult.value:[];
+    const linkRows=linkResult.status==='fulfilled'?linkResult.value:[];
+    const entryIds=[...new Set(linkRows.map(x=>x.entry_id).filter(Boolean))];
+    const [entryResult,worldResult,relationResult]=await Promise.allSettled([
+      entryIds.length?query((db,s)=>db.from('entries').select('id,slug,category,zh,en,ja,status').eq('status','published').in('id',entryIds).abortSignal(s)):Promise.resolve([]),
+      entryIds.length?query((db,s)=>db.from('entry_worlds').select('entry_id,world_slug,role,rationale').in('entry_id',entryIds).abortSignal(s)):Promise.resolve([]),
+      entryIds.length?query((db,s)=>db.from('entry_relations').select('entry_id,related_entry_id,relation_type,note').in('entry_id',entryIds).limit(relationLimit).abortSignal(s)):Promise.resolve([])
+    ]);
+    const entries=entryResult.status==='fulfilled'?entryResult.value:[];
+    const worlds=worldResult.status==='fulfilled'?worldResult.value:[];
+    const relations=relationResult.status==='fulfilled'?relationResult.value:[];
+    const targetIds=[...new Set(relations.map(x=>x.related_entry_id).filter(Boolean))];
+    const targets=targetIds.length?await query((db,s)=>db.from('entries').select('id,slug,category,zh,en,ja,status').eq('status','published').in('id',targetIds).abortSignal(s)):[]; 
+    const byEntry=new Map(entries.map(e=>[e.id,e]));
+    const byTarget=new Map(targets.map(e=>[e.id,e]));
+    const worldByEntry=new Map();
+    worlds.forEach(w=>{if(!worldByEntry.has(w.entry_id))worldByEntry.set(w.entry_id,[]);worldByEntry.get(w.entry_id).push(w)});
+    const relatedByEntry=new Map();
+    relations.forEach(r=>{const target=byTarget.get(r.related_entry_id);if(!target)return;if(!relatedByEntry.has(r.entry_id))relatedByEntry.set(r.entry_id,[]);relatedByEntry.get(r.entry_id).push({...r,target})});
+    const eraForEntry=e=>{
+      const m=(/** @type {any} */ (e.zh))?.meta||{};
+      const timeline=Array.isArray(m.timeline)?m.timeline:[];
+      const eras=[...new Set(timeline.map(t=>eraGroupFor(e,t)).filter(Boolean))];
+      return eras[0]||eraGroupFor(e);
+    };
+    const enriched=linkRows.map(link=>{
+      const entry=byEntry.get(link.entry_id);
+      if(!entry)return null;
+      const m=(/** @type {any} */ (entry.zh))?.meta||{};
+      const rel=relatedByEntry.get(entry.id)||[];
+      return {
+        ...link,
+        entry,
+        worlds:worldByEntry.get(entry.id)||[],
+        era:eraForEntry(entry),
+        map:m.map||null,
+        related:rel,
+        people:rel.filter(r=>r.target?.category==='人物').map(r=>r.target),
+        objects:rel.filter(r=>r.target?.category==='器物').map(r=>r.target),
+        kilns:rel.filter(r=>r.target?.category==='窑址').map(r=>r.target),
+        documents:rel.filter(r=>r.target?.category==='文献').map(r=>r.target)
+      };
+    }).filter(Boolean);
+    const neighborIds=[...new Set(neighborRows.flatMap(x=>[x.process_id,x.related_process_id]).filter(x=>x&&x!==id))];
+    const neighbors=neighborIds.length?await query((db,s)=>db.from('craft_processes').select('id,sequence,slug,name_zh,category,category_name').in('id',neighborIds).order('sequence',{ascending:true}).abortSignal(s)):[];
+    const neighborMap=new Map(neighbors.map(x=>[x.id,x]));
+    const previous=enriched.length?neighborRows.find(x=>x.related_process_id===id)?.process_id:null;
+    const next=enriched.length?neighborRows.find(x=>x.process_id===id)?.related_process_id:null;
+    return {
+      process,
+      previous:previous?neighborMap.get(previous)||null:null,
+      next:next?neighborMap.get(next)||null:null,
+      entries:enriched,
+      stats:{
+        entries:enriched.length,
+        people:[...new Set(enriched.flatMap(x=>x.people.map(e=>e.id)))].length,
+        objects:[...new Set(enriched.flatMap(x=>x.objects.map(e=>e.id)))].length,
+        kilns:[...new Set(enriched.flatMap(x=>x.kilns.map(e=>e.id)))].length,
+        documents:[...new Set(enriched.flatMap(x=>x.documents.map(e=>e.id)))].length
+      }
+    };
+  }
+
   async function entryNetworkContext(entryId,{timelineLimit=12,spaceLimit=24}={}) {
     const allEntries=await all();
     const id=String(entryId||'');
@@ -396,5 +469,5 @@
   }
   async function byCategory(category,limit=250){return list({category,limit})}
   function url(e){return e?'/jingdezhen-porcelain-wiki/entry/?type='+encodeURIComponent(e.category)+'&slug='+encodeURIComponent(e.slug):'/jingdezhen-porcelain-wiki/'}
-  window.JDM_KNOWLEDGE={all,get,list,worlds,byWorld,worldOverview,entryContext,entryNetworkContext,objectAtlas,personAtlas,graph,recommendations,eraGroup:eraGroupFor,searchEntries,searchDiscovery,searchDiscoveryPage,byCategory,url,state:()=>({...state}),reset:()=>{allPromise=null;searchIndexPromise=null;cache.clear();state={status:'idle',error:null,updatedAt:null}}};
+  window.JDM_KNOWLEDGE={all,get,list,worlds,byWorld,worldOverview,entryContext,entryNetworkContext,craftProcessContext,objectAtlas,personAtlas,graph,recommendations,eraGroup:eraGroupFor,searchEntries,searchDiscovery,searchDiscoveryPage,byCategory,url,state:()=>({...state}),reset:()=>{allPromise=null;searchIndexPromise=null;cache.clear();state={status:'idle',error:null,updatedAt:null}}};
 })();
