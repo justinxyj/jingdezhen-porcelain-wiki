@@ -4,7 +4,8 @@
   const ROOT='/jingdezhen-porcelain-wiki/';
   const plain=s=>{const d=document.createElement('div');d.innerHTML=String(s||'');return d.textContent||d.innerText||''};
   const url=e=>window.JDM_KNOWLEDGE?.url(e)||`${ROOT}entry/?type=${encodeURIComponent(e?.category||'')}&slug=${encodeURIComponent(e?.slug||'')}`;
-  const sourceUrl=s=>s&&typeof s==='object'?s.url:'';
+  const safeHref=raw=>window.JDM_AUTH?.safeHref?.(raw)||'';
+  const sourceUrl=s=>s&&typeof s==='object'?safeHref(s.url):'';
   const sourceLabel=s=>s&&typeof s==='object'?s.label||'来源':(typeof s==='string'?s:'来源');
   const validMedia=e=>{const m=e?.media?.[0];return m&&!window.JDM_MEDIA_POLICY?.isGenericPlaceholder?.(m)?m:null};
   function detailedIntro(e){
@@ -28,13 +29,13 @@
     const entryCards=(items,kind)=>items.slice(0,8).map(x=>'<a class="wiki-entry-explore-card" href="'+url(x)+'"><span>'+esc(kind)+'</span><b>'+esc(x.zh?.title||x.slug)+'</b><small>'+esc(x.category||'Entry')+' →</small></a>').join('');
     const sourceLinks=(e.sources||[]).map(s=>{const u=sourceUrl(s);return u?'<a href="'+esc(u)+'" target="_blank" rel="noopener">'+esc(sourceLabel(s))+' ↗</a>':''}).filter(Boolean).join('');
     root.innerHTML='<article class="wiki-entry-card wiki-entry-v2">'+
-      '<header class="wiki-entry-header"><div><div class="wiki-entry-kicker">'+esc(e.category||'知识')+'</div><h1>'+esc(e.zh?.title||e.slug)+'</h1><p>'+esc(intro)+'</p></div>'+(im?'<figure class="wiki-entry-cover"><img data-museum-image="1" src="'+esc(im.path)+'" alt="'+esc(im.title||e.zh?.title||e.slug)+'"><figcaption>'+esc(im.title||'')+' · '+esc(im.source||'')+' · '+esc(im.license||'')+'</figcaption></figure>':'')+'</header>'+
+      '<header class="wiki-entry-header"><div><div class="wiki-entry-kicker">'+esc(e.category||'知识')+'</div><h1>'+esc(e.zh?.title||e.slug)+'</h1><p>'+esc(intro)+'</p></div>'+(im&&safeHref(im.path)?'<figure class="wiki-entry-cover"><img data-museum-image="1" src="'+safeHref(im.path)+'" alt="'+esc(im.title||e.zh?.title||e.slug)+'"><figcaption>'+esc(im.title||'')+' · '+esc(im.source||'')+' · '+esc(im.license||'')+'</figcaption></figure>':'')+'</header>'+
       (tags.length?'<div class="wiki-entry-v2-tags">'+tags.map(x=>'<span>'+esc(x)+'</span>').join('')+'</div>':'')+
       (worldLinks?'<div class="wiki-entry-world-path"><span>所属 Knowledge World</span><div>'+worldLinks+'</div></div>':'')+
       '<div class="wiki-entry-v2-grid"><aside class="wiki-entry-v2-rail"><div class="wiki-entry-v2-card"><strong>知识节点</strong><span>'+esc(e.category||'知识')+'</span><span>'+esc(m.period||m.era||'时代信息待核')+'</span><span>'+esc(m.location||m.region||'空间信息待核')+'</span></div><div class="wiki-entry-v2-card"><strong>继续探索</strong><a href="'+ROOT+'search/">⌕ 搜索知识 →</a><a href="'+ROOT+'network/relations/">关系网络 →</a><a href="'+ROOT+'network/global/">全球陶瓷网络 →</a></div></aside><div class="wiki-entry-v2-main">'+
       '<section class="wiki-entry-body"><h2>详细介绍</h2><div class="wiki-entry-text">'+esc(contentOrIntro(e,intro))+'</div></section>'+
       (relations.length?'<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">KNOWLEDGE RELATIONS</div><h2>它与哪些知识相连</h2><div class="wiki-entry-v2-relations">'+relationCards+'</div></section>':'')+
-      (e.timelineContext?'<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">TIME & PLACE</div><h2>历史与空间</h2><p>'+esc(e.timelineContext.official_summary||e.timelineContext.relationship_to_jingdezhen||e.timelineContext.historical_role||'该条目具有可追溯的时间轴或历史语境信息。')+'</p>'+(e.timelineContext.official_source_url?'<a href="'+esc(e.timelineContext.official_source_url)+'" target="_blank" rel="noopener">查看资料来源 ↗</a>':'')+'</section>':'')+
+      (e.timelineContext?'<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">TIME & PLACE</div><h2>历史与空间</h2><p>'+esc(e.timelineContext.official_summary||e.timelineContext.relationship_to_jingdezhen||e.timelineContext.historical_role||'该条目具有可追溯的时间轴或历史语境信息。')+'</p>'+(safeHref(e.timelineContext.official_source_url)?'<a href="'+safeHref(e.timelineContext.official_source_url)+'" target="_blank" rel="noopener noreferrer">查看资料来源 ↗</a>':'')+'</section>':'')+
       (timelinePeers.length?'<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">SAME ERA</div><h2>同一时代，还可以看</h2><div class="wiki-entry-explore-grid">'+entryCards(timelinePeers,'同一时代')+'</div></section>':'')+
       (spaceEntries.length?'<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">SPACE</div><h2>同一空间语境，还可以看</h2><div class="wiki-entry-explore-grid">'+entryCards(spaceEntries,'空间关联')+'</div></section>':'')+
       (craftProcesses.length?'<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">CRAFT</div><h2>相关工艺</h2><div class="wiki-entry-craft-list">'+craftProcesses.slice(0,8).map(p=>'<a href="'+ROOT+'craft/technology-tree/?process='+encodeURIComponent(p.node_id||'')+'"><span>工序</span><b>'+esc(p.label||p.node_id)+'</b><small>进入72道工艺 →</small></a>').join('')+'</div></section>':'')+
