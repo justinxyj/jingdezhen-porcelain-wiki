@@ -33,7 +33,9 @@
       <div class="jdm-scroll-note">向下探索 <span>↓</span></div>
     </section>
 
-    <section class="jdm-world-journey" aria-label="从世界进入景德镇知识世界"><div class="jdm-journey-map" aria-hidden="true"><span class="jdm-journey-world">世界</span><i></i><span class="jdm-journey-china">中国</span><i></i><span class="jdm-journey-jdz">景德镇</span><i></i><span class="jdm-journey-blue">青花</span></div></section>\n\n    <section id="worlds" class="jdm-v2-intro jdm-knowledge-worlds">
+    <section class="jdm-world-journey" aria-label="从世界进入景德镇知识世界"><div class="jdm-journey-map" aria-hidden="true"><span class="jdm-journey-world">世界</span><i></i><span class="jdm-journey-china">中国</span><i></i><span class="jdm-journey-jdz">景德镇</span><i></i><span class="jdm-journey-blue">青花</span></div></section>
+
+    <section id="worlds" class="jdm-v2-intro jdm-knowledge-worlds">
       <div class="jdm-v2-container">
         <div class="jdm-section-label jdm-reveal">七大知识世界</div>
         <h2 class="jdm-v2-display jdm-reveal">从一件瓷器出发，<br><span>进入一整套文明系统。</span></h2>
