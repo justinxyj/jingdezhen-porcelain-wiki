@@ -6,9 +6,9 @@
     material:{url:'https://www.xinhuanet.com/politics/20260725/39351a0d75ef4846b01af614c016b2bf/2026072539351a0d75ef4846b01af614c016b2bf_45aa148150364c28a17c83bbf03f2b0e.JPG',credit:'新华社｜高岭土开采现场'},
     kneading:{url:'https://www.xinhuanet.com/politics/20260725/39351a0d75ef4846b01af614c016b2bf/2026072539351a0d75e3e48d79de223638f892ce3.jpg',credit:'新华社｜揉泥现场'},
     forming:{url:'https://www.xinhuanet.com/politics/20260725/39351a0d75ef4846b01af614c016b2bf/2026072539351a0d75e4dd983be25444d39058e7841a2d6e57.JPG',credit:'新华社｜拉坯现场'},
-    decoration:{url:'https://www.xinhuanet.com/politics/20260725/39351a0d75ef4846b01af614c016b2bf/2026072539351a0d75e0481a98e30454d95a53b86e1c53addb6.jpg',credit:'新华社｜画坯现场'},
-    glaze:{url:'https://www.xinhuanet.com/politics/20260725/39351a0d75ef4846b01af614c016b2bf/2026072539351a0d75e0481a98e30454d95a53b86e1c53addb6.jpg',credit:'新华社｜画坯阶段代表照片'},
-    kiln:{url:'https://www.xinhuanet.com/politics/20260725/39351a0d75ef4846b01af614c016b2bf/2026072539351a0d75e3b26201898234bfaa6a8d8725c24b3c5.jpg',credit:'新华社｜烧窑阶段代表照片'}
+    decoration:{url:'https://www.xinhuanet.com/politics/20260725/39351a0d75ef4846b01af614c016b2bf/2026072539351a0d75ef4846b01af614c016b2bf/2026072539351a0d75ef4846b01af614c016b2bf_0481a98e30454d95a53b86e1c53addb6.jpg',credit:'新华社｜画坯现场'},
+    glaze:{url:'https://www.xinhuanet.com/politics/20260725/39351a0d75ef4846b01af614c016b2bf/2026072539351a0d75ef4846b01af614c016b2bf/2026072539351a0d75ef4846b01af614c016b2bf_0481a98e30454d95a53b86e1c53addb6.jpg',credit:'新华社｜画坯阶段代表照片'},
+    kiln:{url:'https://www.xinhuanet.com/politics/20260725/39351a0d75ef4846b01af614c016b2bf/2026072539351a0d75ef4846b01af614c016b2bf/2026072539351a0d75ef4846b01af614c016b2bf_3b26201898234bfaa6a8d8725c24b3c5.jpg',credit:'新华社｜烧窑阶段代表照片'}
   };
   const imageFor=x=>x.image_status==='verified'&&x.image_url?{url:x.image_url,credit:x.image_credit||'已核验官方图片',source:x.image_source_url||x.source_url,representative:false}:{...(GROUP_IMG[x.category]||GROUP_IMG.kiln),source:'https://www.xinhuanet.com/politics/20260725/39351a0d75ef4846b01af614c016b2bf/c.html',representative:true};
   const eraLabel=x=>({tang:'唐五代',song:'宋',yuan:'元',ming:'明',qing:'清','near-modern':'近代',modern:'现代'}[x]||x||'');
