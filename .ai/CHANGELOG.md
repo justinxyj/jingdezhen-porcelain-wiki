@@ -267,3 +267,14 @@
 - 关系网络继续保留图谱搜索，但搜索对象明确为 Entry 核心知识节点，不再形成独立内容搜索体系。
 - 用户路径正式固定为：搜索 → Entry → 世界 → 关系网络 → 相关推荐。
 - 未修改 Phase 2B World Freeze、Phase 3B A+ / A recommendation gate 或生产事实数据。
+
+
+## 2026-09-20 — Phase 4C / 全球陶瓷网络 × 时间 × 空间 × 知识条目
+- 全球陶瓷网络页面由静态三张入口卡升级为 Entry-centric 综合探索页。
+- 新增 `entryNetworkContext()`，把已有 Entry、World、craft_process、timeline、map、entry_relations 与 recommendations 汇聚到同一个展示上下文。
+- 新增时间探索：当前条目的时代元数据会映射到景德镇、中国其他窑业、世界其他地区三个并行分组；仅使用现有已建档时间节点。
+- 新增空间探索：使用现有 41 个带坐标的 published Entry，地图点击仍回到 canonical 知识条目。
+- 新增工艺探索：接入现有 72 道工艺流程图谱关系，作为独立知识维度展示。
+- 关系层继续读取 `entry_relations`，相关推荐继续读取冻结的 `knowledge_recommendations`，没有放宽推荐门槛。
+- 产品路径固定为：**一件瓷器 → 工艺 → 时间 → 空间 → 人物 / 文献 / 其他关系 → 相关推荐 → 其他时代 / 世界节点**。
+- 未修改 Phase 2B World Freeze、Phase 3B recommendation gate 或生产关系证据等级。
