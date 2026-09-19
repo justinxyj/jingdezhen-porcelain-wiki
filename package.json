@@ -2,7 +2,9 @@
   "name": "jingdezhen-porcelain-wiki",
   "private": true,
   "scripts": {
-    "typecheck": "tsc --noEmit -p tsconfig.json"
+    "typecheck": "npm run typecheck:contracts && npm run typecheck:js",
+    "typecheck:contracts": "tsc --noEmit -p tsconfig.contracts.json",
+    "typecheck:js": "tsc --noEmit -p tsconfig.json"
   },
   "devDependencies": {
     "typescript": "5.9.2"
