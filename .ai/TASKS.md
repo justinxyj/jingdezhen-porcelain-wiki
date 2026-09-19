@@ -481,3 +481,14 @@
 
 ### Phase 5-2 收口边界
 本阶段不新增第 8 个 Knowledge World、不修改生产知识事实、不堆关系数量、不做大规模 CSS 重构；后续新工作必须作为新的工作块单独定义，不重新打开已封版的 Phase 5-2。
+
+## Final Security Hardening — 2026-09-20
+
+- [x] S-1：历史 RLS migration / canonical schema 漂移收口，最终 public ACL 与 private staff helper 固化。
+- [x] H-1：统一认证请求层与 AUTH_EXPIRED 闭环。
+- [x] H-2：统一 safeHref + 时间轴/Entry Detail 动态 URL 安全。
+- [x] H-3：搜索推荐批量化，消除逐条推荐查询。
+- [x] H-4：Entry Detail 改为定向 peer 查询；全量缓存上限收紧。
+- [x] H-5：数据库安全测试与 private.is_staff 契约一致。
+- [x] M-1～M-6：类型、生命周期、错误分类、截断状态、输入契约与媒体边界完成本轮收口。
+- [ ] 最终 CI / Pages / 浏览器真实线上验收：待本轮最新提交全部通过后关闭本工作块。
