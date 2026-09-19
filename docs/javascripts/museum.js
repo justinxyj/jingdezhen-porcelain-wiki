@@ -19,7 +19,7 @@
     const filtered=items.filter(x=>{
       const e=x.entry,m=meta(e),hay=JSON.stringify(e.zh||'').toLowerCase();
       const timeline=x.timeline||[];
-      const eraOk=!era||timeline.some(t=>t?.era===era);
+      const eraOk=!era||timeline.some(t=>window.JDM_KNOWLEDGE?.eraGroup?.(e,t)===era||t?.era===era);
       const craftText=String(x.craft||m.craft||'').toLowerCase();
       const craftOk=!craft||craftText.includes(craft.toLowerCase())||x.craftProcesses?.some(p=>String(p.label||'').toLowerCase().includes(craft.toLowerCase()));
       const typeText=String(m.kind||m.type||e.category||'').toLowerCase();
@@ -28,7 +28,7 @@
     });
     const count=document.getElementById('catalog-count');if(count)count.textContent='显示 '+filtered.length+' / '+items.length+' 件器物';
     root.innerHTML=filtered.map(x=>{
-      const e=x.entry,im=e.media?.[0],m=meta(e),world=(x.worlds||[])[0],era=(x.timeline||[]).map(t=>t?.era).filter(Boolean)[0];
+      const e=x.entry,im=e.media?.[0],m=meta(e),world=(x.worlds||[])[0],era=(x.timeline||[]).map(t=>window.JDM_KNOWLEDGE?.eraGroup?.(e,t)||t?.era).filter(Boolean)[0];
       const people=relationLinks(x.people,'人物'),kilns=relationLinks(x.kilns,'窑址'),docs=relationLinks(x.documents,'文献');
       const crafts=(x.craftProcesses||[]).slice(0,3).map(p=>'<a href="'+path('craft/technology-tree/')+'">'+esc(p.label||'工艺')+'</a>').join('');
       const global=path('network/global/?slug='+encodeURIComponent(e.slug));
