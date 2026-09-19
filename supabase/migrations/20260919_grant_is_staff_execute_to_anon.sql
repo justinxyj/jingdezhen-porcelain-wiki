@@ -1,23 +1,9 @@
--- Phase A (founder-approved production fix, mirrored in repo):
--- GRANT EXECUTE on public.is_staff() to anon so RLS policies that call
--- is_staff() can evaluate for anonymous/public reads.
---
--- Root cause:
---   Policies on entries / media / entry_relations invoke is_staff().
---   Without EXECUTE for role anon, PostgREST failed with
---   "permission denied for function is_staff" (42501 / HTTP 401),
---   and published knowledge entries were unreadable to visitors
---   (e.g. /entry/?slug=... showed "没有找到这个公开条目").
---
--- Note:
---   is_staff() is a SECURITY DEFINER helper (search_path pinned to public;
---   see supabase/schema.sql). Granting EXECUTE lets callers invoke it;
---   it does not by itself grant table write access. Staff write policies
---   still require is_staff() to return true.
---
--- Idempotent on environments where Phase A was already applied manually.
---
--- Rollback:
---   REVOKE EXECUTE ON FUNCTION public.is_staff() FROM anon;
+-- HISTORICAL / SUPERSEDED
+-- This migration temporarily granted anon EXECUTE on is_staff() to recover an
+-- earlier RLS design. The final architecture has public SELECT policies that do
+-- not call is_staff(), and anon must not execute the SECURITY DEFINER helper.
+-- Kept as a migration-history marker; intentionally no-op on fresh environments.
 
-GRANT EXECUTE ON FUNCTION public.is_staff() TO anon;
+begin;
+revoke execute on function public.is_staff() from anon;
+commit;
