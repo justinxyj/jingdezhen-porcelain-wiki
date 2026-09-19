@@ -204,7 +204,52 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
   async function queryEntriesWorlds(ids){
     return ids.length?await query((db,s)=>db.from('entry_worlds').select('entry_id,world_slug,role,rationale').in('entry_id',ids).order('role',{ascending:true}).order('display_order',{ascending:true}).abortSignal(s)):[];
   }
+  async function entryNetworkContext(entryId,{timelineLimit=12,spaceLimit=24}={}) {
+    const allEntries=await all();
+    const id=String(entryId||'');
+    const entry=allEntries.find(e=>e.id===id||e.slug===id);
+    if(!entry)return null;
+    const [ctx,worldRows,worldDefs,recs]=await Promise.all([
+      entryContext(entry.id),
+      query((db,s)=>db.from('entry_worlds').select('entry_id,world_slug,role,rationale').eq('entry_id',entry.id).order('role',{ascending:true}).abortSignal(s)),
+      query((db,s)=>db.from('knowledge_worlds').select('slug,title,short_title,description,display_order').order('display_order',{ascending:true}).abortSignal(s)),
+      recommendations(entry.id,{limit:8})
+    ]);
+    const worldBySlug=new Map(worldDefs.map(w=>[w.slug,w]));
+    const worlds=worldRows.map(x=>({...worldBySlug.get(x.world_slug),role:x.role,rationale:x.rationale})).filter(x=>x.slug);
+    const relationEntries=ctx.relations.map(x=>x.entry).filter(Boolean);
+    const relationIds=new Set(relationEntries.map(x=>x.id));
+    const timeline=Array.isArray(entry.zh?.meta?.timeline)?entry.zh.meta.timeline:[];
+    const eras=new Set(timeline.map(x=>x?.era).filter(Boolean));
+    const laneSet=new Set(timeline.map(x=>x?.lane).filter(Boolean));
+    const timelinePeers=allEntries.filter(e=>{
+      if(e.id===entry.id)return false;
+      const t=Array.isArray(e.zh?.meta?.timeline)?e.zh.meta.timeline:[];
+      return t.some(x=>eras.has(x?.era));
+    }).map(e=>({...e,timelineMatches:(e.zh?.meta?.timeline||[]).filter(x=>eras.has(x?.era))})).slice(0,timelineLimit);
+    const mapEntries=allEntries.filter(e=>e.zh?.meta?.map?.lat!=null&&e.zh?.meta?.map?.lng!=null);
+    const relatedMapped=relationEntries.filter(e=>e.zh?.meta?.map?.lat!=null&&e.zh?.meta?.map?.lng!=null);
+    const sameEraMapped=mapEntries.filter(e=>{
+      if(e.id===entry.id)return true;
+      const t=Array.isArray(e.zh?.meta?.timeline)?e.zh.meta.timeline:[];
+      return t.some(x=>eras.has(x?.era));
+    });
+    const spaceEntries=[...new Map([...relatedMapped,...sameEraMapped].map(e=>[e.id,e])).values()].slice(0,spaceLimit);
+    return {
+      entry,
+      worlds,
+      relations:ctx.relations,
+      recommendations:recs,
+      timeline,
+      eras:[...eras],
+      lanes:[...laneSet],
+      timelinePeers,
+      spaceEntries,
+      map:entry.zh?.meta?.map||null,
+      stats:{relationCount:ctx.relations.length,recommendationCount:recs.length,timelinePeerCount:timelinePeers.length,spaceCount:spaceEntries.length}
+    };
+  }
   async function byCategory(category,limit=250){return list({category,limit})}
   function url(e){return e?'/jingdezhen-porcelain-wiki/entry/?type='+encodeURIComponent(e.category)+'&slug='+encodeURIComponent(e.slug):'/jingdezhen-porcelain-wiki/'}
-  window.JDM_KNOWLEDGE={all,get,list,worlds,byWorld,worldOverview,entryContext,graph,recommendations,searchEntries,searchDiscovery,byCategory,url,state:()=>({...state}),reset:()=>{allPromise=null;searchIndexPromise=null;cache.clear();state={status:'idle',error:null,updatedAt:null}}};
+  window.JDM_KNOWLEDGE={all,get,list,worlds,byWorld,worldOverview,entryContext,entryNetworkContext,graph,recommendations,searchEntries,searchDiscovery,byCategory,url,state:()=>({...state}),reset:()=>{allPromise=null;searchIndexPromise=null;cache.clear();state={status:'idle',error:null,updatedAt:null}}};
 })();
