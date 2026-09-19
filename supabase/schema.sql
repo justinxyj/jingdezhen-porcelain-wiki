@@ -95,6 +95,17 @@ create index if not exists entry_relations_related_idx on public.entry_relations
 create index if not exists media_entry_status_idx on public.media(entry_id,status);
 create index if not exists media_review_state_idx on public.media(review_state,status);
 create index if not exists media_canonical_key_idx on public.media(canonical_key);
+create unique index if not exists media_one_primary_per_entry_idx
+  on public.media(entry_id) where is_primary = true and entry_id is not null;
+create unique index if not exists entry_revisions_entry_version_key
+  on public.entry_revisions(entry_id, version);
+create index if not exists entry_relations_entry_type_idx
+  on public.entry_relations(entry_id, relation_type);
+create index if not exists entry_relations_related_type_idx
+  on public.entry_relations(related_entry_id, relation_type);
+create index if not exists media_public_verified_entry_created_idx
+  on public.media(entry_id, created_at desc)
+  where status = 'approved' and review_state = 'verified';
 
 alter table public.profiles enable row level security;
 alter table public.entries enable row level security;
@@ -201,13 +212,14 @@ create policy "users_read_own_profile" on public.profiles for select
 create policy "users_create_own_profile" on public.profiles for insert
   with check (auth.uid()=id);
 
--- The database also contains SECURITY DEFINER helpers handle_new_user(), is_staff()
--- and review_edit(p_edit_id, p_action, p_note), with search_path pinned to public.
--- Phase B: REVOKE EXECUTE ON is_staff() FROM anon/PUBLIC; GRANT TO authenticated, service_role.
+-- Runtime hardening:
+-- is_staff() is SECURITY INVOKER and remains executable by authenticated because RLS policies call it.
+-- handle_new_user() is a trigger-only SECURITY DEFINER helper.
+-- review_edit(...) is a transactional staff helper, not a public RPC entry point.
+revoke execute on function public.handle_new_user() from public, anon, authenticated;
+revoke execute on function public.review_edit(uuid,text,text) from public, anon, authenticated;
+grant execute on function public.is_staff() to authenticated, service_role;
 
-
-revoke all on table public.media_public from public, anon, authenticated;
-grant select on table public.media_public to anon, authenticated;
 revoke all on table public.media from anon;
 grant select (
   id, entry_id, path, title, source, license, creator, captured_at, location,
