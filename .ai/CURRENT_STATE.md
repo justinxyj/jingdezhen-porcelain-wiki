@@ -395,3 +395,14 @@
 - 器物 / 人物 / 窑址 / 文献来自既有 Entry 关系；时代使用 canonical era_group；空间使用既有 map metadata。
 - 当前未修改生产知识事实或 recommendation gate。
 - Deepening 页面已完成代码与 CI 验证，待 Pages browser smoke 后继续收口。
+
+
+## 2026-09-20 — Phase 4E-5 Craft Relation Deep Audit
+- 72 道工序关系已完成第一轮深审。
+- 原 289 条 entry_craft_processes 中，204 条宽泛占位关系已删除；85 条具体关系保留。
+- 新增 20 条器物关系、9 条人物关系、12 条御窑厂遗址关系。
+- 当前 entry_craft_processes：126 条；分类为历史 85 / 器物 20 / 人物 9 / 窑址 12。
+- 宽泛占位关系：0。
+- 当前高价值关系重点：青花瓷 / 青白瓷 / 成化斗彩鸡缸杯 / 颜色釉瓷；王步 / 黄云鹏 / 唐英；御窑厂遗址烧成与窑具工序。
+- 相关推荐仍只消费 entry_relations 的 A+ / A，不因本轮 craft 关系增加而改变推荐资格。
+- Phase 2B Semantic Freeze 与 316 World mappings 保持不变。
