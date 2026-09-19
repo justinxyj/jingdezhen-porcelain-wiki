@@ -436,3 +436,11 @@
 - [x] Future work must follow the new anti-overengineering rule: prioritize high-value user-visible knowledge paths, stop when marginal knowledge gain becomes low, and avoid repeated micro-audits.
 - [x] “郎窑红梅瓶”“元青花三顾茅庐纹罐”等进入 Phase 5 Canonical Content Admission pool，不阻塞 Phase 4E closeout。
 - [ ] Phase 5-1 Knowledge World architecture.
+
+
+## Phase 5-2 Knowledge World Home — 2026-09-20
+- [x] 首页新增“世界 → 中国 → 景德镇 → 青花”最小世界入口路径。
+- [x] 七大知识世界保持一级入口。
+- [x] 用户可见英文产品术语本轮已中文化：首页品牌、章节标签、工具卡片等。
+- [x] 不新增知识事实数据库，不改 Supabase 生产事实。
+- [ ] Pages browser smoke。
