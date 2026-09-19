@@ -8,10 +8,10 @@
     const db=window.JDM_AUTH?.getClient?.()||window.supabase.createClient(window.JDM_RUNTIME_CONFIG.supabaseUrl,window.JDM_RUNTIME_CONFIG.supabaseAnonKey);
     const {data:{user}}=await db.auth.getUser();
     if(!user)throw Object.assign(new Error('馆长后台需要登录，请重新登录'),{code:'AUTH_REQUIRED',status:401});
-    const {data:profile,error}=await (window.JDM_AUTH?.request
-      ? window.JDM_AUTH.request(d=>d.from('profiles').select('role').eq('id',user.id).maybeSingle())
-      : db.from('profiles').select('role').eq('id',user.id).maybeSingle());
-    if(error)throw error;
+    const result=window.JDM_AUTH?.request
+      ? await window.JDM_AUTH.request(d=>d.from('profiles').select('role').eq('id',user.id).maybeSingle())
+      : (await db.from('profiles').select('role').eq('id',user.id).maybeSingle()).data;
+    const profile=result;
     if(profile?.role!=='admin')throw Object.assign(new Error('当前账号没有馆长后台权限'),{code:'AUTH_FORBIDDEN',status:403});
     return db;
   }
