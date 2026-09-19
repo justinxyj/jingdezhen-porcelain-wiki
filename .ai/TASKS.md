@@ -123,9 +123,18 @@
 - [x] Sprint B：149 个已发布条目全部挂载 primary world
 - [x] Sprint B：建立 secondary cross-world mappings
 - [x] Sprint B：7 个世界入口接入动态条目浏览器
-- [x] Sprint B 后续：完成 Phase 2B 深层语义审校，395 → 372 mapping
-- [ ] Sprint B Phase 2C：继续审校 375 条 mapping 的边界并补真正缺失的跨世界关系
 
-- [x] Sprint B Phase 2：第一轮语义审校，删除冗余人物自链接并修正现代/历史主入口与明显错配
-- [x] Sprint B Phase 2B：完成 395 条映射深层语义审校，删除 23 条低价值 secondary，精修 12 条 rationale
-- [x] Sprint B Phase 2C：完成逐条人物→历史、全球窑址→历史深审；清理低价值 secondary、精修 rationale 并完成 production 回归
+- [x] Sprint B：建立七大知识世界独立数据层
+- [x] Sprint B：149 个已发布条目全部挂载 primary world
+- [x] Sprint B：建立 secondary cross-world mappings
+- [x] Sprint B：7 个世界入口接入动态条目浏览器
+- [x] Sprint B Phase 2：第一轮语义审校
+- [x] Sprint B Phase 2B：第一轮深层语义清洗（395 → 372）
+- [x] Sprint B Phase 2C：人物→历史、全球窑址→历史边界深审（已并入当前 Phase 2B 连续审校记录）
+- [x] Sprint B Phase 2B 深层语义续审：当前生产 323 mappings（149 primary + 174 secondary）
+- [ ] Sprint B Phase 2B 深层语义续审：完成人物→研究/工艺边界
+- [ ] Sprint B Phase 2B 深层语义续审：完成文献→器物/工艺/空间边界
+- [ ] Sprint B Phase 2B 深层语义续审：完成全球窑址→研究边界
+- [ ] Sprint B Phase 2B 深层语义续审：完成历史→器物/空间边界
+- [ ] Sprint B Phase 2B：建立知识图谱/推荐系统可解释的入口语义规则
+- [ ] Sprint B Phase 3：知识图谱与相关条目
