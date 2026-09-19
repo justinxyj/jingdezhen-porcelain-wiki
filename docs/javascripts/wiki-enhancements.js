@@ -86,6 +86,7 @@
     try{
       const e=await window.JDM_KNOWLEDGE.get(slug);
       if(!e){root.innerHTML='<div class="wiki-entry-loading">没有找到这个公开条目。</div>';return}
+      /** @type {any} */
       const network=await window.JDM_KNOWLEDGE.entryNetworkContext(e.id,{timelineLimit:8,spaceLimit:12}).catch(async networkError=>{
         const [ctx,recs]=await Promise.all([
           window.JDM_KNOWLEDGE.entryContext(e.id,{relationLimit:100}).catch(()=>({relations:[]})),
