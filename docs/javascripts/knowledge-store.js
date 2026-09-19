@@ -476,6 +476,7 @@
       entry,
       worlds,
       relations:ctx.relations,
+      relationTruncated:Boolean(ctx.truncated),
       recommendations:recs,
       craftProcesses:craftNodes.map(n=>({...n,rationale:craftEdges.find(x=>x.target_node_id===n.node_id)?.rationale||''})),
       timeline,
@@ -484,7 +485,7 @@
       timelinePeers,
       spaceEntries,
       map:entry.zh?.meta?.map||null,
-      stats:{relationCount:ctx.relations.length,recommendationCount:recs.length,timelinePeerCount:timelinePeers.length,spaceCount:spaceEntries.length}
+      stats:{relationCount:ctx.relations.length,relationTruncated:Boolean(ctx.truncated),recommendationCount:recs.length,timelinePeerCount:timelinePeers.length,spaceCount:spaceEntries.length}
     };
   }
   async function byCategory(category,limit=250){return list({category,limit})}
