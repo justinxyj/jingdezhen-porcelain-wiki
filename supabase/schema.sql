@@ -125,6 +125,22 @@ alter table public.entry_revisions enable row level security;
 alter table public.media enable row level security;
 alter table public.favorites enable row level security;
 
+create schema if not exists private;
+create or replace function private.is_staff()
+returns boolean
+language sql
+stable
+security definer
+set search_path = public
+as $$
+  select exists(
+    select 1 from public.profiles
+    where id = auth.uid() and role in ('reviewer','admin')
+  );
+$$;
+revoke all on function private.is_staff() from public;
+grant execute on function private.is_staff() to authenticated, service_role;
+
 -- Phase B final state: public SELECT without is_staff(); staff policies TO authenticated.
 -- See migration 20260919_rls_phase_b_public_select_without_is_staff.sql
 
@@ -229,22 +245,6 @@ create policy "users_create_own_profile" on public.profiles for insert
 -- review_edit(...) is a transactional staff helper, not a public RPC entry point.
 revoke execute on function public.handle_new_user() from public, anon, authenticated;
 revoke execute on function public.review_edit(uuid,text,text) from public, anon, authenticated;
-create schema if not exists private;
-create or replace function private.is_staff()
-returns boolean
-language sql
-stable
-security definer
-set search_path = public
-as $$
-  select exists(
-    select 1 from public.profiles
-    where id = auth.uid() and role in ('reviewer','admin')
-  );
-$$;
-revoke all on function private.is_staff() from public;
-grant execute on function private.is_staff() to authenticated, service_role;
-
 
 revoke all on table public.media from anon;
 revoke all on table public.entry_revisions from anon;
