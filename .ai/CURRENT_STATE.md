@@ -280,3 +280,13 @@
 - Phase 4A 保持 485 nodes / 1,309 edges / 0 orphan edges。
 - Phase 3C 保持 22 条相关推荐，A+ / A 推荐门槛不变。
 - Phase 4B 待 Pages 部署后完成七个世界页面浏览器 smoke。
+
+
+## 2026-09-20 — Phase 4B / 统一搜索与发现层
+- 已建立统一 Entry Discovery 层：JDM_KNOWLEDGE.searchEntries() 与 searchDiscovery()。
+- 搜索索引只消费 entries.status='published' 的 canonical Entry；当前生产基线为 149 published entries。
+- searchDiscovery() 会为结果补充真实知识世界映射与现有相关推荐，因此搜索页不是孤立结果列表。
+- 新增统一搜索页 /search/；所有结果均进入 JDM_KNOWLEDGE.url(entry) 生成的 Entry Detail。
+- 首页、七大知识世界、关系探索、Entry Detail 均有统一搜索入口；关系网络自身搜索仍用于筛选 Entry 核心节点，但不产生第二套搜索数据源。
+- 当前完整产品链路：搜索 → Entry 知识节点 → 七大世界 / 关系网络 / 相关推荐。
+- Phase 4B 统一搜索代码已完成 JS syntax regression；Pages browser smoke 仍待部署后人工确认。
