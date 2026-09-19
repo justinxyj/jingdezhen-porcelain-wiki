@@ -193,10 +193,10 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
       return {...e,_searchScore:score};
     });
     scored.sort((a,b)=>b._searchScore-a._searchScore||String(a.zh?.title||'').localeCompare(String(b.zh?.title||''),'zh-Hans-CN'));
-    return scored.slice(0,Math.max(1,Math.min(100,Number(limit)||20))).map(({_searchScore,...e})=>e);
+    return scored.slice(0,Math.max(1,Math.min(250,Number(limit)||20))).map(({_searchScore,...e})=>e);
   }
   async function searchDiscoveryPage(term,{limit=12,recommendationLimit=3,category=null,worldSlug=null,era=null,lane=null,hasMap=null,hasTimeline=null}={}) {
-    const entries=await searchEntries(term,{limit:100,category,worldSlug,era,lane,hasMap,hasTimeline});
+    const entries=await searchEntries(term,{limit:250,category,worldSlug,era,lane,hasMap,hasTimeline});
     if(!entries.length)return {results:[],total:0,facets:{categories:[],eras:[],lanes:[]}};
     const ids=entries.map(e=>e.id);
     const [links,worldRows]=await Promise.all([
