@@ -247,3 +247,13 @@
 - 新增响应式 / dark mode 世界概览样式。
 - 本阶段未修改 `entry_worlds`、`entries`、`entry_relations` 或 Phase 3 recommendation gate。
 - Pages 浏览器 smoke 待部署后完成。
+
+## 2026-09-20 — Phase 4B / Entry Detail 2.0
+- Entry Detail 从单一详情卡升级为统一“知识节点”页面。
+- knowledge-store.js 新增 entryContext()，集中读取 Entry 关系与 published 相关节点。
+- 页面新增知识节点身份、历史/空间上下文、知识关系、相关推荐、来源五个探索层。
+- 关系卡片保留 entry-specific note，并直接进入目标 Entry Detail。
+- timeline_context 存在时，历史与空间模块动态出现；不存在时不制造事实。
+- Phase 3B A+ / A recommendation gate 保持不变。
+- 新增响应式 Entry Detail 2.0 样式；JavaScript syntax regression passed。
+- Pages browser smoke 待部署后完成。
