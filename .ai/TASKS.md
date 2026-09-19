@@ -201,3 +201,13 @@
 - [x] 黄云鹏 → 青花瓷：A+
 - [x] 未发现足够 entry-specific 证据时不强行建立人物→具体器物关系
 - [ ] 下一轮继续建立缺失的具体器物节点（优先郎窑红梅瓶、黄云鹏代表仿古器物），再形成 A+ 人物→器物边
+
+
+## Phase 3B Closeout
+- [x] Phase 3B-3 Round 4 evidence-grade calibration persisted to production and recorded in GitHub.
+- [x] Final recommendation gate confirmed: only A+ / A relations enter `knowledge_recommendations`; B / C remain graph/exploration-only.
+- [x] Final production regression: 149 published entries / 149 primary worlds / 167 secondary worlds / 316 total mappings; 0 duplicate entry-world edges; 0 primary cardinality anomalies.
+- [x] Final recommendation pool: 22; evidence grades: A+ 4 / A 18 / B 1 / C 77.
+- [x] Phase 3B recommendation logic is frozen; no further mechanical relation expansion in Phase 3B.
+- [ ] Future high-value relation work moves to content admission / canonical entry work (for example specific object nodes), not Phase 3B recommendation tuning.
+- [ ] Recommendation cards/UI integration remains a separate product task; current Phase 3B changes are backend/data-layer only.
