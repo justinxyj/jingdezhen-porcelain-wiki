@@ -72,19 +72,15 @@ with sync_playwright() as p:
         explore=page.locator("[data-world-browser] .jdm-world-explore-link")
         if explore.count()<2:
             raise RuntimeError(f"{name} has no unified exploration exits")
+        world_hrefs=[href for href in browser_cards.evaluate_all("(cards)=>cards.slice(0,12).map(card=>card.getAttribute('href')).filter(Boolean)")]
         found_continuation=False
-        for index in range(min(browser_cards.count(),12)):
-            href=browser_cards.nth(index).get_attribute("href")
-            if not href:
-                continue
+        for href in world_hrefs:
             entry_target=urljoin(page.url,href)
             page.goto(entry_target,wait_until="domcontentloaded",timeout=30000)
             page.locator("#wiki-entry-root .wiki-entry-card").first.wait_for(state="visible",timeout=20000)
             exits=page.locator(".wiki-recommendation-card, .wiki-entry-v2-relations a, .wiki-entry-explore-card")
-            for exit_index in range(exits.count()):
-                second_href=exits.nth(exit_index).get_attribute("href")
-                if not second_href:
-                    continue
+            exit_hrefs=exits.evaluate_all("(links)=>links.map(link=>link.getAttribute('href')).filter(Boolean)")
+            for second_href in exit_hrefs:
                 second_target=urljoin(page.url,second_href)
                 if "/entry/" not in second_target:
                     continue
