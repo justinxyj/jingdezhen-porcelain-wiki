@@ -282,3 +282,13 @@
 - [x] 全球陶瓷网络线上 Smoke Test 完成。
 - [x] 器物 / 人物 / 窑址三类 Entry 的时间、空间、关系、推荐链路均确认正常。
 - [x] Phase 4C 第一轮正式封版。
+
+
+## Phase 4D — 统一搜索与知识发现系统（第一轮）
+- [x] 将搜索能力升级为可复用的统一 Discovery API：支持关键词、知识世界、条目类型、时代、时间轴 lane、空间坐标、时间元数据筛选。
+- [x] 新增 `JDM_KNOWLEDGE.searchDiscoveryPage()`，返回结果、匹配总量与 facets；保留 `searchDiscovery()` 兼容旧调用。
+- [x] 搜索索引继续只消费 `entries.status='published'` 的 canonical Entry，不创建第二套内容索引。
+- [x] 搜索页升级为“搜索 + 筛选 + 继续探索”入口：世界、类型、时代、空间/时间信号、URL 状态同步、快捷键、即时建议。
+- [x] 每个结果继续统一落到 Entry Detail，并提供关系网络 / 全球网络 / 相关推荐路径。
+- [x] 空关键词支持按筛选条件浏览公开知识条目，适合作为 Discovery 而不只是全文检索。
+- [ ] Pages 部署后完成搜索页浏览器 smoke：中文关键词、人物/器物/窑址筛选、时代/空间筛选、移动端、深色模式、URL 回放。
