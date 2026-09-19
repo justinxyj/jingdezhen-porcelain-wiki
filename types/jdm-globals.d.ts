@@ -12,13 +12,13 @@ declare global {
       createClient(url: string, key: string, options?: unknown): any;
     };
     JDM_AUTH?: {
-      getClient(): unknown;
+      getClient(): any;
       session(): Promise<unknown>;
       user(): Promise<unknown>;
       refresh(): Promise<unknown>;
       request<T>(factory: (db: unknown, signal: AbortSignal) => Promise<{ data: T; error?: unknown }>, options?: { retryAuth?: boolean; timeoutMs?: number }): Promise<T>;
       signOut(): Promise<void>;
-      state(): unknown;
+      state(): { status: string; error: unknown; updatedAt: number | null };
     };
     JDM_KNOWLEDGE?: {
       all(): Promise<Database['public']['Tables']['entries']['Row'][]>;
