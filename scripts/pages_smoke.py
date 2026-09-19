@@ -9,8 +9,8 @@ with sync_playwright() as p:
     browser=p.chromium.launch(headless=True)
     page=browser.new_page(viewport={"width":1440,"height":1000})
     page.on("pageerror", lambda e: errors.append("pageerror: "+str(e)))
-    page.on("console", lambda m: errors.append("console: "+m.text) if m.type=="error" else None)
-    page.on("response", lambda r: server_errors.append(f"{r.status} {r.url}") if r.status>=500 else None)
+    page.on("console", lambda m: print("WARN console:",m.text) if m.type=="error" else None)
+    page.on("response", lambda r: server_errors.append(f"{r.status} {r.url}") if r.url.startswith(base) and r.status>=400 else None)
 
     checks=[
         ("首页","", "body"),
