@@ -70,8 +70,17 @@ create table if not exists public.media (
   creator text,
   captured_at date,
   location text,
-  status text not null default 'pending',
-  created_at timestamptz not null default now()
+  status text not null default 'pending' check (status in ('pending','approved','rejected')),
+  created_at timestamptz not null default now(),
+  usage_type text,
+  source_tier integer,
+  is_primary boolean not null default false,
+  verification_note text,
+  verified_at timestamptz,
+  canonical_key text,
+  source_url text,
+  source_type text,
+  review_state text not null default 'pending' check (review_state in ('pending','verified','rejected'))
 );
 
 create table if not exists public.favorites (
@@ -84,6 +93,8 @@ create table if not exists public.favorites (
 create index if not exists entries_category_status_idx on public.entries(category,status);
 create index if not exists entry_relations_related_idx on public.entry_relations(related_entry_id);
 create index if not exists media_entry_status_idx on public.media(entry_id,status);
+create index if not exists media_review_state_idx on public.media(review_state,status);
+create index if not exists media_canonical_key_idx on public.media(canonical_key);
 
 alter table public.profiles enable row level security;
 alter table public.entries enable row level security;
@@ -151,7 +162,7 @@ create policy "revisions_staff_insert" on public.entry_revisions
 
 create policy "media_public_read" on public.media
   for select to anon, authenticated
-  using (status = 'approved');
+  using (status = 'approved' and review_state = 'verified');
 
 create policy "media_owner_read" on public.media
   for select to authenticated
@@ -161,13 +172,32 @@ create policy "media_staff_read" on public.media
   for select to authenticated
   using (public.is_staff());
 
-create policy "media_insert" on public.media
+create policy "media_user_insert" on public.media
   for insert to authenticated
-  with check (auth.uid() = uploader_id);
+  with check (
+    auth.uid() = uploader_id
+    and status = 'pending'
+    and review_state = 'pending'
+    and verified_at is null
+    and is_primary = false
+  );
+
+create policy "media_staff_insert" on public.media
+  for insert to authenticated
+  with check (public.is_staff());
 
 create policy "media_staff_update" on public.media
   for update to authenticated
   using (public.is_staff()) with check (public.is_staff());
+
+create or replace view public.media_public
+with (security_invoker = false, security_barrier = true)
+as
+select
+  id, entry_id, path, title, source, license, creator, captured_at, location,
+  created_at, usage_type, source_tier, is_primary, canonical_key, source_url, source_type
+from public.media
+where status = 'approved' and review_state = 'verified';
 
 create policy "users_manage_own_favorites" on public.favorites for all
   using (auth.uid()=user_id) with check (auth.uid()=user_id);
