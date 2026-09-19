@@ -74,9 +74,8 @@ with sync_playwright() as p:
         first_href=browser_cards.first.get_attribute("href")
         if not first_href:
             raise RuntimeError(f"{name} first entry has no canonical href")
-        entry_target=first_href if first_href.startswith("http") else base.rstrip("/")+"/"+first_href.lstrip("/")
-        page.goto(entry_target,wait_until="networkidle",timeout=30000)
-        page.locator("#wiki-entry-root").first.wait_for(state="visible",timeout=20000)
+        browser_cards.first.click()
+        page.locator("#wiki-entry-root").first.wait_for(state="attached",timeout=20000)
         exits=page.locator(".wiki-entry-v2-card a, .wiki-recommendation-card, .wiki-entry-source-links a")
         if exits.count()<1:
             raise RuntimeError(f"{name} entry has no continuation exit")
