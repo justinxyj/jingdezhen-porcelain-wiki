@@ -1,18 +1,10 @@
 /* Public museum image layer. */
 (function(){
-  // Detect legacy Met placeholder without embedding the contiguous banned path literal.
-  const legacyMetPath=['42490','177595','main-image'].join('/');
-  const badSrc=s=>{const v=String(s||'');return v.includes(legacyMetPath)};
+  // Images are governed by their source/review policy; do not hard-code-block a legitimate museum URL.
   function sanitizeImage(img){
     if(!img)return;
     const src=img.getAttribute('src')||'';
-    if(badSrc(src)){
-      img.removeAttribute('src');
-      img.setAttribute('data-image-invalid','1');
-      img.closest('.official-gallery-card,.compare-node,.compare-specimen,.wiki-entry-cover')?.classList.add('image-unavailable');
-      return;
-    }
-    img.setAttribute('loading','lazy');img.setAttribute('decoding','async');
+        img.setAttribute('loading','lazy');img.setAttribute('decoding','async');
     img.addEventListener('error',()=>{
       img.removeAttribute('src');img.setAttribute('data-image-invalid','1');
       img.closest('.official-gallery-card,.compare-node,.compare-specimen,.wiki-entry-cover')?.classList.add('image-unavailable');
