@@ -21,16 +21,15 @@
   }
   async function query(builderFactory,{timeoutMs=10000,retryAuth=true}={}){
     const db=client();if(!db)throw Object.assign(new Error('知识库配置不可用'),{code:'JDM_CONFIG_MISSING',kind:'config'});
+    if(window.JDM_AUTH?.request){
+      try{return await window.JDM_AUTH.request(builderFactory,{timeoutMs,retryAuth})}
+      catch(error){throw normalizeError(error)}
+    }
     const ctl=makeSignal(timeoutMs);
     try{
-      let result=await builderFactory(db,ctl.signal);
+      const result=await builderFactory(db,ctl.signal);
       if(!result?.error)return result.data||[];
-      let err=normalizeError(result.error,result.status);
-      if(retryAuth&&err.status===401&&window.JDM_AUTH){
-        try{await window.JDM_AUTH.refresh();ctl.clear();return query(builderFactory,{timeoutMs,retryAuth:false})}
-        catch(refreshError){await window.JDM_AUTH.signOut();throw normalizeError(refreshError)}
-      }
-      throw err;
+      throw normalizeError(result.error,result.status);
     }catch(error){throw normalizeError(error)}
     finally{ctl.clear()}
   }
@@ -58,9 +57,14 @@
       query((d,s)=>d.from('media').select('id,entry_id,path,title,source,license,creator,captured_at,location,created_at,usage_type,source_tier,is_primary,canonical_key,source_url,source_type').eq('entry_id',e.id).order('is_primary',{ascending:false}).order('source_tier',{ascending:true}).order('created_at',{ascending:true}).abortSignal(s)),
       query((d,s)=>d.from('timeline_context').select('entry_id,historical_role,relationship_to_jingdezhen,official_summary,official_image_url,official_image_credit,official_source_title,official_source_url,official_institution,source_tier,reviewed_at').eq('entry_id',e.id).limit(1).abortSignal(s))
     ]);
-    const media=mediaResult.status==='fulfilled'?window.JDM_CONTRACT.mediaList(mediaResult.value):[];
-    const ctx=ctxResult.status==='fulfilled'?ctxResult.value:[];
-    return {...e,media:canonicalMedia(media),timelineContext:ctx[0]||null};
+    if(mediaResult.status!=='fulfilled'||ctxResult.status!=='fulfilled'){
+      const failed=[];if(mediaResult.status!=='fulfilled')failed.push('media');if(ctxResult.status!=='fulfilled')failed.push('timelineContext');
+      const error=Object.assign(new Error('条目关联数据部分加载失败'),{code:'JDM_PARTIAL_DATA',kind:'partial',failed});
+      throw error;
+    }
+    const media=window.JDM_CONTRACT.mediaList(mediaResult.value);
+    const ctx=ctxResult.value;
+    return {...e,media:canonicalMedia(media),timelineContext:ctx[0]||null,dataStatus:{status:'complete',failed:[]}};
   }
   async function list({category=null,limit=250,offset=0}={}){
     const rows=window.JDM_CONTRACT?.entries(await query((db,s)=>{let q=db.from('entries').select('id,slug,category,zh,en,ja,sources,status,version,updated_at').eq('status','published').order('updated_at',{ascending:false}).order('id',{ascending:true}).range(offset,offset+limit-1).abortSignal(s);if(category)q=q.eq('category',category);return q}));
@@ -70,8 +74,12 @@
       query((db,s)=>db.from('media').select('id,entry_id,path,title,source,license,creator,captured_at,location,created_at,usage_type,source_tier,is_primary,canonical_key,source_url,source_type').in('entry_id',ids).order('is_primary',{ascending:false}).order('source_tier',{ascending:true}).order('created_at',{ascending:true}).order('id',{ascending:true}).abortSignal(s)),
       query((db,s)=>db.from('timeline_context').select('entry_id,historical_role,relationship_to_jingdezhen,official_summary,official_image_url,official_image_credit,official_source_title,official_source_url,official_institution,source_tier,reviewed_at').in('entry_id',ids).abortSignal(s))
     ]);
-    const media=mediaResult.status==='fulfilled'?window.JDM_CONTRACT.mediaList(mediaResult.value):[];
-    const contexts=contextResult.status==='fulfilled'?contextResult.value:[];
+    if(mediaResult.status!=='fulfilled'||contextResult.status!=='fulfilled'){
+      const failed=[];if(mediaResult.status!=='fulfilled')failed.push('media');if(contextResult.status!=='fulfilled')failed.push('timelineContext');
+      throw Object.assign(new Error('列表关联数据加载失败'),{code:'JDM_PARTIAL_DATA',kind:'partial',failed});
+    }
+    const media=window.JDM_CONTRACT.mediaList(mediaResult.value);
+    const contexts=contextResult.value;
     const mm=new Map();media.forEach(m=>{if(!mm.has(m.entry_id))mm.set(m.entry_id,[]);mm.get(m.entry_id).push(m)});
     const cm=new Map(contexts.map(x=>[x.entry_id,x]));
     const result=rows.map(e=>({...e,media:canonicalMedia(mm.get(e.id)||[]),timelineContext:cm.get(e.id)||null}));
@@ -248,7 +256,15 @@
       mapped:entries.filter(e=>e.zh?.meta?.map?.lat!=null&&e.zh?.meta?.map?.lng!=null).length,
       timed:entries.filter(e=>Array.isArray(e.zh?.meta?.timeline)&&e.zh.meta.timeline.length).length
     };
-    const results=await Promise.all(entries.slice(0,Math.max(1,Math.min(24,Number(limit)||12))).map(async e=>({...e,worlds:worldByEntry.get(e.id)||[],recommendations:await recommendations(e.id,{limit:recommendationLimit}),discovery:{score:0,hasMap:Boolean(e.zh?.meta?.map?.lat!=null&&e.zh?.meta?.map?.lng!=null),hasTimeline:Boolean(Array.isArray(e.zh?.meta?.timeline)&&e.zh.meta.timeline.length),eras:[...new Set(((e.zh?.meta?.timeline||[]).map(x=>eraGroupFor(e,x)).filter(Boolean).length?((e.zh?.meta?.timeline||[]).map(x=>eraGroupFor(e,x)).filter(Boolean)):[eraGroupFor(e)]).filter(Boolean))],lanes:[...new Set((e.zh?.meta?.timeline||[]).map(x=>x?.lane).filter(Boolean))]}})));
+    const visibleEntries=entries.slice(0,Math.max(1,Math.min(24,Number(limit)||12)));
+    const sourceNodeIds=visibleEntries.map(e=>'entry:'+e.id);
+    const recommendationRows=sourceNodeIds.length?await query((db,s)=>db.from('knowledge_recommendations').select('source_node_id,target_node_id,target_label,target_category,edge_type,reason,weight').in('source_node_id',sourceNodeIds).order('weight',{ascending:false}).order('target_label',{ascending:true}).limit(Math.max(1,visibleEntries.length*Math.min(5,Math.max(1,Number(recommendationLimit)||3)))).abortSignal(s)):[];
+    const targetIds=[...new Set(recommendationRows.map(r=>String(r.target_node_id||'').replace(/^entry:/,'')).filter(Boolean))];
+    const targetEntries=targetIds.length?window.JDM_CONTRACT?.entries(await query((db,s)=>db.from('entries').select('id,slug,category,zh,en,ja,sources,status,version,updated_at').eq('status','published').in('id',targetIds).abortSignal(s))):[];
+    const targetById=new Map((targetEntries||[]).map(e=>[e.id,e]));
+    const recBySource=new Map();
+    recommendationRows.forEach(r=>{const target=targetById.get(String(r.target_node_id||'').replace(/^entry:/,''));if(!target)return;if(!recBySource.has(r.source_node_id))recBySource.set(r.source_node_id,[]);if(recBySource.get(r.source_node_id).length<Math.max(1,Math.min(5,Number(recommendationLimit)||3)))recBySource.get(r.source_node_id).push({...r,entry:target})});
+    const results=visibleEntries.map(e=>({...e,worlds:worldByEntry.get(e.id)||[],recommendations:recBySource.get('entry:'+e.id)||[],discovery:{score:0,hasMap:Boolean(e.zh?.meta?.map?.lat!=null&&e.zh.meta.map.lng!=null),hasTimeline:Boolean(Array.isArray(e.zh?.meta?.timeline)&&e.zh.meta.timeline.length),eras:[...new Set(((e.zh?.meta?.timeline||[]).map(x=>eraGroupFor(e,x)).filter(Boolean).length?((e.zh?.meta?.timeline||[]).map(x=>eraGroupFor(e,x)).filter(Boolean)):[eraGroupFor(e)]).filter(Boolean))],lanes:[...new Set((e.zh?.meta?.timeline||[]).map(x=>x?.lane).filter(Boolean))]}}));
     return {results,total:entries.length,facets};
   }
   async function searchDiscovery(term,options={}) {
@@ -435,9 +451,12 @@
   }
 
   async function entryNetworkContext(entryId,{timelineLimit=12,spaceLimit=24}={}) {
-    const allEntries=await all();
-    const id=String(entryId||'');
-    const entry=allEntries.find(e=>e.id===id||e.slug===id);
+    const rawId=String(entryId||'');
+    const id=/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(rawId)?rawId:null;
+    let entry=id?null:await get(rawId);
+    if(!id&&entry)return entryNetworkContext(entry.id,{timelineLimit,spaceLimit});
+    if(!id)return null;
+    entry=await get(id);
     if(!entry)return null;
     const [ctx,worldRows,worldDefs,recs,craftEdges]=await Promise.all([
       entryContext(entry.id),
@@ -451,23 +470,14 @@
     const craftIds=[...new Set(craftEdges.map(x=>x.target_node_id).filter(Boolean))];
     const craftNodes=craftIds.length?await query((db,s)=>db.from('knowledge_graph_nodes').select('node_id,label,category,summary,metadata').in('node_id',craftIds).abortSignal(s)):[];
     const relationEntries=ctx.relations.map(x=>x.entry).filter(Boolean);
-    const relationIds=new Set(relationEntries.map(x=>x.id));
     const timeline=Array.isArray(entry.zh?.meta?.timeline)?entry.zh.meta.timeline:[];
-    const eras=new Set(timeline.map(x=>x?.era).filter(Boolean));
+    const eras=[...new Set(timeline.map(x=>x?.era).filter(Boolean))];
     const laneSet=new Set(timeline.map(x=>x?.lane).filter(Boolean));
-    const timelinePeers=allEntries.filter(e=>{
-      if(e.id===entry.id)return false;
-      const t=Array.isArray(e.zh?.meta?.timeline)?e.zh.meta.timeline:[];
-      return t.some(x=>eras.has(x?.era));
-    }).map(e=>({...e,timelineMatches:(e.zh?.meta?.timeline||[]).filter(x=>eras.has(x?.era))})).slice(0,timelineLimit);
-    const mapEntries=allEntries.filter(e=>e.zh?.meta?.map?.lat!=null&&e.zh?.meta?.map?.lng!=null);
-    const relatedMapped=relationEntries.filter(e=>e.zh?.meta?.map?.lat!=null&&e.zh?.meta?.map?.lng!=null);
-    const sameEraMapped=mapEntries.filter(e=>{
-      if(e.id===entry.id)return true;
-      const t=Array.isArray(e.zh?.meta?.timeline)?e.zh.meta.timeline:[];
-      return t.some(x=>eras.has(x?.era));
-    });
-    const spaceEntries=[...new Map([...relatedMapped,...sameEraMapped].map(e=>[e.id,e])).values()].slice(0,spaceLimit);
+    const [timelinePeers,spacePeers]=await Promise.all([
+      eras.length?query((db,s)=>db.rpc('entry_timeline_peers',{p_entry_id:entry.id,p_eras:eras,p_limit:Math.min(100,Math.max(1,timelineLimit))}).abortSignal(s)):Promise.resolve([]),
+      query((db,s)=>db.rpc('entry_space_peers',{p_entry_id:entry.id,p_eras:eras,p_limit:Math.min(100,Math.max(1,spaceLimit))}).abortSignal(s))
+    ]);
+    const spaceEntries=spacePeers||[];
     return {
       entry,
       worlds,
