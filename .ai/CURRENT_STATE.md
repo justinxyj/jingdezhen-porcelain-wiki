@@ -308,3 +308,13 @@
 - 线上 Smoke Test 已完成，器物 / 人物 / 窑址三类 Entry 的时间、空间、关系、推荐链路正常。
 - 当前产品链路已形成：Entry → 工艺 → 时间 → 空间 → 人物/文献/其他关系 → A+/A 推荐 → 全球网络继续探索。
 - 下一阶段重点转向统一搜索与发现体验，以及全球网络更深层的跨世界 / 跨时代探索。
+
+
+## Phase 4D — 统一搜索与知识发现系统（2026-09-20）
+- Discovery 层已从单纯关键词搜索升级为统一知识发现入口。
+- 当前索引范围：149 published canonical entries；空查询可直接按筛选条件浏览。
+- API：`searchEntries()` + `searchDiscoveryPage()` + 兼容层 `searchDiscovery()`。
+- 支持维度：关键词、7 个 knowledge world、5 类 Entry、时代、时间轴 lane、空间坐标、时间元数据。
+- 结果继续连接 Entry Detail、关系网络、全球陶瓷网络、相关推荐；未改变 A+ / A 推荐门槛。
+- URL 可复现发现状态；当前生产数据未发生变更。
+- Phase 4D 第一轮代码已完成；待 Pages browser smoke 后再封第一轮。
