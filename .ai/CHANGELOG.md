@@ -373,3 +373,18 @@
 - 工序关联继续只消费既有 entry_craft_processes 与 entry_relations，不为了产品展示新增推断关系。
 - 工序详情增加知识条目与全球陶瓷网络继续探索出口。
 - Phase 3B recommendation gate 与 Phase 2B Semantic Freeze 未改变。
+
+
+## 2026-09-20 — Phase 4E-5 First-Round Closeout
+- 72 道工序第一轮产品升级正式收口。
+- 第一轮已完成工序目录、上下游、技术原理、材料、工具、产出、时代、知识条目与全球网络出口。
+- 用户完成第一轮线上检查；无生产知识事实新增。
+- CI 已通过 Museum QA、Supabase public ACL smoke、TypeScript contract / JS typecheck、MkDocs build。
+
+## 2026-09-20 — Phase 4E-5 Deepening / Material → Object → Era → Kiln → Person
+- craftProcessContext() 现在返回材料线索、器物、人物、窑址、文献、时代与空间聚合。
+- 工序详情增加明确的知识路径：材料 → 器物 → 时代 → 窑址 → 人物。
+- 材料不被虚构为新的事实实体；展示来自 canonical craft_processes.materials_zh 的现有字段。
+- 器物、人物、窑址、文献只通过既有 entry_craft_processes / entry_relations 聚合。
+- 时代使用统一 eraGroup；空间使用现有 Entry map metadata。
+- 未修改 Phase 2B World Freeze、Phase 3B A+ / A recommendation gate 或任何 production relationship。
