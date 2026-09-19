@@ -63,3 +63,14 @@
 - Mapped all 149 published entries; 406 primary/secondary mappings currently exist.
 - Connected all seven world landing pages to live world-aware entry browsing.
 - Refreshed generated Supabase TypeScript contracts.
+
+
+## 2026-09-19 — Sprint B Phase 2B / 深层语义审校
+- 以“secondary 是否值得用户从该知识世界进入”为准入标准，完成第一轮深层语义清洗。
+- 生产 secondary 从 246 条收敛为 226 条；总 mapping 从 395 收敛为 375 条。
+- 删除 20 条低价值关系：现代人物→历史 8、人物→器物 11、现代人物→研究 1。
+- 保留具有明确解释路径的历史人物、工艺人物、代表性器物、研究文献、历史节点和全球窑址/陶瓷空间。
+- 精修 12 条过于通用的 rationale，改为具体用户入口价值。
+- 生产校验：149 published / 149 primary / 226 secondary；无重复 entry-world 边；无 primary cardinality 异常；单条 entry 最多 3 个 secondary。
+- 新增迁移：supabase/migrations/20260919193000_sprint_b_phase_2b_semantic_cleanup.sql
+- 新增迁移：supabase/migrations/20260919194000_sprint_b_phase_2b_rationale_precision.sql
