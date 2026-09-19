@@ -11,9 +11,10 @@
 
 <div class="network-explorer" id="jdm-network-explorer">
   <div class="network-toolbar" role="search">
+    <a class="network-unified-search" href="/jingdezhen-porcelain-wiki/search/">⌕ 统一搜索 Entry</a>
     <label class="network-search">
-      <span>搜索知识节点</span>
-      <input id="network-search-input" type="search" placeholder="例如：唐英、青花瓷、御窑厂遗址" autocomplete="off">
+      <span>搜索 Entry 知识节点</span>
+      <input id="network-search-input" type="search" placeholder="例如：唐英、青花、御窑厂、郎廷极" autocomplete="off">
     </label>
     <label class="network-filter">
       <span>节点类型</span>
