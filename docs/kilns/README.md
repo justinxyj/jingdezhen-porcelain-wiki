@@ -22,3 +22,6 @@
 ## 遗址与城市
 
 官方陶瓷文化生态保护规划统计了景德镇古瓷窑址、古窑房、传统作坊、码头及瓷业民俗等多种遗存，强调官窑、民窑、生产空间和社会组织共同构成景德镇陶瓷文化景观。[R22]
+
+
+<section class="jdm-world-browser" data-world-browser="space" aria-label="知识世界条目"></section>
