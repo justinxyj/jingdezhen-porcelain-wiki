@@ -29,7 +29,7 @@ SET zh = jsonb_set(
   '{meta,era_group}',
   to_jsonb(
     CASE
-      WHEN (regexp_match(COALESCE(zh->>'title',''),'((?:19|20)\\d{2})'))[1]::int BETWEEN 1911 AND 1948 THEN 'near-modern'
+      WHEN (regexp_match(COALESCE(zh->>'title',''),'((?:19|20)\\d{2})'))[1]::int BETWEEN 1840 AND 1948 THEN 'near-modern'
       ELSE 'modern'
     END
   ),
@@ -68,3 +68,12 @@ SET zh = jsonb_set(
 WHERE status='published'
   AND category='人物'
   AND slug IN ('tang-ying','nian-xiyao','zang-yingxuan','lang-tingji','tong-bin','wang-bu','wang-qi','tian-hexian','zhang-songmao','wang-xiliang','qin-xilin','huang-yunpeng','liu-yuanchang','zhan-shaolin');
+
+-- Explicit late-Qing / modern boundary for existing dated history nodes.
+UPDATE public.entries
+SET zh = jsonb_set(COALESCE(zh,'{}'::jsonb),'{meta,era_group}',to_jsonb('near-modern'::text),true)
+WHERE status='published' AND slug='modern-industry';
+
+UPDATE public.entries
+SET zh = jsonb_set(COALESCE(zh,'{}'::jsonb),'{meta,era_group}',to_jsonb('modern'::text),true)
+WHERE status='published' AND slug IN ('industry-transition','active-archaeology','unesco-2026');
