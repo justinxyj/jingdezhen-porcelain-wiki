@@ -211,3 +211,11 @@
 - [x] Phase 3B recommendation logic is frozen; no further mechanical relation expansion in Phase 3B.
 - [ ] Future high-value relation work moves to content admission / canonical entry work (for example specific object nodes), not Phase 3B recommendation tuning.
 - [ ] Recommendation cards/UI integration remains a separate product task; current Phase 3B changes are backend/data-layer only.
+
+
+## Phase 3C — Entry Detail Recommendations
+- [x] Entry detail renderer now requests the frozen `knowledge_recommendations` pool through `JDM_KNOWLEDGE.recommendations()`.
+- [x] Recommendation targets are hydrated to published canonical entries before rendering, so cards use stable entry URLs rather than internal graph IDs.
+- [x] Added “你可能还想了解” recommendation section with up to 8 high-confidence recommendations per entry.
+- [x] Added responsive recommendation-card styling and graceful failure messaging; existing entry/relation content remains usable if recommendations fail.
+- [ ] Pages deployment / browser smoke: verify recommendation cards, target navigation, mobile layout, and dark mode after deployment.
