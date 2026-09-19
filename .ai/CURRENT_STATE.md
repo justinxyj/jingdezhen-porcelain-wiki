@@ -120,11 +120,11 @@
 
 ## Sprint B Phase 2B — 深层语义审校（2026-09-19）
 - 审校标准改为：secondary 必须是“从这个知识世界进入该条目”的真实用户路径，而不是数据库 category 的重复映射。
-- 生产 mapping 已由 395 收敛为 **375（149 primary + 226 secondary）**，149 个已发布条目全部保留且每条恰好一个 primary。
-- 删除 20 条低价值 secondary：
+- 生产 mapping 已由 395 收敛为 **372（149 primary + 223 secondary）**，149 个已发布条目全部保留且每条恰好一个 primary。
+- 删除 23 条低价值 secondary：
   - 现代人物 → 历史：8 条；
   - 人物 → 器物：11 条（保留唐英的有效人物—器物入口）；
-  - 现代人物 → 研究：田汉 1 条。
+  - 现代人物 → 研究：田汉 1 条；现代荣誉/纪念性人物 → 现代景德镇：3 条。
 - 保留具有明确解释价值的历史人物、研究文献、窑址/全球陶瓷空间等 secondary；secondary 是编辑语义入口，不要求 entry_relations 已经完整。
 - 将 12 条原本过于通用的 rationale 改成具体语义理由。
 - 当前没有任何 entry/world 重复边，也没有 primary cardinality 异常；单条 entry 最多 3 个 secondary。
