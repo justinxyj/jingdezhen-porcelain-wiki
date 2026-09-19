@@ -210,3 +210,11 @@
 - 生产 note 已更新并完成回读验证。
 - 新增 migration：`supabase/migrations/20260919210000_phase_3b3_relation_evidence_expansion.sql`。
 - 下一步：继续筛选有明确来源/条目事实支撑的人物↔器物、人物↔窑址、历史↔器物、历史↔窑址、文献↔人物等关系；每条先补证据，再重新计算 recommendation pool。
+
+
+## Phase 3B-3 第二轮状态
+- 已完成 9 条弱关系的证据可得性筛选：6 条 A 类补强、3 条 C 类删除。
+- 删除的 3 条为时间不可能的历史→御窑厂遗址边；不影响 Phase 2B 的 entry_worlds 316 条冻结映射。
+- 当前 production recommendation pool：68 条；shared World/shared craft_process 仍不进入相关推荐。
+- 当前推荐直接关系构成：person 6、kiln 3、related 3、source 3、object 3。
+- B 类继续留在图谱/探索层，不能仅凭“看起来合理”进入推荐。
