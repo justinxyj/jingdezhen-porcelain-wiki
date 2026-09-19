@@ -191,7 +191,7 @@ create policy "media_staff_update" on public.media
   using (public.is_staff()) with check (public.is_staff());
 
 create or replace view public.media_public
-with (security_invoker = false, security_barrier = true)
+with (security_invoker = true, security_barrier = true)
 as
 select
   id, entry_id, path, title, source, license, creator, captured_at, location,
@@ -211,3 +211,12 @@ create policy "users_create_own_profile" on public.profiles for insert
 -- The database also contains SECURITY DEFINER helpers handle_new_user(), is_staff()
 -- and review_edit(p_edit_id, p_action, p_note), with search_path pinned to public.
 -- Phase B: REVOKE EXECUTE ON is_staff() FROM anon/PUBLIC; GRANT TO authenticated, service_role.
+
+
+revoke all on table public.media_public from public, anon, authenticated;
+grant select on table public.media_public to anon, authenticated;
+revoke all on table public.media from anon;
+grant select (
+  id, entry_id, path, title, source, license, creator, captured_at, location,
+  created_at, usage_type, source_tier, is_primary, canonical_key, source_url, source_type
+) on table public.media to anon;
