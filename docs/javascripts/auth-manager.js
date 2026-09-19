@@ -92,6 +92,16 @@
     try{await getClient().auth.signOut()}catch(_){}
     authState={status:'signed_out',session:null,user:null,lastEvent:'SIGNED_OUT'};
   }
+  function describeError(error){
+    const e=normalizeError(error);if(!e)return {code:'UNKNOWN',kind:'unknown',message:'暂时无法完成请求，请稍后重试。',action:'retry'};
+    if(e.code==='AUTH_EXPIRED'||e.status===401)return {code:'AUTH_EXPIRED',kind:'auth',message:'登录状态已失效，请重新登录。',action:'login'};
+    if(e.status===403)return {code:'AUTH_FORBIDDEN',kind:'forbidden',message:'当前账号没有执行此操作的权限。',action:'contact'};
+    if(e.status===429||e.code==='RATE_LIMITED')return {code:'RATE_LIMITED',kind:'rate',message:'请求过于频繁，请稍后再试。',action:'retry'};
+    if(e.kind==='timeout')return {code:'TIMEOUT',kind:'timeout',message:'请求超时，请重试。',action:'retry'};
+    if(e.kind==='network')return {code:'NETWORK',kind:'network',message:'网络连接暂时不可用，请重试。',action:'retry'};
+    if(e.code==='JDM_CONFIG_MISSING')return {code:e.code,kind:'config',message:'网站数据服务配置异常，请联系管理员。',action:'contact'};
+    return {code:e.code||'JDM_REQUEST_ERROR',kind:e.kind||'server',message:'知识数据暂时无法加载，请稍后重试。',action:'retry'};
+  }
   function getState(){return {...authState}}
-  window.JDM_AUTH={getClient,session,user,refresh,request,signOut,state:getState,safeHref};
+  window.JDM_AUTH={getClient,session,user,refresh,request,signOut,state:getState,safeHref,describeError};
 })();
