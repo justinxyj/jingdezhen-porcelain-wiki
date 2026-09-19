@@ -94,13 +94,19 @@
     })().catch(err=>{allPromise=null;rememberError(err);throw err});
     return allPromise;
   }
-  async function get(slug){
-    const hit=cache.get(slug);if(hit)return hit;
+  async function get(slugOrId){
+    const key=String(slugOrId||'');
+    const idLike=/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(key);
+    const hit=idLike?[...cache.values()].find(e=>e.id===key):cache.get(key);
+    if(hit)return hit;
     try{
       state={status:'loading',error:null,updatedAt:state.updatedAt};
-      const entries=window.JDM_CONTRACT.entries(await query((db,s)=>db.from('entries').select('id,slug,category,zh,en,ja,sources,status,version,updated_at').eq('status','published').eq('slug',slug).limit(1).abortSignal(s)));
+      const entries=window.JDM_CONTRACT.entries(await query((db,s)=>{
+        const q=db.from('entries').select('id,slug,category,zh,en,ja,sources,status,version,updated_at').eq('status','published').limit(1).abortSignal(s);
+        return idLike?q.eq('id',key):q.eq('slug',key);
+      }));
       if(!entries[0]){state={status:'ready',error:null,updatedAt:Date.now()};return null}
-      const row=await hydrateEntry(client(),entries[0]);cache.set(slug,row);state={status:'ready',error:null,updatedAt:Date.now()};return row;
+      const row=await hydrateEntry(client(),entries[0]);cache.set(row.slug,row);state={status:'ready',error:null,updatedAt:Date.now()};return row;
     }catch(err){rememberError(err);throw err}
   }
   async function worlds(){
