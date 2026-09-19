@@ -53,7 +53,7 @@
   }
   function rememberError(err){state={status:'error',error:err,updatedAt:Date.now()};console.error('[JDM knowledge]',err)}
   async function hydrateEntry(db,e){
-    const [mediaResult,ctxResult]=await Promise.allSettled([
+    const [mediaResult,ctxResult]=await Promise.all([
       query((d,s)=>d.from('media').select('id,entry_id,path,title,source,license,creator,captured_at,location,created_at,usage_type,source_tier,is_primary,canonical_key,source_url,source_type').eq('entry_id',e.id).order('is_primary',{ascending:false}).order('source_tier',{ascending:true}).order('created_at',{ascending:true}).abortSignal(s)),
       query((d,s)=>d.from('timeline_context').select('entry_id,historical_role,relationship_to_jingdezhen,official_summary,official_image_url,official_image_credit,official_source_title,official_source_url,official_institution,source_tier,reviewed_at').eq('entry_id',e.id).limit(1).abortSignal(s))
     ]);
@@ -70,7 +70,7 @@
     const rows=window.JDM_CONTRACT?.entries(await query((db,s)=>{let q=db.from('entries').select('id,slug,category,zh,en,ja,sources,status,version,updated_at').eq('status','published').order('updated_at',{ascending:false}).order('id',{ascending:true}).range(offset,offset+limit-1).abortSignal(s);if(category)q=q.eq('category',category);return q}));
     if(!rows.length)return [];
     const ids=rows.map(e=>e.id);
-    const [mediaResult,contextResult]=await Promise.allSettled([
+    const [mediaResult,contextResult]=await Promise.all([
       query((db,s)=>db.from('media').select('id,entry_id,path,title,source,license,creator,captured_at,location,created_at,usage_type,source_tier,is_primary,canonical_key,source_url,source_type').in('entry_id',ids).order('is_primary',{ascending:false}).order('source_tier',{ascending:true}).order('created_at',{ascending:true}).order('id',{ascending:true}).abortSignal(s)),
       query((db,s)=>db.from('timeline_context').select('entry_id,historical_role,relationship_to_jingdezhen,official_summary,official_image_url,official_image_credit,official_source_title,official_source_url,official_institution,source_tier,reviewed_at').in('entry_id',ids).abortSignal(s))
     ]);
@@ -90,12 +90,12 @@
     state={status:'loading',error:null,updatedAt:state.updatedAt};
     allPromise=(async()=>{
       const entries=window.JDM_CONTRACT.entries(await paged(db=>db.from('entries').select('id,slug,category,zh,en,ja,sources,status,version,updated_at').eq('status','published').order('updated_at',{ascending:false})));
-      const [mediaResult,contextResult]=await Promise.allSettled([
+      const [mediaResult,contextResult]=await Promise.all([
         paged(db=>db.from('media').select('id,entry_id,path,title,source,license,creator,captured_at,location,created_at,usage_type,source_tier,is_primary,canonical_key,source_url,source_type').order('is_primary',{ascending:false}).order('source_tier',{ascending:true}).order('created_at',{ascending:true}).order('id',{ascending:true})),
         paged(db=>db.from('timeline_context').select('entry_id,historical_role,relationship_to_jingdezhen,official_summary,official_image_url,official_image_credit,official_source_title,official_source_url,official_institution,source_tier,reviewed_at').order('source_tier',{ascending:true}).order('entry_id',{ascending:true}))
       ]);
-      const media=mediaResult.status==='fulfilled'?window.JDM_CONTRACT.mediaList(mediaResult.value):[];
-      const contexts=contextResult.status==='fulfilled'?contextResult.value:[];
+      const media=window.JDM_CONTRACT.mediaList(mediaResult);
+      const contexts=contextResult;
       const mm=new Map();media.forEach(m=>{if(!mm.has(m.entry_id))mm.set(m.entry_id,[]);mm.get(m.entry_id).push(m)});
       const cm=new Map(contexts.map(c=>[c.entry_id,c]));
       const rows=entries.map(e=>({...e,media:canonicalMedia(mm.get(e.id)||[]),timelineContext:cm.get(e.id)||null}));
@@ -164,6 +164,7 @@
   }
   async function graph({nodeType=null,nodeId=null,limit=500,edgeLimit=2000,includeEdges=false}={}){
     if(nodeId){
+      if(!/^(entry|world|category|source|media|craft_process|timeline):[A-Za-z0-9_-]+$/.test(String(nodeId)))throw Object.assign(new Error('知识网络节点标识格式异常'),{code:'JDM_NODE_ID_CONTRACT'});
       const edges=await query((db,s)=>db.from('knowledge_graph_edges').select('source_node_id,target_node_id,edge_type,rationale,display_order,metadata').or('source_node_id.eq.'+nodeId+',target_node_id.eq.'+nodeId).order('edge_type',{ascending:true}).order('display_order',{ascending:true}).limit(limit).abortSignal(s));
       const ids=[...new Set([nodeId,...edges.flatMap(e=>[e.source_node_id,e.target_node_id])])];
       const nodes=ids.length?await query((db,s)=>db.from('knowledge_graph_nodes').select('node_type,node_id,label,category,summary,metadata').in('node_id',ids).limit(limit).abortSignal(s)):[];
@@ -277,16 +278,16 @@
     const people=(await byCategory('人物',limit)).filter(e=>e?.status==='published');
     if(!people.length)return [];
     const ids=people.map(e=>e.id);
-    const [worldResult,worldDefResult,relationResult,craftResult]=await Promise.allSettled([
+    const [worldResult,worldDefResult,relationResult,craftResult]=await Promise.all([
       query((db,s)=>db.from('entry_worlds').select('entry_id,world_slug,role,rationale').in('entry_id',ids).abortSignal(s)),
       query((db,s)=>db.from('knowledge_worlds').select('slug,title,short_title,display_order').order('display_order',{ascending:true}).abortSignal(s)),
       query((db,s)=>db.from('entry_relations').select('entry_id,related_entry_id,relation_type,note').or('entry_id.in.('+ids.join(',')+'),related_entry_id.in.('+ids.join(',')+')').order('relation_type',{ascending:true}).abortSignal(s)),
       query((db,s)=>db.from('knowledge_graph_edges').select('source_node_id,target_node_id,edge_type,rationale,metadata').in('source_node_id',ids.map(id=>'entry:'+id)).eq('edge_type','craft_process:historically_important_for').abortSignal(s))
     ]);
-    const worldRows=worldResult.status==='fulfilled'?worldResult.value:[];
-    const worldDefs=worldDefResult.status==='fulfilled'?worldDefResult.value:[];
-    const relationRows=relationResult.status==='fulfilled'?relationResult.value:[];
-    const craftEdges=craftResult.status==='fulfilled'?craftResult.value:[];
+    const worldRows=worldResult;
+    const worldDefs=worldDefResult;
+    const relationRows=relationResult;
+    const craftEdges=craftResult;
     const otherIds=[...new Set(relationRows.flatMap(r=>[r.entry_id,r.related_entry_id]).filter(id=>id&&!ids.includes(id)))];
     const otherRows=otherIds.length?await query((db,s)=>db.from('entries').select('id,slug,category,zh,en,ja,status').eq('status','published').in('id',otherIds).abortSignal(s)):[];
     const craftIds=[...new Set(craftEdges.map(r=>String(r.target_node_id||'')).filter(x=>x.startsWith('craft:')))];
@@ -321,7 +322,7 @@
     const objects=(await byCategory('器物',limit)).filter(e=>e?.status==='published');
     if(!objects.length)return [];
     const ids=objects.map(e=>e.id);
-    const [worldResult,worldDefResult,relationResult,craftResult]=await Promise.allSettled([
+    const [worldResult,worldDefResult,relationResult,craftResult]=await Promise.all([
       query((db,s)=>db.from('entry_worlds').select('entry_id,world_slug,role,rationale').in('entry_id',ids).abortSignal(s)),
       query((db,s)=>db.from('knowledge_worlds').select('slug,title,short_title,display_order').order('display_order',{ascending:true}).abortSignal(s)),
       query((db,s)=>db.from('entry_relations').select('entry_id,related_entry_id,relation_type,note').in('entry_id',ids).order('relation_type',{ascending:true}).abortSignal(s)),
@@ -329,7 +330,7 @@
     ]);
     const worldRows=worldResult.status==='fulfilled'?worldResult.value:[];
     const worldDefs=worldDefResult.status==='fulfilled'?worldDefResult.value:[];
-    const relations=relationResult.status==='fulfilled'?relationResult.value:[];
+    const relations=relationResult;
     const craftEdges=craftResult.status==='fulfilled'?craftResult.value:[];
     const relatedIds=[...new Set(relations.map(r=>r.related_entry_id).filter(Boolean))];
     const relatedRows=relatedIds.length?await query((db,s)=>db.from('entries').select('id,slug,category,zh,en,ja,status').eq('status','published').in('id',relatedIds).abortSignal(s)):[];
@@ -372,20 +373,20 @@
     const processResult=await query((db,s)=>db.from('craft_processes').select('id,sequence,slug,name_zh,category,category_name,description_zh,historical_period,tools_zh,materials_zh,output_zh,source_title,source_url,source_institution,source_tier,image_url,image_credit,image_source_url,image_status,image_license,image_creator').eq('id',id).limit(1).abortSignal(s));
     const process=processResult[0];
     if(!process)return null;
-    const [neighborResult,linkResult]=await Promise.allSettled([
+    const [neighborResult,linkResult]=await Promise.all([
       query((db,s)=>db.from('craft_process_relations').select('process_id,related_process_id,relation_type,note').or('process_id.eq.'+id+',related_process_id.eq.'+id).order('relation_type',{ascending:true}).abortSignal(s)),
       query((db,s)=>db.from('entry_craft_processes').select('entry_id,process_id,relation_type,note').eq('process_id',id).limit(entryLimit).abortSignal(s))
     ]);
-    const neighborRows=neighborResult.status==='fulfilled'?neighborResult.value:[];
-    const linkRows=linkResult.status==='fulfilled'?linkResult.value:[];
+    const neighborRows=neighborResult;
+    const linkRows=linkResult;
     const entryIds=[...new Set(linkRows.map(x=>x.entry_id).filter(Boolean))];
-    const [entryResult,worldResult,relationResult]=await Promise.allSettled([
+    const [entryResult,worldResult,relationResult]=await Promise.all([
       entryIds.length?query((db,s)=>db.from('entries').select('id,slug,category,zh,en,ja,status').eq('status','published').in('id',entryIds).abortSignal(s)):Promise.resolve([]),
       entryIds.length?query((db,s)=>db.from('entry_worlds').select('entry_id,world_slug,role,rationale').in('entry_id',entryIds).abortSignal(s)):Promise.resolve([]),
       entryIds.length?query((db,s)=>db.from('entry_relations').select('entry_id,related_entry_id,relation_type,note').in('entry_id',entryIds).limit(relationLimit).abortSignal(s)):Promise.resolve([])
     ]);
-    const entries=entryResult.status==='fulfilled'?entryResult.value:[];
-    const worlds=worldResult.status==='fulfilled'?worldResult.value:[];
+    const entries=entryResult;
+    const worlds=worldResult;
     const relations=relationResult.status==='fulfilled'?relationResult.value:[];
     const targetIds=[...new Set(relations.map(x=>x.related_entry_id).filter(Boolean))];
     const targets=targetIds.length?await query((db,s)=>db.from('entries').select('id,slug,category,zh,en,ja,status').eq('status','published').in('id',targetIds).abortSignal(s)):[]; 
