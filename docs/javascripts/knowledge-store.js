@@ -54,8 +54,12 @@
   }
   function rememberError(err){state={status:'error',error:err,updatedAt:Date.now()};console.error('[JDM knowledge]',err)}
   async function hydrateEntry(db,e){
-    const media=window.JDM_CONTRACT.mediaList(await query((d,s)=>d.from('media').select('id,entry_id,path,title,source,license,creator,captured_at,location,created_at,usage_type,source_tier,is_primary,canonical_key,source_url,source_type').eq('entry_id',e.id).order('is_primary',{ascending:false}).order('source_tier',{ascending:true}).order('created_at',{ascending:true}).abortSignal(s)));
-    const ctx=await query((d,s)=>d.from('timeline_context').select('entry_id,historical_role,relationship_to_jingdezhen,official_summary,official_image_url,official_image_credit,official_source_title,official_source_url,official_institution,source_tier,reviewed_at').eq('entry_id',e.id).limit(1).abortSignal(s));
+    const [mediaResult,ctxResult]=await Promise.allSettled([
+      query((d,s)=>d.from('media').select('id,entry_id,path,title,source,license,creator,captured_at,location,created_at,usage_type,source_tier,is_primary,canonical_key,source_url,source_type').eq('entry_id',e.id).order('is_primary',{ascending:false}).order('source_tier',{ascending:true}).order('created_at',{ascending:true}).abortSignal(s)),
+      query((d,s)=>d.from('timeline_context').select('entry_id,historical_role,relationship_to_jingdezhen,official_summary,official_image_url,official_image_credit,official_source_title,official_source_url,official_institution,source_tier,reviewed_at').eq('entry_id',e.id).limit(1).abortSignal(s))
+    ]);
+    const media=mediaResult.status==='fulfilled'?window.JDM_CONTRACT.mediaList(mediaResult.value):[];
+    const ctx=ctxResult.status==='fulfilled'?ctxResult.value:[];
     return {...e,media:canonicalMedia(media),timelineContext:ctx[0]||null};
   }
   async function list({category=null,limit=250,offset=0}={}){
@@ -74,8 +78,12 @@
     state={status:'loading',error:null,updatedAt:state.updatedAt};
     allPromise=(async()=>{
       const entries=window.JDM_CONTRACT.entries(await paged(db=>db.from('entries').select('id,slug,category,zh,en,ja,sources,status,version,updated_at').eq('status','published').order('updated_at',{ascending:false})));
-const media=window.JDM_CONTRACT.mediaList(await paged(db=>db.from('media').select('id,entry_id,path,title,source,license,creator,captured_at,location,created_at,usage_type,source_tier,is_primary,canonical_key,source_url,source_type').order('is_primary',{ascending:false}).order('source_tier',{ascending:true}).order('created_at',{ascending:true}).order('id',{ascending:true})));
-const contexts=await paged(db=>db.from('timeline_context').select('entry_id,historical_role,relationship_to_jingdezhen,official_summary,official_image_url,official_image_credit,official_source_title,official_source_url,official_institution,source_tier,reviewed_at').order('source_tier',{ascending:true}).order('entry_id',{ascending:true}));
+      const [mediaResult,contextResult]=await Promise.allSettled([
+        paged(db=>db.from('media').select('id,entry_id,path,title,source,license,creator,captured_at,location,created_at,usage_type,source_tier,is_primary,canonical_key,source_url,source_type').order('is_primary',{ascending:false}).order('source_tier',{ascending:true}).order('created_at',{ascending:true}).order('id',{ascending:true})),
+        paged(db=>db.from('timeline_context').select('entry_id,historical_role,relationship_to_jingdezhen,official_summary,official_image_url,official_image_credit,official_source_title,official_source_url,official_institution,source_tier,reviewed_at').order('source_tier',{ascending:true}).order('entry_id',{ascending:true}))
+      ]);
+      const media=mediaResult.status==='fulfilled'?window.JDM_CONTRACT.mediaList(mediaResult.value):[];
+      const contexts=contextResult.status==='fulfilled'?contextResult.value:[];
       const mm=new Map();media.forEach(m=>{if(!mm.has(m.entry_id))mm.set(m.entry_id,[]);mm.get(m.entry_id).push(m)});
       const cm=new Map(contexts.map(c=>[c.entry_id,c]));
       const rows=entries.map(e=>({...e,media:canonicalMedia(mm.get(e.id)||[]),timelineContext:cm.get(e.id)||null}));
@@ -258,8 +266,8 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
     const otherIds=[...new Set(relationRows.flatMap(r=>[r.entry_id,r.related_entry_id]).filter(id=>id&&!ids.includes(id)))];
     const otherRows=otherIds.length?await query((db,s)=>db.from('entries').select('id,slug,category,zh,en,ja,status').eq('status','published').in('id',otherIds).abortSignal(s)):[];
     const craftIds=[...new Set(craftEdges.map(r=>String(r.target_node_id||'')).filter(x=>x.startsWith('craft:')))];
-    const craftRows=craftIds.length?await query((db,s)=>db.from('knowledge_graph_nodes').select('id,label,node_type,metadata').in('id',craftIds).abortSignal(s)):[];
-    const worlds=new Map(worldDefs.map(w=>[w.slug,w])), byOther=new Map(otherRows.map(e=>[e.id,e])), crafts=new Map(craftRows.map(e=>[e.id,e]));
+    const craftRows=craftIds.length?await query((db,s)=>db.from('knowledge_graph_nodes').select('node_id,label,node_type,metadata').in('node_id',craftIds).abortSignal(s)):[];
+    const worlds=new Map(worldDefs.map(w=>[w.slug,w])), byOther=new Map(otherRows.map(e=>[e.id,e])), crafts=new Map(craftRows.map(e=>[e.node_id,e]));
     const worldByPerson=new Map(), relationsByPerson=new Map(), craftsByPerson=new Map();
     worldRows.forEach(w=>{if(!worldByPerson.has(w.entry_id))worldByPerson.set(w.entry_id,[]);const d=worlds.get(w.world_slug);if(d)worldByPerson.get(w.entry_id).push({...d,role:w.role,rationale:w.rationale})});
     relationRows.forEach(r=>{
@@ -298,10 +306,10 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
     const relatedIds=[...new Set(relations.map(r=>r.related_entry_id).filter(Boolean))];
     const relatedRows=relatedIds.length?await query((db,s)=>db.from('entries').select('id,slug,category,zh,en,ja,status').eq('status','published').in('id',relatedIds).abortSignal(s)):[];
     const craftIds=[...new Set(craftEdges.map(r=>String(r.target_node_id||'')).filter(x=>x.startsWith('craft:')))];
-    const craftRows=craftIds.length?await query((db,s)=>db.from('knowledge_graph_nodes').select('id,label,node_type,metadata').in('id',craftIds).abortSignal(s)):[];
+    const craftRows=craftIds.length?await query((db,s)=>db.from('knowledge_graph_nodes').select('node_id,label,node_type,metadata').in('node_id',craftIds).abortSignal(s)):[];
     const worlds=new Map(worldDefs.map(w=>[w.slug,w]));
     const related=new Map(relatedRows.map(e=>[e.id,e]));
-    const crafts=new Map(craftRows.map(e=>[e.id,e]));
+    const crafts=new Map(craftRows.map(e=>[e.node_id,e]));
     const worldByEntry=new Map(), relationByEntry=new Map(), craftByEntry=new Map();
     worldRows.forEach(w=>{if(!worldByEntry.has(w.entry_id))worldByEntry.set(w.entry_id,[]);const d=worlds.get(w.world_slug);if(d)worldByEntry.get(w.entry_id).push({...d,role:w.role,rationale:w.rationale})});
     relations.forEach(r=>{if(!relationByEntry.has(r.entry_id))relationByEntry.set(r.entry_id,[]);const e=related.get(r.related_entry_id);if(e)relationByEntry.get(r.entry_id).push({...r,entry:e})});
