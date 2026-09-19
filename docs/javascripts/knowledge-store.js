@@ -183,7 +183,28 @@ const contexts=await paged(db=>db.from('timeline_context').select('entry_id,hist
     scored.sort((a,b)=>b._searchScore-a._searchScore||String(a.zh?.title||'').localeCompare(String(b.zh?.title||''),'zh-Hans-CN'));
     return scored.slice(0,Math.max(1,Math.min(50,Number(limit)||20))).map(({_searchScore,...e})=>e);
   }
+  async function searchDiscovery(query,{limit=12,recommendations=3}={}) {
+    const entries=await searchEntries(query,{limit});
+    if(!entries.length)return [];
+    const ids=entries.map(e=>e.id);
+    const [links,worldRows]=await Promise.all([
+      queryEntriesWorlds(ids),
+      query((db,s)=>db.from('knowledge_worlds').select('slug,title,short_title,description,display_order').order('display_order',{ascending:true}).abortSignal(s))
+    ]);
+    const worldsBySlug=new Map(worldRows.map(w=>[w.slug,w]));
+    const worldByEntry=new Map();
+    links.forEach(x=>{
+      if(!worldByEntry.has(x.entry_id))worldByEntry.set(x.entry_id,[]);
+      const world=worldsBySlug.get(x.world_slug);
+      if(world)worldByEntry.get(x.entry_id).push({...world,role:x.role,rationale:x.rationale});
+    });
+    const enriched=await Promise.all(entries.map(async e=>({...e,worlds:worldByEntry.get(e.id)||[],recommendations:await recommendations(e.id,{limit:recommendations})})));
+    return enriched;
+  }
+  async function queryEntriesWorlds(ids){
+    return ids.length?await query((db,s)=>db.from('entry_worlds').select('entry_id,world_slug,role,rationale').in('entry_id',ids).order('role',{ascending:true}).order('display_order',{ascending:true}).abortSignal(s)):[];
+  }
   async function byCategory(category,limit=250){return list({category,limit})}
   function url(e){return e?'/jingdezhen-porcelain-wiki/entry/?type='+encodeURIComponent(e.category)+'&slug='+encodeURIComponent(e.slug):'/jingdezhen-porcelain-wiki/'}
-  window.JDM_KNOWLEDGE={all,get,list,worlds,byWorld,worldOverview,entryContext,graph,recommendations,searchEntries,byCategory,url,state:()=>({...state}),reset:()=>{allPromise=null;searchIndexPromise=null;cache.clear();state={status:'idle',error:null,updatedAt:null}}};
+  window.JDM_KNOWLEDGE={all,get,list,worlds,byWorld,worldOverview,entryContext,graph,recommendations,searchEntries,searchDiscovery,byCategory,url,state:()=>({...state}),reset:()=>{allPromise=null;searchIndexPromise=null;cache.clear();state={status:'idle',error:null,updatedAt:null}}};
 })();
