@@ -12,3 +12,5 @@
 [data-md-color-scheme="slate"] .global-kiln-tags span{color:#b8cee0}
 
 .global-kiln-count{font-size:.68rem;opacity:.58;align-self:center;margin-left:.2rem}.global-kiln-map-toolbar>div{align-items:center}
+
+.kiln-discovery-note{margin:0 0 1rem;padding:1rem 1.1rem;border:1px solid var(--md-default-fg-color--lightest);border-radius:16px;background:var(--md-code-bg-color);line-height:1.7;font-size:.8rem}.kiln-discovery-note strong{color:var(--md-primary-fg-color);font-size:.7rem;letter-spacing:.08em}
