@@ -44,7 +44,9 @@
     root.innerHTML='<div class="notice" role="alert">知识数据暂时无法加载（'+code+'）。<button type="button" class="jdm-retry">重新加载</button></div>';
     root.querySelector('.jdm-retry')?.addEventListener('click',()=>init());
   }
+  let initSeq=0;
   async function init(){
+    const seq=++initSeq;
     if(!window.JDM_KNOWLEDGE)return;
     const roots=[document.getElementById('catalog-list'),document.getElementById('people-list'),document.getElementById('timeline')];
     try{
@@ -53,9 +55,10 @@
         window.JDM_KNOWLEDGE.byCategory('人物',250),
         window.JDM_KNOWLEDGE.list({limit:500})
       ]);
+      if(seq!==initSeq)return;
       renderCatalog(objects);renderPeople(people);renderTimeline(history);
       const search=document.getElementById('catalog-search');if(search&&!search.dataset.bound){search.dataset.bound='1';let raf=0;search.addEventListener('input',()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(()=>renderCatalog(objects))})}
-    }catch(error){roots.forEach(root=>renderError(root,error))}
+    }catch(error){if(seq===initSeq)roots.forEach(root=>renderError(root,error))}
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
