@@ -54,7 +54,7 @@
         window.JDM_KNOWLEDGE.list({limit:500})
       ]);
       renderCatalog(objects);renderPeople(people);renderTimeline(history);
-      const search=document.getElementById('catalog-search');if(search&&!search.dataset.bound){search.dataset.bound='1';search.addEventListener('input',()=>renderCatalog(objects))}
+      const search=document.getElementById('catalog-search');if(search&&!search.dataset.bound){search.dataset.bound='1';let raf=0;search.addEventListener('input',()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(()=>renderCatalog(objects))})}
     }catch(error){roots.forEach(root=>renderError(root,error))}
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
