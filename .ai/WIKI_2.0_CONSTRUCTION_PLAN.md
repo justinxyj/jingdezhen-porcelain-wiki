@@ -410,3 +410,11 @@ Phase 3B / 3C 已完成，进入 Phase 4：知识网络与产品体验升级。
 
 ## Phase 4C Closeout — 2026-09-20
 Phase 4C 第一轮已完成线上 Smoke Test 并正式封版。全球陶瓷网络已经从独立地图入口升级为 Entry 中心的时间 × 空间 × 工艺 × 关系探索层。
+
+
+## Phase 4E — 数字博物馆工具层统一：时间轴 2.0（2026-09-20）
+- 时间轴已接入统一 Discovery 思路：时代 + 空间筛选。
+- 继续消费 published canonical Entry 的 timeline metadata；当前有时间数据的公开条目为 58 个。
+- 时间轴节点可进入 Entry Detail，并继续进入全球网络。
+- 当前第一轮未修改生产知识事实数据。
+- 待 Pages browser smoke 后封版。
