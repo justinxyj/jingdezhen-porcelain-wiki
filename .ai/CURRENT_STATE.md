@@ -53,3 +53,11 @@
 3. 查询 GitHub 当前 main 与近期 PR/CI
 4. 涉及数据库时查询 Supabase 实际状态
 5. 再开始修改
+
+## 第三轮验收补充
+- Pages run #339（commit d92ab58）已成功完成部署；Validate run #55 同样成功。
+- 当前环境无法直接打开 GitHub Pages 页面进行像素级浏览器验收；web/container 对 justinxyj.github.io 均无法解析，因此不冒充已完成浏览器目视检查。
+- 修复窑址地图容器固定高度与 overflow:hidden 冲突，避免地图下方“怎么使用”等内容与地图区域发生裁剪/覆盖。
+- 增强窑址地图移动端高度与层级隔离。
+- 为首页、/entry/、时间轴、72 工序及旧博物馆组件增加 Material Slate 夜间模式专用颜色，修复深色背景上的深色文字问题。
+- 72 工序移动端进一步收紧横向内容宽度与详情卡布局。
