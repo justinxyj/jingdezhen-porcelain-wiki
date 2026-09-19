@@ -345,6 +345,11 @@
     });
   }
 
+  async function craftProcesses({limit=72}={}) {
+    const n=Math.max(1,Math.min(72,Number(limit)||72));
+    return await query((db,s)=>db.from('craft_processes').select('id,sequence,slug,name_zh,category,category_name,description_zh,historical_period,tools_zh,materials_zh,output_zh,source_title,source_url,source_institution,source_tier,image_url,image_credit,image_source_url,image_status,image_license,image_creator').order('sequence',{ascending:true}).limit(n).abortSignal(s));
+  }
+
   async function craftProcessContext(processId,{entryLimit=12,relationLimit=60}={}) {
     const id=String(processId||'');
     if(!/^[0-9a-f-]{36}$/i.test(id))throw new Error('JDM_CRAFT_PROCESS_ID_CONTRACT');
@@ -469,5 +474,5 @@
   }
   async function byCategory(category,limit=250){return list({category,limit})}
   function url(e){return e?'/jingdezhen-porcelain-wiki/entry/?type='+encodeURIComponent(e.category)+'&slug='+encodeURIComponent(e.slug):'/jingdezhen-porcelain-wiki/'}
-  window.JDM_KNOWLEDGE={all,get,list,worlds,byWorld,worldOverview,entryContext,entryNetworkContext,craftProcessContext,objectAtlas,personAtlas,graph,recommendations,eraGroup:eraGroupFor,searchEntries,searchDiscovery,searchDiscoveryPage,byCategory,url,state:()=>({...state}),reset:()=>{allPromise=null;searchIndexPromise=null;cache.clear();state={status:'idle',error:null,updatedAt:null}}};
+  window.JDM_KNOWLEDGE={all,get,list,worlds,byWorld,worldOverview,entryContext,entryNetworkContext,craftProcesses,craftProcessContext,objectAtlas,personAtlas,graph,recommendations,eraGroup:eraGroupFor,searchEntries,searchDiscovery,searchDiscoveryPage,byCategory,url,state:()=>({...state}),reset:()=>{allPromise=null;searchIndexPromise=null;cache.clear();state={status:'idle',error:null,updatedAt:null}}};
 })();
