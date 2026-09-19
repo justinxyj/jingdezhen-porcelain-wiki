@@ -34,7 +34,7 @@
     const dialog=document.createElement('article');dialog.className='jdm-timeline-dialog';
     const closeButton=document.createElement('button');closeButton.className='jdm-timeline-close';closeButton.type='button';closeButton.setAttribute('aria-label','关闭');closeButton.textContent='×';
     const detail=document.createElement('div');detail.className='jdm-timeline-detail';
-    if(im){const wrap=document.createElement('div');wrap.className='jdm-timeline-image';const img=document.createElement('img');img.dataset.museumImage='1';img.src=safeHref(im.path)||im.path;img.alt=String(im.title||e.zh?.title||e.slug);wrap.appendChild(img);detail.appendChild(wrap)}
+    if(im){const imageHref=safeHref(im.path);if(imageHref){const wrap=document.createElement('div');wrap.className='jdm-timeline-image';const img=document.createElement('img');img.dataset.museumImage='1';img.src=imageHref;img.alt=String(im.title||e.zh?.title||e.slug);wrap.appendChild(img);detail.appendChild(wrap)}}
     const copy=document.createElement('div');copy.className='jdm-timeline-copy';
     const overline=document.createElement('div');overline.className='detail-overline';overline.textContent='历史节点';copy.appendChild(overline);
     const title=document.createElement('h3');title.textContent=String(e.zh?.title||e.slug);copy.appendChild(title);
