@@ -414,3 +414,11 @@
 - 保留唐英→雍正仿钧新紫釉天球瓶 A，不把生产管理证据升级为个人作者证据。
 - 黄云鹏→元青花三顾茅庐纹罐暂缓，原因是该具体器物尚未作为 canonical Entry 纳入知识库；不得用代表作品文字直接制造不存在的 Entry 边。
 - 当前 entry_relations 102，recommendations 24；World mappings 316 不变。
+
+
+## 2026-09-20 — Phase 4E Final Closeout
+- Phase 4E is closed.
+- Phase 4E-5 Round 2 is the final relation-deepening round for this phase; no further recursive micro-audits are planned.
+- Project-wide scope rule: do not over-refine. A phase should close when its core user-visible objective, data integrity, and regression checks are satisfied. Remaining edge cases move forward as bounded backlog rather than reopening the phase.
+- Canonical content candidates: 郎窑红梅瓶、元青花三顾茅庐纹罐等，deferred to Phase 5 Content Admission.
+- Next phase: Phase 5 Knowledge World / 知识世界层.
