@@ -172,3 +172,13 @@
 - [x] 生产验证：12,140 条去重后的候选关系
 - [x] 未修改 Phase 2B 冻结的 316 条 World mappings
 - [ ] Phase 3B 下一轮：人工审校推荐质量、增加时间轴/来源桥接规则，并接入条目详情页
+
+
+## Phase 3B-2 — 推荐质量审校
+- [x] 分层压力测试人物/历史/器物/窑址/文献
+- [x] 淘汰共享 World 直接推荐规则
+- [x] 淘汰共享 craft_process 直接推荐规则
+- [x] 过滤通用 relation rationale
+- [x] 最终推荐池回归：8 条高置信候选
+- [x] 新增推荐质量门槛 migration
+- [ ] Phase 3B-3：补充 entry-specific 关系证据并重新扩容推荐池
