@@ -240,3 +240,13 @@
 - [x] 保持 Phase 2B Semantic Freeze：本阶段只读取冻结 mapping，不重新推断或修改 world 归属。
 - [x] 增加桌面 / 移动端 / dark mode 的世界概览与代表入口样式。
 - [ ] Pages 部署后完成七个世界页面浏览器 smoke。
+
+### Phase 4B — Entry Detail 2.0
+- [x] 新增统一 `entryContext()` 数据读取层，统一获取 Entry 的关系与相关知识节点。
+- [x] Entry Detail 升级为“知识节点”结构：主体介绍、节点身份、历史与空间、知识关系、相关推荐、来源。
+- [x] 关系卡片直接进入统一 Entry Detail，并保留关系解释。
+- [x] 历史/时间轴上下文在存在时动态进入 Entry Detail。
+- [x] 相关推荐继续遵守 Phase 3B A+ / A 冻结门槛。
+- [x] 增加桌面 / 移动端 Entry Detail 2.0 布局。
+- [x] JavaScript syntax regression passed.
+- [ ] Pages 部署后完成 Entry Detail 2.0 浏览器 smoke。
