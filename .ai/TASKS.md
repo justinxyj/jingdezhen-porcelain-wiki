@@ -123,4 +123,4 @@
 - [x] Sprint B：149 个已发布条目全部挂载 primary world
 - [x] Sprint B：建立 secondary cross-world mappings
 - [x] Sprint B：7 个世界入口接入动态条目浏览器
-- [ ] Sprint B 后续：逐条人工复核 406 条 mapping 的语义准确性并补充缺失跨世界关系
+- [ ] Sprint B 后续：逐条人工复核 410 条 mapping 的语义准确性并补充缺失跨世界关系
