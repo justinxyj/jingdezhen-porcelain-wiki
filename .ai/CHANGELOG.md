@@ -278,3 +278,9 @@
 - 关系层继续读取 `entry_relations`，相关推荐继续读取冻结的 `knowledge_recommendations`，没有放宽推荐门槛。
 - 产品路径固定为：**一件瓷器 → 工艺 → 时间 → 空间 → 人物 / 文献 / 其他关系 → 相关推荐 → 其他时代 / 世界节点**。
 - 未修改 Phase 2B World Freeze、Phase 3B recommendation gate 或生产关系证据等级。
+
+
+## 2026-09-20 — Phase 4C Closeout
+- 用户完成线上浏览器 Smoke Test，确认全球陶瓷网络实际部署正常。
+- 器物、人物、窑址三类 Entry 的时间 / 空间 / 关系 / 推荐链路均验证通过。
+- Phase 4C 第一轮正式收口；未修改 Phase 2B Semantic Freeze、Phase 3B recommendation gate 或生产关系证据规则。
