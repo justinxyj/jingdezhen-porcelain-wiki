@@ -326,3 +326,11 @@
 - 时间轴节点可进入 Entry Detail，并继续进入全球网络。
 - 当前第一轮未修改生产知识事实数据。
 - 待 Pages browser smoke 后封版。
+
+
+## Phase 4E-2 — 窑址地图 2.0（2026-09-20）
+- 地图仍以 published canonical Entry 的 map metadata 为唯一空间数据来源。
+- 当前地图范围继续由生产中有坐标的窑址条目决定。
+- 地图 → Entry → 全球网络 / 搜索的统一发现路径已接通。
+- 本轮未修改生产知识事实数据。
+- 待 Pages browser smoke 后封版。
