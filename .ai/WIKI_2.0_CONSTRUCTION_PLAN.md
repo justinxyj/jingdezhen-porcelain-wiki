@@ -498,3 +498,15 @@ Round 2 采用“宁缺毋滥”原则：
 ## Phase 5 — Knowledge World / 知识世界层
 Phase 5 正式启动。目标从“建设知识基础设施”转向“让知识网络成为可探索的世界”。
 首个阶段：Phase 5-1 Knowledge World Architecture。
+
+
+## Phase 5-1 Knowledge World Architecture — 2026-09-20
+Architecture document: `.ai/PHASE_5_KNOWLEDGE_WORLD_ARCHITECTURE.md`.
+
+核心边界已经确定：
+- 七大 Knowledge Worlds = 用户认知入口。
+- Digital Museum tools = 从不同维度观察世界的工具，不是新增知识世界。
+- Knowledge Network = 跨世界连接层，不是新增知识世界。
+- Entry = canonical factual destination。
+- Phase 5 重点从“增加数据/关系”切换为“端到端知识探索路径”。
+- 第一条验收路径：Home → World → Entry → related Entry / Network。
