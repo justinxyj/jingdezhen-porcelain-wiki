@@ -134,11 +134,11 @@ create policy "entries_owner_read" on public.entries
 
 create policy "entries_staff_read" on public.entries
   for select to authenticated
-  using (public.is_staff());
+  using (private.is_staff());
 
 create policy "entries_staff_write" on public.entries
   for all to authenticated
-  using (public.is_staff()) with check (public.is_staff());
+  using (private.is_staff()) with check (private.is_staff());
 
 create policy "entry_relations_public_read" on public.entry_relations
   for select to anon, authenticated
@@ -149,7 +149,7 @@ create policy "entry_relations_public_read" on public.entry_relations
 
 create policy "entry_relations_staff_write" on public.entry_relations
   for all to authenticated
-  using (public.is_staff()) with check (public.is_staff());
+  using (private.is_staff()) with check (private.is_staff());
 
 create policy "edits_insert" on public.edits
   for insert to authenticated
@@ -161,19 +161,19 @@ create policy "edits_own_select" on public.edits
 
 create policy "edits_staff_select" on public.edits
   for select to authenticated
-  using (public.is_staff());
+  using (private.is_staff());
 
 create policy "edits_staff_update" on public.edits
   for update to authenticated
-  using (public.is_staff()) with check (public.is_staff());
+  using (private.is_staff()) with check (private.is_staff());
 
 create policy "revisions_staff_read" on public.entry_revisions
   for select to authenticated
-  using (public.is_staff());
+  using (private.is_staff());
 
 create policy "revisions_staff_insert" on public.entry_revisions
   for insert to authenticated
-  with check (auth.uid() = editor_id and public.is_staff());
+  with check (auth.uid() = editor_id and private.is_staff());
 
 create policy "media_public_verified_read" on public.media
   for select to anon, authenticated
@@ -189,7 +189,7 @@ create policy "media_owner_public_read" on public.media
 
 create policy "media_staff_read" on public.media
   for select to authenticated
-  using (public.is_staff());
+  using (private.is_staff());
 
 create policy "media_user_insert" on public.media
   for insert to authenticated
@@ -203,11 +203,11 @@ create policy "media_user_insert" on public.media
 
 create policy "media_staff_insert" on public.media
   for insert to authenticated
-  with check (public.is_staff());
+  with check (private.is_staff());
 
 create policy "media_staff_update" on public.media
   for update to authenticated
-  using (public.is_staff()) with check (public.is_staff());
+  using (private.is_staff()) with check (private.is_staff());
 
 create policy "users_manage_own_favorites" on public.favorites for all
   using (auth.uid()=user_id) with check (auth.uid()=user_id);
@@ -219,13 +219,21 @@ create policy "users_create_own_profile" on public.profiles for insert
   with check (auth.uid()=id);
 
 -- Runtime hardening:
--- is_staff() remains SECURITY DEFINER because RLS policies call it and profiles RLS would recurse under invoker semantics.
+-- Keep the SECURITY DEFINER helper in the non-exposed private schema. Public API roles
+-- must not be able to invoke it directly; RLS policies may still call it internally.
 -- handle_new_user() is a trigger-only SECURITY DEFINER helper.
 -- review_edit(...) is a transactional staff helper, not a public RPC entry point.
 revoke execute on function public.handle_new_user() from public, anon, authenticated;
 revoke execute on function public.review_edit(uuid,text,text) from public, anon, authenticated;
-revoke execute on function public.is_staff() from public, anon;
-grant execute on function public.is_staff() to authenticated, service_role;
+create schema if not exists private;
+create or replace function private.is_staff()
+returns boolean
+language sql stable security definer set search_path = public
+as $
+  select exists(select 1 from public.profiles where id = auth.uid() and role in ('reviewer','admin'));
+$;
+revoke all on function private.is_staff() from public;
+grant execute on function private.is_staff() to authenticated, service_role;
 
 revoke all on table public.media from anon;
 revoke all on table public.entry_revisions from anon;
@@ -310,11 +318,11 @@ create policy "entries_owner_read" on public.entries
 
 create policy "entries_staff_read" on public.entries
   for select to authenticated
-  using (public.is_staff());
+  using (private.is_staff());
 
 create policy "entries_staff_write" on public.entries
   for all to authenticated
-  using (public.is_staff()) with check (public.is_staff());
+  using (private.is_staff()) with check (private.is_staff());
 
 create policy "entry_relations_public_read" on public.entry_relations
   for select to anon, authenticated
@@ -325,7 +333,7 @@ create policy "entry_relations_public_read" on public.entry_relations
 
 create policy "entry_relations_staff_write" on public.entry_relations
   for all to authenticated
-  using (public.is_staff()) with check (public.is_staff());
+  using (private.is_staff()) with check (private.is_staff());
 
 create policy "edits_insert" on public.edits
   for insert to authenticated
@@ -337,19 +345,19 @@ create policy "edits_own_select" on public.edits
 
 create policy "edits_staff_select" on public.edits
   for select to authenticated
-  using (public.is_staff());
+  using (private.is_staff());
 
 create policy "edits_staff_update" on public.edits
   for update to authenticated
-  using (public.is_staff()) with check (public.is_staff());
+  using (private.is_staff()) with check (private.is_staff());
 
 create policy "revisions_staff_read" on public.entry_revisions
   for select to authenticated
-  using (public.is_staff());
+  using (private.is_staff());
 
 create policy "revisions_staff_insert" on public.entry_revisions
   for insert to authenticated
-  with check (auth.uid() = editor_id and public.is_staff());
+  with check (auth.uid() = editor_id and private.is_staff());
 
 create policy "media_public_verified_read" on public.media
   for select to anon, authenticated
@@ -365,7 +373,7 @@ create policy "media_owner_public_read" on public.media
 
 create policy "media_staff_read" on public.media
   for select to authenticated
-  using (public.is_staff());
+  using (private.is_staff());
 
 create policy "media_user_insert" on public.media
   for insert to authenticated
@@ -379,11 +387,11 @@ create policy "media_user_insert" on public.media
 
 create policy "media_staff_insert" on public.media
   for insert to authenticated
-  with check (public.is_staff());
+  with check (private.is_staff());
 
 create policy "media_staff_update" on public.media
   for update to authenticated
-  using (public.is_staff()) with check (public.is_staff());
+  using (private.is_staff()) with check (private.is_staff());
 
 create policy "users_manage_own_favorites" on public.favorites for all
   using (auth.uid()=user_id) with check (auth.uid()=user_id);
@@ -400,7 +408,7 @@ create policy "users_create_own_profile" on public.profiles for insert
 -- review_edit(...) is a transactional staff helper, not a public RPC entry point.
 revoke execute on function public.handle_new_user() from public, anon, authenticated;
 revoke execute on function public.review_edit(uuid,text,text) from public, anon, authenticated;
-grant execute on function public.is_staff() to authenticated, service_role;
+grant execute on function private.is_staff() to authenticated, service_role;
 
 revoke all on table public.media from anon;
 revoke all on table public.entry_revisions from anon;
@@ -482,11 +490,11 @@ create policy "entries_owner_read" on public.entries
 
 create policy "entries_staff_read" on public.entries
   for select to authenticated
-  using (public.is_staff());
+  using (private.is_staff());
 
 create policy "entries_staff_write" on public.entries
   for all to authenticated
-  using (public.is_staff()) with check (public.is_staff());
+  using (private.is_staff()) with check (private.is_staff());
 
 create policy "entry_relations_public_read" on public.entry_relations
   for select to anon, authenticated
@@ -497,7 +505,7 @@ create policy "entry_relations_public_read" on public.entry_relations
 
 create policy "entry_relations_staff_write" on public.entry_relations
   for all to authenticated
-  using (public.is_staff()) with check (public.is_staff());
+  using (private.is_staff()) with check (private.is_staff());
 
 create policy "edits_insert" on public.edits
   for insert to authenticated
@@ -509,19 +517,19 @@ create policy "edits_own_select" on public.edits
 
 create policy "edits_staff_select" on public.edits
   for select to authenticated
-  using (public.is_staff());
+  using (private.is_staff());
 
 create policy "edits_staff_update" on public.edits
   for update to authenticated
-  using (public.is_staff()) with check (public.is_staff());
+  using (private.is_staff()) with check (private.is_staff());
 
 create policy "revisions_staff_read" on public.entry_revisions
   for select to authenticated
-  using (public.is_staff());
+  using (private.is_staff());
 
 create policy "revisions_staff_insert" on public.entry_revisions
   for insert to authenticated
-  with check (auth.uid() = editor_id and public.is_staff());
+  with check (auth.uid() = editor_id and private.is_staff());
 
 create policy "media_public_verified_read" on public.media
   for select to anon, authenticated
@@ -537,7 +545,7 @@ create policy "media_owner_public_read" on public.media
 
 create policy "media_staff_read" on public.media
   for select to authenticated
-  using (public.is_staff());
+  using (private.is_staff());
 
 create policy "media_user_insert" on public.media
   for insert to authenticated
@@ -551,11 +559,11 @@ create policy "media_user_insert" on public.media
 
 create policy "media_staff_insert" on public.media
   for insert to authenticated
-  with check (public.is_staff());
+  with check (private.is_staff());
 
 create policy "media_staff_update" on public.media
   for update to authenticated
-  using (public.is_staff()) with check (public.is_staff());
+  using (private.is_staff()) with check (private.is_staff());
 
 create policy "users_manage_own_favorites" on public.favorites for all
   using (auth.uid()=user_id) with check (auth.uid()=user_id);
@@ -572,7 +580,7 @@ create policy "users_create_own_profile" on public.profiles for insert
 -- review_edit(...) is a transactional staff helper, not a public RPC entry point.
 revoke execute on function public.handle_new_user() from public, anon, authenticated;
 revoke execute on function public.review_edit(uuid,text,text) from public, anon, authenticated;
-grant execute on function public.is_staff() to authenticated, service_role;
+grant execute on function private.is_staff() to authenticated, service_role;
 
 revoke all on table public.media from anon;
 revoke all on table public.entry_revisions from anon;
