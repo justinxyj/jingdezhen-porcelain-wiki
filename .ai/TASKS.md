@@ -262,3 +262,17 @@
 - [x] 搜索结果可继续进入知识世界、关系网络与相关推荐，形成“搜索 → Entry → 世界 / 关系 / 推荐”的连续路径。
 - [x] JS syntax regression：knowledge-store / entry-search / world-browser / wiki-enhancements / network-explorer 全部通过。
 - [ ] Pages deployment browser smoke：验证首页、七世界、关系网络、Entry Detail 的统一搜索入口及搜索结果跳转。
+
+
+## Phase 4C — 全球陶瓷网络 × 时间 × 空间 × 知识条目（2026-09-20）
+
+- [x] 将全球陶瓷网络从静态入口升级为 Entry 中心的综合探索层。
+- [x] 新增 `JDM_KNOWLEDGE.entryNetworkContext()`：统一读取知识条目、知识世界、关系、工艺流程、相关推荐、时间元数据与空间元数据。
+- [x] 新增全球网络交互页：可从关键词选择知识条目，并沿“条目 → 工艺 → 时间 → 空间 → 关系 → 推荐”连续探索。
+- [x] 时间层接入现有 timeline metadata，按景德镇 / 中国其他窑业 / 世界其他地区分组，不新增未经核验的历史关系。
+- [x] 空间层接入现有窑址地图坐标，并在当前条目存在时代信息时展示同一时代的已建档空间节点。
+- [x] 工艺层接入现有 72 道 craft_process 图谱关系；不把工艺关系误当作相关推荐。
+- [x] 关系与相关推荐继续沿用 Phase 3B 冻结的知识图谱与 A+ / A 推荐规则。
+- [x] 全局网络保持知识条目为唯一 canonical 内容入口；地图只是空间呈现层。
+- [x] JS syntax regression：knowledge-store / global-network 通过。
+- [ ] Pages deployment browser smoke：验证器物、人物、窑址三类 Entry 的时间 / 空间 / 关系 / 推荐链路。
