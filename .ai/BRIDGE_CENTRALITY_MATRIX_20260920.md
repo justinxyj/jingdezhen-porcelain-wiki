@@ -1,49 +1,100 @@
 # Bridge Centrality Analysis — 2026-09-20
 
-当前生产网络中有 263 条 A/A+/B evidence-grade relations，得到 161 个节点。采用标准 Brandes shortest-path betweenness centrality：normalized=true、endpoints=false、weight=None。NetworkX 文档说明该指标统计节点位于所有节点对最短路径中的比例，算法采用 Brandes。
+更新时间：2026-09-20（Bridge Node Phase 2 后重算）
 
-Bridge Priority Score = 0.55 × normalized Brandes BC + 0.30 × cross-group coverage/max coverage + 0.15 × evidence quality。Evidence quality 中 A+=1、A=1、B=0.7。该分数只用于下一轮 QA/内容投入顺序，不是历史重要性或内容质量评分。
+当前证据网络：273 条 A/A+/B evidence-grade relations，161 个节点。
 
-## Top 20
+采用标准 Brandes shortest-path betweenness centrality：
+- normalized=true
+- endpoints=false
+- weight=None
+- undirected graph
+
+归一化方式与 NetworkX betweenness_centrality(normalized=True)一致。
+
+## Bridge Priority
+
+Bridge Priority Score = 0.55 × normalized Brandes BC + 0.30 × cross-group coverage/max coverage + 0.15 × evidence quality。
+
+Evidence quality：
+- A+ = 1.0
+- A = 1.0
+- B = 0.7
+
+Cross-group coverage 是本项目定义的知识网络 proxy，不是客观文明分类。Priority 只用于 QA / 内容投入顺序，不代表历史重要性、内容质量或价值判断。
+
+## Phase 2 后 Top 20
 
 |Rank|Node|Brandes BC|Cross Groups|Evidence|Priority|
 |---:|---|---:|---:|---:|---:|
-|1|青花瓷|0.83036|8|0.855|0.978|
-|2|景德镇窑|0.81896|3|0.838|0.781|
-|3|外销瓷|0.34235|6|0.820|0.575|
-|4|UNESCO：景德镇手工瓷业遗存|0.11202|7|0.888|0.470|
-|5|面向日本市场的景德镇瓷|0.16571|5|0.885|0.430|
-|6|欧洲瓷器|0.25753|3|0.867|0.413|
-|7|御窑厂遗址|0.28386|1|0.908|0.362|
-|8|青花钴料|0.28324|1|0.850|0.353|
-|9|二元配方|0.13546|3|1.000|0.352|
-|10|粉彩瓷|0.27247|1|0.825|0.342|
-|11|伊斯兰世界与景德镇瓷|0.10593|4|0.750|0.333|
-|12|日本陶瓷|0.09378|4|0.760|0.326|
-|13|有田窑·有田烧|0.02504|4|0.957|0.310|
-|14|东南亚陶瓷|0.04084|4|0.850|0.305|
-|15|克拉克瓷|0.01677|4|0.786|0.279|
-|16|欧洲与景德镇瓷器|0.10973|2|0.807|0.269|
-|17|伊斯兰世界陶瓷|0.03455|3|0.800|0.255|
-|18|荷兰东印度公司与瓷器贸易|0.00375|3|0.800|0.235|
-|19|欧洲中国风与景德镇瓷|0.03472|2|0.900|0.233|
-|20|釉里红|0.11509|1|0.700|0.219|
+|1|青花瓷|0.82661|9|0.868|0.885|
+|2|景德镇窑|0.80509|3|0.838|0.668|
+|3|外销瓷|0.34211|7|0.829|0.546|
+|4|欧洲瓷器|0.32350|6|0.908|0.514|
+|5|UNESCO：景德镇手工瓷业遗存|0.06870|7|0.888|0.404|
+|6|面向日本市场的景德镇瓷|0.10395|6|0.893|0.391|
+|7|日本陶瓷|0.09610|6|0.782|0.370|
+|8|御窑厂遗址|0.26748|2|0.908|0.350|
+|9|粉彩瓷|0.28916|2|0.825|0.349|
+|10|伊斯兰世界与景德镇瓷|0.10774|5|0.786|0.344|
+|11|有田窑·有田烧|0.03744|5|0.967|0.332|
+|12|东南亚陶瓷|0.04402|5|0.900|0.326|
+|13|二元配方|0.13685|3|1.000|0.325|
+|14|青花钴料|0.26923|1|0.850|0.309|
+|15|克拉克瓷|0.02078|5|0.867|0.308|
+|16|伊斯兰世界陶瓷|0.03117|4|0.950|0.293|
+|17|唐英|0.12438|2|1.000|0.285|
+|18|欧洲与景德镇瓷器|0.10993|3|0.820|0.283|
+|19|荷兰东印度公司与瓷器贸易|0.01293|4|0.850|0.268|
+|20|欧洲中国风与景德镇瓷|0.02923|3|0.900|0.251|
 
-## Interpretation
+## Phase 2 Structural Bridge Decisions
 
-青花瓷、景德镇窑、外销瓷构成当前证据网络的主要结构骨架。日本出口瓷、日本陶瓷、有田、克拉克瓷、伊斯兰世界与景德镇瓷、东南亚陶瓷、欧洲瓷器、欧洲与景德镇瓷器，是下一轮 Claim-by-Claim Evidence QA 的重点。二元配方、青花钴料、御窑、粉彩、釉里红虽然数学 BC 较高，但部分主要连接景德镇内部技术/生产子图，不能仅因 BC 高就视为跨文明桥。UNESCO/r23 更像证据与解释枢纽。
+本轮只加入能够缩短结构距离的证据边：
+
+1. 青花瓷 → 欧洲瓷器（A）
+2. 外销瓷 → 东南亚陶瓷（A）
+3. 日本出口瓷 → 克拉克瓷（A）
+4. 克拉克瓷 → 欧洲瓷器（A）
+5. 伊斯兰世界与景德镇瓷 → 伊兹尼克陶瓷（A）
+6. 日本陶瓷 → 欧洲瓷器（A）
+7. 有田窑 → 朝鲜半岛陶瓷（A）
+8. 有田窑 → 荷兰东印度公司与瓷器贸易（A）
+9. 欧洲与景德镇瓷器 → 迈森瓷（A）
+
+同时完成证据升级：
+- 日本出口瓷 ↔ 迈森瓷：B → A
+- 伊斯兰陶瓷 ↔ 青花瓷：B → A
+- 克拉克瓷 ↔ 伊斯兰陶瓷：B → A
+- 东南亚陶瓷 ↔ 伊斯兰陶瓷：B → A
+
+## 结构解释
+
+青花瓷、景德镇窑、外销瓷、欧洲瓷器构成当前证据网络的主要结构骨架。
+
+面向日本市场的景德镇瓷、日本陶瓷、有田、克拉克瓷、伊斯兰世界与景德镇瓷、东南亚陶瓷、欧洲与景德镇瓷器、VOC，是当前最值得做路径级 QA 的跨网络节点。
+
+UNESCO/r23 的数学 BC 不高，但 cross-group coverage 高，是证据与解释枢纽，而不是“所有文明都应该与它直接建立关系”的万能节点。
+
+二元配方、青花钴料、粉彩、御窑等部分主要承担技术/生产子图桥梁，不因 BC 较高自动视为跨文明桥。
 
 ## Governance
 
 1. Brandes BC 是结构指标，不等于历史重要性。
-2. Cross-group coverage 是本项目的文明网络 proxy，不是客观文明分类。
-3. Priority Score 只决定下一轮 QA/内容投入顺序。
+2. Cross-group coverage 是项目内部 proxy。
+3. Priority Score 只决定下一轮 QA / 内容投入顺序。
 4. 排名高不自动创建关系。
 5. 新边必须独立满足 Claim → Evidence → Source → Boundary → Grade。
 6. 多跳路径只能作为探索路径，不作为单条历史事实。
 7. 图发生变化后必须重新计算，不沿用旧排名。
+8. 不为了降低 isolated 数量而制造弱关系。
 
 ## Reproduction
 
-.ai/data/bridge_centrality_edges_20260920.csv 是本次 263 条证据边的冻结快照。
-scripts/analyze_bridge_centrality.py 使用 NetworkX betweenness_centrality(normalized=True, endpoints=False, weight=None) 复现 Brandes 结果。
+.ai/data/bridge_centrality_edges_20260920.csv 是本阶段 273 条 A/A+/B 证据边的冻结快照。
+
+scripts/analyze_bridge_centrality.py 使用 NetworkX betweenness_centrality(normalized=True, endpoints=False, weight=None) 复现 Brandes BC。
+
+本次数学 BC 已按当前 273-edge snapshot 重新计算；工具运行时使用等价 Brandes BFS/dependency accumulation 实现进行核算。
+
+版本：bridge-centrality-matrix-phase2-20260920
