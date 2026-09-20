@@ -47,9 +47,9 @@
     const summary=plain(e.zh?.summary||'').trim();
     if(!raw)return intro;
     let cleaned=raw;
-    const first=cleaned.match(/^\\s*<p>([\\s\\S]*?)<\\/p>\\s*/i);
+    const first=cleaned.match(/^\s*<p>([\s\S]*?)<\/p>\s*/i);
     if(first&&summary&&plain(first[1]).trim()===summary)cleaned=cleaned.slice(first[0].length);
-    const core=cleaned.match(/^\\s*<h2>\\s*核心信息\\s*<\\/h2>\\s*<p>([\\s\\S]*?)<\\/p>\\s*/i);
+    const core=cleaned.match(/^\s*<h2>\s*核心信息\s*<\/h2>\s*<p>([\s\S]*?)<\/p>\s*/i);
     if(core&&summary&&plain(core[1]).trim()===summary)cleaned=cleaned.slice(core[0].length);
     return plain(cleaned)||intro;
   }
