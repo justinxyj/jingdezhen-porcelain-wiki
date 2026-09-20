@@ -1,0 +1,5 @@
+-- Phase 7.5 Evidence Triangulation & Dispute QA
+-- Evidence governance only; no second fact database.
+-- Production synthesis executed 2026-09-20.
+-- Existing claim_evidence_map receives triangulation status, second evidence,
+-- triangulated confidence, and dispute attribution.
