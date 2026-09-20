@@ -563,3 +563,10 @@ QA 后真实基线发生变化：149 个原始 Entry 中有 30 个被降级为 K
 - 新增 67 条 A/B evidence-graded edges。重点完成：伊斯兰陶瓷、西亚陶瓷、东南亚陶瓷、漳州窑、瓷器贸易、康熙外销瓷、金襕手对象、明清青花对象、五彩/釉上彩对象、考古地层/瓷片、款识/年款/御窑、民窑/窑主/窑业组织等桥接。
 - Network QA v5：connected 87、single_strong 74、multi_weak 10、isolated 19；311 relations，A/A+/B 234；161/190 Canonical 有至少一个 A/B edge。
 - 治理：Bridge Node 的价值看其连接两个子网络的能力，而非单纯边数；多跳路径只作探索，不作为事实证明。
+
+
+## 2026-09-20 — Bridge Centrality v6
+- 从“修孤立节点”转入 Bridge Centrality，目标是用少数桥梁连接日本、朝鲜、东南亚、伊斯兰、欧洲与景德镇核心网络。
+- 新增 62 条 evidence-graded edges；关键桥梁：Arita、日本出口瓷、Kraak、VOC、康熙外销瓷、Delft、UNESCO/r23、伊斯兰陶瓷、东南亚陶瓷。
+- Network QA v6：connected 88、single_strong 73、multi_weak 10、isolated 19；332 relations，A/A+/B 255。
+- 规则：桥梁价值看跨子网络能力而非边数；每条边独立验证，多跳路径不等于事实证明。
