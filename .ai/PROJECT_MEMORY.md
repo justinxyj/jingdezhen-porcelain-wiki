@@ -539,3 +539,12 @@ QA 后真实基线发生变化：149 个原始 Entry 中有 30 个被降级为 K
 - 关系类型严格使用既有schema；没有批量C→A/B，没有用相似性自动声称技术传播。
 - 92个孤立节点仍待下一轮P1/P2 evidence-backed repair；不为了网络密度制造关系。
 - 220→320继续冻结。
+
+
+## 2026-09-20 — Phase 7.8 Network Repair v3
+- 继续执行 92 Isolated → P1 剩余 → P2 比较窑业 → Claim-by-Claim Evidence → Network Edge。
+- 本轮新增 51 条 A/B evidence-graded relation edges，覆盖核心工艺/器物、生产系统、历代比较窑业、朝鲜/日本、欧洲比较网络以及人物/对象节点。
+- Network QA v3：connected 70、single_strong 50、multi_weak 11、isolated 59。
+- 190 Canonical 中至少一个 A/B edge 的节点达到 131/190（68.9%）。
+- entry_relations 当前 244 条，其中 A/A+/B 共 167 条；C 仍保留为探索关系，不自动升级。
+- 比较窑业关系统一保持 comparative/contextual 边界，不把相似性自动解释为技术传播。
