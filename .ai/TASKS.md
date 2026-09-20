@@ -592,3 +592,15 @@ Phase 6B/6C：Canonical Content Admission 与 Entry SEO Health 深化；优先�
 - [ ] C_context_or_relation：逐条判断是否应降级为关系节点
 - [ ] 完成 Corpus QA：证据链、实体边界、跨区域传播链、来源层级、重复/合并检查
 - [ ] Corpus QA 完成前保持 149 → 220 冻结
+
+
+## 2026-09-20 — Corpus QA / Phase 7
+- [x] 完成 74 REVIEW Corpus QA：A/B/C/D 分流
+- [x] 新增 corpus_node_type / canonical_eligible 治理字段
+- [x] 30 个 C 类 Entry 降级为 Knowledge Node
+- [x] 39 个 B 类 Entry 保留进入 Research Corpus
+- [x] 5 个 A 类 Entry进入继续深化
+- [x] 完成 Phase 7 Canonical Growth：canonical eligible 119 → 220
+- [x] published entries 扩展至 250；220 个具备 Canonical Entry 资格
+- [ ] Phase 7 后续：对新增 101 Entry 进行 Evidence Deepening / Citation Readiness 提升
+- [ ] 下一增长门：220 → 320，必须先完成本轮新增 Entry 的证据深化与 Corpus QA
