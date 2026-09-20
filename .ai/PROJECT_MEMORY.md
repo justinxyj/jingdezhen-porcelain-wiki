@@ -411,3 +411,32 @@ Phase 6C-2 按锁定的七条研究顺序完成第一轮 Evidence Deepening，�
 
 ### 149 → 220 gate
 继续冻结。必须先完成剩余 REVIEW 的证据深化、降级/合并审查和 Corpus QA，再重新评估规模扩张。
+
+
+## 2026-09-20 — Phase 6C-2 Corpus QA Closeout / Phase 7 Canonical Growth
+
+### 74 REVIEW → Evidence Corpus QA
+- 完成 74 个 REVIEW Entry 的 Corpus 分流：A_deepen 5、B_research 39、C_context_or_relation 30。
+- 新增治理字段：corpus_node_type、canonical_eligible。
+- 30 个 C 类 Entry 保留为 published Entry 以维持探索网络连续性，但正式降级为 Knowledge Node，canonical_eligible=false；不再把“访问/题词/被提及”等关系价值当作独立 Canonical 内容价值。
+- 39 个 B 类 Entry 保留在 Research Corpus，继续作为可研究、可追踪的证据入口；不强行宣称研究已完成。
+- 5 个 A 类 Entry 进入继续深化队列。
+- D 类未发现必须立即退出的独立重复项。
+
+### Phase 7 — Canonical Entry Growth
+QA 后真实基线发生变化：149 个原始 Entry 中有 30 个被降级为 Knowledge Node，因此 Canonical eligible 基线为 119。随后新增 101 个有机构来源锚点的 Canonical Entry，使 canonical_eligible = 220。
+
+当前生产基线：
+- published entries：250
+- canonical eligible：220
+- Knowledge Nodes：30
+- citation-ready PASS：75
+- review：175
+- blocked：0
+- 149 → 220 的 Canonical Growth Gate 已达到；这里的“220”指正式 Canonical Entry 资格，不是简单页面数量。
+
+### Phase 7 增长原则
+- 新增 Entry 以景德镇核心、工艺、器物、窑址/城市空间、东亚传播和全球陶瓷文明连接为主。
+- 新增 Entry 当前部分标记为 develop/review，后续必须经过 Evidence Deepening 才能进入更高 citation-ready 等级。
+- 不允许用 AI 常识扩写替代来源；不把风格相似自动写成技术传播；不把人物管理关系写成器物作者关系。
+- Seven Knowledge Worlds、World Freeze、A+/A Recommendation Gate、Phase 4E 均保持冻结。
