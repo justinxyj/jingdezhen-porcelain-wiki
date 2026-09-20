@@ -148,10 +148,10 @@ def clean_body_html(content: str, summary: str) -> str:
     summary_text = plain(summary)
     if not body or not summary_text:
         return body
-    first = re.match(r"^\\s*<p>([\\s\\S]*?)</p>\\s*", body, flags=re.I)
+    first = re.match(r"^\s*<p>([\s\S]*?)</p>\s*", body, flags=re.I)
     if first and plain(first.group(1)) == summary_text:
         body = body[first.end():]
-    core = re.match(r"^\\s*<h2>\\s*核心信息\\s*</h2>\\s*<p>([\\s\\S]*?)</p>\\s*", body, flags=re.I)
+    core = re.match(r"^\s*<h2>\s*核心信息\s*</h2>\s*<p>([\s\S]*?)</p>\s*", body, flags=re.I)
     if core and plain(core.group(1)) == summary_text:
         body = body[core.end():]
     return body or f"<p>{html.escape(summary_text)}</p>"
