@@ -72,8 +72,16 @@ with sync_playwright() as p:
         raise RuntimeError("Entry meta description missing")
     if not page.locator("head script[type='application/ld+json']").count():
         raise RuntimeError("Entry JSON-LD missing")
-    if page.locator("#wiki-entry-root .entry-static-content").count()<1:
-        raise RuntimeError("Entry initial HTML body missing")
+    if page.locator("#wiki-entry-root.wiki-entry-card.wiki-entry-v2").count()<1:
+        raise RuntimeError("知识条目未使用统一 Entry Detail 2.0 外壳")
+    if page.locator("#wiki-entry-root .wiki-entry-v2-grid").count()<1:
+        raise RuntimeError("知识条目缺少统一双栏探索布局")
+    if page.locator("#wiki-entry-root .wiki-entry-v2-rail").count()<1:
+        raise RuntimeError("知识条目缺少统一知识节点侧栏")
+    if "Entry Detail" in page.locator("body").inner_text() or "KNOWLEDGE RELATIONS" in page.locator("body").inner_text():
+        raise RuntimeError("知识条目仍暴露旧英文产品 UI")
+    if page.locator("#wiki-entry-root .wiki-entry-body").count()<1:
+        raise RuntimeError("知识条目初始正文缺失")
     print("PASS Entry SEO/indexability shell")
 
     # Cross-type canonical Entry sampling: kiln, object, person, research, and an image-backed Entry.
@@ -92,8 +100,12 @@ with sync_playwright() as p:
             raise RuntimeError(f"{sample_name} meta description missing")
         if not page.locator("head script[type='application/ld+json']").count():
             raise RuntimeError(f"{sample_name} JSON-LD missing")
-        if page.locator("#wiki-entry-root .entry-static-content").count()<1:
-            raise RuntimeError(f"{sample_name} initial HTML body missing")
+        if page.locator("#wiki-entry-root.wiki-entry-card.wiki-entry-v2").count()<1:
+            raise RuntimeError(f"{sample_name} 未使用统一 Entry Detail 2.0 外壳")
+        if page.locator("#wiki-entry-root .wiki-entry-v2-grid").count()<1:
+            raise RuntimeError(f"{sample_name} 缺少统一双栏探索布局")
+        if page.locator("#wiki-entry-root .wiki-entry-body").count()<1:
+            raise RuntimeError(f"{sample_name} 初始正文缺失")
         if needs_image and page.locator("#wiki-entry-root img").count()<1:
             raise RuntimeError(f"{sample_name} image missing")
         print("PASS",sample_name,sample_slug)
