@@ -356,3 +356,33 @@ Phase 6C 第一轮全量 Research Pass 已完成。149 个 published Entry 全�
 2026 年 UNESCO 已将 Jingdezhen Handicraft Porcelain Industry Sites 列入世界遗产名录，五个组成部分及其原料—窑炉—生产—运输—社会组织链已成为 Phase 6C 核心证据框架。
 
 当前禁止 149→220；下一工作块为 Phase 6C-2 Evidence Deepening，优先世界遗产五组成部分、景德镇核心历史、核心人物、核心器物、核心文献、日本/东亚与全球传播链。详细状态见 .ai/PHASE_6C_RESEARCH_PASS.md。
+
+
+## 2026-09-20 Phase 6C-2 — Evidence Deepening 完成
+
+Phase 6C-2 按锁定的七条研究顺序完成第一轮 Evidence Deepening，目标从“Citation-ready 页面”推进到“有机构/原始证据支撑的 Knowledge Corpus”。
+
+### 本轮实际落地
+1. 世界遗产五组成部分：Town Area Porcelain Production Center、Hutian Ancient Kiln Site、Gaoling Porcelain Clay Mining Site、Changling Porcelain Stone Mining Site、Jiaotan Firewood Production Area。
+2. 景德镇核心历史 / 城市生产系统：景德镇窑、青花、御窑厂与原料—燃料—运输—城市生产链。
+3. 核心人物：唐英、郎廷极、年希尧、臧应选，以及王琦、王步、张松茂等现代人物证据深化。
+4. 核心馆藏器物：成化斗彩鸡缸杯、元青花折枝花纹八棱瓶。
+5. 核心文献：《天工开物》《陶成纪事碑记》。
+6. 日本 / 东亚：日本陶瓷、高丽青瓷；重点建立“吸收—转化—本土化”而非单向复制的研究边界。
+7. 全球影响：欧洲瓷器、殷弘绪跨文化观察与景德镇全球传播链。
+
+### 证据来源原则
+本轮优先使用 UNESCO、故宫博物院、大都会艺术博物馆、Smithsonian、景德镇市人民政府、景德镇市志、中国哲学书电子化计划等机构/原始材料。不把来源标题当作事实；不把单件器物推导成整个时代；不把督陶官/管理者自动写成具体器物制作者。
+
+### 生产结果
+- entry_content_admissions：75 PASS / 74 REVIEW / 0 BLOCK
+- 本轮提升：64 PASS → 75 PASS。
+- 本轮新增/深化 23 个高价值 Entry 的证据与研究正文。
+- 新增 migration：supabase/migrations/20260920_phase_6c2_evidence_deepening_v1.sql
+- 未修改 Seven Knowledge Worlds、316 World mappings、A+/A Recommendation Gate 或 Phase 4E 冻结内容。
+- 149 → 220 仍未启动；下一步先对剩余 74 REVIEW 做 A/B/C/D 价值分流，再决定哪些继续深化、哪些降级或合并。
+
+### 关键产品定义
+从这一轮开始，项目的核心内容建设正式以：
+景德镇陶瓷文明 Knowledge Corpus
+作为内部研究工作目标。
