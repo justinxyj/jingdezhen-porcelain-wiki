@@ -577,3 +577,54 @@ QA 后真实基线发生变化：149 个原始 Entry 中有 30 个被降级为 K
 - 16 个核心候选：r23、青花、外销瓷、日本出口瓷、有田窑、克拉克瓷、欧洲瓷器、日本陶瓷、VOC、伊斯兰陶瓷、伊斯兰世界与景德镇、欧洲与景德镇、朝鲜半岛与景德镇青花、中国风、东南亚与景德镇、二元配方。
 - 未安装 pgrouting/graph extension，因此不冒充精确 Brandes betweenness；需要正式数值时应离线导出图并计算。
 - Claim QA 后新增 8 条高价值 A/B edges。Network QA v7：88 connected、73 single_strong、10 multi_weak、19 isolated；340 relations，263 A/A+/B。
+
+
+## 2026-09-20 — Bridge Node Phase 2：15节点深度证据审查 COMPLETE
+
+直接从 Bridge Centrality Matrix 进入 15-node Claim-by-Claim Evidence QA。目标从“还能连谁”改为“哪一条有独立证据的边真正缩短两个知识/文明子网络的结构距离”。
+
+### Production result
+- A/A+/B evidence edges：273
+- graph nodes：161
+- Brandes normalized betweenness 已按当前图重新计算
+- 当前结构主轴：青花瓷、景德镇窑、外销瓷、欧洲瓷器
+- 青花 cross-group coverage：9
+- 新增 10 条结构性 A 边；4 条已有边完成 B→A 证据升级
+
+### 关键结构桥
+1. 青花瓷 → 欧洲瓷器（A）
+2. 外销瓷 → 东南亚陶瓷（A）
+3. 日本出口瓷 → 克拉克瓷（A）
+4. 克拉克瓷 → 欧洲瓷器（A）
+5. 伊斯兰世界与景德镇瓷 → 伊兹尼克陶瓷（A）
+6. 日本陶瓷 → 欧洲瓷器（A）
+7. 有田窑 → 朝鲜半岛陶瓷（A）
+8. 有田窑 → 荷兰东印度公司与瓷器贸易（A）
+9. 欧洲与景德镇瓷器 → 迈森瓷（A）
+10. 日本出口瓷 → 迈森瓷：B→A
+
+### 证据升级
+- 伊斯兰陶瓷 → 青花瓷：B→A
+- 克拉克瓷 → 伊斯兰陶瓷：B→A
+- 东南亚陶瓷 → 伊斯兰陶瓷：B→A
+
+### 文档
+- .ai/BRIDGE_NODE_PHASE_2_20260920.md
+- .ai/BRIDGE_CENTRALITY_MATRIX_20260920.md 已按 273-edge snapshot 重算
+- .ai/data/bridge_centrality_edges_20260920.csv 已刷新为当前 273 条 A/A+/B 边
+- .ai/PHASE_7_8_CROSS_CIVILIZATION_NETWORK_QA.md 已追加 v8
+
+### 阶段判断
+已经形成证据支持的反馈结构：
+- 朝鲜半岛 → 有田 → 日本出口瓷 → VOC → 欧洲
+- 景德镇青花 → Kraak → 有田/日本出口瓷 → 欧洲
+- 景德镇青花 → 伊斯兰陶瓷 → Iznik
+- 景德镇外销瓷 → 东南亚 → 伊斯兰世界
+- 景德镇/中国出口瓷 → 欧洲消费 → Meissen再生产
+
+这些是多条独立证据边组成的探索路径，不是单条历史事实。
+
+### 下一步冻结
+下一阶段不继续无差别增加 relation 数量。优先执行 Path-level Evidence QA：逐跳检查上述反馈回路的年代、方向、对象、证据类型和边界是否共同成立。任何新边仍必须独立满足 Claim → Evidence → Source → Boundary → Grade。
+
+版本：bridge-node-phase2-20260920
