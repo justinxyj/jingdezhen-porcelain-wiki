@@ -1,7 +1,14 @@
 /* Timeline interaction: each historical card opens one detail modal. */
 (function(){
   const esc=s=>String(s??'').replace(/[&<>\"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[m]));
-  const text=s=>{const parsed=new DOMParser().parseFromString(String(s||''),'text/html');return parsed.body.textContent||''};
+  const text=s=>{const parsed=new DOMParser().parseFromString(String(s||''),'text/html');return (parsed.body.textContent||'').replace(/\\s+/g,' ').trim()};
+  const entryIntro=e=>{
+    const summary=text(e?.zh?.summary||'');
+    if(summary)return summary;
+    const parsed=new DOMParser().parseFromString(String(e?.zh?.content||''),'text/html');
+    const first=parsed.body.querySelector('p');
+    return text(first?.textContent||'').slice(0,220);
+  };
   const safeHref=raw=>window.JDM_AUTH?.safeHref?.(raw)||'';
   function validMedia(e){
     const m=e?.media?.[0];
@@ -34,13 +41,12 @@
     const dialog=document.createElement('article');dialog.className='jdm-timeline-dialog';
     const closeButton=document.createElement('button');closeButton.className='jdm-timeline-close';closeButton.type='button';closeButton.setAttribute('aria-label','关闭');closeButton.textContent='×';
     const detail=document.createElement('div');detail.className='jdm-timeline-detail';
-    if(im){const imageHref=safeHref(im.path);if(imageHref){const wrap=document.createElement('div');wrap.className='jdm-timeline-image';const img=document.createElement('img');img.dataset.museumImage='1';img.src=imageHref;img.alt=String(im.title||e.zh?.title||e.slug);wrap.appendChild(img);detail.appendChild(wrap)}}
+    if(im){const imageHref=safeHref(im.path);if(imageHref){const wrap=document.createElement('div');wrap.className='jdm-timeline-image';const img=document.createElement('img');img.src=imageHref;img.alt=String(im.title||e.zh?.title||e.slug);img.loading='lazy';wrap.appendChild(img);detail.appendChild(wrap)}}
     const copy=document.createElement('div');copy.className='jdm-timeline-copy';
     const overline=document.createElement('div');overline.className='detail-overline';overline.textContent='历史节点';copy.appendChild(overline);
     const title=document.createElement('h3');title.textContent=String(e.zh?.title||e.slug);copy.appendChild(title);
     const meta=document.createElement('div');meta.className='detail-meta';if(m.period){const s=document.createElement('span');s.textContent=String(m.period);meta.appendChild(s)}if(m.map?.country){const s=document.createElement('span');s.textContent=String(m.map.country);meta.appendChild(s)}copy.appendChild(meta);
-    const p=document.createElement('p');p.textContent=text(e.zh?.content||'');copy.appendChild(p);
-    if(e.zh?.summary){const box=document.createElement('div');box.className='ai-summary';const b=document.createElement('b');b.textContent='简介';const sp=document.createElement('p');sp.textContent=text(e.zh.summary);box.append(b,sp);copy.appendChild(box)}
+    const p=document.createElement('p');p.className='jdm-timeline-intro';p.textContent=entryIntro(e)||'该历史节点暂无可公开展示的摘要。';copy.appendChild(p);
     const actions=document.createElement('div');actions.className='jdm-timeline-actions';
     if(source){const a=document.createElement('a');a.className='secondary';a.href=source;a.target='_blank';a.rel='noopener noreferrer';a.textContent='来源 ↗';actions.appendChild(a)}
     if(wikiHref){const a=document.createElement('a');a.className='secondary';a.href=wikiHref;a.target='_blank';a.rel='noopener noreferrer';a.textContent='维基百科 ↗';actions.appendChild(a)}
