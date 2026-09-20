@@ -503,3 +503,10 @@
 - 为39个Research Corpus写入claim_evidence_map。
 - 统一证据类型和置信度规则：考古/官方/原始文本/馆藏为高；现代研究解释为中；仅书目/档案目标为低。
 - 39条继续REVIEW，不因检索完成而自动升格。
+
+
+## 2026-09-20 — Phase 7.5 Evidence Triangulation & Dispute QA
+- 39条Research Corpus完成第二证据与争议治理。
+- 二元配方明确标记为争议问题，不再把元代起源当作无争议事实。
+- 跨区域传播、外销瓷、粉彩、文献和学术史材料均增加证据边界。
+- 39条仍保持Research Corpus，不因第二来源出现而自动升格。
