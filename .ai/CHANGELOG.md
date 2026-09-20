@@ -431,3 +431,13 @@
 - JDM_KNOWLEDGE.url() 改为 canonical static Entry URL；wiki-enhancements.js 支持静态首屏保留。
 - GitHub Pages workflow 在 MkDocs build 前执行静态 Entry 生成；Pages smoke 新增 canonical、description、JSON-LD、初始正文检查。
 - 本阶段仍未进入 149 → 220，等待最新构建/部署/线上验证后再继续。
+
+
+## 2026-09-20 — Phase 6A 收口
+- 完成 149 个 Canonical Entry 的静态页面生成与独立 URL。
+- 完成 canonical、description、OG、WebPage/Breadcrumb JSON-LD、初始 HTML、Entry sitemap。
+- Pages build/deploy 与部署后 browser smoke 全部成功。
+- 跨类型 Entry + 图片 + sitemap smoke 全部通过。
+- 修复 public media 读取边界：新增 `media_public` 安全投影，anon 不直接读取原始 media 表。
+- 清零 9 summary / 37 content / 22 source 缺口。
+- 更新 `.ai/ENTRY_SEO_HEALTH_MATRIX.md` 为第二轮 149 Entry 状态。
