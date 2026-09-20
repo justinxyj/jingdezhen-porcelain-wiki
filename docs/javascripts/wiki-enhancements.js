@@ -32,7 +32,7 @@
       (tags.length?'<div class="wiki-entry-v2-tags">'+tags.map(x=>'<span>'+esc(x)+'</span>').join('')+'</div>':'')+
       (worldLinks?'<div class="wiki-entry-world-path"><span>所属知识世界</span><div>'+worldLinks+'</div></div>':'')+
       '<div class="wiki-entry-v2-grid"><aside class="wiki-entry-v2-rail"><div class="wiki-entry-v2-card"><strong>知识节点</strong><span>'+esc(e.category||'知识')+'</span><span>'+esc(m.period||m.era||'时代信息待核')+'</span><span>'+esc(m.location||m.region||'空间信息待核')+'</span></div><div class="wiki-entry-v2-card"><strong>继续探索</strong><a href="'+ROOT+'search/">⌕ 搜索知识 →</a><a href="'+ROOT+'network/relations/">关系网络 →</a><a href="'+ROOT+'network/global/">全球陶瓷网络 →</a></div></aside><div class="wiki-entry-v2-main">'+
-      '<section class="wiki-entry-body"><h2>详细介绍</h2><div class="wiki-entry-text">'+esc(contentOrIntro(e,intro))+'</div></section>'+
+      '<section class="wiki-entry-body"><h2>详细介绍</h2><div class="wiki-entry-text">'+contentOrIntro(e,intro)+'</div></section>'+
       (relations.length?'<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">知识关系</div><h2>它与哪些知识相连</h2><div class="wiki-entry-v2-relations">'+relationCards+'</div></section>':'')+
       (e.timelineContext?'<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">时间与空间</div><h2>历史与空间</h2><p>'+esc(e.timelineContext.official_summary||e.timelineContext.relationship_to_jingdezhen||e.timelineContext.historical_role||'该条目具有可追溯的时间轴或历史语境信息。')+'</p>'+(safeHref(e.timelineContext.official_source_url)?'<a href="'+safeHref(e.timelineContext.official_source_url)+'" target="_blank" rel="noopener noreferrer">查看资料来源 ↗</a>':'')+'</section>':'')+
       (timelinePeers.length?'<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">同一时代</div><h2>同一时代，还可以看</h2><div class="wiki-entry-explore-grid">'+entryCards(timelinePeers,'同一时代')+'</div></section>':'')+
@@ -75,7 +75,15 @@
       '可沿当前 Knowledge World、相关器物、窑址、人物和文献继续追踪证据链。'
     ];
     [...tpl.content.querySelectorAll('p')].forEach(p=>{
-      if(generic.includes(plain(p.textContent||'')))p.remove();
+      if(generic.includes(plain(p.textContent||''))){
+        const prev=p.previousElementSibling;
+        if(prev?.tagName==='H2'&&['证据与来源','研究边界','继续研究'].includes(plain(prev.textContent||'').trim()))prev.remove();
+        p.remove();
+      }
+    });
+    [...tpl.content.querySelectorAll('h2')].forEach(h=>{
+      const t=plain(h.textContent||'').trim();
+      if(['证据与来源','研究边界','继续研究'].includes(t))h.remove();
     });
     const first=tpl.content.firstElementChild;
     if(first?.tagName==='P'&&summary&&plain(first.textContent||'').trim()===summary)first.remove();
