@@ -35,8 +35,10 @@ if "is_staff must be SECURITY INVOKER" in tests:
     errors.append("security test still contains old invoker contract")
 if "media_path_https_check" not in schema or "media_source_url_https_check" not in schema:
     errors.append("canonical media HTTPS constraints missing")
-if "revoke execute on function public.is_staff() from public, anon;" not in migration:
-    errors.append("final anon is_staff revoke missing")
+if "revoke all on function public.is_staff() from public, anon, authenticated;" in migration:
+    errors.append("obsolete public is_staff revoke contract remains")
+if "revoke all on function private.is_staff() from public;" not in migration or "grant execute on function private.is_staff() to authenticated, service_role;" not in migration:
+    errors.append("final private is_staff execution boundary missing")
 if "create or replace function public.entry_timeline_peers" not in migration:
     errors.append("final timeline peer function missing")
 if "create or replace function public.entry_space_peers" not in migration:
