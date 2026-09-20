@@ -459,3 +459,17 @@
 - 生产准入结果：64 PASS → 75 PASS；74 REVIEW；0 BLOCK。
 - 未修改 Seven Knowledge Worlds、316 World mappings、A+/A Recommendation Gate、Phase 4E 冻结内容。
 - 149 → 220 继续保持冻结。
+
+
+## 2026-09-20 — Phase 6C-2 Corpus QA Closeout
+- 完成 74 REVIEW 的 A/B/C/D Corpus 分流：A 5 / B 39 / C 30 / D 0。
+- 新增 corpus_node_type 与 canonical_eligible，30 个低独立价值关系型 Entry 正式降级为 Knowledge Node；仍保留 published 页面以维持探索连续性。
+- B 类 39 个 Entry 保留为 Research Corpus，不强行升级为 citation-ready。
+- Seven Knowledge Worlds、World mappings、A+/A recommendation gate、Phase 4E 冻结不变。
+
+## 2026-09-20 — Phase 7 Canonical Entry Growth
+- QA 后 Canonical eligible 基线从 149 调整为 119；新增 101 个有机构来源锚点的 Canonical Entry。
+- 当前：250 published entries / 220 canonical eligible / 30 Knowledge Nodes。
+- 新增内容覆盖景德镇生产系统、原料、窑炉、分工、器物与颜色釉、明清关键时期、东亚传播、欧洲贸易及博物馆对象。
+- 新增 Entry 当前以 review/develop 为主，后续必须进行 Evidence Deepening；不得把“进入 Canonical”误写成“学术研究完成”。
+- Phase 7 的 149→220 Canonical Growth Gate 已达成；下一门槛是 220→320，但必须先完成新增 Entry 的证据深化。
