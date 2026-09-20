@@ -82,6 +82,18 @@ with sync_playwright() as p:
         raise RuntimeError("知识条目仍暴露旧英文产品 UI")
     if page.locator("#wiki-entry-root .wiki-entry-body").count()<1:
         raise RuntimeError("知识条目初始正文缺失")
+    # The header is a synopsis, not a dump of the full article body.
+    header_summary=page.locator("#wiki-entry-root .entry-static-summary, #wiki-entry-root .wiki-entry-header p").first.inner_text().strip()
+    body_text=page.locator("#wiki-entry-root .wiki-entry-text, #wiki-entry-root .wiki-entry-body").first.inner_text().strip()
+    if len(header_summary)>320:
+        raise RuntimeError("知识条目页眉摘要过长，疑似把正文错误当作摘要")
+    if len(body_text)<20:
+        raise RuntimeError("知识条目正文内容过短")
+    if page.locator("#wiki-entry-root .wiki-entry-text h2, #wiki-entry-root .wiki-entry-text h3").count()==0 and len(body_text)>500:
+        raise RuntimeError("长篇 Entry 正文缺少标题层级，可能被渲染为不可读的纯文本")
+    generic_ui="本 Entry 的核心信息以页面列出的来源为证据入口"
+    if generic_ui in body_text:
+        raise RuntimeError("知识条目正文仍暴露通用证据模板文本")
 
     # Static SEO Entry pages have their own inline stylesheet because they are generated
     # outside the MkDocs shell. Verify every Entry 2.0 exploration component is styled,
