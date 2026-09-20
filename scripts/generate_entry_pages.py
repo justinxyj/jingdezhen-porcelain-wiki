@@ -363,8 +363,8 @@ def main() -> None:
 
     media_rows = fetch_rows(
         base, key, "media_public",
-        "id,entry_id,path,title,source,license,creator,source_tier,is_primary,created_at,status,review_state",
-        "status=eq.approved&review_state=eq.verified&limit=1000",
+        "id,entry_id,path,title,source,license,creator,source_tier,is_primary,created_at",
+        "limit=1000",
     )
     media_by_entry: dict[str, list[dict]] = {}
     for media in media_rows:
