@@ -644,3 +644,14 @@ The canonical static page must include the same core visual structure as dynamic
 - 静态 SEO generator 与动态 Entry renderer 同步处理正文结构、通用模板清理和阅读排版。
 - 回归测试新增：摘要长度、正文标题层级、通用模板泄漏检查。
 - 原则：摘要回答“这是什么”；正文回答“为什么重要/有哪些证据/研究边界是什么”；关系、时间、空间、工艺和来源承担继续探索，不把治理模板伪装成正文。
+
+
+## 2026-09-20 — Global Kiln Map Content / Media Integrity Repair
+- 用户实测 `museum/kiln-map/` 的地点弹层存在与 Entry 页面同源的正文污染：弹层直接把 `zh.content` 全文压成纯文本，导致“证据与来源 / 研究边界 / 继续研究”等治理模板与摘要重复出现。
+- 已修复 `docs/javascripts/global-kiln-map.js`：弹层优先使用 `zh.summary` 作为简洁正文；无 summary 时才从 content 提取首段；来源链接统一校验 HTTPS，并继续使用已有的 Entry/全球网络/统一搜索出口；图片继续通过公共媒体策略筛选。
+- 对生产媒体做全量窑址审查，发现同一条 The Met 42490/177595 “青花瓷关联图（视觉索引）”被错误复用到 64 个 Entry。该媒体本身属于被公共媒体策略明确拒绝的视觉索引，不应进入生产媒体表。
+- 已生产清理：删除上述 64 条错误复用媒体；为“石湾窑”补入 1 条可核验的南风古灶遗址现场图（Wikimedia Commons，CC BY 2.0，作者 xiquinhosilva），并作为主图使用。该图与石湾窑地理/遗址语境直接对应。
+- 新增可复现迁移：`supabase/migrations/20260920_kiln_map_media_cleanup_v1.sql`。
+- 新增 Pages Playwright smoke：石湾窑地图弹层必须使用摘要而非内部证据模板、必须有可核验图片、弹层链接不得退化为浏览器默认蓝色下划线。
+- 外部证据：Wikimedia Commons 文件页确认该南风古灶照片拍摄于佛山石湾、作者 xiquinhosilva、CC BY 2.0；广东官方资料也确认南风古灶位于佛山石湾并持续烧制石湾陶。
+- 后续规则冻结：窑址地图不得直接展示未经媒体策略筛选的 `media[0]`；地点弹层不得直接使用完整 `zh.content` 作为长正文；任何“关联图/视觉索引/占位/示意图”媒体不得进入公共窑址卡片。
