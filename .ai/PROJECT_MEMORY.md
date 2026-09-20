@@ -655,3 +655,13 @@ The canonical static page must include the same core visual structure as dynamic
 - 新增 Pages Playwright smoke：石湾窑地图弹层必须使用摘要而非内部证据模板、必须有可核验图片、弹层链接不得退化为浏览器默认蓝色下划线。
 - 外部证据：Wikimedia Commons 文件页确认该南风古灶照片拍摄于佛山石湾、作者 xiquinhosilva、CC BY 2.0；广东官方资料也确认南风古灶位于佛山石湾并持续烧制石湾陶。
 - 后续规则冻结：窑址地图不得直接展示未经媒体策略筛选的 `media[0]`；地点弹层不得直接使用完整 `zh.content` 作为长正文；任何“关联图/视觉索引/占位/示意图”媒体不得进入公共窑址卡片。
+
+
+## 2026-09-20 — Kiln Atlas Isolation / Technology Tree Light-Mode Regression
+- 用户实测 museum/kiln-map/ 在媒体清理后的版本中整页没有窑址内容；CI 同步复现：#kiln-map .global-kiln-list-item 20 秒内没有出现。
+- 根因不是窑址坐标消失，而是窑址地图此前依赖 JDM_KNOWLEDGE.all() 完成“全部 Entry + 全量媒体 + timeline_context”后才渲染；任一辅助数据请求失败都会阻断整个地图。
+- 已新增 JDM_KNOWLEDGE.kilnAtlas()：只查询已发布“窑址”Entry 作为地图主数据；媒体是可选 enrichment，媒体查询失败不会阻断窑址列表/坐标/地图。
+- global-kiln-map.js 已改为优先调用 kilnAtlas()，并在异常时显示明确的加载错误，而不是留下空白页面。
+- 2026-09-20 CI 已真实复现该故障：主页、时间轴、原有窑址地图页面壳等均 PASS，新增窑址地图弹层 smoke 在等待第一张窑址卡时超时；因此此前不能把部署 smoke 视为通过。
+- 技术树另发现一个明确 CSS 回流：[data-md-color-scheme="slate"] .tech-detail-grid>div,.tech-entry-card 的逗号选择器使 .tech-entry-card 在浅色模式也套用了深色背景，造成用户截图中的“历史”卡片深灰底、默认蓝色链接。已收紧为两个完整的 dark-mode 选择器。
+- 后续规则：地图主数据与辅助媒体/时间轴数据必须解耦；观察型页面不能因单一 enrichment 请求失败而整体空白。深色主题选择器不得省略主题祖先作用域。
