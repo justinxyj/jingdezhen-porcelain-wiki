@@ -492,3 +492,29 @@
 - [x] H-5：数据库安全测试与 private.is_staff 契约一致。
 - [x] M-1～M-6：类型、生命周期、错误分类、截断状态、输入契约与媒体边界完成本轮收口。
 - [ ] 最终 CI / Pages / 浏览器真实线上验收：待本轮最新提交全部通过后关闭本工作块。
+
+
+## Phase 6 — Growth Foundation
+### Phase 6A — Entry SEO / Indexability
+- [ ] 对 149 个 published Entry 建立全量 SEO Health Matrix
+- [ ] 核验 title / description / H1 / canonical
+- [ ] 核验正文是否可被搜索引擎发现
+- [ ] 核验 Schema.org / OpenGraph / Breadcrumb
+- [ ] 核验主图 / ALT / 来源 / 内链
+- [ ] 核验 sitemap / robots / canonical 一致性
+- [ ] 核验移动端与非 JS 可发现性
+- [ ] 修复系统性问题后执行构建、部署、线上页面自动检查
+
+### Phase 6B — Content Admission
+- [ ] 建立 .ai/ENTRY_SEO_HEALTH_MATRIX.md
+- [ ] 固化 Canonical Content Admission v1
+- [ ] 建立 Jingdezhen Search Knowledge Map
+- [ ] 形成 149 → 220 第一批内容候选
+
+### Phase 6 明确非目标
+- [ ] 不重新设计首页/七大 Knowledge World
+- [ ] 不增加第 8 个 Knowledge World
+- [ ] 不机械增加 World mappings / recommendation edges
+- [ ] 不重新打开已封版 Phase 4E
+- [ ] 不建立第二事实数据库
+- [ ] 不做大规模 CSS 重构或 AI SEO 垃圾内容
