@@ -76,6 +76,18 @@
     const result=rows.map(e=>({...e,media:canonicalMedia(mm.get(e.id)||[]),timelineContext:cm.get(e.id)||null}));
     result.forEach(e=>cache.set(e.slug,e));return result;
   }
+  async function kilnAtlas({limit=250}={}){
+    const max=Math.max(1,Math.min(250,Number(limit)||250));
+    const rows=window.JDM_CONTRACT.entries(await query((db,s)=>db.from('entries').select('id,slug,category,zh,en,ja,sources,status,version,updated_at').eq('status','published').eq('category','窑址').order('updated_at',{ascending:false}).order('id',{ascending:true}).range(0,max-1).abortSignal(s)));
+    if(!rows.length)return [];
+    const ids=rows.map(e=>e.id); let media=[];
+    try{
+      const mediaResult=await query((db,s)=>db.from('media_public').select('id,entry_id,path,title,source,license,creator,captured_at,location,created_at,usage_type,source_tier,is_primary,canonical_key,source_url,source_type').in('entry_id',ids).order('is_primary',{ascending:false}).order('source_tier',{ascending:true}).order('created_at',{ascending:true}).order('id',{ascending:true}).abortSignal(s));
+      media=canonicalMedia(window.JDM_CONTRACT.mediaList(mediaResult));
+    }catch(error){console.warn('[JDM kiln atlas] media enrichment unavailable; keeping kiln entries usable',error)}
+    const mm=new Map();media.forEach(m=>{if(!mm.has(m.entry_id))mm.set(m.entry_id,[]);mm.get(m.entry_id).push(m)});
+    return rows.map(e=>({...e,media:mm.get(e.id)||[]}));
+  }
   async function all(){
     if(allPromise)return allPromise;
     state={status:'loading',error:null,updatedAt:state.updatedAt};
@@ -496,5 +508,5 @@
   }
   async function byCategory(category,limit=250){return list({category,limit})}
   function url(e){return e?'/jingdezhen-porcelain-wiki/entry/'+encodeURIComponent(e.slug)+'/':'/jingdezhen-porcelain-wiki/'}
-  window.JDM_KNOWLEDGE={all,get,list,worlds,byWorld,worldOverview,entryContext,entryNetworkContext,craftProcesses,craftProcessContext,objectAtlas,personAtlas,graph,recommendations,eraGroup:eraGroupFor,searchEntries,searchDiscovery,searchDiscoveryPage,byCategory,url,state:()=>({...state}),reset:()=>{allPromise=null;searchIndexPromise=null;cache.clear();state={status:'idle',error:null,updatedAt:null}}};
+  window.JDM_KNOWLEDGE={all,kilnAtlas,get,list,worlds,byWorld,worldOverview,entryContext,entryNetworkContext,craftProcesses,craftProcessContext,objectAtlas,personAtlas,graph,recommendations,eraGroup:eraGroupFor,searchEntries,searchDiscovery,searchDiscoveryPage,byCategory,url,state:()=>({...state}),reset:()=>{allPromise=null;searchIndexPromise=null;cache.clear();state={status:'idle',error:null,updatedAt:null}}};
 })();
