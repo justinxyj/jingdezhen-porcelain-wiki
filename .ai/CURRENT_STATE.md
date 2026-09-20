@@ -451,3 +451,12 @@
 
 ## Phase 6A Final State — 2026-09-20
 Phase 6A closed. The published Entry layer is now statically discoverable and independently indexable. 149/149 published Entries have summary, body, source and primary Knowledge World mapping. Pages build/deploy and browser smoke passed, including cross-type Entry checks, image-backed Entry, and >=149 Entry sitemap URLs. Public media access is isolated through `media_public`.
+
+
+## 2026-09-20 — Static Entry visual regression fixed
+- 用户反馈 `/entry/<slug>/` 新生成页面与原 Entry Detail 视觉体系不统一：出现默认浏览器式排版、关系/来源信息裸露、层级感弱。
+- 根因：SEO canonical static generator `scripts/generate_entry_pages.py` 生成的是独立 HTML，使用内联简化 CSS，绕过 MkDocs Material + `wiki.css` 中已经验证的 Entry Detail 2.0（`wiki-entry-v2`）视觉系统。
+- 已修复：重写静态 Entry 内联 CSS，使其与既有 Entry Detail 2.0 的间距、字体、蓝灰色层级、关系卡片、来源卡片、Knowledge World 标签保持统一；未修改知识事实数据、关系数据或推荐门槛。
+- commit: 5530dbde5917c6d884e1f3dba6682eb6fcce091b
+- 部署流程仍会在 MkDocs build 前自动运行静态 Entry generator，因此下一次 Pages 构建会重新生成全部 canonical Entry 页面。
+- 下一步：部署完成后只做 Entry 页面视觉回归（首页 → Entry → 关系/来源/继续探索），不做无关 CSS 大重构。
