@@ -535,3 +535,14 @@ Phase 6A closed. The published Entry layer is now statically discoverable and in
 - 修复后 smoke 已能进入石湾窑弹层检查，说明地图目录/Entry 数据链已恢复。
 - 第二个问题随后暴露：石湾窑新补图片在 media 表中 review_state=verified，但 status 仍为 pending；media_public 视图只公开 status=approved 且 review_state=verified，因此浏览器拿不到图片。已将该媒体批准为 approved，并修正原始 migration，避免未来重放后再次丢图。
 - 该故障说明媒体“核验”和“公开发布”是两个状态，新增媒体必须同时满足 status=approved + review_state=verified 才能进入 public UI。
+
+
+## 2026-09-20 — AI Memory Maintenance Freeze / UI Fixes Confirmed External
+- 用户确认本轮两个 UI 问题已经由用户侧修复，本 AI 不再继续修改或重复处理：
+  1. `/craft/technology-tree/` 的“历史”板块浅色模式字体/颜色异常；
+  2. `/museum/kiln-map/` 窑址地图内容消失问题。
+- 后续如再次看到相关截图或回归，先以当前生产版本和 CI 实际结果核验，不根据旧截图重复实施修复。
+- 从本节点开始，继续保持 `.ai/` AI 长期记忆模块：任何实质性代码、数据库、数据治理、架构、部署、测试、产品决策或用户明确确认的状态变化，都必须在对应工作完成后同步记录到 `.ai/CURRENT_STATE.md`、`.ai/PROJECT_MEMORY.md`，必要时同步 `.ai/TASKS.md` / `.ai/CHANGELOG.md`。
+- AI 接管时必须优先读取记忆模块，并以最新 `main`、Supabase 生产状态和 CI 为准；记忆与线上状态冲突时，以可验证的生产状态为准，然后修正记忆。
+- 不把一次性排查过程误记为长期事实；记录“根因、修复、验证、当前状态、下一步/冻结边界”，避免下一次会话重复做已经完成的工作。
+- 对已明确“不要管”的问题，除非出现新的回归证据，否则保持冻结，不重新打开工作块。

@@ -656,3 +656,11 @@ Phase 6B/6C：Canonical Content Admission 与 Entry SEO Health 深化；优先�
 - [x] Hobson/Needham/Finlay学术史归因
 - [x] 《陶说》原文与现代考古边界核验
 - [ ] Phase 7.6 Canonical Admission Decision
+
+
+## AI Memory Maintenance — ongoing
+- [x] 建立并持续使用 `.ai/` 长期记忆模块作为项目接管依据
+- [x] 本次明确记录“技术树历史样式问题、窑址地图内容消失问题已由用户修复，不再重复处理”
+- [x] 固化记忆更新规则：代码/DB/架构/部署/测试/产品状态发生实质变化后同步更新记忆
+- [ ] 每次新工作块结束时检查 CURRENT_STATE / PROJECT_MEMORY / TASKS / CHANGELOG 是否需要同步
+- [ ] 每次接管时以最新 main + Supabase + CI 校验记忆，发现漂移立即修正

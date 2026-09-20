@@ -35,7 +35,7 @@ theme:
         name: 切换到浅色模式
 
 extra_css:
-  - https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css
+  - https://unpkg.com/leaflet@1.9.4/dist/leaflet.css
   - stylesheets/museum.css
   - stylesheets/wiki.css
   - stylesheets/timeline-comparison.css
@@ -57,7 +57,7 @@ extra_css:
   - stylesheets/entry-search.css
   - stylesheets/global-network.css
 extra_javascript:
-  - https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js
+  - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
   - javascripts/runtime-config.js
   - https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2
   - javascripts/auth-manager.js
