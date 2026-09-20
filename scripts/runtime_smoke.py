@@ -32,7 +32,7 @@ def check_entries():
     print(f"PASS entries={len(data)}")
 
 def check_media():
-    data=expect_ok("media",{"select":"id,entry_id,path","limit":"5"})
+    data=expect_ok("media_public",{"select":"id,entry_id,path","limit":"5"})
     if any("status" in x or "review_state" in x for x in data):
         raise RuntimeError("media leaked internal review columns")
     print(f"PASS public_media={len(data)}")
