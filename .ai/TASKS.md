@@ -604,3 +604,13 @@ Phase 6B/6C：Canonical Content Admission 与 Entry SEO Health 深化；优先�
 - [x] published entries 扩展至 250；220 个具备 Canonical Entry 资格
 - [ ] Phase 7 后续：对新增 101 Entry 进行 Evidence Deepening / Citation Readiness 提升
 - [ ] 下一增长门：220 → 320，必须先完成本轮新增 Entry 的证据深化与 Corpus QA
+
+
+## 2026-09-20 — Phase 7.1
+- [x] 101 Phase 7 growth Entries Evidence Deepening complete
+- [x] 101 Entries promoted Review/Develop → Citation-ready PASS
+- [x] 39 Research Corpus Entries rechecked and retained as B_research / REVIEW
+- [x] Evidence deepening governance recorded as phase7.1-v1
+- [x] 220 Canonical-eligible baseline preserved
+- [ ] 74 remaining REVIEW deepening / Corpus QA
+- [ ] 220 → 320 growth remains frozen until REVIEW corpus is cleared or intentionally retained
