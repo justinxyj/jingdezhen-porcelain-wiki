@@ -312,10 +312,10 @@ footer{margin-top:30px;padding-top:15px;border-top:1px solid var(--line);color:#
 </head>
 <body>
 <main>
-<nav class="entry-static-nav"><a href="{SITE_URL}">首页</a> / <a href="{SITE_URL}entry/">Entry</a> / {html.escape(title)}</nav>
+<nav class="entry-static-nav"><a href="{SITE_URL}">首页</a> / <a href="{SITE_URL}entry/">知识条目</a> / {html.escape(title)}</nav>
 <article id="wiki-entry-root" data-entry-slug="{html.escape(slug, quote=True)}" data-static-rendered="true">
 <header>
-<div><small>Entry · {html.escape(str(entry.get("category") or "Knowledge"))}</small>
+<div><small>知识条目 · {html.escape(str(entry.get("category") or "知识"))}</small>
 <h1>{html.escape(title)}</h1>
 <p class="entry-static-summary">{html.escape(intro)}</p></div>
 {image_html}
@@ -324,7 +324,7 @@ footer{margin-top:30px;padding-top:15px;border-top:1px solid var(--line);color:#
 <section class="entry-static-content"><h2>详细介绍</h2>{body_html}</section>
 <section class="entry-static-relations"><h2>继续探索</h2><ul>{relation_html}</ul></section>
 <section class="entry-static-sources"><h2>来源与外部资料</h2><ul>{source_links(zh.get("sources") or entry.get("sources") or [])}</ul></section>
-<footer>本页面为公开 Canonical Entry；页面正文、来源与媒体由项目知识库维护。</footer>
+<footer>本页面为公开正式知识条目；页面正文、来源与媒体由项目知识库维护。</footer>
 </article>
 </main>
 <script>
