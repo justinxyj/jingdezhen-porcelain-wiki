@@ -497,3 +497,9 @@
 - Research Corpus现为37 mapped / 2 bibliographic_primary_target / 0 target_defined。
 - 保持39条Research Corpus整体REVIEW，不因找到来源而自动晋级。
 - 当前181 PASS / 69 REVIEW / 0 BLOCKED；220 Canonical-eligible不变。
+
+
+## 2026-09-20 — Phase 7.4 Claim-by-Claim Evidence Synthesis
+- 为39个Research Corpus写入claim_evidence_map。
+- 统一证据类型和置信度规则：考古/官方/原始文本/馆藏为高；现代研究解释为中；仅书目/档案目标为低。
+- 39条继续REVIEW，不因检索完成而自动升格。
