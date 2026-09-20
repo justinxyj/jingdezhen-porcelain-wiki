@@ -209,3 +209,23 @@ Network QA v3：connected 70、single_strong 50、multi_weak 11、isolated 59。
 190 个 Canonical 中，至少有一个 A/B evidence-grade edge 的节点达到 131/190（68.9%）。
 
 关系仍严格遵循既有 schema；没有批量 C→A/B，也没有把“风格相似”自动解释成技术传播。比较窑业关系统一标明为 comparative/contextual，具体传播或影响仍需对象/考古/文献证据支持。
+
+
+## v4 Second-Layer Civilization Network — 2026-09-20
+
+本轮不再以“孤立节点 → 景德镇”作为主要策略，而是建立第二层 Network Chain：Entry → regional/market/documentary node → civilizational node → comparison/feedback node。
+
+新增 77 条 evidence-graded relation edges，形成多跳链：
+- 景德镇青花 → 日本市场 → 有田/日本陶瓷 → 东亚比较层。
+- 景德镇外销瓷 → 欧洲 → 代尔夫特 → 中国风 → 迈森/欧洲瓷器。
+- 青白瓷 → 伊斯兰世界 → 外销网络。
+- 二元配方 → 高岭土/瓷石 → 欧洲瓷器技术史；该技术链使用 UNESCO 明确表述的“important inspiration and influence”边界。
+- 克拉克瓷 → 青花/贸易机构 → 欧洲网络。
+- 朝鲜半岛 → 朝鲜王朝 → 日本陶瓷，建立东亚比较层，但不声称直接技术传播。
+- 《陶说》、朱琰、王士性、殷弘绪、杜赫德、《天工开物》形成文献/人物交叉网络。
+- 粉彩技术 → 釉上彩 → 粉彩瓷，并接入欧洲瓷器比较层。
+
+Network QA v4：connected 74、single_strong 46、multi_weak 11、isolated 59。
+190 Canonical 中至少一个 A/B evidence-grade edge 的节点达到 131/190；关系总量 270，其中 A/A+/B 为 193。
+
+重要治理规则：多跳路径不等于单条边的证据强度。每一条 Relation 仍必须单独满足 Claim → Evidence → Source → Boundary → Grade；图上的路径只能用于探索，不可把路径推导结果当作已证实事实。
