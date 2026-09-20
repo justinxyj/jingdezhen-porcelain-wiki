@@ -231,3 +231,34 @@ Phase 6C 不再以“Entry 数量”作为 KPI。
 > 让真正值得独立存在的 Entry 成为可以被学术资料、搜索引擎和 AI 稳定引用的知识节点。
 
 只有完成这一轮，才重新评估 149 → 220。
+
+
+## Phase 6C-2 — Evidence Deepening（已完成第一轮）
+
+更新时间：2026-09-20
+
+### 锁定顺序与完成状态
+1. 世界遗产五组成部分 — 完成
+2. 景德镇核心历史 / 城市生产系统 — 完成
+3. 核心人物 — 完成第一轮高价值 Entry 深化
+4. 核心馆藏器物 — 完成第一轮 Object Profile 深化
+5. 核心文献 — 完成第一轮
+6. 日本 / 东亚传播 — 完成第一轮
+7. 全球陶瓷文明影响 — 完成第一轮
+
+### 生产结果
+- 149 published Entry
+- 75 Citation-ready
+- 74 Evidence / Boundary Review
+- 0 BLOCK
+
+### 明确没有做
+- 没有增加第 8 个 Knowledge World；
+- 没有修改 316 条 World mappings；
+- 没有修改 A+/A Recommendation Gate；
+- 没有重新打开 Phase 4E；
+- 没有建立第二事实数据库；
+- 没有开始 149 → 220。
+
+### 下一步
+先对剩余 74 REVIEW 做 A/B/C/D 分流：A 深化 / B 重写 / C 降级为关系节点 / D 候选合并。只有分流完成并经过 Corpus QA，才重新评估 149 → 220。
