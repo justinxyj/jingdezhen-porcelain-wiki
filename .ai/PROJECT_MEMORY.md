@@ -479,3 +479,12 @@ QA 后真实基线发生变化：149 个原始 Entry 中有 30 个被降级为 K
 - Citation readiness remains REVIEW; retrieval is not equivalent to claim-by-claim evidence synthesis.
 - Current: 250 published / 220 Canonical-eligible / 30 Knowledge Nodes / 181 citation-ready / 69 REVIEW / 0 blocked.
 - 220 → 320 remains frozen.
+
+
+## 2026-09-20 — Phase 7.4 Claim-by-Claim Evidence Synthesis COMPLETE
+- 39/39 Research Corpus entries now have `claim_evidence_map`.
+- Each map distinguishes claim type, evidence/source, evidence type, confidence, and boundary.
+- Archaeological facts, official records, primary historical testimony, institutional records, scholarly interpretations, and scholarly/biographical records are explicitly separated.
+- 37 Research Corpus entries have mapped primary evidence; 2 remain bibliographic-primary targets and therefore carry low confidence for claim synthesis.
+- All 39 remain REVIEW; no automatic promotion from evidence retrieval.
+- 220 → 320 remains frozen.
