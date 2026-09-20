@@ -193,8 +193,18 @@ with sync_playwright() as p:
 
     # Global kiln map modal regression: content must use the concise Entry summary,
     # not the internal evidence boilerplate, and media must pass the public media policy.
+    browser_errors=[]
+    browser_console=[]
+    page.on("pageerror",lambda err: browser_errors.append(str(err)))
+    page.on("console",lambda msg: browser_console.append(f"{msg.type}: {msg.text}") if msg.type in ("error","warning") else None)
     page.goto(base+"museum/kiln-map/",wait_until="networkidle",timeout=30000)
-    page.locator("#kiln-map .global-kiln-list-item").first.wait_for(state="visible",timeout=20000)
+    try:
+        page.locator("#kiln-map .global-kiln-list-item").first.wait_for(state="visible",timeout=20000)
+    except Exception:
+        print("KILN MAP PAGE ERRORS:",browser_errors)
+        print("KILN MAP CONSOLE:",browser_console)
+        print("KILN MAP HTML:",page.locator("#kiln-map").inner_text()[:2000])
+        raise
     shiwan=page.locator('#kiln-map .global-kiln-list-item[data-slug="shiwan-kiln"]')
     if shiwan.count()!=1:
         raise RuntimeError("窑址地图缺少石湾窑条目")
