@@ -270,21 +270,44 @@ def entry_html(entry: dict, world_by_entry: dict[str, list[dict]],
 {f'<meta property="og:image" content="{html.escape(image_url, quote=True)}">' if image_url else ""}
 <script type="application/ld+json">{schema_json}</script>
 <style>
-body{{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans CJK SC",sans-serif;background:#f7f7f5;color:#202020;line-height:1.8}}
-main{{max-width:1120px;margin:0 auto;padding:32px 20px 64px}}
-.entry-static-nav{{font-size:14px;margin-bottom:24px}}
-.entry-static-nav a{{color:#666;text-decoration:none}}
-article{{background:#fff;border-radius:18px;padding:32px;box-shadow:0 8px 30px rgba(0,0,0,.06)}}
-h1{{font-size:clamp(32px,5vw,52px);line-height:1.15;margin:0 0 18px}}
-h2{{margin-top:34px}}
-.entry-static-summary{{font-size:20px;color:#555}}
-.entry-static-cover{{margin:28px 0}}
-.entry-static-cover img{{display:block;max-width:100%;max-height:620px;object-fit:contain;border-radius:12px}}
-.entry-static-cover figcaption{{font-size:13px;color:#777;margin-top:8px}}
-.entry-static-worlds,.entry-static-explore{{display:flex;gap:10px;flex-wrap:wrap}}
-.entry-static-worlds a,.entry-static-explore a{{display:inline-block;padding:7px 12px;border:1px solid #ddd;border-radius:999px;text-decoration:none;color:#333}}
-.entry-static-sources a,.entry-static-relations a{{color:#315b8f}}
-footer{{margin-top:24px;color:#777;font-size:13px}}
+:root{--ink:#10233f;--muted:#6f8092;--line:rgba(7,26,53,.09);--blue:#1455b8;--paper:#fff;--soft:rgba(20,85,184,.035)}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans CJK SC","PingFang SC",sans-serif;background:#f7f8fa;color:var(--ink);line-height:1.8}
+main{max-width:1180px;margin:0 auto;padding:26px 24px 72px}
+.entry-static-nav{font-size:12px;margin:0 0 18px;color:#8291a0}
+.entry-static-nav a{color:#6d7d8d;text-decoration:none}
+.entry-static-nav a:hover{color:var(--blue)}
+article{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:30px 32px 42px;box-shadow:0 10px 35px rgba(18,38,63,.055)}
+header{display:flex;justify-content:space-between;gap:2rem;align-items:flex-start;padding:4px 0 20px;border-bottom:1px solid var(--line)}
+header>div{min-width:0}
+header small{display:block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#7b8ea3;font-weight:800}
+h1{font-family:Georgia,"Noto Serif SC","Songti SC",serif;font-size:clamp(36px,5vw,58px);line-height:1.12;margin:.35rem 0 .75rem;color:#081a30}
+.entry-static-summary{max-width:760px;margin:0;color:#556777;font-size:15px;line-height:1.95}
+.entry-static-cover{width:min(360px,38%);margin:0;flex:0 0 auto}
+.entry-static-cover img{display:block;width:100%;max-height:300px;object-fit:contain;border-radius:12px}
+.entry-static-cover figcaption{font-size:10px;color:#8291a0;margin-top:7px}
+.entry-static-worlds{display:flex;flex-wrap:wrap;gap:7px;margin:16px 0 20px;padding:12px 14px;border:1px solid rgba(20,85,184,.11);border-radius:14px;background:var(--soft)}
+.entry-static-worlds:before{content:"所属 Knowledge World";display:block;width:100%;font-size:9px;font-weight:800;letter-spacing:.12em;color:#6d8096}
+.entry-static-worlds a{display:inline-flex;align-items:center;padding:7px 10px;border-radius:999px;background:#fff;border:1px solid rgba(20,85,184,.13);color:var(--blue);text-decoration:none;font-size:10px;font-weight:750}
+section{margin:2.5rem 0;padding-top:1.5rem;border-top:1px solid var(--line)}
+section:first-child{margin-top:0;padding-top:0;border-top:0}
+section h2{margin:.2rem 0 .8rem;font-size:25px;color:#0b2039}
+section p,section li{line-height:1.95}
+.entry-static-content{max-width:860px}
+.entry-static-content h2:before{content:"";display:inline-block;width:4px;height:22px;margin-right:10px;border-radius:3px;background:var(--blue);vertical-align:-2px;opacity:.75}
+.entry-static-relations{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem;list-style:none;padding:0;margin:1rem 0 0}
+.entry-static-relations li{display:flex;flex-direction:column;gap:.3rem;padding:.9rem 1rem;border:1px solid var(--line);border-radius:12px;background:linear-gradient(180deg,#fff,#fbfcfd);transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+.entry-static-relations li:hover{transform:translateY(-2px);border-color:rgba(20,85,184,.25);box-shadow:0 10px 22px rgba(20,85,184,.07)}
+.entry-static-relations li a{order:2;text-decoration:none;color:#10233f;font-size:.95rem;font-weight:700}
+.entry-static-relations li span{order:1;font-size:.66rem;text-transform:uppercase;letter-spacing:.08em;color:#7b8ea3}
+.entry-static-relations li a:after{content:"  →";color:var(--blue);font-weight:500}
+.entry-static-sources{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0}
+.entry-static-sources li{list-style:none}
+.entry-static-sources a{display:inline-flex;padding:8px 11px;border:1px solid var(--line);border-radius:10px;text-decoration:none;color:var(--blue);font-size:11px;background:#fff}
+.entry-static-sources a:hover{border-color:rgba(20,85,184,.28)}
+footer{margin-top:30px;padding-top:15px;border-top:1px solid var(--line);color:#8291a0;font-size:11px}
+@media(max-width:900px){header{flex-direction:column}.entry-static-cover{width:min(100%,520px)}.entry-static-relations{grid-template-columns:1fr}}
+@media(max-width:600px){main{padding:16px 12px 48px}article{padding:22px 18px 30px}h1{font-size:42px}.entry-static-summary{font-size:14px}}
 </style>
 </head>
 <body>
