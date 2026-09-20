@@ -21,7 +21,7 @@ ROUTES=[
     ("人物数据库","museum/people/","body"),
     ("72工序","craft/technology-tree/", "#porcelain-tech-tree"),
     ("图片馆","museum/gallery/","body"),
-    ("知识条目","entry/?slug=blue-and-white", "#wiki-entry-root"),
+    ("知识条目","entry/blue-and-white/", "#wiki-entry-root"),
     ("知识网络","network/","body"),
     ("关系探索","network/relations/","body"),
     ("全球陶瓷网络","network/global/","body"),
@@ -62,6 +62,19 @@ with sync_playwright() as p:
         if overflow:
             raise RuntimeError(f"{name} has horizontal overflow")
         print("PASS",name)
+
+    # SEO/indexability smoke for a canonical static Entry page.
+    page.goto(base+"entry/blue-and-white/",wait_until="domcontentloaded",timeout=30000)
+    page.locator("#wiki-entry-root h1").first.wait_for(state="visible",timeout=10000)
+    if page.locator("head link[rel=canonical]").get_attribute("href") != base+"entry/blue-and-white/":
+        raise RuntimeError("Entry canonical URL mismatch")
+    if not page.locator("head meta[name=description]").get_attribute("content"):
+        raise RuntimeError("Entry meta description missing")
+    if not page.locator("head script[type='application/ld+json']").count():
+        raise RuntimeError("Entry JSON-LD missing")
+    if page.locator("#wiki-entry-root .entry-static-content").count()<1:
+        raise RuntimeError("Entry initial HTML body missing")
+    print("PASS Entry SEO/indexability shell")
 
     for name,path in [("历史世界","history/"),("工艺世界","craft/"),("器物世界","objects/"),("空间世界","kilns/"),("人物世界","people/"),("文献世界","research/"),("现代世界","contemporary/")]:
         page.goto(base+path,wait_until="networkidle",timeout=30000)
