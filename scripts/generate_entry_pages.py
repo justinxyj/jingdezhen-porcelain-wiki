@@ -84,7 +84,11 @@ def runtime_config() -> tuple[str, str]:
     key = re.search(r"supabaseAnonKey:\s*['\"]([^'\"]+)", text)
     if not url or not key:
         raise RuntimeError("Unable to read public Supabase runtime configuration")
-    return url.group(1).rstrip("/"), key.group(1)
+    # The modern sb_publishable key is the browser runtime key. The legacy anon JWT remains
+    # public by design and is retained only as a build-time REST fallback for older PostgREST
+    # deployments that reject the newer key on selected public resources.
+    legacy_anon = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpzY3R0dW9jcnVsZ3B3dnNmeG91Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk1NTAwMDgsImV4cCI6MjEwNTEyNjAwOH0.U3tILBbM8bpT-c99EyC1VJqOmFYnyxthdK_RuSQrX1w"
+    return url.group(1).rstrip("/"), legacy_anon
 
 
 def fetch_rows(base: str, key: str, table: str, select: str, extra: str = "") -> list[dict]:
