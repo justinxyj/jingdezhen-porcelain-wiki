@@ -82,6 +82,27 @@ with sync_playwright() as p:
         raise RuntimeError("知识条目仍暴露旧英文产品 UI")
     if page.locator("#wiki-entry-root .wiki-entry-body").count()<1:
         raise RuntimeError("知识条目初始正文缺失")
+
+    # Static SEO Entry pages have their own inline stylesheet because they are generated
+    # outside the MkDocs shell. Verify every Entry 2.0 exploration component is styled,
+    # so a JS-rendered component can never silently fall back to browser-blue bare links.
+    component_css=page.evaluate("""() => {
+        const root=document.querySelector('#wiki-entry-root');
+        const host=document.createElement('div');
+        host.style.position='absolute'; host.style.left='-99999px';
+        host.innerHTML='<a class="wiki-entry-world-link" href="#">world</a><div class="wiki-entry-explore-grid"><a class="wiki-entry-explore-card" href="#">explore</a></div><div class="wiki-entry-craft-list"><a href="#">craft</a></div><div class="wiki-recommendation-grid"><a class="wiki-recommendation-card" href="#">recommend</a></div><div class="wiki-entry-v2-relations"><a href="#">relation</a></div>';
+        (root||document.body).appendChild(host);
+        const nodes=[...host.querySelectorAll('a')];
+        const result=nodes.map(n=>{const s=getComputedStyle(n);return {cls:n.className,display:s.display,color:s.color,textDecoration:s.textDecorationLine,border:s.borderTopWidth,bg:s.backgroundColor}});
+        host.remove();
+        return result;
+    }""")
+    for item in component_css:
+        if item['display'] in ('inline','inline-block') and item['cls'] != 'wiki-entry-world-link':
+            raise RuntimeError("Entry exploration component is not rendered as a card: "+repr(item))
+        if item['color'] == 'rgb(0, 0, 238)' or item['textDecoration'] == 'underline':
+            raise RuntimeError("Entry exploration component fell back to browser-blue link styling: "+repr(item))
+    print("PASS Entry 2.0 component styling parity")
     print("PASS Entry SEO/indexability shell")
 
     # Cross-type canonical Entry sampling: kiln, object, person, research, and an image-backed Entry.
@@ -113,9 +134,10 @@ with sync_playwright() as p:
     # Entry sitemap must expose all currently published Entries.
     page.goto(base+"sitemap-entries.xml",wait_until="domcontentloaded",timeout=30000)
     sitemap_text=page.locator("body").inner_text()
-    if sitemap_text.count("/entry/") < 149:
-        raise RuntimeError("Entry sitemap does not contain all 149 published Entry URLs")
-    print("PASS Entry sitemap >=149 URLs")
+    entry_url_count=sitemap_text.count("/entry/")
+    if entry_url_count < 200:
+        raise RuntimeError(f"Entry sitemap unexpectedly small: {entry_url_count} URLs")
+    print("PASS Entry sitemap",entry_url_count,"URLs")
 
 
     for name,path in [("历史世界","history/"),("工艺世界","craft/"),("器物世界","objects/"),("空间世界","kilns/"),("人物世界","people/"),("文献世界","research/"),("现代世界","contemporary/")]:
