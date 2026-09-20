@@ -253,3 +253,18 @@ Bridge Node 原则：桥梁价值优先于边数量；跨网络的路径只能�
 Network QA v6：connected 88、single_strong 73、multi_weak 10、isolated 19；entry_relations 332 条，其中 A/A+/B 255 条。
 
 Bridge Centrality 治理：桥梁不是按度数机械排名；必须能够连接不同知识子网络，并且每条跨网络关系都独立满足 Claim → Evidence → Source → Boundary → Grade。多跳路径仅作为探索路径，不作为事实证明。
+
+
+## v7 Bridge Centrality Analysis — 2026-09-20
+
+完成第一轮真正的 Bridge Centrality Analysis。基于 263 条 A/A+/B 关系构建证据网络，并按预定义的文明子网络计算 cross-group coverage 与 two-hop bridge pairs；由于数据库未安装 pgrouting/graph extension，本轮不冒充精确 Brandes betweenness，而采用可复核的 Bridge Centrality proxy（跨子网络覆盖 + 两跳邻域对数），再做 Claim-by-Claim Evidence QA。
+
+核心候选 16 个：r23、blue-and-white、export-porcelain、japanese-export-porcelain、arita-kiln、kraak-porcelain、europe-porcelain、japan-ceramics、dutch-east-india-company、islamic-ceramics、islamic-world-jingdezhen、europe-jingdezhen、korean-jingdezhen-bluewhite、chinoiserie、southeast-asia-jingdezhen、binary-formula。
+
+其中 cross-group coverage 前列：r23=7、blue-and-white=6、export-porcelain=5、japanese-export-porcelain=4、arita-kiln=4；two-hop bridge pairs 前列：blue-and-white=465、export-porcelain=136、japanese-export-porcelain=55、europe-jingdezhen=55、japan-ceramics/r23/europe-porcelain=28。
+
+Claim-by-Claim QA 后仅补 8 条高价值 A/B 跨网络边：青花→东南亚陶瓷；日本出口瓷→东南亚；日本陶瓷→东南亚；外销瓷→伊斯兰陶瓷；克拉克瓷→代尔夫特；朝鲜半岛/景德镇青花→日本陶瓷；欧洲/景德镇瓷器→日本出口瓷；伊斯兰世界/景德镇→东南亚陶瓷。
+
+Network QA v7：connected 88、single_strong 73、multi_weak 10、isolated 19；entry_relations 340，其中 A/A+/B 263。
+
+重要：本轮没有把“betweenness proxy”写成数学上的精确 betweenness。下一阶段若需要正式 Brandes betweenness，应在离线脚本中导出 340-edge 图并运行 NetworkX/等价实现后再写入指标；数据库中的 network_qa 仍只记录事实网络状态，不写预测性排名。
