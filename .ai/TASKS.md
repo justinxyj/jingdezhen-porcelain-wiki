@@ -635,3 +635,11 @@ Phase 6B/6C：Canonical Content Admission 与 Entry SEO Health 深化；优先�
 - [x] 0 target_defined
 - [ ] 对39 Research Corpus进行claim-by-claim evidence synthesis
 - [ ] 220 → 320继续冻结
+
+
+## 2026-09-20 — Phase 7.4 Claim-by-Claim Evidence Synthesis
+- [x] 39/39 Research Corpus逐条建立 Claim → Evidence → Source → Evidence Type → Confidence → Boundary
+- [x] 明确区分考古事实 / 官方记录 / 原始文献陈述 / 馆藏记录 / 学术解释 / 学术史叙述
+- [x] 37 mapped + 2 bibliographic primary target 已纳入矩阵
+- [ ] Evidence Triangulation / Dispute QA
+- [ ] 220 → 320继续冻结
