@@ -570,3 +570,10 @@ QA 后真实基线发生变化：149 个原始 Entry 中有 30 个被降级为 K
 - 新增 62 条 evidence-graded edges；关键桥梁：Arita、日本出口瓷、Kraak、VOC、康熙外销瓷、Delft、UNESCO/r23、伊斯兰陶瓷、东南亚陶瓷。
 - Network QA v6：connected 88、single_strong 73、multi_weak 10、isolated 19；332 relations，A/A+/B 255。
 - 规则：桥梁价值看跨子网络能力而非边数；每条边独立验证，多跳路径不等于事实证明。
+
+
+## 2026-09-20 — Bridge Centrality Analysis v7
+- 完成第一轮 Bridge Centrality：基于 263 条 A/A+/B 边做跨文明子网络 coverage + two-hop bridge-pair proxy。
+- 16 个核心候选：r23、青花、外销瓷、日本出口瓷、有田窑、克拉克瓷、欧洲瓷器、日本陶瓷、VOC、伊斯兰陶瓷、伊斯兰世界与景德镇、欧洲与景德镇、朝鲜半岛与景德镇青花、中国风、东南亚与景德镇、二元配方。
+- 未安装 pgrouting/graph extension，因此不冒充精确 Brandes betweenness；需要正式数值时应离线导出图并计算。
+- Claim QA 后新增 8 条高价值 A/B edges。Network QA v7：88 connected、73 single_strong、10 multi_weak、19 isolated；340 relations，263 A/A+/B。
