@@ -60,10 +60,17 @@ def check_sensitive():
 def check_worlds():
     worlds=expect_ok("knowledge_worlds",{"select":"slug,title,display_order","order":"display_order.asc","limit":"20"})
     if len(worlds)!=7: raise RuntimeError(f"knowledge_worlds expected 7 rows, got {len(worlds)}")
-    links=expect_ok("entry_worlds",{"select":"entry_id,world_slug,role","limit":"1000"})
-    if len({x["entry_id"] for x in links})!=149: raise RuntimeError("not all 149 published entries are mapped to a knowledge world")
-    if sum(1 for x in links if x["role"]=="primary")!=149: raise RuntimeError("expected exactly one primary world for each published entry")
-    print(f"PASS knowledge_worlds=7 mapped_entries=149 mappings={len(links)}")
+    published=expect_ok("entries",{"select":"id","status":"eq.published","limit":"1000"})
+    published_ids={x["id"] for x in published}
+    if not published_ids: raise RuntimeError("published entries query returned no rows")
+    links=expect_ok("entry_worlds",{"select":"entry_id,world_slug,role","limit":"2000"})
+    mapped_ids={x["entry_id"] for x in links}
+    if not published_ids.issubset(mapped_ids):
+        missing=published_ids-mapped_ids
+        raise RuntimeError(f"not all published entries are mapped to a knowledge world (missing={len(missing)})")
+    primary_count=sum(1 for x in links if x["role"]=="primary" and x["entry_id"] in published_ids)
+    if primary_count!=len(published_ids): raise RuntimeError(f"expected exactly one primary world for each published entry, got {primary_count}/{len(published_ids)}")
+    print(f"PASS knowledge_worlds=7 mapped_entries={len(published_ids)} mappings={len(links)}")
 
 def check_acl():
     check_entries()
