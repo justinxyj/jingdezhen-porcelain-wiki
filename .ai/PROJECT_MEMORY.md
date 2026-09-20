@@ -665,3 +665,9 @@ The canonical static page must include the same core visual structure as dynamic
 - 2026-09-20 CI 已真实复现该故障：主页、时间轴、原有窑址地图页面壳等均 PASS，新增窑址地图弹层 smoke 在等待第一张窑址卡时超时；因此此前不能把部署 smoke 视为通过。
 - 技术树另发现一个明确 CSS 回流：[data-md-color-scheme="slate"] .tech-detail-grid>div,.tech-entry-card 的逗号选择器使 .tech-entry-card 在浅色模式也套用了深色背景，造成用户截图中的“历史”卡片深灰底、默认蓝色链接。已收紧为两个完整的 dark-mode 选择器。
 - 后续规则：地图主数据与辅助媒体/时间轴数据必须解耦；观察型页面不能因单一 enrichment 请求失败而整体空白。深色主题选择器不得省略主题祖先作用域。
+
+
+## 2026-09-20 — Kiln Map CDN / Graceful Degradation Hardening
+- 窑址地图主数据已与媒体 enrichment 解耦后，继续增加地图底图库容错：Leaflet 1.9.4 CDN 从 unpkg 切换到 jsDelivr；Leaflet 官方下载页列出 unpkg、cdnjs、jsDelivr 为可用托管 CDN，jsDelivr 当前提供 1.9.4 文件。
+- global-kiln-map.js 不再因 window.L 缺失直接 return；即使地图库暂时不可用，也必须渲染窑址目录、搜索/筛选和详情弹层，并明确显示“地图底图暂时不可用”，不能整页空白。
+- 当前生产数据仍有 250 Published Entries，其中 41 个窑址条目具备坐标；地图的主目录应始终能够基于这些 Entry 数据显示。
