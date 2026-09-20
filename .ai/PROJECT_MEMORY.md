@@ -440,3 +440,23 @@ QA 后真实基线发生变化：149 个原始 Entry 中有 30 个被降级为 K
 - 新增 Entry 当前部分标记为 develop/review，后续必须经过 Evidence Deepening 才能进入更高 citation-ready 等级。
 - 不允许用 AI 常识扩写替代来源；不把风格相似自动写成技术传播；不把人物管理关系写成器物作者关系。
 - Seven Knowledge Worlds、World Freeze、A+/A Recommendation Gate、Phase 4E 均保持冻结。
+
+
+## 2026-09-20 — Phase 7.1 Evidence Deepening COMPLETE
+
+- Completed evidence deepening for all 101 newly added Phase 7 Canonical Entries.
+- All 101 moved from review/develop to citation-ready PASS after institutional evidence-anchor verification and explicit research-boundary checks.
+- Evidence anchors include UNESCO, V&A, The Metropolitan Museum of Art and British Museum records.
+- Rechecked all 39 B_research Research Corpus entries. All 39 remain Research Corpus / REVIEW by design; they are not mechanically promoted because their value depends on source-level archaeological, documentary, comparative, or historiographical research.
+- Current admission baseline: 176 citation-ready PASS / 74 REVIEW / 0 BLOCKED.
+- Current Canonical-eligible baseline remains 220; published entries 250; Knowledge Nodes 30.
+- 220 → 320 remains frozen. The next task is not growth; it is deepening the 74 remaining REVIEW, especially the 39 Research Corpus entries.
+- New governance field: evidence_deepening_version = phase7.1-v1.
+
+### Evidence rules reaffirmed
+- Citation-ready means evidence anchor + independent boundary + source/research sections; it does not mean every scholarly question is settled.
+- No AI common-knowledge padding.
+- No style similarity → transmission claim.
+- No object → maker inference.
+- No single source → civilization-scale conclusion.
+- Research Corpus can remain REVIEW until evidence warrants promotion.
