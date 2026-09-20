@@ -261,3 +261,60 @@ Phase 6 完成后再进入内容增长：**149 → 220 → 320 → 400 → 500**
 149 Entry SEO Health Matrix 全量完成；canonical/title/description/H1/正文/structured data/image/source/internal links 达到统一最低标准；sitemap/canonical/structured data/OpenGraph/robots 一致；Canonical Content Admission v1 与 Search Knowledge Map 建立；明确 149→220 第一批候选；Phase 2B World Freeze 与 Phase 3B A+/A Recommendation Gate 不变；构建、部署、线上页面自动检查、数据权限检查全部通过；最终同步 .ai 记忆。
 
 **当前唯一下一步：Phase 6A — 149 个 Entry SEO / Indexability 全量审计。**
+
+
+## 2026-09-20 Phase 6A — 第一轮 Entry SEO / Indexability 审计与架构修复启动
+
+Phase 6A 已正式开始，不再停留在计划阶段。
+
+### Live production audit
+- 当前 published Entry：149。
+- title：149/149。
+- summary：140/149；9 个 Entry 缺少 summary。
+- content：112/149；37 个 Entry 缺少正文 content。
+- sources：127/149；22 个 Entry 当前没有 sources。
+- primary Knowledge World：149/149。
+- verified public media：已逐 Entry 记录在 .ai/ENTRY_SEO_HEALTH_MATRIX.md。
+- meta.description：0/149。
+
+### 系统性发现
+- docs/entry.md 初始 HTML 只有 loading shell，真正 Entry 内容依赖浏览器 JS + Supabase。
+- 当前没有稳定的独立 Entry canonical URL / 初始 HTML metadata 体系。
+- 当前没有 Entry 专用 JSON-LD / OpenGraph 体系。
+- 当前 MkDocs nav 不包含 149 个动态 Entry URL，不能把默认 sitemap 视为 149 个 Entry 已完整进入搜索发现体系。
+- 现有 Entry 的继续探索能力已经成立，问题主要是“知识页面没有成为独立互联网页面”，而不是底层知识关系不足。
+
+### 本轮已开始实施
+- 新增 scripts/generate_entry_pages.py：在 GitHub Pages 构建前从公开 Supabase 数据生成 149 个 canonical static Entry 页面。
+- 静态 Entry URL 统一为 /entry/<slug>/。
+- 静态页面初始 HTML 写入 title、description、canonical、OpenGraph、BreadcrumbList/WebPage JSON-LD、正文、来源、主图和继续探索入口。
+- 生成 sitemap-entries.xml 与 robots sitemap hints。
+- JDM_KNOWLEDGE.url() 已切换到 canonical static Entry URL。
+- wiki-enhancements.js 已支持 static Entry 首屏内容保留；动态增强失败时不再把静态正文替换成错误页。
+- GitHub Pages workflow 已在 MkDocs build 前执行 Entry 静态页面生成。
+- Pages smoke 已加入 canonical、description、JSON-LD、初始 HTML 正文检查。
+- 新增 .ai/ENTRY_SEO_HEALTH_MATRIX.md，完成 149 Entry 第一轮逐条矩阵。
+
+### 本轮提交
+- SEO Matrix：79e1ec0e769d640c5c1d705b25832fc9a8c8801c
+- Static Entry generator：952ff2de1f39c46d50ad065df950a2e0004c796b
+- canonical URL：6b712d11545f1a2117cf0c07da644120fe615417
+- static enhancement fallback：7e911c1e5515e34229996db78af4c8aae277602
+- sitemap/robots：7046fb4a043b6af80c4dc9fd1f02aca74dc5a192
+- Pages build hook：67e388ee115a868133aef5269a14ccb3af23e6ba
+- Pages SEO smoke：8fb097550f4bf9a594c38e4512787fb04eab4666
+
+### 当前状态
+**Phase 6A = IN PROGRESS。**
+本轮还没有宣布完成。下一步必须以最新 main 的构建、部署、线上页面自动检查为准，确认静态 Entry 是否真的被 MkDocs/Pages 正确输出，以及 /entry/blue-and-white/ 的 canonical / description / JSON-LD / 初始正文是否全部通过。
+
+### Phase 6A 下一步
+1. 等最新 main 构建并检查失败原因。
+2. 修复生成器 / MkDocs / smoke 中发现的任何问题。
+3. 验证至少一批 Entry 的静态 HTML；再抽查多种类型 Entry。
+4. 确认 sitemap-entries.xml 在线可访问。
+5. 确认旧 entry/?slug=... 路径不会成为新的 canonical 冲突源。
+6. 重新生成 Health Matrix，把系统性 BLOCK 转为 PASS/REVIEW。
+7. 再处理 9 summary / 37 content / 22 source 等内容缺口。
+
+**当前仍不进入 149 → 220。**
