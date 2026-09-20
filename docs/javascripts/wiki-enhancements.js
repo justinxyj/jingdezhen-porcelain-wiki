@@ -3,7 +3,7 @@
   const esc=s=>String(s??'').replace(/[&<>\"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[m]));
   const ROOT='/jingdezhen-porcelain-wiki/';
   const plain=s=>{const d=document.createElement('div');d.innerHTML=String(s||'');return d.textContent||d.innerText||''};
-  const url=e=>window.JDM_KNOWLEDGE?.url(e)||`${ROOT}entry/?type=${encodeURIComponent(e?.category||'')}&slug=${encodeURIComponent(e?.slug||'')}`;
+  const url=e=>window.JDM_KNOWLEDGE?.url(e)||`${ROOT}entry/${encodeURIComponent(e?.slug||'')}/`;
   const safeHref=raw=>window.JDM_AUTH?.safeHref?.(raw)||'';
   const sourceUrl=s=>s&&typeof s==='object'?safeHref(s.url):'';
   const sourceLabel=s=>s&&typeof s==='object'?s.label||'来源':(typeof s==='string'?s:'来源');
@@ -81,9 +81,10 @@
     const seq=++initSeq;
     const root=document.getElementById('wiki-entry-root');
     if(!root||!window.JDM_KNOWLEDGE)return;
-    const slug=new URLSearchParams(location.search).get('slug');
-    if(!slug){root.innerHTML='<div class="wiki-entry-loading">没有指定条目。</div>';return}
-    root.innerHTML='<div class="wiki-entry-loading" aria-live="polite">正在加载知识条目…</div>';
+    const staticRendered=root.dataset.staticRendered==='true';
+    const slug=new URLSearchParams(location.search).get('slug')||window.JDM_STATIC_ENTRY_SLUG||root.dataset.entrySlug;
+    if(!slug){if(!staticRendered)root.innerHTML='<div class="wiki-entry-loading">没有指定条目。</div>';return}
+    if(!staticRendered)root.innerHTML='<div class="wiki-entry-loading" aria-live="polite">正在加载知识条目…</div>';
     try{
       const e=await window.JDM_KNOWLEDGE.get(slug);
       if(!e){root.innerHTML='<div class="wiki-entry-loading">没有找到这个公开条目。</div>';return}
@@ -105,7 +106,7 @@
       if(recommendationError){const note=document.createElement('div');note.className='wiki-entry-recommendation-warning';note.setAttribute('role','status');note.textContent='部分扩展探索信息暂时无法加载，当前 Entry 仍可正常浏览。';root.querySelector('.wiki-entry-card')?.appendChild(note);}
       if(error)renderRelationWarning(root);
       if(relationTruncated){const note=document.createElement('div');note.className='wiki-entry-relation-warning';note.setAttribute('role','status');note.textContent='相关内容较多，当前仅显示部分关系。';root.querySelector('.wiki-entry-card')?.appendChild(note)}
-    }catch(error){renderLoadError(root,error)}
+    }catch(error){if(staticRendered){console.warn('[JDM entry] enhancement failed; keeping static content',error)}else{renderLoadError(root,error)}}
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
