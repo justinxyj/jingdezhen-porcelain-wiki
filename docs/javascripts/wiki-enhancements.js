@@ -42,7 +42,17 @@
       (recommendations.length?'<section class="wiki-entry-recommendations"><div class="wiki-entry-section-kicker">知识探索</div><h2>你可能还想了解</h2><p class="wiki-recommendation-intro">从当前条目继续探索高置信度相关知识。</p><div class="wiki-recommendation-grid">'+recommendations.map(r=>'<a class="wiki-recommendation-card" href="'+url(r.entry)+'"><span class="wiki-recommendation-category">'+esc(r.target_category||r.entry.category||'知识')+'</span><b>'+esc(r.target_label||r.entry.zh?.title||r.entry.slug)+'</b><small>'+esc(r.reason||'相关知识入口')+' →</small></a>').join('')+'</div></section>':'')+
       '<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">来源</div><h2>来源与外部资料</h2><div class="wiki-entry-source-links">'+(sourceLinks||'<span>暂无外部来源。</span>')+'<a href="https://zh.wikipedia.org/w/index.php?search='+encodeURIComponent(wiki)+'" target="_blank" rel="noopener">维基百科 ↗</a></div></section></div></div></article>';
   }
-  function contentOrIntro(e,intro){const content=plain(e.zh?.content||'');return content||intro}
+  function contentOrIntro(e,intro){
+    const raw=String(e.zh?.content||'').trim();
+    const summary=plain(e.zh?.summary||'').trim();
+    if(!raw)return intro;
+    let cleaned=raw;
+    const first=cleaned.match(/^\\s*<p>([\\s\\S]*?)<\\/p>\\s*/i);
+    if(first&&summary&&plain(first[1]).trim()===summary)cleaned=cleaned.slice(first[0].length);
+    const core=cleaned.match(/^\\s*<h2>\\s*核心信息\\s*<\\/h2>\\s*<p>([\\s\\S]*?)<\\/p>\\s*/i);
+    if(core&&summary&&plain(core[1]).trim()===summary)cleaned=cleaned.slice(core[0].length);
+    return plain(cleaned)||intro;
+  }
   const UUID_RE=/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
   async function loadRelations(entryId){
     if(!window.JDM_AUTH?.request)return{relations:[],truncated:false,error:Object.assign(new Error('统一认证请求层不可用，请刷新页面后重试'),{code:'JDM_AUTH_MISSING'})};
