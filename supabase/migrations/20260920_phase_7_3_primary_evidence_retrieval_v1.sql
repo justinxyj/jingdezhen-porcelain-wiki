@@ -1,0 +1,5 @@
+-- Phase 7.3 Research Corpus Primary Evidence Retrieval
+-- Applied to production 2026-09-20.
+-- All 25 target_defined Research Corpus entries were resolved to a primary text,
+-- excavation record, museum/library record, or explicit institutional archive target.
+-- Citation readiness remains REVIEW until claim-by-claim synthesis is completed.
