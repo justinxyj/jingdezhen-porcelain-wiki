@@ -216,3 +216,48 @@ Phase 5-2 已关闭。后续进入新的工作块前，必须先定义该工作�
 - 后续应建立真实用户分析闭环：搜索词、入口 Entry、Entry→Entry 路径、推荐点击、World 热度、图片热度、语言差异等，用真实行为指导内容生产。
 - 战略原则：**引擎已经够用，下一阶段应开始铺高速公路。**
 - 该报告属于产品战略记忆，不替代 `.ai/PROJECT_MEMORY.md` 的状态基准；若战略报告与当前代码/生产数据冲突，以当前 main 和生产数据库为准。
+
+
+## 2026-09-20 Phase 6 Growth Foundation — 当前战略执行基准
+
+Phase 5-2 已正式关闭。新的工作块为 **Phase 6：Growth Foundation / 增长基础设施**，不得重新打开 Phase 5-2。
+
+完整计划文件：.ai/PHASE_6_GROWTH_FOUNDATION_PLAN.md
+
+### 核心战略
+**引擎已经够用，下一阶段开始铺高速公路。**
+当前主要瓶颈已经从底层知识架构转向内容规模、独立可搜索入口、SEO/Indexability、对象级内容质量、图片资产、国际化、外部传播和真实用户数据。
+
+因此，第一步不是直接把 149 个 Entry 扩到 500，而是先让现有 149 个 Entry 成为独立、可搜索、可引用、可分享的互联网知识入口。
+
+### Phase 6A — Entry SEO / Indexability
+第一项唯一动作：对 149 个 published Entry 做全量 SEO / Indexability 审计。
+统一检查：title、description、canonical、H1、可发现正文、Breadcrumb、Schema.org、OpenGraph、主图与 ALT、来源、相关 Entry / Knowledge World 内链、sitemap、robots、移动端、非 JS 正文可发现性。
+
+### Phase 6B — SEO Health Matrix
+计划建立 .ai/ENTRY_SEO_HEALTH_MATRIX.md，149 个 Entry 逐条标记 PASS / REVIEW / BLOCK，并形成最小必要修复队列。
+
+### Phase 6C — Canonical Content Admission v1
+正式建立后续新增 Entry 的准入门槛：独立知识价值、明确实体边界、可靠来源、搜索/探索价值、至少一个探索出口、不重复、不制造 Ghost Node、媒体可解释、关系有 entry-specific evidence/rationale、可归入 Knowledge World。
+
+### Phase 6D — Jingdezhen Search Knowledge Map
+建立真实搜索问题 → Entry 的映射。缺失问题进入内容准入候选池，不用低质量 AI SEO 页面填充。
+
+### 后续增长阶梯
+Phase 6 完成后再进入内容增长：**149 → 220 → 320 → 400 → 500**。
+重点依次为景德镇核心知识/世界遗产/人物/空间 → 器物与 Digital Museum Object → 人物/文献/工艺深度 → 中国与世界陶瓷文明连接。
+
+### 后续产品主线
+- Phase 8：Digital Museum Object / 器物身份证，20 → 50 → 100 → 150。
+- Phase 9：景德镇手工瓷业遗存世界遗产旗舰专题，串联原料、矿区、窑址、城市生产中心、工艺、器物、人物、贸易与世界影响。
+- Phase 10：英文核心独立知识入口 50 → 150 → 300 → 500；日文定位为中国与日本陶瓷史知识桥梁。
+- Phase 11：Knowledge Cards / Shareable Knowledge。
+- 随后建立真实用户分析闭环：搜索词、入口 Entry、Entry→Entry、推荐点击、World 热度、图片兴趣、语言差异、探索深度和知识缺口。
+
+### Phase 6 明确不做
+不重新设计首页或七大 Knowledge World；不增加第 8 个 Knowledge World；不机械增加 World mappings；不无限扩充 Recommendation；不重新打开已封版 Phase 4E；不为了图谱规模增加低价值 edges；不建立第二事实数据库；不做大规模 CSS 重构；不做 AI SEO 垃圾内容。
+
+### Phase 6 总收口标准
+149 Entry SEO Health Matrix 全量完成；canonical/title/description/H1/正文/structured data/image/source/internal links 达到统一最低标准；sitemap/canonical/structured data/OpenGraph/robots 一致；Canonical Content Admission v1 与 Search Knowledge Map 建立；明确 149→220 第一批候选；Phase 2B World Freeze 与 Phase 3B A+/A Recommendation Gate 不变；构建、部署、线上页面自动检查、数据权限检查全部通过；最终同步 .ai 记忆。
+
+**当前唯一下一步：Phase 6A — 149 个 Entry SEO / Indexability 全量审计。**
