@@ -242,7 +242,7 @@ def entry_html(entry: dict, world_by_entry: dict[str, list[dict]],
             "@type": "BreadcrumbList",
             "itemListElement": [
                 {"@type": "ListItem", "position": 1, "name": "首页", "item": SITE_URL},
-                {"@type": "ListItem", "position": 2, "name": "Entry", "item": f"{SITE_URL}entry/"},
+                {"@type": "ListItem", "position": 2, "name": "知识条目", "item": f"{SITE_URL}entry/"},
                 {"@type": "ListItem", "position": 3, "name": title, "item": url},
             ],
         },
@@ -285,19 +285,19 @@ main{max-width:1240px;margin:0 auto;padding:24px 24px 72px}.wiki-chrome{display:
 </head>
 <body>
 <main>
-<nav class="wiki-chrome"><div class="wiki-breadcrumb"><a href="{SITE_URL}">首页</a> / <a href="{SITE_URL}entry/">知识条目</a> / {html.escape(title)}</nav>
-<article id="wiki-entry-root" data-entry-slug="{html.escape(slug, quote=True)}" data-static-rendered="true">
+<nav class="wiki-chrome"><div class="wiki-breadcrumb"><a href="{SITE_URL}">首页</a><span>/</span><a href="{SITE_URL}entry/">知识条目</a><span>/</span><b>{html.escape(title)}</b></div></nav>
+<article id="wiki-entry-root" class="wiki-entry-card wiki-entry-v2" data-entry-slug="{html.escape(slug, quote=True)}" data-static-rendered="true">
 <header class="wiki-entry-header">
 <div><div class="wiki-entry-kicker">知识条目 · {html.escape(str(entry.get("category") or "知识"))}</div>
 <h1>{html.escape(title)}</h1>
 <p class="entry-static-summary">{html.escape(intro)}</p></div>
 {image_html}
 </header>
-{f'<section><h2>所属 Knowledge World</h2><div class="entry-static-worlds">{world_html}</div></section>' if world_html else ""}
-<section class="wiki-entry-body"><h2>详细介绍</h2>{body_html}</section>
+{f'<div class="wiki-entry-world-path"><span>所属知识世界</span><div>{world_html}</div></div>' if world_html else ""}
+<div class="wiki-entry-v2-grid"><aside class="wiki-entry-v2-rail"><div class="wiki-entry-v2-card"><strong>知识节点</strong><span>{html.escape(str(entry.get("category") or "知识"))}</span><span>{html.escape(str(((zh.get("meta") or {}).get("period") or (zh.get("meta") or {}).get("era") or "时代信息待核")))}</span><span>{html.escape(str(((zh.get("meta") or {}).get("location") or (zh.get("meta") or {}).get("region") or "空间信息待核")))}</span></div><div class="wiki-entry-v2-card"><strong>继续探索</strong><a href="{SITE_URL}search/">⌕ 搜索知识 →</a><a href="{SITE_URL}network/relations/">关系网络 →</a><a href="{SITE_URL}network/global/">全球陶瓷网络 →</a></div></aside><div class="wiki-entry-v2-main"><section class="wiki-entry-body"><h2>详细介绍</h2>{body_html}</section>
 <section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">知识关系</div><h2>它与哪些知识相连</h2><ul class="wiki-entry-v2-relations">{relation_html}</ul></section>
 <section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">来源</div><h2>来源与外部资料</h2><ul class="wiki-entry-source-links">{source_links(zh.get("sources") or entry.get("sources") or [])}</ul></section>
-<footer class="wiki-entry-footer">本页面为公开正式知识条目；页面正文、来源与媒体由项目知识库维护。</footer>
+</div></div><footer class="wiki-entry-footer">本页面为公开正式知识条目；页面正文、来源与媒体由项目知识库维护。</footer>
 </article>
 </main>
 <script>
