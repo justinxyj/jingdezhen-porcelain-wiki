@@ -490,3 +490,10 @@
 - 30个C类保持Knowledge Node，不计入Canonical。
 - 当前181 PASS / 69 REVIEW / 0 BLOCKED；220 Canonical-eligible保持不变。
 - 220 → 320冻结。
+
+
+## 2026-09-20 — Phase 7.3 Primary Evidence Retrieval
+- 25个target_defined全部解决为原始文本、考古记录、馆藏/图书馆记录或明确机构档案目标。
+- Research Corpus现为37 mapped / 2 bibliographic_primary_target / 0 target_defined。
+- 保持39条Research Corpus整体REVIEW，不因找到来源而自动晋级。
+- 当前181 PASS / 69 REVIEW / 0 BLOCKED；220 Canonical-eligible不变。
