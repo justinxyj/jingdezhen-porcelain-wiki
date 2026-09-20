@@ -441,3 +441,4 @@
 - 修复 public media 读取边界：新增 `media_public` 安全投影，anon 不直接读取原始 media 表。
 - 清零 9 summary / 37 content / 22 source 缺口。
 - 更新 `.ai/ENTRY_SEO_HEALTH_MATRIX.md` 为第二轮 149 Entry 状态。
+\n\n## 2026-09-20 — Phase 6B / 6C Canonical Content Admission\n- 新增 `entry_content_admissions` v1 治理表。\n- 完成 149 Entry 全量 Canonical Admission：149 admitted / 0 blocked。\n- Citation readiness：8 PASS / 141 REVIEW。\n- 深化 11 个核心 Entry，统一引入定义、背景、研究边界与继续探索结构。\n- 明确下一阶段先提升现有 141 个 Entry 的内容质量，不立即机械扩张到 220。\n
