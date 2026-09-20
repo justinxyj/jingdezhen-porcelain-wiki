@@ -76,6 +76,36 @@ with sync_playwright() as p:
         raise RuntimeError("Entry initial HTML body missing")
     print("PASS Entry SEO/indexability shell")
 
+    # Cross-type canonical Entry sampling: kiln, object, person, research, and an image-backed Entry.
+    for sample_name, sample_slug, needs_image in [
+        ("窑址 Entry", "hutian-kiln", False),
+        ("器物 Entry", "tang-ying-jun-vase", False),
+        ("人物 Entry", "wang-bu", False),
+        ("文献 Entry", "r01", False),
+        ("图片 Entry", "arita-kiln", True),
+    ]:
+        page.goto(base+f"entry/{sample_slug}/",wait_until="domcontentloaded",timeout=30000)
+        page.locator("#wiki-entry-root h1").first.wait_for(state="visible",timeout=10000)
+        if page.locator("head link[rel=canonical]").get_attribute("href") != base+f"entry/{sample_slug}/":
+            raise RuntimeError(f"{sample_name} canonical URL mismatch")
+        if not page.locator("head meta[name=description]").get_attribute("content"):
+            raise RuntimeError(f"{sample_name} meta description missing")
+        if not page.locator("head script[type='application/ld+json']").count():
+            raise RuntimeError(f"{sample_name} JSON-LD missing")
+        if page.locator("#wiki-entry-root .entry-static-content").count()<1:
+            raise RuntimeError(f"{sample_name} initial HTML body missing")
+        if needs_image and page.locator("#wiki-entry-root img").count()<1:
+            raise RuntimeError(f"{sample_name} image missing")
+        print("PASS",sample_name,sample_slug)
+
+    # Entry sitemap must expose all currently published Entries.
+    page.goto(base+"sitemap-entries.xml",wait_until="domcontentloaded",timeout=30000)
+    sitemap_text=page.locator("body").inner_text()
+    if sitemap_text.count("/entry/") < 149:
+        raise RuntimeError("Entry sitemap does not contain all 149 published Entry URLs")
+    print("PASS Entry sitemap >=149 URLs")
+
+
     for name,path in [("历史世界","history/"),("工艺世界","craft/"),("器物世界","objects/"),("空间世界","kilns/"),("人物世界","people/"),("文献世界","research/"),("现代世界","contemporary/")]:
         page.goto(base+path,wait_until="networkidle",timeout=30000)
         browser_cards=page.locator("[data-world-browser] .jdm-world-entry-card")
