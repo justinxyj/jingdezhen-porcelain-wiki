@@ -11,13 +11,12 @@
   function detailedIntro(e){
     const m=e.zh?.meta||{};
     const summary=plain(e.zh?.summary||'');
-    const content=plain(e.zh?.content||'');
-    const text=content||summary;
-    if(text.length>=180)return text;
     const context=plain(m.description||m.context||m.quote_context||'');
-    if(context&&context.length>=80)return `${text}${text&&context?'\n\n':''}${context}`.trim();
+    const text=summary||context;
+    if(text.length>=180)return text.slice(0,180).replace(/[，；、]$/,'')+'…';
+    if(context&&text!==context&&context.length>=80)return (text+(text?'\n\n':'')+context).trim().slice(0,260);
     const facts=[m.era||m.period,m.role,m.location,m.region,m.craft].filter(Boolean).join('、');
-    return text||(facts?`${facts}。该条目集中介绍相关历史背景、人物或器物信息，并结合可核验文献与馆藏资料说明其历史位置、文化意义及与景德镇陶瓷发展之间的关系。`:'该条目用于介绍这一历史对象、人物、文献或工艺主题，结合相关史料、研究与馆藏信息说明其形成背景、发展过程及与景德镇陶瓷史的联系。');
+    return text||(facts?facts+'。该条目结合可核验文献、考古与馆藏资料说明其历史位置及与景德镇陶瓷发展的关系。':'该条目结合可核验史料、研究与馆藏信息说明相关历史背景及其与景德镇陶瓷史的联系。');
   }
   function render(root,e,network){
     const m=e.zh?.meta||{},im=validMedia(e),wiki=m.wikiTitle||e.zh?.title||e.slug;
@@ -42,16 +41,53 @@
       (recommendations.length?'<section class="wiki-entry-recommendations"><div class="wiki-entry-section-kicker">知识探索</div><h2>你可能还想了解</h2><p class="wiki-recommendation-intro">从当前条目继续探索高置信度相关知识。</p><div class="wiki-recommendation-grid">'+recommendations.map(r=>'<a class="wiki-recommendation-card" href="'+url(r.entry)+'"><span class="wiki-recommendation-category">'+esc(r.target_category||r.entry.category||'知识')+'</span><b>'+esc(r.target_label||r.entry.zh?.title||r.entry.slug)+'</b><small>'+esc(r.reason||'相关知识入口')+' →</small></a>').join('')+'</div></section>':'')+
       '<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">来源</div><h2>来源与外部资料</h2><div class="wiki-entry-source-links">'+(sourceLinks||'<span>暂无外部来源。</span>')+'<a href="https://zh.wikipedia.org/w/index.php?search='+encodeURIComponent(wiki)+'" target="_blank" rel="noopener">维基百科 ↗</a></div></section></div></div></article>';
   }
+  function sanitizeBodyHtml(raw){
+    const tpl=document.createElement('template');
+    tpl.innerHTML=String(raw||'');
+    const allowed=new Set(['P','BR','STRONG','B','EM','I','H2','H3','H4','UL','OL','LI','BLOCKQUOTE','A']);
+    tpl.content.querySelectorAll('*').forEach(node=>{
+      if(!allowed.has(node.tagName)){node.replaceWith(...node.childNodes);return;}
+      [...node.attributes].forEach(attr=>{
+        if(node.tagName==='A'&&attr.name.toLowerCase()==='href'){
+          const href=safeHref(attr.value);
+          if(href)node.setAttribute('href',href);else node.removeAttribute('href');
+        }else node.removeAttribute(attr.name);
+      });
+      if(node.tagName==='A'&&node.getAttribute('href')){
+        node.setAttribute('target','_blank');
+        node.setAttribute('rel','noopener noreferrer');
+      }
+    });
+    return tpl.innerHTML;
+  }
   function contentOrIntro(e,intro){
     const raw=String(e.zh?.content||'').trim();
     const summary=plain(e.zh?.summary||'').trim();
-    if(!raw)return intro;
-    let cleaned=raw;
-    const first=cleaned.match(/^\s*<p>([\s\S]*?)<\/p>\s*/i);
-    if(first&&summary&&plain(first[1]).trim()===summary)cleaned=cleaned.slice(first[0].length);
-    const core=cleaned.match(/^\s*<h2>\s*核心信息\s*<\/h2>\s*<p>([\s\S]*?)<\/p>\s*/i);
-    if(core&&summary&&plain(core[1]).trim()===summary)cleaned=cleaned.slice(core[0].length);
-    return plain(cleaned)||intro;
+    if(!raw)return '<p>'+esc(intro)+'</p>';
+    const tpl=document.createElement('template');
+    tpl.innerHTML=raw;
+    const generic=[
+      '本 Entry 的核心信息以页面列出的来源为证据入口。涉及年代、人物身份、器物归属、窑址范围或技术判断时，应优先回到原始馆藏、考古报告、官方遗产文件或原始文献核对，而不应仅依据二手概括。',
+      '本 Entry 以 UNESCO、博物馆或研究机构资料作为证据入口；涉及具体年代、窑口、器物归属和传播路径时，应回到原始记录核对。',
+      '本条目只陈述当前资料能够支持的范围。单一来源不能自动证明更大的历史结论；对于存在学术争议、断代差异或来源不足的内容，应保留不确定性，并避免把推测写成确定事实。',
+      '不把风格相似自动等同为技术传播，不把馆藏器物自动归属于具体制作者，也不把单一来源概括扩展为更大的历史结论。',
+      '可从本 Entry 当前所属的 Knowledge World、关联 Entry、人物、器物、窑址、工艺或文献继续追踪证据链。研究型引用应同时核对具体来源页面与原始材料。',
+      '可沿当前 Knowledge World、相关器物、窑址、人物和文献继续追踪证据链。'
+    ];
+    [...tpl.content.querySelectorAll('p')].forEach(p=>{
+      if(generic.includes(plain(p.textContent||'')))p.remove();
+    });
+    const first=tpl.content.firstElementChild;
+    if(first?.tagName==='P'&&summary&&plain(first.textContent||'').trim()===summary)first.remove();
+    const core=tpl.content.querySelector('h2');
+    if(core&&plain(core.textContent||'').trim()==='核心信息'){
+      const next=core.nextElementSibling;
+      if(next?.tagName==='P'&&summary&&plain(next.textContent||'').trim()===summary){
+        core.remove(); next.remove();
+      }
+    }
+    const cleaned=sanitizeBodyHtml(tpl.innerHTML).trim();
+    return cleaned||'<p>'+esc(summary||intro)+'</p>';
   }
   const UUID_RE=/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
   async function loadRelations(entryId){
