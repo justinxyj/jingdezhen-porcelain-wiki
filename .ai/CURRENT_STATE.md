@@ -491,3 +491,13 @@ Phase 6A closed. The published Entry layer is now statically discoverable and in
   - 图片 Entry `arita-kiln`
 - 当前部署工作流整体仍可能显示 failure，原因不是 SEO 页面，而是旧的数据库 TypeScript 检查/ACL 基线；ACL 中原来硬编码 149 条 Entry 的检查已改为动态读取当前 published Entry 数量（提交 `f92e7ada03048a2194e4d408c9510ac4161c1883`）。
 - SEO 页面原则：线上页面必须由生成器产生与动态 Entry Detail 2.0 同结构、同视觉语言的首屏，不允许恢复旧的独立 UI。
+
+
+## 2026-09-20 — Entry Text Readability / Semantic Rendering Freeze
+- 修复 Entry Detail 2.0 的文本渲染边界：页眉只使用 `zh.summary` / 简短上下文，不再把整篇 `zh.content` 当作摘要。
+- 修复动态正文曾用 `plain(cleaned)` 将 HTML 标题、段落、列表全部压平成一段纯文本的问题；正文现在保留安全的 `p/h2/h3/h4/ul/ol/li/blockquote/a` 层级。
+- 对历史批量生成的通用证据/边界/继续研究模板做 UI 层去重；真实的证据深化内容不自动删除。
+- Entry 只在“所属知识世界”显示 primary mapping；secondary World 仍保留在知识网络中，不再污染页眉语义。
+- 静态 SEO generator 与动态 Entry renderer 同步处理正文结构、通用模板清理和阅读排版。
+- 回归测试新增：摘要长度、正文标题层级、通用模板泄漏检查。
+- 原则：摘要回答“这是什么”；正文回答“为什么重要/有哪些证据/研究边界是什么”；关系、时间、空间、工艺和来源承担继续探索，不把治理模板伪装成正文。
