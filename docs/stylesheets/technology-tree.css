@@ -33,7 +33,7 @@
 .tech-entry-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
 .tech-entry-actions a{font-weight:700;text-decoration:underline;text-underline-offset:3px}
 [data-md-color-scheme="slate"] .tech-detail-section{background:rgba(190,210,225,.06)}
-[data-md-color-scheme="slate"] .tech-detail-grid>div,.tech-entry-card{background:rgba(24,36,45,.72);border-color:rgba(190,210,225,.14)}
+[data-md-color-scheme="slate"] .tech-detail-grid>div,[data-md-color-scheme="slate"] .tech-entry-card{background:rgba(24,36,45,.72);border-color:rgba(190,210,225,.14)}
 [data-md-color-scheme="slate"] .tech-network-stats span{background:rgba(190,210,225,.08)}
 @media(max-width:800px){.tech-detail-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tech-entry-grid{grid-template-columns:1fr}}
 @media(max-width:520px){.tech-detail-grid{grid-template-columns:1fr}}
