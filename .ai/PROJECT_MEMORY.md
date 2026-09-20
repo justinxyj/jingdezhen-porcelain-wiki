@@ -509,3 +509,13 @@ QA 后真实基线发生变化：149 个原始 Entry 中有 30 个被降级为 K
 - 6 Knowledge Nodes: joseph-needham, josiah-wedgwood, mikami-tsugio, pilgrim-art, rl-hobson, robert-finlay。
 - Production: 250 published / 190 canonical-eligible / 24 research corpus / 36 knowledge nodes / 190 citation-ready / 60 review / 0 blocked。
 - 220→320 remains frozen。
+
+
+## 2026-09-20 — Phase 7.7 Canonical Evidence Upgrade COMPLETE
+- 9 newly admitted Canonical Entries upgraded: arita-kiln, bat-trang, iznik-ceramics, sawankhalok, seto-kiln, yixing-kiln, tao-shuo, jean-baptiste-du-halde, zhu-yan。
+- Each received evidence-oriented complete content sections: core facts, Jingdezhen relation, evidence boundary, continued exploration.
+- Sources upgraded to institutional/primary research anchors; 12 evidence-graded exploration relations added/confirmed.
+- Media audit: Arita 2, Bát Tràng 1, Iznik 2, Si Satchanalai 1, Seto 1, Yixing 1, Tao Shuo 1, Du Halde 0, Zhu Yan 0. No unverified placeholder media added.
+- Du Halde/Zhu Yan remain without primary media until a verified source image is available.
+- Phase 7.7 version marker: phase7.7-canonical-evidence-upgrade-v1.
+- 220→320 remains frozen.
