@@ -240,3 +240,16 @@ Network QA v4：connected 74、single_strong 46、multi_weak 11、isolated 59。
 Network QA v5：connected 87、single_strong 74、multi_weak 10、isolated 19。entry_relations 共 311 条，其中 A/A+/B 为 234 条。190 Canonical 中已有 161/190 具有至少一个 A/B evidence-grade edge。
 
 Bridge Node 原则：桥梁价值优先于边数量；跨网络的路径只能用于探索，不能把多跳路径当作单条历史事实；每条边仍独立维护 Claim → Evidence → Source → Boundary → Grade。
+
+
+## v6 Bridge Centrality — 2026-09-20
+
+本轮进入 Bridge Centrality：不再按孤立节点数量驱动修复，而是寻找能同时连接日本—朝鲜—东南亚—伊斯兰—欧洲子网络的少数高价值桥梁。
+
+新增 62 条 evidence-graded edges。核心桥梁包括：Arita/日本出口瓷、Kraak 青花、VOC、康熙外销瓷、Delft、UNESCO 景德镇遗产节点 r23，以及伊斯兰陶瓷、东南亚陶瓷等区域节点。
+
+证据支持的关键多跳链包括：景德镇青花 → Kraak/日本青花 → 有田 → VOC → 欧洲；日本出口瓷 → 欧洲市场；VOC → Batavia/东南亚 → 欧洲；UNESCO/r23 → 青花/二元配方/外销瓷/欧洲技术史；伊斯兰陶瓷与东南亚陶瓷进入同一比较网络。
+
+Network QA v6：connected 88、single_strong 73、multi_weak 10、isolated 19；entry_relations 332 条，其中 A/A+/B 255 条。
+
+Bridge Centrality 治理：桥梁不是按度数机械排名；必须能够连接不同知识子网络，并且每条跨网络关系都独立满足 Claim → Evidence → Source → Boundary → Grade。多跳路径仅作为探索路径，不作为事实证明。
