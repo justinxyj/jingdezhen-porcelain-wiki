@@ -582,3 +582,13 @@ Phase 6B/6C：Canonical Content Admission 与 Entry SEO Health 深化；优先�
 - [x] 新增 supabase/migrations/20260920_phase_6c2_evidence_deepening_v1.sql
 - [ ] 对剩余 74 REVIEW 做 A/B/C/D 分流
 - [ ] 完成 Phase 6C-2 最终 Corpus QA 后再评估 149 → 220
+
+
+## Knowledge Corpus Stage
+- [x] 激活“景德镇陶瓷文明 Knowledge Corpus”阶段
+- [x] 对剩余 74 REVIEW 建立 Corpus track / disposition 分流
+- [ ] A_deepen：优先完成景德镇核心、东亚/全球桥接、关键文献
+- [ ] B_research：补齐一手/机构证据与独立研究价值
+- [ ] C_context_or_relation：逐条判断是否应降级为关系节点
+- [ ] 完成 Corpus QA：证据链、实体边界、跨区域传播链、来源层级、重复/合并检查
+- [ ] Corpus QA 完成前保持 149 → 220 冻结
