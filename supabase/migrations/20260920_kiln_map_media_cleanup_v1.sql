@@ -7,7 +7,7 @@ where canonical_key='https://www.metmuseum.org/art/collection/search/42490'
 -- Add a verified Shiwan/Nanfeng Kiln site photograph from Wikimedia Commons.
 insert into public.media (
   entry_id,path,title,source,license,creator,usage_type,source_tier,is_primary,
-  verification_note,verified_at,canonical_key,source_url,source_type,review_state
+  verification_note,verified_at,canonical_key,source_url,source_type,status,review_state
 )
 select
   '6ccac91e-d92d-47bf-b625-68e3779d32bd'::uuid,
