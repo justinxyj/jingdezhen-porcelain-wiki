@@ -500,3 +500,12 @@ QA 后真实基线发生变化：149 个原始 Entry 中有 30 个被降级为 K
 - Hobson/Needham/Finlay remain attribution-preserved academic-history evidence.
 - Zhu Yan/Tao Shuo remains primary-text evidence with historical-source boundaries.
 - 39 remain Research Corpus / REVIEW; 220→320 frozen.
+
+
+## 2026-09-20 — Phase 7.6 Canonical Admission Decision COMPLETE
+- 39个Research Corpus完成最终门禁：9 Canonical / 24 Research Corpus / 6 Knowledge Node / 0 删除合并。
+- 9 Canonical: arita-kiln, bat-trang, iznik-ceramics, sawankhalok, seto-kiln, yixing-kiln, tao-shuo, jean-baptiste-du-halde, zhu-yan。
+- 24 Research Corpus: lettres-edifiantes-porcelaine + r01,r02,r03,r06,r07,r08,r09,r10,r11,r13,r16,r17,r18,r21,r22,r24,r25,r27,r29,r30,r33,r34,r35。
+- 6 Knowledge Nodes: joseph-needham, josiah-wedgwood, mikami-tsugio, pilgrim-art, rl-hobson, robert-finlay。
+- Production: 250 published / 190 canonical-eligible / 24 research corpus / 36 knowledge nodes / 190 citation-ready / 60 review / 0 blocked。
+- 220→320 remains frozen。
