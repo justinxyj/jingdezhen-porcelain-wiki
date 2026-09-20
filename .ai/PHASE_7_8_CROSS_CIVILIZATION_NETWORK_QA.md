@@ -229,3 +229,14 @@ Network QA v4：connected 74、single_strong 46、multi_weak 11、isolated 59。
 190 Canonical 中至少一个 A/B evidence-grade edge 的节点达到 131/190；关系总量 270，其中 A/A+/B 为 193。
 
 重要治理规则：多跳路径不等于单条边的证据强度。每一条 Relation 仍必须单独满足 Claim → Evidence → Source → Boundary → Grade；图上的路径只能用于探索，不可把路径推导结果当作已证实事实。
+
+
+## v5 Bridge Node Repair — 2026-09-20
+
+本轮从 59 个 isolated 中识别并处理真正的 Bridge Nodes，而不是继续做单跳“节点→景德镇”。围绕日本、伊斯兰世界、东南亚、欧洲、朝鲜半岛、中国其他窑业与对象级证据，新增 67 条 A/B evidence-graded edges。
+
+重点桥接：伊斯兰陶瓷→伊斯兰世界→景德镇；西亚陶瓷→伊斯兰陶瓷；东南亚陶瓷→景德镇东南亚网络→漳州窑；瓷器贸易→外销瓷→欧洲；康熙外销瓷→欧洲；金襕手对象→日本/外销网络；明清具体青花对象→青花全球网络；五彩/釉上彩对象→技术网络；考古地层→瓷片/御窑落选瓷片；款识→年款→御窑系统；民窑/窑主/窑业组织→生产组织网络。
+
+Network QA v5：connected 87、single_strong 74、multi_weak 10、isolated 19。entry_relations 共 311 条，其中 A/A+/B 为 234 条。190 Canonical 中已有 161/190 具有至少一个 A/B evidence-grade edge。
+
+Bridge Node 原则：桥梁价值优先于边数量；跨网络的路径只能用于探索，不能把多跳路径当作单条历史事实；每条边仍独立维护 Claim → Evidence → Source → Boundary → Grade。
