@@ -481,3 +481,12 @@
 - 39 B_research entries were rechecked and deliberately kept as Research Corpus REVIEW; no forced promotion.
 - Added evidence_deepening_version=phase7.1-v1 governance.
 - 220 → 320 remains frozen.
+
+
+## 2026-09-20 — Phase 7.2 Corpus Evidence QA
+- 完成74 REVIEW的最终结构化QA：A 5 / B 39 / C 30 / D 0。
+- 5个A类升级至citation-ready PASS。
+- 39个Research Corpus建立Primary Evidence Mapping：13 mapped / 1 bibliographic_primary_target / 25 target_defined。
+- 30个C类保持Knowledge Node，不计入Canonical。
+- 当前181 PASS / 69 REVIEW / 0 BLOCKED；220 Canonical-eligible保持不变。
+- 220 → 320冻结。
