@@ -519,3 +519,14 @@ QA 后真实基线发生变化：149 个原始 Entry 中有 30 个被降级为 K
 - Du Halde/Zhu Yan remain without primary media until a verified source image is available.
 - Phase 7.7 version marker: phase7.7-canonical-evidence-upgrade-v1.
 - 220→320 remains frozen.
+
+
+## 2026-09-20 — Phase 7.8 Cross-Civilization Network QA COMPLETE
+- 全量审查190个Published + Canonical Eligible Entry。
+- network status: 142 isolated, 3 single_weak, 12 multi_weak, 17 single_strong, 16 connected。
+- 仅33/190（17.4%）至少拥有A/B evidence-grade关系；142/190（74.7%）完全没有relation。
+- 现有entry_relations evidence grade分布：A 27、A+ 5、B 5、C 77。
+- 已为entry_content_admissions写入network_qa_status/network_qa_reason/network_qa_version=phase7.8-cross-civilization-network-qa-v1。
+- 本轮不自动修复关系、不批量提升C→A/B；下一步应按Relation Claim→Evidence→Source→Evidence Type→Confidence→Boundary逐条修复P0/P1网络。
+- P0重点：有田—景德镇、欧洲/代尔夫特/迈森、伊斯兰世界、朝鲜半岛、东南亚、外销瓷、克拉克瓷、荷兰东印度公司、葡萄牙贸易、二元配方、青花钴料等。
+- 220→320继续冻结。
