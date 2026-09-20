@@ -643,3 +643,16 @@ Phase 6B/6C：Canonical Content Admission 与 Entry SEO Health 深化；优先�
 - [x] 37 mapped + 2 bibliographic primary target 已纳入矩阵
 - [ ] Evidence Triangulation / Dispute QA
 - [ ] 220 → 320继续冻结
+
+
+## 2026-09-20 — Phase 7.5 Evidence Triangulation & Dispute QA
+- [x] 39/39 Research Corpus第二证据核验
+- [x] 二元配方争议归因
+- [x] 湖田窑/青白瓷分期与材料证据拆分
+- [x] 青花→日本/欧洲传播边界拆分
+- [x] 外销瓷与海上丝绸之路证据层级拆分
+- [x] 粉彩/颜色釉材料事实与技术解释拆分
+- [x] 杜赫德/殷弘绪文献传播链核验
+- [x] Hobson/Needham/Finlay学术史归因
+- [x] 《陶说》原文与现代考古边界核验
+- [ ] Phase 7.6 Canonical Admission Decision
