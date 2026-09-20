@@ -386,3 +386,28 @@ Phase 6C-2 按锁定的七条研究顺序完成第一轮 Evidence Deepening，�
 从这一轮开始，项目的核心内容建设正式以：
 景德镇陶瓷文明 Knowledge Corpus
 作为内部研究工作目标。
+
+
+## 2026-09-20 — Knowledge Corpus Stage Activated
+
+项目正式进入“以景德镇为中心、连接中国—东亚—欧洲—全球陶瓷文明的证据型 Knowledge Corpus”阶段。
+
+### Corpus admission v1
+对剩余 74 个 REVIEW Entry 建立 Corpus 分流治理字段：
+- corpus_track: jingdezhen_core / literature_evidence / east_asia_global_comparison / global_research / person_context / corpus_support
+- corpus_disposition: A_deepen / B_research / C_context_or_relation
+- corpus_rationale
+- corpus_review_version
+
+当前 74 REVIEW 的研究结构：
+- Jingdezhen core：4
+- Literature evidence：25
+- East Asia / global comparison：6
+- Global research：7
+- Person context：31
+- Corpus support：1
+
+原则：不是把所有 Entry 都强行升格，而是建立“核心证据 / 比较证据 / 人物背景 / 关系节点”的分层 Corpus。只有能够形成景德镇中心证据链的内容才进入 A/B 深化；缺乏独立知识价值的人物内容保留为 context/relation candidate。
+
+### 149 → 220 gate
+继续冻结。必须先完成剩余 REVIEW 的证据深化、降级/合并审查和 Corpus QA，再重新评估规模扩张。
