@@ -346,3 +346,4 @@ Phase 6A 已完成系统性收口。149 个 published Entry 均拥有独立静�
 Validate workflow 的数据库 contract type-check 仍存在既有基线失败，未作为本次 Pages 部署阻断；本次实际 Pages build/deploy 与部署后 smoke 均成功。
 
 Phase 6A 之后，下一阶段才进入 Canonical Content Admission / 内容质量深化；不要重新打开首页、World mapping、Phase 4E 图谱或已关闭的 Phase 5-2 架构。
+\n\n## Phase 6B / 6C — Canonical Content Admission（2026-09-20）\n\nPhase 6B/6C 已启动并完成第一轮全量准入与内容深化。149 个 published Entry 全部通过 Canonical Content Admission v1 的基本存在性准入：149/149 有来源、Primary Knowledge World 与探索出口，0 BLOCK。\n\n新增治理表 `public.entry_content_admissions`，仅记录内容准入、证据和质量状态，不构成第二事实数据库。当前 8 个 Entry 达到 citation-ready v1 基础，141 个进入内容深化队列。已实际深化 11 个核心 Entry：青花瓷、御窑厂遗址、青白瓷、湖田窑、粉彩瓷、颜色釉瓷、唐英、《天工开物》、《景德镇陶录》、郎廷极、元青花折枝花纹八棱瓶。\n\nPhase 6B/6C 当前真实瓶颈已确认：不是 Entry 数量，而是正文深度与来源层级。暂不扩张 149→220；先把 141 个 REVIEW Entry 分批提升到 citation-ready。\n\n唯一长期状态基准仍为本文件与 main 实际代码/生产数据；详细准入标准见 `.ai/CANONICAL_CONTENT_ADMISSION_V1.md`。\n
