@@ -546,3 +546,11 @@ Phase 6A closed. The published Entry layer is now statically discoverable and in
 - AI 接管时必须优先读取记忆模块，并以最新 `main`、Supabase 生产状态和 CI 为准；记忆与线上状态冲突时，以可验证的生产状态为准，然后修正记忆。
 - 不把一次性排查过程误记为长期事实；记录“根因、修复、验证、当前状态、下一步/冻结边界”，避免下一次会话重复做已经完成的工作。
 - 对已明确“不要管”的问题，除非出现新的回归证据，否则保持冻结，不重新打开工作块。
+
+
+## 2026-09-20 — Daily Memory Freeze
+- 今日完整工作快照已归档至 PROJECT_MEMORY.md 的“2026-09-20｜今日完整工作快照（AI长期记忆）”。
+- 接管基线：250 Published、最终 Canonical Eligible 190、72 craft processes、现有证据治理和 Bridge Centrality 路线。
+- 用户明确确认：技术树“历史”样式与窑址地图内容消失均已自行修复；AI 不再继续处理，除非出现新的回归证据。
+- 窑址地图长期规则：主数据与 media/timeline enrichment 解耦；不得直接展示未经 media policy 筛选的 media[0]；弹层不得直接倾倒完整 zh.content；公共媒体必须同时满足 approved + verified。
+- 下一阶段：Path-level Evidence QA、Canonical 内容质量/SEO/媒体治理，不继续无差别增加 relation。

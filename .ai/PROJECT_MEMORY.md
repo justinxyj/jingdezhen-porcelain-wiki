@@ -689,3 +689,84 @@ The canonical static page must include the same core visual structure as dynamic
 - AI 接管时必须优先读取记忆模块，并以最新 `main`、Supabase 生产状态和 CI 为准；记忆与线上状态冲突时，以可验证的生产状态为准，然后修正记忆。
 - 不把一次性排查过程误记为长期事实；记录“根因、修复、验证、当前状态、下一步/冻结边界”，避免下一次会话重复做已经完成的工作。
 - 对已明确“不要管”的问题，除非出现新的回归证据，否则保持冻结，不重新打开工作块。
+
+
+# 2026-09-20｜今日完整工作快照（AI长期记忆）
+> 本节是 2026-09-20 的日终归档。后续 AI 接管项目时，先读取本节及本文件较新的状态，再以 GitHub main、Supabase 生产状态和 CI 实际结果校准；不要依据旧截图或旧阶段数字重复开展已完成工作。
+## 一、项目定位与长期架构冻结
+- 项目固定为“以景德镇为中心的陶瓷文明知识世界”，核心问题是“让世界理解景德镇为什么重要，以及它如何影响世界陶瓷文明”。
+- 七大 Knowledge World：历史与发展、工艺与技术、器物与美学、窑址与城市空间、人物与传承、文献与研究、现代景德镇。
+- 时间轴、地图、器物、人物、工艺、搜索都是 Observation Mode，不是第二事实数据库；均观察同一 canonical Entry。
+- Graph edge 不等于推荐资格；相关推荐继续遵守 A+/A gate，B/C 只用于探索。
+- 不因时代、风格、工艺相似自动推断具体作者；督陶官/管理者与实际器物作者必须区分；不制造 ghost node；Phase 4E 已关闭。
+## 二、今日生产基线
+- 当前生产规模：250 Published Entries；最终 Canonical Eligible 基线为 190；Research Corpus / Knowledge Node 等非 Canonical 层继续保留探索连续性。
+- 72 道工序继续是 canonical craft_processes 主数据源。
+- 生产媒体进入更严格治理：公共 UI 必须经过 media policy / media_public，不得直接读取原始 media 或未经筛选的 media[0]。
+- 当前窑址地图约 41 个具备坐标的 published Entry；空间数据来自 Entry map metadata。
+## 三、产品增长与定位报告
+- 已完成并保存 PRODUCT_GROWTH_AND_POSITIONING_REPORT_20260920.md。
+- 核心结论：当前瓶颈不是架构，而是高质量、可检索、可引用的 Canonical 内容规模与独立入口数量。
+- 对标观察覆盖 Wikipedia、World History Encyclopedia、Smarthistory、The Met、Cleveland Museum of Art、V&A Ceramics、Smithsonian Collections。
+- 增长方向：500 高质量 Canonical Entry；旗舰 Digital Museum Object；英文核心 Entry；日语作为中日陶瓷史桥梁；媒体规模提升；World Heritage flagship；Knowledge Cards；搜索/分析反馈闭环。
+- 技术优先级：P0 Entry SEO/Indexability、Canonical Entry 质量、英语核心系统；P1 structured data / OG / sitemap / hreflang / media / heritage / cards / analytics；P2 contributor / IIIF / open cultural data；P3 复杂图算法/推荐算法。
+- 避免无止境增加 graph edge、推荐塞满、反复首页重做、CSS 大重构、第二事实数据库和低价值数据库微优化。
+## 四、Canonical / Evidence Research
+- Phase 6A 完成 Entry 静态 SEO canonical 页面、canonical/description/OG/JSON-LD、Entry sitemap、robots，以及构建期静态生成。
+- Phase 6B/6C 完成全量 admission、Research Pass 和证据边界治理；治理模板不能伪装成正文。
+- Phase 7 完成 Canonical growth 后的 Evidence Deepening；不把“进入 Canonical”误写成“学术研究完成”。
+- Phase 7.2–7.6：39 Research Corpus 完成 primary evidence mapping、claim→evidence→source→evidence type→confidence→boundary，最终分流为 Canonical / Research Corpus / Knowledge Node。
+- 争议问题冻结边界：二元配方起源、青花钴料来源、景德镇→日本/欧洲传播、外销瓷→海上贸易、粉彩/颜色釉技术来源、殷弘绪/杜赫德技术叙述、Hobson/Needham/Finlay 学术史框架均必须区分直接证据与解释性结论。
+- UNESCO 2026 景德镇手工瓷业遗存进入核心证据框架；不建立第二事实数据库。
+## 五、Phase 7.7 Canonical Evidence Upgrade
+- 重点升级 Arita、Bát Tràng、Iznik、Sawankhalok、Seto、Yixing、Tao Shuo、Jean-Baptiste du Halde、Zhu Yan 等 Canonical Entry。
+- 机构/原始来源优先；没有核验过的图片不补入生产。
+## 六、Phase 7.8 Network QA / Bridge Centrality
+- 网络 QA 从大量 isolated 节点开始，连续完成 v2/v3/v4/v5/v6/v7 修复；原则始终是“有证据才连，不为了密度制造关系”。
+- relation 治理链固定为 Entry → Relation Claim → Evidence → Source → Evidence Type → Confidence → Boundary → Evidence Grade。
+- 多跳路径只能作为探索路径，不把路径推导当作单条历史事实。
+- 完成真正的 Bridge Centrality：基于当前 A/A+/B 图执行标准 Brandes betweenness 计算，而不是只看 degree；分析快照约 161 nodes / 273 A-A+/B edges。
+- Bridge Node Phase 2 完成 15-node Claim-by-Claim Evidence QA；形成景德镇青花→Kraak/日本出口→欧洲、青花→伊斯兰陶瓷→Iznik、外销瓷→东南亚→伊斯兰世界、出口瓷→欧洲消费→Meissen 等证据支持的探索路径。
+- BRIDGE_CENTRALITY_MATRIX_20260920.md、BRIDGE_NODE_PHASE_2_20260920.md、bridge_centrality_edges_20260920.csv、analyze_bridge_centrality.py 已保存为研究资产。
+- 下一阶段冻结为 Path-level Evidence QA：逐跳检查年代、方向、对象、证据类型和边界；暂不继续无差别增加 relation。
+## 七、Entry Detail / SEO 语义统一
+- 静态 SEO Entry 页面必须镜像动态 Knowledge Detail 2.0，不能形成独立 UI。
+- Entry header 只回答“这是什么”：优先 zh.summary / 短上下文；正文回答“为什么重要、有哪些证据、研究边界”。
+- 修复了动态正文被压成纯文本、HTML 被 esc 二次转义造成字面标签等问题；正文保留 p/h2/h3/h4/ul/ol/li/blockquote/a 层级。
+- UI 层去除历史通用证据/边界/继续研究模板的重复展示，但不删除真实证据深化内容。
+- Header 只显示 primary Knowledge World；secondary World 仍保留在 network。
+- 用户可见术语统一中文：知识条目、知识条目详情、知识世界、知识节点、知识网络、全球陶瓷网络。
+- pages_smoke 已覆盖代表性 Entry 的摘要、正文、视觉样式和链接样式回归。
+## 八、时间轴弹层
+- 用户实测时间轴详情弹层曾将完整 zh.content 压成纯文本并重复 summary，导致治理模板污染。
+- timeline-interactive.js 已改为优先 summary，无 summary 时提取首段；不再完整倾倒 content；图片继续通过 JDM_MEDIA_POLICY。
+- 后续时间轴弹层只负责节点快速理解和进入 Entry，不承担完整 Entry 正文。
+## 九、窑址地图：排查与最终冻结
+- 用户最初发现 museum/kiln-map/ 的石湾窑弹层存在正文治理模板、摘要重复、图片不可用等问题；随后发现媒体层存在批量污染。
+- The Met 42490/177595 的“青花瓷关联图（视觉索引）”曾被错误复用到 64 个 Entry；该媒体属于公共媒体策略拒绝类型，已从生产 media 清理。
+- 石湾窑曾补入南风古灶现场图：Wikimedia Commons、CC BY 2.0、作者 xiquinhosilva；后续又发现 review_state=verified 但 status=pending，说明公共媒体必须同时满足 status=approved + review_state=verified。
+- 已保存可复现 migration：supabase/migrations/20260920_kiln_map_media_cleanup_v1.sql。
+- 窑址地图空白的运行时根因进一步定位为地图依赖 JDM_KNOWLEDGE.all() 完成全部 Entry + media + timeline enrichment，任一辅助请求失败都会阻断地图；随后设计 kilnAtlas()，以 published 窑址 Entry 为主数据，媒体/时间轴为可选 enrichment。
+- 同期还定位并修正 global-kiln-map.js 的错误 HTTPS 正则导致的 Invalid regular expression flags，并加固 Leaflet CDN / graceful degradation。
+- 用户当前明确确认：窑址地图内容消失问题已经由用户自行修复，本 AI 不再继续处理，除非出现新的回归证据。
+- 冻结规则：地图主数据与 media/timeline enrichment 解耦；不得直接展示未经 media policy 筛选的 media[0]；地点弹层不得直接使用完整 zh.content；关联图/视觉索引/占位/示意图不得进入公共窑址卡片。
+## 十、72 道工序与技术树
+- 72 道工序第一轮产品升级已完成：目录、上下游、技术原理、材料、工具、产出、时代、知识条目、全球网络出口。
+- Craft Relation Deep Audit 删除 204 条宽泛占位关系，保留 85 条具体历史/技术/遗址语义关系，并补充具体器物→工序、御窑厂→工序、人物→工序关系。
+- 用户今日另确认 /craft/technology-tree/ 的“历史”板块浅色模式字体/颜色问题已经由用户自行修复，明确要求 AI 不再处理；后续不根据旧截图重新打开。
+## 十一、部署与回归规则
+- 最新 SHA 的 workflow 可能取消旧 workflow；所有线上结论必须绑定最新 commit SHA。
+- Build 成功、Deploy 成功、Browser Smoke 成功必须分开判断，不能只看前两项。
+- 某次 smoke 失败属于原有 Entry smoke 对长正文必须有 h2/h3 的过严假设，已移除该误报条件。
+- 生产数据变更必须同时有 migration、AI memory 和 regression。
+## 十二、AI 记忆接管规则
+- PROJECT_MEMORY.md 是核心长期记忆入口；CURRENT_STATE.md 记录当前状态；必要时同步 TASKS / CHANGELOG / 专题阶段文档。
+- 接管项目时优先读取 .ai/；记忆与线上状态冲突时，以可验证的 main / Supabase / CI 为准，再修正记忆。
+- 不把一次性排查过程写成永久事实；必须记录根因、修复、验证、当前状态和冻结边界。
+- 用户明确说“不要管”的问题保持冻结，除非出现新的回归证据。
+## 十三、明确下一步
+1. Bridge Network：Path-level Evidence QA，而不是继续无差别加边。
+2. Canonical 内容：优先独立入口、来源质量、英文核心 Entry、Object Profile 和媒体治理，而不是机械扩张 Entry 数量。
+3. SEO：维护 canonical/static Entry、structured data、sitemap、hreflang、media metadata 与搜索入口。
+4. Observation Mode：全部坚持 canonical Entry 单一事实源和 graceful degradation。
+5. 已由用户自行修复的技术树“历史”样式与窑址地图内容消失问题保持冻结。
