@@ -475,3 +475,19 @@ Phase 6A closed. The published Entry layer is now statically discoverable and in
   - dynamic labels：`925e22df80d2d73112059f1b4278330aaae754a8`
   - smoke：`8b949e08a16736033664575081463509a27c28a7`
 - 下一步：等待最新 main 构建/部署完成后，只做线上知识条目页面视觉回归，不再让 SEO 静态页面维护第二套 UI。
+
+
+## 2026-09-20 — SEO Entry UI 修复实际部署校正
+- 用户抽查发现 `/entry/<slug>/` 线上页面仍是旧的独立 SEO UI。
+- 根因已确认：此前统一 UI 的 `scripts/generate_entry_pages.py` 将 CSS 大括号直接放入 Python f-string，导致 GitHub Actions 在 “Generate canonical Entry pages” 阶段报 `SyntaxError: f-string: expecting a valid expression after '{'`，因此此前修改从未进入 Pages。
+- 已修复：提交 `6b0b393c9f2747d093dc543ae8de8a446df72cea`，对静态 CSS 大括号进行 f-string 转义。
+- 部署构建已实际通过：Generate canonical Entry pages = success；Build site = success；Deploy to GitHub Pages = success。
+- 部署后的 Playwright Pages smoke 已实际通过：
+  - Entry SEO/indexability shell
+  - 窑址 Entry `hutian-kiln`
+  - 器物 Entry `tang-ying-jun-vase`
+  - 人物 Entry `wang-bu`
+  - 文献 Entry `r01`
+  - 图片 Entry `arita-kiln`
+- 当前部署工作流整体仍可能显示 failure，原因不是 SEO 页面，而是旧的数据库 TypeScript 检查/ACL 基线；ACL 中原来硬编码 149 条 Entry 的检查已改为动态读取当前 published Entry 数量（提交 `f92e7ada03048a2194e4d408c9510ac4161c1883`）。
+- SEO 页面原则：线上页面必须由生成器产生与动态 Entry Detail 2.0 同结构、同视觉语言的首屏，不允许恢复旧的独立 UI。
