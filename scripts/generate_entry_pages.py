@@ -362,7 +362,7 @@ def main() -> None:
         })
 
     media_rows = fetch_rows(
-        base, key, "media",
+        base, key, "media_public",
         "id,entry_id,path,title,source,license,creator,source_tier,is_primary,created_at,status,review_state",
         "status=eq.approved&review_state=eq.verified&limit=1000",
     )
