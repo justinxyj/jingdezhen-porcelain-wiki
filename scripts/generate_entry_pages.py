@@ -138,7 +138,7 @@ def description_for(entry: dict) -> str:
         ]
         candidate = "、".join(str(x) for x in facts if x)
     if not candidate:
-        candidate = f"{zh.get('title') or entry.get('slug')}：景德镇陶瓷数字博物馆公开知识 Entry。"
+        candidate = f"{zh.get('title') or entry.get('slug')}：景德镇陶瓷数字博物馆公开知识条目。"
     return candidate[:155]
 
 
@@ -158,7 +158,7 @@ def intro_for(entry: dict) -> str:
         meta.get("craft"),
     ]
     fact_text = "、".join(str(x) for x in facts if x)
-    return fact_text or "该 Entry 正在持续补充经过来源核验的知识内容。"
+    return fact_text or "该知识条目正在持续补充经过来源核验的知识内容。"
 
 
 def source_links(sources: list) -> str:
@@ -173,7 +173,7 @@ def source_links(sources: list) -> str:
         links.append(
             f'<li><a href="{html.escape(url, quote=True)}" rel="noopener noreferrer">{label}</a></li>'
         )
-    return "".join(links) or "<li>当前 Entry 尚无已公开来源链接。</li>"
+    return "".join(links) or "<li>当前知识条目尚无已公开来源链接。</li>"
 
 
 def entry_html(entry: dict, world_by_entry: dict[str, list[dict]],
