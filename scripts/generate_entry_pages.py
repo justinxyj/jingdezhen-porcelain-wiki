@@ -91,7 +91,7 @@ def fetch_rows(base: str, key: str, table: str, select: str, extra: str = "") ->
     url = f"{base}/rest/v1/{table}?{urlencode({'select': select})}"
     if extra:
         url += "&" + extra
-    req = Request(url, headers={"apikey": key, "Accept": "application/json"})
+    req = Request(url, headers={"apikey": key, "Authorization": f"Bearer {key}", "Accept": "application/json"})
     with urlopen(req, timeout=30) as response:
         if response.status >= 400:
             raise RuntimeError(f"Supabase REST returned HTTP {response.status} for {table}")
