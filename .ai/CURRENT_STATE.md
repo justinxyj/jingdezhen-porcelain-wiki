@@ -447,3 +447,7 @@
 - 当前媒体架构核验：生产没有 Storage bucket，当前 `media.path` 为 HTTPS 资源 URL；因此未虚构新增 Storage 上传系统，而是补充数据库 HTTPS 约束与管理员端安全边界。
 - 新增 `scripts/security_static_smoke.py`，已加入 CI Validate。
 - 生产 Supabase 最终迁移 `final_security_performance_hardening`、`finalize_private_is_staff_security_boundary` 均已执行并核验。
+
+
+## Phase 6A Final State — 2026-09-20
+Phase 6A closed. The published Entry layer is now statically discoverable and independently indexable. 149/149 published Entries have summary, body, source and primary Knowledge World mapping. Pages build/deploy and browser smoke passed, including cross-type Entry checks, image-backed Entry, and >=149 Entry sitemap URLs. Public media access is isolated through `media_public`.
