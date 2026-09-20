@@ -449,3 +449,13 @@
 - 新增 source_quality、research_priority、research_pass_version 治理字段。
 - 将 2026 UNESCO 景德镇手工瓷业遗存五组成部分纳入核心研究证据框架。
 - 明确暂缓 149→220，下一步进入 Evidence Deepening。
+
+
+## 2026-09-20 — Phase 6C-2 / Evidence Deepening
+- 按七条锁定顺序完成第一轮 Evidence Deepening：世界遗产五组成部分 → 景德镇核心历史/城市生产系统 → 核心人物 → 核心馆藏器物 → 核心文献 → 日本/东亚 → 全球陶瓷文明影响。
+- 新增 supabase/migrations/20260920_phase_6c2_evidence_deepening_v1.sql，把 UNESCO 2026、故宫博物院、大都会艺术博物馆、Smithsonian、景德镇市人民政府、景德镇市志、中国哲学书电子化计划等机构证据整合到现有 canonical Entry，不建立第二事实数据库。
+- 重点深化 23 个高价值 Entry；世界遗产五组成部分首次形成统一“原料—燃料—窑址—城市生产—运输—社会组织”证据框架。
+- 核心人物研究明确区分督陶官/管理者与具体器物作者；核心器物开始采用 Object Profile；日本/东亚传播采用“吸收—转化—本土化”框架。
+- 生产准入结果：64 PASS → 75 PASS；74 REVIEW；0 BLOCK。
+- 未修改 Seven Knowledge Worlds、316 World mappings、A+/A Recommendation Gate、Phase 4E 冻结内容。
+- 149 → 220 继续保持冻结。
