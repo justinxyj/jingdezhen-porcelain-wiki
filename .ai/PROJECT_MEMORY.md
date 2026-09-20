@@ -194,3 +194,25 @@ Canonical Content Admission → 正式内容准入
 Phase 5-2 已关闭。后续进入新的工作块前，必须先定义该工作块的用户目标、最短探索路径、Done Criteria 与明确不做事项；不得自动把 Phase 5-2 重新打开。
 
 **唯一项目记忆状态以本节为当前阶段最终状态。**
+
+
+## 2026-09-20 产品定位与增长战略审查（长期战略记忆）
+
+已完成一次针对国际同类文化知识/数字博物馆网站的产品级对标审查，完整报告保存于：
+
+`.ai/PRODUCT_GROWTH_AND_POSITIONING_REPORT_20260920.md`
+
+该报告的核心结论必须作为后续 Phase 5 战略依据：
+
+- 项目已经不是普通“景德镇陶瓷 Wiki”，实际产品定位应逐步向“以景德镇为中心的陶瓷文明数字知识世界 / 开放数字知识平台”发展。
+- 当前知识基础设施已经足够强：Knowledge World、Entry、Knowledge Graph、Recommendation、Search/Discovery、Timeline、Map、Craft、Person、Object 等核心框架已经成立。
+- 当前主要瓶颈已从“底层知识架构”转向“内容规模、可搜索入口、图片资产、国际化、SEO、外部传播与真实用户数据”。
+- 暂时禁止把主要资源投入到无限增加低价值关系、shared World、复杂推荐、多跳图谱或重复底层微审；优先把现有架构转化为可被搜索、引用、分享的内容资产。
+- 下一阶段核心方向：149 → 500 个高质量 Canonical Entry；重点扩充器物、人物、景德镇核心空间、世界遗产与72道工艺深度页面。
+- 核心器物应逐渐建设成 Digital Museum Object / “器物身份证”，形成对象级元数据、图片、来源、馆藏、工艺、时代、空间与关系。
+- 英文国际化是下一阶段增长重点；日文可作为连接中国陶瓷与日本陶瓷史的重要入口。
+- SEO 重点是把 Entry 从数据库节点变成独立互联网知识入口：唯一标题/描述、canonical、structured data、OpenGraph、图片 alt、sitemap、hreflang、可发现正文。
+- 应优先建设“景德镇手工瓷业遗存”世界遗产旗舰专题，把 UNESCO 的原料—窑址—工艺—城市—贸易系统与现有 Timeline、Map、Craft、People、Object、Knowledge Graph 串联。
+- 后续应建立真实用户分析闭环：搜索词、入口 Entry、Entry→Entry 路径、推荐点击、World 热度、图片热度、语言差异等，用真实行为指导内容生产。
+- 战略原则：**引擎已经够用，下一阶段应开始铺高速公路。**
+- 该报告属于产品战略记忆，不替代 `.ai/PROJECT_MEMORY.md` 的状态基准；若战略报告与当前代码/生产数据冲突，以当前 main 和生产数据库为准。
