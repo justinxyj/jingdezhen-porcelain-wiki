@@ -442,3 +442,10 @@
 - 清零 9 summary / 37 content / 22 source 缺口。
 - 更新 `.ai/ENTRY_SEO_HEALTH_MATRIX.md` 为第二轮 149 Entry 状态。
 \n\n## 2026-09-20 — Phase 6B / 6C Canonical Content Admission\n- 新增 `entry_content_admissions` v1 治理表。\n- 完成 149 Entry 全量 Canonical Admission：149 admitted / 0 blocked。\n- Citation readiness：8 PASS / 141 REVIEW。\n- 深化 11 个核心 Entry，统一引入定义、背景、研究边界与继续探索结构。\n- 明确下一阶段先提升现有 141 个 Entry 的内容质量，不立即机械扩张到 220。\n
+## 2026-09-20 — Phase 6C Canonical Entry Research Pass
+- 完成 149 Entry 全量 Research Pass。
+- 141 个原 REVIEW Entry 完成证据导向的结构化正文深化。
+- Citation-ready：64；Evidence/Boundary Review：85；BLOCK：0。
+- 新增 source_quality、research_priority、research_pass_version 治理字段。
+- 将 2026 UNESCO 景德镇手工瓷业遗存五组成部分纳入核心研究证据框架。
+- 明确暂缓 149→220，下一步进入 Evidence Deepening。
