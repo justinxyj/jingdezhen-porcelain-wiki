@@ -614,3 +614,15 @@ Phase 6B/6C：Canonical Content Admission 与 Entry SEO Health 深化；优先�
 - [x] 220 Canonical-eligible baseline preserved
 - [ ] 74 remaining REVIEW deepening / Corpus QA
 - [ ] 220 → 320 growth remains frozen until REVIEW corpus is cleared or intentionally retained
+
+
+## 2026-09-20 — Phase 7.2 Corpus Evidence QA
+- [x] 完成剩余74 REVIEW的Corpus QA分流复核
+- [x] 5个A类Entry完成证据深化并PASS
+- [x] 39个Research Corpus完成Primary Evidence Mapping
+- [x] 13个Research Corpus获得直接机构/一手证据映射
+- [x] 1个Research Corpus获得一手考古报告书目级映射
+- [x] 25个Research Corpus完成一手证据目标定义，暂不晋级
+- [x] 30个C类继续保持Knowledge Node
+- [ ] 对25个target_defined Research Corpus逐条取得可核验原始记录
+- [ ] 220 → 320继续冻结
