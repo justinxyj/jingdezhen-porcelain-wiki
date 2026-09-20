@@ -460,7 +460,7 @@
     if(!entry)return null;
     const [ctx,worldRows,worldDefs,recs,craftEdges]=await Promise.all([
       entryContext(entry.id),
-      query((db,s)=>db.from('entry_worlds').select('entry_id,world_slug,role,rationale').eq('entry_id',entry.id).order('role',{ascending:true}).abortSignal(s)),
+      query((db,s)=>db.from('entry_worlds').select('entry_id,world_slug,role,rationale').eq('entry_id',entry.id).eq('role','primary').order('display_order',{ascending:true}).abortSignal(s)),
       query((db,s)=>db.from('knowledge_worlds').select('slug,title,short_title,description,display_order').order('display_order',{ascending:true}).abortSignal(s)),
       recommendations(entry.id,{limit:8}),
       query((db,s)=>db.from('knowledge_graph_edges').select('target_node_id,rationale,display_order,metadata').eq('source_node_id','entry:'+entry.id).eq('edge_type','craft_process:historically_important_for').order('display_order',{ascending:true}).limit(12).abortSignal(s))
