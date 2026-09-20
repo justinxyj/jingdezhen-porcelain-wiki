@@ -419,3 +419,15 @@
 - 增加世界→中国→景德镇→青花的视觉路径，并保留七大知识世界真实入口。
 - 本轮只改首页体验层与用户可见文案，不新增生产知识事实。
 - 用户可见英文产品术语开始统一中文化。
+
+
+## 2026-09-20 — Phase 6A / Entry SEO & Indexability
+- 对 live production 的 149 published Entry 完成第一轮逐条 SEO Health Matrix。
+- 发现系统性问题：meta.description 0/149；/entry/ 初始 HTML 只有 loading shell；未建立独立 Entry canonical / OpenGraph / JSON-LD；动态 query-string Entry URL 未进入明确的独立 sitemap 体系。
+- 内容层同时确认：summary 140/149、content 112/149、sources 127/149、149/149 primary Knowledge World。
+- 新增 scripts/generate_entry_pages.py：构建时从公开 Supabase 数据生成 /entry/<slug>/ 静态 canonical Entry 页面。
+- 静态页面加入 title、description、canonical、OpenGraph、WebPage/BreadcrumbList JSON-LD、正文、来源、主图和继续探索入口。
+- 新增 sitemap-entries.xml / robots sitemap hints。
+- JDM_KNOWLEDGE.url() 改为 canonical static Entry URL；wiki-enhancements.js 支持静态首屏保留。
+- GitHub Pages workflow 在 MkDocs build 前执行静态 Entry 生成；Pages smoke 新增 canonical、description、JSON-LD、初始正文检查。
+- 本阶段仍未进入 149 → 220，等待最新构建/部署/线上验证后再继续。
