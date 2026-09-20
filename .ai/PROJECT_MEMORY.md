@@ -460,3 +460,13 @@ QA 后真实基线发生变化：149 个原始 Entry 中有 30 个被降级为 K
 - No object → maker inference.
 - No single source → civilization-scale conclusion.
 - Research Corpus can remain REVIEW until evidence warrants promotion.
+
+
+## 2026-09-20 — Phase 7.2 Corpus Evidence QA COMPLETE
+
+- Remaining 74 REVIEW were processed as Corpus QA: 5 A Canonical entries deepened and promoted; 30 C entries remain Knowledge Nodes; 39 B entries remain Research Corpus.
+- The 39 Research Corpus entries now each have a primary evidence mapping status: 13 direct institutional/primary mappings, 1 bibliographic primary target, 25 explicitly defined primary evidence targets awaiting direct verification.
+- Research Corpus remains citation-readiness REVIEW by design; mapping a primary target is not equivalent to completing the evidence argument.
+- Five A entries promoted: 粉彩瓷, 2002—2014：御窑厂主动性考古, 五代—宋：湖田窑与青白瓷, 青白瓷, 元：青花与釉下彩绘.
+- Current: 250 published / 220 Canonical-eligible / 30 Knowledge Nodes / 181 citation-ready / 69 REVIEW / 0 blocked.
+- 220 → 320 remains frozen.
