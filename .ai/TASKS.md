@@ -538,3 +538,19 @@
 - [ ] 旧 query-string Entry URL canonical 冲突检查
 - [ ] 重新生成 Health Matrix 并收口系统性 BLOCK
 - [ ] 处理 9 summary / 37 content / 22 source 内容缺口
+
+
+## Phase 6A Final — DONE（2026-09-20）
+- [x] 149 Entry 静态独立 URL
+- [x] 初始 HTML / canonical / description / JSON-LD / OG
+- [x] Entry sitemap + robots
+- [x] Pages build / deploy / browser smoke
+- [x] 跨类型 Entry 抽查 + 图片抽查
+- [x] 149 Entry Health Matrix 第二轮
+- [x] 9 summary 缺口清零
+- [x] 37 content 缺口清零
+- [x] 22 source 缺口清零
+- [x] public media 安全投影与 ACL smoke
+
+### 下一工作块
+Phase 6B/6C：Canonical Content Admission 与 Entry SEO Health 深化；优先把“存在正文”升级为“高质量可引用正文”，不要通过复制 summary 长期代替研究型内容。
