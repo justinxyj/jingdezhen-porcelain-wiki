@@ -80,8 +80,8 @@ def runtime_config() -> tuple[str, str]:
         return env_url.rstrip("/"), env_key
 
     text = RUNTIME_CONFIG.read_text(encoding="utf-8")
-    url = re.search(r"supabaseUrl:\\s*['\"]([^'\"]+)", text)
-    key = re.search(r"supabaseAnonKey:\\s*['\"]([^'\"]+)", text)
+    url = re.search(r"supabaseUrl:\s*['\"]([^'\"]+)", text)
+    key = re.search(r"supabaseAnonKey:\s*['\"]([^'\"]+)", text)
     if not url or not key:
         raise RuntimeError("Unable to read public Supabase runtime configuration")
     return url.group(1).rstrip("/"), key.group(1)
