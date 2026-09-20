@@ -634,3 +634,13 @@ QA 后真实基线发生变化：149 个原始 Entry 中有 30 个被降级为 K
 SEO canonical static knowledge pages must not maintain an independent visual system. The static generator must mirror the established dynamic Knowledge Detail 2.0 structure and visual language. User-visible terminology is Chinese: 知识条目、知识条目详情、知识世界、知识节点、知识网络、全球陶瓷网络；English Entry/Entry Detail remains only as internal technical naming where necessary.
 
 The canonical static page must include the same core visual structure as dynamic detail: breadcrumb, header/hero, metadata tags, knowledge-world path, knowledge-node rail, continuation links, main content, knowledge relations, sources, responsive layout. Any future visual change to the dynamic detail must be reflected in the static generator in the same change block; do not let SEO pages “grow their own UI”.
+
+
+## 2026-09-20 — Entry Text Readability / Semantic Rendering Freeze
+- 修复 Entry Detail 2.0 的文本渲染边界：页眉只使用 `zh.summary` / 简短上下文，不再把整篇 `zh.content` 当作摘要。
+- 修复动态正文曾用 `plain(cleaned)` 将 HTML 标题、段落、列表全部压平成一段纯文本的问题；正文现在保留安全的 `p/h2/h3/h4/ul/ol/li/blockquote/a` 层级。
+- 对历史批量生成的通用证据/边界/继续研究模板做 UI 层去重；真实的证据深化内容不自动删除。
+- Entry 只在“所属知识世界”显示 primary mapping；secondary World 仍保留在知识网络中，不再污染页眉语义。
+- 静态 SEO generator 与动态 Entry renderer 同步处理正文结构、通用模板清理和阅读排版。
+- 回归测试新增：摘要长度、正文标题层级、通用模板泄漏检查。
+- 原则：摘要回答“这是什么”；正文回答“为什么重要/有哪些证据/研究边界是什么”；关系、时间、空间、工艺和来源承担继续探索，不把治理模板伪装成正文。
