@@ -30,6 +30,9 @@ jobs:
       - name: Install dependencies
         run: pip install mkdocs-material
 
+      - name: Generate canonical Entry pages
+        run: python scripts/generate_entry_pages.py
+
       - name: Build site
         run: mkdocs build --strict
 
