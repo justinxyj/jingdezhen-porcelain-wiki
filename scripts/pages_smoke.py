@@ -189,6 +189,32 @@ with sync_playwright() as p:
     if len(titles)>=2 and titles[:2] != expected:
         raise RuntimeError("历史时间轴顺序异常: "+repr(titles[:4]))
     print("PASS timeline order")
+
+    # Global kiln map modal regression: content must use the concise Entry summary,
+    # not the internal evidence boilerplate, and media must pass the public media policy.
+    page.goto(base+"museum/kiln-map/",wait_until="networkidle",timeout=30000)
+    page.locator("#kiln-map .global-kiln-list-item").first.wait_for(state="visible",timeout=20000)
+    shiwan=page.locator('#kiln-map .global-kiln-list-item[data-slug="shiwan-kiln"]')
+    if shiwan.count()!=1:
+        raise RuntimeError("窑址地图缺少石湾窑条目")
+    shiwan.click()
+    page.locator("#global-kiln-modal .global-kiln-dialog").wait_for(state="visible",timeout=10000)
+    modal_text=page.locator("#global-kiln-modal").inner_text()
+    intro=page.locator("#global-kiln-modal .global-kiln-intro").inner_text().strip()
+    summary=page.locator("#global-kiln-modal .global-kiln-ai p").inner_text().strip()
+    if intro != summary:
+        raise RuntimeError("窑址地图弹层正文与摘要重复/来源模板污染")
+    if "本 Entry 的核心信息以页面列出的来源为证据入口" in modal_text or "研究边界" in modal_text or "继续研究" in modal_text:
+        raise RuntimeError("窑址地图弹层暴露内部证据模板文本")
+    image=page.locator("#global-kiln-modal .global-kiln-image img")
+    if image.count()!=1 or not image.get_attribute("src"):
+        raise RuntimeError("石湾窑地图弹层缺少已核验图片")
+    link_styles=page.locator("#global-kiln-modal .global-kiln-links a").evaluate_all("""els=>els.map(a=>{const s=getComputedStyle(a);return {display:s.display,color:s.color,textDecoration:s.textDecorationLine,border:s.borderTopWidth}})""")
+    for item in link_styles:
+        if item["color"]=="rgb(0, 0, 238)" or item["textDecoration"]=="underline":
+            raise RuntimeError("窑址地图弹层链接退化为浏览器默认蓝色下划线样式: "+repr(item))
+    print("PASS kiln map modal/media/content")
+
     browser.close()
 
 if server_errors:
