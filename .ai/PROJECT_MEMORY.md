@@ -530,3 +530,12 @@ QA 后真实基线发生变化：149 个原始 Entry 中有 30 个被降级为 K
 - 本轮不自动修复关系、不批量提升C→A/B；下一步应按Relation Claim→Evidence→Source→Evidence Type→Confidence→Boundary逐条修复P0/P1网络。
 - P0重点：有田—景德镇、欧洲/代尔夫特/迈森、伊斯兰世界、朝鲜半岛、东南亚、外销瓷、克拉克瓷、荷兰东印度公司、葡萄牙贸易、二元配方、青花钴料等。
 - 220→320继续冻结。
+
+
+## 2026-09-20 — Phase 7.8 Network Repair v2
+- P0/P1 Cross-Civilization Network Repair 已实际写入 production entry_relations。
+- 本轮新增一批带 Relation Claim + Source + Evidence Grade 的 A/B edges，重点覆盖：二元配方、青花钴料、原料/燃料/河流/码头/分工/标准化/行会、御窑管理、明代御窑青花、斗彩/五彩/釉上彩/釉里红/高温红釉，以及日本、朝鲜、欧洲、葡萄牙、VOC、代尔夫特、迈森、克拉克瓷、伊斯兰世界、东南亚等跨文明节点。
+- Network QA v2：connected 58、single_strong 29、multi_weak 11、isolated 92；至少一个A/B evidence-grade edge的Canonical由33增至87/190。
+- 关系类型严格使用既有schema；没有批量C→A/B，没有用相似性自动声称技术传播。
+- 92个孤立节点仍待下一轮P1/P2 evidence-backed repair；不为了网络密度制造关系。
+- 220→320继续冻结。
