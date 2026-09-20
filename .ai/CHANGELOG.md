@@ -473,3 +473,11 @@
 - 新增内容覆盖景德镇生产系统、原料、窑炉、分工、器物与颜色釉、明清关键时期、东亚传播、欧洲贸易及博物馆对象。
 - 新增 Entry 当前以 review/develop 为主，后续必须进行 Evidence Deepening；不得把“进入 Canonical”误写成“学术研究完成”。
 - Phase 7 的 149→220 Canonical Growth Gate 已达成；下一门槛是 220→320，但必须先完成新增 Entry 的证据深化。
+
+
+## 2026-09-20 — Phase 7.1 Evidence Deepening
+- 101 new Canonical growth Entries completed Evidence Deepening and promoted to citation-ready PASS.
+- Current: 250 published / 220 Canonical-eligible / 30 Knowledge Nodes / 176 citation-ready / 74 review / 0 blocked.
+- 39 B_research entries were rechecked and deliberately kept as Research Corpus REVIEW; no forced promotion.
+- Added evidence_deepening_version=phase7.1-v1 governance.
+- 220 → 320 remains frozen.
