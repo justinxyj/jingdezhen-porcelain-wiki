@@ -142,6 +142,21 @@ def description_for(entry: dict) -> str:
     return candidate[:155]
 
 
+def clean_body_html(content: str, summary: str) -> str:
+    """Remove UI-level duplication when the body repeats the page summary verbatim."""
+    body = sanitize(content) if content.strip() else ""
+    summary_text = plain(summary)
+    if not body or not summary_text:
+        return body
+    first = re.match(r"^\\s*<p>([\\s\\S]*?)</p>\\s*", body, flags=re.I)
+    if first and plain(first.group(1)) == summary_text:
+        body = body[first.end():]
+    core = re.match(r"^\\s*<h2>\\s*核心信息\\s*</h2>\\s*<p>([\\s\\S]*?)</p>\\s*", body, flags=re.I)
+    if core and plain(core.group(1)) == summary_text:
+        body = body[core.end():]
+    return body or f"<p>{html.escape(summary_text)}</p>"
+
+
 def intro_for(entry: dict) -> str:
     zh = entry.get("zh") or {}
     meta = zh.get("meta") or {}
@@ -186,10 +201,13 @@ def entry_html(entry: dict, world_by_entry: dict[str, list[dict]],
     description = description_for(entry)
     intro = intro_for(entry)
     content = str(zh.get("content") or "")
-    body_html = sanitize(content) if content.strip() else f"<p>{html.escape(intro)}</p>"
+    body_html = clean_body_html(content, intro) if content.strip() else f"<p>{html.escape(intro)}</p>"
     media = first_media(media_by_entry, entry["id"])
     worlds = world_by_entry.get(entry["id"], [])
     relations = relations_by_entry.get(entry["id"], [])[:12]
+    meta = zh.get("meta") or {}
+    tags = [str(x) for x in [meta.get("period"), meta.get("era"), meta.get("role"), meta.get("location"), meta.get("region"), meta.get("craft")] if x]
+    tags = list(dict.fromkeys(tags))[:6]
 
     image_html = ""
     image_url = ""
@@ -215,11 +233,7 @@ def entry_html(entry: dict, world_by_entry: dict[str, list[dict]],
         f' <span>{html.escape(str(r.get("relation_type") or "关联"))}</span></li>'
         for r in relations if r.get("target_slug")
     )
-    if not relation_html:
-        relation_html = (
-            f'<li><a href="{SITE_URL}search/">从统一搜索继续探索</a></li>'
-            f'<li><a href="{SITE_URL}network/relations/">进入知识网络</a></li>'
-        )
+
 
     schema = {
         "@context": "https://schema.org",
@@ -293,10 +307,11 @@ main{{max-width:1240px;margin:0 auto;padding:24px 24px 72px}}.wiki-chrome{{displ
 <p class="entry-static-summary">{html.escape(intro)}</p></div>
 {image_html}
 </header>
+{f'<div class="wiki-entry-v2-tags">{"".join("<span>"+html.escape(x)+"</span>" for x in tags)}</div>' if tags else ""}
 {f'<div class="wiki-entry-world-path"><span>所属知识世界</span><div>{world_html}</div></div>' if world_html else ""}
 <div class="wiki-entry-v2-grid"><aside class="wiki-entry-v2-rail"><div class="wiki-entry-v2-card"><strong>知识节点</strong><span>{html.escape(str(entry.get("category") or "知识"))}</span><span>{html.escape(str(((zh.get("meta") or {}).get("period") or (zh.get("meta") or {}).get("era") or "时代信息待核")))}</span><span>{html.escape(str(((zh.get("meta") or {}).get("location") or (zh.get("meta") or {}).get("region") or "空间信息待核")))}</span></div><div class="wiki-entry-v2-card"><strong>继续探索</strong><a href="{SITE_URL}search/">⌕ 搜索知识 →</a><a href="{SITE_URL}network/relations/">关系网络 →</a><a href="{SITE_URL}network/global/">全球陶瓷网络 →</a></div></aside><div class="wiki-entry-v2-main"><section class="wiki-entry-body"><h2>详细介绍</h2>{body_html}</section>
-<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">知识关系</div><h2>它与哪些知识相连</h2><ul class="wiki-entry-v2-relations">{relation_html}</ul></section>
-<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">来源</div><h2>来源与外部资料</h2><ul class="wiki-entry-source-links">{source_links(zh.get("sources") or entry.get("sources") or [])}</ul></section>
+{f'<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">知识关系</div><h2>它与哪些知识相连</h2><ul class="wiki-entry-v2-relations">{relation_html}</ul></section>' if relations else ""}
+<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">来源</div><h2>来源与外部资料</h2><ul class="wiki-entry-source-links">{source_links(zh.get("sources") or entry.get("sources") or [])}<li><a href="https://zh.wikipedia.org/w/index.php?search={quote(title)}" rel="noopener noreferrer">维基百科 ↗</a></li></ul></section>
 </div></div><footer class="wiki-entry-footer">本页面为公开正式知识条目；页面正文、来源与媒体由项目知识库维护。</footer>
 </article>
 </main>
