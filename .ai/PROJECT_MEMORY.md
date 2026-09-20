@@ -318,3 +318,31 @@ Phase 6A 已正式开始，不再停留在计划阶段。
 7. 再处理 9 summary / 37 content / 22 source 等内容缺口。
 
 **当前仍不进入 149 → 220。**
+
+
+## Phase 6A 收口记录（2026-09-20）
+
+Phase 6A 已完成系统性收口。149 个 published Entry 均拥有独立静态 `/entry/<slug>/` 页面，并在构建期生成 canonical、description、OpenGraph、WebPage + BreadcrumbList JSON-LD、初始 HTML 正文、Knowledge World 链接、关系探索链接与 Entry sitemap。
+
+### 验证结果
+- Pages build：成功。
+- GitHub Pages deploy：成功。
+- 部署后 Playwright smoke：成功。
+- `/entry/blue-and-white/`：通过 canonical、description、JSON-LD、初始正文检查。
+- 跨类型抽查：窑址 `hutian-kiln`、器物 `tang-ying-jun-vase`、人物 `wang-bu`、文献 `r01`、图片 `arita-kiln` 全部通过；图片 Entry 确认初始 HTML 含图片。
+- `sitemap-entries.xml`：通过 >=149 URL 检查。
+- Supabase public ACL smoke：成功。
+
+### 内容缺口处理
+- summary：9 → 0 缺口。
+- content：37 → 0 缺口。对已有 canonical summary 缺少正文的 Entry，以现有 summary 作为保守正文基线，避免无依据扩写。
+- source：22 → 0 缺口。补入已有时间轴官方来源或经检索确认的机构来源。
+- 最终 production：149/149 summary、content、sources 均存在。
+
+### 公共媒体安全边界
+为满足静态构建与前台图片读取，同时不暴露 `verification_note` 等内部字段，新增 `public.media_public` 安全投影，只公开 approved + verified 媒体的安全字段；anon 不再直接读取 `public.media`。前台 `knowledge-store.js` 与构建生成器均改用该投影。
+
+### CI 注意事项
+Validate workflow 的数据库 contract type-check 仍存在既有基线失败，未作为本次 Pages 部署阻断；本次实际 Pages build/deploy 与部署后 smoke 均成功。
+
+Phase 6A 之后，下一阶段才进入 Canonical Content Admission / 内容质量深化；不要重新打开首页、World mapping、Phase 4E 图谱或已关闭的 Phase 5-2 架构。
