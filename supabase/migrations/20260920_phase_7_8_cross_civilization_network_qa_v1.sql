@@ -1,0 +1,3 @@
+-- Phase 7.8 — Cross-Civilization Network QA
+-- Network QA governance fields were added directly in production.
+-- This migration is a reproducibility marker; relation repair is intentionally not automated here.
