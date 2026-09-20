@@ -347,3 +347,12 @@ Validate workflow 的数据库 contract type-check 仍存在既有基线失败�
 
 Phase 6A 之后，下一阶段才进入 Canonical Content Admission / 内容质量深化；不要重新打开首页、World mapping、Phase 4E 图谱或已关闭的 Phase 5-2 架构。
 \n\n## Phase 6B / 6C — Canonical Content Admission（2026-09-20）\n\nPhase 6B/6C 已启动并完成第一轮全量准入与内容深化。149 个 published Entry 全部通过 Canonical Content Admission v1 的基本存在性准入：149/149 有来源、Primary Knowledge World 与探索出口，0 BLOCK。\n\n新增治理表 `public.entry_content_admissions`，仅记录内容准入、证据和质量状态，不构成第二事实数据库。当前 8 个 Entry 达到 citation-ready v1 基础，141 个进入内容深化队列。已实际深化 11 个核心 Entry：青花瓷、御窑厂遗址、青白瓷、湖田窑、粉彩瓷、颜色釉瓷、唐英、《天工开物》、《景德镇陶录》、郎廷极、元青花折枝花纹八棱瓶。\n\nPhase 6B/6C 当前真实瓶颈已确认：不是 Entry 数量，而是正文深度与来源层级。暂不扩张 149→220；先把 141 个 REVIEW Entry 分批提升到 citation-ready。\n\n唯一长期状态基准仍为本文件与 main 实际代码/生产数据；详细准入标准见 `.ai/CANONICAL_CONTENT_ADMISSION_V1.md`。\n
+## Phase 6C Research Pass（2026-09-20）
+
+Phase 6C 第一轮全量 Research Pass 已完成。149 个 published Entry 全部完成结构化研究审查；原 141 个 REVIEW Entry 均完成一次证据导向的正文结构深化，当前 Citation-ready 64，Evidence/Boundary Review 85，BLOCK 0。新增 source_quality、research_priority、research_pass_version 治理字段。
+
+重要：本轮不以堆字数完成“citation-ready”。正文深化只组织已有摘要/正文/来源并明确研究边界；任何新事实必须回到来源。64 PASS 的 v2 门槛为：正文达到最低结构深度 + 至少一个可识别的原始/机构来源 + 明确研究边界。85 REVIEW 不强行升级，后续分为深化、重写、降级关系节点、候选合并。
+
+2026 年 UNESCO 已将 Jingdezhen Handicraft Porcelain Industry Sites 列入世界遗产名录，五个组成部分及其原料—窑炉—生产—运输—社会组织链已成为 Phase 6C 核心证据框架。
+
+当前禁止 149→220；下一工作块为 Phase 6C-2 Evidence Deepening，优先世界遗产五组成部分、景德镇核心历史、核心人物、核心器物、核心文献、日本/东亚与全球传播链。详细状态见 .ai/PHASE_6C_RESEARCH_PASS.md。
