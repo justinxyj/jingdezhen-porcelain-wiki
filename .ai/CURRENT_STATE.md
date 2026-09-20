@@ -460,3 +460,18 @@ Phase 6A closed. The published Entry layer is now statically discoverable and in
 - commit: 5530dbde5917c6d884e1f3dba6682eb6fcce091b
 - 部署流程仍会在 MkDocs build 前自动运行静态 Entry generator，因此下一次 Pages 构建会重新生成全部 canonical Entry 页面。
 - 下一步：部署完成后只做 Entry 页面视觉回归（首页 → Entry → 关系/来源/继续探索），不做无关 CSS 大重构。
+
+
+## 2026-09-20 — SEO 静态知识条目 UI 全量统一修正
+- 用户反馈“SEO 页面自己长了一套 UI”，要求再次检查所有页面。
+- 审查确认：问题集中在 build-time `scripts/generate_entry_pages.py` 生成的 `/entry/<slug>/` 初始 HTML；之前虽然有独立 CSS，但结构与动态 Entry Detail 2.0 不一致，缺少统一的知识节点侧栏、双栏布局和统一关系/来源卡片。
+- 已将静态知识条目初始 HTML 改为与动态 Entry Detail 2.0 同一套结构语言：`wiki-entry-card wiki-entry-v2`、`wiki-entry-header`、Knowledge World 路径、知识节点侧栏、继续探索、知识关系卡片、来源卡片、统一圆角/边框/蓝灰层级与响应式布局。
+- 已同步修正动态 `wiki-enhancements.js` 的用户可见英文产品标签：所属知识世界、知识关系、时间与空间、同一时代、空间语境、工艺、知识探索、来源。
+- 已清理静态 SEO 页面中的剩余用户可见 Entry 英文兜底文案，并把 Breadcrumb/JSON-LD 的用户名称改为“知识条目”。
+- `scripts/pages_smoke.py` 已增加统一 UI 回归门槛：canonical 知识条目必须具备统一 Entry Detail 2.0 外壳、双栏探索布局、知识节点侧栏，并拒绝旧的“Entry Detail / KNOWLEDGE RELATIONS”英文 UI。
+- 本轮只修改页面表现与 smoke，不修改 Supabase 知识事实、关系数据或 SEO URL 结构。
+- 最新相关提交：
+  - generator UI：`6bb809414e1dd3dcc23890afb4805ba34cd8d0c5`
+  - dynamic labels：`925e22df80d2d73112059f1b4278330aaae754a8`
+  - smoke：`8b949e08a16736033664575081463509a27c28a7`
+- 下一步：等待最新 main 构建/部署完成后，只做线上知识条目页面视觉回归，不再让 SEO 静态页面维护第二套 UI。
