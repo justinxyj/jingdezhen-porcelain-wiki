@@ -44,6 +44,6 @@
     }
     nodes.forEach(node=>node.remove());
   }
-  async function boot(){removeLiteralNewlineArtifacts();if(!window.JDM_KNOWLEDGE)return;init(await window.JDM_KNOWLEDGE.all())}
+  async function boot(){removeLiteralNewlineArtifacts();if(!window.JDM_KNOWLEDGE)return;try{const rows=window.JDM_KNOWLEDGE.kilnAtlas?await window.JDM_KNOWLEDGE.kilnAtlas({limit:250}):await window.JDM_KNOWLEDGE.list({category:'窑址',limit:250});init(rows)}catch(error){console.error('[JDM kiln atlas]',error);const root=document.getElementById('kiln-map');if(root)root.innerHTML='<div class="kiln-atlas-error"><b>窑址地图暂时无法加载</b><span>请稍后刷新；知识条目数据本身未受影响。</span></div>'}}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
 })();
