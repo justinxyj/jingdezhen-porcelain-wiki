@@ -1,0 +1,4 @@
+-- Phase 7.6 — Canonical Admission Decision
+-- Applied 2026-09-20.
+-- 39 Research Corpus decisions: 9 Canonical, 24 Research Corpus, 6 Knowledge Nodes.
+-- No content facts are copied into a second database; this is admission governance only.
