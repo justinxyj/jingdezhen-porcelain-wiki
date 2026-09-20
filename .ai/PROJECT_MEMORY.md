@@ -556,3 +556,10 @@ QA 后真实基线发生变化：149 个原始 Entry 中有 30 个被降级为 K
 - Network QA v4：connected 74、single_strong 46、multi_weak 11、isolated 59。
 - entry_relations 当前 270 条，A/A+/B 193 条。
 - 多跳路径仅用于探索，不把路径推导当作单条事实；每条边仍独立满足 Claim→Evidence→Source→Boundary→Grade。
+
+
+## 2026-09-20 — Phase 7.8 Bridge Node Repair v5
+- 从 59 个 isolated 节点中围绕日本、伊斯兰世界、东南亚、欧洲、朝鲜半岛、中国其他窑业及对象级证据识别 Bridge Nodes。
+- 新增 67 条 A/B evidence-graded edges。重点完成：伊斯兰陶瓷、西亚陶瓷、东南亚陶瓷、漳州窑、瓷器贸易、康熙外销瓷、金襕手对象、明清青花对象、五彩/釉上彩对象、考古地层/瓷片、款识/年款/御窑、民窑/窑主/窑业组织等桥接。
+- Network QA v5：connected 87、single_strong 74、multi_weak 10、isolated 19；311 relations，A/A+/B 234；161/190 Canonical 有至少一个 A/B edge。
+- 治理：Bridge Node 的价值看其连接两个子网络的能力，而非单纯边数；多跳路径只作探索，不作为事实证明。
