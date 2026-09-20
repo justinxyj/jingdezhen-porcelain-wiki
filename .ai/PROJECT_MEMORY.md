@@ -548,3 +548,11 @@ QA 后真实基线发生变化：149 个原始 Entry 中有 30 个被降级为 K
 - 190 Canonical 中至少一个 A/B edge 的节点达到 131/190（68.9%）。
 - entry_relations 当前 244 条，其中 A/A+/B 共 167 条；C 仍保留为探索关系，不自动升级。
 - 比较窑业关系统一保持 comparative/contextual 边界，不把相似性自动解释为技术传播。
+
+
+## 2026-09-20 — Phase 7.8 Second-Layer Civilization Network v4
+- 从“孤立节点→景德镇”升级为多跳文明网络：Entry → 市场/区域/文献节点 → 文明节点 → 比较/反馈节点。
+- 新增 77 条 evidence-graded edges，重点建立：青花→日本市场→有田；外销瓷→欧洲→代尔夫特→中国风→迈森；青白瓷→伊斯兰世界→外销；二元配方→高岭土/瓷石→欧洲瓷器技术史；克拉克瓷→贸易网络；朝鲜→日本东亚比较层；《陶说》/朱琰/王士性/殷弘绪/杜赫德/《天工开物》文献人物交叉层；粉彩技术→釉上彩→粉彩瓷→欧洲比较。
+- Network QA v4：connected 74、single_strong 46、multi_weak 11、isolated 59。
+- entry_relations 当前 270 条，A/A+/B 193 条。
+- 多跳路径仅用于探索，不把路径推导当作单条事实；每条边仍独立满足 Claim→Evidence→Source→Boundary→Grade。
