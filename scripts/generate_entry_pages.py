@@ -423,6 +423,10 @@ def main() -> None:
         )
     sitemap.append("</urlset>")
     (DOCS / "sitemap-entries.xml").write_text("\n".join(sitemap) + "\n", encoding="utf-8")
+    (DOCS / "robots.txt").write_text(
+        "User-agent: *\\nAllow: /\\nSitemap: " + SITE_URL + "sitemap.xml\\nSitemap: " + SITE_URL + "sitemap-entries.xml\\n",
+        encoding="utf-8",
+    )
 
     print(f"Generated {len(entries)} static Entry pages.")
     print("Generated docs/sitemap-entries.xml.")
