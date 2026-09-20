@@ -554,3 +554,4 @@
 
 ### 下一工作块
 Phase 6B/6C：Canonical Content Admission 与 Entry SEO Health 深化；优先把“存在正文”升级为“高质量可引用正文”，不要通过复制 summary 长期代替研究型内容。
+\n\n## Phase 6B / 6C — Canonical Content Admission v1（2026-09-20）\n- [x] 建立 `entry_content_admissions` 治理表\n- [x] 149 Entry 全量准入检查\n- [x] 0 BLOCK / 149 admitted\n- [x] 8 Citation PASS / 141 REVIEW\n- [x] 深化 11 个核心 Entry\n- [x] 建立内容质量状态：ready / develop / rewrite\n- [x] 同步 GitHub migration 与 .ai 记忆\n\n### 当前队列\n- [ ] 141 个 REVIEW Entry 分批 citation-ready 深化\n- [ ] 来源层级提升与研究边界补全\n- [ ] 核心器物 Object Profile 内容化\n- [ ] 149→220 暂缓，待现有内容质量达到下一门槛\n
