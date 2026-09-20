@@ -626,3 +626,12 @@ Phase 6B/6C：Canonical Content Admission 与 Entry SEO Health 深化；优先�
 - [x] 30个C类继续保持Knowledge Node
 - [ ] 对25个target_defined Research Corpus逐条取得可核验原始记录
 - [ ] 220 → 320继续冻结
+
+
+## 2026-09-20 — Phase 7.3 Primary Evidence Retrieval
+- [x] 25/25 target_defined Research Corpus完成Primary Evidence Retrieval
+- [x] 37/39 Research Corpus mapped
+- [x] 2/39保留bibliographic_primary_target
+- [x] 0 target_defined
+- [ ] 对39 Research Corpus进行claim-by-claim evidence synthesis
+- [ ] 220 → 320继续冻结
