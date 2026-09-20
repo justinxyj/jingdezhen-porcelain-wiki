@@ -488,3 +488,15 @@ QA 后真实基线发生变化：149 个原始 Entry 中有 30 个被降级为 K
 - 37 Research Corpus entries have mapped primary evidence; 2 remain bibliographic-primary targets and therefore carry low confidence for claim synthesis.
 - All 39 remain REVIEW; no automatic promotion from evidence retrieval.
 - 220 → 320 remains frozen.
+
+
+## 2026-09-20 — Phase 7.5 Evidence Triangulation & Dispute QA COMPLETE
+- 39/39 Research Corpus completed second-evidence triangulation governance.
+- Binary formula origin is explicitly marked as a scholarly dispute; no single-origin fact is asserted.
+- Song Hutian/Qingbai chronology is separated into archaeometric evidence vs scholarly periodization.
+- Jingdezhen→Japan, Jingdezhen→Europe, and export porcelain→maritime trade are separated into direct trade/object evidence vs broader transmission interpretation.
+- Famille-rose/color-glaze claims separate material science evidence from technology-source and style interpretations.
+- Dentrecolles/Du Halde are treated as documentary transmission evidence, not automatic proof of every technical statement.
+- Hobson/Needham/Finlay remain attribution-preserved academic-history evidence.
+- Zhu Yan/Tao Shuo remains primary-text evidence with historical-source boundaries.
+- 39 remain Research Corpus / REVIEW; 220→320 frozen.
