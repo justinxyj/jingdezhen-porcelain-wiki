@@ -21,6 +21,25 @@ const checks=[
   ['知识条目','entry/?slug=blue-and-white','#wiki-entry-root']
 ];
 for(const [name,path,selector] of checks){await check(path,selector);console.log('PASS',name)}
+
+async function checkEntryPresentation(slug){
+  await page.goto(base+'entry/'+slug+'/',{waitUntil:'domcontentloaded',timeout:30000});
+  await page.locator('#wiki-entry-root.wiki-entry-card.wiki-entry-v2').waitFor({state:'visible',timeout:20000});
+  const result=await page.evaluate(()=>{
+    const root=document.querySelector('#wiki-entry-root');
+    const summary=(root?.querySelector('.wiki-entry-header p')?.textContent||'').trim();
+    const body=(root?.querySelector('.wiki-entry-text')?.textContent||'').trim();
+    const text=root?.textContent||'';
+    return {summary,body,text};
+  });
+  if(!result.summary)throw new Error(slug+': missing Entry summary');
+  if(result.body && result.body===result.summary)throw new Error(slug+': detailed body duplicates the header summary');
+  if(result.body && result.body.startsWith(result.summary))throw new Error(slug+': detailed body starts with the header summary');
+  if(/Knowledge World|KNOWLEDGE RELATIONS|SOURCES/.test(result.text))throw new Error(slug+': legacy public English labels remain');
+  console.log('PASS Entry presentation',slug);
+}
+for(const slug of ['guo-moruo','blue-white-cobalt','wang-bu','hutian-kiln','arita-kiln']) await checkEntryPresentation(slug);
+
 await browser.close();
 if(responses.length)throw new Error('HTTP 5xx: '+responses.join('; '));
 if(errors.length)throw new Error('Browser errors:\n'+errors.join('\n'));
