@@ -566,3 +566,19 @@ Phase 6B/6C：Canonical Content Admission 与 Entry SEO Health 深化；优先�
 - [ ] 低价值关系型 Entry 降级/合并审查
 - [ ] 核心人物/器物/文献第二独立来源补强
 - [ ] 暂缓 149→220
+
+
+## Phase 6C-2 — Evidence Deepening
+- [x] ① UNESCO 世界遗产五组成部分证据深化
+- [x] ② 景德镇核心历史 / 城市生产系统证据深化
+- [x] ③ 核心人物证据深化
+- [x] ④ 核心馆藏器物 Object Profile 证据深化
+- [x] ⑤ 核心文献证据深化
+- [x] ⑥ 日本 / 东亚传播链证据深化
+- [x] ⑦ 全球陶瓷文明影响链证据深化
+- [x] 将机构/原始来源写入对应 Entry sources
+- [x] 更新 entry_content_admissions：75 PASS / 74 REVIEW / 0 BLOCK
+- [x] 写入 .ai 项目状态文件
+- [x] 新增 supabase/migrations/20260920_phase_6c2_evidence_deepening_v1.sql
+- [ ] 对剩余 74 REVIEW 做 A/B/C/D 分流
+- [ ] 完成 Phase 6C-2 最终 Corpus QA 后再评估 149 → 220
