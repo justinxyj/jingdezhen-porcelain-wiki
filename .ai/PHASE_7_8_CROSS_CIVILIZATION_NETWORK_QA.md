@@ -192,3 +192,20 @@ Entry → Relation Claim → Evidence → Source → Evidence Type → Confidenc
 92 个 Canonical 仍然完全孤立；下一批应继续处理剩余 P1/P2，而不是为了数量把弱证据关系灌入网络。
 
 版本：phase7.8-cross-civilization-network-qa-v2
+
+
+## v3 Network Repair Update — 2026-09-20
+
+继续执行：92 Isolated → P1 剩余 → P2 比较窑业 → Claim-by-Claim Evidence → Network Edge。
+
+本轮新增 51 条 evidence-graded relation edges，重点覆盖：
+- P1 核心工艺/器物：明代御窑青花、宣德青花、成化斗彩、斗彩、五彩、釉上彩、釉里红、红釉、永乐/宣德铜红器物、二元配方、青花钴料、原料体系。
+- P1 生产系统：柴窑/燃料、嘉靖—万历生产、原料加工。
+- P2 比较窑业：中国历代窑业与景德镇的比较网络，包括龙泉、磁州、定、钧、汝、哥、官、越、邢、耀州、长沙、德化、石湾、醴陵，以及朝鲜半岛/利川、日本等比较节点。
+- 欧洲比较网络：英国、塞夫勒、利摩日、斯托克等。
+- 人物/对象：王士性、殷弘绪、秦锡麟、万历青花器、雍正青釉器等。
+
+Network QA v3：connected 70、single_strong 50、multi_weak 11、isolated 59。
+190 个 Canonical 中，至少有一个 A/B evidence-grade edge 的节点达到 131/190（68.9%）。
+
+关系仍严格遵循既有 schema；没有批量 C→A/B，也没有把“风格相似”自动解释成技术传播。比较窑业关系统一标明为 comparative/contextual，具体传播或影响仍需对象/考古/文献证据支持。
