@@ -518,3 +518,23 @@
 - [ ] 不重新打开已封版 Phase 4E
 - [ ] 不建立第二事实数据库
 - [ ] 不做大规模 CSS 重构或 AI SEO 垃圾内容
+
+
+## Phase 6A — Entry SEO / Indexability（进行中）
+- [x] 对生产 149 published Entry 完成第一轮逐条 Health Matrix
+- [x] 核验 title / summary / content / source / world / verified media
+- [x] 确认 149 Entry 的系统性 Indexability 阻塞
+- [x] 新增 build-time canonical static Entry generator
+- [x] canonical Entry URL 统一为 /entry/<slug>/
+- [x] 初始 HTML 加入 title / description / canonical / OpenGraph / WebPage + BreadcrumbList JSON-LD
+- [x] 生成 Entry sitemap 与 robots sitemap hints
+- [x] 动态 Entry enhancement 保留静态首屏内容
+- [x] Pages build 在 MkDocs 前生成静态 Entry
+- [x] Pages smoke 增加 Entry SEO/indexability 检查
+- [ ] 最新 main 构建通过
+- [ ] 最新 Pages 部署通过
+- [ ] 线上 Entry 静态 HTML smoke 通过
+- [ ] sitemap-entries.xml 线上可访问
+- [ ] 旧 query-string Entry URL canonical 冲突检查
+- [ ] 重新生成 Health Matrix 并收口系统性 BLOCK
+- [ ] 处理 9 summary / 37 content / 22 source 内容缺口
