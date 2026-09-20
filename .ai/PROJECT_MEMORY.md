@@ -628,3 +628,9 @@ QA 后真实基线发生变化：149 个原始 Entry 中有 30 个被降级为 K
 下一阶段不继续无差别增加 relation 数量。优先执行 Path-level Evidence QA：逐跳检查上述反馈回路的年代、方向、对象、证据类型和边界是否共同成立。任何新边仍必须独立满足 Claim → Evidence → Source → Boundary → Grade。
 
 版本：bridge-node-phase2-20260920
+
+
+## 2026-09-20 — SEO Static UI Unification / terminology freeze
+SEO canonical static knowledge pages must not maintain an independent visual system. The static generator must mirror the established dynamic Knowledge Detail 2.0 structure and visual language. User-visible terminology is Chinese: 知识条目、知识条目详情、知识世界、知识节点、知识网络、全球陶瓷网络；English Entry/Entry Detail remains only as internal technical naming where necessary.
+
+The canonical static page must include the same core visual structure as dynamic detail: breadcrumb, header/hero, metadata tags, knowledge-world path, knowledge-node rail, continuation links, main content, knowledge relations, sources, responsive layout. Any future visual change to the dynamic detail must be reflected in the static generator in the same change block; do not let SEO pages “grow their own UI”.
