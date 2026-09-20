@@ -528,3 +528,10 @@ Phase 6A closed. The published Entry layer is now statically discoverable and in
 - 窑址地图主数据已与媒体 enrichment 解耦后，继续增加地图底图库容错：Leaflet 1.9.4 CDN 从 unpkg 切换到 jsDelivr；Leaflet 官方下载页列出 unpkg、cdnjs、jsDelivr 为可用托管 CDN，jsDelivr 当前提供 1.9.4 文件。
 - global-kiln-map.js 不再因 window.L 缺失直接 return；即使地图库暂时不可用，也必须渲染窑址目录、搜索/筛选和详情弹层，并明确显示“地图底图暂时不可用”，不能整页空白。
 - 当前生产数据仍有 250 Published Entries，其中 41 个窑址条目具备坐标；地图的主目录应始终能够基于这些 Entry 数据显示。
+
+
+## 2026-09-20 — Kiln Map Final Runtime Root Cause
+- CI 浏览器 smoke 进一步定位：窑址地图完全空白的直接原因是 global-kiln-map.js 在来源 URL校验处生成了错误的正则字面量，浏览器报 `Invalid regular expression flags`，导致整个地图脚本在启动阶段中止；已修正为标准 HTTPS URL 正则，并修正首段换行解析。
+- 修复后 smoke 已能进入石湾窑弹层检查，说明地图目录/Entry 数据链已恢复。
+- 第二个问题随后暴露：石湾窑新补图片在 media 表中 review_state=verified，但 status 仍为 pending；media_public 视图只公开 status=approved 且 review_state=verified，因此浏览器拿不到图片。已将该媒体批准为 approved，并修正原始 migration，避免未来重放后再次丢图。
+- 该故障说明媒体“核验”和“公开发布”是两个状态，新增媒体必须同时满足 status=approved + review_state=verified 才能进入 public UI。
