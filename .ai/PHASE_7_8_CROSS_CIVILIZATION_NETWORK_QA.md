@@ -165,3 +165,30 @@ Entry → Relation Claim → Evidence → Source → Evidence Type → Confidenc
 - 220→320继续冻结。
 
 版本：`phase7.8-cross-civilization-network-qa-v1`
+
+## v2 Network Repair Update — 2026-09-20
+
+本阶段开始执行真正的 P0/P1 Network Repair，而非只做审查。
+
+### 已完成
+- 新增并证据标注一批 P0/P1 Relation Edges。
+- 关系类型严格使用既有 schema：related / person / object / kiln / craft / period / source。
+- A 级关系主要使用 UNESCO 2026 世界遗产决定/提名文件与博物馆对象记录；B 级关系保留比较性或上下位语义边界。
+- 关系 note 写入具体 Relation Claim、证据说明、来源与边界，不把“相似”自动写成“技术传播”。
+- Network QA 已刷新为 v2：connected 58、single_strong 29、multi_weak 11、isolated 92。
+- 因此至少一个 A/B evidence-grade edge 的 Canonical 已从 33 增至 87 个。
+
+### 本轮修复的核心网络
+- 二元配方 → 景德镇 / 高岭土 / 瓷石
+- 青花钴料 → 景德镇 / 青花瓷
+- 原料、燃料、河流、码头、分工、标准化、行会 → 景德镇生产系统
+- 御窑管理 → 御窑厂 / 官民窑体系
+- 明代御窑青花 → 御窑 / 宣德青花
+- 斗彩、五彩、釉上彩、釉里红、高温红釉 → 工艺/器物节点
+- 有田、朝鲜半岛、日本市场 → 青花/日本/东亚网络
+- 欧洲、代尔夫特、迈森、葡萄牙、VOC、克拉克瓷、伊斯兰世界、东南亚 → 外销瓷/欧洲/全球网络
+
+### 仍需继续
+92 个 Canonical 仍然完全孤立；下一批应继续处理剩余 P1/P2，而不是为了数量把弱证据关系灌入网络。
+
+版本：phase7.8-cross-civilization-network-qa-v2
