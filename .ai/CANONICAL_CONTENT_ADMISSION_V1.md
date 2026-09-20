@@ -239,3 +239,6 @@ Phase 6B / 6C 解决的是：
 
 > 把 141 个 REVIEW Entry 分批提升到 citation-ready，而不是一次性制造更多 Entry。
 
+
+
+> Final verification trigger: Pages deployment must be checked on the latest main SHA after the content-admission migration.
