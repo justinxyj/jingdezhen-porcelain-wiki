@@ -19,10 +19,10 @@
     const timer=setTimeout(()=>controller.abort(),ms);
     return {signal:controller.signal,clear:()=>clearTimeout(timer)};
   }
-  async function query(builderFactory,{timeoutMs=10000,retryAuth=true}={}){
+  async function query(builderFactory,{timeoutMs=10000,retryAuth=true,anonFallback=true}={}){
     const db=client();if(!db)throw Object.assign(new Error('知识库配置不可用'),{code:'JDM_CONFIG_MISSING',kind:'config'});
     if(window.JDM_AUTH?.request){
-      try{return await window.JDM_AUTH.request(builderFactory,{timeoutMs,retryAuth})}
+      try{return await window.JDM_AUTH.request(builderFactory,{timeoutMs,retryAuth,anonFallback})}
       catch(error){throw normalizeError(error)}
     }
     const ctl=makeSignal(timeoutMs);
@@ -373,7 +373,17 @@
 
   async function craftProcesses({limit=72}={}) {
     const n=Math.max(1,Math.min(72,Number(limit)||72));
-    return await query((db,s)=>db.from('craft_processes').select('id,sequence,slug,name_zh,category,category_name,description_zh,historical_period,tools_zh,materials_zh,output_zh,source_title,source_url,source_institution,source_tier,image_url,image_credit,image_source_url,image_status,image_license,image_creator').order('sequence',{ascending:true}).limit(n).abortSignal(s));
+    const factory=(db,s)=>db.from('craft_processes').select('id,sequence,slug,name_zh,category,category_name,description_zh,historical_period,tools_zh,materials_zh,output_zh,source_title,source_url,source_institution,source_tier,image_url,image_credit,image_source_url,image_status,image_license,image_creator').order('sequence',{ascending:true}).limit(n).abortSignal(s);
+    try{
+      return await query(factory,{timeoutMs:20000,anonFallback:true});
+    }catch(error){
+      const e=normalizeError(error);
+      // Mobile networks: one AbortError/timeout retry with the same 20s budget.
+      if(e.kind==='timeout'||e.name==='AbortError'||e.code==='TIMEOUT'){
+        return await query(factory,{timeoutMs:20000,retryAuth:false,anonFallback:true});
+      }
+      throw e;
+    }
   }
 
   async function craftProcessContext(processId,{entryLimit=40,relationLimit=300}={}) {

@@ -59,7 +59,7 @@ extra_css:
 extra_javascript:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
   - javascripts/runtime-config.js
-  - https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2
+  - https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.0/dist/umd/supabase.min.js
   - javascripts/auth-manager.js
   - javascripts/dom-safe.js
   - javascripts/media-policy.js

@@ -17,9 +17,10 @@
   const init=async()=>{
     const root=document.getElementById('porcelain-tech-tree');if(!root)return;
     const nodes=document.getElementById('tech-tree-nodes'),svg=document.getElementById('tech-tree-links'),detail=document.getElementById('tech-tree-detail');
-    if(!window.JDM_KNOWLEDGE?.craftProcesses||!window.JDM_KNOWLEDGE?.craftProcessContext){detail.innerHTML='<div class="tech-tree-detail-empty">工艺知识层暂时无法加载。</div>';return}
+    if(!window.supabase?.createClient){const code='SCRIPT_NOT_LOADED';console.warn('[technology-tree]',code,'supabase UMD missing');detail.innerHTML='<div class="tech-tree-detail-empty" role="alert" data-error-code="'+esc(code)+'">工艺知识层暂时无法加载。</div>';return}
+    if(!window.JDM_KNOWLEDGE?.craftProcesses||!window.JDM_KNOWLEDGE?.craftProcessContext){const code='JDM_KNOWLEDGE_MISSING';console.warn('[technology-tree]',code);detail.innerHTML='<div class="tech-tree-detail-empty" role="alert" data-error-code="'+esc(code)+'">工艺知识层暂时无法加载。</div>';return}
     let DATA=[];
-    try{DATA=await window.JDM_KNOWLEDGE.craftProcesses({limit:72});}catch(e){detail.innerHTML='<div class="tech-tree-detail-empty" role="alert">工艺数据暂时无法加载。<button type="button" class="tech-retry">重新加载</button></div>';detail.querySelector('.tech-retry')?.addEventListener('click',init);return}
+    try{DATA=await window.JDM_KNOWLEDGE.craftProcesses({limit:72});}catch(e){const info=window.JDM_AUTH?.describeError?.(e)||{code:e?.code||e?.status||'NETWORK',message:'工艺数据暂时无法加载。'};console.warn('[technology-tree]',info.code,e);detail.innerHTML='<div class="tech-tree-detail-empty" role="alert" data-error-code="'+esc(info.code)+'">工艺数据暂时无法加载。<button type="button" class="tech-retry">重新加载</button></div>';detail.querySelector('.tech-retry')?.addEventListener('click',init);return}
     if(!DATA.length){detail.innerHTML='<div class="tech-tree-detail-empty">当前没有可用工艺数据。</div>';return}
     const completeness=DATA.length===72?'':'<div class="tech-data-warning">当前工艺目录返回 '+DATA.length+' 道记录，标准目录应为 72 道；已显示当前可用数据。</div>';
     const byId=new Map(DATA.map(x=>[x.id,x]));
@@ -33,7 +34,7 @@
       const x=byId.get(id);if(!x)return;
       nodes.querySelectorAll('.tech-node').forEach(b=>b.classList.toggle('is-selected',b.dataset.id===id));
       detail.innerHTML='<div class="tech-tree-detail-empty">正在连接工序、器物、人物、窑址与时代……</div>';
-      let ctx=null;try{ctx=await window.JDM_KNOWLEDGE.craftProcessContext(id,{entryLimit:12,relationLimit:60})}catch(e){detail.innerHTML='<div class="tech-tree-detail-empty" role="alert">该工序的知识关联暂时无法加载。</div>';return}
+      let ctx=null;try{ctx=await window.JDM_KNOWLEDGE.craftProcessContext(id,{entryLimit:12,relationLimit:60})}catch(e){const info=window.JDM_AUTH?.describeError?.(e)||{code:e?.code||e?.status||'NETWORK'};console.warn('[technology-tree] context',info.code,e);detail.innerHTML='<div class="tech-tree-detail-empty" role="alert" data-error-code="'+esc(info.code)+'">该工序的知识关联暂时无法加载。</div>';return}
       if(!ctx){detail.innerHTML='<div class="tech-tree-detail-empty">找不到该工序。</div>';return}
       const im=imageFor(x),p=ctx.previous,n=ctx.next;
       const entryCards=ctx.entries.map(item=>{const e=item.entry;return '<article class="tech-entry-card"><div class="tech-entry-card-head"><span>'+esc(e.category||'知识条目')+'</span><b>'+esc(eraLabel(item.era))+'</b></div><h4>'+esc(e.zh?.title||e.slug)+'</h4><p>'+esc((e.zh?.summary||e.zh?.content||'').replace(/<[^>]*>/g,'').slice(0,120))+'</p><div class="tech-entry-signals">'+(item.map?'有空间 · ':'')+(item.people.length?'人物 '+item.people.length+' · ':'')+(item.objects.length?'器物 '+item.objects.length+' · ':'')+(item.kilns.length?'窑址 '+item.kilns.length:'')+'</div><div class="tech-entry-actions"><a href="'+(safeHref(entryUrl(e))||'')+'">知识条目 →</a><a href="'+(safeHref(ROOT+'network/global/?slug='+encodeURIComponent(e.slug))||'')+'">全球网络 →</a></div></article>'}).join('');
