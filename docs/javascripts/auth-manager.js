@@ -11,7 +11,8 @@
     const e=error instanceof Error?error:new Error(String(error.message||error));
     e.status=Number(error.status||error.statusCode||0)||0;
     e.code=error.code||e.code||(e.status===401?'AUTH_EXPIRED':e.status===403?'AUTH_FORBIDDEN':'JDM_REQUEST_ERROR');
-    e.kind=e.status===401?'auth':e.status===403?'forbidden':e.name==='AbortError'?'timeout':(e.message||'').toLowerCase().includes('network')?'network':'server';
+    if(e.code==='PGRST301'&&!e.status)e.status=401;
+    e.kind=(e.status===401||e.code==='PGRST301'||e.code==='AUTH_EXPIRED')?'auth':e.status===403?'forbidden':e.name==='AbortError'?'timeout':(e.message||'').toLowerCase().includes('network')?'network':'server';
     return e;
   }
   function esc(s){
@@ -71,7 +72,10 @@
     e.code='AUTH_EXPIRED';e.status=401;e.kind='auth';e.cause=cause||null;e.details={cause:normalizeError(cause)};
     return e;
   }
-  async function request(factory,{retryAuth=true,timeoutMs=10000}={}){
+  function isStaleAuthError(err){
+    return !!err&&(err.status===401||err.code==='PGRST301'||err.code==='AUTH_EXPIRED');
+  }
+  async function request(factory,{retryAuth=true,timeoutMs=10000,anonFallback=false}={}){
     const db=getClient();
     const controller=new AbortController();
     const timer=setTimeout(()=>controller.abort(),timeoutMs);
@@ -80,13 +84,22 @@
     finally{clearTimeout(timer)}
     if(!result?.error)return result?.data;
     const err=normalizeError(result.error);
-    if(retryAuth&&err.status===401){
+    if(retryAuth&&isStaleAuthError(err)){
       let refreshError=null;
       try{
         const refreshed=await refresh();
-        if(refreshed)return request(factory,{retryAuth:false,timeoutMs});
+        if(refreshed)return request(factory,{retryAuth:false,timeoutMs,anonFallback:false});
       }catch(error){refreshError=normalizeError(error)}
+      // Dirty / unrefreshable JWT: clear local session so the next call is pure anon.
       await signOut();
+      if(anonFallback){
+        try{
+          return await request(factory,{retryAuth:false,timeoutMs,anonFallback:false});
+        }catch(anonError){
+          // Public retry failed for a real reason — surface that error, not AUTH_EXPIRED.
+          throw normalizeError(anonError);
+        }
+      }
       throw authExpired(refreshError||err);
     }
     throw err;
