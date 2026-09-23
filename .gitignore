@@ -22,3 +22,6 @@ node_modules/
 *.sql
 !supabase/**/*.sql
 *.sqlite
+
+# Internal process notes (keep out of the repo)
+.ai/
