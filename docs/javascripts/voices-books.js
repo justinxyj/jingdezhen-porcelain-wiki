@@ -1,6 +1,7 @@
 /* Public-facing reception archive: normalize, deduplicate, then render. */
 (function(){
-  const esc=s=>String(s??'').replace(/[&<>\"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[m]));
+  const esc=s=>window.JDM_SAFE?.esc?.(s)??window.JDM_AUTH?.esc?.(s)??String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+  const safeHref=(raw,opts)=>window.JDM_SAFE?.safeHref?.(raw,opts)??window.JDM_AUTH?.safeHref?.(raw,opts)??'';
   const plain=s=>{const d=document.createElement('div');d.innerHTML=String(s||'');return d.textContent||d.innerText||''};
   const clean=s=>plain(s).replace(/[\u0000-\u001f\u007f]/g,' ').replace(/�|ï¿½/g,'').replace(/\s+/g,' ').trim();
   const meta=e=>e?.zh?.meta||{};
@@ -37,7 +38,7 @@
     const m=meta(e),rawIm=e.media?.[0],im=resolveImage(rawIm?.path),q=clean(quoteOf(e)),src=sourceOf(e,type),translation=clean(m.quote_translation||m.translation||'');
     const title=type==='literature'?titleOf(e):personName(e),relation=type==='literature'?'书中评价':'名人评价';
     const speaker=type==='literature'?clean(m.author||'作者'):'';
-    return `<article class="reception-card ${type==='person'?'reception-person-card':'reception-text-card'}" data-index="${i}"><div class="reception-card-main">${im?`<img class="reception-thumb" src="${esc(im)}" alt="${esc(rawIm?.title||title)}" loading="lazy" decoding="async">`:''}<div class="reception-context"><div class="reception-card-top"><span class="reception-type">${relation}</span>${eraValue(e)?`<span class="reception-era">${esc(eraValue(e))}</span>`:''}</div><blockquote>“${esc(q)}”</blockquote>${translation?`<p class="reception-translation">${esc(translation)}</p>`:''}<h3>${esc(title)}</h3>${speaker?`<p class="reception-speaker">${esc(speaker)}</p>`:''}${m.quote_work?`<p class="reception-work">${esc(clean(m.quote_work))}</p>`:''}${m.quote_context?`<p class="reception-context-note">${esc(clean(m.quote_context))}</p>`:''}<div class="reception-source"><span>来源</span>${src.url?`<a href="${esc(src.url)}" target="_blank" rel="noopener">${esc(src.label)} ↗</a>`:`<span>${esc(src.label)}</span>`}</div></div></div></article>`;
+    return `<article class="reception-card ${type==='person'?'reception-person-card':'reception-text-card'}" data-index="${i}"><div class="reception-card-main">${im&&safeHref(im)?`<img class="reception-thumb" src="${safeHref(im)}" alt="${esc(rawIm?.title||title)}" loading="lazy" decoding="async">`:''}<div class="reception-context"><div class="reception-card-top"><span class="reception-type">${relation}</span>${eraValue(e)?`<span class="reception-era">${esc(eraValue(e))}</span>`:''}</div><blockquote>“${esc(q)}”</blockquote>${translation?`<p class="reception-translation">${esc(translation)}</p>`:''}<h3>${esc(title)}</h3>${speaker?`<p class="reception-speaker">${esc(speaker)}</p>`:''}${m.quote_work?`<p class="reception-work">${esc(clean(m.quote_work))}</p>`:''}${m.quote_context?`<p class="reception-context-note">${esc(clean(m.quote_context))}</p>`:''}<div class="reception-source"><span>来源</span>${safeHref(src.url)?`<a href="${safeHref(src.url)}" target="_blank" rel="noopener">${esc(src.label)} ↗</a>`:`<span>${esc(src.label)}</span>`}</div></div></div></article>`;
   }
   function init(){
     const root=document.getElementById('voices-books-root');if(!root||!window.JDM_KNOWLEDGE)return;

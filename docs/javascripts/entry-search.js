@@ -3,6 +3,7 @@
   const ROOT='/jingdezhen-porcelain-wiki/';
   const SEARCH_URL=ROOT+'search/';
   const esc=s=>String(s??'').replace(/[&<>\\"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\\"':'&quot;',"'":'&#39;'}[m]));
+  const safeHref=(raw,opts)=>window.JDM_SAFE?.safeHref?.(raw,opts)??window.JDM_AUTH?.safeHref?.(raw,opts)??'';
   const plain=s=>{const d=document.createElement('div');d.innerHTML=String(s||'');return d.textContent||d.innerText||''};
   const entryUrl=e=>window.JDM_KNOWLEDGE?.url(e)||ROOT+'entry/?slug='+encodeURIComponent(e?.slug||'');
   const worldUrl=slug=>ROOT+({'history':'history/','craft':'craft/','objects':'objects/','space':'kilns/','people':'people/','research':'research/','contemporary':'contemporary/'}[slug]||'');
@@ -27,12 +28,12 @@
   function card(e){
     const title=e.zh?.title||e.slug;
     const summary=plain(e.zh?.summary||e.zh?.content||'').slice(0,180);
-    const worlds=(e.worlds||[]).slice(0,3).map(w=>'<a class="jdm-search-world" href="'+worldUrl(w.slug)+'" onclick="event.stopPropagation()">'+esc(w.short_title||w.title)+'</a>').join('');
+    const worlds=(e.worlds||[]).slice(0,3).map(w=>'<a class="jdm-search-world" href="'+(safeHref(worldUrl(w.slug))||'')+'" onclick="event.stopPropagation()">'+esc(w.short_title||w.title)+'</a>').join('');
     const eras=(e.discovery?.eras||[]).slice(0,2).map(x=>'<span class="jdm-search-era">'+esc(eraLabel(x))+'</span>').join('');
     const lanes=(e.discovery?.lanes||[]).slice(0,2).map(x=>'<span class="jdm-search-lane">'+esc(laneLabel(x))+'</span>').join('');
     const signals=[e.discovery?.hasMap?'有空间':null,e.discovery?.hasTimeline?'有时间轴':null].filter(Boolean).map(x=>'<span class="jdm-search-signal">'+esc(x)+'</span>').join('');
-    const recs=(e.recommendations||[]).slice(0,3).map(r=>'<a href="'+entryUrl(r.entry)+'">'+esc(r.entry.zh?.title||r.entry.slug)+'</a>').join('');
-    return '<article class="jdm-search-result"><div class="jdm-search-result-main"><div class="jdm-search-result-meta"><span>'+esc(categoryLabel(e.category))+'</span><div>'+(worlds||'')+eras+lanes+signals+'</div></div><h2><a href="'+entryUrl(e)+'">'+esc(title)+'</a></h2><p>'+esc(summary||'打开知识条目，查看完整知识节点。')+'</p><div class="jdm-search-result-actions"><a class="jdm-search-open" href="'+entryUrl(e)+'">打开知识条目 →</a><a href="'+ROOT+'network/relations/?node='+encodeURIComponent('entry:'+e.id)+'">关系网络 →</a><a href="'+ROOT+'network/global/?slug='+encodeURIComponent(e.slug)+'">全球网络 →</a></div></div>'+(recs?'<aside class="jdm-search-result-recs"><span>继续探索</span>'+recs+'</aside>':'')+'</article>';
+    const recs=(e.recommendations||[]).slice(0,3).map(r=>'<a href="'+(safeHref(entryUrl(r.entry))||'')+'">'+esc(r.entry.zh?.title||r.entry.slug)+'</a>').join('');
+    return '<article class="jdm-search-result"><div class="jdm-search-result-main"><div class="jdm-search-result-meta"><span>'+esc(categoryLabel(e.category))+'</span><div>'+(worlds||'')+eras+lanes+signals+'</div></div><h2><a href="'+(safeHref(entryUrl(e))||'')+'">'+esc(title)+'</a></h2><p>'+esc(summary||'打开知识条目，查看完整知识节点。')+'</p><div class="jdm-search-result-actions"><a class="jdm-search-open" href="'+(safeHref(entryUrl(e))||'')+'">打开知识条目 →</a><a href="'+ROOT+'network/relations/?node='+encodeURIComponent('entry:'+e.id)+'">关系网络 →</a><a href="'+ROOT+'network/global/?slug='+encodeURIComponent(e.slug)+'">全球网络 →</a></div></div>'+(recs?'<aside class="jdm-search-result-recs"><span>继续探索</span>'+recs+'</aside>':'')+'</article>';
   }
 
   function renderSuggestions(rows){
