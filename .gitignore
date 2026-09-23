@@ -20,4 +20,5 @@ node_modules/
 # ignore log files and databases
 *.log
 *.sql
+!supabase/**/*.sql
 *.sqlite

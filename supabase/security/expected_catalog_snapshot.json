@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "checks": {
+    "A1": { "ok": true, "prosecdef": true, "search_path": "public" },
+    "A2": { "ok": true, "public_is_staff_exists": false },
+    "A3": { "ok": true, "anon_execute": false, "authenticated_execute": true, "service_role_execute": true },
+    "B1": {
+      "ok": true,
+      "rls": {
+        "entries": true,
+        "media": true,
+        "entry_relations": true,
+        "edits": true,
+        "entry_revisions": true,
+        "profiles": true,
+        "favorites": true
+      }
+    },
+    "B2": {
+      "ok": true,
+      "public_select_qual_has_is_staff": false,
+      "media_public_read_requires_verified": true
+    },
+    "B3": {
+      "ok": true,
+      "staff_policies_authenticated_only": true,
+      "staff_uses_private_is_staff": true
+    },
+    "B4": { "ok": true, "anon_write_policies": [] },
+    "C1": { "ok": true, "media_anon_table_select": false },
+    "C2": {
+      "ok": true,
+      "media_public_exists": true,
+      "anon_select": true,
+      "anon_write_grants": []
+    },
+    "C3": { "ok": true, "security_invoker": true },
+    "D1": {
+      "ok": true,
+      "anon_select": {
+        "edits": false,
+        "entry_revisions": false,
+        "profiles": false,
+        "favorites": false
+      }
+    }
+  },
+  "known_debt": ["C2", "C3"],
+  "notes": "脱敏目录期望；无行数据；无连接串。known_debt C2/C3 表示生产可能尚未 ALTER VIEW security_invoker / REVOKE 写类 grant，L1 仅 warn。"
+}
