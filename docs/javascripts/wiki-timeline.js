@@ -20,7 +20,7 @@
       `<div class="compare-node-body"><div class="compare-node-kicker">${esc(map.country||e.category||'')}</div><b>${esc(title(e))}</b>${period?`<strong class="compare-node-period">${esc(period)}</strong>`:''}<p>${esc(text(e.zh?.content||e.zh?.summary||''))}</p>${isPlace(e)?`<span class="compare-node-detail-hint">查看详细介绍 · 官方来源 →</span>`:''}</div></a>`;
   }
   function lane(label,rows,cls){return `<section class="compare-lane ${cls}"><header><span>${esc(label)}</span><b>${rows.length}</b></header><div class="compare-lane-grid">${rows.map(node).join('')||'<div class="compare-empty">这一时期暂无可展示的节点。</div>'}</div></section>`}
-  function render(entries){
+  function paint(entries){
     let root=document.querySelector('.timeline-comparison-root');
     if(!root){root=document.getElementById('timeline');if(!root)return;root.classList.add('timeline-comparison-root');}
     root.innerHTML=eras.map(([id,era,years,focus])=>{
@@ -33,8 +33,7 @@
   }
   function controls(root){const bar=document.createElement('div');bar.className='timeline-discovery-controls';bar.innerHTML='<div><span>时间轴筛选</span><strong id="timeline-result-count">—</strong></div><div class="timeline-discovery-buttons"><button data-timeline-era="" class="is-active">全部时代</button>'+eras.map(x=>'<button data-timeline-era="'+x[0]+'">'+x[1]+'</button>').join('')+'</div><div class="timeline-discovery-buttons"><button data-timeline-lane="" class="is-active">全部空间</button><button data-timeline-lane="jdz">景德镇</button><button data-timeline-lane="china">中国其他窑业</button><button data-timeline-lane="world">世界其他地区</button></div><a class="timeline-discovery-search" href="/jingdezhen-porcelain-wiki/search/">转到统一搜索 →</a>';root.parentNode.insertBefore(bar,root);bar.querySelectorAll('[data-timeline-era]').forEach(b=>b.addEventListener('click',()=>{activeEra=b.dataset.timelineEra||'';bar.querySelectorAll('[data-timeline-era]').forEach(x=>x.classList.toggle('is-active',x===b));render()}));bar.querySelectorAll('[data-timeline-lane]').forEach(b=>b.addEventListener('click',()=>{activeLane=b.dataset.timelineLane||'';bar.querySelectorAll('[data-timeline-lane]').forEach(x=>x.classList.toggle('is-active',x===b));render()}))}
   let activeEra='',activeLane='',allEntries=[];
-  const oldRender=render;
-  function render(){const root=document.querySelector('.timeline-comparison-root');if(!root)return;oldRender(allEntries.filter(e=>!activeLane||timelineOf(e).some(t=>t.lane===activeLane)).filter(e=>!activeEra||timelineOf(e).some(t=>eraGroup(e,t)===activeEra)));root.querySelectorAll('.compare-era').forEach(x=>x.hidden=Boolean(activeEra&&x.id!=='era-'+activeEra));}
+  function render(){const root=document.querySelector('.timeline-comparison-root');if(!root)return;paint(allEntries.filter(e=>!activeLane||timelineOf(e).some(t=>t.lane===activeLane)).filter(e=>!activeEra||timelineOf(e).some(t=>eraGroup(e,t)===activeEra)));root.querySelectorAll('.compare-era').forEach(x=>x.hidden=Boolean(activeEra&&x.id!=='era-'+activeEra));}
   function init(){if(!window.JDM_KNOWLEDGE)return;window.JDM_KNOWLEDGE.all().then(rows=>{allEntries=rows.filter(e=>Array.isArray(e.zh?.meta?.timeline)&&e.zh.meta.timeline.length);const root=document.querySelector('.timeline-comparison-root');if(!root)return;controls(root);render();const count=root.previousElementSibling?.querySelector('#timeline-result-count');if(count)count.textContent=allEntries.length+' 个有时间数据的知识节点'}).catch(error=>console.error('[JDM timeline]',error))}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();

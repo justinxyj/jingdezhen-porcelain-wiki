@@ -111,6 +111,8 @@
   }
   function renderTimeline(entries){
     const root=document.getElementById('timeline');if(!root)return;
+    // Comparative view is owned by wiki-timeline.js; keep static list only as fallback.
+    if(root.classList.contains('timeline-comparison-root'))return;
     const rows=entries.filter(e=>meta(e).kind==='history').sort((a,b)=>{
       const ka=timelineSortKey(a),kb=timelineSortKey(b);
       if(ka[0]!==kb[0])return ka[0]-kb[0];
