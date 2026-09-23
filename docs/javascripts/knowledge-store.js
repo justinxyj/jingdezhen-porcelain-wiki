@@ -495,6 +495,6 @@
     };
   }
   async function byCategory(category,limit=250){return list({category,limit})}
-  function url(e){return e?'/jingdezhen-porcelain-wiki/entry/'+encodeURIComponent(e.slug)+'/':'/jingdezhen-porcelain-wiki/'}
+  function url(e){return e?'/jingdezhen-porcelain-wiki/entry/?slug='+encodeURIComponent(e.slug):'/jingdezhen-porcelain-wiki/'}
   window.JDM_KNOWLEDGE={all,get,list,worlds,byWorld,worldOverview,entryContext,entryNetworkContext,craftProcesses,craftProcessContext,objectAtlas,personAtlas,graph,recommendations,eraGroup:eraGroupFor,searchEntries,searchDiscovery,searchDiscoveryPage,byCategory,url,state:()=>({...state}),reset:()=>{allPromise=null;searchIndexPromise=null;cache.clear();state={status:'idle',error:null,updatedAt:null}}};
 })();

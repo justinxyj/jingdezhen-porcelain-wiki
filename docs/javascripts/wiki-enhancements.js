@@ -3,7 +3,7 @@
   const esc=s=>String(s??'').replace(/[&<>\"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[m]));
   const ROOT='/jingdezhen-porcelain-wiki/';
   const plain=s=>{const d=document.createElement('div');d.innerHTML=String(s||'');return d.textContent||d.innerText||''};
-  const url=e=>window.JDM_KNOWLEDGE?.url(e)||`${ROOT}entry/${encodeURIComponent(e?.slug||'')}/`;
+  const url=e=>window.JDM_KNOWLEDGE?.url(e)||`${ROOT}entry/?slug=${encodeURIComponent(e?.slug||'')}`;
   const safeHref=raw=>window.JDM_AUTH?.safeHref?.(raw)||'';
   const sourceUrl=s=>s&&typeof s==='object'?safeHref(s.url):'';
   const sourceLabel=s=>s&&typeof s==='object'?s.label||'来源':(typeof s==='string'?s:'来源');
