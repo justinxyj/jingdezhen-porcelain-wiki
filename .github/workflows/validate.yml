@@ -26,6 +26,7 @@ jobs:
       - name: Run museum QA
         run: python scripts/museum_qa.py
 
+      # L0 includes H-3 catalog file presence + dangerous GRANT EXECUTE is_staff→anon scan
       - name: Run security static smoke
         run: python scripts/security_static_smoke.py
 

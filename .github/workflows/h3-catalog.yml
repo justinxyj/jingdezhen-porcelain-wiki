@@ -1,0 +1,49 @@
+name: H-3 Catalog Probe (L1)
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # Daily 01:15 UTC ≈ 10:15 JST
+    - cron: "15 1 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  h3-catalog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install psycopg2
+        run: pip install psycopg2-binary
+
+      - name: Probe catalog (assert vs golden)
+        id: probe
+        env:
+          H3_DB_URL: ${{ secrets.H3_DB_URL }}
+        run: |
+          set -euo pipefail
+          if [ -z "${H3_DB_URL:-}" ]; then
+            echo "SKIP: H3_DB_URL secret not configured — L1 catalog probe skipped (not a false green of checks)"
+            echo "skipped=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "skipped=false" >> "$GITHUB_OUTPUT"
+          python scripts/h3_catalog_probe.py --assert -o h3-catalog-live.json
+
+      - name: Upload live catalog artifact
+        if: steps.probe.outputs.skipped != 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: h3-catalog-live.json
+          path: h3-catalog-live.json
+          retention-days: 14
