@@ -1,6 +1,7 @@
 /* Rich historical timeline detail viewer. */
 (function(){
-  const esc=s=>String(s??'').replace(/[&<>\"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[m]));
+    const esc=s=>window.JDM_SAFE?.esc?.(s)??window.JDM_AUTH?.esc?.(s)??String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+  const safeHref=(raw,opts)=>window.JDM_SAFE?.safeHref?.(raw,opts)??window.JDM_AUTH?.safeHref?.(raw,opts)??'';
   const text=s=>{const d=document.createElement('div');d.innerHTML=String(s||'');return d.textContent||d.innerText||''};
   const clean=s=>text(s).replace(/\s+/g,' ').trim();
   const meta=e=>e?.zh?.meta||{};
@@ -37,8 +38,8 @@
     if(!image && c?.image_search_query){const candidate=await commonsImage(c.image_search_query);if(candidate){image=candidate.url;imageCredit=candidate.title+' · Wikimedia Commons';imageSourceType='commons_candidate'}}
     document.querySelectorAll('.timeline-detail-modal').forEach(x=>x.remove());
     const modal=document.createElement('div');modal.className='timeline-detail-modal is-open';
-    const imageHtml=image?`<div class="timeline-detail-image"><img src="${esc(image)}" alt="${esc(imageCredit)}" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div class="timeline-detail-image-caption">${esc(imageCredit)}${imageSourceType==='commons_candidate'?' · 自动匹配候选图':''}</div></div>`:'';
-    const sourceHtml=(officialUrl||sources.length)?`<div class="timeline-detail-sources"><strong>来源</strong>${sourceBadge(c,officialUrl)}${officialUrl?`<div class="timeline-source-primary"><span>权威来源</span><a href="${esc(officialUrl)}" target="_blank" rel="noopener noreferrer">${esc(officialTitle||officialInstitution||'官方资料')} ↗</a></div>`:''}${sources.filter(s=>s.url&&s.url!==officialUrl).map(s=>`<div class="timeline-source-secondary"><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.label||s.title||'参考来源')} ↗</a></div>`).join('')}</div>`:'';
+    const imageHtml=image&&safeHref(image)?`<div class="timeline-detail-image"><img src="${safeHref(image)}" alt="${esc(imageCredit)}" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div class="timeline-detail-image-caption">${esc(imageCredit)}${imageSourceType==='commons_candidate'?' · 自动匹配候选图':''}</div></div>`:'';
+    const sourceHtml=(officialUrl||sources.length)?`<div class="timeline-detail-sources"><strong>来源</strong>${sourceBadge(c,officialUrl)}${officialUrl?`<div class="timeline-source-primary"><span>权威来源</span><a href="${safeHref(officialUrl)||''}" target="_blank" rel="noopener noreferrer">${esc(officialTitle||officialInstitution||'官方资料')} ↗</a></div>`:''}${sources.filter(s=>s.url&&s.url!==officialUrl).map(s=>`<div class="timeline-source-secondary"><a href="${safeHref(s.url)||''}" target="_blank" rel="noopener noreferrer">${esc(s.label||s.title||'参考来源')} ↗</a></div>`).join('')}</div>`:'';
     const relationHtml=laneOf(e)==='world'?`<section class="timeline-relation"><b>与景德镇的关系</b><p>${esc(relation||'该条目尚未提供经过审核的景德镇关系说明。')}</p></section>`:'';
     modal.innerHTML=`<div class="timeline-detail-backdrop"></div><article class="timeline-detail-dialog" role="dialog" aria-modal="true" aria-label="${esc(title)}详细介绍"><button class="timeline-detail-close" aria-label="关闭">×</button><div class="timeline-detail-grid">${imageHtml}<div class="timeline-detail-copy"><div class="timeline-detail-overline">${esc(typeLabel(e))}</div><h2>${esc(title)}</h2><div class="timeline-detail-meta">${period?`<span>${esc(period)}</span>`:''}${country?`<span>${esc(country)}</span>`:''}</div>${relationHtml}<p class="timeline-detail-body">${esc(detail||'暂缺详细介绍。')}</p>${sourceHtml}</div></div></article></div>`;
     document.body.appendChild(modal);document.body.classList.add('timeline-detail-open');

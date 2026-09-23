@@ -14,6 +14,9 @@
     e.kind=e.status===401?'auth':e.status===403?'forbidden':e.name==='AbortError'?'timeout':(e.message||'').toLowerCase().includes('network')?'network':'server';
     return e;
   }
+  function esc(s){
+    return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+  }
   function safeHref(raw,{allowHttp=false}={}){
     const value=String(raw??'').trim();
     if(!value)return '';
@@ -103,5 +106,5 @@
     return {code:e.code||'JDM_REQUEST_ERROR',kind:e.kind||'server',message:'知识数据暂时无法加载，请稍后重试。',action:'retry'};
   }
   function getState(){return {...authState}}
-  window.JDM_AUTH={getClient,session,user,refresh,request,signOut,state:getState,safeHref,describeError};
+  window.JDM_AUTH={getClient,session,user,refresh,request,signOut,state:getState,esc,safeHref,describeError};
 })();

@@ -18,6 +18,7 @@
     let graph=null, nodes=[], edges=[], active=null, query='', type='all';
 
     const esc=(v)=>String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+    const safeHref=(raw,opts)=>window.JDM_SAFE?.safeHref?.(raw,opts)??window.JDM_AUTH?.safeHref?.(raw,opts)??'';
     const label=(n)=>String(n?.label||n?.metadata?.title||n?.node_id||'');
     const nodeCategory=(n)=>String(n?.category||n?.metadata?.category||'');
     const isCore=(n)=>CORE_TYPES.has(n?.node_type);
@@ -149,7 +150,7 @@
         <h3>${esc(label(active))}</h3>
         <p>${esc(active.summary||'从这个节点继续查看已经建立的知识关系。')}</p>
         <div class="network-detail-meta"><span>${links.length} 条已建立关系</span></div>
-        ${url?`<a class="network-detail-entry" href="${esc(url)}">进入知识条目 →</a>`:''}
+        ${url?`<a class="network-detail-entry" href="${safeHref(url)||''}">进入知识条目 →</a>`:''}
         <div class="network-neighbor-title">继续探索</div>
         <div class="network-neighbor-list">${direct.length?direct.map(x=>`<button type="button" data-node="${esc(x.node.node_id)}"><span>${esc(nodeCategory(x.node)||'知识世界')}</span><b>${esc(label(x.node))}</b></button>`).join(''):'<div class="network-no-neighbor">当前节点暂无可展示的核心邻接节点。</div>'}</div>`;
       detail.querySelectorAll('[data-node]').forEach(b=>b.addEventListener('click',()=>selectNode(b.dataset.node)));

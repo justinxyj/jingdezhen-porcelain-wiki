@@ -61,6 +61,7 @@ extra_javascript:
   - javascripts/runtime-config.js
   - https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2
   - javascripts/auth-manager.js
+  - javascripts/dom-safe.js
   - javascripts/media-policy.js
   - javascripts/data-contract.js
   - javascripts/knowledge-store.js

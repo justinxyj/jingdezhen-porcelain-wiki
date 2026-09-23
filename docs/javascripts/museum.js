@@ -1,14 +1,20 @@
 /* Public museum surfaces. Internal identifiers never render in the interface. */
 (function(){
   const ROOT='/jingdezhen-porcelain-wiki/';
-  const esc=s=>String(s??'').replace(/[&<>\"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[m]));
+  const esc=s=>window.JDM_SAFE?.esc?.(s)??window.JDM_AUTH?.esc?.(s)??String(s??'').replace(/[&<>\"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[m]));
+  const safeHref=(raw,opts)=>window.JDM_SAFE?.safeHref?.(raw,opts)??window.JDM_AUTH?.safeHref?.(raw,opts)??'';
   const plain=s=>{const d=document.createElement('div');d.innerHTML=String(s||'');return d.textContent||d.innerText||''};
   const path=p=>ROOT+p.replace(/^\//,'');
   const entryUrl=e=>window.JDM_KNOWLEDGE?.url(e)||path(`entry/?type=${encodeURIComponent(e?.category||'')}&slug=${encodeURIComponent(e?.slug||'')}`);
+  const hrefFor=u=>safeHref(u)||'';
   function text(e){return plain(e?.zh?.summary||e?.zh?.content||'')}
   function meta(e){return e?.zh?.meta||{}}
   function relationLinks(rows,label){
-    return rows.slice(0,3).map(e=>'<a href="'+entryUrl(e)+'">'+esc(e.zh?.title||e.slug)+'</a>').join('');
+    return rows.slice(0,3).map(e=>{const h=hrefFor(entryUrl(e));return h?'<a href="'+h+'">'+esc(e.zh?.title||e.slug)+'</a>':esc(e.zh?.title||e.slug)}).join('');
+  }
+  function mediaImg(im,alt){
+    const src=safeHref(im?.path);if(!src)return '';
+    return '<img data-museum-image="1" src="'+src+'" alt="'+esc(alt||im.title||'图片')+'" loading="lazy">';
   }
   function renderCatalog(items){
     const root=document.getElementById('catalog-list');if(!root)return;
@@ -30,18 +36,21 @@
     root.innerHTML=filtered.map(x=>{
       const e=x.entry,im=e.media?.[0],m=meta(e),world=(x.worlds||[])[0],era=(x.timeline||[]).map(t=>window.JDM_KNOWLEDGE?.eraGroup?.(e,t)||t?.era).filter(Boolean)[0];
       const people=relationLinks(x.people,'人物'),kilns=relationLinks(x.kilns,'窑址'),docs=relationLinks(x.documents,'文献');
-      const crafts=(x.craftProcesses||[]).slice(0,3).map(p=>'<a href="'+path('craft/technology-tree/')+'">'+esc(p.label||'工艺')+'</a>').join('');
-      const global=path('network/global/?slug='+encodeURIComponent(e.slug));
+      const craftHref=hrefFor(path('craft/technology-tree/'));
+      const crafts=(x.craftProcesses||[]).slice(0,3).map(p=>craftHref?'<a href="'+craftHref+'">'+esc(p.label||'工艺')+'</a>':esc(p.label||'工艺')).join('');
+      const entryH=hrefFor(entryUrl(e));
+      const global=hrefFor(path('network/global/?slug='+encodeURIComponent(e.slug)));
+      const img=mediaImg(im,im?.title||e.zh?.title||'器物图片');
       return '<article class="catalog-card catalog-card-v2">'+
-        (im?'<a href="'+entryUrl(e)+'"><img data-museum-image="1" src="'+esc(im.path)+'" alt="'+esc(im.title||e.zh?.title||'器物图片')+'" loading="lazy"></a>':'')+
+        (img&&entryH?'<a href="'+entryH+'">'+img+'</a>':img)+
         '<div class="catalog-card-body">'+
         '<div class="catalog-card-tags">'+(m.period?'<span class="tag">'+esc(m.period)+'</span>':'')+(era?'<span class="tag">'+esc(eraLabel(era))+'</span>':'')+(world?'<span class="tag">'+esc(world.short_title||world.title)+'</span>':'')+'</div>'+
-        '<h3><a href="'+entryUrl(e)+'">'+esc(e.zh?.title||'未命名器物')+'</a></h3><p>'+esc(text(e).slice(0,180))+'</p>'+
+        '<h3>'+(entryH?'<a href="'+entryH+'">'+esc(e.zh?.title||'未命名器物')+'</a>':esc(e.zh?.title||'未命名器物'))+'</h3><p>'+esc(text(e).slice(0,180))+'</p>'+
         (crafts?'<div class="catalog-knowledge-row"><b>工艺</b>'+crafts+'</div>':'')+
         (people?'<div class="catalog-knowledge-row"><b>人物</b>'+people+'</div>':'')+
         (kilns?'<div class="catalog-knowledge-row"><b>窑址</b>'+kilns+'</div>':'')+
         (docs?'<div class="catalog-knowledge-row"><b>文献</b>'+docs+'</div>':'')+
-        '<div class="catalog-card-actions"><a href="'+entryUrl(e)+'">查看知识条目 →</a><a href="'+global+'">全球网络 →</a></div></div></article>';
+        '<div class="catalog-card-actions">'+(entryH?'<a href="'+entryH+'">查看知识条目 →</a>':'')+(global?'<a href="'+global+'">全球网络 →</a>':'')+'</div></div></article>';
     }).join('')||'<div class="notice">没有找到符合条件的器物。</div>';
   }
   function eraLabel(x){return ({tang:'唐五代',song:'宋',yuan:'元',ming:'明',qing:'清','near-modern':'近代',modern:'现代'}[x]||x||'')}
@@ -64,15 +73,18 @@
     root.innerHTML=filtered.map(x=>{
       const e=x.entry,im=e.media?.[0],m=meta(e);
       const works=relationLinks(x.works,'代表作品'),kilns=relationLinks(x.kilns,'窑址'),docs=relationLinks(x.documents,'文献');
-      const craft=(x.craftProcesses||[]).slice(0,3).map(p=>'<a href="'+path('craft/technology-tree/')+'">'+esc(p.label||'工艺')+'</a>').join('');
-      const same=(x.sameEra||[]).slice(0,3).map(p=>'<a href="'+entryUrl(p)+'">'+esc(p.zh?.title||p.slug)+'</a>').join('');
-      const global=path('network/global/?slug='+encodeURIComponent(e.slug));
-      const relation=(x.relatedPeople||[]).slice(0,3).map(p=>'<a href="'+entryUrl(p)+'">'+esc(p.zh?.title||p.slug)+'</a>').join('');
+      const craftHref=hrefFor(path('craft/technology-tree/'));
+      const craft=(x.craftProcesses||[]).slice(0,3).map(p=>craftHref?'<a href="'+craftHref+'">'+esc(p.label||'工艺')+'</a>':esc(p.label||'工艺')).join('');
+      const same=(x.sameEra||[]).slice(0,3).map(p=>{const h=hrefFor(entryUrl(p));return h?'<a href="'+h+'">'+esc(p.zh?.title||p.slug)+'</a>':esc(p.zh?.title||p.slug)}).join('');
+      const entryH=hrefFor(entryUrl(e));
+      const global=hrefFor(path('network/global/?slug='+encodeURIComponent(e.slug)));
+      const relation=(x.relatedPeople||[]).slice(0,3).map(p=>{const h=hrefFor(entryUrl(p));return h?'<a href="'+h+'">'+esc(p.zh?.title||p.slug)+'</a>':esc(p.zh?.title||p.slug)}).join('');
+      const img=mediaImg(im,im?.title||e.zh?.title||'人物图片');
       return '<article class="person-card person-card-v2">'+
-        (im?'<a href="'+entryUrl(e)+'" class="person-card-image"><img data-museum-image="1" src="'+esc(im.path)+'" alt="'+esc(im.title||e.zh?.title||'人物图片')+'" loading="lazy"></a>':'')+
+        (img&&entryH?'<a href="'+entryH+'" class="person-card-image">'+img+'</a>':img)+
         '<div class="person-card-body">'+
         '<div class="person-card-tags">'+(x.era?'<span class="tag">'+esc(eraLabel(x.era))+'</span>':'')+(x.worlds?.[0]?'<span class="tag">'+esc(x.worlds[0].short_title||x.worlds[0].title)+'</span>':'')+'</div>'+
-        '<h3><a href="'+entryUrl(e)+'">'+esc(e.zh?.title||'未命名人物')+'</a></h3>'+
+        '<h3>'+(entryH?'<a href="'+entryH+'">'+esc(e.zh?.title||'未命名人物')+'</a>':esc(e.zh?.title||'未命名人物'))+'</h3>'+
         (x.role?'<strong>'+esc(x.role)+'</strong>':'')+
         '<p>'+esc(text(e).slice(0,180))+'</p>'+
         (craft?'<div class="person-knowledge-row"><b>工艺</b>'+craft+'</div>':'')+
@@ -81,7 +93,7 @@
         (docs?'<div class="person-knowledge-row"><b>文献</b>'+docs+'</div>':'')+
         (relation?'<div class="person-knowledge-row"><b>关联人物</b>'+relation+'</div>':'')+
         (same?'<div class="person-knowledge-row"><b>同时代</b>'+same+'</div>':'')+
-        '<div class="person-card-actions"><a href="'+entryUrl(e)+'">查看知识条目 →</a><a href="'+global+'">全球网络 →</a></div></div></article>';
+        '<div class="person-card-actions">'+(entryH?'<a href="'+entryH+'">查看知识条目 →</a>':'')+(global?'<a href="'+global+'">全球网络 →</a>':'')+'</div></div></article>';
     }).join('')||'<div class="notice">没有找到符合条件的人物。</div>';
   }
 
@@ -104,7 +116,12 @@
       if(ka[0]!==kb[0])return ka[0]-kb[0];
       return ka[1].localeCompare(kb[1],'zh-CN');
     });
-    root.innerHTML=`<div class="timeline">${rows.map(e=>`<a class="timeline-item timeline-link" href="${entryUrl(e)}"><div class="timeline-year">${esc(meta(e).period||String(e.zh?.title||'').match(/\d{3,4}(?:[—–-]\d{3,4})?/u)?.[0]||'')}</div><h3>${esc(e.zh?.title||'未命名节点')}</h3><p>${esc(text(e))}</p><span class="wiki-read-more">打开详情 →</span></a>`).join('')}</div>`;
+    root.innerHTML=`<div class="timeline">${rows.map(e=>{
+      const h=hrefFor(entryUrl(e));
+      const year=esc(meta(e).period||String(e.zh?.title||'').match(/\d{3,4}(?:[—–-]\d{3,4})?/u)?.[0]||'');
+      const body=`<div class="timeline-year">${year}</div><h3>${esc(e.zh?.title||'未命名节点')}</h3><p>${esc(text(e))}</p><span class="wiki-read-more">打开详情 →</span>`;
+      return h?`<a class="timeline-item timeline-link" href="${safeHref(entryUrl(e))}">${body}</a>`:`<div class="timeline-item">${body}</div>`;
+    }).join('')}</div>`;
   }
   function renderError(root,error){
     if(!root)return;
