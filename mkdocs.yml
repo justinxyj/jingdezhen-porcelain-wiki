@@ -82,6 +82,7 @@ extra_javascript:
   - javascripts/museum-images.js
   - javascripts/homepage-apple.js
   - javascripts/source-audit.js
+  - javascripts/museum-admin-auth.js
   - javascripts/museum-admin.js
   - javascripts/site-privacy.js
 

@@ -44,6 +44,7 @@
       '<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">来源</div><h2>来源与外部资料</h2><div class="wiki-entry-source-links">'+(sourceLinks||'<span>暂无外部来源。</span>')+(hrefFor('https://zh.wikipedia.org/w/index.php?search='+encodeURIComponent(wiki))?'<a href="'+hrefFor('https://zh.wikipedia.org/w/index.php?search='+encodeURIComponent(wiki))+'" target="_blank" rel="noopener">维基百科 ↗</a>':'')+'</div></section></div></div></article>';
   }
   function sanitizeBodyHtml(raw){
+    if(typeof window.JDM_SAFE?.sanitizeBodyHtml==='function')return window.JDM_SAFE.sanitizeBodyHtml(raw);
     const tpl=document.createElement('template');
     tpl.innerHTML=String(raw||'');
     const allowed=new Set(['P','BR','STRONG','B','EM','I','H2','H3','H4','UL','OL','LI','BLOCKQUOTE','A']);
