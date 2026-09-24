@@ -13,6 +13,7 @@ declare global {
     };
     JDM_AUTH?: {
       getClient(): any;
+      esc?(s: unknown): string;
       session(): Promise<unknown>;
       user(): Promise<unknown>;
       refresh(): Promise<unknown>;
@@ -53,6 +54,11 @@ declare global {
       mediaList(value: unknown[]): Database['public']['Tables']['media']['Row'][];
       world(value: unknown): Database['public']['Tables']['knowledge_worlds']['Row'];
       worlds(value: unknown[]): Database['public']['Tables']['knowledge_worlds']['Row'][];
+    };
+    JDM_SAFE?: {
+      esc(s: unknown): string;
+      safeHref(raw: unknown, options?: { allowHttp?: boolean }): string;
+      sanitizeBodyHtml(raw: unknown): string;
     };
     JDM_MEDIA_POLICY?: {
       isUsable?(media: unknown): boolean;
