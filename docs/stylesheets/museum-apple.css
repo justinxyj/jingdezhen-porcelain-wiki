@@ -108,3 +108,10 @@ body:has(#wiki-entry-root) .md-content__button{display:none!important}
 [data-md-color-scheme="slate"] .wiki-recommendation-intro{color:#b4c2ce}
 [data-md-color-scheme="slate"] .wiki-entry-recommendation-warning{background:#1b3147;color:#bcd7f5}
 
+
+/* Numbered source list ([n] citations): single column, one source per row. Scoped to .wiki-entry-source-refs so the legacy pill list (ul.wiki-entry-source-links) is unchanged. */
+.wiki-entry-source-links.wiki-entry-source-refs{flex-direction:column;flex-wrap:nowrap;align-items:flex-start;gap:10px;max-width:100%;min-width:0}
+.wiki-entry-source-links.wiki-entry-source-refs>li{display:flex;align-items:center;gap:8px;max-width:100%;min-width:0}
+.wiki-entry-source-links.wiki-entry-source-refs .wiki-entry-source-no{flex:0 0 auto;min-width:2.6em;text-align:right;font-variant-numeric:tabular-nums;line-height:1.4;color:var(--jdm-blue)}
+.wiki-entry-source-links.wiki-entry-source-refs>li>a{min-width:0;max-width:100%;overflow-wrap:anywhere;word-break:normal}
+[data-md-color-scheme="slate"] .wiki-entry-source-links.wiki-entry-source-refs .wiki-entry-source-no{color:#9ec3ff}

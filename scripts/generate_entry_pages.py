@@ -187,19 +187,73 @@ def intro_for(entry: dict) -> str:
     return fact_text or "该知识条目正在持续补充经过来源核验的知识内容。"
 
 
-def source_links(sources: list) -> str:
-    links = []
-    for source in sources or []:
-        if not isinstance(source, dict):
+def source_published(source: dict) -> bool:
+    """status missing/blank/'published' -> visible; anything else (e.g. 'pending') is hidden."""
+    status = source.get("status")
+    if status is None or (isinstance(status, str) and not status.strip()):
+        return True
+    return str(status).strip().lower() == "published"
+
+
+def source_name(source: dict) -> str:
+    """Display name: label first, then title, then a generic fallback."""
+    for key in ("label", "title"):
+        value = source.get(key)
+        if value is not None and str(value).strip():
+            return str(value)
+    return "来源"
+
+
+def visible_sources(sources: list) -> list[dict]:
+    """Public source set, shared in behaviour with wiki-enhancements.js.
+
+    n is the 1-based position in the original sources array (unchanged by filtering
+    or de-duplication). Duplicate urls are collapsed as a fallback: first one wins.
+    """
+    out: list[dict] = []
+    seen: set[str] = set()
+    if not isinstance(sources, list):
+        return out
+    for index, source in enumerate(sources, start=1):
+        if not isinstance(source, dict) or not source_published(source):
             continue
-        url = str(source.get("url") or "")
-        if not url.startswith(("https://", "http://")):
+        url = str(source.get("url") or "").strip()
+        if not url.lower().startswith(("https://", "http://")) or url in seen:
             continue
-        label = html.escape(str(source.get("label") or "来源"))
-        links.append(
-            f'<li><a href="{html.escape(url, quote=True)}" rel="noopener noreferrer">{label}</a></li>'
+        seen.add(url)
+        out.append({"n": index, "url": url, "label": source_name(source)})
+    return out
+
+
+def body_has_source_refs(content: str) -> bool:
+    """True when the body text contains a [n] citation marker."""
+    return bool(re.search(r"\[\d+\]", re.sub(r"<[^>]*>", " ", content or "")))
+
+
+def source_links(sources: list, numbered: bool = False) -> str:
+    items = visible_sources(sources)
+    if not items:
+        return "<li>当前知识条目尚无已公开来源链接。</li>"
+    if numbered:
+        return "".join(
+            f'<li><span class="wiki-entry-source-no">[{item["n"]}]</span> '
+            f'<a href="{html.escape(item["url"], quote=True)}" rel="noopener noreferrer">{html.escape(item["label"])}</a></li>'
+            for item in items
         )
-    return "".join(links) or "<li>当前知识条目尚无已公开来源链接。</li>"
+    return "".join(
+        f'<li><a href="{html.escape(item["url"], quote=True)}" rel="noopener noreferrer">{html.escape(item["label"])}</a></li>'
+        for item in items
+    )
+
+
+def source_list_html(entry: dict, content: str) -> str:
+    zh = entry.get("zh") or {}
+    zh_sources = zh.get("sources")
+    sources = zh_sources if isinstance(zh_sources, list) and zh_sources else entry.get("sources")
+    numbered = body_has_source_refs(content) and bool(visible_sources(sources))
+    tag = "ol" if numbered else "ul"
+    cls = "wiki-entry-source-links wiki-entry-source-refs" if numbered else "wiki-entry-source-links"
+    return f'<{tag} class="{cls}">{source_links(sources, numbered)}</{tag}>'
 
 
 def entry_html(entry: dict, world_by_entry: dict[str, list[dict]],
@@ -323,7 +377,7 @@ main{{max-width:1240px;margin:0 auto;padding:24px 24px 72px}}
 {f'<div class="wiki-entry-world-path"><span>所属知识世界</span><div>{world_html}</div></div>' if world_html else ""}
 <div class="wiki-entry-v2-grid"><aside class="wiki-entry-v2-rail"><div class="wiki-entry-v2-card"><strong>知识节点</strong><span>{html.escape(str(entry.get("category") or "知识"))}</span><span>{html.escape(str(((zh.get("meta") or {}).get("period") or (zh.get("meta") or {}).get("era") or "时代信息待核")))}</span><span>{html.escape(str(((zh.get("meta") or {}).get("location") or (zh.get("meta") or {}).get("region") or "空间信息待核")))}</span></div><div class="wiki-entry-v2-card"><strong>继续探索</strong><a href="{SITE_URL}search/">⌕ 搜索知识 →</a><a href="{SITE_URL}network/relations/">关系网络 →</a><a href="{SITE_URL}network/global/">全球陶瓷网络 →</a></div></aside><div class="wiki-entry-v2-main"><section class="wiki-entry-body"><h2>详细介绍</h2>{body_html}</section>
 {f'<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">知识关系</div><h2>它与哪些知识相连</h2><ul class="wiki-entry-v2-relations">{relation_html}</ul></section>' if relations else ""}
-<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">来源</div><h2>来源与外部资料</h2><ul class="wiki-entry-source-links">{source_links(zh.get("sources") or entry.get("sources") or [])}<li><a href="https://zh.wikipedia.org/w/index.php?search={quote(title)}" rel="noopener noreferrer">维基百科 ↗</a></li></ul></section>
+<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">来源</div><h2>来源与外部资料</h2>{source_list_html(entry, content)}</section>
 </div></div><footer class="wiki-entry-footer">本页面为公开正式知识条目；页面正文、来源与媒体由项目知识库维护。</footer>
 </article>
 </main>

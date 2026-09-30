@@ -6,8 +6,14 @@
   const url=e=>window.JDM_KNOWLEDGE?.url(e)||`${ROOT}entry/?slug=${encodeURIComponent(e?.slug||'')}`;
   const safeHref=(raw,opts)=>window.JDM_SAFE?.safeHref?.(raw,opts)??window.JDM_AUTH?.safeHref?.(raw,opts)??'';
   const hrefFor=u=>safeHref(u)||'';
-  const sourceUrl=s=>s&&typeof s==='object'?safeHref(s.url):'';
-  const sourceLabel=s=>s&&typeof s==='object'?s.label||'来源':(typeof s==='string'?s:'来源');
+  const sourceUrl=s=>{if(!s||typeof s!=='object')return '';const raw=String(s.url??'').trim();return /^https?:\/\//i.test(raw)?safeHref(raw,{allowHttp:true}):''};
+  const sourceLabel=s=>{if(s&&typeof s==='object'){for(const k of ['label','title']){const v=s[k];if(v!=null&&String(v).trim())return String(v)}}return '来源'};
+  /* status: missing/blank/'published' => visible; anything else (e.g. 'pending') => hidden. tier/grade are never rendered. */
+  const sourcePublished=s=>{const st=s?.status;return st==null||(typeof st==='string'&&!st.trim())||String(st).trim().toLowerCase()==='published'};
+  /* Same rules as scripts/generate_entry_pages.py visible_sources(): n = 1-based position in the original array; url de-dup is a fallback and never renumbers. */
+  const visibleSources=list=>{const seen=new Set(),out=[];if(!Array.isArray(list))return out;list.forEach((s,i)=>{if(!s||typeof s!=='object'||!sourcePublished(s))return;const key=String(s.url??'').trim(),u=sourceUrl(s);if(!u||seen.has(key))return;seen.add(key);out.push({n:i+1,href:u,label:sourceLabel(s)})});return out};
+  const bodyHasRefs=raw=>/\[\d+\]/.test(String(raw||'').replace(/<[^>]*>/g,' '));
+  const entrySources=e=>Array.isArray(e?.zh?.sources)&&e.zh.sources.length?e.zh.sources:e?.sources;
   const validMedia=e=>{const m=e?.media?.[0];return m&&!window.JDM_MEDIA_POLICY?.isGenericPlaceholder?.(m)?m:null};
   function detailedIntro(e){
     const m=e.zh?.meta||{};
@@ -20,7 +26,7 @@
     return text||(facts?facts+'。该条目结合可核验文献、考古与馆藏资料说明其历史位置及与景德镇陶瓷发展的关系。':'该条目结合可核验史料、研究与馆藏信息说明相关历史背景及其与景德镇陶瓷史的联系。');
   }
   function render(root,e,network){
-    const m=e.zh?.meta||{},im=validMedia(e),wiki=m.wikiTitle||e.zh?.title||e.slug;
+    const m=e.zh?.meta||{},im=validMedia(e);
     const intro=detailedIntro(e), relations=network?.relations||[], recommendations=network?.recommendations||[];
     const worlds=network?.worlds||[], timelinePeers=network?.timelinePeers||[], spaceEntries=network?.spaceEntries||[], craftProcesses=network?.craftProcesses||[];
     const tags=[m.period,m.era,m.role,m.location,m.region,m.craft].filter(Boolean);
@@ -28,7 +34,9 @@
     const worldPath=w=>ROOT+(w.slug==='history'?'history/':w.slug==='craft'?'craft/':w.slug==='objects'?'objects/':w.slug==='space'?'kilns/':w.slug==='people'?'people/':w.slug==='research'?'research/':w.slug==='contemporary'?'contemporary/':'');
     const worldLinks=worlds.map(w=>{const h=hrefFor(worldPath(w));return h?'<a class="wiki-entry-world-link" href="'+h+'">'+esc(w.short_title||w.title||w.slug)+' →</a>':''}).filter(Boolean).join('');
     const entryCards=(items,kind)=>items.slice(0,8).map(x=>{const h=hrefFor(url(x));return h?'<a class="wiki-entry-explore-card" href="'+h+'"><span>'+esc(kind)+'</span><b>'+esc(x.zh?.title||x.slug)+'</b><small>'+esc(x.category||'知识')+' →</small></a>':''}).filter(Boolean).join('');
-    const sourceLinks=(e.sources||[]).map(s=>{const u=sourceUrl(s);return u?'<a href="'+u+'" target="_blank" rel="noopener">'+esc(sourceLabel(s))+' ↗</a>':''}).filter(Boolean).join('');
+    const visSources=visibleSources(entrySources(e)), numberedSources=visSources.length>0&&bodyHasRefs(e.zh?.content);
+    const sourceLinks=visSources.map(s=>{const a='<a href="'+s.href+'" target="_blank" rel="noopener">'+esc(s.label)+' ↗</a>';return numberedSources?'<li><span class="wiki-entry-source-no">['+s.n+']</span> '+a+'</li>':a}).join('');
+    const sourceBlock=numberedSources?'<ol class="wiki-entry-source-links wiki-entry-source-refs" style="list-style:none;padding:0;margin:0">'+sourceLinks+'</ol>':'<div class="wiki-entry-source-links">'+(sourceLinks||'<span>暂无外部来源。</span>')+'</div>';
     root.innerHTML='<article class="wiki-entry-card wiki-entry-v2">'+
       '<header class="wiki-entry-header"><div><div class="wiki-entry-kicker">'+esc(e.category||'知识')+'</div><h1>'+esc(e.zh?.title||e.slug)+'</h1><p>'+esc(intro)+'</p></div>'+(im&&safeHref(im.path)?'<figure class="wiki-entry-cover"><img data-museum-image="1" src="'+safeHref(im.path)+'" alt="'+esc(im.title||e.zh?.title||e.slug)+'"><figcaption>'+esc(im.title||'')+' · '+esc(im.source||'')+' · '+esc(im.license||'')+'</figcaption></figure>':'')+'</header>'+
       (tags.length?'<div class="wiki-entry-v2-tags">'+tags.map(x=>'<span>'+esc(x)+'</span>').join('')+'</div>':'')+
@@ -41,7 +49,7 @@
       (spaceEntries.length?'<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">空间语境</div><h2>同一空间语境，还可以看</h2><div class="wiki-entry-explore-grid">'+entryCards(spaceEntries,'空间关联')+'</div></section>':'')+
       (craftProcesses.length?'<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">工艺</div><h2>相关工艺</h2><div class="wiki-entry-craft-list">'+craftProcesses.slice(0,8).map(p=>{const h=hrefFor(ROOT+'craft/technology-tree/?process='+encodeURIComponent(p.node_id||''));return h?'<a href="'+h+'"><span>工序</span><b>'+esc(p.label||p.node_id)+'</b><small>进入72道工艺 →</small></a>':''}).filter(Boolean).join('')+'</div></section>':'')+
       (recommendations.length?'<section class="wiki-entry-recommendations"><div class="wiki-entry-section-kicker">知识探索</div><h2>你可能还想了解</h2><p class="wiki-recommendation-intro">从当前条目继续探索高置信度相关知识。</p><div class="wiki-recommendation-grid">'+recommendations.map(r=>{const h=hrefFor(url(r.entry));return h?'<a class="wiki-recommendation-card" href="'+h+'"><span class="wiki-recommendation-category">'+esc(r.target_category||r.entry.category||'知识')+'</span><b>'+esc(r.target_label||r.entry.zh?.title||r.entry.slug)+'</b><small>'+esc(r.reason||'相关知识入口')+' →</small></a>':''}).filter(Boolean).join('')+'</div></section>':'')+
-      '<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">来源</div><h2>来源与外部资料</h2><div class="wiki-entry-source-links">'+(sourceLinks||'<span>暂无外部来源。</span>')+(hrefFor('https://zh.wikipedia.org/w/index.php?search='+encodeURIComponent(wiki))?'<a href="'+hrefFor('https://zh.wikipedia.org/w/index.php?search='+encodeURIComponent(wiki))+'" target="_blank" rel="noopener">维基百科 ↗</a>':'')+'</div></section></div></div></article>';
+      '<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">来源</div><h2>来源与外部资料</h2>'+sourceBlock+'</section></div></div></article>';
   }
   function sanitizeBodyHtml(raw){
     if(typeof window.JDM_SAFE?.sanitizeBodyHtml==='function')return window.JDM_SAFE.sanitizeBodyHtml(raw);
