@@ -55,6 +55,7 @@ TITLE_ONLY = {"url": "https://example.org/t", "title": "仅有标题"}
 EVIL = {"url": "https://example.org/e", "label": '<img src=x onerror=alert(1)>"\'&'}
 JSURL = {"url": "javascript:alert(1)", "label": "恶意链接"}
 LEGACY = {"url": "https://example.org/l", "label": "旧式来源"}
+MANY12 = [{"url": f"https://example.org/m{i}", "label": f"来源{i}"} for i in range(1, 12)] + [{"url": "https://example.org/m12", "label": "待核十二", "status": "pending"}]
 
 CASES = {
     "pending": entry("pending", [A, PEND, B]),
@@ -73,6 +74,9 @@ CASES = {
     "refs-multi": entry("refs-multi", [A, B], "<p>甲[1]，再甲[1]，乙[2][1]。</p>"),
     "refs-dup2": entry("refs-dup2", [A, DUP, B], "<p>[1][2][3]</p>"),
     "refs-oob": entry("refs-oob", [A], "<p>x[1]y[9]z[注]w[1-3]v[0]u[01]t[1,2]</p>"),
+    "refs-year": entry("refs-year", [A], "<p>见[2019]年报告[1]，并参[2004]及[12]。</p>"),
+    "refs-year-only": entry("refs-year-only", [A, B], "<p>见[2019]年报告，[12]页。</p>"),
+    "refs-12": entry("refs-12", MANY12, "<p>引[1]、[12]、[13]、[2019]。</p>"),
     "refs-skip": entry("refs-skip", [A, B], '<p>见<a href="https://example.org/x">文[1]</a>。</p><h2>标题[2]</h2><h3>小节[1]</h3><p>正文[2]</p>'),
     "refs-nosrc": entry("refs-nosrc", [], "<p>x[1]</p>"),
     "refs-plain": entry("refs-plain", [A], "第一行\n第二行[1]"),
@@ -146,7 +150,12 @@ def run_static_citations(src: dict[str, str]) -> None:
     check("cite/pending: no link to missing wiki-src-2", "wiki-src-2" not in body["refs-pending"] and "wiki-src-2" not in src["refs-pending"])
     check("cite/pending: li ids keep array positions", LI_ID_RE.findall(src["refs-pending"]) == ["wiki-src-1", "wiki-src-3"])
     check("cite/dup: duplicate-url [2] dropped, no renumber", [t for *_, t in CITE_RE.findall(body["refs-dup2"])] == ["1", "3"] and LI_ID_RE.findall(src["refs-dup2"]) == ["wiki-src-1", "wiki-src-3"])
-    check("cite/oob: [9] dropped, no crash", [t for *_, t in CITE_RE.findall(body["refs-oob"])] == ["1"] and "[9]" not in body["refs-oob"])
+    check("cite/oob: [9] beyond the array is plain text, kept as-is", [t for *_, t in CITE_RE.findall(body["refs-oob"])] == ["1"] and "y[9]z" in body["refs-oob"], body["refs-oob"])
+    check("cite/year: [2019]/[2004]/[12] kept verbatim, only [1] linked", [t for *_, t in CITE_RE.findall(body["refs-year"])] == ["1"] and all(x in body["refs-year"] for x in ("[2019]", "[2004]", "[12]")), body["refs-year"])
+    check("cite/year: whole sentence intact", body_text(body["refs-year"]) == body_text("<p>见[2019]年报告[1]，并参[2004]及[12]。</p>"), body["refs-year"])
+    check("cite/year-only: body unchanged (wrapper only), no sup", body["refs-year-only"] == '<div class="wiki-entry-text"><p>见[2019]年报告，[12]页。</p></div>', body["refs-year-only"])
+    check("cite/12: pending position [12] dropped, [13] and [2019] kept, [1] linked", [t for *_, t in CITE_RE.findall(body["refs-12"])] == ["1"] and "[12]" not in body["refs-12"] and "[13]" in body["refs-12"] and "[2019]" in body["refs-12"], body["refs-12"])
+    check("cite/12: no dead link to wiki-src-12", "wiki-src-12" not in body["refs-12"] and "wiki-src-12" not in src["refs-12"])
     check("cite/oob: non-citation brackets untouched", all(x in body["refs-oob"] for x in ("[注]", "[1-3]", "[0]", "[01]", "[1,2]")))
     check("cite/every link target exists (all cases)", all(h[1:] in LI_ID_RE.findall(src[k]) for k in CASES for _, h, _, _ in CITE_RE.findall(body[k])))
     # --- skip a / headings ---
@@ -169,8 +178,8 @@ def run_static_citations(src: dict[str, str]) -> None:
     check("plain/static: citation works in plain body", [t for *_, t in CITE_RE.findall(body["refs-plain"])] == ["1"] and "--plain" in body["refs-plain"])
     # --- link_citations unit: code/pre/sup are skipped ---
     items = g.visible_sources([A, B])
-    out_html, counts, dropped = g.link_citations("<p>a[1]<code>[1]</code><pre>[2]</pre>b[3]</p>", items)
-    check("cite/unit: code/pre skipped, [3] dropped", out_html.count("<sup") == 1 and "<code>[1]</code>" in out_html and "<pre>[2]</pre>" in out_html and dropped == [3] and counts == {1: 1}, out_html)
+    out_html, counts, dropped = g.link_citations("<p>a[1]<code>[1]</code><pre>[2]</pre>b[3]c[4]</p>", items, 3)
+    check("cite/unit: code/pre skipped, in-range invisible [3] dropped, [4] beyond array kept", out_html.count("<sup") == 1 and "<code>[1]</code>" in out_html and "<pre>[2]</pre>" in out_html and dropped == [3] and counts == {1: 1} and "c[4]" in out_html, out_html)
 
 
 def run_css_checks() -> None:
@@ -188,6 +197,9 @@ def run_css_checks() -> None:
     check("css: cite lifted with relative+top (not vertical-align:super)", "position:relative;top:calc(-1*var(--jdm-cite-lift))" in flat and "--jdm-cite-size:.72em" in flat and "--jdm-cite-lift:.5em" in flat and "vertical-align:super" not in flat)
     check("css: cite hit area pseudo-element, coarse pointer larger", "a.wiki-cite-link::after{content:\"\";position:absolute;inset:-12px-4px}" in flat and "@media(pointer:coarse)" in flat)
     check("css: :target highlight 2.4s + reduced-motion off", "--jdm-cite-flash:2.4s" in flat and "li:target{" in flat and "@media(prefers-reduced-motion:reduce)" in flat)
+    check("css: back link selector out-ranks the legacy li>a rule", ".wiki-entry-source-links.wiki-entry-source-refs>lia.wiki-source-back{" in flat and "min-width:32px" in flat.split(".wiki-entry-source-links.wiki-entry-source-refs>lia.wiki-source-back{", 1)[1].split("}", 1)[0])
+    check("css: slate focus ring for back link is #9ec3ff", '[data-md-color-scheme="slate"].wiki-entry-source-links.wiki-entry-source-refs>lia.wiki-source-back:focus-visible{outline-color:#9ec3ff}' in flat)
+    check("css: touch hit area narrow horizontally (-3px), later adjacent cite gives up left side", "@media(pointer:coarse){.wiki-entry-card.wiki-cite" in flat and "inset:-22px-3px" in flat and ".wiki-cite+.wiki-cite" in flat and "::after{left:0}" in flat)
     check("css: scroll-margin-top 96px (80px mobile)", "--jdm-cite-scroll-margin:96px" in flat and "--jdm-cite-scroll-margin:80px" in flat)
     block = re.sub(r"/\*.*?\*/", "", css[css.index("==== Entry body"):], flags=re.S)
     block = block[block.index(".wiki-entry-card{"):]
@@ -251,7 +263,10 @@ def run_dynamic(static: dict[str, str]) -> None:
     check("dynamic/refs: ol with [1][2]", "<ol" in (dyn.get("refs") or "") and "[1]" in dyn["refs"] and "[2]" in dyn["refs"])
     check("dynamic/refs: superscript links built", dyn_body(dbody["refs"]).count('<sup class="wiki-cite">') == 2)
     check("dynamic/pending: [2] dropped, no dead link", "wiki-src-2" not in dbody["refs-pending"] and "[2]" not in re.sub(r"<[^>]*>", "", dyn_body(dbody["refs-pending"])))
-    check("dynamic/oob: non-citation brackets untouched", all(x in dbody["refs-oob"] for x in ("[注]", "[1-3]", "[0]", "[01]", "[1,2]")) and "[9]" not in dbody["refs-oob"])
+    check("dynamic/oob: non-citation brackets untouched, [9] beyond array kept", all(x in dbody["refs-oob"] for x in ("[注]", "[1-3]", "[0]", "[01]", "[1,2]", "y[9]z")))
+    check("dynamic/year: years kept verbatim, only [1] linked", [t for *_, t in CITE_RE.findall(dbody["refs-year"])] == ["1"] and all(x in dbody["refs-year"] for x in ("[2019]", "[2004]", "[12]")), dbody["refs-year"])
+    check("dynamic/year-only: body unchanged (wrapper only)", dyn_body(dbody["refs-year-only"]) == '<div class="wiki-entry-text"><p>见[2019]年报告，[12]页。</p></div>', dyn_body(dbody["refs-year-only"]))
+    check("dynamic/12: pending [12] dropped, [13] and [2019] kept", [t for *_, t in CITE_RE.findall(dbody["refs-12"])] == ["1"] and "[12]" not in dbody["refs-12"] and "[13]" in dbody["refs-12"] and "[2019]" in dbody["refs-12"] and "wiki-src-12" not in dbody["refs-12"], dbody["refs-12"])
     check("dynamic/skip: <a>/h2/h3 untouched, no nested a", "文[1]</a>" in dbody["refs-skip"] and "<h2>标题[2]</h2>" in dbody["refs-skip"] and "<h3>小节[1]</h3>" in dbody["refs-skip"] and not re.search(r"<a[^>]*>(?:(?!</a>).)*<a ", dbody["refs-skip"]))
     check("dynamic/legacy: body untouched (only wrapper)", dyn_body(dbody["legacy"]) == '<div class="wiki-entry-text"><p>没有引用标记。</p></div>', dyn_body(dbody["legacy"]))
     check("dynamic/plain: --plain class only for text-only bodies", "--plain" in dbody["plain-legacy"] and "--plain" not in dbody["block-legacy"])

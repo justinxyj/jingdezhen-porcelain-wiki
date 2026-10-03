@@ -26,8 +26,9 @@
     let links=[];for(let k=1;k<=count;k++)links.push('<a class="wiki-source-back" href="#wiki-cite-'+n+'-'+k+'" aria-label="返回正文引用处（'+backLetter(k)+'）">'+backLetter(k)+'</a>');
     return '<span class="wiki-source-back-group"><span aria-hidden="true">^</span> '+links.join(' ')+'</span>';
   };
-  /** @param {string} bodyHtml @param {{n:number}[]} visible */
-  function linkCitations(bodyHtml,visible){
+  /** A [n] is a citation marker only when 1<=n<=total (sources array length); a visible n links, an invisible one (pending / duplicate url) is dropped, a larger number is plain text.
+      @param {string} bodyHtml @param {{n:number}[]} visible @param {number} total */
+  function linkCitations(bodyHtml,visible,total){
     const valid=new Set(visible.map(s=>s.n));
     /** @type {Record<number,number>} */ const counts={};
     /** @type {number[]} */ const dropped=[];
@@ -44,6 +45,7 @@
       while((m=CITE_RE.exec(value))){
         out+=esc(value.slice(last,m.index));last=m.index+m[0].length;
         const n=Number(m[1]);
+        if(n>total){out+=esc(m[0]);continue}
         if(!valid.has(n)){dropped.push(n);continue}
         const k=(counts[n]=(counts[n]||0)+1);
         out+='<sup class="wiki-cite"><a class="wiki-cite-link" id="wiki-cite-'+n+'-'+k+'" href="#wiki-src-'+n+'" aria-label="跳到来源 '+n+'">['+n+']</a></sup>';
@@ -79,7 +81,7 @@
     const visSources=visibleSources(entrySources(e)), numberedSources=visSources.length>0&&bodyHasRefs(e.zh?.content);
     let bodyHtml=contentOrIntro(e,intro);
     /** @type {Record<number,number>} */ let citeCounts={};
-    if(numberedSources){const r=linkCitations(bodyHtml,visSources);bodyHtml=r.html;citeCounts=r.counts}
+    if(numberedSources){const srcList=entrySources(e),r=linkCitations(bodyHtml,visSources,Array.isArray(srcList)?srcList.length:0);bodyHtml=r.html;citeCounts=r.counts}
     const rawContent=String(e.zh?.content||''),plainBody=rawContent.trim()&&!BLOCK_TAG_RE.test(rawContent);
     const sourceLinks=visSources.map(s=>{const a='<a href="'+s.href+'" target="_blank" rel="noopener">'+esc(s.label)+' ↗</a>';return numberedSources?'<li id="wiki-src-'+s.n+'"><span class="wiki-entry-source-no">['+s.n+']</span> '+a+sourceBack(s.n,citeCounts[s.n]||0)+'</li>':a}).join('');
     const sourceBlock=numberedSources?'<ol class="wiki-entry-source-links wiki-entry-source-refs" style="list-style:none;padding:0;margin:0">'+sourceLinks+'</ol>':'<div class="wiki-entry-source-links">'+(sourceLinks||'<span>暂无外部来源。</span>')+'</div>';

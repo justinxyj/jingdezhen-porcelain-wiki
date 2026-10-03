@@ -156,7 +156,9 @@ body:has(#wiki-entry-root) .md-content__button{display:none!important}
   color:var(--jdm-cite-color)!important;text-decoration:none;border-radius:4px;scroll-margin-top:var(--jdm-cite-scroll-margin)
 }
 .wiki-entry-card .wiki-cite a.wiki-cite-link::after{content:"";position:absolute;inset:-12px -4px}
-@media(pointer:coarse){.wiki-entry-card .wiki-cite a.wiki-cite-link::after{inset:-22px -10px}}
+@media(pointer:coarse){.wiki-entry-card .wiki-cite a.wiki-cite-link::after{inset:-22px -3px}}
+/* Adjacent citations ([1][2]): the later link gives up its left extension so it never covers the glyph of the one before it. */
+.wiki-entry-card .wiki-cite+.wiki-cite a.wiki-cite-link::after{left:0}
 .wiki-entry-card .wiki-cite+.wiki-cite{margin-left:.15em}
 .wiki-entry-card .wiki-cite a.wiki-cite-link:hover{text-decoration:underline;background:var(--jdm-cite-hover-bg)}
 .wiki-entry-card .wiki-cite a.wiki-cite-link:focus-visible{outline:2px solid var(--jdm-blue);outline-offset:2px}
@@ -164,13 +166,15 @@ body:has(#wiki-entry-root) .md-content__button{display:none!important}
 
 /* Source item as jump target + back-reference. */
 .wiki-entry-source-links.wiki-entry-source-refs>li{padding:2px 8px;margin-left:-8px;border-radius:8px;scroll-margin-top:var(--jdm-cite-scroll-margin,96px)}
-.wiki-entry-source-refs .wiki-source-back,.wiki-entry-source-refs .wiki-source-back-group{font-size:13px;line-height:1;color:var(--jdm-cite-color,var(--jdm-blue))}
-.wiki-entry-source-refs .wiki-source-back{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;min-width:32px;min-height:32px;margin-block:-8px;border-radius:6px;text-decoration:none;background:none;padding:0;color:var(--jdm-cite-color,var(--jdm-blue))!important}
-.wiki-entry-source-refs .wiki-source-back:hover{background:var(--jdm-cite-hover-bg,rgba(20,85,184,.10));text-decoration:underline}
-.wiki-entry-source-refs .wiki-source-back:focus-visible{outline:2px solid var(--jdm-blue);outline-offset:0}
 .wiki-entry-source-links.wiki-entry-source-refs>li{flex-wrap:wrap}
-.wiki-entry-source-refs .wiki-source-back-group{flex:0 1 auto;max-width:100%;display:inline-flex;flex-wrap:wrap;align-items:center;gap:0;margin-block:-8px}
-.wiki-entry-source-refs .wiki-source-back-group .wiki-source-back{margin-block:0}
+.wiki-entry-source-refs .wiki-source-back-group{font-size:13px;line-height:1;color:var(--jdm-cite-color,var(--jdm-blue))}
+/* Back link: selector must out-rank the legacy ".wiki-entry-source-refs>li>a{min-width:0}" and ".wiki-entry-source-links a" pill rules. */
+.wiki-entry-source-links.wiki-entry-source-refs>li a.wiki-source-back{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;min-width:32px;max-width:none;min-height:32px;margin-block:-8px;padding:0;border-radius:6px;font-size:13px;line-height:1;text-decoration:none;background:none;overflow-wrap:normal;color:var(--jdm-cite-color,var(--jdm-blue))!important}
+.wiki-entry-source-links.wiki-entry-source-refs>li a.wiki-source-back:hover{background:var(--jdm-cite-hover-bg,rgba(20,85,184,.10));text-decoration:underline}
+.wiki-entry-source-links.wiki-entry-source-refs>li a.wiki-source-back:focus-visible{outline:2px solid var(--jdm-blue);outline-offset:0}
+[data-md-color-scheme="slate"] .wiki-entry-source-links.wiki-entry-source-refs>li a.wiki-source-back:focus-visible{outline-color:#9ec3ff}
+.wiki-entry-source-links.wiki-entry-source-refs>li .wiki-source-back-group{flex:0 1 auto;max-width:100%;display:inline-flex;flex-wrap:wrap;align-items:center;gap:0;margin-block:-8px}
+.wiki-entry-source-links.wiki-entry-source-refs>li .wiki-source-back-group a.wiki-source-back{margin-block:0}
 .wiki-entry-source-refs .wiki-source-back-group>span{padding-right:2px}
 .wiki-entry-source-links.wiki-entry-source-refs>li:target{background:var(--jdm-cite-target-bg);box-shadow:inset 3px 0 0 var(--jdm-cite-color);animation:jdm-cite-flash var(--jdm-cite-flash,2.4s) ease-out}
 .wiki-entry-card .wiki-cite a.wiki-cite-link:target{animation:jdm-cite-flash-ref var(--jdm-cite-flash) ease-out}

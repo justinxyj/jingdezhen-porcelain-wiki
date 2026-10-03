@@ -235,12 +235,14 @@ CITE_SKIP_TAGS = {"a", "h2", "h3", "h4", "code", "pre", "sup"}
 BLOCK_TAG_RE = re.compile(r"<(?:p|h[2-4]|ul|ol|li|blockquote)(?:[\s>/])", re.I)
 
 
-def link_citations(body: str, items: list[dict]) -> tuple[str, dict[int, int], list[int]]:
+def link_citations(body: str, items: list[dict], total: int) -> tuple[str, dict[int, int], list[int]]:
     """Turn [n] text markers in sanitized body HTML into superscript anchors.
 
     Only text outside a / h2-h4 / code / pre / sup is touched. n is the original sources
-    array position and must be in the visible source set; any other [n] (pending, duplicate
-    url, out of range) is dropped without renumbering. Returns (html, {n: occurrences}, dropped).
+    array position. A marker is a citation only when 1 <= n <= total (the sources array length):
+    if n is also in the visible source set it becomes a link; otherwise (pending / duplicate
+    url position) it is dropped without renumbering. A number beyond the array length ([2019],
+    [12] with fewer sources) is ordinary text and is left untouched. Returns (html, {n: occurrences}, dropped).
     Mirrors linkCitations() in docs/javascripts/wiki-enhancements.js.
     """
     valid = {item["n"] for item in items}
@@ -250,6 +252,8 @@ def link_citations(body: str, items: list[dict]) -> tuple[str, dict[int, int], l
 
     def repl(match: re.Match) -> str:
         n = int(match.group(1))
+        if n > total:
+            return match.group(0)
         if n not in valid:
             dropped.append(n)
             return ""
@@ -327,7 +331,9 @@ def body_section_html(entry: dict, content: str, body_html: str) -> tuple[str, d
     """Wrap the body in .wiki-entry-text (same DOM as the dynamic shell) and link [n] citations."""
     counts: dict[int, int] = {}
     if is_numbered(entry, content):
-        body_html, counts, _dropped = link_citations(body_html, visible_sources(entry_sources(entry)))
+        sources = entry_sources(entry)
+        body_html, counts, _dropped = link_citations(
+            body_html, visible_sources(sources), len(sources) if isinstance(sources, list) else 0)
     plain_text = bool(content.strip()) and not BLOCK_TAG_RE.search(content)
     cls = "wiki-entry-text wiki-entry-text--plain" if plain_text else "wiki-entry-text"
     return f'<div class="{cls}">{body_html}</div>', counts
