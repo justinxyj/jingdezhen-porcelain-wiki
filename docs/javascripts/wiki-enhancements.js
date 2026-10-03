@@ -13,6 +13,48 @@
   /* Same rules as scripts/generate_entry_pages.py visible_sources(): n = 1-based position in the original array; url de-dup is a fallback and never renumbers. */
   const visibleSources=list=>{const seen=new Set(),out=[];if(!Array.isArray(list))return out;list.forEach((s,i)=>{if(!s||typeof s!=='object'||!sourcePublished(s))return;const key=String(s.url??'').trim(),u=sourceUrl(s);if(!u||seen.has(key))return;seen.add(key);out.push({n:i+1,href:u,label:sourceLabel(s)})});return out};
   const bodyHasRefs=raw=>/\[\d+\]/.test(String(raw||'').replace(/<[^>]*>/g,' '));
+  /* Inline [n] citations -> <sup class="wiki-cite"> anchors. Mirrors scripts/generate_entry_pages.py link_citations().
+     Runs after sanitizing (the body allow-list has no SUP). n must be in the visible source set; anything else is dropped, never renumbered. */
+  const CITE_RE=/\[([1-9]\d*)\]/g, CITE_SKIP=new Set(['A','H2','H3','H4','CODE','PRE','SUP']);
+  const BLOCK_TAG_RE=/<(?:p|h[2-4]|ul|ol|li|blockquote)(?:[\s>\/])/i;
+  /** @param {number} k */
+  const backLetter=k=>k<=26?String.fromCharCode(96+k):String(k);
+  /** @param {number} n @param {number} count */
+  const sourceBack=(n,count)=>{
+    if(!count)return '';
+    if(count===1)return '<a class="wiki-source-back" href="#wiki-cite-'+n+'-1" aria-label="返回正文引用处">↑</a>';
+    let links=[];for(let k=1;k<=count;k++)links.push('<a class="wiki-source-back" href="#wiki-cite-'+n+'-'+k+'" aria-label="返回正文引用处（'+backLetter(k)+'）">'+backLetter(k)+'</a>');
+    return '<span class="wiki-source-back-group"><span aria-hidden="true">^</span> '+links.join(' ')+'</span>';
+  };
+  /** @param {string} bodyHtml @param {{n:number}[]} visible */
+  function linkCitations(bodyHtml,visible){
+    const valid=new Set(visible.map(s=>s.n));
+    /** @type {Record<number,number>} */ const counts={};
+    /** @type {number[]} */ const dropped=[];
+    const tpl=document.createElement('template');
+    tpl.innerHTML=String(bodyHtml||'');
+    /** @type {Text[]} */ const texts=[];
+    const walker=document.createTreeWalker(tpl.content,NodeFilter.SHOW_TEXT);
+    for(let t=walker.nextNode();t;t=walker.nextNode())texts.push(/** @type {Text} */(t));
+    texts.forEach(t=>{
+      const value=t.nodeValue||'';
+      if(!/\[[1-9]\d*\]/.test(value))return;
+      for(let p=t.parentNode;p&&p!==tpl.content;p=p.parentNode)if(CITE_SKIP.has(p.nodeName))return;
+      let out='',last=0,m;CITE_RE.lastIndex=0;
+      while((m=CITE_RE.exec(value))){
+        out+=esc(value.slice(last,m.index));last=m.index+m[0].length;
+        const n=Number(m[1]);
+        if(!valid.has(n)){dropped.push(n);continue}
+        const k=(counts[n]=(counts[n]||0)+1);
+        out+='<sup class="wiki-cite"><a class="wiki-cite-link" id="wiki-cite-'+n+'-'+k+'" href="#wiki-src-'+n+'" aria-label="跳到来源 '+n+'">['+n+']</a></sup>';
+      }
+      out+=esc(value.slice(last));
+      const frag=document.createElement('template');frag.innerHTML=out;
+      /** @type {ChildNode} */(t).replaceWith(frag.content);
+    });
+    if(dropped.length&&typeof console!=='undefined')console.warn('[JDM entry] citation marker(s) without a published source were hidden:',dropped.map(n=>'['+n+']').join(''));
+    return{html:tpl.innerHTML,counts};
+  }
   const entrySources=e=>Array.isArray(e?.zh?.sources)&&e.zh.sources.length?e.zh.sources:e?.sources;
   const validMedia=e=>{const m=e?.media?.[0];return m&&!window.JDM_MEDIA_POLICY?.isGenericPlaceholder?.(m)?m:null};
   function detailedIntro(e){
@@ -35,14 +77,18 @@
     const worldLinks=worlds.map(w=>{const h=hrefFor(worldPath(w));return h?'<a class="wiki-entry-world-link" href="'+h+'">'+esc(w.short_title||w.title||w.slug)+' →</a>':''}).filter(Boolean).join('');
     const entryCards=(items,kind)=>items.slice(0,8).map(x=>{const h=hrefFor(url(x));return h?'<a class="wiki-entry-explore-card" href="'+h+'"><span>'+esc(kind)+'</span><b>'+esc(x.zh?.title||x.slug)+'</b><small>'+esc(x.category||'知识')+' →</small></a>':''}).filter(Boolean).join('');
     const visSources=visibleSources(entrySources(e)), numberedSources=visSources.length>0&&bodyHasRefs(e.zh?.content);
-    const sourceLinks=visSources.map(s=>{const a='<a href="'+s.href+'" target="_blank" rel="noopener">'+esc(s.label)+' ↗</a>';return numberedSources?'<li><span class="wiki-entry-source-no">['+s.n+']</span> '+a+'</li>':a}).join('');
+    let bodyHtml=contentOrIntro(e,intro);
+    /** @type {Record<number,number>} */ let citeCounts={};
+    if(numberedSources){const r=linkCitations(bodyHtml,visSources);bodyHtml=r.html;citeCounts=r.counts}
+    const rawContent=String(e.zh?.content||''),plainBody=rawContent.trim()&&!BLOCK_TAG_RE.test(rawContent);
+    const sourceLinks=visSources.map(s=>{const a='<a href="'+s.href+'" target="_blank" rel="noopener">'+esc(s.label)+' ↗</a>';return numberedSources?'<li id="wiki-src-'+s.n+'"><span class="wiki-entry-source-no">['+s.n+']</span> '+a+sourceBack(s.n,citeCounts[s.n]||0)+'</li>':a}).join('');
     const sourceBlock=numberedSources?'<ol class="wiki-entry-source-links wiki-entry-source-refs" style="list-style:none;padding:0;margin:0">'+sourceLinks+'</ol>':'<div class="wiki-entry-source-links">'+(sourceLinks||'<span>暂无外部来源。</span>')+'</div>';
     root.innerHTML='<article class="wiki-entry-card wiki-entry-v2">'+
       '<header class="wiki-entry-header"><div><div class="wiki-entry-kicker">'+esc(e.category||'知识')+'</div><h1>'+esc(e.zh?.title||e.slug)+'</h1><p>'+esc(intro)+'</p></div>'+(im&&safeHref(im.path)?'<figure class="wiki-entry-cover"><img data-museum-image="1" src="'+safeHref(im.path)+'" alt="'+esc(im.title||e.zh?.title||e.slug)+'"><figcaption>'+esc(im.title||'')+' · '+esc(im.source||'')+' · '+esc(im.license||'')+'</figcaption></figure>':'')+'</header>'+
       (tags.length?'<div class="wiki-entry-v2-tags">'+tags.map(x=>'<span>'+esc(x)+'</span>').join('')+'</div>':'')+
       (worldLinks?'<div class="wiki-entry-world-path"><span>所属知识世界</span><div>'+worldLinks+'</div></div>':'')+
       '<div class="wiki-entry-v2-grid"><aside class="wiki-entry-v2-rail"><div class="wiki-entry-v2-card"><strong>知识节点</strong><span>'+esc(e.category||'知识')+'</span><span>'+esc(m.period||m.era||'时代信息待核')+'</span><span>'+esc(m.location||m.region||'空间信息待核')+'</span></div><div class="wiki-entry-v2-card"><strong>继续探索</strong><a href="'+hrefFor(ROOT+'search/')+'">⌕ 搜索知识 →</a><a href="'+hrefFor(ROOT+'network/relations/')+'">关系网络 →</a><a href="'+hrefFor(ROOT+'network/global/')+'">全球陶瓷网络 →</a></div></aside><div class="wiki-entry-v2-main">'+
-      '<section class="wiki-entry-body"><h2>详细介绍</h2><div class="wiki-entry-text">'+contentOrIntro(e,intro)+'</div></section>'+
+      '<section class="wiki-entry-body"><h2>详细介绍</h2><div class="wiki-entry-text'+(plainBody?' wiki-entry-text--plain':'')+'">'+bodyHtml+'</div></section>'+
       (relations.length?'<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">知识关系</div><h2>它与哪些知识相连</h2><div class="wiki-entry-v2-relations">'+relationCards+'</div></section>':'')+
       (e.timelineContext?'<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">时间与空间</div><h2>历史与空间</h2><p>'+esc(e.timelineContext.official_summary||e.timelineContext.relationship_to_jingdezhen||e.timelineContext.historical_role||'该条目具有可追溯的时间轴或历史语境信息。')+'</p>'+(safeHref(e.timelineContext.official_source_url)?'<a href="'+safeHref(e.timelineContext.official_source_url)+'" target="_blank" rel="noopener noreferrer">查看资料来源 ↗</a>':'')+'</section>':'')+
       (timelinePeers.length?'<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">同一时代</div><h2>同一时代，还可以看</h2><div class="wiki-entry-explore-grid">'+entryCards(timelinePeers,'同一时代')+'</div></section>':'')+
@@ -144,6 +190,17 @@
     root.innerHTML=`<div class="wiki-entry-error" role="alert"><h2>知识内容暂时无法加载</h2><p>网络或数据服务出现异常（${code}）。请稍后重试。</p><button type="button">重新加载</button></div>`;
     root.querySelector('button').onclick=()=>{window.JDM_KNOWLEDGE.reset();init()};
   }
+  /* The body renders asynchronously, so a #wiki-… deep link (citation or source anchor) is re-applied once after render (scroll + :target). */
+  function scrollToHash(){
+    const h=location.hash;
+    if(!h||h.indexOf('#wiki-')!==0)return;
+    let id=h.slice(1);try{id=decodeURIComponent(id)}catch(_){}
+    const t=document.getElementById(id);
+    if(!t)return;
+    if(typeof t.scrollIntoView==='function')t.scrollIntoView();
+    /* Re-run fragment navigation (same URL, no new history entry) so :target highlight applies to the freshly inserted nodes. */
+    try{location.replace(h)}catch(_){}
+  }
   let initSeq=0;
   async function init(){
     const seq=++initSeq;
@@ -168,6 +225,7 @@
       const error=null; const truncated=false;
       if(seq!==initSeq)return;
       render(root,e,network);
+      scrollToHash();
       const relations=network.relations||[], recommendations=network.recommendations||[];
       const relationTruncated=Boolean(network.relationTruncated||network.stats?.relationTruncated);
       const recommendationError=network.networkError?network.networkError:null;
