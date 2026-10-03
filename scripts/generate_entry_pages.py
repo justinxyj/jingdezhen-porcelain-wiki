@@ -230,14 +230,77 @@ def body_has_source_refs(content: str) -> bool:
     return bool(re.search(r"\[\d+\]", re.sub(r"<[^>]*>", " ", content or "")))
 
 
-def source_links(sources: list, numbered: bool = False) -> str:
+CITE_RE = re.compile(r"\[([1-9]\d*)\]")
+CITE_SKIP_TAGS = {"a", "h2", "h3", "h4", "code", "pre", "sup"}
+BLOCK_TAG_RE = re.compile(r"<(?:p|h[2-4]|ul|ol|li|blockquote)(?:[\s>/])", re.I)
+
+
+def link_citations(body: str, items: list[dict], total: int) -> tuple[str, dict[int, int], list[int]]:
+    """Turn [n] text markers in sanitized body HTML into superscript anchors.
+
+    Only text outside a / h2-h4 / code / pre / sup is touched. n is the original sources
+    array position. A marker is a citation only when 1 <= n <= total (the sources array length):
+    if n is also in the visible source set it becomes a link; otherwise (pending / duplicate
+    url position) it is dropped without renumbering. A number beyond the array length ([2019],
+    [12] with fewer sources) is ordinary text and is left untouched. Returns (html, {n: occurrences}, dropped).
+    Mirrors linkCitations() in docs/javascripts/wiki-enhancements.js.
+    """
+    valid = {item["n"] for item in items}
+    counts: dict[int, int] = {}
+    dropped: list[int] = []
+    depth = 0
+
+    def repl(match: re.Match) -> str:
+        n = int(match.group(1))
+        if n > total:
+            return match.group(0)
+        if n not in valid:
+            dropped.append(n)
+            return ""
+        counts[n] = counts.get(n, 0) + 1
+        k = counts[n]
+        return (f'<sup class="wiki-cite"><a class="wiki-cite-link" id="wiki-cite-{n}-{k}" '
+                f'href="#wiki-src-{n}" aria-label="跳到来源 {n}">[{n}]</a></sup>')
+
+    out: list[str] = []
+    for token in re.split(r"(<[^>]*>)", body):
+        if token.startswith("<") and token.endswith(">"):
+            tag = re.match(r"<(/?)([A-Za-z][A-Za-z0-9]*)", token)
+            if tag and tag.group(2).lower() in CITE_SKIP_TAGS and not token.endswith("/>"):
+                depth = max(0, depth - 1) if tag.group(1) else depth + 1
+            out.append(token)
+        else:
+            out.append(token if depth else CITE_RE.sub(repl, token))
+    return "".join(out), counts, dropped
+
+
+def back_letter(k: int) -> str:
+    return chr(96 + k) if k <= 26 else str(k)
+
+
+def source_back_html(n: int, count: int) -> str:
+    """Back-reference link(s) from a source item to its in-text citation(s)."""
+    if count <= 0:
+        return ""
+    if count == 1:
+        return f'<a class="wiki-source-back" href="#wiki-cite-{n}-1" aria-label="返回正文引用处">↑</a>'
+    links = " ".join(
+        f'<a class="wiki-source-back" href="#wiki-cite-{n}-{k}" aria-label="返回正文引用处（{back_letter(k)}）">{back_letter(k)}</a>'
+        for k in range(1, count + 1)
+    )
+    return f'<span class="wiki-source-back-group"><span aria-hidden="true">^</span> {links}</span>'
+
+
+def source_links(sources: list, numbered: bool = False, cite_counts: dict[int, int] | None = None) -> str:
     items = visible_sources(sources)
     if not items:
         return "<li>当前知识条目尚无已公开来源链接。</li>"
     if numbered:
+        counts = cite_counts or {}
         return "".join(
-            f'<li><span class="wiki-entry-source-no">[{item["n"]}]</span> '
-            f'<a href="{html.escape(item["url"], quote=True)}" rel="noopener noreferrer">{html.escape(item["label"])}</a></li>'
+            f'<li id="wiki-src-{item["n"]}"><span class="wiki-entry-source-no">[{item["n"]}]</span> '
+            f'<a href="{html.escape(item["url"], quote=True)}" rel="noopener noreferrer">{html.escape(item["label"])}</a>'
+            f'{source_back_html(item["n"], counts.get(item["n"], 0))}</li>'
             for item in items
         )
     return "".join(
@@ -246,14 +309,34 @@ def source_links(sources: list, numbered: bool = False) -> str:
     )
 
 
-def source_list_html(entry: dict, content: str) -> str:
+def entry_sources(entry: dict) -> list:
     zh = entry.get("zh") or {}
     zh_sources = zh.get("sources")
-    sources = zh_sources if isinstance(zh_sources, list) and zh_sources else entry.get("sources")
-    numbered = body_has_source_refs(content) and bool(visible_sources(sources))
+    return zh_sources if isinstance(zh_sources, list) and zh_sources else entry.get("sources")
+
+
+def is_numbered(entry: dict, content: str) -> bool:
+    return body_has_source_refs(content) and bool(visible_sources(entry_sources(entry)))
+
+
+def source_list_html(entry: dict, content: str, cite_counts: dict[int, int] | None = None) -> str:
+    sources = entry_sources(entry)
+    numbered = is_numbered(entry, content)
     tag = "ol" if numbered else "ul"
     cls = "wiki-entry-source-links wiki-entry-source-refs" if numbered else "wiki-entry-source-links"
-    return f'<{tag} class="{cls}">{source_links(sources, numbered)}</{tag}>'
+    return f'<{tag} class="{cls}">{source_links(sources, numbered, cite_counts)}</{tag}>'
+
+
+def body_section_html(entry: dict, content: str, body_html: str) -> tuple[str, dict[int, int]]:
+    """Wrap the body in .wiki-entry-text (same DOM as the dynamic shell) and link [n] citations."""
+    counts: dict[int, int] = {}
+    if is_numbered(entry, content):
+        sources = entry_sources(entry)
+        body_html, counts, _dropped = link_citations(
+            body_html, visible_sources(sources), len(sources) if isinstance(sources, list) else 0)
+    plain_text = bool(content.strip()) and not BLOCK_TAG_RE.search(content)
+    cls = "wiki-entry-text wiki-entry-text--plain" if plain_text else "wiki-entry-text"
+    return f'<div class="{cls}">{body_html}</div>', counts
 
 
 def entry_html(entry: dict, world_by_entry: dict[str, list[dict]],
@@ -267,6 +350,7 @@ def entry_html(entry: dict, world_by_entry: dict[str, list[dict]],
     intro = intro_for(entry)
     content = str(zh.get("content") or "")
     body_html = clean_body_html(content, intro) if content.strip() else f"<p>{html.escape(intro)}</p>"
+    body_block, cite_counts = body_section_html(entry, content, body_html)
     media = first_media(media_by_entry, entry["id"])
     worlds = world_by_entry.get(entry["id"], [])
     relations = relations_by_entry.get(entry["id"], [])[:12]
@@ -375,9 +459,9 @@ main{{max-width:1240px;margin:0 auto;padding:24px 24px 72px}}
 </header>
 {f'<div class="wiki-entry-v2-tags">{"".join("<span>"+html.escape(x)+"</span>" for x in tags)}</div>' if tags else ""}
 {f'<div class="wiki-entry-world-path"><span>所属知识世界</span><div>{world_html}</div></div>' if world_html else ""}
-<div class="wiki-entry-v2-grid"><aside class="wiki-entry-v2-rail"><div class="wiki-entry-v2-card"><strong>知识节点</strong><span>{html.escape(str(entry.get("category") or "知识"))}</span><span>{html.escape(str(((zh.get("meta") or {}).get("period") or (zh.get("meta") or {}).get("era") or "时代信息待核")))}</span><span>{html.escape(str(((zh.get("meta") or {}).get("location") or (zh.get("meta") or {}).get("region") or "空间信息待核")))}</span></div><div class="wiki-entry-v2-card"><strong>继续探索</strong><a href="{SITE_URL}search/">⌕ 搜索知识 →</a><a href="{SITE_URL}network/relations/">关系网络 →</a><a href="{SITE_URL}network/global/">全球陶瓷网络 →</a></div></aside><div class="wiki-entry-v2-main"><section class="wiki-entry-body"><h2>详细介绍</h2>{body_html}</section>
+<div class="wiki-entry-v2-grid"><aside class="wiki-entry-v2-rail"><div class="wiki-entry-v2-card"><strong>知识节点</strong><span>{html.escape(str(entry.get("category") or "知识"))}</span><span>{html.escape(str(((zh.get("meta") or {}).get("period") or (zh.get("meta") or {}).get("era") or "时代信息待核")))}</span><span>{html.escape(str(((zh.get("meta") or {}).get("location") or (zh.get("meta") or {}).get("region") or "空间信息待核")))}</span></div><div class="wiki-entry-v2-card"><strong>继续探索</strong><a href="{SITE_URL}search/">⌕ 搜索知识 →</a><a href="{SITE_URL}network/relations/">关系网络 →</a><a href="{SITE_URL}network/global/">全球陶瓷网络 →</a></div></aside><div class="wiki-entry-v2-main"><section class="wiki-entry-body"><h2>详细介绍</h2>{body_block}</section>
 {f'<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">知识关系</div><h2>它与哪些知识相连</h2><ul class="wiki-entry-v2-relations">{relation_html}</ul></section>' if relations else ""}
-<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">来源</div><h2>来源与外部资料</h2>{source_list_html(entry, content)}</section>
+<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">来源</div><h2>来源与外部资料</h2>{source_list_html(entry, content, cite_counts)}</section>
 </div></div><footer class="wiki-entry-footer">本页面为公开正式知识条目；页面正文、来源与媒体由项目知识库维护。</footer>
 </article>
 </main>
