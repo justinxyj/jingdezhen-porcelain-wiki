@@ -1,0 +1,62 @@
+name: Editorial content release
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Preview rolls back; apply requires the reviewed preview SHA256
+        required: true
+        default: preview
+        type: choice
+        options: [preview, apply]
+      preview_sha256:
+        description: Exact SHA256 from the live preview receipt (apply only)
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: editorial-production-database
+  cancel-in-progress: false
+jobs:
+  editorial-release:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install database drivers
+        run: pip install 'psycopg[binary]' psycopg2-binary
+      - name: Validate release boundaries
+        run: python scripts/test_editorial_release.py
+      - name: Confirm configured connection
+        env:
+          H3_DB_URL: ${{ secrets.H3_DB_URL }}
+        run: |
+          if [ -z "${H3_DB_URL:-}" ]; then
+            echo 'BLOCKED: H3_DB_URL is not configured. No preview or writes performed.'
+            exit 2
+          fi
+      - name: Read-only catalog boundary check
+        env:
+          H3_DB_URL: ${{ secrets.H3_DB_URL }}
+        run: python scripts/h3_catalog_probe.py --assert -o /tmp/editorial-catalog.json
+      - name: Preview or apply exact reviewed release
+        env:
+          H3_DB_URL: ${{ secrets.H3_DB_URL }}
+          RELEASE_MODE: ${{ inputs.mode }}
+          PREVIEW_SHA256: ${{ inputs.preview_sha256 }}
+        run: |
+          if [ "$RELEASE_MODE" = 'apply' ]; then
+            python scripts/publish_editorial.py --apply --preview-sha256 "$PREVIEW_SHA256" --output /tmp/editorial-release
+          else
+            python scripts/publish_editorial.py --output /tmp/editorial-release
+          fi
+      - name: Preserve recovery backup, diff and receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: editorial-release-${{ github.run_id }}
+          path: /tmp/editorial-release/
+          if-no-files-found: ignore
+          retention-days: 30
