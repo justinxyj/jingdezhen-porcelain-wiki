@@ -1,8 +1,9 @@
-/* Phase 4D: 统一知识发现界面 — 一个索引，多条发现路径，一个统一知识条目出口。 */
+/* Phase 4D: 知识发现界面 — 一个索引，多条发现路径，一个知识条目出口。 */
 (function(){
   const ROOT='/jingdezhen-porcelain-wiki/';
   const SEARCH_URL=ROOT+'search/';
-  const esc=s=>String(s??'').replace(/[&<>\\"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\\"':'&quot;',"'":'&#39;'}[m]));
+  const esc=s=>window.JDM_SAFE.esc(s);
+  const legacyEsc=s=>String(s??'').replace(/[&<>\\"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\\"':'&quot;',"'":'&#39;'}[m]));
   const safeHref=(raw,opts)=>window.JDM_SAFE?.safeHref?.(raw,opts)??window.JDM_AUTH?.safeHref?.(raw,opts)??'';
   const plain=s=>{const d=document.createElement('div');d.innerHTML=String(s||'');return d.textContent||d.innerText||''};
   const entryUrl=e=>window.JDM_KNOWLEDGE?.url(e)||ROOT+'entry/?slug='+encodeURIComponent(e?.slug||'');
@@ -11,7 +12,8 @@
   const laneLabel=x=>({jdz:'景德镇',china:'中国其他窑业',world:'世界其他地区'}[x]||x);
   const categoryLabel=x=>({人物:'人物与传承',历史:'历史与发展',器物:'器物与美学',文献:'文献与研究',窑址:'窑址与城市空间'}[x]||x||'知识');
   const state={q:'',world:'',category:'',era:'',lane:'',hasMap:'',hasTimeline:''};
-  let runSeq=0,suggestTimer=0;
+  let runSeq=0,suggestTimer=0,offset=0,suggestSeq=0;
+  const highlight=value=>{const raw=String(value||''),q=state.q;if(!q)return esc(raw);return raw.split(q).map(esc).join('<mark>'+esc(q)+'</mark>')};
 
   function syncUrl(){
     const p=new URLSearchParams();
@@ -33,17 +35,14 @@
     const lanes=(e.discovery?.lanes||[]).slice(0,2).map(x=>'<span class="jdm-search-lane">'+esc(laneLabel(x))+'</span>').join('');
     const signals=[e.discovery?.hasMap?'有空间':null,e.discovery?.hasTimeline?'有时间轴':null].filter(Boolean).map(x=>'<span class="jdm-search-signal">'+esc(x)+'</span>').join('');
     const recs=(e.recommendations||[]).slice(0,3).map(r=>'<a href="'+(safeHref(entryUrl(r.entry))||'')+'">'+esc(r.entry.zh?.title||r.entry.slug)+'</a>').join('');
-    return '<article class="jdm-search-result"><div class="jdm-search-result-main"><div class="jdm-search-result-meta"><span>'+esc(categoryLabel(e.category))+'</span><div>'+(worlds||'')+eras+lanes+signals+'</div></div><h2><a href="'+(safeHref(entryUrl(e))||'')+'">'+esc(title)+'</a></h2><p>'+esc(summary||'打开知识条目，查看完整知识节点。')+'</p><div class="jdm-search-result-actions"><a class="jdm-search-open" href="'+(safeHref(entryUrl(e))||'')+'">打开知识条目 →</a><a href="'+ROOT+'network/relations/?node='+encodeURIComponent('entry:'+e.id)+'">关系网络 →</a><a href="'+ROOT+'network/global/?slug='+encodeURIComponent(e.slug)+'">全球网络 →</a></div></div>'+(recs?'<aside class="jdm-search-result-recs"><span>继续探索</span>'+recs+'</aside>':'')+'</article>';
+    const im=e.media?.[0];const image=im&&safeHref(im.path)?'<img class="visitor-result-image" src="'+safeHref(im.path)+'" alt="'+esc(im.title||title)+'" loading="lazy">':'';
+    return '<article class="jdm-search-result">'+image+'<div class="jdm-search-result-main"><div class="jdm-search-result-meta"><span>'+esc(categoryLabel(e.category))+'</span><div>'+(worlds||'')+eras+lanes+signals+'</div></div><h2><a href="'+(safeHref(entryUrl(e))||'')+'">'+highlight(title)+'</a></h2><p>'+highlight(summary||'打开条目阅读完整介绍。')+'</p><div class="jdm-search-result-actions"><a class="jdm-search-open" href="'+(safeHref(entryUrl(e))||'')+'">阅读全文 →</a><a href="'+ROOT+'network/relations/?node='+encodeURIComponent('entry:'+e.id)+'">关系网络 →</a><a href="'+ROOT+'network/global/?slug='+encodeURIComponent(e.slug)+'">全球网络 →</a></div></div>'+(recs?'<aside class="jdm-search-result-recs"><span>继续探索</span>'+recs+'</aside>':'')+'</article>';
   }
 
   function renderSuggestions(rows){
     const root=document.getElementById('jdm-search-suggestions');if(!root)return;
-    root.innerHTML=rows.slice(0,5).map(e=>'<button type="button" data-suggest-id="'+esc(e.id)+'"><span>'+esc(categoryLabel(e.category))+'</span><b>'+esc(e.zh?.title||e.slug)+'</b></button>').join('');
+    root.innerHTML=rows.slice(0,5).map(e=>'<a href="'+safeHref(entryUrl(e))+'"><span>'+esc(e.category||'条目')+'</span><b>'+esc(e.zh?.title||e.slug)+'</b></a>').join('');
     root.hidden=!rows.length;
-    root.querySelectorAll('[data-suggest-id]').forEach(b=>b.addEventListener('click',()=>{
-      const e=rows.find(x=>x.id===b.dataset.suggestId);
-      if(e){const input=document.getElementById('jdm-entry-search-input');if(input)input.value=e.zh?.title||e.slug;state.q=e.zh?.title||e.slug;syncUrl();run();}
-    }));
   }
 
   function selectedFilters(){
@@ -61,31 +60,36 @@
   async function suggest(q){
     const root=document.getElementById('jdm-search-suggestions');if(!root)return;
     if(!q){root.innerHTML='';root.hidden=true;return;}
-    try{renderSuggestions(await window.JDM_KNOWLEDGE.searchEntries(q,{limit:5,worldSlug:state.world||null,category:state.category||null,era:state.era||null}))}catch(e){root.innerHTML='';root.hidden=true;}
+    const seq=++suggestSeq;try{const rows=await window.JDM_KNOWLEDGE.searchEntries(q,{limit:5,worldSlug:state.world||null,category:state.category||null,era:state.era||null});if(seq===suggestSeq)renderSuggestions(rows)}catch(e){root.innerHTML='';root.hidden=true;}
   }
 
-  async function run(){
+  async function run(append=false){
+    if(!append)offset=0;
+    const more=document.getElementById("jdm-search-more");if(more)more.disabled=true;
     const seq=++runSeq;
     const status=document.getElementById('jdm-search-status'),results=document.getElementById('jdm-search-results'),count=document.getElementById('jdm-search-count');
     if(!status||!results)return;
     syncUrl();
     status.textContent='正在查找条目……';
-    results.innerHTML='<div class="jdm-search-loading">正在加载搜索结果……</div>';
+    if(!append)results.innerHTML='<div class="jdm-search-loading">正在加载搜索结果……</div>';
     try{
-      const data=await window.JDM_KNOWLEDGE.searchDiscoveryPage(state.q,{limit:12,recommendationLimit:3,worldSlug:state.world||null,category:state.category||null,era:state.era||null,lane:state.lane||null,hasMap:state.hasMap?state.hasMap==='true':null,hasTimeline:state.hasTimeline?state.hasTimeline==='true':null});
+      const data=await window.JDM_KNOWLEDGE.searchDiscoveryPage(state.q,{limit:12,offset,recommendationLimit:3,worldSlug:state.world||null,category:state.category||null,era:state.era||null,lane:state.lane||null,hasMap:state.hasMap?state.hasMap==='true':null,hasTimeline:state.hasTimeline?state.hasTimeline==='true':null});
       if(seq!==runSeq)return;
       if(count)count.textContent=String(data.total||0);
       const filters=selectedFilters();
       const filterText=Object.keys(filters).length?' · 已应用 '+Object.keys(filters).length+' 项筛选':'';
       status.textContent=state.q?(data.total?'找到 '+data.total+' 个相关知识条目'+filterText+'。':'没有找到直接匹配的知识条目，可以换一个更具体的名称或关闭筛选。'):'当前展示 '+data.total+' 个公开知识条目'+filterText+'。';
-      results.innerHTML=data.results.map(card).join('')||'<div class="jdm-search-empty">没有符合当前条件的知识条目。试试清除筛选。</div>';
+      const html=data.results.map(card).join('');
+      if(append)results.insertAdjacentHTML('beforeend',html);else results.innerHTML=html||'<div class="jdm-search-empty"><p>没有符合条件的条目。</p><button type="button" id="search-empty-clear">清除筛选</button><p>试试：<a href="?q=青花">青花</a> · <a href="?q=唐英">唐英</a> · <a href="?q=湖田">湖田窑</a></p></div>';
+      document.getElementById('search-empty-clear')?.addEventListener('click',clearFilters);
+      offset+=data.results.length;if(more)more.hidden=offset>=data.total;
       document.getElementById('jdm-search-suggestions')?.setAttribute('hidden','');
     }catch(error){
       const info=window.JDM_AUTH?.describeError?.(error)||{code:error?.code||error?.status||'NETWORK',message:'知识索引加载失败，请稍后重试。'};
       status.textContent=info.message;
-      results.innerHTML='<div class="jdm-search-error">'+esc(info.message)+'（'+esc(info.code)+'）</div>';
+      results.innerHTML='<div class="jdm-search-error" role="alert">搜索暂时不可用。<button id="search-retry" type="button">重试</button><details><summary>技术详情</summary>'+esc(info.code)+'</details></div>';document.getElementById('search-retry').onclick=()=>{window.JDM_KNOWLEDGE.reset();run()};
     }
-    setActiveButtons();
+    if(more)more.disabled=false;setActiveButtons();
   }
 
   function clearFilters(){
@@ -120,7 +124,7 @@
       if(el.dataset.searchSignal!==undefined){const key=el.dataset.searchSignal==='map'?'hasMap':'hasTimeline';state[key]=state[key]==='true'?'':'true';run();}
     });
     document.getElementById('jdm-search-clear')?.addEventListener('click',clearFilters);
-    document.addEventListener('keydown',e=>{if((e.key==='/'||e.key==='s')&&document.activeElement!==input&&!e.ctrlKey&&!e.metaKey){e.preventDefault();input?.focus();}});
+    document.getElementById('jdm-search-more')?.addEventListener('click',()=>run(true));
     setActiveButtons();
     run();
   }

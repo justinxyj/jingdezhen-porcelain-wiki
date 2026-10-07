@@ -190,10 +190,14 @@
     return raw;
   }
 
+  // Deliberately small, documented vocabulary; unknown queries are never guessed.
+  const searchAliases={qinghua:'青花',qinghuaci:'青花',tangying:'唐英',hutian:'湖田',hutiankiln:'湖田',yuyaochang:'御窑',fencai:'粉彩',jingdezhen:'景德镇','青花瓷':'青花','御窑厂':'御窑'};
+  const traditional={'窯':'窑','廠':'厂','瓷':'瓷','鎮':'镇','龍':'龙','紋':'纹','紅':'红','藍':'蓝','藝':'艺','歷':'历','釉':'釉','蓮':'莲','鳳':'凤','雞':'鸡','缸':'缸','國':'国','雲':'云','嬰':'婴','戲':'戏','風':'风','書':'书','傳':'传','統':'统','萬':'万','曆':'历','乾':'乾'};
+  function normalizeSearch(value){const text=String(value||'').normalize('NFKC').toLowerCase().replace(/[窯廠鎮龍紋紅藍藝歷蓮鳳雞國雲嬰戲風書傳統萬曆]/g,c=>traditional[c]||c).trim();return searchAliases[text.replace(/[\s'-]/g,'')]||text;}
   async function searchEntries(term,{limit=20,category=null,worldSlug=null,era=null,lane=null,hasMap=null,hasTimeline=null}={}) {
-    const q=String(term||'').trim().toLowerCase();
+    const q=normalizeSearch(term);
     if(!searchIndexPromise){
-      searchIndexPromise=query((db,s)=>db.from('entries').select('id,slug,category,zh,en,ja,sources,status,version,updated_at').eq('status','published').order('id',{ascending:true}).abortSignal(s));
+      searchIndexPromise=paged(db=>db.from('entries').select('id,slug,category,zh,en,ja,sources,status,version,updated_at').eq('status','published').order('id',{ascending:true})).catch(error=>{searchIndexPromise=null;throw error});
     }
     const rows=await searchIndexPromise;
     let candidates=rows;
@@ -208,7 +212,7 @@
       candidates=candidates.filter(e=>allowed.has(e.id));
     }
     const scored=candidates.map(e=>{
-      const title=String(e.zh?.title||'').toLowerCase();
+      const title=normalizeSearch(e.zh?.title);
       const summary=String(e.zh?.summary||'').toLowerCase();
       const content=String(e.zh?.content||'').toLowerCase();
       const slug=String(e.slug||'').toLowerCase();
@@ -228,10 +232,10 @@
       return {...e,_searchScore:score};
     });
     scored.sort((a,b)=>b._searchScore-a._searchScore||String(a.zh?.title||'').localeCompare(String(b.zh?.title||''),'zh-Hans-CN'));
-    return scored.slice(0,Math.max(1,Math.min(250,Number(limit)||20))).map(({_searchScore,...e})=>e);
+    return scored.filter(e=>e._searchScore>0).slice(0,Math.max(1,Math.min(2000,Number(limit)||20))).map(({_searchScore,...e})=>e);
   }
-  async function searchDiscoveryPage(term,{limit=12,recommendationLimit=3,category=null,worldSlug=null,era=null,lane=null,hasMap=null,hasTimeline=null}={}) {
-    const entries=await searchEntries(term,{limit:250,category,worldSlug,era,lane,hasMap,hasTimeline});
+  async function searchDiscoveryPage(term,{limit=12,offset=0,recommendationLimit=3,category=null,worldSlug=null,era=null,lane=null,hasMap=null,hasTimeline=null}={}) {
+    const entries=await searchEntries(term,{limit:2000,category,worldSlug,era,lane,hasMap,hasTimeline});
     if(!entries.length)return {results:[],total:0,facets:{categories:[],eras:[],lanes:[]}};
     const ids=entries.map(e=>e.id);
     const [links,worldRows]=await Promise.all([
@@ -254,7 +258,8 @@
       mapped:entries.filter(e=>e.zh?.meta?.map?.lat!=null&&e.zh?.meta?.map?.lng!=null).length,
       timed:entries.filter(e=>Array.isArray(e.zh?.meta?.timeline)&&e.zh.meta.timeline.length).length
     };
-    const visibleEntries=entries.slice(0,Math.max(1,Math.min(24,Number(limit)||12)));
+    const visibleEntries=entries.slice(Math.max(0,offset),Math.max(0,offset)+Math.max(1,Math.min(24,Number(limit)||12)));
+    const mediaRows=await query((db,s)=>db.from('media_public').select('id,entry_id,path,title,source,license,is_primary,source_tier').in('entry_id',visibleEntries.map(e=>e.id)).abortSignal(s)).catch(()=>[]);
     const sourceNodeIds=visibleEntries.map(e=>'entry:'+e.id);
     const recommendationRows=sourceNodeIds.length?await query((db,s)=>db.from('knowledge_recommendations').select('source_node_id,target_node_id,target_label,target_category,edge_type,reason,weight').in('source_node_id',sourceNodeIds).order('weight',{ascending:false}).order('target_label',{ascending:true}).limit(Math.max(1,visibleEntries.length*Math.min(5,Math.max(1,Number(recommendationLimit)||3)))).abortSignal(s)):[];
     const targetIds=[...new Set(recommendationRows.map(r=>String(r.target_node_id||'').replace(/^entry:/,'')).filter(Boolean))];
@@ -262,7 +267,7 @@
     const targetById=new Map((targetEntries||[]).map(e=>[e.id,e]));
     const recBySource=new Map();
     recommendationRows.forEach(r=>{const target=targetById.get(String(r.target_node_id||'').replace(/^entry:/,''));if(!target)return;if(!recBySource.has(r.source_node_id))recBySource.set(r.source_node_id,[]);if(recBySource.get(r.source_node_id).length<Math.max(1,Math.min(5,Number(recommendationLimit)||3)))recBySource.get(r.source_node_id).push({...r,entry:target})});
-    const results=visibleEntries.map(e=>({...e,worlds:worldByEntry.get(e.id)||[],recommendations:recBySource.get('entry:'+e.id)||[],discovery:{score:0,hasMap:Boolean(e.zh?.meta?.map?.lat!=null&&e.zh.meta.map.lng!=null),hasTimeline:Boolean(Array.isArray(e.zh?.meta?.timeline)&&e.zh.meta.timeline.length),eras:[...new Set(((e.zh?.meta?.timeline||[]).map(x=>eraGroupFor(e,x)).filter(Boolean).length?((e.zh?.meta?.timeline||[]).map(x=>eraGroupFor(e,x)).filter(Boolean)):[eraGroupFor(e)]).filter(Boolean))],lanes:[...new Set((e.zh?.meta?.timeline||[]).map(x=>x?.lane).filter(Boolean))]}}));
+    const results=visibleEntries.map(e=>({...e,media:canonicalMedia(mediaRows.filter(m=>m.entry_id===e.id)),worlds:worldByEntry.get(e.id)||[],recommendations:recBySource.get('entry:'+e.id)||[],discovery:{score:0,hasMap:Boolean(e.zh?.meta?.map?.lat!=null&&e.zh.meta.map.lng!=null),hasTimeline:Boolean(Array.isArray(e.zh?.meta?.timeline)&&e.zh.meta.timeline.length),eras:[...new Set(((e.zh?.meta?.timeline||[]).map(x=>eraGroupFor(e,x)).filter(Boolean).length?((e.zh?.meta?.timeline||[]).map(x=>eraGroupFor(e,x)).filter(Boolean)):[eraGroupFor(e)]).filter(Boolean))],lanes:[...new Set((e.zh?.meta?.timeline||[]).map(x=>x?.lane).filter(Boolean))]}}));
     return {results,total:entries.length,facets};
   }
   async function searchDiscovery(term,options={}) {

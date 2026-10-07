@@ -25,3 +25,6 @@ node_modules/
 
 # Internal process notes (keep out of the repo)
 .ai/
+
+__pycache__/
+*.pyc
