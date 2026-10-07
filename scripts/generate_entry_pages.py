@@ -269,7 +269,7 @@ def entry_html(entry: dict, world_by_entry: dict[str, list[dict]],
     body_html = clean_body_html(content, intro) if content.strip() else f"<p>{html.escape(intro)}</p>"
     media = first_media(media_by_entry, entry["id"])
     worlds = world_by_entry.get(entry["id"], [])
-    relations = relations_by_entry.get(entry["id"], [])[:12]
+    relations = relations_by_entry.get(entry["id"], [])[:24]
     meta = zh.get("meta") or {}
     tags = [str(x) for x in [meta.get("period"), meta.get("era"), meta.get("role"), meta.get("location"), meta.get("region"), meta.get("craft")] if x]
     tags = list(dict.fromkeys(tags))[:6]
@@ -292,12 +292,21 @@ def entry_html(entry: dict, world_by_entry: dict[str, list[dict]],
         f'{html.escape(str(w.get("title") or w.get("world_slug") or "Knowledge World"))} →</a>'
         for w in worlds
     )
+    relation_labels = {"person":"相关人物", "object":"相关器物", "craft":"相关工艺", "kiln":"相关窑址", "period":"时代背景", "related":"相关条目"}
     relation_html = "".join(
-        f'<li><a href="{SITE_URL}entry/?slug={quote(str(r.get("target_slug") or ""))}">'
-        f'<b>{html.escape(str(r.get("target_title") or ""))}</b>'
-        f'<span>{html.escape(str(r.get("relation_type") or "关联"))}</span></a></li>'
-        for r in relations if r.get("target_slug")
+        f'<li><a href="{SITE_URL}entry/{quote(str(rel.get("target_slug") or ""))}/">'
+        f'<span>{html.escape(str(rel.get("target_category") or "相关条目"))} · {html.escape(relation_labels.get(str(rel.get("relation_type")), str(rel.get("relation_type") or "关联")))}</span>'
+        f'<b>{html.escape(str(rel.get("target_title") or ""))}</b>'
+        f'<small>{html.escape(str(rel.get("note") or "阅读条目，核对具体关系与出处"))}</small></a></li>'
+        for rel in relations if rel.get("target_slug")
     )
+    paths = json.loads((DOCS / "data/reading-paths.json").read_text(encoding="utf-8")).get(slug, [])
+    reading_html = "".join(
+        f'<a href="{SITE_URL}{html.escape(item["path"],quote=True)}"><b>{html.escape(item["title"])}</b><p>{html.escape(item["description"])}</p></a>'
+        for item in paths
+    )
+    reading_html = f'<section class="visitor-reading-path"><h2>延伸阅读</h2><p>编辑选读：补充理解当前主题的背景。</p><div class="visitor-grid">{reading_html}</div></section>' if reading_html else ""
+
 
 
     schema = {
@@ -379,6 +388,7 @@ main{{max-width:1240px;margin:0 auto;padding:24px 24px 72px}}
 {f'<div class="wiki-entry-world-path"><span>相关阅读主题</span><div>{world_html}</div></div>' if world_html else ""}
 <div class="wiki-entry-v2-grid"><div class="wiki-entry-v2-main"><section class="wiki-entry-body"><h2>详细介绍</h2>{body_html}</section>
 {f'<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">知识关系</div><h2>它与哪些知识相连</h2><ul class="wiki-entry-v2-relations">{relation_html}</ul></section>' if relations else ""}
+{reading_html}
 <section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">来源</div><h2>来源与外部资料</h2>{source_list_html(entry, content)}</section>
 <details class="visitor-research"><summary>深入研究</summary><p><a href="{SITE_URL}network/relations/?node=entry:{entry['id']}">关系图</a> · <a href="{SITE_URL}research/">研究方法</a></p></details><p class="visitor-feedback"><a href="https://github.com/justinxyj/jingdezhen-porcelain-wiki/issues/new?title={quote('条目反馈：'+title)}">发现错误？反馈此条目 →</a></p><p><a href="{SITE_URL}search/?category={quote(str(entry.get('category') or ''))}">继续阅读同类条目 →</a></p>
 </div></div><footer class="wiki-entry-footer">本页面为公开正式知识条目；页面正文、来源与媒体由项目知识库维护。</footer>
@@ -465,11 +475,11 @@ def main() -> None:
         if not a or not b:
             continue
         relations_by_entry.setdefault(a["id"], []).append({
-            "target_slug": b["slug"], "target_title": (b.get("zh") or {}).get("title") or b["slug"],
+            "target_category": b.get("category"), "note": row.get("note"), "target_slug": b["slug"], "target_title": (b.get("zh") or {}).get("title") or b["slug"],
             "relation_type": row.get("relation_type") or "关联",
         })
         relations_by_entry.setdefault(b["id"], []).append({
-            "target_slug": a["slug"], "target_title": (a.get("zh") or {}).get("title") or a["slug"],
+            "target_category": a.get("category"), "note": row.get("note"), "target_slug": a["slug"], "target_title": (a.get("zh") or {}).get("title") or a["slug"],
             "relation_type": row.get("relation_type") or "关联",
         })
 

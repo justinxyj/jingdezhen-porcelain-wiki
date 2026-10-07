@@ -29,7 +29,7 @@
 | 釉上彩 | 彩料、渲染与彩烧怎样关联 | [粉彩](fencai.md) |
 | 釉色 | 配方和气氛怎样影响表面效果 | [颜色釉](colored-glaze.md) |
 
-<section class="jdm-world-browser" data-world-browser="craft" aria-label="知识世界条目"></section>
+<section class="jdm-world-browser" data-world-browser="craft" aria-label="本主题条目"></section>
 
 ## 资料来源
 

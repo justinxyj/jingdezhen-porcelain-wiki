@@ -22,7 +22,7 @@
 
 核对姓名与异名、生卒或活动年代、所属机构、可确认作品和资料出处。师承关系、合作关系和作品归属分别记录；口述回忆保留访谈者、时间和语境。涉及在世人物时，使用可核实的公开职业资料，避免未经证实的荣誉或传记细节。
 
-<section class="jdm-world-browser" data-world-browser="people" aria-label="知识世界条目"></section>
+<section class="jdm-world-browser" data-world-browser="people" aria-label="本主题条目"></section>
 
 ## 从学校、研究所到创作现场
 

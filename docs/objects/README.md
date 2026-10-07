@@ -22,7 +22,7 @@
 
 继续进入[器物图谱](../museum/catalog.md)、[纹饰与题材](../aesthetics/patterns.md)、[釉色与装饰](../aesthetics/glazes-and-decoration.md)和[多机构资料目录](../research/museum-sources.md)。
 
-<section class="jdm-world-browser" data-world-browser="objects" aria-label="知识世界条目"></section>
+<section class="jdm-world-browser" data-world-browser="objects" aria-label="本主题条目"></section>
 
 ## 资料来源
 

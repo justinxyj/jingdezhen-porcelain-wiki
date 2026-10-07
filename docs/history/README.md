@@ -33,7 +33,7 @@
 - [明清：御窑、民窑与彩瓷](ming-qing.md)
 - [近现代：企业、教育与生产转型](modern.md)
 
-<section class="jdm-world-browser" data-world-browser="history" aria-label="知识世界条目"></section>
+<section class="jdm-world-browser" data-world-browser="history" aria-label="本主题条目"></section>
 
 ## 资料来源
 

@@ -1,4 +1,8 @@
 (function(){
+  /** @type {Record<string,string>} */
+  const relationLabels={person:'相关人物',object:'相关器物',craft:'相关工艺',kiln:'相关窑址',period:'时代背景',related:'相关条目'};
+  /** @param {string} value */
+  const relationLabel=value=>relationLabels[value]||value;
   const CORE_TYPES=new Set(['entry','world']);
   const TYPE_LABELS={entry:'知识条目',world:'主题'};
   const TYPE_ORDER=['历史','工艺','器物','窑址','人物','文献','现代'];
@@ -94,7 +98,7 @@
     function draw(){
       const vnodes=visibleNodes();
       const vedges=relevantEdges(vnodes);
-      if(!document.getElementById('network-graph-toggle')?.open){setStatus('可探索 '+vnodes.length+' 个条目与主题');renderList(vnodes);return;}
+      if(!document.getElementById('network-graph-toggle')?.hasAttribute('open')){setStatus('可探索 '+vnodes.length+' 个条目与主题');renderList(vnodes);return;}
       const pos=layout(vnodes);
       svg.innerHTML='';
       const ns='http://www.w3.org/2000/svg';
@@ -153,7 +157,7 @@
         <div class="network-detail-meta"><span>${links.length} 条已建立关系</span></div>
         ${url?`<a class="network-detail-entry" href="${safeHref(url)||''}">进入知识条目 →</a>`:''}
         <div class="network-neighbor-title">继续探索</div>
-        <div class="network-neighbor-list">${direct.length?direct.map(x=>`<button type="button" data-node="${esc(x.node.node_id)}"><span>${esc(String(x.edge.edge_type||'相关').replace(/^entry_relation:/,'').replace(/^world_.*/, '所属主题'))} · ${esc(nodeCategory(x.node)||'主题')}</span><b>${esc(label(x.node))}</b></button>`).join(''):'<div class="network-no-neighbor">当前节点暂无可展示的核心邻接节点。</div>'}</div>`;
+        <div class="network-neighbor-list">${direct.length?direct.map(x=>`<button type="button" data-node="${esc(x.node.node_id)}"><span>${esc(relationLabel(String(x?.edge.edge_type||'相关').replace(/^entry_relation:/,'').replace(/^world_.*/, '所属主题')))} · ${esc(nodeCategory(x.node)||'主题')}</span><b>${esc(label(x.node))}</b></button>`).join(''):'<div class="network-no-neighbor">当前节点暂无可展示的核心邻接节点。</div>'}</div>`;
       detail.querySelectorAll('[data-node]').forEach(b=>b.addEventListener('click',()=>selectNode(b.dataset.node)));
       draw();
     }
@@ -180,7 +184,7 @@
       if(first)selectNode(first.node_id);
     }catch(error){
       console.error('[JDM network explorer]',error);
-      setStatus('知识网络暂时无法加载，请稍后重试。','error');
+      setStatus('关联内容暂时无法加载，下方专题仍可阅读。','error');const retry=document.createElement('button');retry.textContent='重试';retry.type='button';retry.onclick=()=>location.reload();status.append(retry);
       detail.innerHTML='<div class="network-empty"><span>连接暂时不可用</span><h3>暂时无法加载</h3><p>其他知识页面不受影响。</p></div>';
     }
   };

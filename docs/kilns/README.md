@@ -26,7 +26,7 @@
 - [当代产业空间](contemporary-ceramic-districts.md)：现行用途与城市更新。
 - [全球窑址地图](../museum/kiln-map.md)：跨地域定位和比较。
 
-<section class="jdm-world-browser" data-world-browser="space" aria-label="知识世界条目"></section>
+<section class="jdm-world-browser" data-world-browser="space" aria-label="本主题条目"></section>
 
 ## 比较窑口时怎样处理年代争论
 

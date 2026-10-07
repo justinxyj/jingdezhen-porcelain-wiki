@@ -191,8 +191,11 @@
   }
 
   // Deliberately small, documented vocabulary; unknown queries are never guessed.
+  /** @type {Record<string,string>} */
   const searchAliases={qinghua:'青花',qinghuaci:'青花',tangying:'唐英',hutian:'湖田',hutiankiln:'湖田',yuyaochang:'御窑',fencai:'粉彩',jingdezhen:'景德镇','青花瓷':'青花','御窑厂':'御窑'};
+  /** @type {Record<string,string>} */
   const traditional={'窯':'窑','廠':'厂','瓷':'瓷','鎮':'镇','龍':'龙','紋':'纹','紅':'红','藍':'蓝','藝':'艺','歷':'历','釉':'釉','蓮':'莲','鳳':'凤','雞':'鸡','缸':'缸','國':'国','雲':'云','嬰':'婴','戲':'戏','風':'风','書':'书','傳':'传','統':'统','萬':'万','曆':'历','乾':'乾'};
+  /** @param {unknown} value */
   function normalizeSearch(value){const text=String(value||'').normalize('NFKC').toLowerCase().replace(/[窯廠鎮龍紋紅藍藝歷蓮鳳雞國雲嬰戲風書傳統萬曆]/g,c=>traditional[c]||c).trim();return searchAliases[text.replace(/[\s'-]/g,'')]||text;}
   async function searchEntries(term,{limit=20,category=null,worldSlug=null,era=null,lane=null,hasMap=null,hasTimeline=null}={}) {
     const q=normalizeSearch(term);

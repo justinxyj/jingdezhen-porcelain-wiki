@@ -4,7 +4,7 @@
   const base = new URL('../', script.src);
   const root = base.pathname;
   const safe = window.JDM_SAFE;
-  let dataPromise;
+  let dataPromise, dialogCount=0;
   function loadData() {
     if (window.JDM_KNOWLEDGE) return Promise.resolve(window.JDM_KNOWLEDGE);
     if (!dataPromise) dataPromise = (async () => {
@@ -24,11 +24,12 @@
   function dialog(title) {
     const previous = document.activeElement;
     const node = document.createElement('dialog'); node.className = 'visitor-dialog';
-    const heading = document.createElement('h2'); heading.id = 'visitor-dialog-title'; heading.textContent = title;
+    const heading = document.createElement('h2'); heading.id = 'visitor-dialog-title-'+(++dialogCount); heading.textContent = title;
     node.setAttribute('aria-labelledby', heading.id);
     const close = document.createElement('button'); close.type = 'button'; close.className = 'visitor-close'; close.textContent = '关闭';
     close.addEventListener('click', () => node.close()); node.append(close, heading);
     node.addEventListener('click', event => { if (event.target === node) { const rect = node.getBoundingClientRect(); if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) node.close(); } });
+    node.addEventListener('keydown', event => { if(event.key==='Escape'){event.preventDefault();event.stopPropagation();node.close();} });
     node.addEventListener('close', () => { node.remove(); previous?.focus?.(); }, { once: true });
     document.body.append(node);
     return node;

@@ -46,4 +46,4 @@
 - [考古资料](archaeology.md)
 - [研究导览](research-hub.md)
 
-<section class="jdm-world-browser" data-world-browser="research" aria-label="知识世界条目"></section>
+<section class="jdm-world-browser" data-world-browser="research" aria-label="本主题条目"></section>

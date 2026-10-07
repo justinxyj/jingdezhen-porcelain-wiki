@@ -57,4 +57,4 @@
 </style>
 
 
-<section class="jdm-world-browser" data-world-browser="contemporary" aria-label="知识世界条目"></section>
+<section class="jdm-world-browser" data-world-browser="contemporary" aria-label="本主题条目"></section>

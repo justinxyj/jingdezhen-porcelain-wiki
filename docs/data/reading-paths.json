@@ -1,0 +1,24 @@
+{
+  "blue-and-white": [
+    {
+      "title": "元代青花的发展",
+      "path": "entry/yuan-blue-white/",
+      "description": "接着阅读元代景德镇青花的历史背景。",
+      "basis": "craft/qinghua/"
+    },
+    {
+      "title": "元青花折枝花纹八棱瓶",
+      "path": "entry/yuan-blue-and-white-vase/",
+      "description": "以具体器物观察器形和青花装饰；断代与归属以条目来源为准。",
+      "basis": "craft/qinghua/"
+    }
+  ],
+  "hutian-kiln": [
+    {
+      "title": "青白瓷：器物与工艺",
+      "path": "entry/qingbai-porcelain/",
+      "description": "了解湖田窑研究中的重要产品类别；不把所有青白瓷都归为湖田窑出土。",
+      "basis": "kilns/hutian-kiln/"
+    }
+  ]
+}

@@ -30,7 +30,7 @@
       const button=[...root.querySelectorAll('[data-slug]')].find(b=>b.dataset.slug===e.slug);
       if(fromMarker)button?.scrollIntoView({block:'nearest',behavior:'auto'});
       if(map&&!fromMarker){const m=e.zh.meta.map;map.setView([m.lat,m.lng],Math.max(map.getZoom(),12),{animate:false});}
-      open(e);
+      button?.focus({preventScroll:true});open(e);
     }
     function open(e){
       const ui=window.JDM_VISITOR;if(!ui){location.href=window.JDM_KNOWLEDGE.url(e);return;}

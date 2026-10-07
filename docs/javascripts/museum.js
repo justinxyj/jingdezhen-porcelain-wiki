@@ -25,14 +25,15 @@
     const filtered=items.filter(x=>{
       const e=x.entry,m=meta(e),hay=JSON.stringify(e.zh||'').toLowerCase();
       const timeline=x.timeline||[];
-      const eraOk=!era||timeline.some(t=>window.JDM_KNOWLEDGE?.eraGroup?.(e,t)===era||t?.era===era);
-      const craftText=String(x.craft||m.craft||'').toLowerCase();
+      const eraOk=!era||(timeline.some(t=>window.JDM_KNOWLEDGE?.eraGroup?.(e,t)===era||t?.era===era)||window.JDM_KNOWLEDGE?.eraGroup?.(e)===era);
+      const craftText=[x.craft,m.craft,e.zh?.title].filter(Boolean).join(' ').toLowerCase();
       const craftOk=!craft||craftText.includes(craft.toLowerCase())||x.craftProcesses?.some(p=>String(p.label||'').toLowerCase().includes(craft.toLowerCase()));
-      const typeText=String(m.kind||m.type||e.category||'').toLowerCase();
+      const typeText=[m.form,m.type,m.shape,e.zh?.title].filter(Boolean).join(' ').toLowerCase();
       const typeOk=!type||typeText.includes(type.toLowerCase());
       return (!q||hay.includes(q))&&eraOk&&craftOk&&typeOk;
     });
     const count=document.getElementById('catalog-count');if(count)count.textContent='显示 '+filtered.length+' / '+items.length+' 件器物';
+    filtered.sort((a,b)=>Number(Boolean(b.entry.media?.length))-Number(Boolean(a.entry.media?.length)));
     root.innerHTML=filtered.map(x=>{
       const e=x.entry,im=e.media?.[0],m=meta(e),world=(x.worlds||[])[0],era=(x.timeline||[]).map(t=>window.JDM_KNOWLEDGE?.eraGroup?.(e,t)||t?.era).filter(Boolean)[0];
       const people=relationLinks(x.people,'人物'),kilns=relationLinks(x.kilns,'窑址'),docs=relationLinks(x.documents,'文献');
@@ -85,7 +86,7 @@
         '<div class="person-card-body">'+
         '<div class="person-card-tags">'+(x.era?'<span class="tag">'+esc(eraLabel(x.era))+'</span>':'')+(x.worlds?.[0]?'<span class="tag">'+esc(x.worlds[0].short_title||x.worlds[0].title)+'</span>':'')+'</div>'+
         '<h3>'+(entryH?'<a href="'+entryH+'">'+esc(e.zh?.title||'未命名人物')+'</a>':esc(e.zh?.title||'未命名人物'))+'</h3>'+
-        (x.role?'<strong>'+esc(x.role)+'</strong>':'')+
+        (x.role?'<strong>'+esc(x.role)+'</strong>':'')+(m.lifespan||m.birth_year||m.death_year?'<p class="visitor-person-dates">'+esc(m.lifespan||[m.birth_year,m.death_year].filter(Boolean).join('—'))+'</p>':'')+
         '<p>'+esc(text(e).slice(0,180))+'</p>'+
         (craft?'<div class="person-knowledge-row"><b>工艺</b>'+craft+'</div>':'')+
         (works?'<div class="person-knowledge-row"><b>作品</b>'+works+'</div>':'')+

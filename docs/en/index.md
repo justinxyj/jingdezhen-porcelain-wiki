@@ -1,5 +1,6 @@
 # Jingdezhen Porcelain: A Digital Museum
 
+**Beta · This is a short English guide. Most articles are currently available in Chinese.**
 Explore Jingdezhen ceramics through objects, materials, kiln sites and the people who made, used and studied them. The site brings historical production, court and civilian wares, contemporary practice and documentary evidence into the same reading space.
 
 ## Start with an object

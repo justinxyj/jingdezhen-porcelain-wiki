@@ -12,7 +12,6 @@ theme:
   name: material
   language: zh
   features:
-  - navigation.tabs
   - navigation.sections
   - navigation.top
   - navigation.tracking
@@ -45,7 +44,6 @@ extra_css:
 - stylesheets/site-interactions.css
 - stylesheets/evidence-hub.css
 - stylesheets/global-kiln-map.css
-- stylesheets/homepage-apple.css
 - stylesheets/museum-apple.css
 - stylesheets/curator.css
 - stylesheets/people.css

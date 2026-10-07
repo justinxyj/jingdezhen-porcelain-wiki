@@ -7,8 +7,8 @@ hide:
   <div class="jdm-search-hero">
     <div>
       <div class="eyebrow">景德镇陶瓷 · 站内搜索</div>
-      <h1>查找器物、人物、地点与资料。</h1>
-      <p>输入名称、工艺、人物或地点，按主题和时代筛选。打开结果后可阅读正文、查看来源，并继续查阅相关器物与研究。</p>
+      <h1>搜索景德镇陶瓷</h1>
+      <p>搜索器物、人物、窑址与工艺，阅读正文并查阅来源。</p>
     </div>
     <div class="jdm-search-hero-stats"><span><b id="jdm-search-count">—</b><small>当前匹配</small></span></div>
   </div>

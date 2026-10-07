@@ -1,4 +1,8 @@
 {% extends "base.html" %}
+{% block header %}
+{{ super() }}
+<nav class="visitor-primary-nav" aria-label="主导航"><a href="{{ '' | url }}">首页</a><a href="{{ 'history/' | url }}">百科</a><a href="{{ 'museum/' | url }}">博物馆</a><a href="{{ 'museum/kiln-map/' | url }}">地图与时间</a><a href="{{ 'research/' | url }}">研究</a><a href="{{ 'search/' | url }}">搜索</a></nav>
+{% endblock %}
 {% block content %}
 {% if page and not page.is_homepage %}<nav class="visitor-breadcrumb" aria-label="面包屑"><a href="{{ '' | url }}">首页</a>{% for ancestor in page.ancestors | reverse %}<span aria-hidden="true"> / </span><span>{{ ancestor.title }}</span>{% endfor %}<span aria-hidden="true"> / </span><span aria-current="page">{{ page.title }}</span></nav>{% endif %}
 {{ super() }}

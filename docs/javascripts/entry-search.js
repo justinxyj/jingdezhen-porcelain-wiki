@@ -2,8 +2,8 @@
 (function(){
   const ROOT='/jingdezhen-porcelain-wiki/';
   const SEARCH_URL=ROOT+'search/';
-  const esc=s=>window.JDM_SAFE.esc(s);
-  const legacyEsc=s=>String(s??'').replace(/[&<>\\"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\\"':'&quot;',"'":'&#39;'}[m]));
+  /** @param {unknown} value */
+  const esc=value=>window.JDM_SAFE?.esc(value)??String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]||c));
   const safeHref=(raw,opts)=>window.JDM_SAFE?.safeHref?.(raw,opts)??window.JDM_AUTH?.safeHref?.(raw,opts)??'';
   const plain=s=>{const d=document.createElement('div');d.innerHTML=String(s||'');return d.textContent||d.innerText||''};
   const entryUrl=e=>window.JDM_KNOWLEDGE?.url(e)||ROOT+'entry/?slug='+encodeURIComponent(e?.slug||'');
@@ -13,6 +13,7 @@
   const categoryLabel=x=>({人物:'人物与传承',历史:'历史与发展',器物:'器物与美学',文献:'文献与研究',窑址:'窑址与城市空间'}[x]||x||'知识');
   const state={q:'',world:'',category:'',era:'',lane:'',hasMap:'',hasTimeline:''};
   let runSeq=0,suggestTimer=0,offset=0,suggestSeq=0;
+  /** @param {unknown} value */
   const highlight=value=>{const raw=String(value||''),q=state.q;if(!q)return esc(raw);return raw.split(q).map(esc).join('<mark>'+esc(q)+'</mark>')};
 
   function syncUrl(){
@@ -59,13 +60,13 @@
 
   async function suggest(q){
     const root=document.getElementById('jdm-search-suggestions');if(!root)return;
-    if(!q){root.innerHTML='';root.hidden=true;return;}
+    if(!q){++suggestSeq;root.innerHTML='';root.hidden=true;return;}
     const seq=++suggestSeq;try{const rows=await window.JDM_KNOWLEDGE.searchEntries(q,{limit:5,worldSlug:state.world||null,category:state.category||null,era:state.era||null});if(seq===suggestSeq)renderSuggestions(rows)}catch(e){root.innerHTML='';root.hidden=true;}
   }
 
   async function run(append=false){
     if(!append)offset=0;
-    const more=document.getElementById("jdm-search-more");if(more)more.disabled=true;
+    const more=/** @type {HTMLButtonElement|null} */ (document.getElementById("jdm-search-more"));if(more)more.disabled=true;
     const seq=++runSeq;
     const status=document.getElementById('jdm-search-status'),results=document.getElementById('jdm-search-results'),count=document.getElementById('jdm-search-count');
     if(!status||!results)return;
@@ -73,7 +74,7 @@
     status.textContent='正在查找条目……';
     if(!append)results.innerHTML='<div class="jdm-search-loading">正在加载搜索结果……</div>';
     try{
-      const data=await window.JDM_KNOWLEDGE.searchDiscoveryPage(state.q,{limit:12,offset,recommendationLimit:3,worldSlug:state.world||null,category:state.category||null,era:state.era||null,lane:state.lane||null,hasMap:state.hasMap?state.hasMap==='true':null,hasTimeline:state.hasTimeline?state.hasTimeline==='true':null});
+      const data=/** @type {{total:number,results:unknown[]}} */ (await window.JDM_KNOWLEDGE.searchDiscoveryPage(state.q,{limit:12,offset,recommendationLimit:3,worldSlug:state.world||null,category:state.category||null,era:state.era||null,lane:state.lane||null,hasMap:state.hasMap?state.hasMap==='true':null,hasTimeline:state.hasTimeline?state.hasTimeline==='true':null}));
       if(seq!==runSeq)return;
       if(count)count.textContent=String(data.total||0);
       const filters=selectedFilters();
@@ -87,7 +88,7 @@
     }catch(error){
       const info=window.JDM_AUTH?.describeError?.(error)||{code:error?.code||error?.status||'NETWORK',message:'知识索引加载失败，请稍后重试。'};
       status.textContent=info.message;
-      results.innerHTML='<div class="jdm-search-error" role="alert">搜索暂时不可用。<button id="search-retry" type="button">重试</button><details><summary>技术详情</summary>'+esc(info.code)+'</details></div>';document.getElementById('search-retry').onclick=()=>{window.JDM_KNOWLEDGE.reset();run()};
+      results.innerHTML='<div class="jdm-search-error" role="alert">搜索暂时不可用。<button id="search-retry" type="button">重试</button><details><summary>技术详情</summary>'+esc(info.code)+'</details></div>';document.getElementById('search-retry')?.addEventListener('click',()=>{window.JDM_KNOWLEDGE?.reset();run()});
     }
     if(more)more.disabled=false;setActiveButtons();
   }
