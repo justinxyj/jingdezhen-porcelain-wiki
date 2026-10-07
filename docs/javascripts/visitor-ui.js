@@ -91,12 +91,19 @@
   function init() {
     const host = document.querySelector('.md-header__inner') || document.querySelector('.wiki-chrome');
     if (host) { const button = document.createElement('button'); button.className = 'visitor-search-trigger'; button.type = 'button'; button.textContent = '搜索'; button.setAttribute('aria-label', '搜索（Ctrl 或 Command 加 K）'); button.addEventListener('click', openSearch); host.append(button); }
-    const menu=document.querySelector('.md-header [for="__drawer"]'),drawer=document.getElementById('__drawer'),navigation=document.querySelector('.md-sidebar--primary');
+    const menu=(()=>{
+      const label=document.querySelector('.md-header [for="__drawer"]');
+      if(!(label instanceof HTMLLabelElement))return label;
+      const button=document.createElement('button');button.type='button';
+      for(const attr of label.attributes)button.setAttribute(attr.name,attr.value);
+      button.append(...label.childNodes);label.replaceWith(button);return button;
+    })(),drawer=document.getElementById('__drawer'),navigation=document.querySelector('.md-sidebar--primary');
     if(menu instanceof HTMLElement&&drawer instanceof HTMLInputElement&&navigation instanceof HTMLElement){
-      navigation.id=navigation.id||'visitor-mobile-navigation';menu.tabIndex=0;menu.setAttribute('role','button');menu.setAttribute('aria-controls',navigation.id);
+      navigation.id=navigation.id||'visitor-mobile-navigation';menu.tabIndex=0;menu.setAttribute('aria-controls',navigation.id);
       const initiallyHidden=navigation.hidden;
       const sync=()=>{navigation.hidden=initiallyHidden&&!drawer.checked;menu.setAttribute('aria-expanded',String(drawer.checked));menu.setAttribute('aria-label',drawer.checked?'关闭菜单':'打开菜单');};sync();drawer.addEventListener('change',sync);
-      menu.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();event.stopPropagation();drawer.checked=!drawer.checked;drawer.dispatchEvent(new Event('change'));if(drawer.checked)Array.from(navigation.querySelectorAll('a')).find(a=>a.getClientRects().length)?.focus();}});
+      menu.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' ')event.stopPropagation();});
+      menu.addEventListener('click',event=>{event.stopPropagation();drawer.checked=!drawer.checked;drawer.dispatchEvent(new Event('change'));if(drawer.checked)Array.from(navigation.querySelectorAll('a')).find(a=>a.getClientRects().length)?.focus();});
       document.addEventListener('keydown',event=>{if(event.key==='Escape'&&(drawer.checked||(event.target instanceof Node&&navigation.contains(event.target)))){event.preventDefault();drawer.checked=false;drawer.dispatchEvent(new Event('change'));menu.focus();}});
     }
     document.addEventListener('keydown', event => {

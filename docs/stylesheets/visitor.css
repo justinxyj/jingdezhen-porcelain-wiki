@@ -105,3 +105,5 @@
 
 :root{--visitor-radius-md:12px;--visitor-radius-default:16px;--visitor-radius-xl:32px}
 :is(.visitor-dialog,.visitor-bottom-sheet,.jdm-search-filter-panel,.museum-toolbar,.global-kiln-map-toolbar) :is(input,select){min-height:44px;border:1px solid var(--visitor-line);border-radius:var(--visitor-radius-sm);background:var(--visitor-paper);color:var(--visitor-ink);font:inherit}
+
+.md-header button[for="__drawer"]{background:transparent;border:0;color:inherit}

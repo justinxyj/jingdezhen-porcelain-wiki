@@ -55,7 +55,7 @@ hide:
         <button id="network-reset" type="button">重置视图</button>
       </div>
       <div class="network-canvas-wrap">
-        <svg id="network-canvas" class="network-canvas" viewBox="0 0 1100 720" role="img" aria-label="景德镇陶瓷知识关系图谱"></svg>
+        <svg id="network-canvas" class="network-canvas" viewBox="0 0 1100 720" role="group" aria-label="景德镇陶瓷知识关系图谱"></svg>
       </div>
     </section>
   </details>

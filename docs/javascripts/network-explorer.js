@@ -141,7 +141,8 @@
         const activeClass=active?.node_id===n.node_id?' is-selected':'';
         group.setAttribute('class','network-node-svg '+(n.node_type==='world'?'world-node':'entry-node')+activeClass);
         group.setAttribute('transform',`translate(${p.x} ${p.y})`);
-        group.dataset.nodeId=n.node_id;group.setAttribute('role','button');group.setAttribute('tabindex','0');group.setAttribute('aria-label',label(n));group.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();selectNode(n.node_id)}});
+        const fullLabel=label(n),visibleLabel=fullLabel.length>15?fullLabel.slice(0,14)+'…':fullLabel;
+        group.dataset.nodeId=n.node_id;group.setAttribute('role','button');group.setAttribute('tabindex','0');group.setAttribute('aria-label',visibleLabel);if(visibleLabel!==fullLabel)group.setAttribute('aria-description',fullLabel);group.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();selectNode(n.node_id)}});
         const circle=document.createElementNS(ns,'circle');
         circle.setAttribute('r',n.node_type==='world'?'27':'15');
         circle.setAttribute('class','network-node-circle '+(CAT_CLASS[nodeCategory(n)]||'world'));
@@ -150,7 +151,8 @@
         text.setAttribute('class','network-node-label');
         text.setAttribute('y',n.node_type==='world'?'45':'29');
         text.setAttribute('text-anchor','middle');
-        text.textContent=label(n).length>15?label(n).slice(0,14)+'…':label(n);
+        text.textContent=visibleLabel;
+        const title=document.createElementNS(ns,'title');title.textContent=label(n);title.setAttribute('aria-hidden','true');group.appendChild(title);
         group.appendChild(text);
         group.addEventListener('click',()=>selectNode(n.node_id));
         g.appendChild(group);
@@ -170,6 +172,7 @@
 
     /** @param {string} id */
     function selectNode(id){
+      const focused=document.activeElement,fromGraph=focused instanceof SVGElement&&svg.contains(focused),fromList=focused instanceof HTMLElement&&list.contains(focused),fromDetail=focused instanceof HTMLElement&&detail.contains(focused);
       active=nodes.find(n=>n.node_id===id)||null;
       if(!active){detail.innerHTML='';return;}
       const links=neighbors(active);
@@ -184,6 +187,10 @@
         <div class="network-neighbor-list">${direct.length?direct.map(x=>`<button type="button" data-node="${esc(x.node.node_id)}"><span>${esc(relationLabel(String(x?.edge.edge_type||'相关').replace(/^entry_relation:/,'').replace(/^world_.*/, '所属主题')))} · ${esc(nodeCategory(x.node)||'主题')}</span><b>${esc(label(x.node))}</b></button>`).join(''):'<div class="network-no-neighbor">当前节点暂无可展示的核心邻接节点。</div>'}</div>`;
       /** @type {NodeListOf<HTMLElement>} */(detail.querySelectorAll('[data-node]')).forEach(b=>b.addEventListener('click',()=>selectNode(b.dataset.node||'')));
       draw();
+      if(fromGraph||fromList||fromDetail){
+        const replacement=fromGraph?Array.from(svg.querySelectorAll('[data-node-id]')).find(n=>n.getAttribute('data-node-id')===id):fromList?Array.from(list.querySelectorAll('[data-node]')).find(n=>n.getAttribute('data-node')===id):detail.querySelector('h3');
+        if(replacement instanceof HTMLElement||replacement instanceof SVGElement){if(replacement.tagName==='H3')replacement.tabIndex=-1;replacement.focus();}
+      }
     }
 
     /** @param {ExplorerNode[]} vnodes */

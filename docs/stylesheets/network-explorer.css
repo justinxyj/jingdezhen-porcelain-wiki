@@ -9,7 +9,7 @@
 .network-layout{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(280px,.7fr);gap:14px}
 .network-graph-panel,.network-detail{border:1px solid rgba(7,26,53,.1);border-radius:22px;background:var(--md-default-bg-color,#fff);overflow:hidden}
 .network-panel-head{display:flex;justify-content:space-between;gap:1rem;align-items:center;padding:18px 20px;border-bottom:1px solid rgba(7,26,53,.08)}
-.network-panel-head span{font-size:.65rem;letter-spacing:.12em;color:#7890aa;font-weight:800}
+.network-panel-head span{font-size:.65rem;letter-spacing:.12em;color:var(--visitor-muted,#526783);font-weight:800}
 .network-panel-head h2{margin:.25rem 0 0;font-size:1.35rem}
 .network-panel-head button{border:1px solid rgba(7,26,53,.12);border-radius:999px;background:transparent;padding:7px 12px;color:inherit;cursor:pointer}
 .network-canvas-wrap{background:radial-gradient(circle at 50% 50%,rgba(20,85,184,.055),transparent 62%);overflow:hidden}
@@ -34,9 +34,9 @@
 .network-neighbor-list button:hover,.network-list-item:hover,.network-list-item.is-active{border-color:rgba(20,85,184,.28);background:rgba(20,85,184,.05)}
 .network-neighbor-list span,.network-list-item span{font-size:.65rem;color:#7890aa}
 .network-neighbor-list b,.network-list-item b{font-size:.78rem}
-.network-no-neighbor{font-size:.8rem;color:#8a98a8}
+.network-no-neighbor{font-size:.8rem;color:var(--visitor-muted,#526783)}
 .network-empty{display:flex;flex-direction:column;justify-content:center;min-height:260px}
-.network-empty span{font-size:.66rem;letter-spacing:.12em;color:#7890aa;font-weight:800}
+.network-empty span{font-size:.66rem;letter-spacing:.12em;color:var(--visitor-muted,#526783);font-weight:800}
 .network-empty h3{margin:.5rem 0;font-size:1.4rem}
 .network-empty p{margin:0;color:#718198;line-height:1.7}
 .network-node-list{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--visitor-space-sm,8px);margin-top:12px}
