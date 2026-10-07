@@ -36,6 +36,7 @@
     "docs/javascripts/evidence-hub.js",
     "docs/javascripts/evidence-chain.js",
     "docs/javascripts/data-contract.js",
-    "docs/javascripts/wiki-timeline.js"
+    "docs/javascripts/wiki-timeline.js",
+    "docs/javascripts/dom-safe.js"
   ]
 }

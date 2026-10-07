@@ -1,11 +1,13 @@
 /* Shared HTML text escape + URL allowlist + body HTML sanitizer for innerHTML templates.
    Prefer window.JDM_SAFE over per-file copies. safeHref delegates to JDM_AUTH when present. */
 (function () {
+  /** @param {unknown} s */
   function esc(s) {
     return String(s ?? "").replace(/[&<>"']/g, (m) =>
-      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[m])
+      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[m] || m)
     );
   }
+  /** @param {unknown} raw @param {{allowHttp?:boolean}} [options] */
   function safeHrefLocal(raw, { allowHttp = false } = {}) {
     const value = String(raw ?? "").trim();
     if (!value) return "";
@@ -30,11 +32,12 @@
     }
     return "";
   }
+  /** @param {unknown} raw @param {{allowHttp?:boolean}} [opts] */
   function safeHref(raw, opts) {
     if (typeof window.JDM_AUTH?.safeHref === "function") return window.JDM_AUTH.safeHref(raw, opts);
     return safeHrefLocal(raw, opts);
   }
-  /** Allowlist body HTML for entry content (aligns with wiki-enhancements sanitizeBodyHtml). */
+  /** Allowlist body HTML for entry content. @param {unknown} raw */
   function sanitizeBodyHtml(raw) {
     const tpl = document.createElement("template");
     tpl.innerHTML = String(raw || "");
@@ -51,8 +54,9 @@
           else node.removeAttribute("href");
         } else if (!(attr.name === "id" && /^fn(?:ref\d*)?:[A-Za-z0-9_.-]+$/.test(attr.value))) node.removeAttribute(attr.name);
       });
-      if (node.tagName === "A" && node.getAttribute("href")) {
-        if (new URL(node.getAttribute("href"), window.location.href).origin !== window.location.origin) {
+      const href = node.getAttribute("href");
+      if (node.tagName === "A" && href) {
+        if (new URL(href, window.location.href).origin !== window.location.origin) {
           node.setAttribute("target", "_blank");
           node.setAttribute("rel", "noopener noreferrer");
         }
