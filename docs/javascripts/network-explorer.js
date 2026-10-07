@@ -202,7 +202,7 @@
       window.JDM_VISITOR?.renderState(status,'loading',{message:'正在读取关联内容…'});
       const graph=await store.graph({limit:500,edgeLimit:2000,includeEdges:true});
       nodes=graph.nodes.flatMap(n=>n.node_id&&n.node_type?[{...n,node_id:n.node_id,node_type:n.node_type}]:[]);edges=graph.edges.flatMap(e=>e.source_node_id&&e.target_node_id?[{...e,source_node_id:e.source_node_id,target_node_id:e.target_node_id}]:[]);
-      if(!nodes.length){setStatus('当前没有可展示的知识节点','error');return;}
+      if(!nodes.length){window.JDM_VISITOR?.renderState(status,'empty',{message:'当前没有可展示的内容。'});return;}
       draw();
       const requested=new URLSearchParams(location.search).get('node');
       const first=nodes.find(n=>n.node_id===requested)||nodes.find(n=>n.node_type==='entry'&&label(n).includes('青花'))||nodes.find(n=>n.node_type==='entry');

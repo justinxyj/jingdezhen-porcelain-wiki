@@ -23,7 +23,7 @@
   /** @param {import('../../types/knowledge').Entry[]} rows */
   function renderSearchResults(rows){const root=document.getElementById('jdm-global-network-search-results');if(!root)return;root.innerHTML=rows.filter(e=>e.source_type!=='markdown').slice(0,8).map(e=>'<button type="button" data-global-result="'+esc(e.id)+'"><span>'+esc(e.category||'知识条目')+'</span><b>'+esc(e.zh?.title||e.slug)+'</b></button>').join('');/** @type {NodeListOf<HTMLElement>} */(root.querySelectorAll('[data-global-result]')).forEach(b=>b.addEventListener('click',()=>select(b.dataset.globalResult||'')))}
   /** @param {string} q */
-  async function search(q){const root=document.getElementById('jdm-global-network-search-results');if(!root)return;if(!q){root.innerHTML='';return}try{renderSearchResults(await window.JDM_KNOWLEDGE?.searchEntries(q,{limit:8})||[])}catch(e){root.innerHTML='<div class="jdm-gn-search-error">搜索暂时不可用，请稍后重试。</div>'}}
+  async function search(q){const root=document.getElementById('jdm-global-network-search-results');if(!root)return;if(!q){root.innerHTML='';return}try{renderSearchResults(await window.JDM_KNOWLEDGE?.searchEntries(q,{limit:8})||[])}catch(error){window.JDM_VISITOR?.renderState(root,'error',{error,retry:()=>search(q)})}}
   /** @param {import('../../types/knowledge').NetworkContext} ctx */
   function craftSection(ctx){
     const rows=ctx.craftProcesses||[];

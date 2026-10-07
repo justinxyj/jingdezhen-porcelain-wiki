@@ -173,6 +173,7 @@
     if(!window.JDM_KNOWLEDGE)return;
     const roots=[document.getElementById('catalog-list'),document.getElementById('people-list'),document.getElementById('timeline')];
     if(!roots.some(Boolean))return;
+    roots.forEach(root=>{if(root)window.JDM_VISITOR?.renderState(root,'loading')});
     try{
       const [objects,people,history]=await Promise.all([
         roots[0]?window.JDM_KNOWLEDGE.objectAtlas({limit:250}):Promise.resolve([]),
@@ -181,6 +182,7 @@
       ]);
       if(seq!==initSeq)return;
       populateCatalogFacets(objects);renderCatalog(objects);renderPeople(people);renderTimeline(history);
+      roots.forEach(root=>root?.setAttribute('aria-busy','false'));
       const search=document.getElementById('catalog-search');if(search&&!search.dataset.bound){search.dataset.bound='1';let raf=0;search.addEventListener('input',()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(()=>renderCatalog(objects))})}
       filterData={objects,people};const filterRoot=document.getElementById('catalog-list')?.parentElement?.parentElement||document.body;if(!filterRoot.dataset.filtersBound){filterRoot.dataset.filtersBound='1';filterRoot.addEventListener('change',event=>{const id=event.target instanceof HTMLElement?event.target.id:'';if(['catalog-era','catalog-craft','catalog-type','catalog-glaze','catalog-pattern','catalog-institution'].includes(id))renderCatalog(filterData.objects);if(['people-era','people-role','people-world'].includes(id))renderPeople(filterData.people)})}
       const personSearch=document.getElementById('people-search');if(personSearch&&!personSearch.dataset.bound){personSearch.dataset.bound='1';let raf=0;personSearch.addEventListener('input',()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(()=>renderPeople(people))})}

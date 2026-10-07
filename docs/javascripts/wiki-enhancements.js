@@ -174,12 +174,12 @@
     const store=window.JDM_KNOWLEDGE;if(!root||!store)return;
     const staticRendered=root.dataset.staticRendered==='true';
     const slug=new URLSearchParams(location.search).get('slug')||window.JDM_STATIC_ENTRY_SLUG||root.dataset.entrySlug;
-    if(!slug){if(!staticRendered)root.innerHTML='<div class="wiki-entry-loading">没有指定条目。</div>';return}
+    if(!slug){if(!staticRendered)window.JDM_VISITOR?.renderState(root,'empty',{message:'没有指定条目。'});return}
     if(!staticRendered)window.JDM_VISITOR?.renderState(root,'loading',{message:'正在加载知识条目…'});
     try{
       if(typeof fetch==='function')readingPaths=await fetch(ROOT+'data/reading-paths.json').then(response=>response.ok?response.json():{}).catch(()=>({}));
       const e=await store.get(slug);
-      if(!e){if(staticRendered)return;root.innerHTML='<div class="wiki-entry-loading">没有找到这个公开条目。</div>';return}
+      if(!e){if(staticRendered)return;window.JDM_VISITOR?.renderState(root,'empty',{message:'没有找到这个公开条目。'});return}
       /** @type {(Partial<import('../../types/knowledge').NetworkContext>&{networkError?:unknown})|null} */
       const network=await store.entryNetworkContext(e.id,{timelineLimit:8,spaceLimit:12}).catch(async networkError=>{
         const [ctx,recs]=await Promise.all([
@@ -188,7 +188,7 @@
         ]);
         return {entry:e,worlds:[],relations:ctx.relations||[],recommendations:Array.isArray(recs)?recs:[],timelinePeers:[],spaceEntries:[],craftProcesses:[],networkError};
       });
-      if(!network){if(staticRendered)return;root.innerHTML='<div class="wiki-entry-loading">没有找到这个公开条目。</div>';return}
+      if(!network){if(staticRendered)return;window.JDM_VISITOR?.renderState(root,'empty',{message:'没有找到这个公开条目。'});return}
       const error=null; const truncated=false;
       if(seq!==initSeq)return;
       render(root,e,network);
