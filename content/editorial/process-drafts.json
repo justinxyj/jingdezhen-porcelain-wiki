@@ -1,0 +1,1584 @@
+{
+  "created_on": "2026-10-06",
+  "applied": false,
+  "source_snapshot": "2026-10-06 public craft_processes",
+  "processes": [
+    {
+      "id": "b9793ec3-2aa2-426b-a14a-4b5d5887a6b0",
+      "slug": "mining",
+      "sequence": 1,
+      "name_zh": "采矿",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "4281cf39a5dc2177c47ad7d47ec2265bd965982b580cf617de71ad58365ef580",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "制瓷原料来自具有不同矿物组成和风化程度的矿体。开采时需辨识矿层、夹杂和原料用途，并把矿石运往破碎、淘洗场所。瓷石与高岭土的开采和加工路线并不完全相同，不能把所有矿料都直接视为可拉坯的瓷泥。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "f356d063-fcb7-46db-b7fe-b630d3e4e11b",
+      "slug": "ore-selection",
+      "sequence": 2,
+      "name_zh": "选矿",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "b41ab5e2da376835b4feaf890a35be0ea36fb867cc17190de947d161a6d64456",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "从采出原料中挑选适用部分，剔除明显的围岩、粗大夹杂或不合要求的矿块。选矿影响后续泥料的组成和杂质含量；历史上的经验判断与现代化学、矿物检测属于不同手段，不能相互替代。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "2213b4b8-20de-49e9-bd02-a10345b21ed6",
+      "slug": "stone-quarrying",
+      "sequence": 3,
+      "name_zh": "采石",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "f97ac79a6accda43ae910f17a71cbdff17c556e61aa78f84d4c009fe4956c779",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "以瓷石等块状矿料为对象，将其从矿体分离并整理为便于运输和初碎的块料。这是采矿的一种具体作业，工序目录将两者分列，并不意味着每批泥料都必须经过两个独立的开采阶段。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "bb64140d-578a-43c4-a42e-9f8033afa50c",
+      "slug": "crushing",
+      "sequence": 4,
+      "name_zh": "破碎",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "53520da798dc4b3acc755d9961da2ef0b8b8ffb79ebc6b9738fcbd303c847bb8",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "将大块矿石逐级破成较小颗粒，使其能够进入舂打、研磨和淘洗环节。破碎改变粒度，不会自动消除原料中的铁质或其他杂质；原料纯化仍需后续分选。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "57b59266-46c7-4118-9e88-4abc9f0910d1",
+      "slug": "pounding",
+      "sequence": 5,
+      "name_zh": "舂料",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "95f82c4eb9b165bdf8d0c117542816d7da003449baaf8e56474c1bc9b0e00fe9",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "利用杵、碓等工具反复冲击矿料，减小颗粒并使矿物更易在水中分散。水碓把流水动力用于舂捣，是原料加工与地方水系联系的重要环节；舂料后的粉料还需淘洗和分级。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "4bbdfaf9-6940-4c77-9533-cb55b2e6212b",
+      "slug": "washing",
+      "sequence": 6,
+      "name_zh": "淘洗",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "8fbb5c84f73e5ce33c286811c6f00520a5fa9bf8d0acd7a8561072d63ff5c5f7",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "把粉碎的原料与水混合，借颗粒悬浮和沉降速度的差别分离粗砂与细料。淘洗所得细浆需要再沉淀、脱水，才成为可进一步配制的泥料；它兼有粒度分级和去除部分杂质的作用。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "0dbcde9d-51d2-4a7f-aa79-6576687b523e",
+      "slug": "sieving",
+      "sequence": 7,
+      "name_zh": "过筛",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "9542985da5380d4b8ab1c1ffa5a7e7fc9733ce72e9b496335d4a0014cfefea38",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "让粉料或泥浆通过一定孔径的筛网，截留粗粒和异物，改善原料均匀性。筛分控制的是能够通过筛孔的颗粒尺度，不能保证所有细小有色杂质都被除去。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "4011e382-9fa4-49bf-ad8c-4b7613c85cc0",
+      "slug": "iron-removal",
+      "sequence": 8,
+      "name_zh": "除铁",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "25f0e44b9e897aecfaf6322a8b5a4ec352cd4d3b254f908fb8fdbd24da24c7fd",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "减少可能造成斑点、杂色或其他缺陷的含铁杂质。拣选、淘洗和现代磁选的作用对象并不相同；矿物中结合的铁也不能简单等同于可直接挑出的铁屑。是否需要除铁及其程度取决于产品和原料。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "22df60ab-8ef4-4648-8248-0a3cf8b90d93",
+      "slug": "settling",
+      "sequence": 9,
+      "name_zh": "沉淀",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "ebcbde362ed7d9931c8fa509fc91ac991adbe05989f9855c2a1619450c8ee4a8",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "使泥浆静置，让悬浮颗粒逐渐沉降，再分离上层水与沉积物。不同颗粒的沉降行为有助于分级，但过快沉降的粗粒与较细泥料要按加工目标分别处理，不能把全部沉淀物一概作为成品泥。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "05e7b7ad-6fb3-453d-98ec-c7f923ad4007",
+      "slug": "dewatering",
+      "sequence": 10,
+      "name_zh": "脱水",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "1406fd53eff4f624897bb3f05a264bfb7f1057a1b36e32a049782f8938b309e8",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "从泥浆中移除多余水分，使其由流动浆体转为便于储存或加工的泥料。自然滤水、晾置和现代机械脱水属于不同方法；最终含水状态应与拉坯、印坯或其他成型方式配合。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "322d0d07-2a5e-46b2-8cda-32d40354dd6d",
+      "slug": "zhibu",
+      "sequence": 11,
+      "name_zh": "制不（趸）",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "98246be4c0079e6b855c773096c800fa6b60a4fa2bcaef86954fedf54a1e5360",
+      "status": "terminology_verification_required",
+      "description_zh": "本条原有词形及工序位置尚未取得足够史料支持。不能仅凭读音把它解释为原料计量或成型操作；需核对工艺图说原文、地方行业用语及其异体字，再确定是否与“不子”等原料商品形态有关。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "解释性重编稿，非官方原文。发布前需由工艺编辑逐项审定；保留原有ID、图像和非中文字段。"
+    },
+    {
+      "id": "a6d3a750-11cb-45cd-a400-805eebdfe7ba",
+      "slug": "batching",
+      "sequence": 12,
+      "name_zh": "配料",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "25bebf571d3370826567c5c553b043e3f8b923bdb47d89e4e4a8f8a84f544f84",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "依据坯体的成型、干燥和烧成要求组合原料，使可塑性、收缩和高温稳定性相互配合。讨论“一元”“二元”时，应区分同一矿料的天然矿物组成与人为加入另一种原料；配料比例也不是跨时代通用的固定数值。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "1cd30dec-2b9d-4807-a986-2107f3ac4edc",
+      "slug": "grinding",
+      "sequence": 13,
+      "name_zh": "粉碎",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "08584e1df4bae0ea30f99269801d9e2ac77d4434e4575a0d73fc76f2d2f0159b",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "用冲击或研磨进一步减小原料粒度，便于均匀混合和加工。它与初步破碎、舂料可以构成连续处理，也可能是不同设备条件下的替代路线；过细与过粗都会改变泥浆和坯体的工作性能。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "075dde35-3bcb-4dc3-abe5-9fe572ace72d",
+      "slug": "mixing",
+      "sequence": 14,
+      "name_zh": "混合",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "2465c8fdcf8da02d355bfec2bc54dedf3252c46bc249517f69f5aa1a1b394c3e",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "把配好的原料充分混匀，减少局部组成、粗细和含水量的差别。混合可以发生在粉料、浆料或可塑泥料阶段，其目标是使同批泥料的表现尽量一致，而不是仅把材料堆放在一起。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "6a49fdb1-ad03-43f3-a214-458a1e3cc4a5",
+      "slug": "kneading",
+      "sequence": 15,
+      "name_zh": "练泥",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "079c2a5cc1b779920494a28b3cf1f5aa8180ce9c63ff70c8e308df0e7a67e041",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "对可塑泥料反复挤压、翻转或机械处理，使水分和组织更加均匀，并减少夹带空气。练泥状态影响拉坯和干燥质量；它与淘洗、配料分属不同任务，不能靠增加揉练来补救所有原料问题。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "186d17bb-34fb-4fef-b505-561ea53928c6",
+      "slug": "kneading-by-hand",
+      "sequence": 16,
+      "name_zh": "揉泥",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "f07cc4b10c0d66a729f3f6c4dce4f70749b9d81609094fcfee465ad2390413c0",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "以手工揉压、切合或摔打整理泥料，调匀软硬并减少内部气泡。操作应避免把空气重新包入泥团。揉泥是练泥的具体方法之一，目录分列不代表两者始终是相互独立的工种。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "cba61682-33aa-4b03-a785-4bc8240ecc20",
+      "slug": "aging",
+      "sequence": 17,
+      "name_zh": "陈腐",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "b69909c4d731cd2e5542b0e1e4b6112edaee4dcba17d4f74ee9b3bdce7e25b27",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "将达到一定含水状态的泥料存放一段时间，使水分在颗粒间分布更均匀，改善后续操作的一致性。陈腐时间受原料、储存条件和用途影响，不宜规定一个适用于所有瓷泥的天数，也不能把存放越久等同于质量越好。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "354f9def-b3c1-4f5d-94c3-be3f8c24ebbd",
+      "slug": "tempering",
+      "sequence": 18,
+      "name_zh": "熟泥",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "922ae16c6b0a406660b40ed5ff28ec2cec1317123f99dd3bcc974503a318b834",
+      "status": "terminology_verification_required",
+      "description_zh": "此名称常用来描述已经加工、可供成型的泥料状态。原表把它列为独立步骤，但本轮尚未核实其在特定传统工序谱中的定义；暂不将其解释为必须加热、煮泥或发生固定化学反应的操作。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "解释性重编稿，非官方原文。发布前需由工艺编辑逐项审定；保留原有ID、图像和非中文字段。"
+    },
+    {
+      "id": "8a2c0d08-1a2b-4e47-9cfa-66e904a40c9a",
+      "slug": "portioning",
+      "sequence": 19,
+      "name_zh": "分泥",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "277852e2bcd21f7ad7c3b3399bd862cb17f149a5eeb8bd50173a8aba2563c260",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "把处理好的泥料分成适合单件制作或某一部件的泥团，方便连续成型和分工交接。分泥量取决于器型大小、预留修削量和部件组合，并非成品重量的简单对应。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "e0d60d38-61b6-407f-bc19-11f8f514d42f",
+      "slug": "clay-quantity",
+      "sequence": 20,
+      "name_zh": "泥料定量",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "d1c634c9e01590bbc08813865ccec850506cacfcaf6a2bfed811bfded5e4274a",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "按制作目标控制泥团用量，使同类器物的尺寸和修削余量较稳定。定量只提供起点；拉坯、修坯与干燥烧成收缩仍会改变器壁厚度和最终尺寸，不能单凭等重泥团保证成品完全相同。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "31940c55-7241-4aec-90db-deda94fa65ca",
+      "slug": "fuzhuo",
+      "sequence": 21,
+      "name_zh": "扶琢",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "1a3e6cc67677af549af634b28d389e2ae50dee730920bf5f79318ae611aad31d",
+      "status": "terminology_verification_required",
+      "description_zh": "原表名称与释义尚缺可核对的专门工艺文献。本轮不保留“扶持、整理泥料”这种由字面推测的解释；应先核实名称是否存在转写、抄录或分词问题，并辨明它与琢器制作的具体关系。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "解释性重编稿，非官方原文。发布前需由工艺编辑逐项审定；保留原有ID、图像和非中文字段。"
+    },
+    {
+      "id": "62764c1d-665b-4d49-92c8-e5e445d265e7",
+      "slug": "mud-washing",
+      "sequence": 22,
+      "name_zh": "淘泥",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "57e6b83d98ee951db5be2ef18be31c9283c03978e114d925fe0d07b37a67a3f0",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "将泥质原料分散于水中，分离不适用的粗粒或夹杂，再取得较均匀的细料。该词与“淘洗”有交叉，应结合原料处理或制坯现场的用语理解，不宜强行规定为练泥之后人人必经的一道工序。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "39302dbe-e403-498f-88af-10da7542b962",
+      "slug": "clay-resting",
+      "sequence": 23,
+      "name_zh": "泥料醒制",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "6f5487b0fde0aecff0ada9b3ab81fc5cdafc50c022f2d556708889f0affbb87f",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "泥料经揉练或搬运后短时静置，使内外含水和操作状态趋于均匀，便于接续成型。这里作为便于理解的加工说明；其与“陈腐”的时长及行业叫法需按具体作坊记录区分，不能据此推定古代统一术语。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "6d1ec8fc-779e-44d9-a0cf-ec1855e26889",
+      "slug": "on-wheel",
+      "sequence": 24,
+      "name_zh": "上车",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "b842c2d8825aec354113f45a1a5bdc8abbb972e9e5f6e6e969c575c76629b2f6",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "将泥团或待加工坯件放在辘轳、轮盘上，并使其稳定附着，准备拉坯或旋削。拉坯时放置泥团与利坯时安置已成型坯件的支承方式不同，操作均须防止偏心或滑动。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "b61daac1-458a-4c2b-bc71-cad97aa1c052",
+      "slug": "centering",
+      "sequence": 25,
+      "name_zh": "找中心",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "10489440a07b83f0358a0d83f092759ffb70cd9313a1385c481153bb9400300f",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "在轮盘旋转时调整泥团位置和形态，使其围绕转轴均匀旋转。定中心是继续开孔、提拉器壁的基础；泥团偏摆会使双手难以保持稳定压力，增加厚薄不匀和器形失稳的风险。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "b26c0387-c64c-4477-962a-ea9fd486a309",
+      "slug": "throwing",
+      "sequence": 26,
+      "name_zh": "拉坯",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "6276729495f83a5904f31f31df5031af0b01c8d3689e638ecdcfbccc55253245",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "借轮盘旋转，用手控制泥团的开孔、展宽和提拉，使其形成中空器体。拉坯决定基本轮廓，但细部尺寸和壁厚往往还需印坯、利坯等调整。大型或复杂器物也可能分段拉制后接合。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "7ff88857-fb04-40d8-b48b-1a82ed4cbd8d",
+      "slug": "trimming-greenware",
+      "sequence": 27,
+      "name_zh": "起坯",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "a9dd14bdccd84787f1b6dee72f85b0e416af29eed0d4f1aff3dd1d95816a1ea3",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "将已成型但仍较软的坯体与轮盘或承托面分离并移置。操作需支承器壁和底部，避免用力挤压造成变形。起坯后的安放方式与晾置条件共同影响后续干燥和修整。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "937e3750-50e7-4940-9b15-e5a483974d39",
+      "slug": "molding",
+      "sequence": 28,
+      "name_zh": "印坯",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "da847e393a981a1a06ee417c794ebcfc6ea9b21803cb2a29b1e3b93c7896fe70",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "使已有泥坯贴合模型，通过施压整理轮廓和尺寸。它可以接续拉坯，提高同类器物形状的一致性；“印坯”重在器体成型，不应与利用纹样模具进行表面装饰的“印花”混为一谈。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "437689d5-02da-4e92-90af-eeda8e817a62",
+      "slug": "joining-parts",
+      "sequence": 29,
+      "name_zh": "接坯",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "9d0c9d1a7b7d60306589e2d25496551b57174688be9b06fcb18bf7b1101f56db",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "将分段成型的器身或其他坯件结合成整体，常需整理接触面并用泥浆辅助黏结。接合处的含水状态、厚薄和结构要相互配合，否则干燥或烧成收缩不一致可能使接缝开裂。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "fe69572d-1b09-4123-b76b-4d0a0077aaa9",
+      "slug": "drying-greenware",
+      "sequence": 30,
+      "name_zh": "晾坯",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "bc65d0da318011f6c35d4c509a8d1b697668fcd42165eb819abd131d7023fb83",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "让成型坯体逐渐失水，提高支承能力，达到适于修整或接合的硬度。底、口和厚薄交界处的干燥速度可能不同，晾置需关注变形和裂纹；并非越快干透越适合后续每一种操作。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "a674fc8a-d3a2-4e50-a1b1-0bb0dfc7e8e5",
+      "slug": "liju",
+      "sequence": 31,
+      "name_zh": "利坯",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "efb3ea7e43a0d978a0ec72656d9b874049ca5a1d84025a475580a474f8db53ec",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "使具有一定硬度的坯体在轮盘上旋转，用刀削去多余泥料，整理器形和壁厚。利坯与拉坯相互配合，既减轻坯体，也塑造轮廓；旋削痕是观察制作过程的线索，但不能单独判定年代。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "23f24a3a-a61a-4b08-a93c-a90ff4586dd7",
+      "slug": "gualing",
+      "sequence": 32,
+      "name_zh": "剐坯",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "afeb02af7b2ecc7da96ba99d1b0d62dc306b57ef37f7e736acd5e689ea0742a1",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "对坯面或局部进行刮削，去除多余泥料和不平整处。它与利坯、修坯的范围在不同工艺记录中可能重叠；本条作为修整动作的说明，不据此推定存在统一、独立的历史工种。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "fad6218e-51b2-4cad-a368-2c7b8b7d7998",
+      "slug": "finishing",
+      "sequence": 33,
+      "name_zh": "修坯",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "d8c6814624518381fe5300d9b4e8260177f5971bb9ee781acc9c7f3e0ffd1e62",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "在坯体软硬适宜时校正口沿、器壁、底部或接缝，使轮廓和厚薄符合制作目标。修坯是较宽泛的环节，可包含旋削、刮整和局部补整，其具体动作依器型和成型方法而变化。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "72b36882-8509-41e3-b8f4-b5189b651131",
+      "slug": "foot-cutting",
+      "sequence": 34,
+      "name_zh": "挖足",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "7543d0e78032de067db4586bb96e499bd0d8cda25a2234dd4fb8ef741d0a3ca0",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "削除器底多余泥料，形成足内空间并整理底部结构。操作需要预留承重和烧成所需厚度，过度削薄可能造成变形或破损；底足也关系到器物的站立稳定和装烧接触位置。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "ebe2d852-cf14-43ba-bd71-e703c73fd5d6",
+      "slug": "foot-finishing",
+      "sequence": 35,
+      "name_zh": "修足",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "9d9b634024b833a6630315fa9d49e069622221b2a78dbc90e8553b1bb5f36355",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "进一步整理圈足或其他足部的高度、宽度和边缘，使其轮廓规整、落地稳定。足部还需与施釉、垫烧方式配合。观察露胎、修削和支烧痕时，应把多个特征结合起来判断工艺。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "49823097-fce7-4064-8390-3187bca7a7de",
+      "slug": "water-correction",
+      "sequence": 36,
+      "name_zh": "补水",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "1b28f12b1626f828a76f947832ed9deb69f96657dd457b3add41488acd68f2b4",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "在修整后的坯面上以蘸水工具或适量水分作局部润整，减轻刀痕和细小不平，使表面适于后续装饰或施釉。它并非单纯向干燥处补水防裂；用水不均或过多同样可能损伤较薄的坯体。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "a73d62bf-8322-4d91-8180-b8cc4237874c",
+      "slug": "attach-handle-spout-ear",
+      "sequence": 37,
+      "name_zh": "接把、咀、耳",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "58bcedb758ae887cb3a2a722bff4d5f61196d8cfdc4f4f5a7cfe2e7d1c0ae7ae",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "将把手、壶流、耳等分别成型的附件接在器身上，兼顾位置、尺度和使用受力。连接处需整理并控制两部分的干湿差；壶流还涉及通道衔接，不能只从外观判断接合是否完成。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "c3e1585e-52cc-4725-9e60-1059aa9ae56e",
+      "slug": "incising",
+      "sequence": 38,
+      "name_zh": "刻坯",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "e1d51cc688d98a1197528c194e26eeaec21fba99c62f003d5f5eb1521a919575",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "在具有一定硬度的坯体上以刀具刻出线条或深浅变化。工具角度、入刀深度和坯体软硬共同决定纹样效果；施釉后凹凸处釉层厚薄不同，可进一步显现装饰的层次。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "2b83a0a8-04d6-4f2c-ad23-1633064aadc2",
+      "slug": "sgraffito",
+      "sequence": 39,
+      "name_zh": "划花",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "5c2c19daaf13fd5f1013b76798a3c2eef0b2854c394625cd8b5a15a57ccbe765",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "以尖状工具在坯面划出较细的线条，形成轮廓、叶脉或连续纹样。划花通常侧重线的表现，与削去较多泥料的刻花有所区别；两种方法可以在同一件器物上结合使用。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "e9e53a9d-ff41-442e-8aa9-9d62b10e0ed3",
+      "slug": "stamping-pattern",
+      "sequence": 40,
+      "name_zh": "印花",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "69802abf76813aface27d041e16885dd204975054a9a8d418975d52fbe4b02d1",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "用带有纹样的模具在可塑坯体上压印装饰，使同一图案较便于重复制作。印花成效取决于模具清晰度、坯料软硬和脱模操作；模纹与成型接缝可提供生产方式的信息。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "002db0f8-464c-4bca-9a37-a96ba9f21254",
+      "slug": "openwork-carving",
+      "sequence": 41,
+      "name_zh": "镂雕",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "e5566b1fd05c7ed413918732f0eea2880f08b7572919b217b05cfb25ac958a64",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "切除坯体局部，形成贯通孔隙或透空纹样。开孔改变器壁的支承和干燥条件，需要控制孔隙间连接部分的强度；透雕、双层器和填釉玲珑的结构也不能一概视为相同工艺。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "caeb9982-a8a4-4cc8-8945-d76d0aeda852",
+      "slug": "relief",
+      "sequence": 42,
+      "name_zh": "浮雕",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "d2fe0500fb9790fcdb2b20a0f0fa12987ec1169a9df3ac0cba622eba315d83df",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "通过保留凸起或削低背景，使图案高出周围表面，形成光影和触感上的层次。浮雕是装饰效果的类别，可以由刻削、模印或附加泥料实现，并不专指一种固定动作。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "4b38d5d4-25e3-48fc-a638-e1fefd30cc02",
+      "slug": "applique-relief",
+      "sequence": 43,
+      "name_zh": "堆雕",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "0f1d7d73d34798f5a291b10aa7905ccaee4e352ff0b6bca876df764ca9f257c9",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "在器表附加泥料并塑造花叶、人物或其他凸起装饰。附加部分需要与胎体牢固结合，并顾及厚薄差造成的收缩变化；完成后的立体效果不能掩盖其接合结构对烧成质量的影响。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "8559eca6-1631-489d-94ad-c8592d84154b",
+      "slug": "design-layout",
+      "sequence": 44,
+      "name_zh": "打图（起稿）",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "d9d4fd6a2dde66cd2350b39f2683d3f8e7181f4cd227087649d457209b17fcc1",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "按器物曲面、分区和观看方向安排纹样轮廓与比例，作为正式描绘的依据。口、腹、足等部位的转折会改变画面展开方式，因此器上构图不能直接等同于平面图样的机械复制。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "ee39c5c0-57b1-4780-b37d-6a361e4159f4",
+      "slug": "select-cobalt",
+      "sequence": 45,
+      "name_zh": "选青料",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "3cfba397af3e66df1291906e4fe82d3bb8f43b394503b3405530a15281a7adf4",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "依据呈色目标和使用条件选择含钴色料。历史青料的伴生元素、加工方法及混配会影响发色，但最终颜色还受釉层和烧成条件制约，不能仅凭蓝色深浅断定原料产地。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "86e368c6-ae3d-4601-8a76-61e356b0f4bf",
+      "slug": "grind-cobalt",
+      "sequence": 46,
+      "name_zh": "研青料",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "de9e0bf59055b4c32dc75425c6981861955754cb4d9a9b04039a8dc9ce03626e",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "将青花色料研细并处理至适于笔绘的状态，减少粗粒对运笔和发色均匀性的影响。研磨属于颜料制备的一环，应与原料选择、调配和试烧相衔接，而不是独立保证成色的步骤。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "e0d6ecde-bfc7-40a5-9aa0-4422e4684582",
+      "slug": "prepare-underglaze-blue",
+      "sequence": 47,
+      "name_zh": "调青花",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "0b30ee70d87964fc3fc6ba7cfe9184435de314de2e8c611c713ccf3c8c534e40",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "调整青花料的浓淡和悬浮状态，使其适应勾线、分水或不同画面层次。试笔时的湿色与烧成后的蓝色并不相同，配料经验须与同类坯釉和烧成条件下的实际效果联系起来。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "cd0822f1-70fe-4656-acc9-8ececd5c1c04",
+      "slug": "underglaze-blue-painting",
+      "sequence": 48,
+      "name_zh": "画坯",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "db78e5cc3ef85c4f552667c0857fdbb1f4d25b5d9e6560c2451e4f424eff7df1",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "在未烧成的坯体上绘制纹饰；青花制作中以含钴色料勾线、填色，再覆盖透明釉高温烧成。坯面吸水性影响行笔和色料分布。画坯与在已烧成釉面上画彩的“画红”等工序应加以区分。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "3b19fd66-aedf-4601-9999-124cc64e5900",
+      "slug": "glazing",
+      "sequence": 49,
+      "name_zh": "施釉",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "87174ce79a54c808e49569cb974678ea34681e3429627366b2073d49527d8aa8",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "将釉浆覆盖于坯体或已处理的器表，烧成后形成玻璃质表层。釉的配方、厚度和施用部位需与胎体及烧成相配合；蘸、荡、浇、吹等是不同施用方法，而非每件器物依次经历的步骤。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "f5fc039a-1a01-4369-8d9a-87e496a71acd",
+      "slug": "dipping-glaze",
+      "sequence": 50,
+      "name_zh": "蘸釉",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "618a10e1025c60209651950f5ff26bee8c531193aac43e904ed48d505ae12bdf",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "把器体或局部浸入釉浆后提起，利用坯体吸水使釉料附着。釉浆状态、浸入时间和坯体干湿影响挂釉厚度；持握处、口沿和底足还可能需要补整或清理。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "086fc872-86ac-4519-9a8d-3ef727e2db19",
+      "slug": "swirling-glaze",
+      "sequence": 51,
+      "name_zh": "荡釉",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "8b56ca63f02b592cb78b573f2bc183f374970bd8f877b8d80b79ae3fcc9fb953",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "把釉浆倒入器内，通过转动、倾斜使其流过内壁，再倒出多余釉浆。此法适于外部难以直接触及的内表面，需留意积釉、漏釉及口沿处的衔接。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "481ae8f5-d8f1-4c2f-860d-ce88f3e022f1",
+      "slug": "blown-glaze",
+      "sequence": 52,
+      "name_zh": "吹釉",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "00551ae17ceeee52942e1074f797221d2a7531798257fc11732dd930fc3716ae",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "借气流使釉浆分散并附着于器表，通过多次覆盖逐步形成釉层。它便于处理某些复杂表面或控制局部厚薄；传统吹釉工具与现代喷釉设备应分别说明，不能当成同一时代的技术。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "ab72f5c1-1bc7-404c-a5c1-4b0feba16588",
+      "slug": "pour-glaze",
+      "sequence": 53,
+      "name_zh": "浇釉",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "d435e36a5ca76e5e19afffffa23598bdb5108b53f56e25164e30f389900fc62f",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "将釉浆倾浇到器表，借流动覆盖所需部位，再排去多余浆料。操作速度、器物转动和釉浆流动性影响厚度，接流处与下缘容易形成积釉，需要结合器型调整。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "67564e49-ee7e-405e-bea9-2139ef4ea07d",
+      "slug": "da-glaze",
+      "sequence": 54,
+      "name_zh": "搨釉",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "a93d5890fe78c0fa0510ac54f8777ba4202699c3be9e714c65f5feedc384dd80",
+      "status": "terminology_verification_required",
+      "description_zh": "原表将此词解释为工具转移釉料，但尚无足够材料核实其具体工具、动作和适用器型。本轮保留名称供考证，不把一般施釉方法的描述当作该传统术语已经确认的定义。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "解释性重编稿，非官方原文。发布前需由工艺编辑逐项审定；保留原有ID、图像和非中文字段。"
+    },
+    {
+      "id": "20603f37-485b-4a99-8ebb-41194f2956ca",
+      "slug": "spray-glaze",
+      "sequence": 55,
+      "name_zh": "喷釉",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "6914ce48cb79088474506a4b68094de71717f452a8dda49018469bd81ad858dd",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "利用喷具把釉浆雾化并沉积于器表，可通过喷射距离、覆盖次数和角度调节施釉范围。这里描述一般操作原理；现代压缩空气喷釉设备不可无依据地投射到古代作坊。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "d50dba30-c5bb-462e-aedf-df87746bc51d",
+      "slug": "scatter-glaze",
+      "sequence": 56,
+      "name_zh": "洒釉",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "5f982dfc91a79a5c63355009f42be1eea1f2107788c2499d14890533a570352b",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "以洒布方式把釉料分散到器表，形成局部覆盖、点状或不均匀分布的装饰效果。它与追求通体均匀覆盖的施釉目的不同，实际效果仍需由所用釉料及烧成共同决定。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "eb4d831a-05f5-4d21-b2d6-a3e5030fcd25",
+      "slug": "immersion-glaze",
+      "sequence": 57,
+      "name_zh": "浸釉",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "48a9ddd6a21296b3d613b7394b375290f43485d9c2da94f92d6e782ca66029f0",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "将器物全部或局部浸入釉浆，使表面挂釉。与“蘸釉”在一般工艺用语中高度重叠；本目录同时保留两名是检索需要，不表示传统景德镇生产中存在两道必然分开的操作。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "97e9251a-b225-4320-9fb5-37f1ffdd33f2",
+      "slug": "brush-glaze",
+      "sequence": 58,
+      "name_zh": "刷釉",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "5c90064a00db947c710f0c5b5c9544b852baff83ace943aa89ee74fe701395a3",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "以刷具把釉浆涂布于器表，适于局部补釉、分区处理或某些装饰性覆盖。笔触、覆盖次数和坯面吸水性会影响釉层，重复涂刷时还要防止已附着的釉层被带起。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "9ac69869-e606-45cf-92e6-5b55d450afb4",
+      "slug": "seal-greenware",
+      "sequence": 59,
+      "name_zh": "刹合坯",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "60199db071c95fd176fafa1bffc26ed9c77dadf6c7fde5dc5921fa60fbaad101",
+      "status": "terminology_verification_required",
+      "description_zh": "原表的“整理、衔接和清洁施釉后坯体”尚未得到专门文献证实。名称、字形及其与装匣前处理的关系需要核对，不宜凭现有排列位置写成所有器物通用的入窑准备步骤。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "解释性重编稿，非官方原文。发布前需由工艺编辑逐项审定；保留原有ID、图像和非中文字段。"
+    },
+    {
+      "id": "538d9898-43d5-4b07-8e51-9c2e8fa71606",
+      "slug": "dry-glaze",
+      "sequence": 60,
+      "name_zh": "晾釉",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "fbdd0f32f0feaa0f6b223230d90ce3f7250cca32a592d466c05d24740843c7e7",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "施釉后使多余水分逐渐散失，使釉层达到可搬运和装烧的状态。未烧釉层较易碰伤，晾置和搬运时应减少接触；足部残釉、裂口或积釉也需要在装窑前检查。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "e0e8269c-95ef-44ee-b140-0945a76b9460",
+      "slug": "saggars-clay",
+      "sequence": 61,
+      "name_zh": "匣土配制",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "8bf8310fa595ce61e92dcb7678e8ae1aa20eb7bd20808246f847f885357c6057",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "按耐火性、成型性和反复受热的要求配制匣钵用料。匣钵泥与瓷胎泥用途不同，不以烧成洁白为首要目标；原料和配比随窑炉、烧成制度及制作经验而变。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "fdbdd1a8-e6fe-4d62-b461-966c95dcb0cb",
+      "slug": "saggars-making",
+      "sequence": 62,
+      "name_zh": "制匣钵",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "8c213d570538fad6e5e11824a921da89c692f171e890ba8204c8b103edc41dbc",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "把耐火泥料制成容纳、隔护瓷坯的窑具，干燥和烧制后用于装烧。匣钵可减轻燃料灰烬和火焰直接接触器物的影响，但其尺寸、壁厚和组合方式也会影响窑内传热与空间利用。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "c11dade5-3496-4b6b-b48a-6c06ac3e5872",
+      "slug": "saggars-repair",
+      "sequence": 63,
+      "name_zh": "修匣钵",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "d2171d517d87ed34b136a872a56390aa81237c61dc3fe7892bc64af6179537cd",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "检查匣钵口沿、底部和内壁，清理附着物并处理影响放置的局部问题。是否能够继续使用取决于结构状况；严重开裂或变形的匣钵不能仅靠表面修整就恢复可靠承托。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "181ed8fe-faa1-4726-a79e-37f8bb22be3f",
+      "slug": "loading",
+      "sequence": 64,
+      "name_zh": "装坯",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "6e62804b76bb75d0c4a2a52622b372520245fdc81dd38c7acb6b1ce9df629e43",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "把待烧器物放入匣钵或适当窑具中，安排支垫、间距与接触位置，防止受热变形或釉面粘连。不同器型与装烧方式需要不同支承，器底遗留的支烧痕可帮助理解这一环节。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "12c3e92c-75bf-4795-a292-62513a9736a2",
+      "slug": "filling-kiln",
+      "sequence": 65,
+      "name_zh": "满窑",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "7570435aeaedb932f96aa363c6944a9af464c6581ce5a4861940ef7919d138bc",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "按窑室结构、火焰通路和不同窑位的烧成特点布置匣钵及器物。装窑既涉及容量，也涉及稳定承重、传热和气流；填得越满并不必然得到越好的烧成结果。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "3973ccb3-d620-4def-b067-7719a6d41df7",
+      "slug": "firing-master-control",
+      "sequence": 66,
+      "name_zh": "把桩",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "3f5a69370e847f06015b8d97714ffedd70a1b96a1b631dde7cf2d3e5679267f8",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "在传统烧窑分工中承担观察火候、判断窑况和协调操作的重要职责。判断需要把火焰、观察孔和试样等信息与长期经验联系起来；它是人与窑炉共同工作的岗位，不能简化为看一个固定温度数值。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "068e73c8-4440-491a-960e-a9b1b2073b39",
+      "slug": "carrying-greenware",
+      "sequence": 67,
+      "name_zh": "驮坯",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "0d87df97c8412184a01027c01fafb75658a2b86f2a8d07d1991f06661d4d6a95",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "把成型、施釉或待装烧的坯件连同承托工具运送到下一作业地点。干坯和未烧釉层较脆弱，搬运不仅是运输劳动，也关系到生产交接和破损控制；具体载具应依据作坊记录确认。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "6db2a7f3-be85-4191-8496-c87d2fe24a39",
+      "slug": "kiln-staging",
+      "sequence": 68,
+      "name_zh": "架表",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "47948de75a85b18e08f7a3c6f97c69d91970631c578a7a9ac7b9c352f5a35c29",
+      "status": "terminology_verification_required",
+      "description_zh": "此传统名称的准确字形、对象和操作内容尚待专门资料核实。原表直接释作按窑炉规律布置器物，证据不足；暂不将它与满窑、装坯或其他岗位强行等同。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "解释性重编稿，非官方原文。发布前需由工艺编辑逐项审定；保留原有ID、图像和非中文字段。"
+    },
+    {
+      "id": "faab1216-0441-4f31-a1d8-44e265bac4cd",
+      "slug": "ignition",
+      "sequence": 69,
+      "name_zh": "点火",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "9abb68417f254ca9bc3e223cc29669ede4d5828e27e325cd9cd88b23903f8bd7",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "使窑炉开始受热，并逐步进入后续烧成阶段。初期加热需兼顾坯体和窑具残余水分的排出，不能把点火视为立即进入最高温烧成；操作节奏由窑炉与所装材料决定。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "27199957-3860-495c-bec8-7c6b774cc626",
+      "slug": "kiln-firing",
+      "sequence": 70,
+      "name_zh": "烧窑",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "91efe0bee5fa13ae91fa0ce0ada7561a53e56c203fdf4656afb3f6781233bb94",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "通过供热、通风和燃料或能源调节，使坯釉经历所需的升温、保温与气氛过程。温度、持续时间和氧化还原条件共同作用于致密化、釉层与颜色；同一最高温度并不代表相同烧成结果。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    },
+    {
+      "id": "97c91454-0c4f-4ebe-acd0-d53f6eb5ff36",
+      "slug": "kiln-receiving",
+      "sequence": 71,
+      "name_zh": "收兜脚",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "a7b281ab33111d57eea395635663649e0a95510c298e010e5e06167698ed85fe",
+      "status": "terminology_verification_required",
+      "description_zh": "原表只写“烧窑末段收尾”，尚不足以确立该词的专业含义。需核对传统窑业术语、操作位置及与投柴、火路的关系；本轮不添加未经查证的温度、动作或岗位解释。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "解释性重编稿，非官方原文。发布前需由工艺编辑逐项审定；保留原有ID、图像和非中文字段。"
+    },
+    {
+      "id": "88b3cf97-71d4-4a09-81b1-4a6e4dd04a08",
+      "slug": "cooling",
+      "sequence": 72,
+      "name_zh": "停火冷却",
+      "expected_updated_at": "2026-09-19T04:41:37.875804+00:00",
+      "expected_row_sha256": "608b607995b51f415fd5d17881593ebdb932148a7215c52046f36475e88feaf5",
+      "status": "editorial_draft_not_applied",
+      "description_zh": "在烧成达到要求后结束供热，使窑内器物和窑具逐步降温，再于适当状态开窑出瓷。冷却仍影响釉层状态与热应力，不能理解为烧成结束后任意加速降温；开窑条件需依窑炉与产品判断。",
+      "sources": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "scope": "传统制瓷流程和专业分工的背景资料；并非本表72个词条逐项定义的出处。"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+          "scope": "原料、配方和加工历史；不用于声称全部操作细节已由该论文证实。"
+        }
+      ],
+      "review_note": "按一般工艺解释审定，不将目录中的72项视为每件器物固定顺序；未核实的历史专名另列暂缓。保留ID、图像与非中文字段。",
+      "editorial_review": "accepted_as_general_process_explanation"
+    }
+  ]
+}

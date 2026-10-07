@@ -1,0 +1,1090 @@
+{
+  "note": "抓取结果与内容核验分开记录；HTTP 200不证明取得正文。未通过连接检查的页面未绕过检查，未用作原书全文。",
+  "sources": [
+    {
+      "url": "https://www.gotheborg.com/letters/",
+      "slugs": [
+        "yin-hong-xu",
+        "yin-hong-xu"
+      ],
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "unavailable",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "url": "https://meta.librarydata.cn/metainfo?metaID=140420020210001709",
+      "slugs": [
+        "dong-biwu",
+        "feng-zikai",
+        "zhang-guangnian",
+        "r29",
+        "xie-juezai"
+      ],
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "unavailable",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "url": "https://www.mingyanjiaju.org/fanwen/daoyoucifanwen/12844140.html",
+      "slugs": [
+        "qigong",
+        "shu-tong"
+      ],
+      "status": 200,
+      "bytes": 71636,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "b84a1e19292617cb4b350984b371c241b62d8b500fd0d27dd514d8653ff41c0c",
+      "text_length": 28321,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://jdz.gov.cn/zwzx/jrcd/t1099484.shtml",
+      "slugs": [
+        "r24"
+      ],
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "unavailable",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "url": "https://www.jdz.gov.cn/zjcd/mljdz/t289353.shtml",
+      "slugs": [
+        "qian-qichen"
+      ],
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "unavailable",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://gl.jdz.gov.cn/zwzx/gzdt/t847243.shtml",
+      "slugs": [
+        "markley",
+        "li-zhengdao"
+      ],
+      "status": 200,
+      "bytes": 16443,
+      "content_type": "text/html",
+      "sha256": "a1497cce58a261a10d47bba9770b5f976fc0044cd9462d636f1a350ad7007d7c",
+      "text_length": 1471,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://www.hwlongfellow.org/poems_poem.php?pid=307",
+      "slugs": [
+        "longfellow"
+      ],
+      "status": 200,
+      "bytes": 46399,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "bc65ea20fca1ef971a3197346dac82185d6134755237ac2e2152e07d9cd9e77d",
+      "text_length": 16652,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://us.macmillan.com/books/9781250128355/theradicalpotter/",
+      "slugs": [
+        "josiah-wedgwood"
+      ],
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "unavailable",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.gotheborg.com/natgeograph/",
+      "slugs": [
+        "frank-b-lentz"
+      ],
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "unavailable",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "url": "https://img.dpm.org.cn/Uploads/File/2021/07/23/u60fa314146024.pdf",
+      "slugs": [
+        "wang-shixing"
+      ],
+      "status": 200,
+      "bytes": 3399721,
+      "content_type": "application/pdf",
+      "sha256": "b3ba915f9b6bd5af1d8bafcc23b79abed2e02fd744393fa82e7bb03ce889d633",
+      "text_length": 33897,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://zh.wikisource.org/zh-hans/景德镇陶录",
+      "slugs": [
+        "wen-zhenheng",
+        "shen-huaiqing",
+        "wang-zehong",
+        "xie-min",
+        "chen-yu"
+      ],
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "unavailable",
+      "error": "'ascii' codec can't encode characters in position 13-17: ordinal not in range(128)"
+    },
+    {
+      "url": "https://www.trueart.com/news/468101.html",
+      "slugs": [
+        "shen-defu"
+      ],
+      "status": 200,
+      "bytes": 232131,
+      "content_type": "text/html",
+      "sha256": "1dc03684af5bfd52aefc18fc2ba9ce07d6d3e347ed3c77cd22e40b7dc2cdfa61",
+      "text_length": 31733,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://www.xinhuanet.com/politics/20260726/f050b9317dd4422cbadad9b917f141e2/c.html",
+      "slugs": [
+        "du-chongyuan"
+      ],
+      "status": 200,
+      "bytes": 30920,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "789ed98504c3fecfd7fc35d4de5f98495137aad92ca8446e3ff1303d48afaee5",
+      "text_length": 6236,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://www.sohu.com/a/312041015_680746",
+      "slugs": [
+        "mikami-tsugio"
+      ],
+      "status": 200,
+      "bytes": 59836,
+      "content_type": "text/html;charset=UTF-8",
+      "sha256": "4b77b6dda00be9736cb825e536a47159022254cceffedeea8a110b025f8640af",
+      "text_length": 11408,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://www.daowen.com/lilun/1574622.html",
+      "slugs": [
+        "wang-zhen",
+        "peng-zhen"
+      ],
+      "status": 200,
+      "bytes": 38758,
+      "content_type": "text/html",
+      "sha256": "cadce9e97a0b16bf171f6939c20cdba7d81ccf1ff8864e0bc0336342fc382027",
+      "text_length": 6496,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://meta.librarydata.cn/metainfo?metaID=140420020210000145",
+      "slugs": [
+        "bo-yibo"
+      ],
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "unavailable",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "url": "https://www.dpm.org.cn/collection/ceramic/226759.html",
+      "slugs": [
+        "tang-ying",
+        "tao-cheng-jishi"
+      ],
+      "status": 200,
+      "bytes": 124415,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "f9ec090e9224450eae1f334441deaa5bb70bd8c5119e83aaa6c3706a57975ce1",
+      "text_length": 11155,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://www.dpm.org.cn/Uploads/pdf/1566/T00018_00.pdf",
+      "slugs": [
+        "tang-ying"
+      ],
+      "status": 200,
+      "bytes": 255979,
+      "content_type": "application/pdf",
+      "sha256": "b88d3eae075cdbc4d21ecad869b086b33619699b4104908658c2d7b3db549e53",
+      "text_length": 1526,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://www.gutenberg.org/files/67970/67970-h/67970-h.htm",
+      "slugs": [
+        "rl-hobson"
+      ],
+      "status": 200,
+      "bytes": 819774,
+      "content_type": "text/html",
+      "sha256": "d5c726cc7d58635d1c4270904a3e2aa2cea5fdbbae1130f0eb336f24e2b381ec",
+      "text_length": 529801,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://whc.unesco.org/en/decisions/9170/",
+      "slugs": [
+        "ceramic-workers",
+        "kiln-owners"
+      ],
+      "status": 200,
+      "bytes": 131587,
+      "content_type": "text/html;charset=UTF-8",
+      "sha256": "dcf4c27c518c53b1e039b212c8ee8d6a15071378e86da0c184d54ae98cdad6db",
+      "text_length": 17274,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+      "slugs": [
+        "ceramic-workers",
+        "kiln-owners"
+      ],
+      "status": 200,
+      "bytes": 77844,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "3518a120f51e4623efe4094b8cd71bd956f23800a05ae6852aba49004043e402",
+      "text_length": 13679,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://asia-archive.si.edu/exhibition/porcelain-production-jingdezhen/",
+      "slugs": [
+        "ceramic-workers",
+        "kiln-owners"
+      ],
+      "status": 200,
+      "bytes": 136352,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "f07ee2bdf73106d60147550ffcd2dbf97e4bc8ee5ab2dba5b102056819541590",
+      "text_length": 3592,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://www.chnmuseum.cn/zp/zpml/201812/t20181218_26821_wap.shtml",
+      "slugs": [
+        "lang-tingji"
+      ],
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "unavailable",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.dpm.org.cn/Uploads/File/2020/05/15/u5ebe4a7333945.pdf",
+      "slugs": [
+        "lang-tingji",
+        "zang-yingxuan"
+      ],
+      "status": "too_large",
+      "bytes": 5000001,
+      "content_type": "application/pdf",
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "not_downloaded_size_limit"
+    },
+    {
+      "url": "https://www.dpm.org.cn/collection/ceramic/227698.html",
+      "slugs": [
+        "lang-tingji"
+      ],
+      "status": 200,
+      "bytes": 94793,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "2d6ed7dcbf052fc845c3b2ab8c50ef1e3ccbed005616308888125bb83fb004eb",
+      "text_length": 6442,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://heritage.bnf.fr/france-chine/porcelaine",
+      "slugs": [
+        "jean-baptiste-du-halde",
+        "lettres-edifiantes-porcelaine"
+      ],
+      "status": 200,
+      "bytes": 48300,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "97f1ed655d882882222c3775ede38649ccedb06210407e7b891876b4fa8b0726",
+      "text_length": 10709,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://www.metmuseum.org/essays/east-and-west-chinese-export-porcelain",
+      "slugs": [
+        "jean-baptiste-du-halde"
+      ],
+      "status": 200,
+      "bytes": 199051,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "16ec97d25ff24a8f22a258d4d156c77aadb00b4605d2b2b6044e451b18736042",
+      "text_length": 7571,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://ctext.org/wiki.pl?chapter=482547&if=gb&remap=gb",
+      "slugs": [
+        "zhu-yan",
+        "tao-shuo"
+      ],
+      "status": 200,
+      "bytes": 2781,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "4f323319db2cfd81d5d8106ab0f3cdbf21aaf8a17f2d187347961c569bbc1d73",
+      "text_length": 1477,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "security_check_not_source_text"
+    },
+    {
+      "url": "https://meta.librarydata.cn/metainfo?metaID=140420020230000213",
+      "slugs": [
+        "zhu-yan",
+        "li-rihua"
+      ],
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "unavailable",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "url": "https://meta.librarydata.cn/metainfo?metaID=140420020210001666",
+      "slugs": [
+        "tao-shuo",
+        "r08"
+      ],
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "unavailable",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "url": "https://tys.jcu.edu.cn/info/1037/2083.htm",
+      "slugs": [
+        "zhang-songmao"
+      ],
+      "status": 200,
+      "bytes": 17764,
+      "content_type": "text/html",
+      "sha256": "a91d3d3e03d4d54e930044a6de70be4f4fa9e7418b587af2256923443226a004",
+      "text_length": 2127,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://jdz.gov.cn/zwgk/zfgb/2024n/d3q/szfwj_3307/t958190.shtml",
+      "slugs": [
+        "zhang-songmao",
+        "r22"
+      ],
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "unavailable",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "url": "https://www.dpm.org.cn/Uploads/pdf/1530/T00079_00.pdf",
+      "slugs": [
+        "nian-xiyao"
+      ],
+      "status": 200,
+      "bytes": 314494,
+      "content_type": "application/pdf",
+      "sha256": "ef7e899c5c4d5ab1f2211e931063870489bbd07bcd43547426e40de4d2d1bea5",
+      "text_length": 2670,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://www.dpm.org.cn/Uploads/File/2020/11/13/u5fae1d783e93c.pdf",
+      "slugs": [
+        "nian-xiyao"
+      ],
+      "status": 200,
+      "bytes": 940701,
+      "content_type": "application/pdf",
+      "sha256": "b7222c79a04fe00820d460941b3dba1edfdee3c9b893040cbe707802ae82d3db",
+      "text_length": 56394,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://ctext.org/wiki.pl?if=gb&res=336161",
+      "slugs": [
+        "tian-gong-kai-wu",
+        "tian-gong-kai-wu",
+        "jingdezhen-taolu"
+      ],
+      "status": 200,
+      "bytes": 2781,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "4f323319db2cfd81d5d8106ab0f3cdbf21aaf8a17f2d187347961c569bbc1d73",
+      "text_length": 1477,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "security_check_not_source_text"
+    },
+    {
+      "url": "https://paper.people.com.cn/rmrbhwb/html/2020-06/18/content_1992823.htm",
+      "slugs": [
+        "robert-finlay",
+        "li-xiannian",
+        "joseph-needham"
+      ],
+      "status": 200,
+      "bytes": 34906,
+      "content_type": "text/html",
+      "sha256": "d70224108edf669a5330d5260880bae2f705b8057f1e58e21dccafb2b33321b1",
+      "text_length": 3844,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://newetds.lib.tsinghua.edu.cn/qh/paper/summary?dbCode=ETDQH&sysId=215437",
+      "slugs": [
+        "r25"
+      ],
+      "status": 200,
+      "bytes": 56016,
+      "content_type": "text/html;charset=UTF-8",
+      "sha256": "07a1413e0b26f03359b5429bc7da4b1654fd6196c211c1a23f8b81163ccf4773",
+      "text_length": 5360,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://www.jdzmuseum.cn/h-col-103.html",
+      "slugs": [
+        "liu-zongyuan"
+      ],
+      "status": 200,
+      "bytes": 97419,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "5d5eb219822e890fce4433be8f21bcddf1eb1412650889b935305bb79aa4a400",
+      "text_length": 76268,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://www.mct.gov.cn/whzx/zsdw/whbgwfglzx/202101/t20210127_921041.html",
+      "slugs": [
+        "tian-hexian",
+        "wang-qi"
+      ],
+      "status": 200,
+      "bytes": 24493,
+      "content_type": "text/html",
+      "sha256": "a6322d4d53762326cfaf8b6d2fe43f282d7e2a78d0ef93d4e55bb031a8c9e3c7",
+      "text_length": 1483,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://www.jstor.org/stable/10.1525/j.ctt1pnfm7",
+      "slugs": [
+        "pilgrim-art"
+      ],
+      "status": 200,
+      "bytes": 3038,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea",
+      "text_length": 342,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://culture.people.com.cn/n1/2016/1224/c1013-28973781.html",
+      "slugs": [
+        "zang-yingxuan"
+      ],
+      "status": 200,
+      "bytes": 43182,
+      "content_type": "text/html",
+      "sha256": "dacf5142ac8c9553122be5788821e5780fc0eb7f53b653b40e223cac64479b27",
+      "text_length": 7118,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://ggzl.dpm.org.cn/app/api/app/exhibitionListPc/140",
+      "slugs": [
+        "zang-yingxuan"
+      ],
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "unavailable",
+      "error": "IncompleteRead(81500 bytes read)"
+    },
+    {
+      "url": "https://whc.unesco.org/zh/list/1765",
+      "slugs": [
+        "r23"
+      ],
+      "status": 200,
+      "bytes": 92460,
+      "content_type": "text/html;charset=UTF-8",
+      "sha256": "12758e5cbffef5c51178cea16863e11f632beeed0388aafc63010bf1f8013e60",
+      "text_length": 13053,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://zh.wikisource.org/zh-hans/容齋隨筆/卷四",
+      "slugs": [
+        "peng-qizi"
+      ],
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "unavailable",
+      "error": "'ascii' codec can't encode characters in position 13-16: ordinal not in range(128)"
+    },
+    {
+      "url": "https://jdz.gov.cn/zwzx/jrcd/t1050280.shtml",
+      "slugs": [
+        "zhan-shaolin"
+      ],
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "unavailable",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "url": "https://www.jcu.edu.cn/info/1175/37825.htm",
+      "slugs": [
+        "huang-yunpeng"
+      ],
+      "status": 200,
+      "bytes": 47160,
+      "content_type": "text/html",
+      "sha256": "999f50c25cdefb624da3163ae14ea0dabcb2552515c04b74b6b987c0b1806c66",
+      "text_length": 6067,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://books.google.com/books/about/%E6%99%AF%E5%BE%B7%E9%95%87%E6%B9%96%E7%94%B0%E7%AA%91%E5%9D%80.html?id=JJb20AEACAAJ",
+      "slugs": [
+        "r01"
+      ],
+      "status": 200,
+      "bytes": 83008,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "a78e6fb8613b57c9de9f68316eae1a22ae833afd5f03e22843a6ad8111289801",
+      "text_length": 1178,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://ci.nii.ac.jp/ncid/BD20508160",
+      "slugs": [
+        "r02"
+      ],
+      "status": 200,
+      "bytes": 57590,
+      "content_type": "text/html;charset=UTF-8",
+      "sha256": "7a7efe96f06f7ea3392456dd3eba88a1101ce0176248a1657ed37b4f27534b8c",
+      "text_length": 4508,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://archaeology.pku.edu.cn/info/1030/3492.htm",
+      "slugs": [
+        "r03"
+      ],
+      "status": 200,
+      "bytes": 91016,
+      "content_type": "text/html",
+      "sha256": "dd5ebb0d2db753868b24c88c00308b5584f0c7099edb6af24fa76311c721ee08",
+      "text_length": 10143,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://mt.sohu.com/20170804/n505431027.shtml",
+      "slugs": [
+        "tian-han"
+      ],
+      "status": 200,
+      "bytes": 123051,
+      "content_type": "text/html",
+      "sha256": "9d490cb4b06fe3ec4a60b94e88030ca04cddb8300f82e53f0d2faadd44572ee8",
+      "text_length": 14436,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://credit.jdz.gov.cn/cms/content/queryOfPreview.action?contentId=25152",
+      "slugs": [
+        "guo-moruo"
+      ],
+      "status": 200,
+      "bytes": 20099,
+      "content_type": "text/html;charset=utf-8",
+      "sha256": "be6c3901a6519c62ac0401a68ff516d71128cd2ee03d09787c3668bee26ab44c",
+      "text_length": 2965,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://qkzzs.jcu.edu.cn/info/1011/1768.htm",
+      "slugs": [
+        "r26"
+      ],
+      "status": 200,
+      "bytes": 14406,
+      "content_type": "text/html",
+      "sha256": "c21a0083358ca646696b243cb766727607760a7883233856cfa0dde3a1993d6f",
+      "text_length": 742,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://www.clc86.com/down/2516/",
+      "slugs": [
+        "r06"
+      ],
+      "status": 200,
+      "bytes": 112795,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "2eaa472ea2c37b629ec158875d8c2849c30f4abf5ba3cef439cbc2885d7a66db",
+      "text_length": 5548,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://www.jdz.gov.cn/zsnj/jdzsz/jdzszdwj/rwz/rwc/P020201114583753053261.pdf",
+      "slugs": [
+        "wang-qi"
+      ],
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "unavailable",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.dpm.org.cn/collection/ceramic/227155.html",
+      "slugs": [
+        "qianlong-emperor"
+      ],
+      "status": 200,
+      "bytes": 98831,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "96de4c0053d32c1e32e0cc9e09c9dee0a9a3d17e042bd6745b8c3de53d7a8e44",
+      "text_length": 6568,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://meta.librarydata.cn/metainfo?metaID=140420020230001039",
+      "slugs": [
+        "r07"
+      ],
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "unavailable",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "url": "https://cnki.istiz.org.cn/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFD2025&filename=LFWW202504007",
+      "slugs": [
+        "r34"
+      ],
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "unavailable",
+      "error": "The read operation timed out"
+    },
+    {
+      "url": "https://zgtc.cbpt.cnki.net/portal/journal/portal/client/paper/5f28d9a9085181a2bf7f7f7dab1b0763",
+      "slugs": [
+        "r09"
+      ],
+      "status": 200,
+      "bytes": 89992,
+      "content_type": "text/html;charset=UTF-8",
+      "sha256": "a69293e2d8c24ec49ab49822719001ba4d7326e38fd7b11d1af2d9e74ebb1cb3",
+      "text_length": 2835,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://qkzzs.jcu.edu.cn/info/1011/3023.htm",
+      "slugs": [
+        "r28"
+      ],
+      "status": 200,
+      "bytes": 14689,
+      "content_type": "text/html",
+      "sha256": "27d1d0c72acdce791ff62a1d94882921f6dc3ce3e8d3f83cec9d1fc257f46836",
+      "text_length": 740,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://www.cssn.cn/skgz/bwyc/202311/t20231103_5694635.shtml",
+      "slugs": [
+        "r27"
+      ],
+      "status": 200,
+      "bytes": 46046,
+      "content_type": "text/html",
+      "sha256": "1371241de628975db44a309d3e71226f8fd8913e36e38662588d458886540ef4",
+      "text_length": 5865,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://tys.jcu.edu.cn/info/1037/2078.htm",
+      "slugs": [
+        "wang-xiliang"
+      ],
+      "status": 200,
+      "bytes": 18542,
+      "content_type": "text/html",
+      "sha256": "0d4500ec5fa61ab6ab465ae616facccc19e16072aec581a5d690a8a8f0ab5d90",
+      "text_length": 1782,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://yangtze.silkroadinfo.org.cn/2022/0120/c702a3980057/page.htm",
+      "slugs": [
+        "r18"
+      ],
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "unavailable",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.ihchina.cn/project_details/14270/",
+      "slugs": [
+        "r19"
+      ],
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "unavailable",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "url": "https://qkzzs.jcu.edu.cn/zgtcgy/info/1025/2256.htm",
+      "slugs": [
+        "r20"
+      ],
+      "status": 200,
+      "bytes": 13823,
+      "content_type": "text/html",
+      "sha256": "937866de161a2e0a078161acee121596991ebb8cc752b93da18c59680a972ec9",
+      "text_length": 969,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://qkzzs.jci.edu.cn/zgtcgy/info/1025/3796.htm",
+      "slugs": [
+        "r21"
+      ],
+      "status": 200,
+      "bytes": 13660,
+      "content_type": "text/html",
+      "sha256": "7325f1138e246f769fa2ce1278c86782fd3de7478fe5a90b50e43f40abde692c",
+      "text_length": 939,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://qkzzs.jcu.edu.cn/zgtcgy/info/1025/1261.htm",
+      "slugs": [
+        "tao-cheng-jishi",
+        "tao-cheng-jishi"
+      ],
+      "status": 200,
+      "bytes": 13283,
+      "content_type": "text/html",
+      "sha256": "15521540babe029e4c668a35faa9e27c29e78754fef29aae0ce8aab3f5656ada",
+      "text_length": 881,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://www.chinaguyao.com/biaozhunhuajianshezhuanlan/2015-10-28/2708.html",
+      "slugs": [
+        "tong-bin"
+      ],
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "unavailable",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "url": "https://jdz.gov.cn/zjcd/mljdz/sj/t933002.shtml",
+      "slugs": [
+        "wang-bu",
+        "wang-bu"
+      ],
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "unavailable",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "url": "https://www.jci.edu.cn/info/1175/34080.htm",
+      "slugs": [
+        "liu-yuanchang"
+      ],
+      "status": 200,
+      "bytes": 46108,
+      "content_type": "text/html",
+      "sha256": "eecb538d3ea88115310b0d27e29d18373d42c1b6fe4c97a2d471cf3e145bc453",
+      "text_length": 5678,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://www.jcu.edu.cn/info/1175/33472.htm",
+      "slugs": [
+        "qin-xilin"
+      ],
+      "status": 200,
+      "bytes": 45489,
+      "content_type": "text/html",
+      "sha256": "128b5571472747de4441140e41dd3699f5947e74709e78f9f415fe0fff4694ff",
+      "text_length": 5556,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002643095",
+      "slugs": [
+        "r10"
+      ],
+      "status": 200,
+      "bytes": 43482,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "6aab89c51c3bf63752a4e180cb3561b3449d4307711380175e8f507a8f47adae",
+      "text_length": 5065,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://ir.pku.edu.cn/handle/20.500.11897/579503",
+      "slugs": [
+        "r11"
+      ],
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "unavailable",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "url": "https://qkzzs.jcu.edu.cn/zgtcgy/info/1025/2617.htm",
+      "slugs": [
+        "r12"
+      ],
+      "status": 200,
+      "bytes": 14844,
+      "content_type": "text/html",
+      "sha256": "6c49175276249f84fc9e19b98dd047cae3fc34657aa0b7c58d1f9896e932aa8b",
+      "text_length": 1066,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://cnki.istiz.org.cn/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFD2025&filename=JGWC202546019",
+      "slugs": [
+        "r33"
+      ],
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "unavailable",
+      "error": "HTTP Error 500: Internal Server Error"
+    },
+    {
+      "url": "https://jdzk.cbpt.cnki.net/portal/journal/portal/client/paper/7dcd72eae86f1be2fc190e7c87f77e70",
+      "slugs": [
+        "r35"
+      ],
+      "status": 200,
+      "bytes": 101058,
+      "content_type": "text/html;charset=UTF-8",
+      "sha256": "b27cb51c689076cf3cdff029cc5038b74e05a922da5e2466a66870b5ed22338d",
+      "text_length": 5221,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://qkzzs.jcu.edu.cn/info/1011/6133.htm",
+      "slugs": [
+        "r15"
+      ],
+      "status": 200,
+      "bytes": 16191,
+      "content_type": "text/html",
+      "sha256": "1edb3a3014611a6dcb3f2286ebbc9e96056fc49a5db831c9eca87408ab7ffcf6",
+      "text_length": 930,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://ir.pku.edu.cn/handle/20.500.11897/378201",
+      "slugs": [
+        "r16"
+      ],
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "unavailable",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "url": "https://qkzzs.jci.edu.cn/info/1011/2918.htm",
+      "slugs": [
+        "r13"
+      ],
+      "status": 200,
+      "bytes": 14337,
+      "content_type": "text/html",
+      "sha256": "2481404701438cb33e63e0d28238c6c7354910c66d1c9eda430f563d8552021c",
+      "text_length": 713,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://edt.cqvip.com/journal/tcxb/article/551164637",
+      "slugs": [
+        "r30"
+      ],
+      "status": 200,
+      "bytes": 66215,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "0be8d546d5f5611d31fc1fecd8258a2d8d0dbd98db0231de0ca9a9d042429f17",
+      "text_length": 856,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://www.ihchina.cn/Article/Index/detail?id=24981",
+      "slugs": [
+        "r31"
+      ],
+      "status": 200,
+      "bytes": 46734,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "1c9b8f3d2257e4fc0b0751a475b6b692e099895be0527621225773ae4ee427ee",
+      "text_length": 6455,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://xsg.jcu.edu.cn/info/1023/1280.htm",
+      "slugs": [
+        "r32"
+      ],
+      "status": 200,
+      "bytes": 23398,
+      "content_type": "text/html",
+      "sha256": "d3600efe528607af863757010d5a02a1bede6b7cf72e6d61b564f8f23f5a73f6",
+      "text_length": 4685,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://qkzzs.jcu.edu.cn/info/1011/5455.htm",
+      "slugs": [
+        "r14"
+      ],
+      "status": 200,
+      "bytes": 14755,
+      "content_type": "text/html",
+      "sha256": "7091199657dc39af263ded03cfd5ea6f9f01a48008702e643a118ff2ea1fe036",
+      "text_length": 759,
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "retrieved_requires_content_review"
+    },
+    {
+      "url": "https://cnki.istiz.org.cn/kcms/detail/detailall.aspx?dbcode=CJFQ&dbname=CJFD2025&filename=zgtc202506013",
+      "slugs": [
+        "r17"
+      ],
+      "retrieval_checked_on": "2026-10-06",
+      "reading_scope": "not_yet_reviewed",
+      "result": "unavailable",
+      "error": "HTTP Error 500: Internal Server Error"
+    }
+  ]
+}

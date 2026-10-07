@@ -1,15 +1,36 @@
 # 图片库
 
-这里开始进入**馆藏级图片模式**：本页展示的历史瓷器照片全部来自官方博物馆馆藏页面，不使用拍卖行、商业图库、博客或无来源转载图。
+图片馆以具体藏品为单位展示陶瓷图像。阅读图片时，可同时查看器物名称、馆方断代和官方对象记录，再与窑址、工艺和专题正文对照。图片能够帮助观察造型与装饰，不能单独代替产地、年代和历史用途的研究。
 
-目前第一批采用 **The Metropolitan Museum of Art（大都会艺术博物馆）Open Access / Public Domain** 馆藏图像。每件图片同时保留官方馆藏页面、年代、窑口/产地和器物信息，方便继续做学术核验。
+当前展示区包括故宫博物院与大都会艺术博物馆的具体藏品图像。资料采集范围同时纳入**故宫博物院、景德镇中国陶瓷博物馆**，并扩展到大英博物馆、维多利亚与艾尔伯特博物馆、克利夫兰艺术博物馆及史密森尼学会国立亚洲艺术博物馆。各机构的查阅入口、研究用途与图像核验要求见[博物馆馆藏、图像与研究资料](../research/museum-sources.md)。不同机构的图像遵循各自条款，故宫图片不标为公共领域或CC0。
 
 <div class="timeline-method-note">
-<strong>图片使用原则</strong><br>
-官网展示的是博物馆官方馆藏影像；页面同时标明博物馆与官方馆藏记录。后续接入故宫博物院、中国国家博物馆、景德镇中国陶瓷博物馆、大英博物馆等官方馆藏时，也必须逐件核对其图片使用条款，只有明确允许网页展示或具有相应授权/开放许可的图片才进入公共图谱。
+<strong>对象核验与图像许可</strong><br>
+官方来源帮助核验器物信息，图片能否转载则需要单独核对使用条款。每张新增图片均应对应具体藏品记录，保留馆藏编号、来源页面、许可依据、署名与核验日期。权利不明时提供官方页面入口，取得明确许可或授权后再展示图像。
 </div>
 
-## 唐代 · 越窑、邢窑与长沙窑
+## 故宫博物院：釉彩组合与铜红釉
+
+各种釉彩大瓶将多种高温与低温釉彩组织在同一器物上；两件郎窑红瓶则可用于观察器型、积釉和口部釉层变化。以下为官方对象记录中的原图，随藏品讲解引用，保留出处，不进行裁切、去水印或改色。图像版权归故宫博物院，使用与再利用遵循[官网版权声明](https://www.dpm.org.cn/bottom/privacy/236341.html)，不构成开放许可。
+
+<div class="official-gallery-grid">
+  <figure class="official-gallery-card">
+    <img src="https://img.dpm.org.cn/Uploads/Picture/dc/63%5B1024%5D.jpg" alt="故宫博物院藏清乾隆各种釉彩大瓶正面" loading="lazy" data-museum-image data-source-url="https://www.dpm.org.cn/collection/ceramic/226759.html">
+    <figcaption><b>各种釉彩大瓶</b><span>清乾隆 · 故00154493 · 高86.4厘米</span><a href="https://www.dpm.org.cn/collection/ceramic/226759.html" target="_blank" rel="noopener">图像出处：故宫博物院网站 · 版权归故宫博物院</a></figcaption>
+  </figure>
+  <figure class="official-gallery-card">
+    <img src="https://img.dpm.org.cn/Uploads/Picture/dc/15514%5B1024%5D.jpg" alt="故宫博物院藏清康熙郎窑红釉穿带直口瓶" loading="lazy" data-museum-image data-source-url="https://www.dpm.org.cn/collection/ceramic/227155.html">
+    <figcaption><b>郎窑红釉穿带直口瓶</b><span>清康熙 · 故00148227 · 高20.8厘米</span><a href="https://www.dpm.org.cn/collection/ceramic/227155.html" target="_blank" rel="noopener">图像出处：故宫博物院网站 · 版权归故宫博物院</a></figcaption>
+  </figure>
+  <figure class="official-gallery-card">
+    <img src="https://img.dpm.org.cn/Uploads/Picture/dc/53101%5B1024%5D.jpg" alt="故宫博物院藏清康熙郎窑红梅瓶" loading="lazy" data-museum-image data-source-url="https://www.dpm.org.cn/collection/ceramic/227698.html">
+    <figcaption><b>郎窑红梅瓶</b><span>清康熙 · 馆方记录：景德镇制</span><a href="https://www.dpm.org.cn/collection/ceramic/227698.html" target="_blank" rel="noopener">图像出处：故宫博物院网站 · 版权归故宫博物院</a></figcaption>
+  </figure>
+</div>
+
+各种釉彩大瓶的馆方说明由郭玉昆撰写，列举青花、釉上彩和多种釉色，并解释高温部分先烧、低温部分后烧的工艺关系。穿带直口瓶的说明亦署郭玉昆，记录器足两侧穿孔与底部御题诗。本站使用独立表述介绍对象；摄影者未在所查页面单独署名，不将说明作者推定为摄影者。详见[烧成](../craft/kiln-firing.md)与[颜色釉](../craft/colored-glaze.md)。
+
+## 唐代 · 邢窑与长沙窑
 
 <div class="official-gallery-grid">
   <figure class="official-gallery-card">
@@ -43,7 +64,7 @@
   </figure>
 </div>
 
-## 元代 · 景德镇青花
+## 元明 · 景德镇青花
 
 <div class="official-gallery-grid">
   <figure class="official-gallery-card">
@@ -71,7 +92,7 @@
 
 ## 图片核验说明
 
-- **图像来源**：The Metropolitan Museum of Art 官方 Collection API / 官方馆藏记录。
-- **开放状态**：上述馆藏记录明确标注 Public Domain / Open Access。
+- **图像来源**：故宫博物院官方藏品记录，以及 The Metropolitan Museum of Art 官方 Collection API / 馆藏记录。
+- **权利状态**：故宫图像采用官网条款，版权归故宫博物院；Met既有图像须逐件以记录中的Public Domain / Open Access标记为准。不得把不同来源合并声明为全部开放。
 - **网页使用方式**：当前网站直接调用博物馆官方图像服务，并保留官方馆藏页面入口；不把第三方图片冒充为馆藏照片。
-- **后续计划**：将这些图像进一步写入器物数据库，增加“馆藏机构、馆藏编号、年代、窑口、器型、来源 URL、图像许可、核验日期”等字段，让图片和知识条目真正一一绑定。
+- **新增来源**：故宫及国内外博物馆均可作为对象资料与图片候选来源。每件图片核验通过后再与知识条目绑定，不按机构名称自动批准全部图片。

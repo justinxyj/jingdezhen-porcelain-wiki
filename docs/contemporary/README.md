@@ -1,26 +1,29 @@
-# 当代景德镇陶瓷
+# 当代景德镇：制作、学习、创作与保护
 
-<div class="museum-hero">
-  <div>
-    <div class="eyebrow">CONTEMPORARY · 当代</div>
-    <h1>传统没有停在过去，它正在继续生长。</h1>
-    <p>从非遗、材料研究与教育，到文化遗产保护与当代艺术，看见今天的景德镇如何继续书写陶瓷。</p>
-  </div>
-  <div class="museum-hero-mark">今日<br>瓷都</div>
-</div>
+当代景德镇的陶瓷活动包含制造、设计、艺术创作、教学、研究、收藏和公共文化。它们共享城市的材料与技艺资源，又有不同的目标和评价方式。了解今天，需要把历史背景与当下机构、统计和实践分开说明。
 
-<div class="museum-grid">
-  <a class="museum-card wiki-card-link" href="education/"><span>EDUCATION · 教育</span><h3>教育与研究</h3><p>高校、科研与传统技艺的持续传承。</p><span class="wiki-read-more">探索教育</span></a>
-  <a class="museum-card wiki-card-link" href="industry/"><span>INDUSTRY · 产业</span><h3>产业与社会</h3><p>现代生产、城市生活与陶瓷产业生态。</p><span class="wiki-read-more">探索产业</span></a>
-  <a class="museum-card wiki-card-link" href="art/"><span>ART · 艺术</span><h3>当代艺术</h3><p>传统材料与当代创作之间的新关系。</p><span class="wiki-read-more">探索艺术</span></a>
-  <a class="museum-card wiki-card-link" href="heritage/"><span>HERITAGE · 遗产</span><h3>世界遗产与保护</h3><p>从窑址、作坊到完整手工制瓷体系的保护。</p><span class="wiki-read-more">探索遗产</span></a>
-  <a class="museum-card wiki-card-link" href="future/"><span>FUTURE · 未来</span><h3>数字化与未来</h3><p>数字技术如何重新连接陶瓷知识、城市与世界。</p><span class="wiki-read-more">探索未来</span></a>
-</div>
+## 技艺如何继续
 
-## 今天的景德镇
+拉坯、利坯、画坯、施釉与烧成不仅是历史术语，也涉及经验的学习和协作。2006年列入第一批国家级非遗的景德镇手工制瓷技艺，保护的是多环节的知识与实践，不能只以几件精品或某位名家的声誉衡量。[^heritage]
 
-传统工艺、现代工业、教育科研、非遗保护与文化遗产保护共同构成今天的陶瓷文化生态。[R19][R22]
+## 教育与技术
 
-景德镇手工制瓷技艺于2006年列入第一批国家级非物质文化遗产代表性项目名录。[R19]
+陶业学堂校史中的学理、技能、试验窑和企业协作，为理解陶瓷教育提供历史背景。今天的课程与机构数据仍须以现行官方资料核对，不能将早期校史当作今日专业设置。[^education]
 
-2026年“景德镇手工瓷业遗存”列入《世界遗产名录》后，遗产研究进一步关注原料、燃料、窑炉、生产组织与城市空间组成的完整手工制瓷产业链。[R23]
+## 创作与产业
+
+作品的作者表达、制作协作与产品用途需要分别理解。工业产品、艺术作品、旅游消费和遗产展示也不能共用同一种统计口径。具体数量、收入和开放状态应注明年份与来源。
+
+## 继续阅读
+
+- [教育与研究](education.md)
+- [产业与社会](industry.md)
+- [当代艺术](art.md)
+- [遗产与保护](heritage.md)
+- [数字化](future.md)
+
+## 资料来源
+
+[^heritage]: 中国非物质文化遗产网：“景德镇手工制瓷技艺”，项目Ⅷ-7，2006年第一批。[项目页](https://www.ihchina.cn/project_details/14270/)。
+
+[^education]: 景德镇陶瓷大学网上校史馆：《改良陶业 创办中国陶业学堂》。[校史资料](https://xsg.jcu.edu.cn/info/1023/1280.htm)。

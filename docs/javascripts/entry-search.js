@@ -69,8 +69,8 @@
     const status=document.getElementById('jdm-search-status'),results=document.getElementById('jdm-search-results'),count=document.getElementById('jdm-search-count');
     if(!status||!results)return;
     syncUrl();
-    status.textContent='正在连接统一知识索引……';
-    results.innerHTML='<div class="jdm-search-loading">正在整理知识世界、时代、空间与关系……</div>';
+    status.textContent='正在查找条目……';
+    results.innerHTML='<div class="jdm-search-loading">正在加载搜索结果……</div>';
     try{
       const data=await window.JDM_KNOWLEDGE.searchDiscoveryPage(state.q,{limit:12,recommendationLimit:3,worldSlug:state.world||null,category:state.category||null,era:state.era||null,lane:state.lane||null,hasMap:state.hasMap?state.hasMap==='true':null,hasTimeline:state.hasTimeline?state.hasTimeline==='true':null});
       if(seq!==runSeq)return;

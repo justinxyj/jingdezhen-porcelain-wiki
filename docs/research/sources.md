@@ -1,6 +1,6 @@
 # 核心文献与在线资料
 
-以下书目是当前 Wiki 正文的第一批核心依据，按考古报告、历史文献、地方志、学术论文、文博机构资料和正式文化遗产资料整理。补充书目见[补充文献库](sources-addendum.md)。
+以下书目整理本站已有的参考资料，按考古报告、历史文献、地方志、学术论文、文博机构资料和文化遗产资料分类。补充书目见[补充文献库](sources-addendum.md)，国内外馆藏与图像入口见[博物馆资料目录](museum-sources.md)。书目收录不等于已核实其中全部结论；引用时还需核对具体论据、页码及版本。
 
 ## 一、考古发掘与遗址研究
 
@@ -26,9 +26,9 @@
 
 **[R09] 陈雨前：《宋代景德镇青白瓷的历史分期及其特征》**，《中国陶瓷》，2007年第6期，63—68页。[论文页面](https://zgtc.cbpt.cnki.net/portal/journal/portal/client/paper/5f28d9a9085181a2bf7f7f7dab1b0763)
 
-**[R10] 李梓豪、김병율：《宋代湖田窑青白瓷历史和发展脉络的考察研究》**，《한국도자학연구》，2020，17(2):61—78。[论文页面](https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002643095)
+**[R10] 李梓豪、김병율：《宋代湖田窑青白瓷历史和发展脉络的考察研究》**，《한국도자학연구》，2020，17(2):61—78，DOI:10.22991/ksca.2020.17.2.61。[论文页面](https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002643095)
 
-**[R11] 肖红艳、艾沁哲、崔剑锋：《景德镇瓷器生产“二元配方”起源初探——兼论高岭土开发史》**，《故宫博物院院刊》，2020年第5期。[北京大学机构库](https://ir.pku.edu.cn/handle/20.500.11897/579503) · [故宫博物院 PDF](https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf)
+**[R11] 肖红艳、艾沁哲、崔剑锋：《景德镇瓷器生产“二元配方”起源初探——兼论高岭土开发史》**，《故宫博物院院刊》，2020年第5期，23—33页。[北京大学机构库](https://ir.pku.edu.cn/handle/20.500.11897/579503) · [故宫博物院 PDF](https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf)
 
 **[R12] 郑乃章、韩光大、曹建文、曹春娥：《景德镇陶瓷科学技术史研究的发展与展望》**，2007。[论文页面](https://qkzzs.jcu.edu.cn/zgtcgy/info/1025/2617.htm)
 
@@ -72,7 +72,7 @@
 
 **[R22] 景德镇市人民政府：《景德镇陶瓷文化生态保护区总体规划（2021—2035年）》**。[规划全文](https://jdz.gov.cn/zwgk/zfgb/2024n/d3q/szfwj_3307/t958190.shtml)
 
-**[R23] UNESCO World Heritage Centre：Jingdezhen Handicraft Porcelain Industry Sites / 景德镇手工瓷业遗存**，2026年列入《世界遗产名录。[世界遗产中心](https://whc.unesco.org/zh/list/1765)
+**[R23] UNESCO World Heritage Centre：Jingdezhen Handicraft Porcelain Industry Sites / 景德镇手工瓷业遗存**，2026年列入《世界遗产名录》，编号1765。[正式条目](https://whc.unesco.org/zh/list/1765) · [委员会决定48 COM 8B.16](https://whc.unesco.org/en/decisions/9170/)。2026年10月6日查阅。
 
 **[R24] 景德镇市人民政府：“景德镇手工瓷业遗存”申遗大事记**。[在线资料](https://jdz.gov.cn/zwzx/jrcd/t1099484.shtml)
 

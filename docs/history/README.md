@@ -1,43 +1,48 @@
-# 景德镇陶瓷史概览
+# 景德镇陶瓷史：产品、制度与城市
 
-<div class="museum-hero">
-  <div>
-    <div class="eyebrow">HISTORY · 历史</div>
-    <h1>沿着窑火，看见一座城市如何成为瓷都。</h1>
-    <p>从早期窑业、青白瓷与青花，到御窑、全球贸易以及近现代转型，把景德镇放回真实的历史时间里阅读。</p>
-  </div>
-  <div class="museum-hero-mark">千年<br>窑火</div>
-</div>
+景德镇陶瓷史是在长期生产中形成的技术、器物和社会关系。理解其变化，需要把原料、窑炉、劳动分工、使用需求和贸易联系起来，而不是把一连串名窑、名器与朝代标签当作全部历史。
 
-<div class="museum-stats"><div><strong>唐—五代</strong><span>早期窑业</span></div><div><strong>宋</strong><span>青白瓷</span></div><div><strong>元—明—清</strong><span>青花与御窑</span></div><div><strong>近现代</strong><span>转型与新生</span></div></div>
+## 早期窑业与宋元产品
 
-## 历史框架
+早期窑址提供生产活动与器物分期的证据；地方建置记录则解释地名和行政沿革。二者有关联，但不能以改名或设镇日期替代创烧年代。2020年原料论文讨论早期景德镇地区窑业，国家非遗简介则从五代至明清概述技术体系的发展，两类材料应按其范围分别使用。[^materials][^heritage]
 
-| 时期 | 核心变化 |
-|---|---|
-| 唐—五代 | 地方窑业发展，为后续生产奠定基础 |
-| 宋 | 青白瓷成为代表性产品，生产与市场进一步扩张 |
-| 元 | 青花、釉里红等釉下彩绘体系发展 |
-| 明 | 御窑体系建立并发展，官作与民窑共同构成生产体系 |
-| 清 | 彩瓷、颜色釉继续发展，外销与全球贸易进一步扩大 |
-| 近代 | 传统手工业与近代企业、教育和新技术发生转型 |
-| 1949年以来 | 科技、教育与现代工业进入景德镇陶瓷发展史 |
-| 2026 | “景德镇手工瓷业遗存”列入《世界遗产名录》 |
+宋元专题围绕青白瓷、成型与装饰、釉下彩绘及原料变化展开。青白瓷和青花并非在朝代更替时整齐替换；原料技术的年代也存在不同判定标准。[宋元专题](song-yuan.md)说明这些问题之间的关系。
 
-## 一座城市的形成
+## 明清生产制度
 
-景德镇并不是在某一年突然成为“瓷都”，而是在长期窑业发展、技术积累、生产组织与市场扩张中逐步形成区域性制瓷中心。[R01][R07][R12]
+御窑考古把宫廷产品与窑炉、作坊、工具、半成品和废弃物连接起来。北京大学资料据发掘地层讨论明御器厂的建立和分区，也说明晚明御器厂生产变化与民窑继续活动的关系。官作与民窑不能单纯理解为精美与粗糙两类产品。[^kilns]
 
-地方志资料记载，景德镇在宋景德元年置镇，此前东晋称新平镇、唐称昌南镇；1949年就镇设市。[R07]
+清代彩瓷和颜色釉还涉及绘画、材料与使用环境。粉彩研究把官窑、民窑和不同时期的装饰风格放在各自文化情境中，不以一个“鼎盛”评价替代具体解释。[^fencai]
 
-## 继续探索
+## 外销与海外生活
 
-<div class="museum-grid">
-  <a class="museum-card wiki-card-link" href="tang-wudai/"><span>TANG · FIVE DYNASTIES</span><h3>唐五代</h3><p>早期窑业、地方生产与区域交流。</p><span class="wiki-read-more">进入时代</span></a>
-  <a class="museum-card wiki-card-link" href="song-yuan/"><span>SONG · YUAN</span><h3>宋元</h3><p>青白瓷、青花与窑业格局的变化。</p><span class="wiki-read-more">进入时代</span></a>
-  <a class="museum-card wiki-card-link" href="ming-qing/"><span>MING · QING</span><h3>明清</h3><p>御窑、彩瓷与全球贸易网络。</p><span class="wiki-read-more">进入时代</span></a>
-  <a class="museum-card wiki-card-link" href="modern/"><span>MODERN</span><h3>近现代</h3><p>传统手工业、工业化与当代转型。</p><span class="wiki-read-more">进入时代</span></a>
-</div>
+景德镇外销瓷既面向日本等亚洲市场，也进入欧洲贸易与居室陈设。V&A馆藏的克拉克瓷盘、油醋壶和盖罐显示，海外需求涉及器形、用途和装饰，而不仅是销售地点。[外销与交流专题](export-and-exchange.md)从具体对象展开，并讨论十九世纪英国青花收藏。
 
+## 近现代转型
+
+企业、学校和试验生产改变了知识与劳动的组织方式。中国陶业学堂校史显示，学理、技能、煤窑试验与企业协作共同进入陶业改良。这些变化并不意味着全部手工技艺立即消失，反而需要按具体工序、机构和时期研究。[^education]
+
+## 史料之间怎样互证
+
+窑址材料、传世器、古籍和现代检测分别回答不同问题。一个地方的“最早”产品、一种材料的“发明”和一种工艺的“普及”也不是同一件事。正文需要给出时间范围、证据对象与观点归属，保留不能确定的部分。
+
+## 分期阅读
+
+- [唐五代：早期窑业](tang-wudai.md)
+- [宋元：青白瓷、青花与技术变化](song-yuan.md)
+- [明清：御窑、民窑与彩瓷](ming-qing.md)
+- [近现代：企业、教育与生产转型](modern.md)
 
 <section class="jdm-world-browser" data-world-browser="history" aria-label="知识世界条目"></section>
+
+## 资料来源
+
+[^materials]: 肖红艳、艾沁哲、崔剑锋：《景德镇瓷器生产“二元配方”起源初探——兼论高岭土开发史》，《故宫博物院院刊》2020年第5期，第23—33页。[论文原文](https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf)。
+
+[^heritage]: 中国非物质文化遗产网：“景德镇手工制瓷技艺”，项目Ⅷ-7，2006年第一批。[项目页](https://www.ihchina.cn/project_details/14270/)。
+
+[^kilns]: 北京大学考古文博学院：《北大考古与“百年百大考古发现”——景德镇明清御窑厂遗址》。[官方资料](https://archaeology.pku.edu.cn/info/1030/3492.htm)。
+
+[^fencai]: 汪凌川：《粉彩工艺与艺术风格的演变》，清华大学博士论文，2013。[公开摘要](https://newetds.lib.tsinghua.edu.cn/qh/paper/summary?dbCode=ETDQH&sysId=215437)；本页未引用未读到的全文细节。
+
+[^education]: 景德镇陶瓷大学网上校史馆：《改良陶业 创办中国陶业学堂》。[校史资料](https://xsg.jcu.edu.cn/info/1023/1280.htm)。

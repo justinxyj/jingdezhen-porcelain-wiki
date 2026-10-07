@@ -1,0 +1,373 @@
+{
+  "sources": [
+    {
+      "id": "dpm-materials",
+      "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "full_pdf",
+      "sha256": "5bc8bff964bad978bfb7da0db47bb2792844737f9e8f92fc2484de05ffe2883f"
+    },
+    {
+      "id": "pku-kilns",
+      "url": "https://archaeology.pku.edu.cn/info/1030/3492.htm",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "institution_article",
+      "sha256": "dd5ebb0d2db753868b24c88c00308b5584f0c7099edb6af24fa76311c721ee08"
+    },
+    {
+      "id": "craft-project",
+      "url": "https://www.ihchina.cn/project_details/14270/",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "official_project_record",
+      "sha256": "6c7b4aa7dfe464cab8bf96cc3d632467c6e2d826f92311ff7d127058957e9293"
+    },
+    {
+      "id": "fencai-thesis",
+      "url": "https://newetds.lib.tsinghua.edu.cn/qh/paper/summary?dbCode=ETDQH&sysId=215437",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "abstract_only",
+      "sha256": "07a1413e0b26f03359b5429bc7da4b1654fd6196c211c1a23f8b81163ccf4773"
+    },
+    {
+      "id": "hutian-study",
+      "url": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002643095",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "abstract_only",
+      "sha256": "6fd85453b95f0e0cd1186ea1f707009052aa80c18ba25d13e8ec28e0af7b5af1"
+    },
+    {
+      "id": "copper-red",
+      "url": "https://www.ihchina.cn/Article/Index/detail?id=24981",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "public_article",
+      "sha256": "0e485c67554b5e1f871c66db3d46cb96c68ac2c6d1a8127c187581a79367a3a2"
+    },
+    {
+      "id": "education-history",
+      "url": "https://xsg.jcu.edu.cn/info/1023/1280.htm",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "institution_history",
+      "sha256": "d3600efe528607af863757010d5a02a1bede6b7cf72e6d61b564f8f23f5a73f6"
+    },
+    {
+      "id": "unesco-site",
+      "url": "https://whc.unesco.org/zh/list/1765",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "official_site_record",
+      "sha256": "25a7f97755fc4d739cbacf1f984409122b772d9425a1bebab29e64bcd7667bd2"
+    },
+    {
+      "id": "unesco-decision",
+      "url": "https://whc.unesco.org/en/decisions/9170/",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "official_decision",
+      "sha256": "b15a2c6de7e75c588ce694c7a20bafcb765866c5775264740fff7901f41962b2"
+    },
+    {
+      "id": "va-bluewhite",
+      "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "museum_article",
+      "sha256": "e70a5df214f73e56bbdef8edbebde4c195af7f9d9ca6640aa102e996e4dbbf08"
+    },
+    {
+      "id": "palace-collection",
+      "url": "https://www.dpm.org.cn/collection/ceramics.html",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "collection_overview",
+      "sha256": "2a1c31fad3df3226487f9f23211da8fd1abdfde10ee4f9cdc59821092523ac44"
+    },
+    {
+      "id": "palace-copyright",
+      "url": "https://www.dpm.org.cn/bottom/privacy/236341.html",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "terms_read_not_open_license",
+      "sha256": "db6695ead0d2e97e7071db23a268dbd75d3fce47f1694c1914b53f62c826dc82"
+    },
+    {
+      "id": "palace-vase",
+      "url": "https://www.dpm.org.cn/collection/ceramic/226759.html",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "object_record",
+      "sha256": "f9ec090e9224450eae1f334441deaa5bb70bd8c5119e83aaa6c3706a57975ce1"
+    },
+    {
+      "id": "palace-red-bottle",
+      "url": "https://www.dpm.org.cn/collection/ceramic/227155.html",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "object_record",
+      "sha256": "96de4c0053d32c1e32e0cc9e09c9dee0a9a3d17e042bd6745b8c3de53d7a8e44"
+    },
+    {
+      "id": "palace-meiping",
+      "url": "https://www.dpm.org.cn/collection/ceramic/227698.html",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "object_record",
+      "sha256": "2d6ed7dcbf052fc845c3b2ab8c50ef1e3ccbed005616308888125bb83fb004eb"
+    },
+    {
+      "id": "bm-dish",
+      "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "object_record",
+      "sha256": "740e5564cec024a2e0b164969318f1d3839fea4c85fcfd2135438165c8627e72"
+    },
+    {
+      "id": "wiki-jdz",
+      "url": "https://zh.wikipedia.org/wiki/%E6%99%AF%E5%BE%B7%E9%95%87%E5%B8%82",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "secondary_navigation_not_independent_technical_evidence",
+      "sha256": "14ae05dc637704e7ecf0f3fef20dee644479bd04667ae0b362871744dde2d5b9"
+    },
+    {
+      "id": "baidu-encyclopedia",
+      "url": "https://baike.baidu.com/item/%E6%99%AF%E5%BE%B7%E9%95%87%E7%93%B7%E5%99%A8",
+      "checked_on": "2026-10-06",
+      "status": "no_usable_body_http_503"
+    },
+    {
+      "id": "jdz-museum",
+      "url": "http://tcg.jdzol.net/",
+      "checked_on": "2026-10-06",
+      "status": "no_usable_collection_body"
+    },
+    {
+      "id": "review-birds",
+      "url": "https://qkzzs.jcu.edu.cn/info/1011/1768.htm",
+      "title": "马俐：清中期宫廷花鸟画风对粉彩花鸟装饰的影响，公开摘要",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "abstract_and_bibliographic_record",
+      "sha256": "c21a0083358ca646696b243cb766727607760a7883233856cfa0dde3a1993d6f"
+    },
+    {
+      "id": "review-bnf",
+      "url": "https://heritage.bnf.fr/france-chine/porcelaine",
+      "title": "Jean-Pierre Drège：Porcelaine，法国国家图书馆专题",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "institution_article",
+      "sha256": "97f1ed655d882882222c3775ede38649ccedb06210407e7b891876b4fa8b0726"
+    },
+    {
+      "id": "review-earlyprc",
+      "url": "https://qkzzs.jcu.edu.cn/zgtcgy/info/1025/2256.htm",
+      "title": "郑乃章、杨敏、马志伟、熊春华：1949～1966年景德镇陶瓷科技文献比较研究，公开摘要",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "abstract_and_bibliographic_record",
+      "sha256": "937866de161a2e0a078161acee121596991ebb8cc752b93da18c59680a972ec9"
+    },
+    {
+      "id": "review-eggshell",
+      "url": "https://qkzzs.jci.edu.cn/zgtcgy/info/1025/3796.htm",
+      "title": "况立、陈宁：改革开放以来景德镇薄胎瓷工艺的发展演变及其特点，2023，公开摘要",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "abstract_and_bibliographic_record",
+      "sha256": "7325f1138e246f769fa2ce1278c86782fd3de7478fe5a90b50e43f40abde692c"
+    },
+    {
+      "id": "review-export",
+      "url": "https://www.metmuseum.org/essays/east-and-west-chinese-export-porcelain",
+      "title": "Alice Cooney Frelinghuysen、Jeffrey H. Munger：East and West: Chinese Export Porcelain，Met，2003",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "institution_article",
+      "sha256": "16ec97d25ff24a8f22a258d4d156c77aadb00b4605d2b2b6044e451b18736042"
+    },
+    {
+      "id": "review-halfknife",
+      "url": "https://qkzzs.jcu.edu.cn/info/1011/5455.htm",
+      "title": "陈丽萍、张晓雯、陈韬聿：青白瓷“半刀泥”装饰刻花技艺活态传承研究，公开摘要",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "abstract_and_bibliographic_record",
+      "sha256": "7091199657dc39af263ded03cfd5ea6f9f01a48008702e643a118ff2ea1fe036"
+    },
+    {
+      "id": "review-huang",
+      "url": "https://www.jcu.edu.cn/info/1175/37825.htm",
+      "title": "景德镇陶瓷大学校友资料：黄云鹏",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "institution_biography_historical_record",
+      "sha256": "999f50c25cdefb624da3163ae14ea0dabcb2552515c04b74b6b987c0b1806c66"
+    },
+    {
+      "id": "review-liu",
+      "url": "https://www.jci.edu.cn/info/1175/34080.htm",
+      "title": "景德镇陶瓷大学校友资料：刘远长",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "institution_biography_historical_record",
+      "sha256": "eecb538d3ea88115310b0d27e29d18373d42c1b6fe4c97a2d471cf3e145bc453"
+    },
+    {
+      "id": "review-longfellow",
+      "url": "https://www.hwlongfellow.org/poems_poem.php?pid=307",
+      "title": "Henry Wadsworth Longfellow：Keramos，诗歌原文",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "literary_text",
+      "sha256": "bc65ea20fca1ef971a3197346dac82185d6134755237ac2e2152e07d9cd9e77d"
+    },
+    {
+      "id": "review-one",
+      "url": "https://qkzzs.jci.edu.cn/info/1011/2918.htm",
+      "title": "郑乃章、莫云杰、苗立锋、熊春华：景德镇传统陶瓷坯体“一元”配方研究，公开摘要",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "abstract_and_bibliographic_record",
+      "sha256": "2481404701438cb33e63e0d28238c6c7354910c66d1c9eda430f563d8552021c"
+    },
+    {
+      "id": "review-pigment",
+      "url": "https://qkzzs.jcu.edu.cn/info/1011/3023.htm",
+      "title": "曹春娥、陈云霞、卢希龙：粉彩瓷与无毒粉彩颜料的研究，公开摘要",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "abstract_and_bibliographic_record",
+      "sha256": "27d1d0c72acdce791ff62a1d94882921f6dc3ce3e8d3f83cec9d1fc257f46836"
+    },
+    {
+      "id": "review-qin",
+      "url": "https://www.jcu.edu.cn/info/1175/33472.htm",
+      "title": "景德镇陶瓷大学校友资料：秦锡麟",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "institution_biography_historical_record",
+      "sha256": "128b5571472747de4441140e41dd3699f5947e74709e78f9f415fe0fff4694ff"
+    },
+    {
+      "id": "review-qingbaiculture",
+      "url": "https://jdzk.cbpt.cnki.net/portal/journal/portal/client/paper/7dcd72eae86f1be2fc190e7c87f77e70",
+      "title": "万芳、何其乐、桑月侠：“文化交流”视域下宋代景德镇青白瓷研究，公开摘要",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "abstract_and_bibliographic_record",
+      "sha256": "b27cb51c689076cf3cdff029cc5038b74e05a922da5e2466a66870b5ed22338d"
+    },
+    {
+      "id": "review-qingbaiperiod",
+      "url": "https://zgtc.cbpt.cnki.net/portal/journal/portal/client/paper/5f28d9a9085181a2bf7f7f7dab1b0763",
+      "title": "陈雨前：宋代景德镇青白瓷的历史分期及其特征，2007年第6期，公开摘要及书目",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "abstract_and_bibliographic_record",
+      "sha256": "a69293e2d8c24ec49ab49822719001ba4d7326e38fd7b11d1af2d9e74ebb1cb3"
+    },
+    {
+      "id": "review-redmicro",
+      "url": "https://edt.cqvip.com/journal/tcxb/article/551164637",
+      "title": "吴隽等：清代官窑祭红釉瓷的釉层结构及其对呈色的影响，2013，34(4):476—481，公开摘要",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "abstract_and_bibliographic_record",
+      "sha256": "0be8d546d5f5611d31fc1fecd8258a2d8d0dbd98db0231de0ca9a9d042429f17"
+    },
+    {
+      "id": "review-science",
+      "url": "https://qkzzs.jcu.edu.cn/zgtcgy/info/1025/2617.htm",
+      "title": "郑乃章、韩光大、曹建文、曹春娥：景德镇陶瓷科学技术史研究的发展与展望，公开摘要",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "abstract_and_bibliographic_record",
+      "sha256": "6c49175276249f84fc9e19b98dd047cae3fc34657aa0b7c58d1f9896e932aa8b"
+    },
+    {
+      "id": "review-statues",
+      "url": "https://qkzzs.jcu.edu.cn/info/1011/6133.htm",
+      "title": "赵兰涛、黄细乐、毛青：宋元景德镇窑青白瓷人物造像技艺研究，公开摘要",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "abstract_and_bibliographic_record",
+      "sha256": "1edb3a3014611a6dcb3f2286ebbc9e96056fc49a5db831c9eca87408ab7ffcf6"
+    },
+    {
+      "id": "review-visit",
+      "url": "https://gl.jdz.gov.cn/zwzx/gzdt/t847243.shtml",
+      "title": "景德镇市公路事业发展中心：参观陶瓷博物馆活动记录，2022-09-23",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "institution_article",
+      "sha256": "a1497cce58a261a10d47bba9770b5f976fc0044cd9462d636f1a350ad7007d7c"
+    },
+    {
+      "id": "review-wang",
+      "url": "https://tys.jcu.edu.cn/info/1037/2078.htm",
+      "title": "中国轻工业陶瓷研究所：王锡良，2021-10-29",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "institution_biography_historical_record",
+      "sha256": "0d4500ec5fa61ab6ab465ae616facccc19e16072aec581a5d690a8a8f0ab5d90"
+    },
+    {
+      "id": "review-yongxuan",
+      "url": "https://img.dpm.org.cn/Uploads/File/2021/07/23/u60fa314146024.pdf",
+      "title": "孙悦：明初永宣官窑对清代陶瓷艺术的影响，《紫禁城》2021年第7期，相关正文",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "relevant_pdf_sections",
+      "sha256": "b3ba915f9b6bd5af1d8bafcc23b79abed2e02fd744393fa82e7bb03ce889d633"
+    },
+    {
+      "id": "review-zhang",
+      "url": "https://tys.jcu.edu.cn/info/1037/2083.htm",
+      "title": "中国轻工业陶瓷研究所：张松茂，2021-10-29",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "institution_biography_historical_record",
+      "sha256": "a91d3d3e03d4d54e930044a6de70be4f4fa9e7418b587af2256923443226a004"
+    },
+    {
+      "id": "jun-paper-0",
+      "url": "https://www.dpm.org.cn/Uploads/File/2018/06/04/u5b152c9f3396b.pdf",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "full_meeting_review",
+      "sha256": "9d422c8ac2a91178afdac139e7871d0a7ed0e238f5db1a6695183f04344bdc71"
+    },
+    {
+      "id": "jun-paper-2",
+      "url": "https://www.dpm.org.cn/Uploads/File/2018/05/31/u5b0fbd8e2d5e4.pdf",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "abstract_conclusion_relevant_sections",
+      "sha256": "85c867e2e35b958a51f0623a88d560fa64857d3d4a0abc6749f3a8b1384610e3"
+    },
+    {
+      "id": "jun-paper-3",
+      "url": "https://www.dpm.org.cn/Uploads/File/2018/05/31/u5b0fbe1ccf7d5.pdf",
+      "checked_on": "2026-10-06",
+      "status": "retrieved",
+      "reading_scope": "abstract_conclusion_relevant_sections",
+      "sha256": "c19a7a66a314b7e884e628c58a912cb7f440f323c5575d2cf771117f576a8d95"
+    },
+    {
+      "id": "met-42490",
+      "url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/42490",
+      "status": "retrieved",
+      "checked_on": "2026-10-06",
+      "reading_scope": "official_object_api_record",
+      "sha256": "a519d1f17db6c6dfd42de64ce7a0e88ca6764259a6e5558124a686ebd8ca38a4"
+    }
+  ]
+}

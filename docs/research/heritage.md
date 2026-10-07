@@ -1,56 +1,41 @@
-# 世界遗产 · 景德镇手工瓷业遗存
+# 世界遗产：景德镇手工瓷业遗存
 
-<div class="heritage-hero"><div><span>WORLD HERITAGE · 1765</span><h1>景德镇手工瓷业遗存</h1><p>2026年7月25日列入《世界遗产名录》。它不是只保护一座御窑，而是把原料、燃料、生产中心与古窑址组成一条完整的手工瓷业遗产链。</p><a href="https://whc.unesco.org/zh/list/1765" target="_blank" rel="noopener">打开 UNESCO 官方页面 →</a></div></div>
+“景德镇手工瓷业遗存”（Jingdezhen Handicraft Porcelain Industry Sites）于2026年列入《世界遗产名录》，编号1765。第48届世界遗产委员会决定48 COM 8B.16，依据标准(ii)、(iii)、(iv)和(vi)确认其突出普遍价值。它作为系列遗产，以五个组成部分展示10至19世纪手工瓷业的技术、生产组织和空间关系。[^list][^decision]
 
-## UNESCO 官方介绍
+## 保护的是一套生产系统
 
-联合国教科文组织世界遗产中心将“景德镇手工瓷业遗存”定义为系列遗产，展示10至19世纪手工制瓷业的发展。五个组成部分分别反映原料开采与运输、窑炉技术、生产组织以及城市社会空间；镇区生产中心同时包含御窑、民窑、行业会馆和商人组织等遗产要素。
+世界遗产中心介绍强调原料的开采与运输、窑炉创新、大规模生产的空间及社会组织。镇区同时包含御窑、民窑、行业组织和商人组织。由此，景德镇不能只被理解为一个生产宫廷精品的窑场，而应从原料、燃料、制造、运输、贸易和城市社会共同组成的系统阅读。[^list]
 
-[UNESCO 中文世界遗产页面](https://whc.unesco.org/zh/list/1765)  ·  [UNESCO 官方地图](https://whc.unesco.org/en/list/1765/maps)  ·  [UNESCO 遗产文件库](https://whc.unesco.org/en/list/1765/documents)
+委员会决定讨论瓷石、高岭土、林木燃料和水运之间的联系。窑址、矿区、码头、道路与河道提供空间证据；生产工具、器物、历史地图和文献则帮助理解这些地点怎样协作。[^decision]
 
-## 五个组成部分
+## 四项列入标准怎样理解
 
-<div class="heritage-components">
-<div><b>01</b><h3>镇区瓷业生产中心</h3><p>景德镇城市核心瓷业空间，包含御窑与民窑、作坊、行业组织及相关城市遗存。</p><small>UNESCO ID 1765-001</small></div>
-<div><b>02</b><h3>湖田古瓷窑址</h3><p>重要古窑址，保存长期窑业生产遗存，是研究景德镇民窑和窑业发展的重要地点。</p><small>UNESCO ID 1765-002</small></div>
-<div><b>03</b><h3>高岭瓷土矿遗址</h3><p>瓷土原料产区，体现景德镇制瓷生产链条中原料开采环节。</p><small>UNESCO ID 1765-003</small></div>
-<div><b>04</b><h3>长岭瓷石矿遗址</h3><p>瓷石原料产区，与景德镇传统制瓷原料体系密切相关。</p><small>UNESCO ID 1765-004</small></div>
-<div><b>05</b><h3>蛟潭窑柴燃料生产区</h3><p>传统窑业燃料来源地，把森林资源、燃料生产与城市窑业联系起来。</p><small>UNESCO ID 1765-005</small></div>
-</div>
+| 标准 | 决定阐释的重点 |
+| --- | --- |
+| (ii) | 制瓷技术、青花和装饰样式的创新，以及国际贸易中艺术形式的交流与影响 |
+| (iii) | 手工瓷业持续生产与完整产业格局，包括社会组织 |
+| (iv) | 原料、成型、窑炉和装饰技术构成的技术体系，以及专业化、标准化的生产模式 |
+| (vi) | 青花与17至18世纪欧洲装饰艺术及“中国风”的直接联系 |
 
-## 为什么五个地方要放在一起？
+这些标准是遗产价值的正式论证框架，不是对每一件瓷器的独立断代或鉴定。解释具体对象时，仍要回到其出土背景、馆藏和相关研究。[^decision]
 
-如果只看御窑厂，很容易把景德镇理解成“一座皇家的窑”。但世界遗产的整体结构展示的是一套产业系统：
+## 完整性、真实性与管理
 
-**矿山取料 → 原料运输 → 城市制坯与装饰 → 窑炉烧成 → 选验与生产组织 → 昌江水运及外销 → 城市社会生活**。
+完整性讨论组成部分能否共同呈现生产系统的关键属性；真实性讨论地点、设施、材料及相关实践如何由考古、地图和历史资料支持。管理要求涉及法律、规划、协调机构和组成部分之间的保护关系，不能用游客数量或建筑外观修复代替保护效果评估。[^decision]
 
-UNESCO 的遗产说明特别强调，这五个组成部分共同体现手工制瓷的生产过程，以及大规模生产在空间和社会层面的组织方式。
+## 技术史仍需要保留争议
 
-## 世界遗产时间线
+委员会决定将13至15世纪的二元配方等列入技术创新的历史阐释；肖红艳等2020年论文则按天然伴生原料与人为混配的区别，提出真正二元配方起于明末清初。两类资料的目的和论证不同。正式遗产价值陈述不意味着某一具体技术史问题的所有研究已经达成一致，正文应同时解释判定标准及证据。[^decision][^materials]
 
-<div class="heritage-timeline">
-<article><time>2015</time><p>景德镇御窑遗址保护与申遗工作进入持续推进阶段。</p></article>
-<article><time>2017</time><p>御窑厂遗址列入《中国世界文化遗产预备名单》。</p></article>
-<article><time>2021</time><p>御窑遗址被确定为“十四五”重点申遗项目，御窑博物院成立并开放。</p></article>
-<article><time>2023—2024</time><p>考古与遗产价值研究进一步扩展，从御窑厂延伸到原料、燃料、道路及完整手工制瓷产业链。</p></article>
-<article><time>2025</time><p>“景德镇手工瓷业遗存”正式确定为2026年世界遗产申报项目。</p></article>
-<article><time>2026-07-25</time><p>第48届世界遗产委员会审议通过，景德镇手工瓷业遗存正式列入《世界遗产名录》，编号1765。</p></article>
-</div>
+## 与非遗项目的区别
 
-## 官方文件与原始资料
+国家级非遗“景德镇手工制瓷技艺”于2006年公布，项目编号Ⅷ-7。它涉及活态技能和知识传承；世界遗产则有正式的系列遗产对象、边界和管理文件。两种保护体系有关联，但不能互相替代名称或认定状态。[^craft]
 
-<div class="heritage-source-list">
-<a href="https://whc.unesco.org/zh/list/1765" target="_blank" rel="noopener"><b>UNESCO · 世界遗产正式条目</b><span>遗产价值、五个组成部分、世界遗产编号1765</span></a>
-<a href="https://whc.unesco.org/en/list/1765/maps" target="_blank" rel="noopener"><b>UNESCO · 官方地图</b><span>五个组成部分的坐标、遗产区与缓冲区</span></a>
-<a href="https://whc.unesco.org/en/list/1765/documents" target="_blank" rel="noopener"><b>UNESCO · 申遗文件库</b><span>申报文本、地图、管理计划、评估文件及委员会决定</span></a>
-<a href="https://www.jdz.gov.cn/zwzx/jrcd/t1099484.shtml" target="_blank" rel="noopener"><b>景德镇市人民政府 · 申遗大事记</b><span>2015—2026年申遗工作时间线</span></a>
-<a href="https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/202607/t20260725_1445015.html" target="_blank" rel="noopener"><b>教育部政府门户 · 列入世界遗产名录</b><span>2026年7月25日列入世界遗产名录的官方消息</span></a>
-</div>
+继续阅读[窑址与城市空间](../kilns/README.md)、[原料与配方](../craft/raw-materials.md)、[遗产保护](../contemporary/heritage.md)与[考古资料](archaeology.md)。
 
-## 和数字博物馆其他内容怎么连接？
+## 资料来源
 
-- [窑址地图](../museum/kiln-map.md)：查看景德镇主要遗址空间。
-- [历史时间轴](../museum/timeline.md)：把遗产放回历史时间。
-- [考古资料](archaeology.md)：查看发掘与考古证据。
-- [文献总库](literature-library.md)：查看相关古籍、地方志和研究。
-- [名人与书籍评价](../museum/voices-and-books.md)：了解古今中外如何认识景德镇。
+[^list]: UNESCO World Heritage Centre：[景德镇手工瓷业遗存，编号1765](https://whc.unesco.org/zh/list/1765)，查阅日期2026年10月6日。
+[^decision]: UNESCO World Heritage Committee：[Decision 48 COM 8B.16](https://whc.unesco.org/en/decisions/9170/)，2026年，查阅日期2026年10月6日。
+[^materials]: 肖红艳、艾沁哲、崔剑锋：《景德镇瓷器生产“二元配方”起源初探——兼论高岭土开发史》，《故宫博物院院刊》2020年第5期，第23—33页。[原文](https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf)。
+[^craft]: 中国非物质文化遗产网：[景德镇手工制瓷技艺](https://www.ihchina.cn/project_details/14270/)。

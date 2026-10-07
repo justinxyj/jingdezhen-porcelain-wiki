@@ -1,30 +1,40 @@
-# 制瓷工艺概览
+# 制瓷工艺：材料、成型、装饰与烧成
 
-<div class="museum-hero">
-  <div>
-    <div class="eyebrow">CRAFT · 工艺</div>
-    <h1>一件瓷器，是许多道工序共同完成的作品。</h1>
-    <p>从原料、制泥、成型到装饰、施釉与烧成，沿着工艺链理解景德镇陶瓷是怎样被制作出来的。</p>
-  </div>
-  <div class="museum-hero-mark">手艺<br>成器</div>
-</div>
+一件瓷器的制作由相互影响的工序组成。原料决定坯料的工作性能，成型与修整组织厚薄和结构，装饰与施釉改变表面，装烧和烧成使材料形成最终状态。工艺史需要同时观察工具、劳动分工和产品，不能只列操作名称。
 
-## 工艺链
+## 从原料到瓷坯
 
-<div class="museum-grid">
-  <a class="museum-card wiki-card-link" href="raw-materials/"><span>01 · MATERIALS</span><h3>原料与配方</h3><p>瓷石、高岭土与坯料体系。</p><span class="wiki-read-more">探索原料</span></a>
-  <a class="museum-card wiki-card-link" href="forming-and-finishing/"><span>02 · FORMING</span><h3>成型与修整</h3><p>拉坯、利坯、修足与干燥。</p><span class="wiki-read-more">探索成型</span></a>
-  <a class="museum-card wiki-card-link" href="kiln-firing/"><span>03 · FIRING</span><h3>窑炉与烧成</h3><p>窑炉结构、装烧与高温烧成。</p><span class="wiki-read-more">探索烧成</span></a>
-  <a class="museum-card wiki-card-link" href="qinghua/"><span>04 · BLUE & WHITE</span><h3>青花</h3><p>钴料、胎釉与青花装饰。</p><span class="wiki-read-more">进入青花</span></a>
-  <a class="museum-card wiki-card-link" href="fencai/"><span>05 · FENCAI</span><h3>粉彩</h3><p>彩料与细密设色体系。</p><span class="wiki-read-more">进入粉彩</span></a>
-  <a class="museum-card wiki-card-link" href="colored-glaze/"><span>06 · GLAZES</span><h3>颜色釉</h3><p>不同釉色与烧成条件。</p><span class="wiki-read-more">进入颜色釉</span></a>
-</div>
+瓷石和高岭土涉及不同矿物组成与烧结性能；一元与二元配方讨论原料怎样配制，而不是原料只有一种或两种矿物。其起源年代存在争议，应理解各研究采用的判定标准。[原料专题](raw-materials.md)依据2020年专业论文解释天然伴生与人为混配的区别。[^materials]
 
-## 工艺并不是固定不变的
+拉坯、印坯、利坯与修足分别参与造型和修整。它们可能在同一件器物上相互衔接，不能把成型方法理解为每件器物只采用一种动作。[^heritage]
 
-景德镇制瓷是一套由原料加工、成型、修整、装饰、施釉、装烧与烧成等环节组成的生产体系。不同历史时期的工序与分工会发生变化。[R08][R19]
+## 从装饰到烧成
 
-明清时期，景德镇形成了高度细化的专业分工；《景德镇陶录》也记录了窑户、工种、作坊与生产管理等内容。[R04][R19]
+青花绘于坯体并被釉层覆盖；粉彩等釉上装饰在釉面上施彩并彩烧；颜色釉则将釉的呈色作为重要效果。器型、纹样、釉层和烧成一起决定观看到的作品。
 
+御窑考古发现加彩作坊、半成品、窑具和瓷片坑，将装饰和烧成放回具体生产场所。了解工艺既可以从成品出发，也应阅读失败品和工具留下的信息。[^kilns]
+
+## 分工与不同路线
+
+国家非遗资料用“过手七十二”概括传统制瓷的复杂分工。圆器、琢器、雕塑与不同彩瓷有不同制作路径，工序树是浏览这些知识的工具，不是每件器物统一遵守的生产规定。[^heritage]
+
+## 专题阅读
+
+| 环节 | 主要问题 | 专题 |
+| --- | --- | --- |
+| 原料 | 怎样从矿石变成可用坯料 | [原料与配方](raw-materials.md) |
+| 成型 | 轮廓、厚薄和支承怎样形成 | [成型与修整](forming-and-finishing.md) |
+| 烧成 | 材料、窑具和窑内条件怎样配合 | [窑炉与烧成](kiln-firing.md) |
+| 釉下彩 | 钴蓝纹样怎样进入釉下 | [青花](qinghua.md) |
+| 釉上彩 | 彩料、渲染与彩烧怎样关联 | [粉彩](fencai.md) |
+| 釉色 | 配方和气氛怎样影响表面效果 | [颜色釉](colored-glaze.md) |
 
 <section class="jdm-world-browser" data-world-browser="craft" aria-label="知识世界条目"></section>
+
+## 资料来源
+
+[^materials]: 肖红艳、艾沁哲、崔剑锋：《景德镇瓷器生产“二元配方”起源初探——兼论高岭土开发史》，《故宫博物院院刊》2020年第5期，第23—33页。[论文原文](https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf)。
+
+[^heritage]: 中国非物质文化遗产网：“景德镇手工制瓷技艺”，项目Ⅷ-7，2006年第一批。[项目页](https://www.ihchina.cn/project_details/14270/)。
+
+[^kilns]: 北京大学考古文博学院：《北大考古与“百年百大考古发现”——景德镇明清御窑厂遗址》。[官方资料](https://archaeology.pku.edu.cn/info/1030/3492.htm)。

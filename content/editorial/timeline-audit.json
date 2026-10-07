@@ -1,0 +1,403 @@
+{
+  "applied": false,
+  "contexts": [
+    {
+      "entry_id": "ddf5579b-f602-4659-8c4a-397588b3cee8",
+      "slug": "zhangzhou-kiln",
+      "title": "漳州窑",
+      "status": "needs_source_review",
+      "issues": [
+        "missing_object_specific_source",
+        "existing_ai_summary_requires_review"
+      ]
+    },
+    {
+      "entry_id": "fe17fcf9-7674-478b-a843-a9cb8cabba70",
+      "slug": "joseon-ceramics",
+      "title": "朝鲜王朝陶瓷",
+      "status": "needs_source_review",
+      "issues": [
+        "missing_object_specific_source",
+        "existing_ai_summary_requires_review"
+      ]
+    },
+    {
+      "entry_id": "520389c9-52d4-4a1e-8a03-fa43d9d67a9e",
+      "slug": "seto-kiln",
+      "title": "濑户窑",
+      "status": "needs_source_review",
+      "issues": [
+        "missing_object_specific_source",
+        "existing_ai_summary_requires_review"
+      ]
+    },
+    {
+      "entry_id": "144e53de-3669-453d-aa2f-9a3ca31b43a8",
+      "slug": "liling-kiln",
+      "title": "醴陵窑",
+      "status": "needs_source_review",
+      "issues": [
+        "missing_object_specific_source",
+        "existing_ai_summary_requires_review"
+      ]
+    },
+    {
+      "entry_id": "0c868fc7-0a25-4a27-add4-ad41b947624c",
+      "slug": "yixing-kiln",
+      "title": "宜兴窑",
+      "status": "needs_source_review",
+      "issues": [
+        "missing_object_specific_source",
+        "existing_ai_summary_requires_review"
+      ]
+    },
+    {
+      "entry_id": "6ccac91e-d92d-47bf-b625-68e3779d32bd",
+      "slug": "shiwan-kiln",
+      "title": "石湾窑",
+      "status": "needs_source_review",
+      "issues": [
+        "missing_object_specific_source",
+        "existing_ai_summary_requires_review"
+      ]
+    },
+    {
+      "entry_id": "1a4d4ac2-d7ba-47a4-ac31-2c2ff900422a",
+      "slug": "ge-kiln",
+      "title": "哥窑",
+      "status": "needs_source_review",
+      "issues": [
+        "missing_object_specific_source",
+        "existing_ai_summary_requires_review"
+      ]
+    },
+    {
+      "entry_id": "189effa3-0f39-40cc-8db1-4bda54cc13bd",
+      "slug": "guan-kiln",
+      "title": "官窑",
+      "status": "needs_source_review",
+      "issues": [
+        "missing_object_specific_source",
+        "existing_ai_summary_requires_review"
+      ]
+    },
+    {
+      "entry_id": "36dbd563-5c5d-40d9-8d43-e9a3a04a336e",
+      "slug": "yaozhou-kiln",
+      "title": "耀州窑·黄堡",
+      "status": "needs_source_review",
+      "issues": [
+        "missing_object_specific_source",
+        "existing_ai_summary_requires_review"
+      ]
+    },
+    {
+      "entry_id": "e4f7b140-40dd-4a81-9d95-f0fd3734ad69",
+      "slug": "yue-kiln",
+      "title": "越窑·上林湖",
+      "status": "needs_source_review",
+      "issues": [
+        "missing_object_specific_source",
+        "existing_ai_summary_requires_review"
+      ]
+    },
+    {
+      "entry_id": "a4726f87-4711-4876-be05-0b2fd45f1499",
+      "slug": "changsha-kiln",
+      "title": "长沙窑",
+      "status": "needs_source_review",
+      "issues": [
+        "missing_object_specific_source",
+        "existing_ai_summary_requires_review"
+      ]
+    },
+    {
+      "entry_id": "890da94c-bd7a-493e-b331-287d163e382a",
+      "slug": "sawankhalok",
+      "title": "宋加洛窑·Si Satchanalai",
+      "status": "needs_source_review",
+      "issues": [
+        "missing_object_specific_source",
+        "existing_ai_summary_requires_review"
+      ]
+    },
+    {
+      "entry_id": "bd34d580-40a7-4e89-aedd-545ed525436a",
+      "slug": "bat-trang",
+      "title": "巴特朗陶窑",
+      "status": "needs_source_review",
+      "issues": [
+        "missing_object_specific_source",
+        "existing_ai_summary_requires_review"
+      ]
+    },
+    {
+      "entry_id": "6146630b-4506-416b-892f-70f89574511a",
+      "slug": "iznik-ceramics",
+      "title": "伊兹尼克陶器",
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "entry_id": "30b5c284-8abc-4232-85a2-b9f482faef5e",
+      "slug": "arita-kiln",
+      "title": "有田窑·有田烧",
+      "status": "draft_prepared_not_applied",
+      "issues": []
+    },
+    {
+      "entry_id": "e479a789-c150-4bd2-814c-26546a618473",
+      "slug": "europe-porcelain",
+      "title": "欧洲瓷器",
+      "status": "draft_prepared_not_applied",
+      "issues": []
+    },
+    {
+      "entry_id": "867c372e-ec21-4ae7-b5b1-d0a4b165e8ba",
+      "slug": "icheon-ceramics",
+      "title": "利川陶瓷",
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "entry_id": "41956ea9-5bb6-402b-a932-306599675ed5",
+      "slug": "limoges-porcelain",
+      "title": "利摩日瓷器",
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "entry_id": "d50e2a25-9e89-4957-90b7-6889f4be49bd",
+      "slug": "sevres-porcelain",
+      "title": "塞夫勒瓷器",
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "entry_id": "4d9dfe2f-29a6-4285-978c-f18383a8fa5a",
+      "slug": "stoke-on-trent",
+      "title": "斯托克陶瓷",
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "entry_id": "3bef45f5-6ebe-48f9-a6c4-02b3b726b545",
+      "slug": "meissen-porcelain",
+      "title": "梅森瓷器",
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "entry_id": "36f8fd2a-8159-454b-ba59-01f5ac1a23b3",
+      "slug": "uk-ceramics",
+      "title": "英国陶瓷",
+      "status": "draft_prepared_not_applied",
+      "issues": []
+    },
+    {
+      "entry_id": "f08b6ef6-27a6-4f7f-b9b3-b247a3221863",
+      "slug": "ru-kiln",
+      "title": "汝窑·清凉寺",
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "entry_id": "e253ec16-ca6b-41aa-97e2-c3b86bd0d58c",
+      "slug": "cizhou-kiln",
+      "title": "磁州窑·观台",
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "entry_id": "dc0052fd-9c6a-4fcc-94c1-5e9bdc4e52e6",
+      "slug": "jun-kiln",
+      "title": "钧窑·禹州",
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "northern_song_official_jun_label_requires_chronology_review"
+      ]
+    },
+    {
+      "entry_id": "2e7aa1b8-5ca2-4592-ae2a-406eb460f747",
+      "slug": "longquan-kiln",
+      "title": "龙泉窑·大窑",
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "entry_id": "fb38415a-9935-404b-a85c-5f230bf90f67",
+      "slug": "southeast-asia-ceramics",
+      "title": "东南亚陶瓷",
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "entry_id": "96264f90-76c6-4259-b34c-734c0390b074",
+      "slug": "goryeo-celadon",
+      "title": "高丽青瓷",
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "entry_id": "bbe7b1f0-d789-4150-97bd-2f2d38c7b13f",
+      "slug": "ding-kiln",
+      "title": "定窑·曲阳",
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "entry_id": "a74c7d7e-487b-4667-ada8-f15b30bc2480",
+      "slug": "islamic-ceramics",
+      "title": "伊斯兰世界陶瓷",
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "entry_id": "5d78cc09-2c89-466d-a083-db1d5187cbc8",
+      "slug": "japan-ceramics",
+      "title": "日本陶瓷",
+      "status": "draft_prepared_not_applied",
+      "issues": []
+    },
+    {
+      "entry_id": "11f2ce07-e5c8-4d7e-bdb1-131ffdd907bf",
+      "slug": "korea-ceramics",
+      "title": "朝鲜半岛陶瓷",
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "entry_id": "30055011-ad42-41de-868d-abcf70864006",
+      "slug": "dehua-kiln",
+      "title": "德化窑",
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "entry_id": "5b2fd2b0-1c5f-4375-ba7b-173d5ebbfbc9",
+      "slug": "west-asia-ceramics",
+      "title": "西亚陶瓷",
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "entry_id": "da892d36-fa24-4b30-b53b-e650aaa8acf5",
+      "slug": "imperial-kiln",
+      "title": "御窑厂遗址",
+      "status": "draft_prepared_not_applied",
+      "issues": []
+    },
+    {
+      "entry_id": "f5f20387-c923-4435-bdba-9d4af72ab381",
+      "slug": "jingdezhen",
+      "title": "景德镇窑",
+      "status": "draft_prepared_not_applied",
+      "issues": []
+    },
+    {
+      "entry_id": "f31277c6-351c-40fc-b750-2d8002d92be2",
+      "slug": "hutian-kiln",
+      "title": "湖田窑",
+      "status": "draft_prepared_not_applied",
+      "issues": []
+    },
+    {
+      "entry_id": "d1895124-a294-4bf8-a9de-60a761812326",
+      "slug": "gaoling-mining",
+      "title": "高岭土矿采掘区",
+      "status": "draft_prepared_not_applied",
+      "issues": []
+    },
+    {
+      "entry_id": "062df6f4-0268-4f35-ba9d-236633b0bb91",
+      "slug": "changling-stone",
+      "title": "长岭瓷石采掘区",
+      "status": "needs_source_review",
+      "issues": [
+        "component_identity_and_boundaries_require_official_record"
+      ]
+    },
+    {
+      "entry_id": "16239e97-95a0-4c62-af0d-1bc4d8fc0206",
+      "slug": "jiaotan-firewood",
+      "title": "焦潭柴窑燃料生产区",
+      "status": "needs_source_review",
+      "issues": [
+        "component_identity_and_boundaries_require_official_record"
+      ]
+    },
+    {
+      "entry_id": "c6ee2bbf-473b-461f-88a4-4f4696bf4939",
+      "slug": "xing-kiln",
+      "title": "邢窑",
+      "status": "needs_source_review",
+      "issues": [
+        "missing_object_specific_source",
+        "existing_ai_summary_requires_review"
+      ]
+    },
+    {
+      "entry_id": "f16a11cb-9d3e-40cf-ab8c-ab8c7daf7a0c",
+      "slug": "eastern-jin-tang",
+      "title": "东晋—唐：新平镇与昌南镇",
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "entry_id": "d03ad6a7-7467-40c2-a75d-e83bcfdd9508",
+      "slug": "five-dynasties-song",
+      "title": "五代—宋：湖田窑与青白瓷",
+      "status": "draft_prepared_not_applied",
+      "issues": []
+    },
+    {
+      "entry_id": "f2ae381c-27d3-4fea-8c4a-2747a993e50b",
+      "slug": "yuan-blue-white",
+      "title": "元：青花与釉下彩绘",
+      "status": "draft_prepared_not_applied",
+      "issues": []
+    },
+    {
+      "entry_id": "ac26e854-9c9a-44f5-b0ef-22079cc9a446",
+      "slug": "ming-imperial-kiln",
+      "title": "明：御窑厂与官作体系",
+      "status": "draft_prepared_not_applied",
+      "issues": []
+    },
+    {
+      "entry_id": "832a7646-2137-4cd0-9625-0eb3bb102a02",
+      "slug": "qing-colors",
+      "title": "清：御窑、彩瓷与颜色釉",
+      "status": "draft_prepared_not_applied",
+      "issues": []
+    },
+    {
+      "entry_id": "d41a560b-ed35-4203-a225-561334bff045",
+      "slug": "modern-industry",
+      "title": "1909—1910：近代企业与陶业教育",
+      "status": "draft_prepared_not_applied",
+      "issues": []
+    },
+    {
+      "entry_id": "3ba11de0-7496-4933-96e0-4eedbef6f2bb",
+      "slug": "industry-transition",
+      "title": "1949—1966：生产制度与科技转型",
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "entry_id": "8d7e1841-0b67-4028-af17-dd1c0741c409",
+      "slug": "active-archaeology",
+      "title": "2002—2014：御窑厂主动性考古",
+      "status": "draft_prepared_not_applied",
+      "issues": []
+    },
+    {
+      "entry_id": "c7dafc47-fd50-48df-9cd0-64f26f993024",
+      "slug": "unesco-2026",
+      "title": "2026：景德镇手工瓷业遗存",
+      "status": "draft_prepared_not_applied",
+      "issues": []
+    }
+  ]
+}

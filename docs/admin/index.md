@@ -1,6 +1,6 @@
 # 馆长后台入口
 
-本页跳转至 [馆长后台](../museum/admin.md)。若未自动跳转，请点击链接。
+编辑与审核请进入 [馆长后台](../museum/admin.md)。若页面未自动打开，请点击链接。
 
 <meta http-equiv="refresh" content="0; url=../museum/admin/">
 

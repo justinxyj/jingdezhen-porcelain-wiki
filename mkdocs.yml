@@ -89,6 +89,7 @@ extra_javascript:
 markdown_extensions:
   - admonition
   - attr_list
+  - footnotes
   - tables
   - toc:
       permalink: true
@@ -102,6 +103,7 @@ nav:
           - 宋元: history/song-yuan.md
           - 明清: history/ming-qing.md
           - 近现代: history/modern.md
+          - 外销与跨文化交流: history/export-and-exchange.md
       - 工艺与技术:
           - 工艺总览: craft/README.md
           - 制瓷技术树: craft/technology-tree.md
@@ -124,6 +126,7 @@ nav:
       - 文献与研究:
           - 研究规范: research/README.md
           - 核心文献库: research/sources.md
+          - 博物馆资料与图像来源: research/museum-sources.md
           - 文献总库: research/literature-library.md
           - 考古资料与时间轴: research/archaeology.md
           - 研究导览: research/research-hub.md

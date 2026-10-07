@@ -1,42 +1,31 @@
-# 世界遗产与保护
+# 遗产与保护：设施、技艺和城市生活
 
-<div class="museum-hero">
-  <div>
-    <div class="eyebrow">WORLD HERITAGE · 世界遗产</div>
-    <h1>保护的不是一座窑，而是一整套制瓷文明。</h1>
-    <p>从矿料、燃料和水运，到窑址、作坊、城市空间和仍在延续的技艺，景德镇的遗产保护正在从单体建筑走向完整系统。</p>
-  </div>
-  <div class="museum-hero-mark">遗<br>产</div>
-</div>
+景德镇陶瓷遗产既有窑址、矿区、作坊和历史建筑，也有材料处理、成型、绘饰、烧成和劳动协作中的知识。保护不同对象需要不同方式，不能只用“修复一座建筑”或“收藏一件精品”代表全部工作。
 
-<div class="museum-stats">
-  <div><strong>1765</strong><span>UNESCO 遗产编号</span></div>
-  <div><strong>5</strong><span>组成部分</span></div>
-  <div><strong>10—19</strong><span>世纪手工瓷业演进</span></div>
-  <div><strong>系统</strong><span>保护视角</span></div>
-</div>
+## 物质遗存与活态技艺
 
-## 五个组成部分
+御窑考古记录作坊、窑炉、工具、半成品与废弃物，为生产制度和技术研究提供证据。保护遗址应保留其地层、空间和信息关系，不是只挑选最适合展示的完整器物。[^kilns]
 
-<div class="museum-grid">
-  <div class="museum-card"><span>1765-001</span><h3>镇区制瓷生产中心</h3><p>御窑、民窑、行业组织和历史城市空间共同构成生产中心。</p></div>
-  <div class="museum-card"><span>1765-002</span><h3>湖田古窑址</h3><p>见证景德镇长期连续的窑业生产和遗址积累。</p></div>
-  <div class="museum-card"><span>1765-003</span><h3>高岭瓷土矿址</h3><p>高岭土是景德镇制瓷原料体系的重要组成部分。</p></div>
-  <div class="museum-card"><span>1765-004</span><h3>长岭瓷石矿区</h3><p>瓷石等原料来源与运输体系连接了矿区和城市生产。</p></div>
-  <div class="museum-card"><span>1765-005</span><h3>蛟潭柴薪生产区</h3><p>燃料林与运输网络说明古代制瓷业并不只发生在窑厂内部。</p></div>
-</div>
+景德镇手工制瓷技艺于2006年列入第一批国家级非遗代表性项目，编号Ⅷ-7。技艺保护涉及学习、工作条件与代际传递，也包含专业分工和协作，不能简单将某一个制瓷动作等同于整个项目。[^heritage]
 
-这些五个组成部分共同展示了景德镇手工瓷业从原料、运输、生产到城市组织的完整体系。UNESCO 2026年的正式决定确认其列入《世界遗产名录》，并指出这一体系对中国及全球陶瓷技术、艺术与产业组织产生了影响。[UNESCO 世界遗产资料](https://whc.unesco.org/en/list/1765/)
+## 不同名录需要分别核对
 
-## 保护重点
+世界遗产、国家级非遗、文物保护单位和地方保护规划涉及不同对象与程序。正式列入、进入预备名单、正在申报与规划目标不是同一种状态。涉及列入时间、遗产编号、组成部分和保护边界时，应以正式条目、决定与相应地图为准。
 
-<div class="museum-grid">
-  <div class="museum-card"><h3>遗址本体</h3><p>保护窑炉、建筑、道路、码头、矿址等物质遗存。</p></div>
-  <div class="museum-card"><h3>历史环境</h3><p>保护遗址之间由河流、道路、城市空间形成的联系。</p></div>
-  <div class="museum-card"><h3>传统技艺</h3><p>保护仍然存在的制瓷知识、工序和社区实践。</p></div>
-  <div class="museum-card"><h3>展示与解释</h3><p>把五个组成部分放进同一条历史叙事，而不是孤立展示。</p></div>
-</div>
+[UNESCO 资料入口](https://whc.unesco.org/en/list/1765/)与[遗产专题](../research/heritage.md)提供进一步查阅路径；不能仅凭当地宣传或一个网页地址推出正式名录状态。
 
-## 继续探索
+## 展示、使用与保护
 
-<div class="museum-toolbar"><a class="jdm-pill" href="../../research/heritage/">UNESCO 完整资料 →</a><a class="jdm-text-link" href="../../museum/kiln-map/">打开窑址地图 →</a></div>
+博物馆陈列、旅游体验和继续生产可以帮助公众接触陶瓷文化，也各有取舍。展示说明需要区分原物、修复、复原和现代演示；工匠的实际知识与工作不应被一段无出处的“古法体验”宣传替代。
+
+## 记录变化
+
+遗址范围、开放状态、传承人名录和保护项目应按日期更新。研究记录需要保留原始资料和版本，使后来的解释变化可以被追查。
+
+参阅[窑址概览](../kilns/README.md)、[人物与传承](../people/README.md)和[数字化](future.md)。
+
+## 资料来源
+
+[^heritage]: 中国非物质文化遗产网：“景德镇手工制瓷技艺”，项目Ⅷ-7，2006年第一批。[项目页](https://www.ihchina.cn/project_details/14270/)。
+
+[^kilns]: 北京大学考古文博学院：《北大考古与“百年百大考古发现”——景德镇明清御窑厂遗址》。[官方资料](https://archaeology.pku.edu.cn/info/1030/3492.htm)。

@@ -16,11 +16,11 @@
       <div class="jdm-v2-hero-bg"></div>
       <div class="jdm-v2-hero-copy jdm-reveal">
         <div class="jdm-overline">景德镇 · 陶瓷知识世界</div>
-        <h1>青花，<br><em>不止于蓝。</em></h1>
-        <p>一座城市、千年窑火与一个连接世界的陶瓷文明。</p>
+        <h1>景德镇陶瓷，<br><em>从材料到世界。</em></h1>
+        <p>从青白瓷、青花与彩瓷出发，查阅制作技术、窑址、人物与历史资料，理解器物怎样连接生产和生活。</p>
         <div class="jdm-hero-actions">
           <a class="jdm-pill" href="museum/catalog/">探索器物 <b>→</b></a>
-          <a class="jdm-text-link" href="#worlds" data-scroll>进入七大知识世界 <b>↓</b></a>
+          <a class="jdm-text-link" href="#worlds" data-scroll>进入七个阅读主题 <b>↓</b></a>
         </div>
       </div>
       <div class="jdm-v2-hero-vessel jdm-reveal" aria-label="景德镇青花瓷">
@@ -28,7 +28,7 @@
         <div class="jdm-home-vessel-stage">
           <div class="jdm-vessel-fallback" aria-hidden="true"><span>景德镇</span><b>青花</b><small>陶瓷</small></div>
         </div>
-        <div class="jdm-vessel-caption">景德镇青花瓷<br><small>以核验馆藏为依据展示</small></div>
+        <div class="jdm-vessel-caption">景德镇青花瓷<br><small>查看具体对象与馆藏来源</small></div>
       </div>
       <div class="jdm-scroll-note">向下探索 <span>↓</span></div>
     </section>
@@ -37,9 +37,9 @@
 
     <section id="worlds" class="jdm-v2-intro jdm-knowledge-worlds">
       <div class="jdm-v2-container">
-        <div class="jdm-section-label jdm-reveal">七大知识世界</div>
-        <h2 class="jdm-v2-display jdm-reveal">从一件瓷器出发，<br><span>进入一整套文明系统。</span></h2>
-        <p class="jdm-v2-lead jdm-reveal">以器物为入口，以时间解释变化，以工艺解释制造，以空间解释城市，以人物解释传承，以文献建立证据，以现代景德镇回答今天。</p>
+        <div class="jdm-section-label jdm-reveal">七个阅读主题</div>
+        <h2 class="jdm-v2-display jdm-reveal">从一件瓷器出发，<br><span>阅读它的材料、时代与用途。</span></h2>
+        <p class="jdm-v2-lead jdm-reveal">以器物为入口，以时间解释变化，以工艺解释制造，以空间解释城市，以人物解释传承，以文献建立证据，以现代景德镇理解当下的生产与生活。</p>
         <div class="jdm-world-grid jdm-reveal">
           <a class="jdm-world-card jdm-world-history" href="history/"><span>01 · WHEN</span><h3>历史与发展</h3><p>沿着千年窑火，看见生产、制度、贸易与城市如何变化。</p><b>进入历史 →</b></a>
           <a class="jdm-world-card jdm-world-craft" href="craft/"><span>02 · HOW</span><h3>工艺与技术</h3><p>从瓷石、高岭土到成型、施釉与烧成，理解一件瓷器怎样诞生。</p><b>进入工艺 →</b></a>
@@ -55,7 +55,7 @@
     <section id="collection" class="jdm-v2-products">
       <div class="jdm-v2-container">
         <div class="jdm-v2-section-head jdm-reveal">
-          <div><div class="jdm-section-label">数字博物馆</div><h2>用工具，换一种方式看景德镇。</h2></div>
+          <div><div class="jdm-section-label">数字博物馆</div><h2>按器物、时间与地点查阅。</h2></div>
           <a class="jdm-text-link" href="museum/">进入博物馆总览 →</a>
         </div>
         <div class="jdm-v2-product-grid jdm-museum-tool-grid">
@@ -74,7 +74,7 @@
         </div>
         <div class="jdm-tool-links jdm-reveal">
           <a href="museum/people/"><span>人物数据库</span><b>→</b></a>
-          <a href="craft/technology-tree/"><span>72道工艺流程</span><b>→</b></a>
+          <a href="craft/technology-tree/"><span>传统制瓷工序</span><b>→</b></a>
           <a href="museum/gallery/"><span>图片馆</span><b>→</b></a>
           <a href="entry/"><span>知识条目</span><b>→</b></a>
         </div>
@@ -86,7 +86,7 @@
         <div class="jdm-reveal">
           <div class="jdm-overline">知识网络</div>
           <h2>知识不是孤岛。<br><span>它们彼此相连。</span></h2>
-          <p>人物连接器物，历史连接窑址，工艺连接材料，文献连接证据。Wiki 2.0 正在把已经存在的知识逐步组织成一张可以继续探索的网络。</p>
+          <p>查看一件器物采用什么工艺、属于什么年代，与哪些地点和人物有关，再打开支撑这些联系的资料。</p>
           <a class="jdm-pill jdm-pill-light" href="network/">进入知识网络 <b>→</b></a>
         </div>
         <div class="jdm-network-graphic jdm-reveal" aria-hidden="true">
@@ -101,7 +101,7 @@
         <div class="jdm-section-label jdm-reveal">千年时间轴</div>
         <h2 class="jdm-v2-display jdm-reveal">沿着窑火，<br><span>穿越千年。</span></h2>
         <div class="jdm-v2-era-list jdm-reveal">
-          <a href="museum/timeline/" class="jdm-v2-era"><span>618—907</span><strong>唐五代</strong><em>区域生产与早期交流</em><b>→</b></a>
+          <a href="museum/timeline/" class="jdm-v2-era"><span>618—960</span><strong>唐五代</strong><em>早期窑址与生产证据</em><b>→</b></a>
           <a href="museum/timeline/" class="jdm-v2-era"><span>960—1279</span><strong>宋</strong><em>青白瓷与窑业体系</em><b>→</b></a>
           <a href="museum/timeline/" class="jdm-v2-era"><span>1271—1368</span><strong>元</strong><em>青花进入重要发展阶段</em><b>→</b></a>
           <a href="museum/timeline/" class="jdm-v2-era"><span>1368—1644</span><strong>明</strong><em>官窑制度与全球贸易</em><b>→</b></a>

@@ -1,0 +1,2928 @@
+{
+  "captured_on": "2026-10-06",
+  "public_entries": 250,
+  "entries": [
+    {
+      "id": "a6b24c9d-4e2d-42bb-bbf7-b88aa359d38a",
+      "slug": "yin-hong-xu",
+      "title": "殷弘绪（François-Xavier d’Entrecolles）",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 150,
+      "status": "draft_prepared_not_applied",
+      "issues": []
+    },
+    {
+      "id": "f16a11cb-9d3e-40cf-ab8c-ab8c7daf7a0c",
+      "slug": "eastern-jin-tang",
+      "title": "东晋—唐：新平镇与昌南镇",
+      "category": "历史",
+      "version": 5,
+      "body_characters": 0,
+      "status": "needs_source_review",
+      "issues": [
+        "empty_body"
+      ]
+    },
+    {
+      "id": "d50e2a25-9e89-4957-90b7-6889f4be49bd",
+      "slug": "sevres-porcelain",
+      "title": "塞夫勒瓷器",
+      "category": "窑址",
+      "version": 4,
+      "body_characters": 39,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "36f8fd2a-8159-454b-ba59-01f5ac1a23b3",
+      "slug": "uk-ceramics",
+      "title": "英国陶瓷",
+      "category": "窑址",
+      "version": 4,
+      "body_characters": 49,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "996405c8-9c85-450d-8e7f-e6c644082b37",
+      "slug": "dong-biwu",
+      "title": "董必武",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 32,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "bcc13e46-7dcf-4e22-a33d-8df1ab406a36",
+      "slug": "jiajing-wanli-kiln",
+      "title": "嘉靖—万历时期景德镇生产",
+      "category": "历史",
+      "version": 4,
+      "body_characters": 24,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "0ffb24d1-7d55-4802-b58b-7ecbcd50e1fc",
+      "slug": "porcelain-market",
+      "title": "瓷业市场空间",
+      "category": "窑址与城市空间",
+      "version": 4,
+      "body_characters": 17,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "b3fbb0a8-6497-47ef-913b-23b21c22f84a",
+      "slug": "qigong",
+      "title": "启功",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 19,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "d7dc4c50-7aeb-4554-a4eb-2bdc760d0508",
+      "slug": "yongzheng-celadon-ewer",
+      "title": "雍正青釉花浇",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 39,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "99c08fc7-8b6a-44e5-9e31-db7df4233b00",
+      "slug": "r24",
+      "title": "“景德镇手工瓷业遗存”申遗大事记",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 22,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "ccbf4313-6365-4218-b8c7-a7d80c54c796",
+      "slug": "kangxi-peachbloom-vase",
+      "title": "康熙桃花片釉瓶",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 31,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "7c5e8a4d-7980-4166-a707-c514d1e40762",
+      "slug": "kangxi-famille-verte-dragon",
+      "title": "康熙五彩龙纹盘",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 33,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "05c0a2b6-5c35-471c-96db-fdc1c667afd1",
+      "slug": "yongzheng-doucai-bamboo-cup",
+      "title": "雍正斗彩竹纹杯",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 34,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "22dfaa6d-d756-47e4-b50b-95d1c53a80f5",
+      "slug": "ming-landscape-dish",
+      "title": "明代景德镇青花山水盘",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 33,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "517b9031-c7e7-4635-936c-f99928938776",
+      "slug": "ming-kinrande-jar",
+      "title": "明代金襕手风格景德镇器",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 36,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "3a9fe43e-e09e-4677-a848-88a801b39397",
+      "slug": "jiajing-red-ground-dish",
+      "title": "嘉靖红地青花方盘",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 31,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "2975b66d-ac4a-453c-8cdb-f5165ee10271",
+      "slug": "qing-peach-shaped-ewer",
+      "title": "清代青花釉里红桃形壶",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 32,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "1b28709f-ffb4-432f-a7ae-6a76f62947a2",
+      "slug": "kangxi-oxblood-vase",
+      "title": "康熙郎窑红类瓶",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 32,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "b82c348a-9720-47e0-b07f-1a67f7d39801",
+      "slug": "feng-zikai",
+      "title": "丰子恺",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 28,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "364add30-2fc3-4518-8895-ea562320cad1",
+      "slug": "qian-qichen",
+      "title": "钱其琛",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 23,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "59f0b451-5334-4f87-aa8c-31ea7c0b8d4d",
+      "slug": "kangxi-covered-jar",
+      "title": "康熙五彩盖罐",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 30,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "9c5c26a0-51c0-49df-842e-10fe249db2ae",
+      "slug": "kangxi-famille-verte-figure",
+      "title": "康熙五彩人物像",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 31,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "c094cdfc-9d3c-49ec-ae7e-fe3a75364fd8",
+      "slug": "jiajing-kinrande-ewer",
+      "title": "嘉靖至万历金襕手执壶",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 35,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "fb17c098-ee90-4c39-9023-8f4a1193bd1d",
+      "slug": "kinrande-export",
+      "title": "金襕手与日本市场",
+      "category": "东亚",
+      "version": 4,
+      "body_characters": 26,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "24116650-a572-4ba4-bd59-20f312ed8118",
+      "slug": "chinese-bluewhite-global-copy",
+      "title": "青花瓷的全球仿制",
+      "category": "全球",
+      "version": 4,
+      "body_characters": 36,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "6346dc4c-e70a-441f-8891-3ac8d9709e25",
+      "slug": "zhang-guangnian",
+      "title": "张光年",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 26,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "e9fd8661-ae5c-4caf-b321-46da0d8b20cb",
+      "slug": "markley",
+      "title": "马基利",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 26,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "5f0aea49-0921-495f-b6d0-bc860aa380dd",
+      "slug": "kraak-porcelain",
+      "title": "克拉克瓷",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 22,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "4eac51c2-7dcb-4307-8e31-2001342e7216",
+      "slug": "longfellow",
+      "title": "Henry Wadsworth Longfellow（亨利·沃兹沃思·朗费罗）",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 38,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "c566153f-8759-4650-b06d-71b40c3f2f87",
+      "slug": "josiah-wedgwood",
+      "title": "Josiah Wedgwood（约西亚·韦奇伍德）",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 31,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "08283687-2035-44f3-bd24-54ee26a7ba7f",
+      "slug": "frank-b-lentz",
+      "title": "Frank B. Lentz",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 32,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "646b64f7-6f1a-4205-8bc8-6c02b8784ab6",
+      "slug": "wang-shixing",
+      "title": "王士性",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 29,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "d389b823-58af-4f14-b001-84d3d6b616b6",
+      "slug": "wen-zhenheng",
+      "title": "文震亨",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 31,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "b0a0cee6-a717-4a5c-8be8-f17c45447f93",
+      "slug": "shen-defu",
+      "title": "沈德符",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 26,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "00d7a3d6-a6f4-4d86-ae7e-c4ac5f744984",
+      "slug": "shen-huaiqing",
+      "title": "沈怀清",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 31,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "23643b54-860d-4123-bcd2-5e7b7666120a",
+      "slug": "wang-zehong",
+      "title": "王泽洪",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 24,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "e2f7d427-9dcf-4752-94e0-90815891c598",
+      "slug": "du-chongyuan",
+      "title": "杜重远",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 29,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "1161c6ad-b097-48b7-82cc-1e102490f267",
+      "slug": "mikami-tsugio",
+      "title": "三上次男",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 22,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "3888dab0-7e72-41ed-b44e-30f4a7676739",
+      "slug": "shu-tong",
+      "title": "舒同",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 21,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "890da94c-bd7a-493e-b331-287d163e382a",
+      "slug": "sawankhalok",
+      "title": "宋加洛窑·Si Satchanalai",
+      "category": "窑址",
+      "version": 3,
+      "body_characters": 318,
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "id": "912c614e-6762-4c59-95df-5f0517c981dd",
+      "slug": "kangxi-covered-ewer",
+      "title": "康熙五彩盖执壶",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 29,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "10674ca1-7c61-4687-8535-4dbf7017b04e",
+      "slug": "longquan-imitation-jingdezhen",
+      "title": "景德镇仿龙泉传统",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 17,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "8c0b11ff-4b13-4e31-b5e4-02ddf3345111",
+      "slug": "wood-fired-kiln",
+      "title": "柴窑与燃料系统",
+      "category": "工艺",
+      "version": 4,
+      "body_characters": 19,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "88a8808a-0acf-43eb-8f59-1171b9377bed",
+      "slug": "wang-zhen",
+      "title": "王震",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 13,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "5353cbad-ffa0-4525-a3a4-64b874ed72a2",
+      "slug": "bo-yibo",
+      "title": "薄一波",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 19,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "e479a789-c150-4bd2-814c-26546a618473",
+      "slug": "europe-porcelain",
+      "title": "欧洲瓷器",
+      "category": "窑址",
+      "version": 4,
+      "body_characters": 259,
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "id": "41a53512-cede-4838-9cde-dc56269390a0",
+      "slug": "tang-ying",
+      "title": "唐英",
+      "category": "人物",
+      "version": 3,
+      "body_characters": 314,
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "id": "4bd8fca8-fb4b-4c8e-a314-df87faf8ded8",
+      "slug": "xuande-stemcup",
+      "title": "宣德青花应龙纹高足杯",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 41,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "b341e65e-27f8-4152-93d7-6292fb09c3b1",
+      "slug": "xuande-dragon-dish",
+      "title": "宣德青花龙纹盘",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 29,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "dc8711e0-d9fd-47c2-84bb-bad8c834f7a9",
+      "slug": "imperial-porcelain-debris",
+      "title": "御窑落选瓷片",
+      "category": "全球",
+      "version": 4,
+      "body_characters": 30,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "6e81b919-ba77-4547-a6d2-51fc08c8dfbb",
+      "slug": "rl-hobson",
+      "title": "R. L. Hobson（罗伯特·洛克哈特·霍布森）",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 38,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "58ff0bc9-2547-437e-ae3e-0a4664e9d2ac",
+      "slug": "ru-type-imitation",
+      "title": "景德镇仿汝釉",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 30,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "1c027418-7f7e-4250-8f33-304d582afd81",
+      "slug": "archaeological-stratigraphy",
+      "title": "窑址地层学",
+      "category": "全球",
+      "version": 4,
+      "body_characters": 29,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "6988d1c3-604e-4184-bbfa-95043c8ff064",
+      "slug": "xuande-pomegranate-bowl",
+      "title": "宣德青花石榴缠枝莲纹菊瓣碗",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 37,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "a6b7ed86-48f4-438c-984d-8d1c953e7e10",
+      "slug": "yongle-copper-red-dish",
+      "title": "永乐铜红釉盘",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 32,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "59571713-b654-478f-97c8-a6fae7206341",
+      "slug": "binary-formula",
+      "title": "二元配方",
+      "category": "工艺",
+      "version": 4,
+      "body_characters": 33,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "d04f08c8-cabb-40ac-a734-12fd756d2ce1",
+      "slug": "arita-jingdezhen",
+      "title": "有田与景德镇青花传统",
+      "category": "东亚",
+      "version": 4,
+      "body_characters": 24,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "860fe32e-8f6d-422a-90c0-ec59028a5add",
+      "slug": "kiln-firing",
+      "title": "装烧与烧成",
+      "category": "工艺",
+      "version": 4,
+      "body_characters": 30,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "ab0a94bb-edef-4a50-abc1-6161a073f029",
+      "slug": "yongzheng-imperial-porcelain",
+      "title": "雍正御窑瓷",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 30,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "ca99163f-38ea-43b5-8f0a-faf660a9b4c9",
+      "slug": "blue-white-cobalt",
+      "title": "青花钴料",
+      "category": "工艺",
+      "version": 4,
+      "body_characters": 30,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "6146630b-4506-416b-892f-70f89574511a",
+      "slug": "iznik-ceramics",
+      "title": "伊兹尼克陶器",
+      "category": "窑址",
+      "version": 3,
+      "body_characters": 317,
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "id": "520389c9-52d4-4a1e-8a03-fa43d9d67a9e",
+      "slug": "seto-kiln",
+      "title": "濑户窑",
+      "category": "窑址",
+      "version": 3,
+      "body_characters": 301,
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "id": "58e8dfa1-730e-4ce4-b2e4-349c8afc2913",
+      "slug": "porcelain-standardization",
+      "title": "瓷器生产标准化",
+      "category": "工艺",
+      "version": 4,
+      "body_characters": 30,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "1612ee68-6347-450e-a805-02e0d9e448e8",
+      "slug": "chang-river",
+      "title": "昌江与景德镇瓷业",
+      "category": "窑址与城市空间",
+      "version": 4,
+      "body_characters": 23,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "56078b04-e92f-476b-ad3b-9cd14121037a",
+      "slug": "jun-glaze-jingdezhen",
+      "title": "景德镇仿钧釉",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 19,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "f93043f1-b2e6-4e6e-b8bc-84772e7de102",
+      "slug": "porcelain-sherds",
+      "title": "瓷片与考古标本",
+      "category": "全球",
+      "version": 4,
+      "body_characters": 26,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "af489c4a-f38a-4d37-818b-6c4784a31961",
+      "slug": "kosometsuke",
+      "title": "古染付",
+      "category": "东亚",
+      "version": 4,
+      "body_characters": 21,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "d58a6d76-8fd7-47d9-859b-f9cba3d4593a",
+      "slug": "dragon-kiln",
+      "title": "龙窑",
+      "category": "工艺",
+      "version": 4,
+      "body_characters": 34,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "ddd0c44a-5613-48d0-86b1-3b670221ce4e",
+      "slug": "export-porcelain",
+      "title": "外销瓷",
+      "category": "历史",
+      "version": 4,
+      "body_characters": 35,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "d5008a14-422c-41b4-a6c9-7f0b9c3d8b09",
+      "slug": "xuande-copper-red-bowl",
+      "title": "宣德铜红釉碗",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 30,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "dd2ad305-048d-4fd6-87fb-e036e5cca32c",
+      "slug": "ceramic-workers",
+      "title": "陶工与工匠",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 32,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "4da7e3ec-f219-4394-a95e-c2837dd9e936",
+      "slug": "yuan-large-bluewhite",
+      "title": "元代大型青花",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 28,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "4c9b2bb2-24b0-4c09-9cc9-85f3a6973830",
+      "slug": "kangxi-export-porcelain",
+      "title": "康熙时期外销瓷",
+      "category": "历史",
+      "version": 4,
+      "body_characters": 18,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "182d8e44-f573-42c0-bf79-73a700724240",
+      "slug": "porcelain-raw-material-system",
+      "title": "瓷业原料供应体系",
+      "category": "窑址与城市空间",
+      "version": 4,
+      "body_characters": 26,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "cc6b4dc8-8309-40ef-8b24-34599019e336",
+      "slug": "kiln-guilds",
+      "title": "窑业组织",
+      "category": "历史",
+      "version": 4,
+      "body_characters": 36,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "9550dcd8-e358-474e-8f59-662b909304ce",
+      "slug": "porcelain-marks",
+      "title": "瓷器款识",
+      "category": "全球",
+      "version": 4,
+      "body_characters": 35,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "4b46b6ee-a13a-4ef2-adfa-78d0a1963b3d",
+      "slug": "chinoiserie",
+      "title": "欧洲中国风与景德镇瓷",
+      "category": "历史",
+      "version": 4,
+      "body_characters": 23,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "f02b3d5f-613d-44f2-951e-fc3acc90b51f",
+      "slug": "fuliang-county",
+      "title": "浮梁与景德镇瓷业",
+      "category": "历史",
+      "version": 4,
+      "body_characters": 28,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "9a619a4f-0f12-4ccb-ae32-702ab547187a",
+      "slug": "southeast-asia-jingdezhen",
+      "title": "东南亚与景德镇瓷器",
+      "category": "全球",
+      "version": 4,
+      "body_characters": 28,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "aa4e70f9-cb35-476b-8397-bb42a12fdaf1",
+      "slug": "sweet-white-porcelain",
+      "title": "甜白瓷",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 20,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "6e392dd0-9c47-4d59-bb1c-1caaf714f9dc",
+      "slug": "japanese-export-porcelain",
+      "title": "面向日本市场的景德镇瓷",
+      "category": "东亚",
+      "version": 4,
+      "body_characters": 20,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "fb66885b-7f66-4bc6-9c1d-5e0f64a104e6",
+      "slug": "kiln-owners",
+      "title": "窑户与窑主",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 20,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "ef8bea64-4351-422a-8bbe-a1feb661566f",
+      "slug": "tea-dust-glaze",
+      "title": "茶叶末釉",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 21,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "7248af8f-cb2f-4428-8315-6f341ce19571",
+      "slug": "qianlong-jingdezhen-porcelain",
+      "title": "乾隆时期景德镇瓷",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 27,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "2425c3c7-0c1e-4a55-b74c-d3ee066deda0",
+      "slug": "chenghua-doucai",
+      "title": "成化斗彩",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 20,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "fd1baa20-bbf5-4591-ad48-314ba7431af1",
+      "slug": "porcelain-stone",
+      "title": "瓷石",
+      "category": "工艺",
+      "version": 4,
+      "body_characters": 22,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "b09b06da-133c-4629-890a-bc828c033866",
+      "slug": "kiln-fuel-system",
+      "title": "窑业燃料供应",
+      "category": "窑址与城市空间",
+      "version": 4,
+      "body_characters": 32,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "30b201d4-fb22-4268-a710-ee91ed9d2415",
+      "slug": "kangxi-black-glaze-vase",
+      "title": "康熙黑釉瓶",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 35,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "bb1222f9-07b6-47b1-9321-1948b17d157f",
+      "slug": "kaolin-clay",
+      "title": "高岭土",
+      "category": "工艺",
+      "version": 4,
+      "body_characters": 21,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "30c98c1d-74c1-40bc-ac60-bf1479124dc5",
+      "slug": "red-glaze-jingdezhen",
+      "title": "景德镇高温红釉",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 29,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "6523c0a0-e9f8-4108-8251-670186d2f2e5",
+      "slug": "porcelain-trade",
+      "title": "瓷器贸易网络",
+      "category": "历史",
+      "version": 4,
+      "body_characters": 28,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "5f3869dd-e5ea-4e0c-9849-852eda45ad4f",
+      "slug": "imperial-kiln-management",
+      "title": "御窑管理制度",
+      "category": "历史",
+      "version": 4,
+      "body_characters": 32,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "c0abfc52-b4fe-4f39-a254-e3b75e0c6bd9",
+      "slug": "porcelain-craft-division-labor",
+      "title": "制瓷分工",
+      "category": "工艺",
+      "version": 4,
+      "body_characters": 35,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "814879d7-0a47-436b-82e4-ab7728175a4e",
+      "slug": "yongzheng-turquoise-vase",
+      "title": "雍正绿松石釉瓶",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 29,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "18e78490-6efa-42d1-b2c3-be4318c925ed",
+      "slug": "qianlong-lightblue-vase",
+      "title": "乾隆浅蓝釉瓶",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 29,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "f87f9b87-fdf9-47da-9e6b-684ab4b44241",
+      "slug": "civilian-kilns",
+      "title": "民窑",
+      "category": "历史",
+      "version": 4,
+      "body_characters": 17,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "32602c47-2d96-4920-868e-98a407c5ae13",
+      "slug": "peachbloom-glaze",
+      "title": "豇豆红与桃花片",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 27,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "e45d648d-df19-4f9c-a540-d6de71832232",
+      "slug": "imperial-civilian-kilns",
+      "title": "官民窑关系",
+      "category": "历史",
+      "version": 4,
+      "body_characters": 31,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "8fbb9161-01d6-430a-ac15-4f560384b257",
+      "slug": "reign-marks",
+      "title": "年款与官窑款识",
+      "category": "全球",
+      "version": 4,
+      "body_characters": 31,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "7dac9636-1c05-4a16-8a27-a4118168bf91",
+      "slug": "meissen-jingdezhen",
+      "title": "迈森瓷与景德镇",
+      "category": "全球",
+      "version": 4,
+      "body_characters": 25,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "2b6a694a-73ea-4e2d-a13a-ed357fb5088a",
+      "slug": "portuguese-porcelain-trade",
+      "title": "葡萄牙与中国瓷器贸易",
+      "category": "全球",
+      "version": 4,
+      "body_characters": 20,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "59b7c597-9272-464e-b955-49f39d411acc",
+      "slug": "sacrificial-red",
+      "title": "祭红",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 21,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "ff9961ba-e9ef-4693-bd63-66493ffd59da",
+      "slug": "lang-tingji",
+      "title": "郎廷极",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 305,
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "id": "ed0c4fc6-e10e-4d18-a41c-2c4fb81bb03a",
+      "slug": "colored-glaze",
+      "title": "颜色釉瓷",
+      "category": "器物",
+      "version": 3,
+      "body_characters": 267,
+      "status": "draft_prepared_not_applied",
+      "issues": []
+    },
+    {
+      "id": "a3a6d4ab-0625-45da-a39d-a674be4c7486",
+      "slug": "r29",
+      "title": "景德镇颜色釉相关资料",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 21,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "9d0a95e1-b090-4e70-8837-d279ea89d096",
+      "slug": "yongzheng-relief-vase",
+      "title": "雍正刻花青釉瓶",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 32,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "30b5c284-8abc-4232-85a2-b9f482faef5e",
+      "slug": "arita-kiln",
+      "title": "有田窑·有田烧",
+      "category": "窑址",
+      "version": 3,
+      "body_characters": 367,
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "id": "bd34d580-40a7-4e89-aedd-545ed525436a",
+      "slug": "bat-trang",
+      "title": "巴特朗陶窑",
+      "category": "窑址",
+      "version": 4,
+      "body_characters": 295,
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "id": "76c14f6b-0312-4f90-87bb-12c28a50e1a5",
+      "slug": "jean-baptiste-du-halde",
+      "title": "Jean-Baptiste du Halde（杜赫德）",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 351,
+      "status": "draft_prepared_not_applied",
+      "issues": []
+    },
+    {
+      "id": "c9e05f44-f4ca-4c2c-89a4-eb28bc61428a",
+      "slug": "zhu-yan",
+      "title": "朱琰",
+      "category": "人物",
+      "version": 3,
+      "body_characters": 282,
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "id": "b10edbf7-63f3-4fba-b020-28d60504f157",
+      "slug": "tao-shuo",
+      "title": "《陶说》",
+      "category": "文献",
+      "version": 3,
+      "body_characters": 286,
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "id": "8c067ac7-bb5f-4843-9127-7b5d35b5e2da",
+      "slug": "zhang-songmao",
+      "title": "张松茂",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 212,
+      "status": "draft_prepared_not_applied",
+      "issues": []
+    },
+    {
+      "id": "8074d3ec-e4a5-4e32-85f1-cf6aa4a7e51d",
+      "slug": "li-zhengdao",
+      "title": "李政道",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 23,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "5d78cc09-2c89-466d-a083-db1d5187cbc8",
+      "slug": "japan-ceramics",
+      "title": "日本陶瓷",
+      "category": "窑址",
+      "version": 5,
+      "body_characters": 241,
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "id": "da892d36-fa24-4b30-b53b-e650aaa8acf5",
+      "slug": "imperial-kiln",
+      "title": "御窑厂遗址",
+      "category": "窑址",
+      "version": 4,
+      "body_characters": 1173,
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "id": "276fabf1-9963-45d7-b183-1a126a6369ec",
+      "slug": "kangxi-famille-verte-vase",
+      "title": "康熙五彩釉上彩瓶",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 31,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "062df6f4-0268-4f35-ba9d-236633b0bb91",
+      "slug": "changling-stone",
+      "title": "长岭瓷石采掘区",
+      "category": "窑址",
+      "version": 4,
+      "body_characters": 242,
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "id": "f2ae381c-27d3-4fea-8c4a-2747a993e50b",
+      "slug": "yuan-blue-white",
+      "title": "元：青花与釉下彩绘",
+      "category": "历史",
+      "version": 4,
+      "body_characters": 213,
+      "status": "draft_prepared_not_applied",
+      "issues": []
+    },
+    {
+      "id": "85c66969-b3ad-4596-8195-df0b1bb530fd",
+      "slug": "met-1991-253-33",
+      "title": "景德镇窑青花莲池纹瓶（Met 1991.253.33）",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 380,
+      "status": "draft_prepared_not_applied",
+      "issues": []
+    },
+    {
+      "id": "79edb3ad-8b41-4a55-ae69-0154955c280d",
+      "slug": "kangxi-famille-verte-gilt-vase",
+      "title": "康熙五彩描金瓶",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 28,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "0a7e5bbf-84f3-4426-9113-b9aa205aea27",
+      "slug": "kangxi-famille-verte-monteith",
+      "title": "康熙五彩蒙太斯酒钵",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 35,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "ae0fd6c2-4561-4772-81d0-8d797139a881",
+      "slug": "nian-xiyao",
+      "title": "年希尧",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 238,
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "id": "24c2b479-5331-4450-b160-d77247d28835",
+      "slug": "celadon-glaze-jingdezhen",
+      "title": "景德镇青釉",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 32,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "0b779f7e-f6b1-4bf6-b0c7-1b492e404e63",
+      "slug": "export-kiln-production",
+      "title": "外销定制生产",
+      "category": "历史",
+      "version": 4,
+      "body_characters": 23,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "46acf042-385b-44e4-8630-ca23898b4956",
+      "slug": "blue-and-white",
+      "title": "青花瓷",
+      "category": "器物",
+      "version": 5,
+      "body_characters": 1035,
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "id": "95f7c5ed-b0a7-434d-8750-7bf8be85e448",
+      "slug": "river-transport",
+      "title": "水运与瓷业运输",
+      "category": "窑址与城市空间",
+      "version": 4,
+      "body_characters": 25,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "c6ee2bbf-473b-461f-88a4-4f4696bf4939",
+      "slug": "xing-kiln",
+      "title": "邢窑",
+      "category": "窑址",
+      "version": 4,
+      "body_characters": 31,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "a26cbc92-8a1f-41dc-a48e-4e28d949b3ea",
+      "slug": "europe-jingdezhen",
+      "title": "欧洲与景德镇瓷器",
+      "category": "全球",
+      "version": 4,
+      "body_characters": 18,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "d03ad6a7-7467-40c2-a75d-e83bcfdd9508",
+      "slug": "five-dynasties-song",
+      "title": "五代—宋：湖田窑与青白瓷",
+      "category": "历史",
+      "version": 4,
+      "body_characters": 49,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "ac37bb70-018c-4f18-9646-5157bf5482ad",
+      "slug": "tian-gong-kai-wu",
+      "title": "《天工开物》",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 278,
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "id": "5d07ce7e-0e03-4716-9974-6e6c4d2e169a",
+      "slug": "robert-finlay",
+      "title": "Robert Finlay（罗伯特·芬雷）",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 23,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "42c6e771-1c1a-4ec1-a585-6ee95c1355a7",
+      "slug": "r25",
+      "title": "《粉彩工艺与艺术风格的演变》",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 30,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "17e1cb8b-0cc8-4a50-918a-8883a5105264",
+      "slug": "liu-zongyuan",
+      "title": "柳宗元",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 41,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "7b36bec3-a889-4ead-9180-1ba9a2e63b67",
+      "slug": "lettres-edifiantes-porcelaine",
+      "title": "《耶稣会士书信集》中的景德镇报告",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 61,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "f31277c6-351c-40fc-b750-2d8002d92be2",
+      "slug": "hutian-kiln",
+      "title": "湖田窑",
+      "category": "窑址",
+      "version": 3,
+      "body_characters": 400,
+      "status": "draft_prepared_not_applied",
+      "issues": []
+    },
+    {
+      "id": "1a4fc228-20b6-44fc-b3d3-c932a831b20a",
+      "slug": "tian-hexian",
+      "title": "田鹤仙",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 40,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "cb41f190-63f6-4a22-b9b8-f6acba3d8a37",
+      "slug": "li-rihua",
+      "title": "李日华",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 29,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "def5053d-3384-42ac-a562-720c9769631e",
+      "slug": "pilgrim-art",
+      "title": "The Pilgrim Art: Cultures of Porcelain in World History",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 76,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "679fcb79-0363-4217-9ecb-27216dbbfdd8",
+      "slug": "xie-min",
+      "title": "谢旻",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 24,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "b91b0dd6-f828-425f-b149-a131c2b4d133",
+      "slug": "fencai",
+      "title": "粉彩瓷",
+      "category": "器物",
+      "version": 3,
+      "body_characters": 290,
+      "status": "draft_prepared_not_applied",
+      "issues": []
+    },
+    {
+      "id": "0c868fc7-0a25-4a27-add4-ad41b947624c",
+      "slug": "yixing-kiln",
+      "title": "宜兴窑",
+      "category": "窑址",
+      "version": 3,
+      "body_characters": 320,
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "id": "d1895124-a294-4bf8-a9de-60a761812326",
+      "slug": "gaoling-mining",
+      "title": "高岭土矿采掘区",
+      "category": "窑址",
+      "version": 4,
+      "body_characters": 234,
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "id": "5cdf0a6c-9f24-4a7f-bca7-d81b8d1db684",
+      "slug": "zang-yingxuan",
+      "title": "臧应选",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 228,
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "id": "75b7e92f-f00d-4636-a882-7f5e6ca2dd99",
+      "slug": "li-xiannian",
+      "title": "李先念",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 13,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "94ddabc3-a23b-4cb5-ae14-0ac2c0816279",
+      "slug": "r23",
+      "title": "UNESCO：Jingdezhen Handicraft Porcelain Industry Sites / 景德镇手工瓷业遗存",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 41,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "79d22068-bcba-4d0e-a237-334150f4f109",
+      "slug": "chen-yu",
+      "title": "陈淯",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 26,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "2c1d3988-462a-4f33-a56b-2e52f8193023",
+      "slug": "peng-qizi",
+      "title": "彭器资",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 36,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "f5f20387-c923-4435-bdba-9d4af72ab381",
+      "slug": "jingdezhen",
+      "title": "景德镇窑",
+      "category": "窑址",
+      "version": 4,
+      "body_characters": 442,
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "id": "11f2ce07-e5c8-4d7e-bdb1-131ffdd907bf",
+      "slug": "korea-ceramics",
+      "title": "朝鲜半岛陶瓷",
+      "category": "窑址",
+      "version": 5,
+      "body_characters": 22,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "331582a4-1057-4611-bd5a-7fc0667c9a66",
+      "slug": "porcelain-wharf",
+      "title": "瓷业码头",
+      "category": "窑址与城市空间",
+      "version": 4,
+      "body_characters": 17,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "8ee609d7-b590-4ba5-8aa2-0d55039bc573",
+      "slug": "zhan-shaolin",
+      "title": "占绍林",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 35,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "925c476e-ae84-41d1-90a2-808205973e4a",
+      "slug": "huang-yunpeng",
+      "title": "黄云鹏",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 34,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "fde2bc60-720d-444f-bcae-c2359cc8383c",
+      "slug": "r01",
+      "title": "《景德镇湖田窑址：1988—1999年考古发掘报告》",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 43,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "fd0ff3bd-9c5f-47ed-9e00-6d994b922ac4",
+      "slug": "r02",
+      "title": "《景德镇明清御窑遗址：2002—2004年珠山北麓考古发掘报告》",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 55,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "8ff2cb4f-d2d2-48f1-821b-88011ac60b00",
+      "slug": "r03",
+      "title": "北京大学：景德镇明清御窑厂遗址",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 36,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "dac39df4-4c98-4020-a236-97f3508c4c55",
+      "slug": "islamic-world-jingdezhen",
+      "title": "伊斯兰世界与景德镇瓷",
+      "category": "全球",
+      "version": 4,
+      "body_characters": 31,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "370473c8-cd14-4327-afa0-ebd5db50f551",
+      "slug": "korean-jingdezhen-bluewhite",
+      "title": "朝鲜半岛与景德镇青花",
+      "category": "东亚",
+      "version": 4,
+      "body_characters": 26,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "832a7646-2137-4cd0-9625-0eb3bb102a02",
+      "slug": "qing-colors",
+      "title": "清：御窑、彩瓷与颜色釉",
+      "category": "历史",
+      "version": 4,
+      "body_characters": 59,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "d41a560b-ed35-4203-a225-561334bff045",
+      "slug": "modern-industry",
+      "title": "1909—1910：近代企业与陶业教育",
+      "category": "历史",
+      "version": 4,
+      "body_characters": 59,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "16e87be8-3201-4cca-820c-27bc8a20bc0b",
+      "slug": "tian-han",
+      "title": "田汉",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 28,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "8d7e1841-0b67-4028-af17-dd1c0741c409",
+      "slug": "active-archaeology",
+      "title": "2002—2014：御窑厂主动性考古",
+      "category": "历史",
+      "version": 4,
+      "body_characters": 157,
+      "status": "draft_prepared_not_applied",
+      "issues": []
+    },
+    {
+      "id": "41956ea9-5bb6-402b-a932-306599675ed5",
+      "slug": "limoges-porcelain",
+      "title": "利摩日瓷器",
+      "category": "窑址",
+      "version": 4,
+      "body_characters": 30,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "3ba11de0-7496-4933-96e0-4eedbef6f2bb",
+      "slug": "industry-transition",
+      "title": "1949—1966：生产制度与科技转型",
+      "category": "历史",
+      "version": 4,
+      "body_characters": 39,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "36dbd563-5c5d-40d9-8d43-e9a3a04a336e",
+      "slug": "yaozhou-kiln",
+      "title": "耀州窑·黄堡",
+      "category": "窑址",
+      "version": 4,
+      "body_characters": 39,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "4d9dfe2f-29a6-4285-978c-f18383a8fa5a",
+      "slug": "stoke-on-trent",
+      "title": "斯托克陶瓷",
+      "category": "窑址",
+      "version": 4,
+      "body_characters": 32,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "867c372e-ec21-4ae7-b5b1-d0a4b165e8ba",
+      "slug": "icheon-ceramics",
+      "title": "利川陶瓷",
+      "category": "窑址",
+      "version": 4,
+      "body_characters": 40,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "bbe7b1f0-d789-4150-97bd-2f2d38c7b13f",
+      "slug": "ding-kiln",
+      "title": "定窑·曲阳",
+      "category": "窑址",
+      "version": 4,
+      "body_characters": 34,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "256587aa-cb98-4f6a-9277-80cec0368b3d",
+      "slug": "wanli-bluewhite-jar",
+      "title": "万历青花花卉纹盖罐",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 31,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "e7c58fda-4098-4a5a-b067-a15a9899f8e7",
+      "slug": "guo-moruo",
+      "title": "郭沫若",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 39,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "e253ec16-ca6b-41aa-97e2-c3b86bd0d58c",
+      "slug": "cizhou-kiln",
+      "title": "磁州窑·观台",
+      "category": "窑址",
+      "version": 4,
+      "body_characters": 45,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "93f3562e-4bb3-4147-b562-5ab21c92ac7a",
+      "slug": "r26",
+      "title": "《清中期宫廷花鸟画风对粉彩花鸟装饰的影响》",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 17,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "2b2b44c3-fb4a-4a05-8279-7e13045fad4e",
+      "slug": "r06",
+      "title": "《浮梁县志》乾隆四十八年（1783）刻本",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 39,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "ea5d1fd8-8f31-43ce-871e-c909370f9736",
+      "slug": "joseph-needham",
+      "title": "李约瑟（Joseph Needham）",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 39,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "189effa3-0f39-40cc-8db1-4bda54cc13bd",
+      "slug": "guan-kiln",
+      "title": "官窑",
+      "category": "窑址",
+      "version": 4,
+      "body_characters": 40,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "1a4d4ac2-d7ba-47a4-ac31-2c2ff900422a",
+      "slug": "ge-kiln",
+      "title": "哥窑",
+      "category": "窑址",
+      "version": 4,
+      "body_characters": 39,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "2e7aa1b8-5ca2-4592-ae2a-406eb460f747",
+      "slug": "longquan-kiln",
+      "title": "龙泉窑·大窑",
+      "category": "窑址",
+      "version": 4,
+      "body_characters": 52,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "96264f90-76c6-4259-b34c-734c0390b074",
+      "slug": "goryeo-celadon",
+      "title": "高丽青瓷",
+      "category": "窑址",
+      "version": 4,
+      "body_characters": 269,
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "id": "d72cb21f-a950-4f28-b3b4-ab65d2cafb23",
+      "slug": "wang-qi",
+      "title": "王琦",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 230,
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "id": "a304713e-7c81-4c8a-9200-02e73076de5f",
+      "slug": "chenghua-doucai-chicken-cup",
+      "title": "成化斗彩鸡缸杯",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 208,
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "id": "ffaa1956-e8f8-4ec4-bdce-4510bc66236b",
+      "slug": "qianlong-emperor",
+      "title": "乾隆皇帝",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 38,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "80750fb5-6589-4534-bcf3-25daf2980554",
+      "slug": "porcelain-clay-processing",
+      "title": "瓷土加工",
+      "category": "工艺",
+      "version": 4,
+      "body_characters": 34,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "88b11026-48bd-4bef-9ddb-49d4c073eea5",
+      "slug": "xie-juezai",
+      "title": "谢觉哉",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 29,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "8c6bad40-5b25-4a82-b9c7-43ec5e3d01cd",
+      "slug": "tang-ying-jun-vase",
+      "title": "雍正仿钧新紫釉天球瓶",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 63,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "bf169f69-bbb5-4371-b0da-e1ee82c857ca",
+      "slug": "r07",
+      "title": "《景德镇市志》建置志等地方志资料",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 30,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "fe17fcf9-7674-478b-a843-a9cb8cabba70",
+      "slug": "joseon-ceramics",
+      "title": "朝鲜王朝陶瓷",
+      "category": "窑址",
+      "version": 4,
+      "body_characters": 38,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "6f379f4e-dcc4-43da-84f2-be83f7049e58",
+      "slug": "r34",
+      "title": "《江西景德镇御窑厂遗址西北角外围明清民窑遗存考古简报》",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 31,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "60aade24-a020-4632-926d-8987260e8316",
+      "slug": "ge-type-imitation",
+      "title": "景德镇仿哥釉",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 20,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "538f8d7d-474b-4290-bab8-3c1b8c61bfb2",
+      "slug": "r09",
+      "title": "《宋代景德镇青白瓷的历史分期及其特征》",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 33,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "adbff0df-f988-4360-84ee-6580b8a3b9dd",
+      "slug": "r28",
+      "title": "《粉彩瓷与无毒粉彩颜料的研究》",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 19,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "360b4636-dcd4-4260-8242-2bd997db3323",
+      "slug": "underglaze-red",
+      "title": "釉里红",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 33,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "21e34311-14a2-4f6c-87e1-231551315593",
+      "slug": "xuande-bluewhite",
+      "title": "宣德青花",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 27,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "b3cbf33a-ac52-4b94-b7d2-5a9e2bad4e95",
+      "slug": "r27",
+      "title": "《景德镇清代釉上彩瓷器的文化故事》",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 23,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "a74c7d7e-487b-4667-ada8-f15b30bc2480",
+      "slug": "islamic-ceramics",
+      "title": "伊斯兰世界陶瓷",
+      "category": "窑址",
+      "version": 5,
+      "body_characters": 27,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "30055011-ad42-41de-868d-abcf70864006",
+      "slug": "dehua-kiln",
+      "title": "德化窑",
+      "category": "窑址",
+      "version": 4,
+      "body_characters": 40,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "ddf5579b-f602-4659-8c4a-397588b3cee8",
+      "slug": "zhangzhou-kiln",
+      "title": "漳州窑",
+      "category": "窑址",
+      "version": 4,
+      "body_characters": 37,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "fb38415a-9935-404b-a85c-5f230bf90f67",
+      "slug": "southeast-asia-ceramics",
+      "title": "东南亚陶瓷",
+      "category": "窑址",
+      "version": 4,
+      "body_characters": 45,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "a6e4cd46-3d12-4c73-b6ce-613f21008b83",
+      "slug": "wang-xiliang",
+      "title": "王锡良",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 32,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "16239e97-95a0-4c62-af0d-1bc4d8fc0206",
+      "slug": "jiaotan-firewood",
+      "title": "焦潭柴窑燃料生产区",
+      "category": "窑址",
+      "version": 4,
+      "body_characters": 255,
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "id": "8de73166-d68d-414d-89a0-1440d92c56f2",
+      "slug": "qingbai-porcelain",
+      "title": "青白瓷",
+      "category": "器物",
+      "version": 3,
+      "body_characters": 234,
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "id": "bb935a4a-cb13-4107-988c-4c6869f315d9",
+      "slug": "qianlong-poem-vase",
+      "title": "乾隆御题诗文瓶",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 35,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "32ccfcf0-c41d-4503-af21-d657026f0116",
+      "slug": "r18",
+      "title": "《“器成天下走”：外销瓷与海上丝绸之路》",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 37,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "f8d6ca91-80a5-410e-a704-4b9bfba9c6cf",
+      "slug": "r19",
+      "title": "国家级非物质文化遗产代表性项目“景德镇手工制瓷技艺”",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 40,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "aab50925-2f05-47d2-aa3f-5d1e34800f1e",
+      "slug": "r20",
+      "title": "《1949～1966年景德镇陶瓷科技文献比较研究》",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 31,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "a8ff3173-ab32-4be5-933c-47f11dad2e86",
+      "slug": "r21",
+      "title": "《改革开放以来景德镇薄胎瓷工艺的发展演变及其特点》",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 34,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "183ddb24-1b4a-4673-9d5a-4375eae7369d",
+      "slug": "jingdezhen-taolu",
+      "title": "《景德镇陶录》",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 295,
+      "status": "draft_prepared_not_applied",
+      "issues": []
+    },
+    {
+      "id": "6ccac91e-d92d-47bf-b625-68e3779d32bd",
+      "slug": "shiwan-kiln",
+      "title": "石湾窑",
+      "category": "窑址",
+      "version": 4,
+      "body_characters": 36,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "e4f7b140-40dd-4a81-9d95-f0fd3734ad69",
+      "slug": "yue-kiln",
+      "title": "越窑·上林湖",
+      "category": "窑址",
+      "version": 4,
+      "body_characters": 54,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "8315a57d-e5a0-47b7-8855-244c69dd38bb",
+      "slug": "r22",
+      "title": "《景德镇陶瓷文化生态保护区总体规划（2021—2035年）》",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 30,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "a4726f87-4711-4876-be05-0b2fd45f1499",
+      "slug": "changsha-kiln",
+      "title": "长沙窑",
+      "category": "窑址",
+      "version": 4,
+      "body_characters": 44,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "0f325b1e-de6d-4e5a-8ae5-473771cba608",
+      "slug": "tao-cheng-jishi",
+      "title": "《陶成纪事碑记》",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 203,
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "id": "c7dafc47-fd50-48df-9cd0-64f26f993024",
+      "slug": "unesco-2026",
+      "title": "2026：景德镇手工瓷业遗存",
+      "category": "历史",
+      "version": 4,
+      "body_characters": 589,
+      "status": "draft_prepared_not_applied",
+      "issues": []
+    },
+    {
+      "id": "df2be903-2e77-4702-af7b-b041ec96628d",
+      "slug": "peng-zhen",
+      "title": "彭真",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 13,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "144e53de-3669-453d-aa2f-9a3ca31b43a8",
+      "slug": "liling-kiln",
+      "title": "醴陵窑",
+      "category": "窑址",
+      "version": 4,
+      "body_characters": 46,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "6d299c9a-929f-44ba-99fc-865ac8ca27d9",
+      "slug": "tong-bin",
+      "title": "童宾",
+      "category": "人物",
+      "version": 5,
+      "body_characters": 77,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "0daf6e2e-f401-4e0f-9397-09cc4d9311b7",
+      "slug": "langyao-red",
+      "title": "郎窑红",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 20,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "9038b8d3-0150-44cb-9b7f-aad76987cf3a",
+      "slug": "wang-bu",
+      "title": "王步",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 210,
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "id": "f08b6ef6-27a6-4f7f-b9b3-b247a3221863",
+      "slug": "ru-kiln",
+      "title": "汝窑·清凉寺",
+      "category": "窑址",
+      "version": 4,
+      "body_characters": 46,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "4886d78e-f0da-4300-aae0-9e1a11f17345",
+      "slug": "liu-yuanchang",
+      "title": "刘远长",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 36,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "205ef5ba-79a4-409f-8ab9-a5fd7fc22e68",
+      "slug": "qin-xilin",
+      "title": "秦锡麟",
+      "category": "人物",
+      "version": 4,
+      "body_characters": 35,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "7fb72d65-88d7-4ad4-92eb-a3e6ec183654",
+      "slug": "yuan-blue-and-white-vase",
+      "title": "元青花折枝花纹八棱瓶",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 303,
+      "status": "needs_source_review",
+      "issues": []
+    },
+    {
+      "id": "208fc33f-40fa-47df-ac78-6ea6ee73040a",
+      "slug": "r08",
+      "title": "《中国瓷都·景德镇市瓷业志》",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 29,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "0dbe2e86-9daa-42ae-9528-7708e438d445",
+      "slug": "doucai-porcelain",
+      "title": "斗彩",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 32,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "6cec0f53-f2ee-4f06-96c8-5e63a1d4f088",
+      "slug": "wucai",
+      "title": "五彩瓷",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 27,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "bb9c6549-56df-45ca-827c-e7da2646c493",
+      "slug": "overglaze-enamels",
+      "title": "釉上彩",
+      "category": "工艺",
+      "version": 4,
+      "body_characters": 19,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "3b34b6d2-61ee-4ccc-ab34-427fc626490e",
+      "slug": "fencai-technique",
+      "title": "粉彩装饰技术",
+      "category": "工艺",
+      "version": 4,
+      "body_characters": 18,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "3bef45f5-6ebe-48f9-a6c4-02b3b726b545",
+      "slug": "meissen-porcelain",
+      "title": "梅森瓷器",
+      "category": "窑址",
+      "version": 4,
+      "body_characters": 44,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "dc0052fd-9c6a-4fcc-94c1-5e9bdc4e52e6",
+      "slug": "jun-kiln",
+      "title": "钧窑·禹州",
+      "category": "窑址",
+      "version": 4,
+      "body_characters": 45,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "77c16ae9-0876-4821-b9f8-f5f5b07972d5",
+      "slug": "r10",
+      "title": "《宋代湖田窑青白瓷历史和发展脉络的考察研究》",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 46,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "5b2fd2b0-1c5f-4375-ba7b-173d5ebbfbc9",
+      "slug": "west-asia-ceramics",
+      "title": "西亚陶瓷",
+      "category": "窑址",
+      "version": 4,
+      "body_characters": 45,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "01195120-9889-407f-b0b2-be22cdc26231",
+      "slug": "r11",
+      "title": "《景德镇瓷器生产“二元配方”起源初探——兼论高岭土开发史》",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 45,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "ac26e854-9c9a-44f5-b0ef-22079cc9a446",
+      "slug": "ming-imperial-kiln",
+      "title": "明：御窑厂与官作体系",
+      "category": "历史",
+      "version": 4,
+      "body_characters": 53,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "eaf75a4d-764f-4454-8b26-5459daa41315",
+      "slug": "xuande-blue-and-white-dish",
+      "title": "宣德青花龙纹盘",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 58,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "265c8494-a595-46f0-a3ec-05b043362cc0",
+      "slug": "r12",
+      "title": "《景德镇陶瓷科学技术史研究的发展与展望》",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 34,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "94d50f53-a483-44ad-85ac-27168e3b9297",
+      "slug": "r33",
+      "title": "《明清景德镇御窑厂遗址考古价值阐释刍议》",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 28,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "e5be3a1c-e7f9-47ca-a19e-075fe758a02a",
+      "slug": "r35",
+      "title": "《“文化交流”视域下宋代景德镇青白瓷研究》",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 48,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "eadb2958-f1b7-4b12-bf26-ff357c477339",
+      "slug": "ming-imperial-bluewhite",
+      "title": "明代御窑青花",
+      "category": "器物",
+      "version": 4,
+      "body_characters": 25,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "ab27d50d-90a6-4db7-a2b5-4a20a015fa0b",
+      "slug": "r15",
+      "title": "《宋元景德镇窑青白瓷人物造像技艺研究》",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 31,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "9cf1e39f-aa35-452c-b1ac-d325854ab087",
+      "slug": "r16",
+      "title": "《明代早期景德镇御窑青花瓷器的初步研究》",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 25,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "ab1e144d-c3b5-4a22-b497-5a6a47052052",
+      "slug": "ceramic-guilds",
+      "title": "陶瓷行会与行业组织",
+      "category": "历史",
+      "version": 4,
+      "body_characters": 38,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "64f539ad-09a6-479c-8c58-7c2b20c4ae99",
+      "slug": "private-kiln-high-end",
+      "title": "民窑精品生产",
+      "category": "历史",
+      "version": 4,
+      "body_characters": 28,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "fa5f2d1f-c31f-44c8-91c6-2c913cca13f5",
+      "slug": "r13",
+      "title": "《景德镇传统陶瓷坯体“一元”配方研究》",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 27,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "fe56a082-1768-494a-afcc-96255d4708c8",
+      "slug": "kiln-waste",
+      "title": "窑业废弃物",
+      "category": "全球",
+      "version": 4,
+      "body_characters": 31,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "80fe43c5-4533-47d6-8f49-95314a4cb884",
+      "slug": "r30",
+      "title": "《清代官窑祭红釉瓷的釉层结构及其对呈色的影响》",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 43,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "61e1dbe0-a54d-4f9a-9d9e-46ebc7096487",
+      "slug": "changnan-town",
+      "title": "昌南镇与景德镇早期瓷业",
+      "category": "历史",
+      "version": 4,
+      "body_characters": 44,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "974a961d-0116-4ea5-b6c6-1d86be91f0f9",
+      "slug": "r31",
+      "title": "《清代初期高温铜红釉烧造工艺及特点》",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 24,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "c5ca2a39-eb8f-4db4-8de4-61066bb7420d",
+      "slug": "r32",
+      "title": "《改良陶业 创办中国陶业学堂》",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 53,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "139cf330-57b2-4f0b-8a77-a3283a4a5f8e",
+      "slug": "dutch-east-india-company",
+      "title": "荷兰东印度公司与瓷器贸易",
+      "category": "全球",
+      "version": 4,
+      "body_characters": 35,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "b949ed9e-8a0e-4ff6-b225-267d1f7f4270",
+      "slug": "r14",
+      "title": "《景德镇青白瓷“半刀泥”装饰刻花技艺活态传承研究》",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 25,
+      "status": "draft_prepared_not_applied",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "f1cc72c7-9710-49e4-9e8c-1cbad3df421a",
+      "slug": "r17",
+      "title": "《北宋“景德年制”瓷器款识新考》",
+      "category": "文献",
+      "version": 4,
+      "body_characters": 24,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    },
+    {
+      "id": "96342bc7-888f-42ce-8f35-d07885b138ba",
+      "slug": "delft-jingdezhen",
+      "title": "代尔夫特陶器与中国瓷器",
+      "category": "全球",
+      "version": 4,
+      "body_characters": 38,
+      "status": "needs_source_review",
+      "issues": [
+        "short_body"
+      ]
+    }
+  ]
+}

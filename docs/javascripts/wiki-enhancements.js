@@ -40,7 +40,7 @@
     root.innerHTML='<article class="wiki-entry-card wiki-entry-v2">'+
       '<header class="wiki-entry-header"><div><div class="wiki-entry-kicker">'+esc(e.category||'知识')+'</div><h1>'+esc(e.zh?.title||e.slug)+'</h1><p>'+esc(intro)+'</p></div>'+(im&&safeHref(im.path)?'<figure class="wiki-entry-cover"><img data-museum-image="1" src="'+safeHref(im.path)+'" alt="'+esc(im.title||e.zh?.title||e.slug)+'"><figcaption>'+esc(im.title||'')+' · '+esc(im.source||'')+' · '+esc(im.license||'')+'</figcaption></figure>':'')+'</header>'+
       (tags.length?'<div class="wiki-entry-v2-tags">'+tags.map(x=>'<span>'+esc(x)+'</span>').join('')+'</div>':'')+
-      (worldLinks?'<div class="wiki-entry-world-path"><span>所属知识世界</span><div>'+worldLinks+'</div></div>':'')+
+      (worldLinks?'<div class="wiki-entry-world-path"><span>相关阅读主题</span><div>'+worldLinks+'</div></div>':'')+
       '<div class="wiki-entry-v2-grid"><aside class="wiki-entry-v2-rail"><div class="wiki-entry-v2-card"><strong>知识节点</strong><span>'+esc(e.category||'知识')+'</span><span>'+esc(m.period||m.era||'时代信息待核')+'</span><span>'+esc(m.location||m.region||'空间信息待核')+'</span></div><div class="wiki-entry-v2-card"><strong>继续探索</strong><a href="'+hrefFor(ROOT+'search/')+'">⌕ 搜索知识 →</a><a href="'+hrefFor(ROOT+'network/relations/')+'">关系网络 →</a><a href="'+hrefFor(ROOT+'network/global/')+'">全球陶瓷网络 →</a></div></aside><div class="wiki-entry-v2-main">'+
       '<section class="wiki-entry-body"><h2>详细介绍</h2><div class="wiki-entry-text">'+contentOrIntro(e,intro)+'</div></section>'+
       (relations.length?'<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">知识关系</div><h2>它与哪些知识相连</h2><div class="wiki-entry-v2-relations">'+relationCards+'</div></section>':'')+

@@ -3,9 +3,9 @@
 <div class="modern-hero">
   <div class="modern-hero-copy">
     <div class="modern-eyebrow">CONTEMPORARY · 近现代</div>
-    <h1>传统没有停在窑火熄灭的那一刻。</h1>
+    <h1>当代景德镇：制作、学习与创作。</h1>
     <p>今天的景德镇，是一座同时拥有生产、教育、艺术、遗产保护、文化旅游与数字知识网络的陶瓷城市。</p>
-    <div class="modern-hero-actions"><a class="modern-primary" href="#modern-map">从今天开始探索 →</a><a class="modern-secondary" href="../">回到历史总览</a></div>
+    <div class="modern-hero-actions"><a class="modern-primary" href="#modern-map">从今天开始探索 →</a><a class="modern-secondary" href="../history/">回到历史总览</a></div>
   </div>
   <div class="modern-hero-orbit" aria-hidden="true"><div class="modern-orbit orbit-1"></div><div class="modern-orbit orbit-2"></div><div class="modern-orbit orbit-3"></div><div class="modern-core">瓷<br><small>CERAMIC CITY</small></div></div>
 </div>
@@ -13,7 +13,7 @@
 <div class="modern-stat-strip"><div><strong>教育</strong><span>高校 · 科研 · 传承</span></div><div><strong>产业</strong><span>生产 · 设计 · 市场</span></div><div><strong>艺术</strong><span>工作室 · 展览 · 交流</span></div><div><strong>遗产</strong><span>考古 · 保护 · 社区</span></div></div>
 
 <section id="modern-map" class="modern-explorer">
-  <div class="modern-section-head"><div><span class="modern-section-kicker">THE CITY TODAY</span><h2>把“现代景德镇”拆成五个入口。</h2></div><p>不再把现代景德镇写成一篇平铺直叙的说明文，而是从城市今天仍在发生的五种活动进入。</p></div>
+  <div class="modern-section-head"><div><span class="modern-section-kicker">THE CITY TODAY</span><h2>从五个主题阅读当代景德镇。</h2></div><p>从教育、产业、艺术、遗产和数字化出发，区分历史背景、当下实践与对应资料。</p></div>
   <div class="modern-grid">
     <a class="modern-card modern-card-large" href="education/"><span>01 · EDUCATION</span><h3>教育与研究</h3><p>从师徒传承到高校、实验室与博物馆，陶瓷知识如何被学习、研究与继续创造。</p><b>进入教育与研究 →</b><div class="modern-card-mark">学</div></a>
     <a class="modern-card" href="industry/"><span>02 · INDUSTRY</span><h3>产业与社会</h3><p>作坊、企业、设计、消费和城市空间共同构成今天的陶瓷产业生态。</p><b>进入产业与社会 →</b><div class="modern-card-mark">业</div></a>
@@ -24,7 +24,7 @@
 </section>
 
 <section class="modern-flow">
-  <div class="modern-section-head"><div><span class="modern-section-kicker">A LIVING SYSTEM</span><h2>现代，不是“历史之后”。</h2></div></div>
+  <div class="modern-section-head"><div><span class="modern-section-kicker">A LIVING SYSTEM</span><h2>技艺、知识与城市的持续变化。</h2></div></div>
   <div class="modern-flow-line"><div><i>01</i><strong>学习</strong><span>知识进入课堂</span></div><div><i>02</i><strong>生产</strong><span>技术进入城市</span></div><div><i>03</i><strong>创作</strong><span>传统进入当代</span></div><div><i>04</i><strong>保护</strong><span>遗产进入社区</span></div><div><i>05</i><strong>连接</strong><span>资料进入网络</span></div></div>
   <p class="modern-flow-note">景德镇的现代性并不意味着与过去切断。相反，现代教育、产业、艺术、遗产与数字化，持续重新组织千年来积累的材料、工艺、知识与城市空间。</p>
 </section>
@@ -38,7 +38,7 @@
   <span class="modern-section-kicker">KEEP EXPLORING</span>
   <h2>从今天，再回到千年。</h2>
   <p>现代景德镇只是整个知识网络中的一个切片。沿着时间、空间、人物与器物继续向前。</p>
-  <div class="modern-closing-actions"><a href="../">历史与发展 →</a><a href="../../museum/timeline/">时间轴 →</a><a href="../../museum/kiln-map/">窑址地图 →</a><a href="../../museum/catalog/">器物图谱 →</a></div>
+  <div class="modern-closing-actions"><a href="../history/">历史与发展 →</a><a href="../../museum/timeline/">时间轴 →</a><a href="../../museum/kiln-map/">窑址地图 →</a><a href="../../museum/catalog/">器物图谱 →</a></div>
 </section>
 
 <style>

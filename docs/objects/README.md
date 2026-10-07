@@ -1,29 +1,33 @@
-# 器物分类
+# 器物分类：用途、形制与制作信息
 
-<div class="museum-hero">
-  <div>
-    <div class="eyebrow">OBJECTS · 器物</div>
-    <h1>从一件器物，读懂景德镇。</h1>
-    <p>从用途、器型、时代、胎釉与装饰进入具体器物，再回到它所处的生产与历史环境。</p>
-  </div>
-  <div class="museum-hero-mark">器物<br>之美</div>
-</div>
+器物分类帮助读者检索和比较，却不能用一个标签取代完整对象记录。相同器型可能有不同用途，同一工艺也可以用于不同器型；收藏机构的定名、考古出土信息和后来的研究解释应分别记录。
 
-## 怎么看一件器物
+## 用途与器型
 
-<div class="museum-grid">
-  <a class="museum-card wiki-card-link" href="../museum/catalog/"><span>CATALOG · 图谱</span><h3>进入器物图谱</h3><p>查看当前已经建立的代表性器物条目。</p><span class="wiki-read-more">打开图谱</span></a>
-  <a class="museum-card wiki-card-link" href="../aesthetics/patterns/"><span>AESTHETICS · 美学</span><h3>纹饰与题材</h3><p>从图案、题材与装饰位置理解器物视觉语言。</p><span class="wiki-read-more">探索纹饰</span></a>
-  <a class="museum-card wiki-card-link" href="../craft/README/"><span>CRAFT · 工艺</span><h3>制作与烧成</h3><p>把器型与胎釉、制作痕迹和烧成条件联系起来。</p><span class="wiki-read-more">进入工艺</span></a>
-</div>
+碗、盘、瓶、杯、罐等名称首先描述形制，其历史用途还需要尺寸、组合、文字和使用背景支持。陈设、饮食、文房与礼仪是不同使用维度，有时会在同一对象上交叠。不能因为器物装饰华丽，就认定它只供陈设。
 
-## 用途维度
+御窑厂考古发现日用器和豆、登、爵等祭祀器，说明宫廷生产同样服务于多种器用需求。不同产品应放回具体年代和制度背景。[^kilns]
 
-日用器、陈设器、文房器以及礼仪与祭祀相关器物，都可以作为检索维度。同一器物可能同时具有多种属性。[R04][R03]
+## 从胎釉到制作痕迹
 
-## 研究一件器物
+胎体、釉层、装饰位置和足部帮助理解制作方法；旋削、接合、支烧等痕迹可能提供工艺信息。照片的光线和视角有限，不能用颜色相近替代材料分析，也不能凭一处痕迹完成真伪判断。
 
-记录器型与尺寸，观察胎、釉、足部和制作痕迹，再核对装饰、出土地点、收藏记录和专业图录。必要时结合科学检测。单一特征通常不足以完成可靠断代或真伪判断。[R03][R16]
+## 馆藏对象与产品类别
 
+“青花瓷”是一类技术与产品概念；“某馆藏青花瓶”是一个具体对象。介绍对象必须保留馆藏编号、馆方年代、尺寸与来源，避免把不同机构的相似器物拼成一件。大都会莲池纹瓶1991.253.33提供了元代青花的具体对象记录；故宫陶瓷概述也列举永乐青花压手杯、成化斗彩鸡缸杯等馆藏线索。[^met][^palace]
+
+## 收藏地点与历史流通
+
+今天的收藏地点不自动说明古代外销目的地。年代、产地、出土地点、收藏经历与研究归属是不同信息，需要分别查证。没有可靠链条时，可以描述现有收藏，不补写一条想象的海上路线。
+
+继续进入[器物图谱](../museum/catalog.md)、[纹饰与题材](../aesthetics/patterns.md)、[釉色与装饰](../aesthetics/glazes-and-decoration.md)和[多机构资料目录](../research/museum-sources.md)。
 
 <section class="jdm-world-browser" data-world-browser="objects" aria-label="知识世界条目"></section>
+
+## 资料来源
+
+[^kilns]: 北京大学考古文博学院：《北大考古与“百年百大考古发现”——景德镇明清御窑厂遗址》。[官方资料](https://archaeology.pku.edu.cn/info/1030/3492.htm)。
+
+[^palace]: 故宫博物院：《陶瓷》。[馆藏概述](https://www.dpm.org.cn/collection/ceramics.html)。
+
+[^met]: The Metropolitan Museum of Art：Vase with lotus pond scene，馆藏编号1991.253.33。[对象记录](https://www.metmuseum.org/art/collection/search/42490)；[官方API](https://collectionapi.metmuseum.org/public/collection/v1/objects/42490)。

@@ -1,0 +1,321 @@
+{
+  "applied": false,
+  "contexts": [
+    {
+      "entry_id": "30b5c284-8abc-4232-85a2-b9f482faef5e",
+      "slug": "arita-kiln",
+      "expected_updated_at": "2026-09-17T02:01:22.478258+00:00",
+      "expected_row_sha256": "a2a9c9239cda205829e485d7114aab637eb880aa1602abc654ca101076d757be",
+      "status": "editorial_draft_not_applied",
+      "historical_role": "日本青花生产及跨区域陶瓷贸易",
+      "relationship_to_jingdezhen": "有田器可与景德镇及其他中国窑业从纹样和市场方面比较。V&A所举有田寿字纹样与福建传统有关，提示中国影响有不同来源；景德镇销往日本的瓷器与日本本土烧造器也应明确区分。",
+      "editorial_summary": "有田器可与景德镇及其他中国窑业从纹样和市场方面比较。V&A所举有田寿字纹样与福建传统有关，提示中国影响有不同来源；景德镇销往日本的瓷器与日本本土烧造器也应明确区分。",
+      "sources": [
+        {
+          "label": "V&A：Chinese blue-and-white ceramics",
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics"
+        }
+      ],
+      "review_note": "编辑综合表述，不写入official_summary冒充机构原文；发布前核对现有渲染优先级及旧字段清理策略。",
+      "editorial_review": "accepted_as_editorial_synthesis"
+    },
+    {
+      "entry_id": "e479a789-c150-4bd2-814c-26546a618473",
+      "slug": "europe-porcelain",
+      "expected_updated_at": "2026-09-17T02:01:22.478258+00:00",
+      "expected_row_sha256": "492e0cbf4c3768b70906530f4e87188611bdf68d394891862e93dde22e98033f",
+      "status": "editorial_draft_not_applied",
+      "historical_role": "欧洲瓷器生产与中国瓷器消费",
+      "relationship_to_jingdezhen": "中国瓷器的输入、欧洲本土制作和室内收藏相互联系，但属于不同历史过程。V&A记录十六世纪以来葡萄牙及后来荷兰等贸易参与者，以及适应欧洲用途的景德镇器物，展示市场如何影响产品。",
+      "editorial_summary": "中国瓷器的输入、欧洲本土制作和室内收藏相互联系，但属于不同历史过程。V&A记录十六世纪以来葡萄牙及后来荷兰等贸易参与者，以及适应欧洲用途的景德镇器物，展示市场如何影响产品。",
+      "sources": [
+        {
+          "label": "V&A：Chinese blue-and-white ceramics",
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics"
+        }
+      ],
+      "review_note": "编辑综合表述，不写入official_summary冒充机构原文；发布前核对现有渲染优先级及旧字段清理策略。",
+      "editorial_review": "accepted_as_editorial_synthesis"
+    },
+    {
+      "entry_id": "36f8fd2a-8159-454b-ba59-01f5ac1a23b3",
+      "slug": "uk-ceramics",
+      "expected_updated_at": "2026-09-17T02:01:22.478258+00:00",
+      "expected_row_sha256": "24db79e07276f22b7993782eff0fc7bbb38cab31296a0bdce116346fe8dcea9f",
+      "status": "editorial_draft_not_applied",
+      "historical_role": "英国陶瓷消费、生产与青花收藏",
+      "relationship_to_jingdezhen": "英国与中国瓷器的联系不限于制造技术。十九世纪惠斯勒、罗塞蒂等唯美主义者收藏青花，居室陈设又影响其观看方式；这一收藏史不能代替对英国各陶瓷产区和生产技术的独立研究。",
+      "editorial_summary": "英国与中国瓷器的联系不限于制造技术。十九世纪惠斯勒、罗塞蒂等唯美主义者收藏青花，居室陈设又影响其观看方式；这一收藏史不能代替对英国各陶瓷产区和生产技术的独立研究。",
+      "sources": [
+        {
+          "label": "V&A：Chinese blue-and-white ceramics",
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics"
+        }
+      ],
+      "review_note": "编辑综合表述，不写入official_summary冒充机构原文；发布前核对现有渲染优先级及旧字段清理策略。",
+      "editorial_review": "accepted_as_editorial_synthesis"
+    },
+    {
+      "entry_id": "5d78cc09-2c89-466d-a083-db1d5187cbc8",
+      "slug": "japan-ceramics",
+      "expected_updated_at": "2026-09-17T02:01:22.478258+00:00",
+      "expected_row_sha256": "31e9b5c36fa60e14384656c5b4f3791028df99ec054ca409a819e714c3458e5f",
+      "status": "editorial_draft_not_applied",
+      "historical_role": "日本多产地陶瓷与跨海交流",
+      "relationship_to_jingdezhen": "日本陶瓷包括不同产地和技术传统。V&A介绍景德镇面向日本市场的盘，也展示有田器对中国纹样的转化；进口器、当地生产和日本外销瓷是不同过程，不能用一条单向影响线概括。",
+      "editorial_summary": "日本陶瓷包括不同产地和技术传统。V&A介绍景德镇面向日本市场的盘，也展示有田器对中国纹样的转化；进口器、当地生产和日本外销瓷是不同过程，不能用一条单向影响线概括。",
+      "sources": [
+        {
+          "label": "V&A：Chinese blue-and-white ceramics",
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics"
+        }
+      ],
+      "review_note": "编辑综合表述，不写入official_summary冒充机构原文；发布前核对现有渲染优先级及旧字段清理策略。",
+      "editorial_review": "accepted_as_editorial_synthesis"
+    },
+    {
+      "entry_id": "da892d36-fa24-4b30-b53b-e650aaa8acf5",
+      "slug": "imperial-kiln",
+      "expected_updated_at": "2026-09-17T02:01:56.879661+00:00",
+      "expected_row_sha256": "18ead0bffd21084f0ebf0e8c620699dc13abffa512547a2130d265ec23b0e245",
+      "status": "editorial_draft_not_applied",
+      "historical_role": "明清宫廷用瓷的生产与考古遗址",
+      "relationship_to_jingdezhen": "御窑厂保存窑炉、作坊、半成品和瓷片堆积，可与宫廷传世器共同研究生产及筛选。北大资料据地层讨论其始建时期，并记述晚明停烧后民窑活动，说明官方机构沿革与城市瓷业延续并不完全同步。",
+      "editorial_summary": "御窑厂保存窑炉、作坊、半成品和瓷片堆积，可与宫廷传世器共同研究生产及筛选。北大资料据地层讨论其始建时期，并记述晚明停烧后民窑活动，说明官方机构沿革与城市瓷业延续并不完全同步。",
+      "sources": [
+        {
+          "label": "北京大学：景德镇明清御窑厂遗址",
+          "url": "https://archaeology.pku.edu.cn/info/1030/3492.htm"
+        }
+      ],
+      "review_note": "编辑综合表述，不写入official_summary冒充机构原文；发布前核对现有渲染优先级及旧字段清理策略。",
+      "editorial_review": "accepted_as_editorial_synthesis"
+    },
+    {
+      "entry_id": "f5f20387-c923-4435-bdba-9d4af72ab381",
+      "slug": "jingdezhen",
+      "expected_updated_at": "2026-09-17T02:01:56.879661+00:00",
+      "expected_row_sha256": "2c841c3e08e75db4d480a4b20b18be0a9f1ff36e3f194c52a4e8942169386912",
+      "status": "editorial_draft_not_applied",
+      "historical_role": "多环节协作的瓷业生产中心",
+      "relationship_to_jingdezhen": "景德镇的历史作用不仅在于烧造名瓷，也在于把原料开采、加工、成型、装饰和烧成组织为长期协作的产业。UNESCO遗产叙述以十至十九世纪的五个组成部分呈现这种生产系统；国家级非遗项目则关注相关技艺及传承。",
+      "editorial_summary": "景德镇的历史作用不仅在于烧造名瓷，也在于把原料开采、加工、成型、装饰和烧成组织为长期协作的产业。UNESCO遗产叙述以十至十九世纪的五个组成部分呈现这种生产系统；国家级非遗项目则关注相关技艺及传承。",
+      "sources": [
+        {
+          "label": "UNESCO：景德镇手工瓷业遗存",
+          "url": "https://whc.unesco.org/zh/list/1765"
+        },
+        {
+          "label": "国家级非遗项目：景德镇手工制瓷技艺",
+          "url": "https://www.ihchina.cn/project_details/14270/"
+        }
+      ],
+      "review_note": "编辑综合表述，不写入official_summary冒充机构原文；发布前核对现有渲染优先级及旧字段清理策略。",
+      "editorial_review": "accepted_as_editorial_synthesis"
+    },
+    {
+      "entry_id": "f31277c6-351c-40fc-b750-2d8002d92be2",
+      "slug": "hutian-kiln",
+      "expected_updated_at": "2026-09-17T02:01:56.879661+00:00",
+      "expected_row_sha256": "cc8881c276998275a860eb3246a0d282993c23616b0f84693e05f9df8ee7348a",
+      "status": "editorial_draft_not_applied",
+      "historical_role": "青白瓷生产及窑业演变的重要遗址",
+      "relationship_to_jingdezhen": "湖田窑材料提供观察景德镇早期产品、宋代青白瓷装饰和长期生产变化的线索。公开研究摘要将其生产延续讨论至明代隆庆、万历时期；不同阶段的具体产品组合仍应以发掘报告为准。",
+      "editorial_summary": "湖田窑材料提供观察景德镇早期产品、宋代青白瓷装饰和长期生产变化的线索。公开研究摘要将其生产延续讨论至明代隆庆、万历时期；不同阶段的具体产品组合仍应以发掘报告为准。",
+      "sources": [
+        {
+          "label": "湖田窑青白瓷研究公开摘要",
+          "url": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002643095"
+        }
+      ],
+      "review_note": "编辑综合表述，不写入official_summary冒充机构原文；发布前核对现有渲染优先级及旧字段清理策略。",
+      "editorial_review": "accepted_as_editorial_synthesis"
+    },
+    {
+      "entry_id": "d1895124-a294-4bf8-a9de-60a761812326",
+      "slug": "gaoling-mining",
+      "expected_updated_at": "2026-09-17T02:01:56.879661+00:00",
+      "expected_row_sha256": "c91b173596c55849c0d211cd45895eacdd0dd96d421021d6f766a60ee5f22aa0",
+      "status": "editorial_draft_not_applied",
+      "historical_role": "高岭土开发与瓷胎配方研究的矿源",
+      "relationship_to_jingdezhen": "高岭土矿源把景德镇制瓷与城外原料开发联系起来。研究二元配方时，应区分矿石天然伴生的黏土组分和工匠人为混配；2020年论文提出明末清初形成真正人为二元配方的解释，与常见元代起源说存在判定标准差异。",
+      "editorial_summary": "高岭土矿源把景德镇制瓷与城外原料开发联系起来。研究二元配方时，应区分矿石天然伴生的黏土组分和工匠人为混配；2020年论文提出明末清初形成真正人为二元配方的解释，与常见元代起源说存在判定标准差异。",
+      "sources": [
+        {
+          "label": "景德镇二元配方起源研究（全文）",
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf"
+        }
+      ],
+      "review_note": "编辑综合表述，不写入official_summary冒充机构原文；发布前核对现有渲染优先级及旧字段清理策略。",
+      "editorial_review": "accepted_as_editorial_synthesis"
+    },
+    {
+      "entry_id": "d03ad6a7-7467-40c2-a75d-e83bcfdd9508",
+      "slug": "five-dynasties-song",
+      "expected_updated_at": "2026-09-19T04:43:23.177712+00:00",
+      "expected_row_sha256": "38791a5ce4acdf3deddb2ad4787e2ca33a5f9674208bfed3cd8d07066a6c85d4",
+      "status": "editorial_draft_not_applied",
+      "historical_role": "早期窑业发展与宋代青白瓷生产",
+      "relationship_to_jingdezhen": "五代至宋代是讨论景德镇早期生产和青白瓷的重要阶段。湖田研究涉及产品和装饰演变，非遗项目简介记录拉坯、印坯、利坯、修足等技术；工艺的历史发展应与具体窑址材料对照。",
+      "editorial_summary": "五代至宋代是讨论景德镇早期生产和青白瓷的重要阶段。湖田研究涉及产品和装饰演变，非遗项目简介记录拉坯、印坯、利坯、修足等技术；工艺的历史发展应与具体窑址材料对照。",
+      "sources": [
+        {
+          "label": "湖田窑青白瓷研究公开摘要",
+          "url": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002643095"
+        },
+        {
+          "label": "国家级非遗项目：景德镇手工制瓷技艺",
+          "url": "https://www.ihchina.cn/project_details/14270/"
+        }
+      ],
+      "review_note": "编辑综合表述，不写入official_summary冒充机构原文；发布前核对现有渲染优先级及旧字段清理策略。",
+      "editorial_review": "accepted_as_editorial_synthesis"
+    },
+    {
+      "entry_id": "f2ae381c-27d3-4fea-8c4a-2747a993e50b",
+      "slug": "yuan-blue-white",
+      "expected_updated_at": "2026-09-19T04:43:23.177712+00:00",
+      "expected_row_sha256": "d623e1f9e84fd1d03bcdc4cbdd639d58920027ff2ed515efbd9760d638656b22",
+      "status": "editorial_draft_not_applied",
+      "historical_role": "元代景德镇青花的重要发展阶段",
+      "relationship_to_jingdezhen": "Met藏十四世纪前半叶青花莲池纹瓶提供有明确馆藏记录的元代景德镇实例。青花发展涉及钴料、绘饰、透明釉与烧成的配合；不能仅凭大型青花器出现，便把二元配方的起源年代视为已无争议。",
+      "editorial_summary": "Met藏十四世纪前半叶青花莲池纹瓶提供有明确馆藏记录的元代景德镇实例。青花发展涉及钴料、绘饰、透明釉与烧成的配合；不能仅凭大型青花器出现，便把二元配方的起源年代视为已无争议。",
+      "sources": [
+        {
+          "label": "The Met：元代青花莲池纹瓶1991.253.33",
+          "url": "https://www.metmuseum.org/art/collection/search/42490"
+        },
+        {
+          "label": "景德镇二元配方起源研究（全文）",
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf"
+        }
+      ],
+      "review_note": "编辑综合表述，不写入official_summary冒充机构原文；发布前核对现有渲染优先级及旧字段清理策略。",
+      "editorial_review": "accepted_as_editorial_synthesis"
+    },
+    {
+      "entry_id": "ac26e854-9c9a-44f5-b0ef-22079cc9a446",
+      "slug": "ming-imperial-kiln",
+      "expected_updated_at": "2026-09-19T04:43:23.177712+00:00",
+      "expected_row_sha256": "ca48d36fb687eea60d1f2194e750bca8f5694184f6118438dfb4ae44a3b7512a",
+      "status": "editorial_draft_not_applied",
+      "historical_role": "明代御窑的组织与生产空间",
+      "relationship_to_jingdezhen": "御窑考古把皇家用瓷放回成型、绘饰、装烧和废弃处理的场所中研究。2014年发现的明代中期加彩作坊与半成品，为釉上彩工序提供现场依据；御器厂建立年代则须说明所依据的地层判断。",
+      "editorial_summary": "御窑考古把皇家用瓷放回成型、绘饰、装烧和废弃处理的场所中研究。2014年发现的明代中期加彩作坊与半成品，为釉上彩工序提供现场依据；御器厂建立年代则须说明所依据的地层判断。",
+      "sources": [
+        {
+          "label": "北京大学：景德镇明清御窑厂遗址",
+          "url": "https://archaeology.pku.edu.cn/info/1030/3492.htm"
+        }
+      ],
+      "review_note": "编辑综合表述，不写入official_summary冒充机构原文；发布前核对现有渲染优先级及旧字段清理策略。",
+      "editorial_review": "accepted_as_editorial_synthesis"
+    },
+    {
+      "entry_id": "832a7646-2137-4cd0-9625-0eb3bb102a02",
+      "slug": "qing-colors",
+      "expected_updated_at": "2026-09-19T04:43:23.177712+00:00",
+      "expected_row_sha256": "6cc70949a1c3adb106f6ed22a98f12976a6eb1372fb20557a369a793f8198700",
+      "status": "editorial_draft_not_applied",
+      "historical_role": "清代彩瓷、釉色与使用需求的变化",
+      "relationship_to_jingdezhen": "粉彩研究将其形成联系康熙晚期、成熟联系雍正时期，并讨论清宫画珐琅与景德镇五彩。官窑、民窑和外销产品各有需求与风格变化，不宜把整个清代概括为一种繁缛或淡雅风格。",
+      "editorial_summary": "粉彩研究将其形成联系康熙晚期、成熟联系雍正时期，并讨论清宫画珐琅与景德镇五彩。官窑、民窑和外销产品各有需求与风格变化，不宜把整个清代概括为一种繁缛或淡雅风格。",
+      "sources": [
+        {
+          "label": "汪凌川：粉彩工艺与艺术风格的演变（摘要）",
+          "url": "https://newetds.lib.tsinghua.edu.cn/qh/paper/summary?dbCode=ETDQH&sysId=215437"
+        },
+        {
+          "label": "V&A：Chinese blue-and-white ceramics",
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics"
+        }
+      ],
+      "review_note": "编辑综合表述，不写入official_summary冒充机构原文；发布前核对现有渲染优先级及旧字段清理策略。",
+      "editorial_review": "accepted_as_editorial_synthesis"
+    },
+    {
+      "entry_id": "d41a560b-ed35-4203-a225-561334bff045",
+      "slug": "modern-industry",
+      "expected_updated_at": "2026-09-19T04:43:23.177712+00:00",
+      "expected_row_sha256": "41f3cb5ec87c48d70c2f2e613725207c771d4a14bfca6a28873f23a95372fce7",
+      "status": "editorial_draft_not_applied",
+      "historical_role": "近代陶业改良与专门教育的探索",
+      "relationship_to_jingdezhen": "江西瓷业公司和中国陶业学堂相关校史显示，企业生产、理论教学和实作训练共同进入陶业改良实践。早期学堂涉及鄱阳，1913年煤窑试验进展也是特定技术探索，不能据此认定全部景德镇作坊同时完成工业化。",
+      "editorial_summary": "江西瓷业公司和中国陶业学堂相关校史显示，企业生产、理论教学和实作训练共同进入陶业改良实践。早期学堂涉及鄱阳，1913年煤窑试验进展也是特定技术探索，不能据此认定全部景德镇作坊同时完成工业化。",
+      "sources": [
+        {
+          "label": "景德镇陶瓷大学校史馆：改良陶业 创办中国陶业学堂",
+          "url": "https://xsg.jcu.edu.cn/info/1023/1280.htm"
+        }
+      ],
+      "review_note": "编辑综合表述，不写入official_summary冒充机构原文；发布前核对现有渲染优先级及旧字段清理策略。",
+      "editorial_review": "accepted_as_editorial_synthesis"
+    },
+    {
+      "entry_id": "8d7e1841-0b67-4028-af17-dd1c0741c409",
+      "slug": "active-archaeology",
+      "expected_updated_at": "2026-09-19T04:43:23.177712+00:00",
+      "expected_row_sha256": "b9f64f15328caa26d585fd7ceddb50f6e54db722227047c90ea32fd365ff83ea",
+      "status": "editorial_draft_not_applied",
+      "historical_role": "御窑生产序列与空间布局的考古研究",
+      "relationship_to_jingdezhen": "2002—2004年及2014年的御窑厂发掘揭露窑炉、作坊及废弃堆积。2014年约400平方米发掘区发现64处遗迹，地层从元末延续至清末民国，为生产阶段、加彩技术及场地再利用提供依据。",
+      "editorial_summary": "2002—2004年及2014年的御窑厂发掘揭露窑炉、作坊及废弃堆积。2014年约400平方米发掘区发现64处遗迹，地层从元末延续至清末民国，为生产阶段、加彩技术及场地再利用提供依据。",
+      "sources": [
+        {
+          "label": "北京大学：景德镇明清御窑厂遗址",
+          "url": "https://archaeology.pku.edu.cn/info/1030/3492.htm"
+        }
+      ],
+      "review_note": "编辑综合表述，不写入official_summary冒充机构原文；发布前核对现有渲染优先级及旧字段清理策略。",
+      "editorial_review": "accepted_as_editorial_synthesis"
+    },
+    {
+      "entry_id": "c7dafc47-fd50-48df-9cd0-64f26f993024",
+      "slug": "unesco-2026",
+      "expected_updated_at": "2026-09-19T04:43:23.177712+00:00",
+      "expected_row_sha256": "843c6f8841fb013a9d73a8a8a1490f1ecadec6390a6e4b4df51ecc80f940057e",
+      "status": "editorial_draft_not_applied",
+      "historical_role": "景德镇手工瓷业遗存列入世界遗产",
+      "relationship_to_jingdezhen": "UNESCO正式页面记录该遗产于2026年列入，编号1765，包含五个组成部分，采用标准(ii)、(iii)、(iv)、(vi)。这一认定涉及历史生产系统及其遗存，与2006年列入国家级非遗的手工制瓷技艺项目属于不同制度。",
+      "editorial_summary": "UNESCO正式页面记录该遗产于2026年列入，编号1765，包含五个组成部分，采用标准(ii)、(iii)、(iv)、(vi)。这一认定涉及历史生产系统及其遗存，与2006年列入国家级非遗的手工制瓷技艺项目属于不同制度。",
+      "sources": [
+        {
+          "label": "UNESCO：景德镇手工瓷业遗存",
+          "url": "https://whc.unesco.org/zh/list/1765"
+        },
+        {
+          "label": "国家级非遗项目：景德镇手工制瓷技艺",
+          "url": "https://www.ihchina.cn/project_details/14270/"
+        }
+      ],
+      "review_note": "编辑综合表述，不写入official_summary冒充机构原文；发布前核对现有渲染优先级及旧字段清理策略。",
+      "editorial_review": "accepted_as_editorial_synthesis"
+    },
+    {
+      "entry_id": "dc0052fd-9c6a-4fcc-94c1-5e9bdc4e52e6",
+      "slug": "jun-kiln",
+      "expected_updated_at": "2026-09-17T02:01:22.478258+00:00",
+      "expected_row_sha256": "f65ff554b523d4223ebd871fd7e79e632276a997cd2a1360782a8db5cff2881d",
+      "status": "editorial_draft_not_applied",
+      "historical_role": "河南钧釉生产及其年代争论",
+      "relationship_to_jingdezhen": "钧窑以乳浊釉及铜红窑变著称；器皿类与陈设类产品的年代需要分别讨论，不能笼统定为北宋官窑。",
+      "editorial_summary": "钧窑以乳浊釉及铜红窑变著称；器皿类与陈设类产品的年代需要分别讨论，不能笼统定为北宋官窑。",
+      "sources": [
+        {
+          "label": "吕成龙：故宫博物院钧窑学术研讨会综述，2014年第1期，154—156页",
+          "url": "https://www.dpm.org.cn/Uploads/File/2018/06/04/u5b152c9f3396b.pdf"
+        },
+        {
+          "label": "徐华烽：钧窑概念的形成及其产品时代辨析，2017年第3期，37—44页",
+          "url": "https://www.dpm.org.cn/Uploads/File/2018/05/31/u5b0fbd8e2d5e4.pdf"
+        },
+        {
+          "label": "刘涛：近十年来钧窑考古与研究述评，2017年第3期，45—56页",
+          "url": "https://www.dpm.org.cn/Uploads/File/2018/05/31/u5b0fbe1ccf7d5.pdf"
+        }
+      ],
+      "review_note": "撤去原有北宋官钧定论。不同产品年代分组不得用一个新的统一年份替代；不将编辑综合稿标为官方原文。",
+      "editorial_review": "accepted_as_editorial_synthesis"
+    }
+  ]
+}

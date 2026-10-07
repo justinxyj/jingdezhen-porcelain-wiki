@@ -4,17 +4,12 @@
   <div>
     <div class="eyebrow">KNOWLEDGE NETWORK · 知识网络</div>
     <h1>让器物、人物、历史、工艺、窑址与文献彼此连接。</h1>
-    <p>这里不是另一个资料目录，而是整个 Wiki 的关系层。每一条关系都应当能够追溯到具体知识条目与来源。</p>
+    <p>从器物、人物、工艺和地点出发，查看它们之间的具体联系，并追查关系所依据的资料。</p>
   </div>
   <div class="museum-hero-mark">知识<br>相连</div>
 </div>
 
-<div class="museum-stats">
-  <div><strong>149</strong><span>知识条目</span></div>
-  <div><strong>169</strong><span>已建立关系</span></div>
-  <div><strong>72</strong><span>制瓷工序</span></div>
-  <div><strong>289</strong><span>条目—工序关联</span></div>
-</div>
+
 
 ## 怎么读这张网络
 
@@ -36,7 +31,7 @@
   <a class="museum-card wiki-card-link" href="../museum/catalog/">
     <span>ENTRY · 知识节点</span>
     <h3>从一件器物继续探索</h3>
-    <p>器物、人物、历史、窑址与文献最终汇聚到统一的动态知识节点。</p>
+    <p>打开具体条目，查看对象身份、正文、来源和相关关系。</p>
     <span class="wiki-read-more">进入器物图谱 →</span>
   </a>
 </div>
@@ -61,15 +56,15 @@
 
 <div class="timeline-method-note">
 <strong>数据原则</strong><br>
-公开知识节点只展示通过当前公共数据层审核门槛的内容；关系、媒体与来源继续遵循项目的数据治理和审核规则。
+每条关系需要说明含义与依据。关系相似不等于因果或传播；请结合对象年代、地点和出处阅读。
 </div>
 
 ## 继续探索
 
-- [历史与发展](../history/)
-- [工艺与技术](../craft/)
-- [器物与美学](../objects/)
-- [窑址与城市空间](../kilns/)
-- [人物与传承](../people/)
-- [文献与研究](../research/)
-- [现代景德镇](../contemporary/)
+- [历史与发展](../history/README.md)
+- [工艺与技术](../craft/README.md)
+- [器物与美学](../objects/README.md)
+- [窑址与城市空间](../kilns/README.md)
+- [人物与传承](../people/README.md)
+- [文献与研究](../research/README.md)
+- [现代景德镇](../contemporary/index.md)

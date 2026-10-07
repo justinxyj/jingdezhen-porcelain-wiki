@@ -1,6 +1,6 @@
 /* Museum image recovery: only marked/known museum images use external recovery. */
 (function(){
-  const RECOVERED='data-image-recovered',MAX_CONCURRENCY=3,REQUEST_TIMEOUT=8000,NEGATIVE_TTL=120000;
+  const RECOVERED='imageRecovered',MAX_CONCURRENCY=3,REQUEST_TIMEOUT=8000,NEGATIVE_TTL=120000;
   const cache=new Map(),negative=new Map(),queue=[];let active=0,applyQueued=false;
   const pageController=new AbortController();
   window.addEventListener('pagehide',()=>pageController.abort(),{once:true});
@@ -20,7 +20,7 @@
     }catch(_){if(attempt<1&&!pageController.signal.aborted){await sleep(500);return requestJson(url,attempt+1)}return null}
     finally{clearTimeout(timer);pageController.signal.removeEventListener('abort',abort)}
   }
-  function validMetId(id){return /^\\d{1,8}$/.test(String(id||''))}
+  function validMetId(id){return /^\d{1,8}$/.test(String(id||''))}
   async function fetchMetImage(id){
     if(!validMetId(id))return null;
     const key='met:'+id,now=Date.now();
@@ -29,11 +29,24 @@
     const p=requestJson('https://collectionapi.metmuseum.org/public/collection/v1/objects/'+encodeURIComponent(id)).then(j=>j?.primaryImageSmall||j?.primaryImage||null);
     cache.set(key,p);const value=await p;if(!value){negative.set(key,Date.now()+NEGATIVE_TTL);cache.delete(key)}return value;
   }
-  async function fetchCommonsImage(query){if(!query)return null;const key='commons:'+query,now=Date.now();if(negative.has(key)&&negative.get(key)>now)return null;if(negative.has(key))negative.delete(key);if(cache.has(key))return cache.get(key);const api='https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch='+encodeURIComponent(query)+'&gsrnamespace=6&gsrlimit=1&prop=imageinfo&iiprop=url&iiurlwidth=1200&format=json&origin=*';const p=requestJson(api).then(j=>{const info=Object.values(j?.query?.pages||{})[0]?.imageinfo?.[0];return info?.thumburl||info?.url||null});cache.set(key,p);const value=await p;if(!value){negative.set(key,Date.now()+NEGATIVE_TTL);cache.delete(key)}return value}
   function enqueue(task){return new Promise(resolve=>{queue.push({task,resolve});pump()})}
   function pump(){while(active<MAX_CONCURRENCY&&queue.length){const item=queue.shift();active++;Promise.resolve().then(item.task).then(item.resolve,item.resolve).finally(()=>{active--;pump()})}}
-  async function recoverNow(img){if(!img||img.dataset[RECOVERED]||img.dataset.imageFallback||!isMuseumImage(img))return;img.dataset[RECOVERED]='1';img.classList.add('jdm-image-recovering');img.style.visibility='hidden';img.setAttribute('referrerpolicy','no-referrer');const original=img.dataset.originalSrc||img.currentSrc||img.getAttribute('src')||'',sourceUrl=img.dataset.sourceUrl||img.closest('[data-source-url]')?.dataset.sourceUrl||'',objectId=metObjectId(original)||metObjectIdFromSource(sourceUrl);let next=await fetchMetImage(objectId);if(next){img.addEventListener('load',()=>setVisible(img),{once:true});img.src=next;return}const label=(img.getAttribute('alt')||'').replace(/\s*·\s*The Met Open Access.*$/i,'').trim();next=label?await fetchCommonsImage(label+' porcelain ceramics'):null;
-    if(next){img.dataset.recoverySource='Wikimedia Commons candidate';if(objectId)img.dataset.recoveryObjectId=objectId;img.addEventListener('load',()=>setVisible(img),{once:true});img.src=next;return}setFallback(img,label||'景德镇陶瓷')}
+  async function recoverNow(img){
+    if(!img||img.dataset[RECOVERED]||img.dataset.imageFallback||!isMuseumImage(img))return;
+    img.dataset[RECOVERED]='1';img.classList.add('jdm-image-recovering');img.style.visibility='hidden';
+    const original=img.dataset.originalSrc||img.currentSrc||img.getAttribute('src')||'';
+    const sourceUrl=img.dataset.sourceUrl||img.closest('[data-source-url]')?.dataset.sourceUrl||'';
+    const objectId=metObjectId(original)||metObjectIdFromSource(sourceUrl);
+    const label=(img.getAttribute('alt')||'').replace(/\s*·\s*The Met Open Access.*$/i,'').trim();
+    // Recover only the same accession record. Search results can depict a different object.
+    const next=await fetchMetImage(objectId);
+    if(next&&next!==original){
+      img.addEventListener('load',()=>setVisible(img),{once:true});
+      img.addEventListener('error',()=>setFallback(img,label),{once:true});
+      img.src=next;return;
+    }
+    setFallback(img,label||'景德镇陶瓷');
+  }
   function recover(img){return enqueue(()=>recoverNow(img))}
   function bind(img){if(!img||img.dataset.imageBound||!isMuseumImage(img))return;img.dataset.imageBound='1';img.dataset.originalSrc=img.getAttribute('src')||'';img.setAttribute('loading','lazy');img.setAttribute('decoding','async');img.setAttribute('referrerpolicy','no-referrer');img.addEventListener('error',()=>recover(img));if(img.complete&&img.naturalWidth===0&&img.getAttribute('src'))recover(img)}
   function scan(root){if(!root)return;if(root.matches?.('img'))bind(root);root.querySelectorAll?.('img').forEach(bind)}

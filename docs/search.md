@@ -1,11 +1,11 @@
 <div class="jdm-search-page" data-entry-search>
   <div class="jdm-search-hero">
     <div>
-      <div class="eyebrow">知识发现 · Phase 4D</div>
-      <h1>从一个词，进入一整个知识网络。</h1>
-      <p>统一搜索不只回答“有没有这个词”，还把知识世界、时代、空间与后续关系一起带出来。搜索结果始终回到同一个 统一知识条目。</p>
+      <div class="eyebrow">景德镇陶瓷 · 站内搜索</div>
+      <h1>查找器物、人物、地点与资料。</h1>
+      <p>输入名称、工艺、人物或地点，按主题和时代筛选。打开结果后可阅读正文、查看来源，并继续查阅相关器物与研究。</p>
     </div>
-    <div class="jdm-search-hero-stats"><span><b id="jdm-search-count">—</b><small>当前匹配</small></span><span><b>149</b><small>公开条目</small></span></div>
+    <div class="jdm-search-hero-stats"><span><b id="jdm-search-count">—</b><small>当前匹配</small></span></div>
   </div>
 
   <div class="jdm-search-box" role="search">
