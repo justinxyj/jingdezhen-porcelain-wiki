@@ -1,6 +1,6 @@
 (function(){
   const CORE_TYPES=new Set(['entry','world']);
-  const TYPE_LABELS={entry:'知识条目',world:'知识世界'};
+  const TYPE_LABELS={entry:'知识条目',world:'主题'};
   const TYPE_ORDER=['历史','工艺','器物','窑址','人物','文献','现代'];
   const CAT_CLASS={历史:'history',工艺:'craft',器物:'object',窑址:'space',人物:'people',文献:'evidence',现代:'modern'};
 
@@ -94,6 +94,7 @@
     function draw(){
       const vnodes=visibleNodes();
       const vedges=relevantEdges(vnodes);
+      if(!document.getElementById('network-graph-toggle')?.open){setStatus('可探索 '+vnodes.length+' 个条目与主题');renderList(vnodes);return;}
       const pos=layout(vnodes);
       svg.innerHTML='';
       const ns='http://www.w3.org/2000/svg';
@@ -114,7 +115,7 @@
         const activeClass=active?.node_id===n.node_id?' is-selected':'';
         group.setAttribute('class','network-node-svg '+(n.node_type==='world'?'world-node':'entry-node')+activeClass);
         group.setAttribute('transform',`translate(${p.x} ${p.y})`);
-        group.dataset.nodeId=n.node_id;
+        group.dataset.nodeId=n.node_id;group.setAttribute('role','button');group.setAttribute('tabindex','0');group.setAttribute('aria-label',label(n));group.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();selectNode(n.node_id)}});
         const circle=document.createElementNS(ns,'circle');
         circle.setAttribute('r',n.node_type==='world'?27:15);
         circle.setAttribute('class','network-node-circle '+(CAT_CLASS[nodeCategory(n)]||'world'));
@@ -146,39 +147,41 @@
       const links=neighbors(active);
       const direct=links.filter(x=>isCore(x.node)).slice(0,18);
       const url=entryUrl(active);
-      detail.innerHTML=`<div class="network-detail-kicker">${esc(TYPE_LABELS[active.node_type]||active.node_type)} · ${esc(nodeCategory(active)||'知识世界')}</div>
+      detail.innerHTML=`<div class="network-detail-kicker">${esc(TYPE_LABELS[active.node_type]||active.node_type)} · ${esc(nodeCategory(active)||'主题')}</div>
         <h3>${esc(label(active))}</h3>
         <p>${esc(active.summary||'从这个节点继续查看已经建立的知识关系。')}</p>
         <div class="network-detail-meta"><span>${links.length} 条已建立关系</span></div>
         ${url?`<a class="network-detail-entry" href="${safeHref(url)||''}">进入知识条目 →</a>`:''}
         <div class="network-neighbor-title">继续探索</div>
-        <div class="network-neighbor-list">${direct.length?direct.map(x=>`<button type="button" data-node="${esc(x.node.node_id)}"><span>${esc(nodeCategory(x.node)||'知识世界')}</span><b>${esc(label(x.node))}</b></button>`).join(''):'<div class="network-no-neighbor">当前节点暂无可展示的核心邻接节点。</div>'}</div>`;
+        <div class="network-neighbor-list">${direct.length?direct.map(x=>`<button type="button" data-node="${esc(x.node.node_id)}"><span>${esc(String(x.edge.edge_type||'相关').replace(/^entry_relation:/,'').replace(/^world_.*/, '所属主题'))} · ${esc(nodeCategory(x.node)||'主题')}</span><b>${esc(label(x.node))}</b></button>`).join(''):'<div class="network-no-neighbor">当前节点暂无可展示的核心邻接节点。</div>'}</div>`;
       detail.querySelectorAll('[data-node]').forEach(b=>b.addEventListener('click',()=>selectNode(b.dataset.node)));
       draw();
     }
 
     function renderList(vnodes){
       const matches=vnodes.slice(0,30);
-      list.innerHTML=matches.map(n=>`<button type="button" class="network-list-item ${active?.node_id===n.node_id?'is-active':''}" data-node="${esc(n.node_id)}"><span>${esc(nodeCategory(n)||'知识世界')}</span><b>${esc(label(n))}</b></button>`).join('');
+      list.innerHTML=matches.map(n=>`<button type="button" class="network-list-item ${active?.node_id===n.node_id?'is-active':''}" data-node="${esc(n.node_id)}"><span>${esc(nodeCategory(n)||'主题')}</span><b>${esc(label(n))}</b></button>`).join('');
       list.querySelectorAll('[data-node]').forEach(b=>b.addEventListener('click',()=>selectNode(b.dataset.node)));
     }
 
+    document.getElementById('network-graph-toggle')?.addEventListener('toggle',draw);
     search.addEventListener('input',()=>{query=search.value.trim();draw();if(query){const match=visibleNodes().find(n=>n.node_type==='entry');if(match)selectNode(match.node_id);}});
     filter.addEventListener('change',()=>{type=filter.value;draw();});
-    reset.addEventListener('click',()=>{query='';type='all';search.value='';filter.value='all';active=null;detail.innerHTML='<div class="network-empty"><span>SELECT A NODE</span><h3>点击一个节点</h3><p>查看它连接到哪些知识，并从这里进入统一知识条目页面。</p></div>';draw();});
+    reset.addEventListener('click',()=>{query='';type='all';search.value='';filter.value='all';active=null;detail.innerHTML='<div class="network-empty"><span>选择条目</span><h3>点击一个节点</h3><p>查看它连接到哪些知识，并从这里进入完整条目页面。</p></div>';draw();});
 
     try{
-      setStatus('正在读取统一知识图谱……');
+      setStatus('正在读取关联内容……');
       graph=await window.JDM_KNOWLEDGE.graph({limit:500,edgeLimit:2000,includeEdges:true});
       nodes=graph.nodes||[];edges=graph.edges||[];
       if(!nodes.length){setStatus('当前没有可展示的知识节点','error');return;}
       draw();
-      const first=nodes.find(n=>n.node_type==='world')||nodes.find(n=>n.node_type==='entry');
+      const requested=new URLSearchParams(location.search).get('node');
+      const first=nodes.find(n=>n.node_id===requested)||nodes.find(n=>n.node_type==='entry'&&label(n).includes('青花'))||nodes.find(n=>n.node_type==='entry');
       if(first)selectNode(first.node_id);
     }catch(error){
       console.error('[JDM network explorer]',error);
       setStatus('知识网络暂时无法加载，请稍后重试。','error');
-      detail.innerHTML='<div class="network-empty"><span>NETWORK UNAVAILABLE</span><h3>暂时无法加载</h3><p>其他知识页面不受影响。</p></div>';
+      detail.innerHTML='<div class="network-empty"><span>连接暂时不可用</span><h3>暂时无法加载</h3><p>其他知识页面不受影响。</p></div>';
     }
   };
 

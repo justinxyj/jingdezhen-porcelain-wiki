@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+  - toc
+---
 <div class="jdm-global-network" data-global-network>
   <section class="jdm-global-network-hero">
     <div class="jdm-global-network-eyebrow">GLOBAL CERAMIC NETWORK · 全球陶瓷网络</div>
