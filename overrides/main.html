@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+{% if page and not page.is_homepage %}<nav class="visitor-breadcrumb" aria-label="面包屑"><a href="{{ '' | url }}">首页</a>{% for ancestor in page.ancestors | reverse %}<span aria-hidden="true"> / </span><span>{{ ancestor.title }}</span>{% endfor %}<span aria-hidden="true"> / </span><span aria-current="page">{{ page.title }}</span></nav>{% endif %}
+{{ super() }}
+{% endblock %}
+{% block footer %}
+<footer class="visitor-footer"><div><strong>探索</strong><a href="{{ 'history/' | url }}">历史</a><a href="{{ 'craft/' | url }}">工艺</a><a href="{{ 'museum/catalog/' | url }}">器物</a><a href="{{ 'contemporary/' | url }}">当代景德镇</a></div><div><strong>工具</strong><a href="{{ 'search/' | url }}">搜索</a><a href="{{ 'museum/kiln-map/' | url }}">地图</a><a href="{{ 'museum/timeline/' | url }}">时间轴</a><a href="{{ 'research/' | url }}">研究方法</a></div><div><strong>项目</strong><a href="{{ config.repo_url }}">GitHub</a><a href="{{ config.repo_url }}/issues/new">纠错与反馈</a><a href="{{ 'research/museum-sources/' | url }}">图片来源与许可</a><a href="{{ 'en/' | url }}" lang="en">English · Beta</a><a href="{{ 'ja/' | url }}" lang="ja">日本語 · Beta</a></div></footer>
+{{ super() }}
+{% endblock %}

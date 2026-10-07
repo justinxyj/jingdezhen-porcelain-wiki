@@ -4,153 +4,152 @@ site_url: https://justinxyj.github.io/jingdezhen-porcelain-wiki/
 repo_url: https://github.com/justinxyj/jingdezhen-porcelain-wiki
 repo_name: justinxyj/jingdezhen-porcelain-wiki
 edit_uri: edit/main/docs/
+exclude_docs: '/README.md
 
-# README.md conflicts with index.md in the same directory under MkDocs.
-exclude_docs: |
-  /README.md
   /contemporary/README.md
 
+  '
 theme:
   name: material
   language: zh
   features:
-    - navigation.tabs
-    - navigation.sections
-    - navigation.top
-    - navigation.tracking
-    - search.suggest
-    - search.highlight
-    - content.code.copy
-    - content.action.view
+  - navigation.tabs
+  - navigation.sections
+  - navigation.top
+  - navigation.tracking
+  - search.suggest
+  - search.highlight
+  - content.code.copy
+  - content.action.view
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      toggle:
-        icon: material/weather-sunny
-        name: 切换到深色模式
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      toggle:
-        icon: material/weather-night
-        name: 切换到浅色模式
-
+  - media: '(prefers-color-scheme: light)'
+    scheme: default
+    toggle:
+      icon: material/weather-sunny
+      name: 切换到深色模式
+  - media: '(prefers-color-scheme: dark)'
+    scheme: slate
+    toggle:
+      icon: material/weather-night
+      name: 切换到浅色模式
+  custom_dir: overrides
 extra_css:
-  - https://unpkg.com/leaflet@1.9.4/dist/leaflet.css
-  - stylesheets/museum.css
-  - stylesheets/wiki.css
-  - stylesheets/timeline-comparison.css
-  - stylesheets/timeline-interactive.css
-  - stylesheets/museum-images.css
-  - stylesheets/official-gallery.css
-  - stylesheets/site-interactions.css
-  - stylesheets/evidence-hub.css
-  - stylesheets/global-kiln-map.css
-  - stylesheets/homepage-apple.css
-  - stylesheets/museum-apple.css
-  - stylesheets/curator.css
-  - stylesheets/people.css
-  - stylesheets/reception.css
-  - stylesheets/timeline-details.css
-  - stylesheets/technology-tree.css
-  - stylesheets/world-browser.css
-  - stylesheets/network-explorer.css
-  - stylesheets/entry-search.css
-  - stylesheets/global-network.css
+- https://unpkg.com/leaflet@1.9.4/dist/leaflet.css
+- stylesheets/museum.css
+- stylesheets/wiki.css
+- stylesheets/timeline-comparison.css
+- stylesheets/timeline-interactive.css
+- stylesheets/museum-images.css
+- stylesheets/official-gallery.css
+- stylesheets/site-interactions.css
+- stylesheets/evidence-hub.css
+- stylesheets/global-kiln-map.css
+- stylesheets/homepage-apple.css
+- stylesheets/museum-apple.css
+- stylesheets/curator.css
+- stylesheets/people.css
+- stylesheets/reception.css
+- stylesheets/timeline-details.css
+- stylesheets/technology-tree.css
+- stylesheets/world-browser.css
+- stylesheets/network-explorer.css
+- stylesheets/entry-search.css
+- stylesheets/global-network.css
+- stylesheets/visitor.css
 extra_javascript:
-  - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
-  - javascripts/runtime-config.js
-  - https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.0/dist/umd/supabase.min.js
-  - javascripts/auth-manager.js
-  - javascripts/dom-safe.js
-  - javascripts/media-policy.js
-  - javascripts/data-contract.js
-  - javascripts/knowledge-store.js
-  - javascripts/entry-search.js
-  - javascripts/global-network.js
-  - javascripts/world-browser.js
-  - javascripts/network-explorer.js
-  - javascripts/museum.js
-  - javascripts/wiki-enhancements.js
-  - javascripts/wiki-timeline.js
-  - javascripts/timeline-interactive.js
-  - javascripts/timeline-details.js
-  - javascripts/voices-books.js
-  - javascripts/evidence-hub.js
-  - javascripts/literature-library.js
-  - javascripts/global-kiln-map.js
-  - javascripts/technology-tree.js
-  - javascripts/museum-images.js
-  - javascripts/homepage-apple.js
-  - javascripts/source-audit.js
-  - javascripts/museum-admin-auth.js
-  - javascripts/museum-admin.js
-  - javascripts/site-privacy.js
-
+- https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
+- javascripts/runtime-config.js
+- https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.0/dist/umd/supabase.min.js
+- javascripts/auth-manager.js
+- javascripts/dom-safe.js
+- javascripts/media-policy.js
+- javascripts/data-contract.js
+- javascripts/knowledge-store.js
+- javascripts/entry-search.js
+- javascripts/global-network.js
+- javascripts/world-browser.js
+- javascripts/network-explorer.js
+- javascripts/museum.js
+- javascripts/wiki-enhancements.js
+- javascripts/wiki-timeline.js
+- javascripts/timeline-interactive.js
+- javascripts/timeline-details.js
+- javascripts/voices-books.js
+- javascripts/evidence-hub.js
+- javascripts/literature-library.js
+- javascripts/global-kiln-map.js
+- javascripts/technology-tree.js
+- javascripts/museum-images.js
+- javascripts/homepage-apple.js
+- javascripts/source-audit.js
+- javascripts/museum-admin-auth.js
+- javascripts/museum-admin.js
+- javascripts/site-privacy.js
+- javascripts/visitor-ui.js
 markdown_extensions:
-  - admonition
-  - attr_list
-  - footnotes
-  - tables
-  - toc:
-      permalink: true
-
+- admonition
+- attr_list
+- footnotes
+- tables
+- toc:
+    permalink: true
 nav:
-  - 首页: index.md
-  - 探索景德镇:
-      - 历史与发展:
-          - 历史总览: history/README.md
-          - 唐五代: history/tang-wudai.md
-          - 宋元: history/song-yuan.md
-          - 明清: history/ming-qing.md
-          - 近现代: history/modern.md
-          - 外销与跨文化交流: history/export-and-exchange.md
-      - 工艺与技术:
-          - 工艺总览: craft/README.md
-          - 制瓷技术树: craft/technology-tree.md
-          - 原料与配方: craft/raw-materials.md
-          - 成型与修整: craft/forming-and-finishing.md
-          - 窑炉与烧成: craft/kiln-firing.md
-          - 青花: craft/qinghua.md
-          - 粉彩: craft/fencai.md
-          - 颜色釉: craft/colored-glaze.md
-      - 器物与美学:
-          - 器物分类: objects/README.md
-          - 纹饰与题材: aesthetics/patterns.md
-      - 窑址与城市空间:
-          - 窑址总览: kilns/README.md
-          - 御窑厂: kilns/imperial-kiln.md
-          - 湖田窑: kilns/hutian-kiln.md
-          - 其他窑址与矿料: kilns/other-sites.md
-      - 人物与传承:
-          - 人物总览: people/README.md
-      - 文献与研究:
-          - 研究规范: research/README.md
-          - 核心文献库: research/sources.md
-          - 博物馆资料与图像来源: research/museum-sources.md
-          - 文献总库: research/literature-library.md
-          - 考古资料与时间轴: research/archaeology.md
-          - 研究导览: research/research-hub.md
-          - 世界遗产: research/heritage.md
-          - 补充文献库: research/sources-addendum.md
-      - 现代景德镇:
-          - 现代总览: contemporary/index.md
-          - 教育与研究: contemporary/education.md
-          - 产业与社会: contemporary/industry.md
-          - 当代艺术: contemporary/art.md
-          - 世界遗产与保护: contemporary/heritage.md
-          - 数字化与未来: contemporary/future.md
-  - 统一搜索: search.md
-  - 数字博物馆:
-      - 博物馆总览: museum/index.md
-      - 历史时间轴: museum/timeline.md
-      - 窑址地图: museum/kiln-map.md
-      - 器物图谱: museum/catalog.md
-      - 人物数据库: museum/people.md
-      - 工艺流程: craft/technology-tree.md
-      - 图片馆: museum/gallery.md
-      - 名人与书籍: museum/voices-and-books.md
-      - 知识条目: entry.md
-  - 知识网络:
-      - 知识网络总览: network/README.md
-      - 关系探索: network/relations.md
-      - 全球陶瓷网络: network/global.md
+- 首页: index.md
+- 百科:
+  - 历史:
+    - 历史总览: history/README.md
+    - 唐五代: history/tang-wudai.md
+    - 宋元: history/song-yuan.md
+    - 明清: history/ming-qing.md
+    - 近现代: history/modern.md
+    - 外销与跨文化交流: history/export-and-exchange.md
+  - 工艺:
+    - 工艺总览: craft/README.md
+    - 制瓷技术树: craft/technology-tree.md
+    - 原料与配方: craft/raw-materials.md
+    - 成型与修整: craft/forming-and-finishing.md
+    - 窑炉与烧成: craft/kiln-firing.md
+    - 青花: craft/qinghua.md
+    - 粉彩: craft/fencai.md
+    - 颜色釉: craft/colored-glaze.md
+  - 器物:
+    - 器物分类: objects/README.md
+    - 纹饰与题材: aesthetics/patterns.md
+  - 窑址:
+    - 窑址总览: kilns/README.md
+    - 御窑厂: kilns/imperial-kiln.md
+    - 湖田窑: kilns/hutian-kiln.md
+    - 其他窑址与矿料: kilns/other-sites.md
+  - 人物:
+    - 人物总览: people/README.md
+  - 当代景德镇:
+    - 现代总览: contemporary/index.md
+    - 教育与研究: contemporary/education.md
+    - 产业与社会: contemporary/industry.md
+    - 当代艺术: contemporary/art.md
+    - 世界遗产与保护: contemporary/heritage.md
+    - 数字化与未来: contemporary/future.md
+- 博物馆:
+  - 博物馆总览: museum/index.md
+  - 器物: museum/catalog.md
+  - 人物: museum/people.md
+  - 图片馆: museum/gallery.md
+  - 名人与书籍: museum/voices-and-books.md
+- 地图与时间:
+  - 窑址地图: museum/kiln-map.md
+  - 历史时间轴: museum/timeline.md
+- 研究:
+  - 研究规范: research/README.md
+  - 核心文献库: research/sources.md
+  - 博物馆资料与图像来源: research/museum-sources.md
+  - 文献总库: research/literature-library.md
+  - 考古资料与时间轴: research/archaeology.md
+  - 研究导览: research/research-hub.md
+  - 世界遗产: research/heritage.md
+  - 补充文献库: research/sources-addendum.md
+  - 关系探索: network/relations.md
+  - 全球陶瓷交流: network/global.md
+  - 知识网络说明: network/README.md
+- 搜索: search.md
+hooks:
+- hooks/page_assets.py
