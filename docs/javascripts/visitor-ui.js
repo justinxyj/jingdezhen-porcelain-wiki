@@ -131,7 +131,17 @@
     const viewport=document.createElement('div');viewport.className='visitor-image-viewport';
     const img=document.createElement('img');img.src=image.currentSrc||image.src;img.alt=image.alt;
     let scale=1;
-    const update=()=>{img.style.width=scale===1?'100%':(scale*100)+'%';img.style.maxWidth=scale===1?'100%':'none';};
+    const update=()=>{
+      if(!img.naturalWidth||!img.naturalHeight||!viewport.clientWidth)return;
+      const limit=parseFloat(getComputedStyle(viewport).maxHeight)||window.innerHeight*.65;
+      const fit=Math.min(viewport.clientWidth/img.naturalWidth,limit/img.naturalHeight);
+      img.style.width=(img.naturalWidth*fit*scale)+'px';
+      img.style.height=(img.naturalHeight*fit*scale)+'px';img.style.maxWidth='none';
+      if(scale===1){viewport.scrollTop=0;viewport.scrollLeft=0;}
+    };
+    img.addEventListener('load',update);
+    window.addEventListener('resize',update);
+    viewer.addEventListener('close',()=>window.removeEventListener('resize',update),{once:true});
     const controls=document.createElement('div');controls.className='visitor-image-controls';controls.setAttribute('aria-label','图片缩放');
     /** @type {Array<[string,()=>void]>} */
     const actions=[['放大',()=>{scale=Math.min(4,scale+.25);}],['缩小',()=>{scale=Math.max(.5,scale-.25);}],['适应窗口',()=>{scale=1;}]];
@@ -143,7 +153,7 @@
     const fields={era:'相关内容年代',creator:'作者',institution:'馆藏机构',sourceInstitution:'来源机构',license:'版权 / 使用条件',source:'来源'};
     for(const [key,label] of Object.entries(fields))if(image.dataset[key]){const p=document.createElement('p');p.textContent=label+'：'+image.dataset[key];viewer.append(p);}
     const source=image.dataset.sourceUrl||image.closest('figure')?.querySelector('a')?.href;
-    if(source&&safe.safeHref(source)){const a=document.createElement('a');a.href=safe.safeHref(source);a.textContent='查看馆藏记录与图片来源 ↗';a.target='_blank';a.rel='noopener noreferrer';viewer.append(a);}viewer.showModal();
+    if(source&&safe.safeHref(source)){const a=document.createElement('a');a.href=safe.safeHref(source);a.textContent='查看馆藏记录与图片来源 ↗';a.target='_blank';a.rel='noopener noreferrer';viewer.append(a);}viewer.showModal();update();
 
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
