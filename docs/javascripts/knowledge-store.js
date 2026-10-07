@@ -633,9 +633,19 @@
       stats:{relationCount:ctx.relations.length,relationTruncated:Boolean(ctx.truncated),recommendationCount:recs.length,timelinePeerCount:timelinePeers.length,spaceCount:spaceEntries.length}
     };
   }
+  /** @param {import('../../types/knowledge').Entry} e */
+  function personImportance(e){
+    const explicit=e.zh?.meta?.importance;
+    const body=String(e.zh?.content||''),first=/<p\b[^>]*>([\s\S]*?)<\/p>/i.exec(body)?.[1]||'';
+    let candidate=(explicit||first||e.zh?.summary||'').replace(/<sup\b[^>]*>[\s\S]*?<\/sup>/gi,'');
+    if(/^(本\s*Entry|本条目|该节点)/i.test(candidate))candidate=e.zh?.summary||'';
+    if(typeof document!=='undefined'){const node=document.createElement('template');node.innerHTML=candidate;candidate=node.content.textContent||'';}
+    else candidate=candidate.replace(/<[^>]+>/g,' ');
+    return (candidate.match(/[^。！？]+[。！？]?/g)||[]).slice(0,2).join('').trim();
+  }
   /** @param {string} category @param {number} [limit] */
   async function byCategory(category,limit=250){return list({category,limit})}
   /** @param {{slug:string,source_type?:string,url?:string}|null} e @returns {string} */
   function url(e){if(e?.source_type==='markdown'&&e.url)return e.url;return e?'/jingdezhen-porcelain-wiki/entry/'+encodeURIComponent(e.slug)+'/':'/jingdezhen-porcelain-wiki/'}
-  window.JDM_KNOWLEDGE={all,kilnAtlas,get,list,worlds,byWorld,worldOverview,entryContext,entryNetworkContext,craftProcesses,craftProcessContext,objectAtlas,personAtlas,graph,recommendations,eraGroup:eraGroupFor,normalizeSearch,suggestSearch,searchEntries,searchDiscovery,searchDiscoveryPage,byCategory,url,state:()=>({...state}),reset:()=>{allPromise=null;searchIndexPromise=null;topicIndexPromise=null;cache.clear();state={status:'idle',error:null,updatedAt:null}}};
+  window.JDM_KNOWLEDGE={all,kilnAtlas,get,list,worlds,byWorld,worldOverview,entryContext,entryNetworkContext,craftProcesses,craftProcessContext,objectAtlas,personAtlas,personImportance,graph,recommendations,eraGroup:eraGroupFor,normalizeSearch,suggestSearch,searchEntries,searchDiscovery,searchDiscoveryPage,byCategory,url,state:()=>({...state}),reset:()=>{allPromise=null;searchIndexPromise=null;topicIndexPromise=null;cache.clear();state={status:'idle',error:null,updatedAt:null}}};
 })();

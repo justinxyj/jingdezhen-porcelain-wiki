@@ -58,7 +58,7 @@
   /** @param {HTMLElement} root @param {import('../../types/knowledge').Entry} e @param {Partial<import('../../types/knowledge').NetworkContext>|null} network */
   function render(root,e,network){
     const m=e.zh?.meta||{},im=validMedia(e);
-    const intro=detailedIntro(e), recommendations=network?.recommendations||[];
+    const intro=(e.category==='人物'?window.JDM_KNOWLEDGE?.personImportance?.(e):'')||detailedIntro(e), recommendations=network?.recommendations||[];
 
     const relations=network?.relations||[];
     const worlds=network?.worlds||[], timelinePeers=network?.timelinePeers||[], spaceEntries=network?.spaceEntries||[], craftProcesses=network?.craftProcesses||[];
@@ -77,7 +77,7 @@
     const sourceGroups=[...new Set(visSources.map(s=>s.category))].map(category=>'<p>'+esc(category)+' '+visSources.filter(s=>s.category===category).length+'</p>').join('');
     const sourceBlock='<details class="visitor-references"><summary>参考资料 '+visSources.length+'</summary>'+sourceGroups+ungroupedSourceBlock+'</details>';
     root.innerHTML='<article class="wiki-entry-card wiki-entry-v2">'+
-      '<header class="wiki-entry-header"><div><div class="wiki-entry-kicker">'+esc(e.category||'知识')+'</div><h1>'+esc(e.zh?.title||e.slug)+'</h1>'+(e.category==='人物'?'<h2>为什么重要</h2>':'')+'<p>'+esc(m.importance||intro)+'</p></div>'+(im&&safeHref(im.path)?'<figure class="wiki-entry-cover"><img data-museum-image="1" data-source-url="'+esc(safeHref(im.source_url))+'" data-creator="'+esc(im.creator||'')+'" data-license="'+esc(im.license||'')+'" data-institution="'+esc(im.institution||'')+'" data-era="'+esc(m.period||m.map?.period||'')+'" src="'+safeHref(im.path)+'" alt="'+esc(im.title||e.zh?.title||e.slug)+'"><figcaption>'+esc(im.title||'')+' · '+esc(im.source||'')+' · '+esc(im.license||'')+(safeHref(im.source_url)?' · <a href="'+safeHref(im.source_url)+'" target="_blank" rel="noopener noreferrer">图片来源 ↗</a>':'')+'</figcaption></figure>':'<p class="visitor-missing-image">暂无公开图片。图片需具备可追溯来源与使用许可。</p>')+'</header>'+
+      '<header class="wiki-entry-header"><div><div class="wiki-entry-kicker">'+esc(e.category||'知识')+'</div><h1>'+esc(e.zh?.title||e.slug)+'</h1>'+(e.category==='人物'?'<h2>为什么重要</h2>':'')+'<p>'+esc(intro)+'</p></div>'+(im&&safeHref(im.path)?'<figure class="wiki-entry-cover"><img data-museum-image="1" data-source-url="'+esc(safeHref(im.source_url))+'" data-creator="'+esc(im.creator||'')+'" data-license="'+esc(im.license||'')+'" data-institution="'+esc(im.institution||'')+'" data-era="'+esc(m.period||m.map?.period||'')+'" src="'+safeHref(im.path)+'" alt="'+esc(im.title||e.zh?.title||e.slug)+'"><figcaption>'+esc(im.title||'')+' · '+esc(im.source||'')+' · '+esc(im.license||'')+(safeHref(im.source_url)?' · <a href="'+safeHref(im.source_url)+'" target="_blank" rel="noopener noreferrer">图片来源 ↗</a>':'')+'</figcaption></figure>':'<p class="visitor-missing-image">暂无公开图片。图片需具备可追溯来源与使用许可。</p>')+'</header>'+
       (tags.length?'<div class="wiki-entry-v2-tags">'+tags.map(x=>'<span>'+esc(x)+'</span>').join('')+'</div>':'')+
       (worldLinks?'<div class="wiki-entry-world-path"><span>相关阅读主题</span><div>'+worldLinks+'</div></div>':'')+
       '<div class="visitor-entry-shortcuts">'+(m.map?.lat!=null?'<a href="'+ROOT+'museum/kiln-map/?slug='+encodeURIComponent(e.slug)+'">在地图中查看 →</a>':'')+(m.timeline?.length?'<a href="'+ROOT+'museum/timeline/?slug='+encodeURIComponent(e.slug)+'">在时间轴中查看 →</a>':'')+'</div>'+

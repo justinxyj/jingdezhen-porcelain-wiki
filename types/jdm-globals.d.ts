@@ -51,7 +51,7 @@ declare global {
       searchDiscoveryPage(term: string, options?: SearchOptions): Promise<SearchPage>;
       url(entry: { category: string; slug: string }): string;
       state(): { status: string; error: unknown; updatedAt: number | null };
-      normalizeSearch(value:unknown):string;suggestSearch(query:string):string|null;
+      personImportance(entry:import('./knowledge').Entry):string;normalizeSearch(value:unknown):string;suggestSearch(query:string):string|null;
       reset(): void;
     };
     JDM_VISITOR?: {loadData():Promise<NonNullable<Window['JDM_KNOWLEDGE']>>;dialog(title:string):HTMLDialogElement;root:string;openSearch():void;renderState(host:Element,kind:'loading'|'error'|'empty',options?:{message?:string;error?:unknown;retry?:()=>void}):void};

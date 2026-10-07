@@ -35,3 +35,7 @@ assert.equal(store.suggestSearch('tangyingg'),'唐英');
 assert.equal(store.suggestSearch('xxxxxxxx'),null);
 assert.equal(store.suggestSearch('tangying'),null);
 console.log('PASS: unique finite-vocabulary typo suggestion; gibberish and exact aliases are not guessed');
+
+assert.equal(store.personImportance({zh:{summary:'身份说明。',content:'<p>主持御窑生产。记录工艺技术。第三句背景。</p>',meta:{}}}), '主持御窑生产。记录工艺技术。');
+assert.equal(store.personImportance({zh:{summary:'身份说明。',content:'<p>已有正文。</p>',meta:{importance:'明确审定的贡献。'}}}), '明确审定的贡献。');
+console.log('PASS: person importance uses existing published prose and preserves explicit editorial metadata');

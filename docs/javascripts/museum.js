@@ -117,7 +117,7 @@
         '<div class="person-card-tags">'+(x.era?'<span class="tag">'+esc(eraLabel(x.era))+'</span>':'')+(x.worlds?.[0]?'<span class="tag">'+esc(x.worlds[0].short_title||x.worlds[0].title)+'</span>':'')+'</div>'+
         '<h3>'+(entryH?'<a href="'+entryH+'">'+esc(e.zh?.title||'未命名人物')+'</a>':esc(e.zh?.title||'未命名人物'))+'</h3>'+
         (x.role?'<strong>'+esc(x.role)+'</strong>':'')+(m.lifespan||m.birth_year||m.death_year?'<p class="visitor-person-dates">'+esc(m.lifespan||[m.birth_year||'生年不详',m.death_year||'卒年不详'].join('—'))+'</p>':'')+
-        '<h4>为什么重要</h4><p>'+esc(m.importance||text(e).slice(0,180))+'</p>'+
+        '<h4>为什么重要</h4><p>'+esc(window.JDM_KNOWLEDGE?.personImportance?.(e)||m.importance||text(e).slice(0,180))+'</p>'+
         ((m.keywords?.length||x.role||x.era)?'<p aria-label="关键词">'+(m.keywords?.length?m.keywords:[x.role,eraLabel(x.era)].filter(Boolean)).map(word=>'<span class="tag">'+esc(word)+'</span>').join(' ')+'</p>':'')+
         (craft?'<div class="person-knowledge-row"><b>工艺</b>'+craft+'</div>':'')+
         (works?'<div class="person-knowledge-row"><b>作品</b>'+works+'</div>':'')+

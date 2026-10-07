@@ -146,6 +146,16 @@ def description_for(entry: dict) -> str:
     return candidate[:155]
 
 
+def person_importance(entry: dict) -> str:
+    zh = entry.get("zh") or {}
+    first = re.search(r"<p\b[^>]*>([\s\S]*?)</p>", str(zh.get("content") or ""), re.I)
+    candidate = (zh.get("meta") or {}).get("importance") or (first.group(1) if first else "") or zh.get("summary") or ""
+    if re.match(r"^(本\s*Entry|本条目|该节点)", plain(candidate), re.I):
+        candidate = zh.get("summary") or ""
+    candidate = re.sub(r"<sup\b[^>]*>[\s\S]*?</sup>", "", str(candidate), flags=re.I)
+    return "".join(re.findall(r"[^。！？]+[。！？]?", plain(candidate))[:2]).strip()
+
+
 def clean_body_html(content: str, summary: str) -> str:
     """Keep meaningful HTML structure while removing repeated UI boilerplate."""
     body = sanitize(content) if content.strip() else ""
@@ -283,7 +293,7 @@ def entry_html(entry: dict, world_by_entry: dict[str, list[dict]],
     slug = str(entry["slug"])
     url = f"{SITE_URL}entry/{quote(slug)}/"
     description = description_for(entry)
-    intro = intro_for(entry)
+    intro = (person_importance(entry) if entry.get("category") == "人物" else "") or intro_for(entry)
     content = str(zh.get("content") or "")
     body_html = clean_body_html(content, intro) if content.strip() else f"<p>{html.escape(intro)}</p>"
     media = first_media(media_by_entry, entry["id"])
@@ -420,7 +430,7 @@ main{{max-width:1240px;margin:0 auto;padding:24px 24px 72px}}
 <div><div class="wiki-entry-kicker">知识条目 · {html.escape(str(entry.get("category") or "知识"))}</div>
 <h1>{html.escape(title)}</h1>
 {'<h2>为什么重要</h2>' if entry.get("category") == "人物" else ""}
-<p class="entry-static-summary">{html.escape(str(meta.get("importance") or intro))}</p></div>
+<p class="entry-static-summary">{html.escape(str(intro))}</p></div>
 {image_html}
 </header>
 {f'<div class="wiki-entry-v2-tags">{"".join("<span>"+html.escape(x)+"</span>" for x in tags)}</div>' if tags else ""}
