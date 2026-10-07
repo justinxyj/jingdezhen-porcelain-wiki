@@ -4,11 +4,10 @@ site_url: https://justinxyj.github.io/jingdezhen-porcelain-wiki/
 repo_url: https://github.com/justinxyj/jingdezhen-porcelain-wiki
 repo_name: justinxyj/jingdezhen-porcelain-wiki
 edit_uri: edit/main/docs/
-exclude_docs: '/README.md
-
+exclude_docs: |
+  /README.md
   /contemporary/README.md
-
-  '
+  /vendor/README.md
 theme:
   name: material
   language: zh
@@ -33,8 +32,10 @@ theme:
       icon: material/weather-night
       name: 切换到浅色模式
   custom_dir: overrides
+plugins: []
+
 extra_css:
-- https://unpkg.com/leaflet@1.9.4/dist/leaflet.css
+- vendor/leaflet/leaflet.css
 - stylesheets/museum.css
 - stylesheets/wiki.css
 - stylesheets/timeline-comparison.css
@@ -57,9 +58,9 @@ extra_css:
 - stylesheets/global-network.css
 - stylesheets/visitor.css
 extra_javascript:
-- https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
+- vendor/leaflet/leaflet.js
 - javascripts/runtime-config.js
-- https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.0/dist/umd/supabase.min.js
+- vendor/supabase/supabase.min.js
 - javascripts/auth-manager.js
 - javascripts/dom-safe.js
 - javascripts/media-policy.js

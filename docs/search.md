@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+  - toc
+---
 <div class="jdm-search-page" data-entry-search>
   <div class="jdm-search-hero">
     <div>

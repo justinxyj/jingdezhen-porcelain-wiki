@@ -8,7 +8,7 @@
   function loadData() {
     if (window.JDM_KNOWLEDGE) return Promise.resolve(window.JDM_KNOWLEDGE);
     if (!dataPromise) dataPromise = (async () => {
-      for (const path of ['javascripts/runtime-config.js', 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.0/dist/umd/supabase.min.js', 'javascripts/auth-manager.js', 'javascripts/data-contract.js', 'javascripts/knowledge-store.js']) {
+      for (const path of ['javascripts/runtime-config.js', 'vendor/supabase/supabase.min.js', 'javascripts/auth-manager.js', 'javascripts/data-contract.js', 'javascripts/knowledge-store.js']) {
         await new Promise((resolve, reject) => {
           const node = document.createElement('script');
           node.src = new URL(path, base).href;
@@ -72,14 +72,18 @@
       const editing = event.target.closest?.('input,textarea,select,[contenteditable="true"]');
       if ((event.key.toLowerCase() === 'k' && (event.ctrlKey || event.metaKey)) || (event.key === '/' && !editing && !event.ctrlKey && !event.metaKey && !event.altKey)) { event.preventDefault(); openSearch(); }
     });
+    const imageSelector='.wiki-entry-cover img,.official-gallery-card img,[data-zoom-image]';
+    const prepareImages=()=>document.querySelectorAll(imageSelector).forEach(img=>{if(!img.closest('a')){img.tabIndex=0;img.setAttribute('role','button');img.setAttribute('aria-label','放大图片：'+img.alt);}});
+    prepareImages();new MutationObserver(prepareImages).observe(document.querySelector('main')||document.body,{childList:true,subtree:true});
+    document.addEventListener('keydown',event=>{if((event.key==='Enter'||event.key===' ')&&event.target.matches?.(imageSelector)){event.preventDefault();event.target.click();}});
     document.addEventListener('click', event => {
-      const image = event.target.closest?.('.wiki-entry-cover img,.official-gallery img,.museum-gallery img,[data-zoom-image]');
+      const image = event.target.closest?.('.wiki-entry-cover img,.official-gallery-card img,.museum-gallery img,[data-zoom-image]');
       if (!image || event.target.closest('a')) return;
       const viewer = dialog(image.alt || '器物图片'); viewer.classList.add('visitor-image-viewer');
       const img = document.createElement('img'); img.src = image.currentSrc || image.src; img.alt = image.alt;
       const caption = document.createElement('p'); caption.textContent = image.closest('figure')?.querySelector('figcaption')?.textContent || image.alt;
       const zoom = document.createElement('button'); zoom.type = 'button'; zoom.textContent = '放大 / 适应窗口'; zoom.addEventListener('click', () => img.classList.toggle('is-zoomed'));
-      viewer.append(zoom, img, caption); viewer.showModal();
+      viewer.append(zoom, img, caption);const source=image.dataset.sourceUrl||image.closest('figure')?.querySelector('a')?.href;if(source&&safe.safeHref(source)){const a=document.createElement('a');a.href=safe.safeHref(source);a.textContent='查看馆藏记录与图片来源 ↗';a.target='_blank';a.rel='noopener noreferrer';viewer.append(a);}viewer.showModal();
     });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
