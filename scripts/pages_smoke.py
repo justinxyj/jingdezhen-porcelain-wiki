@@ -76,8 +76,13 @@ with sync_playwright() as p:
         raise RuntimeError("知识条目未使用统一 Entry Detail 2.0 外壳")
     if page.locator("#wiki-entry-root .wiki-entry-v2-grid").count()<1:
         raise RuntimeError("知识条目缺少统一双栏探索布局")
-    if page.locator("#wiki-entry-root .wiki-entry-v2-rail").count()<1:
-        raise RuntimeError("知识条目缺少统一知识节点侧栏")
+    if page.locator("#wiki-entry-root .wiki-entry-v2-main").count()<1:
+        raise RuntimeError("知识条目缺少正文阅读区")
+    reading_width=page.locator("#wiki-entry-root .wiki-entry-v2-main").first.bounding_box()["width"]
+    if reading_width > 861:
+        raise RuntimeError("知识条目阅读区超过 860px")
+    if page.locator("#wiki-entry-root .visitor-research").count()<1:
+        raise RuntimeError("知识条目缺少折叠研究入口")
     if "Entry Detail" in page.locator("body").inner_text() or "KNOWLEDGE RELATIONS" in page.locator("body").inner_text():
         raise RuntimeError("知识条目仍暴露旧英文产品 UI")
     if page.locator("#wiki-entry-root .wiki-entry-body").count()<1:
@@ -154,7 +159,7 @@ with sync_playwright() as p:
 
 
     for name,path in [("历史世界","history/"),("工艺世界","craft/"),("器物世界","objects/"),("空间世界","kilns/"),("人物世界","people/"),("文献世界","research/"),("现代世界","contemporary/")]:
-        page.goto(base+path,wait_until="networkidle",timeout=30000)
+        page.goto(base+path,wait_until="domcontentloaded",timeout=30000)
         browser_cards=page.locator("[data-world-browser] .jdm-world-entry-card")
         browser_cards.first.wait_for(state="visible",timeout=20000)
         if browser_cards.count()<1:
@@ -193,28 +198,30 @@ with sync_playwright() as p:
 
     # Global kiln map modal regression: content must use the concise Entry summary,
     # not the internal evidence boilerplate, and media must pass the public media policy.
-    page.goto(base+"museum/kiln-map/",wait_until="networkidle",timeout=30000)
+    page.goto(base+"museum/kiln-map/",wait_until="domcontentloaded",timeout=30000)
     page.locator("#kiln-map .global-kiln-list-item").first.wait_for(state="visible",timeout=20000)
+    if page.locator('[data-region="jdz"]').get_attribute('aria-pressed') != 'true':
+        raise RuntimeError("地图没有默认展示景德镇")
+    page.locator('[data-region="china"]').click()
     shiwan=page.locator('#kiln-map .global-kiln-list-item[data-slug="shiwan-kiln"]')
-    if shiwan.count()!=1:
-        raise RuntimeError("窑址地图缺少石湾窑条目")
+    shiwan.wait_for(state="visible",timeout=10000)
     shiwan.click()
-    page.locator("#global-kiln-modal .global-kiln-dialog").wait_for(state="visible",timeout=10000)
-    modal_text=page.locator("#global-kiln-modal").inner_text()
-    intro=page.locator("#global-kiln-modal .global-kiln-intro").inner_text().strip()
-    summary=page.locator("#global-kiln-modal .global-kiln-ai p").inner_text().strip()
-    if intro != summary:
-        raise RuntimeError("窑址地图弹层正文与摘要重复/来源模板污染")
-    if "本 Entry 的核心信息以页面列出的来源为证据入口" in modal_text or "研究边界" in modal_text or "继续研究" in modal_text:
+    modal=page.locator('dialog.visitor-dialog[open]')
+    modal.wait_for(state="visible",timeout=10000)
+    modal_text=modal.inner_text()
+    if "本 Entry 的核心信息以页面列出的来源为证据入口" in modal_text or "研究边界" in modal_text:
         raise RuntimeError("窑址地图弹层暴露内部证据模板文本")
-    image=page.locator("#global-kiln-modal .global-kiln-image img")
-    if image.count()!=1 or not image.get_attribute("src"):
-        raise RuntimeError("石湾窑地图弹层缺少已核验图片")
-    link_styles=page.locator("#global-kiln-modal .global-kiln-links a").evaluate_all("""els=>els.map(a=>{const s=getComputedStyle(a);return {display:s.display,color:s.color,textDecoration:s.textDecorationLine,border:s.borderTopWidth}})""")
-    for item in link_styles:
-        if item["color"]=="rgb(0, 0, 238)" or item["textDecoration"]=="underline":
-            raise RuntimeError("窑址地图弹层链接退化为浏览器默认蓝色下划线样式: "+repr(item))
-    print("PASS kiln map modal/media/content")
+    full_entry=modal.locator('a.visitor-primary')
+    if '/entry/shiwan-kiln/' not in (full_entry.get_attribute('href') or ''):
+        raise RuntimeError("地图弹窗缺少完整条目主入口")
+    page.keyboard.press('Tab')
+    if not modal.evaluate('(el)=>el.contains(document.activeElement)'):
+        raise RuntimeError("地图弹窗未限制键盘焦点")
+    page.keyboard.press('Escape')
+    modal.wait_for(state="detached",timeout=5000)
+    if not shiwan.evaluate('(el)=>el===document.activeElement'):
+        raise RuntimeError("地图弹窗关闭后未恢复焦点")
+    print("PASS Jingdezhen default, regional filtering, full entry action and dialog accessibility")
 
     browser.close()
 
