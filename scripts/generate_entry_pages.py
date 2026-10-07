@@ -414,7 +414,7 @@ main{{max-width:1240px;margin:0 auto;padding:24px 24px 72px}}
 <body>
 <nav class="visitor-static-nav" aria-label="主导航"><a href="{SITE_URL}">首页</a><a href="{SITE_URL}history/">百科</a><a href="{SITE_URL}museum/">博物馆</a><a href="{SITE_URL}museum/kiln-map/">地图与时间</a><a href="{SITE_URL}research/">研究</a><a href="{SITE_URL}search/">搜索</a></nav>
 <main>
-<nav class="wiki-chrome"><div class="wiki-breadcrumb"><a href="{SITE_URL}">首页</a><span aria-hidden="true">›</span><a href="{category_url}">{html.escape(category_label)}</a><span aria-hidden="true">›</span><b aria-current="page">{html.escape(title)}</b></div></nav>
+<div class="wiki-chrome"><nav class="wiki-breadcrumb" aria-label="面包屑"><a href="{SITE_URL}">首页</a><span aria-hidden="true">›</span><a href="{category_url}">{html.escape(category_label)}</a><span aria-hidden="true">›</span><b aria-current="page">{html.escape(title)}</b></nav></div>
 <article id="wiki-entry-root" class="wiki-entry-card wiki-entry-v2" data-entry-slug="{html.escape(slug, quote=True)}" data-static-rendered="true">
 <header class="wiki-entry-header">
 <div><div class="wiki-entry-kicker">知识条目 · {html.escape(str(entry.get("category") or "知识"))}</div>

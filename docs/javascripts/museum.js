@@ -24,10 +24,10 @@
   function relationLinks(rows,label){
     return rows.slice(0,3).map(e=>{const h=hrefFor(entryUrl(e));return h?'<a href="'+h+'">'+esc(e.zh?.title||e.slug)+'</a>':esc(e.zh?.title||e.slug)}).join('');
   }
-  /** @param {import('../../types/knowledge').Media|undefined} im @param {string} alt */
-  function mediaImg(im,alt){
+  /** @param {import('../../types/knowledge').Media|undefined} im @param {string} alt @param {string} [era] */
+  function mediaImg(im,alt,era=''){
     const src=safeHref(im?.path);if(!src||!im)return '';
-    return '<img data-museum-image="1" data-source-url="'+esc(safeHref(im.source_url))+'" data-creator="'+esc(im.creator||'')+'" data-institution="'+esc(im.institution||'')+'" data-license="'+esc(im.license||'')+'" src="'+src+'" alt="'+esc(alt||im.title||'图片')+'" loading="lazy">';
+    return '<img data-museum-image="1" data-source-url="'+esc(safeHref(im.source_url))+'" data-source="'+esc(im.source||'')+'" data-era="'+esc(era)+'" data-creator="'+esc(im.creator||'')+'" data-institution="'+esc(im.institution||'')+'" data-license="'+esc(im.license||'')+'" src="'+src+'" alt="'+esc(alt||im.title||'图片')+'" loading="lazy">';
   }
   /** @param {import('../../types/knowledge').Entry} e @param {string} key @returns {string[]} */
   function metadataValues(e,key){
@@ -69,7 +69,7 @@
       const crafts=(x.craftProcesses||[]).slice(0,3).map(p=>craftHref?'<a href="'+craftHref+'">'+esc(p.label||'工艺')+'</a>':esc(p.label||'工艺')).join('');
       const entryH=hrefFor(entryUrl(e));
       const global=hrefFor(path('network/global/?slug='+encodeURIComponent(e.slug)));
-      const img=mediaImg(im,im?.title||e.zh?.title||'器物图片');
+      const img=mediaImg(im,im?.title||e.zh?.title||'器物图片',m.period||eraLabel(era||''));
       return '<article class="catalog-card catalog-card-v2">'+
         (img&&entryH?'<a href="'+entryH+'">'+img+'</a>':img||'<div class="visitor-missing-image">暂无公开图片</div>')+
         '<div class="catalog-card-body">'+
@@ -110,7 +110,7 @@
       const entryH=hrefFor(entryUrl(e));
       const global=hrefFor(path('network/global/?slug='+encodeURIComponent(e.slug)));
       const relation=(x.relatedPeople||[]).slice(0,3).map(p=>{const h=hrefFor(entryUrl(p));return h?'<a href="'+h+'">'+esc(p.zh?.title||p.slug)+'</a>':esc(p.zh?.title||p.slug)}).join('');
-      const img=mediaImg(im,im?.title||e.zh?.title||'人物图片');
+      const img=mediaImg(im,im?.title||e.zh?.title||'人物图片',m.period||eraLabel(x.era||''));
       return '<article class="person-card person-card-v2">'+
         (img&&entryH?'<a href="'+entryH+'" class="person-card-image">'+img+'</a>':img)+
         '<div class="person-card-body">'+

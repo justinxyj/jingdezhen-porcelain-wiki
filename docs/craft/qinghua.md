@@ -1,5 +1,5 @@
 ---
-{"search_metadata": {"type": "工艺", "keywords": ["青花", "青花瓷", "元青花"], "sources": [{"source_type": "journal", "title": "景德镇瓷器生产“二元配方”起源初探——兼论高岭土开发史", "citation": "肖红艳、艾沁哲、崔剑锋，《故宫博物院院刊》2020年第5期，第23—33页", "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf"}]}}
+{"search_metadata": {"type": "工艺", "keywords": ["青花", "青花瓷", "元青花", "玲珑瓷", "青花玲珑"], "sources": [{"source_type": "journal", "title": "景德镇瓷器生产“二元配方”起源初探——兼论高岭土开发史", "citation": "肖红艳、艾沁哲、崔剑锋，《故宫博物院院刊》2020年第5期，第23—33页", "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf"}]}}
 ---
 # 青花：釉下钴蓝与景德镇制瓷
 
@@ -23,6 +23,10 @@
 
 青料是装饰用的含钴材料；瓷石和高岭土讨论的是胎体原料。两种问题会在同一器物上相遇，却不能混为一个“青花配方”。关于元代坯料是否已经采用人为二元混配，2020年研究提出了与通行概述不同的解释，详见[原料与配方](raw-materials.md)。[^materials]
 
+## 青花与玲珑装饰
+
+玲珑瓷在坯体上镂出孔眼，再以釉料填充，烧成后形成透光的装饰。青花玲珑把这种装饰与釉下钴蓝绘画结合：青花提供线条和色面，玲珑孔眼形成透光纹样。两种工艺可以同见于一件器物，但“青花”与“玲珑”分别说明不同的制作方法。[^linglong]
+
 ## 与全球陶瓷比较
 
 比较中国青花与海外陶瓷，应同时核对胎质、釉层、装饰位置和年代。蓝白视觉相近不等于全部都是景德镇瓷器，也不自动证明单向传播。贸易、收藏与仿制是不同历史过程，需要各自的证据。
@@ -38,3 +42,5 @@
 [^kilns]: 北京大学考古文博学院：《北大考古与“百年百大考古发现”——景德镇明清御窑厂遗址》。[官方资料](https://archaeology.pku.edu.cn/info/1030/3492.htm)。
 
 [^met]: The Metropolitan Museum of Art：Vase with lotus pond scene，馆藏编号1991.253.33。[对象记录](https://www.metmuseum.org/art/collection/search/42490)；[官方API](https://collectionapi.metmuseum.org/public/collection/v1/objects/42490)。
+
+[^linglong]: 维基百科：“玲珑瓷”，2026年7月2日版本，导言与“工艺”段。这里仅引用镂孔填釉及其与青花结合的基本说明，不据此推定起源年代、具体器物产地或传播路线。[所参考版本](https://zh.wikipedia.org/w/index.php?title=玲瓏瓷&oldid=93287674)。
