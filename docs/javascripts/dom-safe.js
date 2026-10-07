@@ -38,7 +38,7 @@
   function sanitizeBodyHtml(raw) {
     const tpl = document.createElement("template");
     tpl.innerHTML = String(raw || "");
-    const allowed = new Set(["P", "BR", "STRONG", "B", "EM", "I", "H2", "H3", "H4", "UL", "OL", "LI", "BLOCKQUOTE", "A"]);
+    const allowed = new Set(["P", "BR", "STRONG", "B", "EM", "I", "H2", "H3", "H4", "UL", "OL", "LI", "BLOCKQUOTE", "A", "SUP"]);
     tpl.content.querySelectorAll("*").forEach((node) => {
       if (!allowed.has(node.tagName)) {
         node.replaceWith(...node.childNodes);
@@ -49,11 +49,13 @@
           const href = safeHref(attr.value);
           if (href) node.setAttribute("href", href);
           else node.removeAttribute("href");
-        } else node.removeAttribute(attr.name);
+        } else if (!(attr.name === "id" && /^fn(?:ref\d*)?:[A-Za-z0-9_.-]+$/.test(attr.value))) node.removeAttribute(attr.name);
       });
       if (node.tagName === "A" && node.getAttribute("href")) {
-        node.setAttribute("target", "_blank");
-        node.setAttribute("rel", "noopener noreferrer");
+        if (new URL(node.getAttribute("href"), window.location.href).origin !== window.location.origin) {
+          node.setAttribute("target", "_blank");
+          node.setAttribute("rel", "noopener noreferrer");
+        }
       }
     });
     return tpl.innerHTML;

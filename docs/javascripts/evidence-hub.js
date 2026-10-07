@@ -1,4 +1,5 @@
 (() => {
+  /** @type {Record<string,{eyebrow:string,title:string,text:string,facts:string[],href:string}>} */
   const DATA = {
     archaeology: {
       eyebrow: 'ARCHAEOLOGY · 考古',
@@ -10,7 +11,7 @@
     literature: {
       eyebrow: 'LITERATURE · 文献',
       title: '从古籍到论文，全部进入可追溯书目',
-      text: '当前 Wiki 已核验的 R01—R35 资料集中展示，并标注全文、在线资料或书目信息。古籍、地方志、考古报告、学术论文和遗产文件分开管理。',
+      text: '当前 Wiki 的 R01—R35 参考资料集中展示，并标注全文、在线资料或书目信息。古籍、地方志、考古报告、学术论文和遗产文件分开管理。',
       facts: ['R01—R35：当前完整参考书目', '古籍：景德镇陶录、天工开物、地方志等', '论文：材料、工艺、青白瓷、粉彩、贸易等', '每条资料都保留原始在线入口'],
       href: 'research/literature-library/'
     },
@@ -30,6 +31,7 @@
     }
   };
 
+  /** @param {unknown} value */
   const safeHref = (value) => {
     const raw=String(value||'').trim();
     try{
@@ -40,20 +42,14 @@
     return '#';
   };
 
+  /** @param {string} key */
   const open = (key) => {
     const data = DATA[key];
     if (!data) return;
-    let modal = document.getElementById('evidence-modal');
-    if (!modal) {
-      modal = document.createElement('div');
-      modal.id = 'evidence-modal';
-      modal.className = 'evidence-modal';
-      modal.innerHTML = '<div class="evidence-modal-backdrop" data-close></div><div class="evidence-modal-card" role="dialog" aria-modal="true" aria-labelledby="evidence-modal-title"><button class="evidence-modal-close" type="button" aria-label="关闭" data-close>×</button><div id="evidence-modal-content"></div></div>';
-      document.body.appendChild(modal);
-      modal.addEventListener('click', (e) => { if (e.target.hasAttribute('data-close')) close(); });
-      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
-    }
-    const content = modal.querySelector('#evidence-modal-content');
+    const ui=window.JDM_VISITOR;if(!ui)return;const modal=ui.dialog(data.title);
+    modal.id='evidence-modal';
+    const container=document.createElement('div');container.id='evidence-modal-content';modal.append(container);
+    const content=container;
     content.replaceChildren();
     const p1=document.createElement('p');p1.className='evidence-modal-eyebrow';p1.textContent=data.eyebrow;
     const h2=document.createElement('h2');h2.id='evidence-modal-title';h2.textContent=data.title;
@@ -61,24 +57,17 @@
     const ul=document.createElement('ul');data.facts.forEach(fact=>{const li=document.createElement('li');li.textContent=fact;ul.appendChild(li)});
     const link=document.createElement('a');link.className='evidence-modal-primary';link.textContent='进入完整资料库 →';link.href=safeHref(data.href);
     content.append(p1,h2,p2,ul,link);
-    modal.classList.add('is-open');
-    document.body.classList.add('evidence-modal-open');
-  };
-
-  const close = () => {
-    const modal = document.getElementById('evidence-modal');
-    if (modal) modal.classList.remove('is-open');
-    document.body.classList.remove('evidence-modal-open');
+    modal.showModal();
   };
 
   const init = () => {
-    document.querySelectorAll('.jdm-evidence-card[data-evidence]').forEach(card => {
+    document.querySelectorAll('.jdm-evidence-card[data-evidence]').forEach(card => {if(!(card instanceof HTMLElement))return;
       card.addEventListener('click', (e) => {
-        if (e.target.closest('a')) return;
-        open(card.dataset.evidence);
+        if(e.target instanceof Element&&e.target.closest('a')) return;
+        open(card.dataset.evidence||'');
       });
       card.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(card.dataset.evidence); }
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(card.dataset.evidence||''); }
       });
     });
   };

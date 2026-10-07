@@ -1,24 +1,50 @@
 /* Public knowledge-entry renderer. Internal IDs, relation types and version fields never render. */
 (function(){
-  const esc=s=>window.JDM_SAFE?.esc?.(s)??window.JDM_AUTH?.esc?.(s)??String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+  /** @param {unknown} s */
+  const esc=s=>window.JDM_SAFE?.esc?.(s)??window.JDM_AUTH?.esc?.(s)??String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]||m));
   /** @type {Record<string,Array<{path:string,title:string,description:string}>>} */
   let readingPaths={};
   /** @type {Record<string,string>} */
   const relationLabels={person:'相关人物',object:'相关器物',craft:'相关工艺',kiln:'相关窑址',period:'时代背景',related:'相关条目'};
   const ROOT='/jingdezhen-porcelain-wiki/';
+  /** @param {unknown} s */
   const plain=s=>{const d=document.createElement('div');d.innerHTML=String(s||'');return d.textContent||d.innerText||''};
+  /** @param {{slug:string,category:string}} e */
   const url=e=>window.JDM_KNOWLEDGE?.url(e)||`${ROOT}entry/?slug=${encodeURIComponent(e?.slug||'')}`;
+  /** @param {unknown} raw @param {{allowHttp?:boolean}} [opts] */
   const safeHref=(raw,opts)=>window.JDM_SAFE?.safeHref?.(raw,opts)??window.JDM_AUTH?.safeHref?.(raw,opts)??'';
+  /** @param {unknown} u */
   const hrefFor=u=>safeHref(u)||'';
+  /** @param {import('../../types/knowledge').Source|null|undefined} s */
   const sourceUrl=s=>{if(!s||typeof s!=='object')return '';const raw=String(s.url??'').trim();return /^https?:\/\//i.test(raw)?safeHref(raw,{allowHttp:true}):''};
-  const sourceLabel=s=>{if(s&&typeof s==='object'){for(const k of ['label','title']){const v=s[k];if(v!=null&&String(v).trim())return String(v)}}return '来源'};
+  /** @param {import('../../types/knowledge').Source|null|undefined} s */
+  const sourceLabel=s=>{if(s&&typeof s==='object'){for(const k of ['label','title']){const v=k==='label'?s.label:s.title;if(v!=null&&String(v).trim())return String(v)}}return '来源'};
   /* status: missing/blank/'published' => visible; anything else (e.g. 'pending') => hidden. tier/grade are never rendered. */
+  /** @param {import('../../types/knowledge').Source|null|undefined} s */
   const sourcePublished=s=>{const st=s?.status;return st==null||(typeof st==='string'&&!st.trim())||String(st).trim().toLowerCase()==='published'};
   /* Same rules as scripts/generate_entry_pages.py visible_sources(): n = 1-based position in the original array; url de-dup is a fallback and never renumbers. */
-  const visibleSources=list=>{const seen=new Set(),out=[];if(!Array.isArray(list))return out;list.forEach((s,i)=>{if(!s||typeof s!=='object'||!sourcePublished(s))return;const key=String(s.url??'').trim(),u=sourceUrl(s);if(!u||seen.has(key))return;seen.add(key);out.push({n:i+1,href:u,label:sourceLabel(s)})});return out};
+  /** @param {import('../../types/knowledge').Source[]|undefined} list */
+  const visibleSources=list=>{const seen=new Set();
+    /** @type {Array<{n:number,href:string,label:string,category:string,verified:boolean}>} */
+    const out=[];if(!Array.isArray(list))return out;list.forEach((s,i)=>{if(!s||typeof s!=='object'||!sourcePublished(s))return;const key=String(s.url??'').trim(),u=sourceUrl(s);if(!u||seen.has(key))return;seen.add(key);out.push({n:i+1,href:u,label:sourceLabel(s),category:sourceCategory(s),verified:sourceVerified(s)})});return out};
+  /** @param {import('../../types/knowledge').Source} s */
+  function sourceCategory(s){
+    const kind=s.source_type||s.type||s.category;
+    const groups=/** @type {Record<string,string>} */({museum:'博物馆与馆藏机构',collection:'博物馆与馆藏机构',academic:'学术研究',journal:'学术研究',thesis:'学术研究',historical_document:'历史文献',official:'官方资料'});
+    return groups[kind||'']||'其他资料';
+  }
+  /** @param {import('../../types/knowledge').Source} s */
+  function sourceVerified(s){
+    const v=s.verification;
+    return Boolean(v&&typeof v==='object'&&v.status==='verified'&&v.reviewed_at&&v.reviewer&&v.claim&&v.locator);
+  }
+  /** @param {unknown} raw */
   const bodyHasRefs=raw=>/\[\d+\]/.test(String(raw||'').replace(/<[^>]*>/g,' '));
+  /** @param {import('../../types/knowledge').Entry} e */
   const entrySources=e=>Array.isArray(e?.zh?.sources)&&e.zh.sources.length?e.zh.sources:e?.sources;
+  /** @param {import('../../types/knowledge').Entry} e */
   const validMedia=e=>{const m=e?.media?.[0];return m&&!window.JDM_MEDIA_POLICY?.isGenericPlaceholder?.(m)?m:null};
+  /** @param {import('../../types/knowledge').Entry} e */
   function detailedIntro(e){
     const m=e.zh?.meta||{};
     const summary=plain(e.zh?.summary||'');
@@ -29,38 +55,44 @@
     const facts=[m.era||m.period,m.role,m.location,m.region,m.craft].filter(Boolean).join('、');
     return text||(facts?facts+'。该条目结合可核验文献、考古与馆藏资料说明其历史位置及与景德镇陶瓷发展的关系。':'该条目结合可核验史料、研究与馆藏信息说明相关历史背景及其与景德镇陶瓷史的联系。');
   }
+  /** @param {HTMLElement} root @param {import('../../types/knowledge').Entry} e @param {Partial<import('../../types/knowledge').NetworkContext>|null} network */
   function render(root,e,network){
     const m=e.zh?.meta||{},im=validMedia(e);
     const intro=detailedIntro(e), recommendations=network?.recommendations||[];
-    /** @type {Array<{entry:{category?:string,slug:string,zh?:{title?:string}},relation_type?:string,note?:string}>} */
+
     const relations=network?.relations||[];
     const worlds=network?.worlds||[], timelinePeers=network?.timelinePeers||[], spaceEntries=network?.spaceEntries||[], craftProcesses=network?.craftProcesses||[];
     const tags=[m.period,m.era,m.role,m.location,m.region,m.craft].filter(Boolean);
     const relatedGroups=[...new Set(relations.map(r=>r.entry.category||'条目'))];
-    const relationCards=relatedGroups.map(category=>'<div class="visitor-related-group"><h3>相关'+esc(category)+'</h3>'+relations.filter(r=>(r.entry.category||'条目')===category).slice(0,8).map(r=>{const h=hrefFor(url(r.entry));return h?'<a href="'+h+'"><span>'+esc(relationLabels[r.relation_type||'']||r.relation_type||'相关')+'</span><b>'+esc(r.entry.zh?.title||r.entry.slug)+'</b><small>'+esc(r.note||'阅读条目，核对具体关系与出处')+' →</small></a>':''}).join('')+'</div>').join('');
+    const relationCards=relatedGroups.map(category=>'<div class="visitor-related-group"><h3>相关'+esc(category)+'</h3>'+relations.filter(r=>(r.entry.category||'条目')===category).slice(0,8).map(r=>{const h=hrefFor(url(r.entry));return h?'<a href="'+h+'"><span>'+esc(r.semantic_label?((e.zh?.title||e.slug)+' → '+r.semantic_label+' →'):relationLabels[r.relation_type||'']||'相关内容')+'</span><b>'+esc(r.entry.zh?.title||r.entry.slug)+'</b><small>'+esc(r.semantic_note||'阅读相关内容的历史与参考资料')+' →</small></a>':''}).join('')+'</div>').join('');
+    /** @param {Partial<import('../../types/knowledge').World>} w */
     const worldPath=w=>ROOT+(w.slug==='history'?'history/':w.slug==='craft'?'craft/':w.slug==='objects'?'objects/':w.slug==='space'?'kilns/':w.slug==='people'?'people/':w.slug==='research'?'research/':w.slug==='contemporary'?'contemporary/':'');
     const worldLinks=worlds.map(w=>{const h=hrefFor(worldPath(w));return h?'<a class="wiki-entry-world-link" href="'+h+'">'+esc(w.short_title||w.title||w.slug)+' →</a>':''}).filter(Boolean).join('');
+    /** @param {import('../../types/knowledge').Entry[]} items @param {string} kind */
     const entryCards=(items,kind)=>items.slice(0,8).map(x=>{const h=hrefFor(url(x));return h?'<a class="wiki-entry-explore-card" href="'+h+'"><span>'+esc(kind)+'</span><b>'+esc(x.zh?.title||x.slug)+'</b><small>'+esc(x.category||'知识')+' →</small></a>':''}).filter(Boolean).join('');
     const visSources=visibleSources(entrySources(e)), numberedSources=visSources.length>0&&bodyHasRefs(e.zh?.content);
-    const sourceLinks=visSources.map(s=>{const a='<a href="'+s.href+'" target="_blank" rel="noopener">'+esc(s.label)+' ↗</a>';return numberedSources?'<li><span class="wiki-entry-source-no">['+s.n+']</span> '+a+'</li>':a}).join('');
+    const sourceLinks=visSources.map(s=>{const a='<a href="'+s.href+'" target="_blank" rel="noopener">'+esc(s.label)+' ↗</a>'+(s.verified?' <span>已核验（对应论述）</span>':'');return numberedSources?'<li><span class="wiki-entry-source-no">['+s.n+']</span> '+a+'</li>':a}).join('');
     const reading=(readingPaths[e.slug]||[]).map(item=>'<a href="'+hrefFor(ROOT+item.path)+'"><b>'+esc(item.title)+'</b><p>'+esc(item.description)+'</p></a>').join('');
-    const sourceBlock=numberedSources?'<ol class="wiki-entry-source-links wiki-entry-source-refs" style="list-style:none;padding:0;margin:0">'+sourceLinks+'</ol>':'<div class="wiki-entry-source-links">'+(sourceLinks||'<span>暂无外部来源。</span>')+'</div>';
+    const ungroupedSourceBlock=numberedSources?'<ol class="wiki-entry-source-links wiki-entry-source-refs" style="list-style:none;padding:0;margin:0">'+sourceLinks+'</ol>':'<div class="wiki-entry-source-links">'+(sourceLinks||'<span>暂无外部来源。</span>')+'</div>';
+    const sourceGroups=[...new Set(visSources.map(s=>s.category))].map(category=>'<p>'+esc(category)+' '+visSources.filter(s=>s.category===category).length+'</p>').join('');
+    const sourceBlock='<details class="visitor-references"><summary>参考资料 '+visSources.length+'</summary>'+sourceGroups+ungroupedSourceBlock+'</details>';
     root.innerHTML='<article class="wiki-entry-card wiki-entry-v2">'+
-      '<header class="wiki-entry-header"><div><div class="wiki-entry-kicker">'+esc(e.category||'知识')+'</div><h1>'+esc(e.zh?.title||e.slug)+'</h1><p>'+esc(intro)+'</p></div>'+(im&&safeHref(im.path)?'<figure class="wiki-entry-cover"><img data-museum-image="1" src="'+safeHref(im.path)+'" alt="'+esc(im.title||e.zh?.title||e.slug)+'"><figcaption>'+esc(im.title||'')+' · '+esc(im.source||'')+' · '+esc(im.license||'')+(safeHref(im.source_url)?' · <a href="'+safeHref(im.source_url)+'" target="_blank" rel="noopener noreferrer">图片来源 ↗</a>':'')+'</figcaption></figure>':'<p class="visitor-missing-image">暂无公开图片。图片需具备可追溯来源与使用许可。</p>')+'</header>'+
+      '<header class="wiki-entry-header"><div><div class="wiki-entry-kicker">'+esc(e.category||'知识')+'</div><h1>'+esc(e.zh?.title||e.slug)+'</h1>'+(e.category==='人物'?'<h2>为什么重要</h2>':'')+'<p>'+esc(m.importance||intro)+'</p></div>'+(im&&safeHref(im.path)?'<figure class="wiki-entry-cover"><img data-museum-image="1" data-source-url="'+esc(safeHref(im.source_url))+'" data-creator="'+esc(im.creator||'')+'" data-license="'+esc(im.license||'')+'" data-institution="'+esc(im.institution||'')+'" data-era="'+esc(m.period||m.map?.period||'')+'" src="'+safeHref(im.path)+'" alt="'+esc(im.title||e.zh?.title||e.slug)+'"><figcaption>'+esc(im.title||'')+' · '+esc(im.source||'')+' · '+esc(im.license||'')+(safeHref(im.source_url)?' · <a href="'+safeHref(im.source_url)+'" target="_blank" rel="noopener noreferrer">图片来源 ↗</a>':'')+'</figcaption></figure>':'<p class="visitor-missing-image">暂无公开图片。图片需具备可追溯来源与使用许可。</p>')+'</header>'+
       (tags.length?'<div class="wiki-entry-v2-tags">'+tags.map(x=>'<span>'+esc(x)+'</span>').join('')+'</div>':'')+
       (worldLinks?'<div class="wiki-entry-world-path"><span>相关阅读主题</span><div>'+worldLinks+'</div></div>':'')+
       '<div class="visitor-entry-shortcuts">'+(m.map?.lat!=null?'<a href="'+ROOT+'museum/kiln-map/?slug='+encodeURIComponent(e.slug)+'">在地图中查看 →</a>':'')+(m.timeline?.length?'<a href="'+ROOT+'museum/timeline/?slug='+encodeURIComponent(e.slug)+'">在时间轴中查看 →</a>':'')+'</div>'+
       '<div class="wiki-entry-v2-grid"><div class="wiki-entry-v2-main">'+
       '<section class="wiki-entry-body"><h2>详细介绍</h2><div class="wiki-entry-text">'+contentOrIntro(e,intro)+'</div></section>'+
       (relations.length?'<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">知识关系</div><h2>它与哪些知识相连</h2><div class="wiki-entry-v2-relations">'+relationCards+'</div></section>':'')+
-      (e.timelineContext?'<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">时间与空间</div><h2>历史与空间</h2><p>'+esc(e.timelineContext.official_summary||e.timelineContext.relationship_to_jingdezhen||e.timelineContext.historical_role||'该条目具有可追溯的时间轴或历史语境信息。')+'</p>'+(safeHref(e.timelineContext.official_source_url)?'<a href="'+safeHref(e.timelineContext.official_source_url)+'" target="_blank" rel="noopener noreferrer">查看资料来源 ↗</a>':'')+'</section>':'')+
+      (e.timelineContext?'<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">时间与空间</div><h2>历史与空间</h2><p>'+esc((e.timelineContext.description_source_type==='editorial_synthesis'?e.timelineContext.ai_summary:e.timelineContext.official_summary)||e.timelineContext.relationship_to_jingdezhen||e.timelineContext.historical_role||'该条目具有可追溯的时间轴或历史语境信息。')+'</p>'+(safeHref(e.timelineContext.official_source_url)?'<a href="'+safeHref(e.timelineContext.official_source_url)+'" target="_blank" rel="noopener noreferrer">查看资料来源 ↗</a>':'')+'</section>':'')+
       (timelinePeers.length?'<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">同一时代</div><h2>同一时代，还可以看</h2><div class="wiki-entry-explore-grid">'+entryCards(timelinePeers,'同一时代')+'</div></section>':'')+
       (spaceEntries.length?'<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">空间语境</div><h2>同一空间语境，还可以看</h2><div class="wiki-entry-explore-grid">'+entryCards(spaceEntries,'空间关联')+'</div></section>':'')+
       (craftProcesses.length?'<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">工艺</div><h2>相关工艺</h2><div class="wiki-entry-craft-list">'+craftProcesses.slice(0,8).map(p=>{const h=hrefFor(ROOT+'craft/technology-tree/?process='+encodeURIComponent(p.node_id||''));return h?'<a href="'+h+'"><span>工序</span><b>'+esc(p.label||p.node_id)+'</b><small>进入72道工艺 →</small></a>':''}).filter(Boolean).join('')+'</div></section>':'')+
       (recommendations.length?'<section class="wiki-entry-recommendations"><div class="wiki-entry-section-kicker">知识探索</div><h2>你可能还想了解</h2><p class="wiki-recommendation-intro">这些条目可以补充当前主题的背景；具体关系以各自来源为依据。</p><div class="wiki-recommendation-grid">'+recommendations.map(r=>{const h=hrefFor(url(r.entry));return h?'<a class="wiki-recommendation-card" href="'+h+'"><span class="wiki-recommendation-category">'+esc(r.target_category||r.entry.category||'知识')+'</span><b>'+esc(r.target_label||r.entry.zh?.title||r.entry.slug)+'</b><small>'+esc(r.reason||'相关知识入口')+' →</small></a>':''}).filter(Boolean).join('')+'</div></section>':'')+
       (reading?'<section class="visitor-reading-path"><h2>延伸阅读</h2><p>编辑选读：补充理解当前主题的背景。</p><div class="visitor-grid">'+reading+'</div></section>':'')+
-      '<section class="wiki-entry-v2-section"><h2>参考资料与来源</h2><p>'+visSources.length+' 条来源记录；数量不代表结论已获核验。</p>'+sourceBlock+'</section><details class="visitor-research"><summary>深入研究：关系图与研究方法</summary><p><a href="'+ROOT+'network/relations/?node='+encodeURIComponent('entry:'+e.id)+'">查看关系图</a> · <a href="'+ROOT+'research/">阅读研究方法</a></p></details><p class="visitor-feedback"><a href="https://github.com/justinxyj/jingdezhen-porcelain-wiki/issues/new?title='+encodeURIComponent('条目反馈：'+(e.zh?.title||e.slug))+'">发现错误？反馈此条目 →</a></p><p>继续阅读：<a href="'+ROOT+'search/?category='+encodeURIComponent(e.category||'')+'">更多'+esc(e.category||'相关')+'条目 →</a></p></div></div></article>';
+      '<section class="wiki-entry-v2-section"><h2>参考资料与来源</h2><p>'+visSources.length+' 条来源记录；数量不代表结论已获核验。</p>'+sourceBlock+'</section><p><a href="'+ROOT+'research/evidence/?slug='+encodeURIComponent(e.slug)+'">查看完整证据链 →</a></p><details class="visitor-research"><summary>深入研究：关系图与研究方法</summary><p><a href="'+ROOT+'network/relations/?node='+encodeURIComponent('entry:'+e.id)+'">查看关系图</a> · <a href="'+ROOT+'research/">阅读研究方法</a></p></details><p class="visitor-feedback"><a href="https://github.com/justinxyj/jingdezhen-porcelain-wiki/issues/new?title='+encodeURIComponent('条目反馈：'+(e.zh?.title||e.slug))+'">发现错误？反馈此条目 →</a></p><p>继续阅读：<a href="'+ROOT+'search/?category='+encodeURIComponent(e.category||'')+'">更多'+esc(e.category||'相关')+'条目 →</a></p></div></div></article>';
   }
+  /** @param {unknown} raw */
   function sanitizeBodyHtml(raw){
     if(typeof window.JDM_SAFE?.sanitizeBodyHtml==='function')return window.JDM_SAFE.sanitizeBodyHtml(raw);
     const tpl=document.createElement('template');
@@ -81,6 +113,7 @@
     });
     return tpl.innerHTML;
   }
+  /** @param {import('../../types/knowledge').Entry} e @param {string} intro */
   function contentOrIntro(e,intro){
     const raw=String(e.zh?.content||'').trim();
     const summary=plain(e.zh?.summary||'').trim();
@@ -121,68 +154,48 @@
     const cleaned=sanitizeBodyHtml(tpl.innerHTML).trim();
     return cleaned||'<p>'+esc(summary||intro)+'</p>';
   }
-  const UUID_RE=/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
-  async function loadRelations(entryId){
-    if(!window.JDM_AUTH?.request)return{relations:[],truncated:false,error:Object.assign(new Error('统一认证请求层不可用，请刷新页面后重试'),{code:'JDM_AUTH_MISSING'})};
-    if(!UUID_RE.test(String(entryId||''))){const e=new Error('条目标识格式异常，无法加载相关内容。');e.code='JDM_ENTRY_ID_CONTRACT';return{relations:[],truncated:false,error:e}}
-    try{
-      const relationQuery=(field,d,s)=>d.from('entry_relations').select('entry_id,related_entry_id,relation_type,note').eq(field,entryId).order('relation_type',{ascending:true}).order('related_entry_id',{ascending:true}).range(0,100).abortSignal(s);
-      const [outgoing,incoming]=await Promise.all([
-        window.JDM_AUTH.request((d,s)=>relationQuery('entry_id',d,s)),
-        window.JDM_AUTH.request((d,s)=>relationQuery('related_entry_id',d,s))
-      ]);
-      const relRows=[...outgoing,...incoming].filter((r,i,a)=>i===a.findIndex(x=>x.entry_id===r.entry_id&&x.related_entry_id===r.related_entry_id&&x.relation_type===r.relation_type));
-      const truncated=outgoing.length===101||incoming.length===101;
-      const ids=[...new Set(relRows.map(r=>r.entry_id===entryId?r.related_entry_id:r.entry_id))];
-      if(!ids.length)return{relations:[],truncated,error:null};
-      const entryQuery=(d,s)=>d.from('entries').select('id,slug,category,zh,en,ja,sources,status,version,updated_at').eq('status','published').in('id',ids).order('updated_at',{ascending:false}).limit(101).abortSignal(s);
-      const entryRows=await window.JDM_AUTH.request(entryQuery);
-      const byId=new Map(entryRows.map(x=>[x.id,x]));
-      return{relations:relRows.map(r=>({...r,entry:byId.get(r.entry_id===entryId?r.related_entry_id:r.entry_id)})).filter(r=>r.entry),truncated,error:null};
-    }catch(error){return{relations:[],truncated:false,error}}
-  }
+  /** @param {HTMLElement} root */
   function renderRelationWarning(root){
     const note=document.createElement('div');
     note.className='wiki-entry-relation-warning';
     note.setAttribute('role','status');
     note.innerHTML='相关内容暂时加载失败。<button type="button">重试</button>';
-    note.querySelector('button').onclick=()=>init();
+    note.querySelector('button')?.addEventListener('click',()=>init());
     root.prepend(note);
   }
+  /** @param {HTMLElement} root @param {unknown} error */
   function renderLoadError(root,error){
-    const code=esc(error?.code||error?.status||'NETWORK');
-    root.innerHTML=`<div class="wiki-entry-error" role="alert"><h2>知识内容暂时无法加载</h2><p>网络或资料服务暂时不可用。请稍后重试。</p><button type="button">重新加载</button><details><summary>技术详情</summary>${code}</details></div>`;
-    root.querySelector('button').onclick=()=>{window.JDM_KNOWLEDGE.reset();init()};
+    window.JDM_VISITOR?.renderState(root,'error',{error,retry:()=>{window.JDM_KNOWLEDGE?.reset();init()}});
   }
   let initSeq=0;
   async function init(){
     const seq=++initSeq;
     const root=document.getElementById('wiki-entry-root');
-    if(!root||!window.JDM_KNOWLEDGE)return;
+    const store=window.JDM_KNOWLEDGE;if(!root||!store)return;
     const staticRendered=root.dataset.staticRendered==='true';
     const slug=new URLSearchParams(location.search).get('slug')||window.JDM_STATIC_ENTRY_SLUG||root.dataset.entrySlug;
     if(!slug){if(!staticRendered)root.innerHTML='<div class="wiki-entry-loading">没有指定条目。</div>';return}
-    if(!staticRendered)root.innerHTML='<div class="wiki-entry-loading" aria-live="polite">正在加载知识条目…</div>';
+    if(!staticRendered)window.JDM_VISITOR?.renderState(root,'loading',{message:'正在加载知识条目…'});
     try{
       if(typeof fetch==='function')readingPaths=await fetch(ROOT+'data/reading-paths.json').then(response=>response.ok?response.json():{}).catch(()=>({}));
-      const e=await window.JDM_KNOWLEDGE.get(slug);
+      const e=await store.get(slug);
       if(!e){if(staticRendered)return;root.innerHTML='<div class="wiki-entry-loading">没有找到这个公开条目。</div>';return}
-      /** @type {any} */
-      const network=await window.JDM_KNOWLEDGE.entryNetworkContext(e.id,{timelineLimit:8,spaceLimit:12}).catch(async networkError=>{
+      /** @type {(Partial<import('../../types/knowledge').NetworkContext>&{networkError?:unknown})|null} */
+      const network=await store.entryNetworkContext(e.id,{timelineLimit:8,spaceLimit:12}).catch(async networkError=>{
         const [ctx,recs]=await Promise.all([
-          window.JDM_KNOWLEDGE.entryContext(e.id,{relationLimit:100}).catch(()=>({relations:[]})),
-          window.JDM_KNOWLEDGE.recommendations(e.id,{limit:8}).catch(()=>[])
+          store.entryContext(e.id,{relationLimit:100}).catch(()=>({relations:[]})),
+          store.recommendations(e.id,{limit:8}).catch(()=>[])
         ]);
         return {entry:e,worlds:[],relations:ctx.relations||[],recommendations:Array.isArray(recs)?recs:[],timelinePeers:[],spaceEntries:[],craftProcesses:[],networkError};
       });
-      if(!network){if(staticRendered)return;root.innerHTML='<div class="wiki-entry-loading">没有找到这个公开 Entry。</div>';return}
+      if(!network){if(staticRendered)return;root.innerHTML='<div class="wiki-entry-loading">没有找到这个公开条目。</div>';return}
       const error=null; const truncated=false;
       if(seq!==initSeq)return;
       render(root,e,network);
       const relations=network.relations||[], recommendations=network.recommendations||[];
       const relationTruncated=Boolean(network.relationTruncated||network.stats?.relationTruncated);
       const recommendationError=network.networkError?network.networkError:null;
-      if(recommendationError){const note=document.createElement('div');note.className='wiki-entry-recommendation-warning';note.setAttribute('role','status');note.textContent='部分扩展探索信息暂时无法加载，当前 Entry 仍可正常浏览。';root.querySelector('.wiki-entry-card')?.appendChild(note);}
+      if(recommendationError){const note=document.createElement('div');note.className='wiki-entry-recommendation-warning';note.setAttribute('role','status');note.textContent='部分相关阅读暂时无法加载，正文仍可正常浏览。';root.querySelector('.wiki-entry-card')?.appendChild(note);}
       if(error)renderRelationWarning(root);
       if(relationTruncated){const note=document.createElement('div');note.className='wiki-entry-relation-warning';note.setAttribute('role','status');note.textContent='相关内容较多，当前仅显示部分关系。';root.querySelector('.wiki-entry-card')?.appendChild(note)}
     }catch(error){if(staticRendered){console.warn('[JDM entry] enhancement failed; keeping static content',error)}else{renderLoadError(root,error)}}

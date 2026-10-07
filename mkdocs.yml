@@ -71,10 +71,10 @@ extra_javascript:
 - javascripts/museum.js
 - javascripts/wiki-enhancements.js
 - javascripts/wiki-timeline.js
-- javascripts/timeline-interactive.js
 - javascripts/timeline-details.js
 - javascripts/voices-books.js
 - javascripts/evidence-hub.js
+- javascripts/evidence-chain.js
 - javascripts/literature-library.js
 - javascripts/global-kiln-map.js
 - javascripts/technology-tree.js
@@ -152,3 +152,5 @@ nav:
 - 搜索: search.md
 hooks:
 - hooks/page_assets.py
+- hooks/search_index.py
+- hooks/visitor_navigation.py

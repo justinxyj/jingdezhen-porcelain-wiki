@@ -38,9 +38,12 @@ def entry(slug: str, sources, content: str = "<p>正文。</p>") -> dict:
 
 def static_sources_section(e: dict) -> str:
     page = g.entry_html(e, {}, {}, {})
-    m = re.search(r'<h2>来源与外部资料</h2>(.*?)</section>', page, re.S)
+    m = re.search(r'<h2>参考资料</h2><details[^>]*><summary>[^<]*</summary>(.*?)</details>', page, re.S)
     assert m, "sources section not found"
-    return m.group(1)
+    panel=m.group(1)
+    listing=re.search(r'<(?:ul|ol) class="wiki-entry-source-links[^"]*">.*?</(?:ul|ol)>',panel,re.S)
+    assert listing, "source list missing from progressive disclosure"
+    return listing.group(0)
 
 
 def links_of(section: str) -> list[tuple[str, str]]:

@@ -19,6 +19,20 @@
       "path": "entry/qingbai-porcelain/",
       "description": "了解湖田窑研究中的重要产品类别；不把所有青白瓷都归为湖田窑出土。",
       "basis": "kilns/hutian-kiln/"
+    },
+    {
+      "title": "御窑厂：对照明清宫廷生产",
+      "path": "entry/imperial-kiln/",
+      "description": "比较景德镇不同地点、时期和生产组织；不据此认定两处遗址具有直接承继关系。",
+      "basis": "kilns/hutian-kiln/；kilns/imperial-kiln/"
+    }
+  ],
+  "yuan-blue-white": [
+    {
+      "title": "湖田窑：景德镇的生产遗存",
+      "path": "entry/hutian-kiln/",
+      "description": "结合窑址材料理解景德镇宋元产品与生产背景。",
+      "basis": "景德镇市科学技术协会湖田窑资料；元代青花条目既有关系。"
     }
   ]
 }

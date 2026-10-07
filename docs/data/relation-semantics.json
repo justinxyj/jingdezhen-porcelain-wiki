@@ -1,0 +1,50 @@
+[
+  {
+    "from": "tang-ying",
+    "to": "imperial-kiln",
+    "label": "督陶",
+    "source_url": "https://www.dpm.org.cn/collection/ceramic/226759.html",
+    "basis": "故宫藏品页唐英名词解释：雍正六年驻景德镇御窑厂任协理官并长期管理窑务。",
+    "note": "唐英自雍正六年驻景德镇御窑厂任协理官，此后长期管理窑务。"
+  },
+  {
+    "from": "imperial-kiln",
+    "to": "tang-ying",
+    "label": "督陶官",
+    "source_url": "https://www.dpm.org.cn/collection/ceramic/226759.html",
+    "basis": "同上，关系方向反转为御窑厂的管理者。",
+    "note": "唐英自雍正六年驻景德镇御窑厂任协理官，此后长期管理窑务。"
+  },
+  {
+    "from": "tang-ying",
+    "to": "colored-glaze",
+    "label": "主持御窑釉彩生产",
+    "source_url": "https://www.dpm.org.cn/collection/ceramic/226759.html",
+    "basis": "同页介绍御窑厂仿古创新的釉彩品种，并说明唐英管理窑务。",
+    "note": "唐英管理窑务期间，御窑厂发展仿古与创新釉彩；不把全部颜色釉的发明归于个人。"
+  },
+  {
+    "from": "colored-glaze",
+    "to": "tang-ying",
+    "label": "御窑釉彩生产管理者",
+    "source_url": "https://www.dpm.org.cn/collection/ceramic/226759.html",
+    "basis": "同上；不声称全部颜色釉由唐英发明。",
+    "note": "唐英管理窑务期间，御窑厂发展仿古与创新釉彩；不把全部颜色釉的发明归于个人。"
+  },
+  {
+    "from": "blue-and-white",
+    "to": "chinoiserie",
+    "label": "欧洲中国风装饰的参照",
+    "source_url": "https://whc.unesco.org/en/decisions/9170/",
+    "basis": "48 COM 8B.16 标准(vi)及现有关系说明，关联景德镇青花与欧洲装饰艺术；不外推每件作品的来源。",
+    "note": "世界遗产委员会资料将景德镇青花与17—18世纪欧洲装饰艺术及中国风联系起来。"
+  },
+  {
+    "from": "chinoiserie",
+    "to": "blue-and-white",
+    "label": "中国青花参照",
+    "source_url": "https://whc.unesco.org/en/decisions/9170/",
+    "basis": "同一来源的反向阅读入口，不声称所有欧洲装饰均出自景德镇。",
+    "note": "世界遗产委员会资料将景德镇青花与17—18世纪欧洲装饰艺术及中国风联系起来。"
+  }
+]

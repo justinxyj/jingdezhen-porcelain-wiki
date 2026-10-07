@@ -16,3 +16,22 @@ const a=await store.searchDiscoveryPage('青花',{limit:12}),b=await store.searc
 assert.equal(a.total,30);assert.equal(a.results.length,12);assert.equal(c.results.length,6);assert.equal(new Set([...a.results,...b.results,...c.results].map(e=>e.id)).size,30);
 assert.equal(store.url(rows[0]),'/jingdezhen-porcelain-wiki/entry/blue-0/');
 console.log('PASS: zero-match exclusion, aliases, category filtering, non-overlapping pages, canonical entry URLs');
+for(const [term,expected] of Object.entries({'yuyao':'御窑','御窯廠':'御窑','湖田窯':'湖田','gaoling':'高岭','景德鎮':'景德镇','fen cai':'粉彩','qingbai':'青白','影青':'青白','玲瓏瓷':'玲珑瓷','琺瑯彩':'珐琅彩','外銷瓷':'外销瓷','雞缸杯':'鸡缸杯','高嶺土':'高岭土'}))assert.equal(store.normalizeSearch(term),expected,term);
+const topics=[{title:'青花纹饰专题',url:'research/blue-white/',type:'专题',era:'yuan',summary:'独立专题的青花研究',text:'青花纹饰的馆藏与研究',image:null,keywords:['青花'],sources:[],source_type:'markdown'}];
+const secondWindow={...window,JDM_KNOWLEDGE:undefined};
+vm.runInNewContext(fs.readFileSync(new URL('../docs/javascripts/knowledge-store.js',import.meta.url),'utf8'),{window:secondWindow,console,AbortController,setTimeout,clearTimeout,URLSearchParams,URL,location:{origin:'https://example.org'},fetch:async()=>({ok:true,json:async()=>topics})});
+const mixed=await secondWindow.JDM_KNOWLEDGE.searchDiscoveryPage('青花',{limit:24});
+assert.equal(mixed.total,31);
+assert(mixed.results.every(e=>['title','url','type','era','summary','image','keywords','source_type'].every(key=>key in e)));
+const article=(await secondWindow.JDM_KNOWLEDGE.searchEntries('纹饰专题'))[0];
+assert.equal(article.source_type,'markdown');assert.equal(secondWindow.JDM_KNOWLEDGE.url(article),'/jingdezhen-porcelain-wiki/research/blue-white/');
+rows[0].sources=[{url:'https://example.org/general',title:'普通链接'}];
+rows[1].sources=[{url:'https://example.org/paper',source_type:'journal',title:'青花研究'}];
+assert.deepEqual(Array.from(await store.searchEntries('青花',{hasLiterature:true}),e=>e.id),['1']);
+assert.equal((await store.searchEntries('青花',{hasImage:true})).length,0);
+console.log('PASS: high-frequency normalization, unified Markdown schema, literature metadata vs plain URL, image filter');
+
+assert.equal(store.suggestSearch('tangyingg'),'唐英');
+assert.equal(store.suggestSearch('xxxxxxxx'),null);
+assert.equal(store.suggestSearch('tangying'),null);
+console.log('PASS: unique finite-vocabulary typo suggestion; gibberish and exact aliases are not guessed');

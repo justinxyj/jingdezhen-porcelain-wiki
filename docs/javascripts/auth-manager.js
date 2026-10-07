@@ -1,23 +1,30 @@
 /* Shared Supabase client and authentication lifecycle.
    Public pages never redirect on auth errors; protected surfaces can render a clear re-auth state. */
 (function(){
+  /** @type {import('@supabase/supabase-js').SupabaseClient<import('../../types/database.types').Database> | null} */
   let client=null;
   let authSubscription=null;
+  /** @type {Promise<import('@supabase/supabase-js').Session|null>|null} */
   let refreshPromise=null;
+  /** @type {{status:string,session:import('@supabase/supabase-js').Session|null,user:import('@supabase/supabase-js').User|null,lastEvent:import('@supabase/supabase-js').AuthChangeEvent|null}} */
   let authState={status:'unknown',session:null,user:null,lastEvent:null};
 
+  /** @param {unknown} error */
   function normalizeError(error){
     if(!error)return null;
-    const e=error instanceof Error?error:new Error(String(error.message||error));
-    e.status=Number(error.status||error.statusCode||0)||0;
-    e.code=error.code||e.code||(e.status===401?'AUTH_EXPIRED':e.status===403?'AUTH_FORBIDDEN':'JDM_REQUEST_ERROR');
+    const fields=error&&typeof error==='object'?/** @type {Record<string,unknown>} */(error):{};
+    const e=error instanceof Error?error:new Error(String(fields.message||error));
+    e.status=Number(fields.status||fields.statusCode||0)||0;
+    e.code=typeof fields.code==='string'?fields.code:e.code||(e.status===401?'AUTH_EXPIRED':e.status===403?'AUTH_FORBIDDEN':'JDM_REQUEST_ERROR');
     if(e.code==='PGRST301'&&!e.status)e.status=401;
     e.kind=(e.status===401||e.code==='PGRST301'||e.code==='AUTH_EXPIRED')?'auth':e.status===403?'forbidden':e.name==='AbortError'?'timeout':(e.message||'').toLowerCase().includes('network')?'network':'server';
     return e;
   }
+  /** @param {unknown} s */
   function esc(s){
-    return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+    return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]||m));
   }
+  /** @param {unknown} raw */
   function safeHref(raw,{allowHttp=false}={}){
     const value=String(raw??'').trim();
     if(!value)return '';
@@ -67,14 +74,21 @@
     })().finally(()=>{refreshPromise=null});
     return refreshPromise;
   }
+  /** @param {unknown} cause */
   function authExpired(cause){
     const e=new Error('登录状态已失效，请重新登录');
     e.code='AUTH_EXPIRED';e.status=401;e.kind='auth';e.cause=cause||null;e.details={cause:normalizeError(cause)};
     return e;
   }
+  /** @param {Error|null} err */
   function isStaleAuthError(err){
     return !!err&&(err.status===401||err.code==='PGRST301'||err.code==='AUTH_EXPIRED');
   }
+  /**
+   * @template T
+   * @param {(db:import('@supabase/supabase-js').SupabaseClient<import('../../types/database.types').Database>,signal:AbortSignal)=>PromiseLike<{data:T,error?:unknown}>} factory
+   * @returns {Promise<T>}
+   */
   async function request(factory,{retryAuth=true,timeoutMs=10000,anonFallback=false}={}){
     const db=getClient();
     const controller=new AbortController();
@@ -108,6 +122,7 @@
     try{await getClient().auth.signOut()}catch(_){}
     authState={status:'signed_out',session:null,user:null,lastEvent:'SIGNED_OUT'};
   }
+  /** @param {unknown} error */
   function describeError(error){
     const e=normalizeError(error);if(!e)return {code:'UNKNOWN',kind:'unknown',message:'暂时无法完成请求，请稍后重试。',action:'retry'};
     if(e.code==='AUTH_EXPIRED'||e.status===401)return {code:'AUTH_EXPIRED',kind:'auth',message:'登录状态已失效，请重新登录。',action:'login'};

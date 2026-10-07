@@ -31,6 +31,7 @@ hide:
   </div>
 
   <div class="jdm-search-filters visitor-category-tabs" aria-label="结果类型"><a href="?category=" data-search-category="">全部</a><a href="?category=器物" data-search-category="器物">器物</a><a href="?category=人物" data-search-category="人物">人物</a><a href="?category=窑址" data-search-category="窑址">窑址</a><a href="?category=工艺" data-search-category="工艺">工艺</a><a href="?category=历史" data-search-category="历史">历史</a></div>
+  <button type="button" id="search-mobile-filters" aria-haspopup="dialog">筛选（0）</button>
   <details class="jdm-search-filter-panel"><summary>高级筛选：主题、时代与地域</summary>
     <div class="jdm-search-filter-row">
       <span>主题</span>
@@ -62,6 +63,7 @@ hide:
         <a href="?time=true#jdm-search-results" data-search-signal="time">有时间轴</a>
       </div>
     </div>
+    <div class="jdm-search-filters" aria-label="图片与文献筛选"><a href="?image=true" data-search-signal="image">有图片</a><a href="?literature=true" data-search-signal="literature">有文献</a></div>
     <button type="button" id="jdm-search-clear" class="jdm-search-clear">清除筛选</button>
   </details>
 

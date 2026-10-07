@@ -38,13 +38,30 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
 
       - name: Install type-check dependencies
-        run: npm install --no-package-lock
+        run: npm ci
 
       - name: Type check database contracts
         run: npm run typecheck
+
+      - name: Search discovery and image recovery
+        run: |
+          node scripts/test_search_discovery.mjs
+          node scripts/test_museum_image_recovery.mjs
+          node scripts/test_catalog_people_metadata.mjs
+
+      - name: Source disclosure consistency
+        run: |
+          python scripts/test_sources_render.py --require-dynamic
+          node scripts/test_evidence_disclosure.mjs
+          node scripts/test_body_sanitizer.mjs
+
+      - name: Editorial release safety boundaries
+        run: |
+          python scripts/test_editorial_release.py
+          python scripts/test_entry_sanitizer.py
 
       - name: Build site
         run: mkdocs build --strict

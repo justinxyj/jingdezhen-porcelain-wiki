@@ -749,7 +749,16 @@ export type Database = {
         ]
       }
     }
+    // Public projections added by the committed 2026-09-20 migrations.
     Views: {
+      media_public: {
+        Row: Pick<Database['public']['Tables']['media']['Row'], 'id'|'entry_id'|'path'|'title'|'source'|'license'|'creator'|'captured_at'|'location'|'created_at'|'usage_type'|'source_tier'|'is_primary'|'canonical_key'|'source_url'|'source_type'>
+        Relationships: []
+      }
+      knowledge_recommendations: {
+        Row: {source_node_id:string|null;target_node_id:string|null;target_label:string|null;target_category:string|null;edge_type:string|null;reason:string|null;weight:number|null}
+        Relationships: []
+      }
       knowledge_graph_edges: {
         Row: {
           display_order: number | null
@@ -774,6 +783,8 @@ export type Database = {
       }
     }
     Functions: {
+      entry_timeline_peers: {Args:{p_entry_id:string;p_eras:string[];p_limit?:number};Returns:Database['public']['Tables']['entries']['Row'][]}
+      entry_space_peers: {Args:{p_entry_id:string;p_eras:string[];p_limit?:number};Returns:Database['public']['Tables']['entries']['Row'][]}
       is_staff: { Args: never; Returns: boolean }
       review_edit: {
         Args: { p_action: string; p_edit_id: string; p_note?: string }

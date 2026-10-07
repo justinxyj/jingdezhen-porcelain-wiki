@@ -36,6 +36,9 @@ async function scenario(sourceUrl, alternate, failAlternate = false) {
   const sandbox = {
     window: { addEventListener() {} },
     document: { readyState: 'complete', body: {}, querySelectorAll: () => [img] },
+    HTMLImageElement: class { static [Symbol.hasInstance](value) { return value === img; } },
+    Element: class { static [Symbol.hasInstance](value) { return value === img; } },
+    Document: class { static [Symbol.hasInstance](value) { return Boolean(value?.querySelectorAll && value?.readyState); } },
     MutationObserver: class { observe() {} },
     AbortController, setTimeout, clearTimeout,
     fetch: async url => {

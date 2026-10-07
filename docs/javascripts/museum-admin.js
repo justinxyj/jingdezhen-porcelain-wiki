@@ -1,8 +1,10 @@
 /* Museum Curator Console: quality checks + Phase1 entry content editor. */
 (function(){
-  /** @param {any} s */
-  const esc=s=>window.JDM_SAFE?.esc?.(s)??window.JDM_AUTH?.esc?.(s)??String(s??'').replace(/[&<>\"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[m]));
+  /** @param {unknown} s */
+  const esc=s=>window.JDM_SAFE?.esc?.(s)??window.JDM_AUTH?.esc?.(s)??String(s??'').replace(/[&<>\"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[m]||m));
+  /** @param {unknown} raw @param {{allowHttp?:boolean}} [opts] */
   const safeHref=(raw,opts)=>window.JDM_SAFE?.safeHref?.(raw,opts)??window.JDM_AUTH?.safeHref?.(raw,opts)??'';
+  /** @param {unknown} raw */
   const sanitizeBodyHtml=raw=>window.JDM_SAFE?.sanitizeBodyHtml?.(raw)??(function(r){
     const tpl=document.createElement('template');tpl.innerHTML=String(r||'');
     const allowed=new Set(['P','BR','STRONG','B','EM','I','H2','H3','H4','UL','OL','LI','BLOCKQUOTE','A']);
@@ -18,8 +20,10 @@
     });
     return tpl.innerHTML;
   })(raw);
-  const statusText=(v)=>({published:'已发布',draft:'草稿',archived:'已归档'}[v]||v||'未设置');
-  const mediaState=(v)=>({verified:'已核验',unreviewed:'待核验',rejected:'已拒绝',expired:'已过期'}[v]||v||'未设置');
+  /** @param {string|null|undefined} v */
+  const statusText=(v)=>(/** @type {Record<string,string>} */({published:'已发布',draft:'草稿',archived:'已归档'})[v||'']||v||'未设置');
+  /** @param {string|null|undefined} v */
+  const mediaState=(v)=>(/** @type {Record<string,string>} */({verified:'已核验',unreviewed:'待核验',rejected:'已拒绝',expired:'已过期'})[v||'']||v||'未设置');
   const ENTRY_LIMIT=250;
   const MEDIA_LIMIT=500;
   const ENTRY_SELECT='id,slug,category,zh,en,ja,sources,status,version,updated_by,updated_at,created_at';
@@ -35,7 +39,7 @@
     const {data:{user}}=await db.auth.getUser();
     if(!user)throw Object.assign(new Error('馆长后台需要登录，请重新登录'),{code:'AUTH_REQUIRED',status:401});
     const result=window.JDM_AUTH?.request
-      ? await window.JDM_AUTH.request(/** @type {any} */ (d)=>d.from('profiles').select('role').eq('id',user.id).maybeSingle())
+      ? await window.JDM_AUTH.request((d)=>d.from('profiles').select('role').eq('id',user.id).maybeSingle())
       : (await db.from('profiles').select('role').eq('id',user.id).maybeSingle()).data;
     const profile=result;
     if(profile?.role!=='admin')throw Object.assign(new Error('当前账号没有馆长后台权限'),{code:'AUTH_FORBIDDEN',status:403});
@@ -46,6 +50,11 @@
     if(!request)throw Object.assign(new Error('统一认证请求层不可用，请刷新页面后重试'),{code:'JDM_AUTH_MISSING'});
     return request;
   }
+  /**
+   * @template T
+   * @param {PromiseSettledResult<T[]|null>} settled
+   * @param {number} limit
+   */
   function domainResult(settled,limit){
     if(settled.status==='fulfilled'){
       const rows=Array.isArray(settled.value)?settled.value:(settled.value==null?[]:[settled.value]);
@@ -55,22 +64,25 @@
     const error=settled.reason instanceof Error?settled.reason:new Error(String(settled.reason||'加载失败'));
     return {ok:false,rows:[],error,truncated:false,loaded:0,limit:limit??null};
   }
+  /** @param {unknown} value @returns {{[key:string]:import('../../types/database.types').Json|undefined}} */
+  function jsonObject(value){return value&&typeof value==='object'&&!Array.isArray(value)?/** @type {{[key:string]:import('../../types/database.types').Json|undefined}} */(value):{};}
   async function load(){
     await dbClient();
     const request=requireRequest();
     const settled=await Promise.allSettled([
-      request(/** @type {any} */ (d)=>d.from('entries').select('id,slug,category,zh,status,updated_at').order('updated_at',{ascending:false}).limit(ENTRY_LIMIT)),
-      request(/** @type {any} */ (d)=>d.from('media').select('id,entry_id,path,title,source,license,status,review_state,is_primary,verified_at').order('created_at',{ascending:false}).limit(MEDIA_LIMIT))
+      request((d)=>d.from('entries').select(ENTRY_SELECT).order('updated_at',{ascending:false}).limit(ENTRY_LIMIT)),
+      request((d)=>d.from('media').select('id,entry_id,path,title,source,license,status,review_state,is_primary,verified_at').order('created_at',{ascending:false}).limit(MEDIA_LIMIT))
     ]);
     const entriesDomain=domainResult(settled[0],ENTRY_LIMIT);
     const mediaDomain=domainResult(settled[1],MEDIA_LIMIT);
-    const normalizedEntries=entriesDomain.rows.map(e=>({...e,confidence:e.zh?.meta?.confidence||null,editorial_status:e.zh?.meta?.editorial_status||e.status,reviewed_at:e.zh?.meta?.reviewed_at||null}));
+    const normalizedEntries=entriesDomain.rows.map(e=>{const zh=jsonObject(e.zh),meta=jsonObject(zh.meta);return {...e,zh,confidence:meta.confidence||null,editorial_status:meta.editorial_status||e.status,reviewed_at:meta.reviewed_at||null};});
     const normalizedMedia=mediaDomain.rows.map(m=>({...m,verification_status:m.review_state,reviewed_at:m.verified_at||null}));
+    /** @type {Array<{id:string,title:string,url:string,tier:import('../../types/database.types').Json|null,status:string,institution:string,last_checked_at:import('../../types/database.types').Json|null}>} */
     const sources=[];
     if(entriesDomain.ok){
       normalizedEntries.forEach(e=>{
-        (Array.isArray(e.zh?.sources)?e.zh.sources:Array.isArray(e.sources)?e.sources:[]).forEach((s,i)=>{
-          if(s&&typeof s==='object')sources.push({id:`${e.id}:${i}`,title:s.label||s.title||'未命名来源',url:s.url||'',tier:s.tier||null,status:s.status||'published',institution:s.institution||'',last_checked_at:s.last_checked_at||null});
+        (Array.isArray(e.zh.sources)?e.zh.sources:Array.isArray(e.sources)?e.sources:[]).forEach((raw,i)=>{const s=jsonObject(raw);
+          if(s&&typeof s==='object')sources.push({id:`${e.id}:${i}`,title:String(s.label||s.title||'未命名来源'),url:typeof s.url==='string'?s.url:'',tier:s.tier||null,status:typeof s.status==='string'?s.status:'published',institution:typeof s.institution==='string'?s.institution:'',last_checked_at:s.last_checked_at||null});
         });
       });
     }
@@ -95,15 +107,17 @@
       }
     };
   }
+  /** @param {Awaited<ReturnType<typeof load>>} data */
   function checks(data){
     const meta=data.meta||{};
     const domains=meta.domains||{};
+    /** @type {Array<[string,string,string]>} */
     const issues=[];
     const statusParts=[];
     if(domains.entries?.ok){
-      const mediaByEntry=new Map();
+      const mediaByEntry=new Set();
       if(domains.media?.ok){
-        data.media.forEach(m=>{if(!mediaByEntry.has(m.entry_id))mediaByEntry.set(m.entry_id,[]);mediaByEntry.get(m.entry_id).push(m)});
+        data.media.forEach(m=>{if(m.entry_id)mediaByEntry.add(m.entry_id)});
       }
       data.entries.forEach(e=>{
         if(!e.zh?.title)issues.push(['entry','缺少标题',e.slug]);
@@ -141,6 +155,7 @@
       failedDomains:statusParts
     };
   }
+  /** @param {string} name @param {{ok:boolean,loaded:number,truncated:boolean,error:Error|null,limit?:number|null}|undefined} domain */
   function domainBadge(name,domain){
     if(!domain)return `<div class="curator-domain is-unknown"><strong>${esc(name)}</strong><span>未知</span></div>`;
     if(!domain.ok){
@@ -152,6 +167,7 @@
   }
 
   /** Escape PostgREST filter values for .or() / .ilike patterns. */
+  /** @param {unknown} value */
   function escapeFilterValue(value){
     return String(value||'').replace(/[,.()\\%_]/g,ch=>{
       if(ch==='%'||ch==='_')return '\\'+ch;
@@ -175,35 +191,37 @@
     const selectCols='id,slug,category,zh,status,version,updated_at';
     /** Prefer exact slug hit, then fuzzy slug / title (server-side, not recent-N only). */
     const [exact,bySlug,byTitle]=await Promise.all([
-      request(/** @type {any} */ (d)=>d.from('entries').select(selectCols).eq('slug',q).maybeSingle()),
-      request(/** @type {any} */ (d)=>d.from('entries').select(selectCols).ilike('slug',pattern).order('updated_at',{ascending:false}).limit(40)),
-      request(/** @type {any} */ (d)=>d.from('entries').select(selectCols).filter('zh->>title','ilike',pattern).order('updated_at',{ascending:false}).limit(40))
+      request((d)=>d.from('entries').select(selectCols).eq('slug',q).maybeSingle()),
+      request((d)=>d.from('entries').select(selectCols).ilike('slug',pattern).order('updated_at',{ascending:false}).limit(40)),
+      request((d)=>d.from('entries').select(selectCols).filter('zh->>title','ilike',pattern).order('updated_at',{ascending:false}).limit(40))
     ]);
-    const byId=new Map();
+    const byId=/** @type {Map<string,NonNullable<typeof exact>>} */(new Map());
     if(exact&&exact.id)byId.set(exact.id,exact);
     (Array.isArray(bySlug)?bySlug:[]).forEach(r=>{if(r?.id&&!byId.has(r.id))byId.set(r.id,r)});
     (Array.isArray(byTitle)?byTitle:[]).forEach(r=>{if(r?.id&&!byId.has(r.id))byId.set(r.id,r)});
     const list=[...byId.values()];
     const ql=q.toLowerCase();
     list.sort((a,b)=>{
-      const as=String(a.slug||'').toLowerCase()===ql?0:String(a.zh?.title||'').includes(q)?1:2;
-      const bs=String(b.slug||'').toLowerCase()===ql?0:String(b.zh?.title||'').includes(q)?1:2;
-      return as-bs||String(a.zh?.title||'').localeCompare(String(b.zh?.title||''),'zh-Hans-CN');
+      const as=String(a.slug||'').toLowerCase()===ql?0:String(jsonObject(a.zh).title||'').includes(q)?1:2;
+      const bs=String(b.slug||'').toLowerCase()===ql?0:String(jsonObject(b.zh).title||'').includes(q)?1:2;
+      return as-bs||String(jsonObject(a.zh).title||'').localeCompare(String(jsonObject(b.zh).title||''),'zh-Hans-CN');
     });
     return list;
   }
 
+  /** @param {string} slug */
   async function fetchEntryBySlug(slug){
     await dbClient();
     const request=requireRequest();
-    const row=await request(/** @type {any} */ (d)=>d.from('entries').select(ENTRY_SELECT).eq('slug',slug).maybeSingle());
+    const row=await request((d)=>d.from('entries').select(ENTRY_SELECT).eq('slug',slug).maybeSingle());
     if(!row)throw Object.assign(new Error('找不到该条目'),{code:'ENTRY_NOT_FOUND',status:404});
     return row;
   }
 
+  /** @param {string} entryId */
   async function fetchRevisions(entryId){
     const request=requireRequest();
-    const rows=await request(/** @type {any} */ (d)=>d.from('entry_revisions')
+    const rows=await request((d)=>d.from('entry_revisions')
       .select('id,entry_id,editor_id,version,snapshot,note,created_at')
       .eq('entry_id',entryId)
       .order('version',{ascending:false})
@@ -214,13 +232,14 @@
     const names=new Map();
     if(editorIds.length){
       try{
-        const profiles=await request(/** @type {any} */ (d)=>d.from('profiles').select('id,display_name,role').in('id',editorIds));
+        const profiles=await request((d)=>d.from('profiles').select('id,display_name,role').in('id',editorIds));
         (Array.isArray(profiles)?profiles:[]).forEach(p=>{if(p?.id)names.set(p.id,p.display_name||p.id.slice(0,8));});
       }catch(_){/* display names are best-effort */}
     }
-    return list.map(r=>({...r,editor_label:names.get(r.editor_id)||String(r.editor_id||'').slice(0,8)||'未知'}));
+    return list.map(r=>({...r,editor_label:names.get(r.editor_id||'')||String(r.editor_id||'').slice(0,8)||'未知'}));
   }
 
+  /** @param {Pick<import('../../types/database.types').Database['public']['Tables']['entries']['Row'],'id'|'slug'|'category'|'zh'|'en'|'ja'|'sources'|'status'|'version'|'updated_by'|'updated_at'>} row */
   function buildSnapshot(row){
     return {
       id:row.id,
@@ -237,6 +256,7 @@
     };
   }
 
+  /** @param {import('../../types/database.types').Json} existingZh @param {string} title @param {string} summary @param {string} content */
   function mergeZh(existingZh,title,summary,content){
     const base=existingZh&&typeof existingZh==='object'&&!Array.isArray(existingZh)?{...existingZh}:{};
     base.title=title;
@@ -249,6 +269,7 @@
    * Save path: read row → INSERT revision (old snapshot) → UPDATE entries (merge zh, version+1).
    * Never touches sources column.
    */
+  /** @param {string} slug */
   async function saveEntry(slug,/** @type {{title:string,summary:string,content:string,note?:string}} */ {title,summary,content,note}){
     const {user}=await dbClient();
     const request=requireRequest();
@@ -256,11 +277,11 @@
     if(!trimmedTitle)throw Object.assign(new Error('标题不能为空'),{code:'VALIDATION'});
     const cleanSummary=String(summary??'');
     const cleanContent=sanitizeBodyHtml(content||'');
-    const current=await request(/** @type {any} */ (d)=>d.from('entries').select(ENTRY_SELECT).eq('slug',slug).maybeSingle());
+    const current=await request((d)=>d.from('entries').select(ENTRY_SELECT).eq('slug',slug).maybeSingle());
     if(!current)throw Object.assign(new Error('找不到该条目'),{code:'ENTRY_NOT_FOUND',status:404});
     const oldVersion=Number(current.version)||1;
     const snapshot=buildSnapshot(current);
-    await request(/** @type {any} */ (d)=>d.from('entry_revisions').insert({
+    await request((d)=>d.from('entry_revisions').insert({
       entry_id:current.id,
       editor_id:user.id,
       version:oldVersion,
@@ -268,7 +289,7 @@
       note:note||'内容编辑保存前快照'
     }).select('id').maybeSingle());
     const nextZh=mergeZh(current.zh,trimmedTitle,cleanSummary,cleanContent);
-    const updated=await request(/** @type {any} */ (d)=>d.from('entries').update({
+    const updated=await request((d)=>d.from('entries').update({
       zh:nextZh,
       version:oldVersion+1,
       updated_by:user.id,
@@ -281,21 +302,22 @@
   /**
    * Restore: snapshot current as revision, then write selected revision's zh title/summary/content.
    */
+  /** @param {string} slug @param {string} revisionId */
   async function restoreRevision(slug,revisionId){
     const {user}=await dbClient();
     const request=requireRequest();
-    const current=await request(/** @type {any} */ (d)=>d.from('entries').select(ENTRY_SELECT).eq('slug',slug).maybeSingle());
+    const current=await request((d)=>d.from('entries').select(ENTRY_SELECT).eq('slug',slug).maybeSingle());
     if(!current)throw Object.assign(new Error('找不到该条目'),{code:'ENTRY_NOT_FOUND',status:404});
-    const rev=await request(/** @type {any} */ (d)=>d.from('entry_revisions').select('id,entry_id,version,snapshot,created_at').eq('id',revisionId).eq('entry_id',current.id).maybeSingle());
+    const rev=await request((d)=>d.from('entry_revisions').select('id,entry_id,version,snapshot,created_at').eq('id',revisionId).eq('entry_id',current.id).maybeSingle());
     if(!rev)throw Object.assign(new Error('找不到该历史版本'),{code:'REVISION_NOT_FOUND'});
-    const snap=rev.snapshot&&typeof rev.snapshot==='object'?rev.snapshot:{};
-    const snapZh=snap.zh&&typeof snap.zh==='object'?snap.zh:{};
+    const snap=jsonObject(rev.snapshot);
+    const snapZh=jsonObject(snap.zh);
     const title=String(snapZh.title||'').trim();
     if(!title)throw Object.assign(new Error('该历史版本缺少标题，无法恢复'),{code:'VALIDATION'});
     const summary=String(snapZh.summary??'');
     const content=sanitizeBodyHtml(snapZh.content||'');
     const oldVersion=Number(current.version)||1;
-    await request(/** @type {any} */ (d)=>d.from('entry_revisions').insert({
+    await request((d)=>d.from('entry_revisions').insert({
       entry_id:current.id,
       editor_id:user.id,
       version:oldVersion,
@@ -303,7 +325,7 @@
       note:`恢复至版本 ${rev.version} 前快照`
     }).select('id').maybeSingle());
     const nextZh=mergeZh(current.zh,title,summary,content);
-    const updated=await request(/** @type {any} */ (d)=>d.from('entries').update({
+    const updated=await request((d)=>d.from('entries').update({
       zh:nextZh,
       version:oldVersion+1,
       updated_by:user.id,
@@ -313,12 +335,14 @@
     return updated;
   }
 
+  /** @param {string} slug */
   function entryFrontUrl(slug){
     /* Site-relative path from museum/admin/ → /entry/?slug= */
     const raw=`../../entry/?slug=${encodeURIComponent(slug)}`;
     return safeHref(raw)||raw;
   }
 
+  /** @param {string|null|undefined} iso */
   function formatTime(iso){
     if(!iso)return '—';
     try{
@@ -328,6 +352,7 @@
     }catch(_){return String(iso);}
   }
 
+  /** @param {HTMLElement} root @param {Awaited<ReturnType<typeof load>>} data */
   function bindDashboard(root,data){
     root.querySelector('#curator-refresh')?.addEventListener('click',()=>init(root));
     const searchInput=/** @type {HTMLInputElement|null} */ (root.querySelector('#curator-entry-search'));
@@ -344,7 +369,7 @@
           resultsEl.innerHTML='<p class="curator-muted">没有匹配的知识条目。可换词或直接用 slug 查询。</p>';
           return;
         }
-        resultsEl.innerHTML=rows.map(e=>`<button type="button" class="curator-entry-hit" data-slug="${esc(e.slug)}"><b>${esc(e.zh?.title||e.slug)}</b><span>${esc(e.slug)}</span><span>${esc(e.category||'')}</span><span>${statusText(e.status)}</span></button>`).join('');
+        resultsEl.innerHTML=rows.map(e=>`<button type="button" class="curator-entry-hit" data-slug="${esc(e.slug)}"><b>${esc(jsonObject(e.zh).title||e.slug)}</b><span>${esc(e.slug)}</span><span>${esc(e.category||'')}</span><span>${statusText(e.status)}</span></button>`).join('');
         resultsEl.querySelectorAll('.curator-entry-hit').forEach(btn=>{
           btn.addEventListener('click',()=>{
             const slug=btn.getAttribute('data-slug');
@@ -352,7 +377,7 @@
           });
         });
       }catch(err){
-        resultsEl.innerHTML=`<p class="curator-error-inline" role="alert">${esc(err?.message||'搜索失败')}</p>`;
+        resultsEl.innerHTML=`<p class="curator-error-inline" role="alert">${esc(err instanceof Error?err.message:'搜索失败')}</p>`;
       }
     }
     searchBtn?.addEventListener('click',()=>runSearch());
@@ -365,8 +390,9 @@
     });
   }
 
+  /** @param {HTMLElement} root @param {Awaited<ReturnType<typeof load>>} data */
   function render(root,data){
-    const check=checks(data),issues=check.issues,count=k=>issues.filter(x=>x[0]===k).length;
+    const check=checks(data),issues=check.issues,count=/** @param {string} k */(k)=>issues.filter(x=>x[0]===k).length;
     const meta=data.meta||{};
     const loaded=meta.loaded||{entries:data.entries.length,media:data.media.length,sources:data.sources.length};
     const bannerParts=[];
@@ -382,7 +408,7 @@
     }
     const conclusionLabel=check.conclusion==='pass'?'完整检查通过':check.conclusion==='incomplete'?'结果不完整（truncated）':'发现问题';
     const recentRows=(meta.domains?.entries?.ok?data.entries:[]).slice(0,30);
-    const recentHtml=recentRows.map(e=>`<div class="curator-entry-row"><b>${esc(e.zh?.title||e.slug)}</b><span>${esc(e.category||'')}</span><span>${statusText(e.status)}</span><span>${esc(e.confidence||'未审核')}</span><button type="button" class="curator-link-btn" data-edit-slug="${esc(e.slug)}">编辑</button></div>`).join('')||'<p>条目域未成功加载。</p>';
+    const recentHtml=recentRows.map(e=>`<div class="curator-entry-row"><b>${esc(jsonObject(e.zh).title||e.slug)}</b><span>${esc(e.category||'')}</span><span>${statusText(e.status)}</span><span>${esc(e.confidence||'未审核')}</span><button type="button" class="curator-link-btn" data-edit-slug="${esc(e.slug)}">编辑</button></div>`).join('')||'<p>条目域未成功加载。</p>';
 
     root.innerHTML=`<div class="curator-console"><div class="curator-hero"><span>CURATOR CONSOLE · 馆长后台</span><h1>内容管理与质量检查</h1><p>后台只对管理员开放。可搜索并编辑知识条目的标题、简介与正文；保存时写入版本历史，且不改动既有来源。</p></div>
 <section class="curator-section curator-content-mgmt"><div class="curator-head"><h2>内容管理</h2></div>
@@ -399,10 +425,12 @@ ${banner}<div class="curator-stats"><div><b>${loaded.entries}</b><span>已加载
     bindDashboard(root,data);
   }
 
+  /** @param {string} cmd @param {string} [value] */
   function execCmd(cmd,value){
     try{document.execCommand(cmd,false,value??undefined);}catch(_){/* contenteditable fallback */}
   }
 
+  /** @param {HTMLElement} root @param {string} slug */
   async function openEditor(root,slug){
     if(ui.dirty&&!confirm('有未保存的更改，确定离开？'))return;
     ui.view='editor';ui.editSlug=slug;ui.dirty=false;
@@ -412,19 +440,19 @@ ${banner}<div class="curator-stats"><div><b>${loaded.entries}</b><span>已加载
       const revisions=await fetchRevisions(entry.id);
       renderEditor(root,entry,revisions,null);
     }catch(err){
-      root.innerHTML=`<div class="curator-error" role="alert"><h2>${esc(err?.message||'加载失败')}</h2><button type="button" id="curator-back-dash">返回内容管理</button></div>`;
+      root.innerHTML=`<div class="curator-error" role="alert"><h2>${esc(err instanceof Error?err.message:'加载失败')}</h2><button type="button" id="curator-back-dash">返回内容管理</button></div>`;
       root.querySelector('#curator-back-dash')?.addEventListener('click',()=>{ui.dirty=false;init(root);});
     }
   }
 
   /**
    * @param {HTMLElement} root
-   * @param {any} entry
-   * @param {any[]} revisions
+   * @param {Awaited<ReturnType<typeof fetchEntryBySlug>>} entry
+   * @param {Awaited<ReturnType<typeof fetchRevisions>>} revisions
    * @param {string|null} flash
    */
   function renderEditor(root,entry,revisions,flash){
-    const zh=entry.zh&&typeof entry.zh==='object'?entry.zh:{};
+    const zh=jsonObject(entry.zh);
     const title=String(zh.title||'');
     const summary=String(zh.summary||'');
     const contentHtml=sanitizeBodyHtml(zh.content||'');
@@ -523,7 +551,7 @@ ${flash?`<div class="curator-flash" role="status">${esc(flash)}</div>`:''}
         const revs=await fetchRevisions(updated.id);
         renderEditor(root,updated,revs,'已保存，并已写入版本历史；来源未改，仍沿用既有 sources。');
       }catch(err){
-        if(msg)msg.textContent=err?.message||'保存失败';
+        if(msg)msg.textContent=err instanceof Error?err.message:'保存失败';
         if(saveBtn){saveBtn.disabled=false;saveBtn.textContent='保存';}
       }finally{
         ui.saving=false;
@@ -543,7 +571,7 @@ ${flash?`<div class="curator-flash" role="status">${esc(flash)}</div>`:''}
           const revs=await fetchRevisions(updated.id);
           renderEditor(root,updated,revs,'已恢复所选版本，并已写入版本历史；来源未改，仍沿用既有 sources。');
         }catch(err){
-          root.innerHTML=`<div class="curator-error" role="alert"><h2>${esc(err?.message||'恢复失败')}</h2><button type="button" id="curator-back-edit">返回编辑</button></div>`;
+          root.innerHTML=`<div class="curator-error" role="alert"><h2>${esc(err instanceof Error?err.message:'恢复失败')}</h2><button type="button" id="curator-back-edit">返回编辑</button></div>`;
           root.querySelector('#curator-back-edit')?.addEventListener('click',()=>openEditor(root,entry.slug));
         }
       });
@@ -553,6 +581,7 @@ ${flash?`<div class="curator-flash" role="status">${esc(flash)}</div>`:''}
   }
 
   let initSeq=0;
+  /** @param {HTMLElement} root */
   async function init(root){
     const seq=++initSeq;
     ui.view='dashboard';ui.editSlug=null;
@@ -563,16 +592,16 @@ ${flash?`<div class="curator-flash" role="status">${esc(flash)}</div>`:''}
       render(root,data);
     }catch(err){
       if(seq!==initSeq)return;
-      const code=esc(err?.code||err?.status||'UNKNOWN');
-      if(err?.code==='AUTH_REQUIRED'||err?.status===401){
+      const error=err instanceof Error?err:new Error(String(err));const code=esc(error.code||error.status||'UNKNOWN');
+      if(error.code==='AUTH_REQUIRED'||error.status===401){
         root.innerHTML='';
         return;
       }
-      if(err?.code==='AUTH_FORBIDDEN'||err?.status===403){
+      if(error.code==='AUTH_FORBIDDEN'||error.status===403){
         root.innerHTML='';
         return;
       }
-      root.innerHTML=`<div class="curator-error" role="alert"><h2>${esc(err.message||'后台加载失败')}</h2><p>错误代码：${code}</p><button type="button" id="curator-auth-retry">重新检查</button></div>`;
+      root.innerHTML=`<div class="curator-error" role="alert"><h2>${esc(error.message||'后台加载失败')}</h2><p>错误代码：${code}</p><button type="button" id="curator-auth-retry">重新检查</button></div>`;
       root.querySelector('#curator-auth-retry')?.addEventListener('click',()=>init(root));
     }
   }
@@ -605,7 +634,7 @@ ${flash?`<div class="curator-flash" role="status">${esc(flash)}</div>`:''}
         const request=window.JDM_AUTH?.request;
         let role=null;
         if(request){
-          const profile=await request(/** @type {any} */ (d)=>d.from('profiles').select('role').eq('id',user.id).maybeSingle());
+          const profile=await request((d)=>d.from('profiles').select('role').eq('id',user.id).maybeSingle());
           role=profile?.role||null;
         }
         if(role==='admin')start();

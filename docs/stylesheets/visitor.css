@@ -30,3 +30,78 @@
 [data-md-color-scheme=slate] :is(.museum-hero,.compare-era,.compare-lane,.compare-node,.timeline-discovery-controls) :is(h1,h2,h3,p,b,strong,span,small){color:inherit!important;opacity:1}
 .visitor-reading-path{margin:32px 0}.visitor-reading-path .visitor-grid>a{display:block;padding:18px;border:1px solid var(--visitor-line);border-radius:12px;background:var(--visitor-paper)}.visitor-reading-path p{font-size:16px;line-height:1.8}.wiki-entry-v2-relations small{display:block}.visitor-primary-nav a:focus-visible{outline-offset:4px}:root{--md-primary-fg-color:#164e9b}
 .visitor-related-group{min-width:0}.visitor-related-group h3{font-size:20px;color:var(--visitor-ink);margin:0 0 12px}.visitor-related-group>a{display:flex;flex-direction:column;gap:8px;margin-bottom:12px;padding:16px;border:1px solid var(--visitor-line);border-radius:12px}.visitor-related-group small{font-size:14px;color:var(--visitor-muted)}
+
+/* Native dialog supplies focus containment, Escape and background inertness. */
+#search-mobile-filters{display:none}
+.visitor-bottom-sheet form{display:grid;gap:var(--visitor-gap,1rem)}
+.visitor-bottom-sheet label{display:grid;gap:.35rem}
+.visitor-bottom-sheet select{width:100%;padding:.65rem;background:var(--md-default-bg-color);color:var(--md-default-fg-color);border:1px solid var(--md-default-fg-color--lighter);border-radius:.4rem}
+@media(max-width:767px){
+ #search-mobile-filters{display:inline-block;margin-block:.75rem}
+ .jdm-search-filter-panel{display:none}
+ dialog.visitor-bottom-sheet{position:fixed;inset:auto 0 0;margin:0;width:100%;max-width:none;max-height:90dvh;border-radius:1rem 1rem 0 0;box-sizing:border-box}
+}
+
+.global-kiln-list-item.is-highlighted,.leaflet-marker-icon.is-highlighted{outline:3px solid var(--md-accent-fg-color);outline-offset:3px}
+
+.visitor-image-viewport{max-height:65dvh;overflow:auto}
+.visitor-image-controls{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem}
+.visitor-image-open{margin:.4rem}
+
+/* Shared control, card and feedback tokens. */
+:root{--visitor-space-xs:4px;--visitor-space-sm:8px;--visitor-space-md:16px;--visitor-space-lg:24px;--visitor-space-xl:40px;--visitor-radius-sm:8px;--visitor-radius-lg:20px;--visitor-shadow:0 12px 40px rgba(0,0,0,.18);--visitor-font-body:17px;--visitor-line-height:1.8}
+.visitor-dialog{box-shadow:var(--visitor-shadow);font-size:var(--visitor-font-body);line-height:var(--visitor-line-height)}
+.visitor-state{padding:var(--visitor-space-lg);border:1px solid var(--visitor-line);border-radius:var(--visitor-radius);background:var(--visitor-paper);color:var(--visitor-ink)}
+.visitor-state button,.visitor-bottom-sheet button,.visitor-image-controls button{min-height:44px;padding:var(--visitor-space-sm) var(--visitor-space-md);border:1px solid var(--visitor-line);border-radius:var(--visitor-radius-sm);background:var(--visitor-paper);color:var(--visitor-ink);cursor:pointer}
+.visitor-state details{margin-top:var(--visitor-space-md);overflow-wrap:anywhere}.visitor-state summary{cursor:pointer}
+.visitor-references summary{padding:var(--visitor-space-md);cursor:pointer;font-weight:600}
+/* Measured WCAG contrast repairs; keep the existing layouts. */
+.md-copyright{color:#b8b8b8}
+.visitor-breadcrumb a,.wiki-breadcrumb a,.md-typeset p>a,.md-typeset li>a,.wiki-entry-body p>a{text-decoration:underline;text-underline-offset:3px}
+.wiki-breadcrumb a{color:var(--visitor-muted)!important}
+:is(.catalog-card-body,.person-card-body) :is(p,small),:is(.catalog-knowledge-row,.person-knowledge-row)>b,.catalog-count,.people-count,.jdm-search-result-recs>span,.jdm-search-hero-stats small{color:var(--visitor-muted)!important;opacity:1!important}
+.wiki-entry-v2-relations :is(span,small),.wiki-entry-footer,.wiki-entry-section-kicker{color:var(--visitor-muted)!important}
+[data-md-color-scheme=slate] .visitor-object-grid figcaption :is(b,span){color:var(--visitor-ink)!important}
+[data-md-color-scheme=slate] .visitor-object-grid figcaption a{color:var(--visitor-blue)!important}
+[data-md-color-scheme=slate] :is(.jdm-search-result-meta,.jdm-search-world,.jdm-search-lane,.jdm-search-signal){color:var(--visitor-blue)!important}
+[data-md-color-scheme=slate] .visitor-category-tabs .is-active{background:var(--visitor-blue)!important;color:var(--visitor-paper)!important}
+[data-md-color-scheme=slate] :is(.catalog-discovery-note,.people-discovery-note){background:var(--visitor-paper)!important;color:var(--visitor-ink)!important}
+:is(.network-search,.network-filter)>span,.network-detail-kicker{color:var(--visitor-muted)!important}
+:is(.modern-stat-strip,.modern-flow-line,.modern-closing) :is(span,p){color:var(--visitor-muted)!important}
+.modern-section-head>p{color:var(--visitor-muted)!important}
+[data-md-color-scheme=slate] :is(.modern-stat-strip,.modern-flow-line,.modern-closing){background:var(--visitor-paper);color:var(--visitor-ink)}
+[data-md-color-scheme=slate] :is(.modern-section-head,.modern-flow-line,.modern-closing) :is(h2,strong){color:var(--visitor-ink)!important}
+[data-md-color-scheme=slate] .modern-section-head .modern-section-kicker{color:var(--visitor-blue)!important}
+.wiki-entry-section-kicker{opacity:1!important}
+.visitor-static-nav a,.visitor-footer a{color:var(--visitor-blue)}
+:is(.timeline-discovery-controls,.compare-era-heading,.compare-axis,.compare-node-body) :is(small,.compare-node-kicker,.compare-node-detail-hint){color:var(--visitor-muted)!important;opacity:1!important}
+.timeline-discovery-controls>div>span,.compare-axis>span{color:var(--visitor-muted)!important}
+.timeline-discovery-controls .is-active{background:var(--visitor-blue)!important;color:var(--visitor-paper)!important}
+.network-detail>p,.network-detail-meta>span,.network-neighbor-title,.network-neighbor-list :is(span,p),.network-list-item :is(span,small){color:var(--visitor-muted)!important;opacity:1!important}
+[data-md-color-scheme=slate] .network-unified-search{color:var(--visitor-blue)!important}
+[data-md-color-scheme=slate] :is(.catalog-discovery-note,.people-discovery-note)>strong{color:var(--visitor-blue)!important}
+.modern-flow-note{color:#46576b!important}
+[data-md-color-scheme=slate] .modern-stat-strip>div{background:var(--visitor-paper)!important;color:var(--visitor-ink)!important}
+[data-md-color-scheme=slate]{--jdm-paper:var(--visitor-paper);--jdm-ink:var(--visitor-ink);--md-default-bg-color:var(--visitor-paper)}
+[data-md-color-scheme=slate] .wiki-chrome{background:var(--visitor-paper)!important;color:var(--visitor-ink)!important}
+[data-md-color-scheme=slate] .wiki-entry-kicker{color:var(--visitor-blue)!important}
+.leaflet-control-attribution a{text-decoration:underline}
+.compare-empty{color:var(--visitor-muted)!important}
+[data-md-color-scheme=slate] .modern-stat-strip strong{color:var(--visitor-blue)!important}
+
+.visitor-search-trigger{background:var(--visitor-paper);color:var(--visitor-ink)}
+.jdm-gn-relation small,.tech-official-source>div>span{color:var(--visitor-muted)!important;opacity:1!important}
+[data-md-color-scheme=slate] :is(.jdm-global-network-eyebrow,.jdm-global-network-hero h1 span,.jdm-gn-identity>div>span,.jdm-gn-section-head span,.jdm-gn-relation>span,.jdm-gn-time-group header span){color:var(--visitor-blue)!important}
+[data-md-color-scheme=slate] .tech-discovery-note strong{color:var(--visitor-blue)!important}
+[data-md-color-scheme=slate] .tech-node i{color:var(--visitor-muted)!important;opacity:1!important}
+[data-md-color-scheme=slate] .tech-node.is-active{background:var(--visitor-blue)!important;color:var(--visitor-paper)!important}
+[data-md-color-scheme=slate] .tech-node.is-active i{color:var(--visitor-paper)!important}
+[data-md-color-scheme=slate] .official-gallery-card figcaption :is(b,span){color:var(--visitor-ink)!important}
+[data-md-color-scheme=slate] .official-gallery-card figcaption a{color:var(--visitor-blue)!important}
+.jdm-gn-card>div>span,.jdm-gn-recommend>header>span,.jdm-gn-time-group>header>span{color:var(--visitor-muted)!important;opacity:1!important}
+.jdm-gn-card em{color:var(--visitor-blue)!important;opacity:1!important}
+
+.visitor-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+:root{--visitor-radius-md:12px;--visitor-radius-default:16px;--visitor-radius-xl:32px}
+:is(.visitor-dialog,.visitor-bottom-sheet,.jdm-search-filter-panel,.museum-toolbar,.global-kiln-map-toolbar) :is(input,select){min-height:44px;border:1px solid var(--visitor-line);border-radius:var(--visitor-radius-sm);background:var(--visitor-paper);color:var(--visitor-ink);font:inherit}

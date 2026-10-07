@@ -1,4 +1,6 @@
-# 现代景德镇
+---
+title: 现代景德镇
+---
 
 <div class="modern-hero">
   <div class="modern-hero-copy">
@@ -40,6 +42,14 @@
   <p>现代景德镇只是整个知识网络中的一个切片。沿着时间、空间、人物与器物继续向前。</p>
   <div class="modern-closing-actions"><a href="../history/">历史与发展 →</a><a href="../../museum/timeline/">时间轴 →</a><a href="../../museum/kiln-map/">窑址地图 →</a><a href="../../museum/catalog/">器物图谱 →</a></div>
 </section>
+
+
+## 从历史到今天
+
+- [御窑厂的生产遗址](../kilns/imperial-kiln.md) → [遗产保护与博物馆展示](heritage.md)：从作坊、窑炉与瓷片的考古记录，理解今天展示和保护这些遗存的依据。御窑博物院的具体机构沿革与藏品信息仍应查阅机构资料。
+- [传统制瓷工艺](../craft/README.md) → [非物质文化遗产](heritage.md)：专业分工、工具与操作知识都是活态传承的内容，不只有器物外观。
+- [近代陶业教育](../entry/modern-industry/index.html) → [现代陶瓷教育与景德镇陶瓷大学](education.md)：沿校史资料了解学堂、技术训练与现代研究的联系。
+- [历史外销瓷](../entry/export-porcelain/index.html) → [当代艺术与交流](art.md) → [张松茂的对外合作](../entry/zhang-songmao/index.html)：贸易流通与现代艺术合作具有不同机制，可对照阅读其跨地域联系，不能视为未经中断的同一制度。
 
 <style>
 .modern-hero{position:relative;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(340px,.9fr);gap:36px;align-items:center;min-height:540px;padding:56px 52px;margin:0 0 24px;border-radius:34px;overflow:hidden;background:radial-gradient(circle at 73% 43%,rgba(61,120,164,.35),transparent 28%),linear-gradient(135deg,#071a35 0,#163c5b 56%,#e8e0cf 160%);color:#f7f3eb;box-shadow:0 28px 70px rgba(7,26,53,.16)}

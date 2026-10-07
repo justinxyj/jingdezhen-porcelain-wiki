@@ -1,0 +1,64 @@
+{
+  "探索": [
+    [
+      "历史",
+      "history/"
+    ],
+    [
+      "工艺",
+      "craft/"
+    ],
+    [
+      "器物",
+      "museum/catalog/"
+    ],
+    [
+      "人物",
+      "museum/people/"
+    ],
+    [
+      "窑址",
+      "kilns/"
+    ]
+  ],
+  "工具": [
+    [
+      "搜索",
+      "search/"
+    ],
+    [
+      "时间轴",
+      "museum/timeline/"
+    ],
+    [
+      "地图",
+      "museum/kiln-map/"
+    ],
+    [
+      "图片馆",
+      "museum/gallery/"
+    ]
+  ],
+  "项目": [
+    [
+      "关于",
+      "about/"
+    ],
+    [
+      "数据来源",
+      "research/sources/"
+    ],
+    [
+      "贡献",
+      "https://github.com/justinxyj/jingdezhen-porcelain-wiki/issues/new"
+    ],
+    [
+      "GitHub",
+      "https://github.com/justinxyj/jingdezhen-porcelain-wiki"
+    ],
+    [
+      "版权说明",
+      "copyright/"
+    ]
+  ]
+}

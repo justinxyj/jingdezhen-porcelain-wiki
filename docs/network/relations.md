@@ -36,6 +36,7 @@ hide:
 
   <div class="network-status" id="network-status" aria-live="polite">正在加载知识网络……</div>
 
+    <h2 class="visitor-sr-only">关系详情</h2>
     <aside class="network-detail" id="network-detail" aria-live="polite">
       <div class="network-empty">
         <span>选择条目</span>

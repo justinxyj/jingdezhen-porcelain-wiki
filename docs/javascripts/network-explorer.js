@@ -1,42 +1,60 @@
 (function(){
+/** @typedef {Omit<import('../../types/knowledge').GraphNode,'node_id'|'node_type'> & {node_id:string,node_type:string}} ExplorerNode */
+/** @typedef {Omit<import('../../types/knowledge').GraphEdge,'source_node_id'|'target_node_id'> & {source_node_id:string,target_node_id:string}} ExplorerEdge */
+
   /** @type {Record<string,string>} */
   const relationLabels={person:'相关人物',object:'相关器物',craft:'相关工艺',kiln:'相关窑址',period:'时代背景',related:'相关条目'};
   /** @param {string} value */
   const relationLabel=value=>relationLabels[value]||value;
   const CORE_TYPES=new Set(['entry','world']);
-  const TYPE_LABELS={entry:'知识条目',world:'主题'};
+  const TYPE_LABELS=/** @type {Record<string,string>} */({entry:'知识条目',world:'主题'});
   const TYPE_ORDER=['历史','工艺','器物','窑址','人物','文献','现代'];
-  const CAT_CLASS={历史:'history',工艺:'craft',器物:'object',窑址:'space',人物:'people',文献:'evidence',现代:'modern'};
+  const CAT_CLASS=/** @type {Record<string,string>} */({历史:'history',工艺:'craft',器物:'object',窑址:'space',人物:'people',文献:'evidence',现代:'modern'});
 
   const init=async()=>{
     const root=document.getElementById('jdm-network-explorer');
     if(!root||!window.JDM_KNOWLEDGE)return;
-    const svg=root.querySelector('#network-canvas');
-    const status=root.querySelector('#network-status');
-    const detail=root.querySelector('#network-detail');
-    const search=root.querySelector('#network-search-input');
-    const filter=root.querySelector('#network-type-filter');
-    const reset=root.querySelector('#network-reset');
-    const list=root.querySelector('#network-node-list');
+    const svgCandidate=root.querySelector('#network-canvas');
+    const statusCandidate=root.querySelector('#network-status');
+    const detailCandidate=root.querySelector('#network-detail');
+    const searchCandidate=root.querySelector('#network-search-input');
+    const filterCandidate=root.querySelector('#network-type-filter');
+    const resetCandidate=root.querySelector('#network-reset');
+    const listCandidate=root.querySelector('#network-node-list');
 
-    let graph=null, nodes=[], edges=[], active=null, query='', type='all';
+    if(!(svgCandidate instanceof SVGSVGElement)||!(statusCandidate instanceof HTMLElement)||!(detailCandidate instanceof HTMLElement)||!(searchCandidate instanceof HTMLInputElement)||!(filterCandidate instanceof HTMLSelectElement)||!(resetCandidate instanceof HTMLElement)||!(listCandidate instanceof HTMLElement))return;
+    const svg=svgCandidate,status=statusCandidate,detail=detailCandidate,search=searchCandidate,filter=filterCandidate,reset=resetCandidate,list=listCandidate;
+    const store=window.JDM_KNOWLEDGE;
+    /** @type {ExplorerNode[]} */ let nodes=[];
+    /** @type {ExplorerEdge[]} */ let edges=[];
+    /** @type {ExplorerNode|null} */ let active=null;
+    let query='',type='all';
 
-    const esc=(v)=>String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+    /** @param {unknown} v */
+    const esc=(v)=>String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]||m));
+    /** @param {unknown} raw @param {{allowHttp?:boolean}} [opts] */
     const safeHref=(raw,opts)=>window.JDM_SAFE?.safeHref?.(raw,opts)??window.JDM_AUTH?.safeHref?.(raw,opts)??'';
-    const label=(n)=>String(n?.label||n?.metadata?.title||n?.node_id||'');
-    const nodeCategory=(n)=>String(n?.category||n?.metadata?.category||'');
+    /** @param {ExplorerNode} n */
+    const label=(n)=>String(n?.label||metadata(n,'title')||n?.node_id||'');
+    /** @param {ExplorerNode} n */
+    const nodeCategory=(n)=>String(n?.category||metadata(n,'category')||'');
+    /** @param {ExplorerNode} n */
     const isCore=(n)=>CORE_TYPES.has(n?.node_type);
+    /** @param {ExplorerNode} n */
     const entryUrl=(n)=>{
-      const slug=n?.metadata?.slug;
+      const slug=metadata(n,'slug');
       const category=nodeCategory(n);
-      return slug?window.JDM_KNOWLEDGE.url({slug,category}):null;
+      return slug?store.url({slug,category}):null;
     };
 
+    /** @param {string} text @param {string} [kind] */
     const setStatus=(text,kind='')=>{
-      status.textContent=text;
+      status.setAttribute('aria-busy','false');status.textContent=text;
       status.dataset.state=kind;
     };
 
+    /** @param {ExplorerNode} n @param {string} key */
+    function metadata(n,key){const value=n.metadata;return value&&typeof value==='object'&&!Array.isArray(value)&&typeof value[key]==='string'?value[key]:'';}
     function visibleNodes(){
       return nodes.filter(n=>{
         if(!isCore(n))return false;
@@ -51,6 +69,7 @@
       });
     }
 
+    /** @param {ExplorerNode[]} visible */
     function relevantEdges(visible){
       const ids=new Set(visible.map(n=>n.node_id));
       return edges.filter(e=>ids.has(e.source_node_id)&&ids.has(e.target_node_id)&&(
@@ -59,11 +78,14 @@
       ));
     }
 
+    /** @param {ExplorerNode[]} vnodes */
     function layout(vnodes){
       const W=1100,H=720,cx=W/2,cy=H/2;
       const world=vnodes.filter(n=>n.node_type==='world');
       const entry=vnodes.filter(n=>n.node_type==='entry');
-      const pos=new Map();
+      const pos=/** @type {Map<string,{x:number,y:number}>} */(new Map());
+      /** @param {Map<string,{x:number,y:number}>} positions @param {string} id */
+      function point(positions,id){const p=positions.get(id);if(!p)throw new Error('网络布局坐标缺失');return p;}
       world.forEach((n,i)=>{
         const a=(Math.PI*2*i/Math.max(world.length,1))-.5;
         pos.set(n.node_id,{x:cx+Math.cos(a)*250,y:cy+Math.sin(a)*190});
@@ -74,19 +96,19 @@
         pos.set(n.node_id,{x:cx+Math.cos(a)*r,y:cy+Math.sin(a)*r*.72});
       });
       for(let iter=0;iter<55;iter++){
-        const next=new Map();
-        vnodes.forEach(n=>next.set(n.node_id,{x:pos.get(n.node_id).x,y:pos.get(n.node_id).y}));
+        const next=/** @type {Map<string,{x:number,y:number}>} */(new Map());
+        vnodes.forEach(n=>next.set(n.node_id,{x:point(pos,n.node_id).x,y:point(pos,n.node_id).y}));
         for(let i=0;i<vnodes.length;i++){
-          const a=vnodes[i],pa=pos.get(a.node_id);
+          const a=vnodes[i],pa=point(pos,a.node_id);
           let fx=(cx-pa.x)*0.002,fy=(cy-pa.y)*0.002;
           for(let j=i+1;j<vnodes.length;j++){
-            const b=vnodes[j],pb=pos.get(b.node_id);
+            const b=vnodes[j],pb=point(pos,b.node_id);
             let dx=pa.x-pb.x,dy=pa.y-pb.y,d2=Math.max(dx*dx+dy*dy,180);
             const force=9000/d2;
             fx+=dx*force;fy+=dy*force;
-            const q=next.get(b.node_id);q.x-=dx*force*.18;q.y-=dy*force*.18;
+            const q=point(next,b.node_id);q.x-=dx*force*.18;q.y-=dy*force*.18;
           }
-          next.get(a.node_id).x+=fx*.18;next.get(a.node_id).y+=fy*.18;
+          point(next,a.node_id).x+=fx*.18;point(next,a.node_id).y+=fy*.18;
         }
         pos.clear();next.forEach((p,id)=>{
           p.x=Math.max(34,Math.min(W-34,p.x));p.y=Math.max(34,Math.min(H-34,p.y));pos.set(id,p);
@@ -107,7 +129,7 @@
       vedges.forEach(e=>{
         const a=pos.get(e.source_node_id),b=pos.get(e.target_node_id);if(!a||!b)return;
         const line=document.createElementNS(ns,'line');
-        line.setAttribute('x1',a.x);line.setAttribute('y1',a.y);line.setAttribute('x2',b.x);line.setAttribute('y2',b.y);
+        line.setAttribute('x1',String(a.x));line.setAttribute('y1',String(a.y));line.setAttribute('x2',String(b.x));line.setAttribute('y2',String(b.y));
         line.setAttribute('class','network-edge '+(active&&(e.source_node_id===active.node_id||e.target_node_id===active.node_id)?'is-active':''));
         line.dataset.edge=e.edge_type||'';
         g.appendChild(line);
@@ -121,12 +143,12 @@
         group.setAttribute('transform',`translate(${p.x} ${p.y})`);
         group.dataset.nodeId=n.node_id;group.setAttribute('role','button');group.setAttribute('tabindex','0');group.setAttribute('aria-label',label(n));group.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();selectNode(n.node_id)}});
         const circle=document.createElementNS(ns,'circle');
-        circle.setAttribute('r',n.node_type==='world'?27:15);
+        circle.setAttribute('r',n.node_type==='world'?'27':'15');
         circle.setAttribute('class','network-node-circle '+(CAT_CLASS[nodeCategory(n)]||'world'));
         group.appendChild(circle);
         const text=document.createElementNS(ns,'text');
         text.setAttribute('class','network-node-label');
-        text.setAttribute('y',n.node_type==='world'?45:29);
+        text.setAttribute('y',n.node_type==='world'?'45':'29');
         text.setAttribute('text-anchor','middle');
         text.textContent=label(n).length>15?label(n).slice(0,14)+'…':label(n);
         group.appendChild(text);
@@ -137,14 +159,16 @@
       renderList(vnodes);
     }
 
+    /** @param {ExplorerNode} n */
     function neighbors(n){
       return edges.filter(e=>e.source_node_id===n.node_id||e.target_node_id===n.node_id).map(e=>{
         const id=e.source_node_id===n.node_id?e.target_node_id:e.source_node_id;
         const other=nodes.find(x=>x.node_id===id);
         return other?{node:other,edge:e}:null;
-      }).filter(Boolean).sort((a,b)=>label(a.node).localeCompare(label(b.node),'zh'));
+      }).filter(x=>x!==null).sort((a,b)=>label(a.node).localeCompare(label(b.node),'zh'));
     }
 
+    /** @param {string} id */
     function selectNode(id){
       active=nodes.find(n=>n.node_id===id)||null;
       if(!active){detail.innerHTML='';return;}
@@ -158,14 +182,15 @@
         ${url?`<a class="network-detail-entry" href="${safeHref(url)||''}">进入知识条目 →</a>`:''}
         <div class="network-neighbor-title">继续探索</div>
         <div class="network-neighbor-list">${direct.length?direct.map(x=>`<button type="button" data-node="${esc(x.node.node_id)}"><span>${esc(relationLabel(String(x?.edge.edge_type||'相关').replace(/^entry_relation:/,'').replace(/^world_.*/, '所属主题')))} · ${esc(nodeCategory(x.node)||'主题')}</span><b>${esc(label(x.node))}</b></button>`).join(''):'<div class="network-no-neighbor">当前节点暂无可展示的核心邻接节点。</div>'}</div>`;
-      detail.querySelectorAll('[data-node]').forEach(b=>b.addEventListener('click',()=>selectNode(b.dataset.node)));
+      /** @type {NodeListOf<HTMLElement>} */(detail.querySelectorAll('[data-node]')).forEach(b=>b.addEventListener('click',()=>selectNode(b.dataset.node||'')));
       draw();
     }
 
+    /** @param {ExplorerNode[]} vnodes */
     function renderList(vnodes){
       const matches=vnodes.slice(0,30);
       list.innerHTML=matches.map(n=>`<button type="button" class="network-list-item ${active?.node_id===n.node_id?'is-active':''}" data-node="${esc(n.node_id)}"><span>${esc(nodeCategory(n)||'主题')}</span><b>${esc(label(n))}</b></button>`).join('');
-      list.querySelectorAll('[data-node]').forEach(b=>b.addEventListener('click',()=>selectNode(b.dataset.node)));
+      /** @type {NodeListOf<HTMLElement>} */(list.querySelectorAll('[data-node]')).forEach(b=>b.addEventListener('click',()=>selectNode(b.dataset.node||'')));
     }
 
     document.getElementById('network-graph-toggle')?.addEventListener('toggle',draw);
@@ -174,9 +199,9 @@
     reset.addEventListener('click',()=>{query='';type='all';search.value='';filter.value='all';active=null;detail.innerHTML='<div class="network-empty"><span>选择条目</span><h3>点击一个节点</h3><p>查看它连接到哪些知识，并从这里进入完整条目页面。</p></div>';draw();});
 
     try{
-      setStatus('正在读取关联内容……');
-      graph=await window.JDM_KNOWLEDGE.graph({limit:500,edgeLimit:2000,includeEdges:true});
-      nodes=graph.nodes||[];edges=graph.edges||[];
+      window.JDM_VISITOR?.renderState(status,'loading',{message:'正在读取关联内容…'});
+      const graph=await store.graph({limit:500,edgeLimit:2000,includeEdges:true});
+      nodes=graph.nodes.flatMap(n=>n.node_id&&n.node_type?[{...n,node_id:n.node_id,node_type:n.node_type}]:[]);edges=graph.edges.flatMap(e=>e.source_node_id&&e.target_node_id?[{...e,source_node_id:e.source_node_id,target_node_id:e.target_node_id}]:[]);
       if(!nodes.length){setStatus('当前没有可展示的知识节点','error');return;}
       draw();
       const requested=new URLSearchParams(location.search).get('node');
@@ -184,8 +209,8 @@
       if(first)selectNode(first.node_id);
     }catch(error){
       console.error('[JDM network explorer]',error);
-      setStatus('关联内容暂时无法加载，下方专题仍可阅读。','error');const retry=document.createElement('button');retry.textContent='重试';retry.type='button';retry.onclick=()=>location.reload();status.append(retry);
-      detail.innerHTML='<div class="network-empty"><span>连接暂时不可用</span><h3>暂时无法加载</h3><p>其他知识页面不受影响。</p></div>';
+      window.JDM_VISITOR?.renderState(status,'error',{error,retry:()=>location.reload()});
+      window.JDM_VISITOR?.renderState(detail,'empty',{message:'请选择其他内容，或重新加载。'});
     }
   };
 

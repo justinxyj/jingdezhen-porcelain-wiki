@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {JSDOM} from 'jsdom';
+const dom = new JSDOM('', {url:'https://justinxyj.github.io/jingdezhen-porcelain-wiki/entry/example/', runScripts:'outside-only'});
+dom.window.eval(fs.readFileSync('docs/javascripts/dom-safe.js', 'utf8'));
+const body = dom.window.document.createElement('div');
+body.innerHTML = dom.window.JDM_SAFE.sanitizeBodyHtml('<sup id="fnref:1"><a href="#fn:1">1</a></sup><li id="fn:1"><a href="https://example.org/paper">论文</a></li><a href="/jingdezhen-porcelain-wiki/entry/hutian-kiln/">湖田窑</a><a id="__drawer" onclick="alert(1)" href="javascript:alert(1)">x</a>');
+assert.ok(body.querySelector('sup[id="fnref:1"]'));
+assert.ok(body.querySelector('li[id="fn:1"]'));
+assert.equal(body.querySelector('sup a').target, '');
+assert.equal(body.querySelector('a[href$="/entry/hutian-kiln/"]').target, '');
+assert.equal(body.querySelector('a[href="https://example.org/paper"]').rel, 'noopener noreferrer');
+assert.equal(body.querySelectorAll('[onclick], #__drawer, a[href^="javascript:"]').length, 0);
+dom.window.close();
+console.log('PASS: body citations, internal navigation and executable-content boundaries');

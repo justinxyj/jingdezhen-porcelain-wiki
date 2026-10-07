@@ -26,7 +26,7 @@ class SafeHTML(HTMLParser):
     """Small allow-list sanitizer for trusted production content before static emission."""
     ALLOWED = {
         "p", "br", "strong", "b", "em", "i", "h2", "h3", "h4",
-        "ul", "ol", "li", "blockquote", "a"
+        "ul", "ol", "li", "blockquote", "a", "sup"
     }
 
     def __init__(self) -> None:
@@ -36,6 +36,8 @@ class SafeHTML(HTMLParser):
     def handle_starttag(self, tag: str, attrs) -> None:
         if tag not in self.ALLOWED:
             return
+        footnote_id = next((value for key, value in attrs if key == "id" and value and re.fullmatch(r"fn(?:ref\d*)?:[A-Za-z0-9_.-]+", value)), None)
+        id_attr = f' id="{html.escape(footnote_id, quote=True)}"' if footnote_id else ''
         if tag == "a":
             href = ""
             for key, value in attrs:
@@ -43,10 +45,12 @@ class SafeHTML(HTMLParser):
                     href = value
             if href.startswith(("https://", "http://")):
                 self.parts.append(f'<a href="{html.escape(href, quote=True)}" rel="noopener noreferrer">')
+            elif href.startswith("/jingdezhen-porcelain-wiki/") or re.fullmatch(r"#fn(?:ref\d*)?:[A-Za-z0-9_.-]+", href):
+                self.parts.append(f'<a href="{html.escape(href, quote=True)}"{id_attr}>')
             else:
                 self.parts.append("<a>")
             return
-        self.parts.append(f"<{tag}>")
+        self.parts.append(f"<{tag}{id_attr}>")
 
     def handle_startendtag(self, tag: str, attrs) -> None:
         if tag == "br":
@@ -70,7 +74,7 @@ def sanitize(value: str) -> str:
 def plain(value: str) -> str:
     text = re.sub(r"<[^>]+>", " ", value or "")
     text = html.unescape(text)
-    return re.sub(r"\\s+", " ", text).strip()
+    return re.sub(r"\s+", " ", text).strip()
 
 
 def runtime_config() -> tuple[str, str]:
@@ -256,6 +260,21 @@ def source_list_html(entry: dict, content: str) -> str:
     return f'<{tag} class="{cls}">{source_links(sources, numbered)}</{tag}>'
 
 
+def source_panel_html(entry: dict, content: str) -> str:
+    zh = entry.get('zh') or {}
+    sources = zh.get('sources') if isinstance(zh.get('sources'), list) and zh.get('sources') else entry.get('sources') or []
+    visible = visible_sources(sources)
+    categories = {'museum': '博物馆与馆藏机构', 'collection': '博物馆与馆藏机构', 'academic': '学术研究', 'journal': '学术研究', 'thesis': '学术研究', 'historical_document': '历史文献', 'official': '官方资料'}
+    counts = {}
+    for item in visible:
+        source = sources[item['n'] - 1]
+        kind = source.get('source_type') or source.get('type') or source.get('category') if isinstance(source, dict) else None
+        label = categories.get(kind, '其他资料')
+        counts[label] = counts.get(label, 0) + 1
+    labels = ' · '.join(html.escape(label) + ' ' + str(count) for label, count in counts.items())
+    return '<details class="visitor-references"><summary>参考资料 ' + str(len(visible)) + '</summary><p>' + labels + '</p>' + source_list_html(entry, content) + '</details>'
+
+
 def entry_html(entry: dict, world_by_entry: dict[str, list[dict]],
                media_by_entry: dict[str, list[dict]],
                relations_by_entry: dict[str, list[dict]]) -> str:
@@ -282,6 +301,11 @@ def entry_html(entry: dict, world_by_entry: dict[str, list[dict]],
             f'<figure class="wiki-entry-cover">'
             f'<img src="{html.escape(image_url, quote=True)}" '
             f'alt="{html.escape(str(media.get("title") or title), quote=True)}" '
+            f'data-era="{html.escape(str(meta.get("period") or (meta.get("map") or {}).get("period") or ""), quote=True)}" '
+            f'data-source-url="{html.escape(str(media.get("source_url") or ""), quote=True)}" '
+            f'data-creator="{html.escape(str(media.get("creator") or ""), quote=True)}" '
+            f'data-license="{html.escape(str(media.get("license") or ""), quote=True)}" '
+            f'data-institution="{html.escape(str(media.get("institution") or ""), quote=True)}" '
             f'referrerpolicy="no-referrer" loading="eager">'
             f'<figcaption>{html.escape(" · ".join(str(media.get(k) or "") for k in ["title", "source", "license"]))}</figcaption>'
             f'</figure>'
@@ -292,12 +316,15 @@ def entry_html(entry: dict, world_by_entry: dict[str, list[dict]],
         f'{html.escape(str(w.get("title") or w.get("world_slug") or "Knowledge World"))} →</a>'
         for w in worlds
     )
+    semantic_rows = json.loads((DOCS / 'data/relation-semantics.json').read_text(encoding='utf-8'))
+    semantic_notes = {x['to']: x.get('note', '') for x in semantic_rows if x['from'] == slug}
+    semantic_labels = {x['to']: x['label'] for x in semantic_rows if x['from'] == slug}
     relation_labels = {"person":"相关人物", "object":"相关器物", "craft":"相关工艺", "kiln":"相关窑址", "period":"时代背景", "related":"相关条目"}
     relation_html = "".join(
         f'<li><a href="{SITE_URL}entry/{quote(str(rel.get("target_slug") or ""))}/">'
-        f'<span>{html.escape(str(rel.get("target_category") or "相关条目"))} · {html.escape(relation_labels.get(str(rel.get("relation_type")), str(rel.get("relation_type") or "关联")))}</span>'
+        f'<span>{html.escape(str(rel.get("target_category") or "相关条目"))} · {html.escape(semantic_labels.get(str(rel.get("target_slug")), relation_labels.get(str(rel.get("relation_type")), "相关内容")))}</span>'
         f'<b>{html.escape(str(rel.get("target_title") or ""))}</b>'
-        f'<small>{html.escape(str(rel.get("note") or "阅读条目，核对具体关系与出处"))}</small></a></li>'
+        f'<small>{html.escape(str(semantic_notes.get(str(rel.get("target_slug"))) or "阅读相关内容的历史与参考资料"))}</small></a></li>'
         for rel in relations if rel.get("target_slug")
     )
     paths = json.loads((DOCS / "data/reading-paths.json").read_text(encoding="utf-8")).get(slug, [])
@@ -309,6 +336,17 @@ def entry_html(entry: dict, world_by_entry: dict[str, list[dict]],
 
 
 
+    navigation = json.loads((DOCS / "data/visitor-navigation.json").read_text(encoding="utf-8"))
+    footer_html = '<footer class="visitor-footer">' + ''.join(
+        '<div><strong>' + html.escape(heading) + '</strong>' + ''.join(
+            '<a href="' + html.escape(path if path.startswith('https://') else SITE_URL + path, quote=True) + '">' + html.escape(label) + '</a>'
+            for label, path in links
+        ) + '</div>' for heading, links in navigation.items()
+    ) + '</footer>'
+    category = str(entry.get('category') or '')
+    category_routes = {'人物': 'museum/people/', '器物': 'museum/catalog/', '窑址': 'kilns/', '工艺': 'craft/', '历史': 'history/', '文献': 'research/'}
+    category_label = category if category in category_routes else '百科'
+    category_url = SITE_URL + category_routes.get(category, 'entry/')
     schema = {
         "@context": "https://schema.org",
         "@type": "WebPage",
@@ -330,7 +368,7 @@ def entry_html(entry: dict, world_by_entry: dict[str, list[dict]],
             "@type": "BreadcrumbList",
             "itemListElement": [
                 {"@type": "ListItem", "position": 1, "name": "首页", "item": SITE_URL},
-                {"@type": "ListItem", "position": 2, "name": "知识条目", "item": f"{SITE_URL}entry/"},
+                {"@type": "ListItem", "position": 2, "name": category_label, "item": category_url},
                 {"@type": "ListItem", "position": 3, "name": title, "item": url},
             ],
         },
@@ -376,12 +414,13 @@ main{{max-width:1240px;margin:0 auto;padding:24px 24px 72px}}
 <body>
 <nav class="visitor-static-nav" aria-label="主导航"><a href="{SITE_URL}">首页</a><a href="{SITE_URL}history/">百科</a><a href="{SITE_URL}museum/">博物馆</a><a href="{SITE_URL}museum/kiln-map/">地图与时间</a><a href="{SITE_URL}research/">研究</a><a href="{SITE_URL}search/">搜索</a></nav>
 <main>
-<nav class="wiki-chrome"><div class="wiki-breadcrumb"><a href="{SITE_URL}">首页</a><span>/</span><a href="{SITE_URL}entry/">知识条目</a><span>/</span><b>{html.escape(title)}</b></div></nav>
+<nav class="wiki-chrome"><div class="wiki-breadcrumb"><a href="{SITE_URL}">首页</a><span aria-hidden="true">›</span><a href="{category_url}">{html.escape(category_label)}</a><span aria-hidden="true">›</span><b aria-current="page">{html.escape(title)}</b></div></nav>
 <article id="wiki-entry-root" class="wiki-entry-card wiki-entry-v2" data-entry-slug="{html.escape(slug, quote=True)}" data-static-rendered="true">
 <header class="wiki-entry-header">
 <div><div class="wiki-entry-kicker">知识条目 · {html.escape(str(entry.get("category") or "知识"))}</div>
 <h1>{html.escape(title)}</h1>
-<p class="entry-static-summary">{html.escape(intro)}</p></div>
+{'<h2>为什么重要</h2>' if entry.get("category") == "人物" else ""}
+<p class="entry-static-summary">{html.escape(str(meta.get("importance") or intro))}</p></div>
 {image_html}
 </header>
 {f'<div class="wiki-entry-v2-tags">{"".join("<span>"+html.escape(x)+"</span>" for x in tags)}</div>' if tags else ""}
@@ -389,12 +428,12 @@ main{{max-width:1240px;margin:0 auto;padding:24px 24px 72px}}
 <div class="wiki-entry-v2-grid"><div class="wiki-entry-v2-main"><section class="wiki-entry-body"><h2>详细介绍</h2>{body_html}</section>
 {f'<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">知识关系</div><h2>它与哪些知识相连</h2><ul class="wiki-entry-v2-relations">{relation_html}</ul></section>' if relations else ""}
 {reading_html}
-<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">来源</div><h2>来源与外部资料</h2>{source_list_html(entry, content)}</section>
+<section class="wiki-entry-v2-section"><h2>参考资料</h2>{source_panel_html(entry, content)}<p><a href="{SITE_URL}research/evidence/?slug={quote(slug)}">查看完整证据链 →</a></p></section>
 <details class="visitor-research"><summary>深入研究</summary><p><a href="{SITE_URL}network/relations/?node=entry:{entry['id']}">关系图</a> · <a href="{SITE_URL}research/">研究方法</a></p></details><p class="visitor-feedback"><a href="https://github.com/justinxyj/jingdezhen-porcelain-wiki/issues/new?title={quote('条目反馈：'+title)}">发现错误？反馈此条目 →</a></p><p><a href="{SITE_URL}search/?category={quote(str(entry.get('category') or ''))}">继续阅读同类条目 →</a></p>
-</div></div><footer class="wiki-entry-footer">本页面为公开正式知识条目；页面正文、来源与媒体由项目知识库维护。</footer>
+</div></div><footer class="wiki-entry-footer">年代、归属与解释请结合参考资料阅读。</footer>
 </article>
 </main>
-<footer class="visitor-footer"><div><strong>探索</strong><a href="{SITE_URL}history/">历史</a><a href="{SITE_URL}craft/">工艺</a><a href="{SITE_URL}museum/catalog/">器物</a></div><div><strong>工具</strong><a href="{SITE_URL}search/">搜索</a><a href="{SITE_URL}museum/kiln-map/">地图</a><a href="{SITE_URL}museum/timeline/">时间轴</a></div><div><strong>项目</strong><a href="https://github.com/justinxyj/jingdezhen-porcelain-wiki">GitHub</a><a href="https://github.com/justinxyj/jingdezhen-porcelain-wiki/issues/new">纠错与反馈</a><a href="{SITE_URL}research/museum-sources/">图片来源与许可</a></div></footer>
+{footer_html}
 <script>
 window.JDM_STATIC_ENTRY_SLUG={json.dumps(slug,ensure_ascii=False)};
 </script>

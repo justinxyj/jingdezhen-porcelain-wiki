@@ -10,7 +10,7 @@ def read(path):
     return (ROOT / path).read_text(encoding="utf-8")
 
 auth = read("docs/javascripts/auth-manager.js")
-timeline = read("docs/javascripts/timeline-interactive.js")
+timeline = read("docs/javascripts/timeline-details.js")
 store = read("docs/javascripts/knowledge-store.js")
 schema = read("supabase/schema.sql")
 tests = read("supabase/tests/concurrency_and_function_boundaries.sql")

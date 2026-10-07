@@ -3,7 +3,7 @@ import re
 COMMON = {'dom-safe.js', 'media-policy.js', 'museum-images.js', 'site-privacy.js', 'visitor-ui.js'}
 DATA = {'runtime-config.js', 'supabase.min.js', 'auth-manager.js', 'data-contract.js', 'knowledge-store.js'}
 WIDGETS = {
- 'entry-search.js': 'data-entry-search', 'global-network.js': 'data-global-network',
+ 'evidence-chain.js':'data-evidence-chain', 'entry-search.js': 'data-entry-search', 'global-network.js': 'data-global-network',
  'world-browser.js': 'data-world-browser', 'network-explorer.js': 'jdm-network-explorer',
  'museum.js': ['catalog-list','people-list'], 'wiki-enhancements.js': 'wiki-entry-root',
  'wiki-timeline.js': 'timeline-comparison-root', 'timeline-details.js': 'timeline-comparison-root',

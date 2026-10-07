@@ -59,7 +59,7 @@ with sync_playwright() as p:
  hutian.click();page.locator('dialog[open]').wait_for();page.keyboard.press('Tab');record('modal keyboard contained',page.evaluate('document.querySelector("dialog").contains(document.activeElement)'))
  page.locator('dialog a.visitor-primary').click();page.locator('.wiki-entry-v2-relations a').first.wait_for(timeout=30000);record('journey C related objects',page.locator('.visitor-reading-path a[href*="qingbai-porcelain"]').count()>0)
  # D: timeline dialog -> complete article and sources.
- page.goto(BASE+'museum/timeline/',wait_until='domcontentloaded');page.locator('.compare-node').first.wait_for(timeout=30000);page.locator('.compare-node').first.click();page.locator('dialog .visitor-primary').click();page.locator('.wiki-entry-source-links a').first.wait_for(timeout=30000);record('journey D full entry sources',True)
+ page.goto(BASE+'museum/timeline/',wait_until='domcontentloaded');page.locator('.compare-node').first.wait_for(timeout=30000);page.locator('.compare-node').first.click();page.locator('dialog .visitor-primary').click();page.locator('.visitor-references summary').first.click();page.locator('.wiki-entry-source-links a').first.wait_for(timeout=30000);record('journey D full entry sources',True)
  # Original query URL is still supported.
  page.goto(BASE+'entry/?slug=tang-ying',wait_until='domcontentloaded');page.locator('.wiki-entry-header h1').wait_for(timeout=30000);record('legacy query URL',page.locator('.wiki-entry-header h1').inner_text()=='唐英')
  # Static reading with JavaScript disabled.
