@@ -140,7 +140,7 @@
     }
     viewport.append(img);viewer.append(controls,viewport);
     const caption=document.createElement('p');caption.textContent=image.closest('figure')?.querySelector('figcaption')?.textContent||image.dataset.caption||image.alt;viewer.append(caption);
-    const fields={era:'年代',creator:'作者',institution:'馆藏机构',license:'版权 / 使用条件',source:'来源'};
+    const fields={era:'相关内容年代',creator:'作者',institution:'馆藏机构',sourceInstitution:'来源机构',license:'版权 / 使用条件',source:'来源'};
     for(const [key,label] of Object.entries(fields))if(image.dataset[key]){const p=document.createElement('p');p.textContent=label+'：'+image.dataset[key];viewer.append(p);}
     const source=image.dataset.sourceUrl||image.closest('figure')?.querySelector('a')?.href;
     if(source&&safe.safeHref(source)){const a=document.createElement('a');a.href=safe.safeHref(source);a.textContent='查看馆藏记录与图片来源 ↗';a.target='_blank';a.rel='noopener noreferrer';viewer.append(a);}viewer.showModal();
