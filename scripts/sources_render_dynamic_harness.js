@@ -33,9 +33,9 @@ async function renderOne(entry) {
   w.eval(read("dom-safe.js"));
   w.eval(read("wiki-enhancements.js"));
   for (let i = 0; i < 20; i++) await new Promise((r) => setTimeout(r, 5));
-  const secs = [...w.document.querySelectorAll("section.wiki-entry-v2-section")]
-    .filter((s) => s.querySelector(".wiki-entry-section-kicker")?.textContent === "来源");
-  const out = secs[0] ? secs[0].innerHTML : null;
+  // Locate the source list by its stable semantic class, independent of heading copy.
+  const section = w.document.querySelector('.wiki-entry-source-links')?.closest('section');
+  const out = section ? section.innerHTML : null;
   w.close();
   return out;
 }
