@@ -274,7 +274,7 @@ def entry_html(entry: dict, world_by_entry: dict[str, list[dict]],
     tags = [str(x) for x in [meta.get("period"), meta.get("era"), meta.get("role"), meta.get("location"), meta.get("region"), meta.get("craft")] if x]
     tags = list(dict.fromkeys(tags))[:6]
 
-    image_html = ""
+    image_html = '<p class="visitor-missing-image">暂无公开图片。图片需具备可追溯来源与使用许可。</p>'
     image_url = ""
     if media and str(media.get("path") or "").startswith(("https://", "http://")):
         image_url = str(media["path"])
@@ -283,7 +283,7 @@ def entry_html(entry: dict, world_by_entry: dict[str, list[dict]],
             f'<img src="{html.escape(image_url, quote=True)}" '
             f'alt="{html.escape(str(media.get("title") or title), quote=True)}" '
             f'referrerpolicy="no-referrer" loading="eager">'
-            f'<figcaption>{html.escape(str(media.get("title") or ""))}</figcaption>'
+            f'<figcaption>{html.escape(" · ".join(str(media.get(k) or "") for k in ["title", "source", "license"]))}</figcaption>'
             f'</figure>'
         )
 
@@ -350,6 +350,7 @@ def entry_html(entry: dict, world_by_entry: dict[str, list[dict]],
 <script type="application/ld+json">{schema_json}</script>
 <link rel="stylesheet" href="{SITE_URL}stylesheets/wiki.css">
 <link rel="stylesheet" href="{SITE_URL}stylesheets/museum-apple.css">
+<link rel="stylesheet" href="{SITE_URL}stylesheets/visitor.css">
 <style>
 /* Standalone SEO shell only — entry surfaces come from museum-apple + wiki.css */
 html,body{{margin:0;padding:0}}
@@ -364,6 +365,7 @@ main{{max-width:1240px;margin:0 auto;padding:24px 24px 72px}}
 </style>
 </head>
 <body>
+<nav class="visitor-static-nav" aria-label="主导航"><a href="{SITE_URL}">首页</a><a href="{SITE_URL}history/">百科</a><a href="{SITE_URL}museum/">博物馆</a><a href="{SITE_URL}museum/kiln-map/">地图与时间</a><a href="{SITE_URL}research/">研究</a><a href="{SITE_URL}search/">搜索</a></nav>
 <main>
 <nav class="wiki-chrome"><div class="wiki-breadcrumb"><a href="{SITE_URL}">首页</a><span>/</span><a href="{SITE_URL}entry/">知识条目</a><span>/</span><b>{html.escape(title)}</b></div></nav>
 <article id="wiki-entry-root" class="wiki-entry-card wiki-entry-v2" data-entry-slug="{html.escape(slug, quote=True)}" data-static-rendered="true">
@@ -374,26 +376,30 @@ main{{max-width:1240px;margin:0 auto;padding:24px 24px 72px}}
 {image_html}
 </header>
 {f'<div class="wiki-entry-v2-tags">{"".join("<span>"+html.escape(x)+"</span>" for x in tags)}</div>' if tags else ""}
-{f'<div class="wiki-entry-world-path"><span>所属知识世界</span><div>{world_html}</div></div>' if world_html else ""}
-<div class="wiki-entry-v2-grid"><aside class="wiki-entry-v2-rail"><div class="wiki-entry-v2-card"><strong>知识节点</strong><span>{html.escape(str(entry.get("category") or "知识"))}</span><span>{html.escape(str(((zh.get("meta") or {}).get("period") or (zh.get("meta") or {}).get("era") or "时代信息待核")))}</span><span>{html.escape(str(((zh.get("meta") or {}).get("location") or (zh.get("meta") or {}).get("region") or "空间信息待核")))}</span></div><div class="wiki-entry-v2-card"><strong>继续探索</strong><a href="{SITE_URL}search/">⌕ 搜索知识 →</a><a href="{SITE_URL}network/relations/">关系网络 →</a><a href="{SITE_URL}network/global/">全球陶瓷网络 →</a></div></aside><div class="wiki-entry-v2-main"><section class="wiki-entry-body"><h2>详细介绍</h2>{body_html}</section>
+{f'<div class="wiki-entry-world-path"><span>相关阅读主题</span><div>{world_html}</div></div>' if world_html else ""}
+<div class="wiki-entry-v2-grid"><div class="wiki-entry-v2-main"><section class="wiki-entry-body"><h2>详细介绍</h2>{body_html}</section>
 {f'<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">知识关系</div><h2>它与哪些知识相连</h2><ul class="wiki-entry-v2-relations">{relation_html}</ul></section>' if relations else ""}
 <section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">来源</div><h2>来源与外部资料</h2>{source_list_html(entry, content)}</section>
+<details class="visitor-research"><summary>深入研究</summary><p><a href="{SITE_URL}network/relations/?node=entry:{entry['id']}">关系图</a> · <a href="{SITE_URL}research/">研究方法</a></p></details><p class="visitor-feedback"><a href="https://github.com/justinxyj/jingdezhen-porcelain-wiki/issues/new?title={quote('条目反馈：'+title)}">发现错误？反馈此条目 →</a></p><p><a href="{SITE_URL}search/?category={quote(str(entry.get('category') or ''))}">继续阅读同类条目 →</a></p>
 </div></div><footer class="wiki-entry-footer">本页面为公开正式知识条目；页面正文、来源与媒体由项目知识库维护。</footer>
 </article>
 </main>
+<footer class="visitor-footer"><div><strong>探索</strong><a href="{SITE_URL}history/">历史</a><a href="{SITE_URL}craft/">工艺</a><a href="{SITE_URL}museum/catalog/">器物</a></div><div><strong>工具</strong><a href="{SITE_URL}search/">搜索</a><a href="{SITE_URL}museum/kiln-map/">地图</a><a href="{SITE_URL}museum/timeline/">时间轴</a></div><div><strong>项目</strong><a href="https://github.com/justinxyj/jingdezhen-porcelain-wiki">GitHub</a><a href="https://github.com/justinxyj/jingdezhen-porcelain-wiki/issues/new">纠错与反馈</a><a href="{SITE_URL}research/museum-sources/">图片来源与许可</a></div></footer>
 <script>
 window.JDM_STATIC_ENTRY_SLUG={json.dumps(slug,ensure_ascii=False)};
 </script>
 <script src="{SITE_URL}javascripts/runtime-config.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="{SITE_URL}vendor/supabase/supabase.min.js"></script>
+<script src="{SITE_URL}javascripts/dom-safe.js"></script>
 <script src="{SITE_URL}javascripts/auth-manager.js"></script>
 <script src="{SITE_URL}javascripts/media-policy.js"></script>
 <script src="{SITE_URL}javascripts/data-contract.js"></script>
 <script src="{SITE_URL}javascripts/knowledge-store.js"></script>
 <script src="{SITE_URL}javascripts/wiki-enhancements.js"></script>
+<script src="{SITE_URL}javascripts/visitor-ui.js"></script>
 </body>
 </html>
-"""
+""".replace('href="'+SITE_URL, 'href="/jingdezhen-porcelain-wiki/').replace('src="'+SITE_URL, 'src="/jingdezhen-porcelain-wiki/').replace('rel="canonical" href="/jingdezhen-porcelain-wiki/', 'rel="canonical" href="'+SITE_URL)
 
 
 def main() -> None:
@@ -403,8 +409,8 @@ def main() -> None:
         "id,slug,category,zh,en,ja,sources,status,updated_at",
         "status=eq.published&order=slug.asc&limit=1000",
     )
-    if len(entries) != 149:
-        print(f"WARNING: expected 149 published entries, received {len(entries)}")
+    if not entries:
+        raise RuntimeError("No published entries; refusing to replace the static site")
 
     worlds = fetch_rows(
         base, key, "knowledge_worlds",
@@ -505,7 +511,7 @@ def main() -> None:
     sitemap.append("</urlset>")
     (DOCS / "sitemap-entries.xml").write_text("\n".join(sitemap) + "\n", encoding="utf-8")
     (DOCS / "robots.txt").write_text(
-        "User-agent: *\\nAllow: /\\nSitemap: " + SITE_URL + "sitemap.xml\\nSitemap: " + SITE_URL + "sitemap-entries.xml\\n",
+        "User-agent: *\nAllow: /\nSitemap: " + SITE_URL + "sitemap.xml\nSitemap: " + SITE_URL + "sitemap-entries.xml\n",
         encoding="utf-8",
     )
 

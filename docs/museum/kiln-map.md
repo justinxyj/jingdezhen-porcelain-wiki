@@ -1,15 +1,18 @@
-# 全球窑址与陶瓷城市地图
-
+---
+hide:
+  - navigation
+  - toc
+---
 <div class="museum-hero">
   <div>
-    <div class="eyebrow">GLOBAL KILN ATLAS · 全球窑址</div>
-    <h1>一张地图，看见世界瓷业如何连接。</h1>
+    <div class="eyebrow">窑址地图</div>
+    <h1>从景德镇出发，寻找窑火留下的地点。</h1>
     <p>从景德镇出发，把中国、东亚、东南亚、伊斯兰世界与欧洲的重要陶瓷生产中心放在同一空间中阅读。</p>
   </div>
   <div class="museum-hero-mark">地图<br>世界</div>
 </div>
 
-<div class="kiln-discovery-note"><strong>统一空间发现</strong><br>窑址地图现在以知识条目为唯一内容来源。点击地点后，可以继续进入知识条目、全球网络与统一搜索；地图负责回答“在哪里”，知识节点负责回答“它与什么相连”。</div>
+<div class="kiln-discovery-note"><strong>从景德镇出发</strong><br>先浏览景德镇窑址，再切换到中国、亚洲与世界。选择地点可阅读介绍、核对来源并继续探索相关器物。</div>
 <div id="kiln-map"></div>
 
 ## 地点与范围
@@ -23,3 +26,9 @@
 景德镇、龙泉、有田、伊兹尼克、梅森等地点可以帮助提出比较问题：使用什么材料、怎样烧成、服务谁、怎样流通。相近纹样或蓝白色彩不能单独证明它们采用同一种胎釉，更不能独立确定传播方向。
 
 参阅[窑址与城市空间](../kilns/README.md)及[原料与配方](../craft/raw-materials.md)。
+
+## 按主题阅读
+
+[湖田窑](../kilns/hutian-kiln.md) · [御窑厂](../kilns/imperial-kiln.md) · [其他窑址](../kilns/other-sites.md)
+
+交互目录暂不可用时，仍可从这些文章继续阅读。

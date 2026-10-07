@@ -1,5 +1,3 @@
-# 名人与书籍 · 景德镇评价史
-
 <div class="museum-hero">
   <div>
     <div class="eyebrow">VOICES · TEXTS · 评价史</div>

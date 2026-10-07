@@ -1,5 +1,8 @@
-# 历史时间轴
-
+---
+hide:
+  - navigation
+  - toc
+---
 <div class="museum-hero">
   <div>
     <div class="eyebrow">A THOUSAND YEARS · 千年时间</div>
@@ -9,7 +12,7 @@
   <div class="museum-hero-mark">千年<br>窑火</div>
 </div>
 
-<div class="timeline-method-note"><strong>统一时间发现</strong><br>时间轴现在直接使用统一知识条目数据。你可以按时代或空间筛选；点击节点进入 统一知识条目页面，再继续进入关系网络、全球陶瓷网络与相关推荐。</div>
+<div class="timeline-method-note"><strong>对照景德镇、中国与世界</strong><br>按时代或地域筛选。点击卡片查看摘要，再选择“阅读全文”了解正文、关系与来源。</div>
 <div id="timeline" class="timeline-comparison-root"></div>
 
 ## 日期与分期怎样理解
@@ -19,3 +22,9 @@
 景德镇、中国其他窑业与世界其他地区同屏出现，是为了比较同时期的材料与问题。时间相近不自动证明技术传播，关系还需要贸易、文献、出土情境或专业研究支持。涉及“最早”和“首创”时尤其应核对对象范围。
 
 从[历史概览](../history/README.md)阅读各期变化，再进入[考古资料](../research/archaeology.md)了解年代判断的依据。
+
+## 按主题阅读
+
+[宋元](../history/song-yuan.md) · [明清](../history/ming-qing.md) · [近现代](../history/modern.md)
+
+交互目录暂不可用时，仍可从这些文章继续阅读。

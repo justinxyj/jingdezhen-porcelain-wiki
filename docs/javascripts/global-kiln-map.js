@@ -1,52 +1,56 @@
-/* Public global kiln atlas. Internal media labels and implementation wording stay hidden. */
-(function(){
-  const esc=s=>window.JDM_SAFE?.esc?.(s)??window.JDM_AUTH?.esc?.(s)??String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
-  const safeHref=(raw,opts)=>window.JDM_SAFE?.safeHref?.(raw,opts)??window.JDM_AUTH?.safeHref?.(raw,opts)??'';
-  const wiki=t=>`https://zh.wikipedia.org/w/index.php?search=${encodeURIComponent(t||'')}`;
-  const ROOT='/jingdezhen-porcelain-wiki/';
-  const entryUrl=e=>window.JDM_KNOWLEDGE?.url(e)||`${ROOT}entry/?type=${encodeURIComponent(e.category)}&slug=${encodeURIComponent(e.slug)}`;
-  function mediaMarkup(e){const im=(e.media||[]).find(m=>window.JDM_MEDIA_POLICY?.isUsable?window.JDM_MEDIA_POLICY.isUsable(m):Boolean(m?.path));return im&&safeHref(im.path)?`<img src="${safeHref(im.path)}" alt="${esc(im.title||e.zh?.title||'窑址图片')}" loading="lazy"><small>${esc(im.title||'馆藏图片')}</small>`:'<span>暂无可用于地图展示的已核验遗址图</span>'}
-  function init(entries){
-    const root=document.getElementById('kiln-map');if(!root)return;
-    const rows=entries.filter(e=>e.category==='窑址'&&e.zh?.meta?.map?.lat!=null&&e.zh?.meta?.map?.lng!=null);
-    root.innerHTML=`<div class="global-kiln-map-toolbar"><input id="global-kiln-search" placeholder="搜索窑址、国家、年代或类型……"><div><span class="global-kiln-count" id="global-kiln-count"></span><button class="is-active" data-region="all">全部</button><button data-region="中国">中国</button><button data-region="东亚">东亚</button><button data-region="全球">全球</button></div></div><div id="global-kiln-map-canvas" class="global-kiln-map-canvas"></div><div id="global-kiln-list" class="global-kiln-list"></div><div id="global-kiln-modal"></div>`;
-    const canvas=document.getElementById('global-kiln-map-canvas');
-    const hasLeaflet=typeof L!=='undefined';
-    const map=hasLeaflet?L.map(canvas).setView([25,110],2):null;
-    if(!map)canvas.innerHTML='<div class="global-kiln-map-unavailable">地图底图暂时不可用，但下方窑址目录仍可浏览、搜索与打开详情。</div>';
-    if(map)L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap contributors'}).addTo(map);
-    // MkDocs Material can change the content column width after the map is created
-    // (sidebar collapse, responsive layout, navigation transitions). Leaflet otherwise
-    // keeps the old viewport and part of the world map can appear clipped/covered.
-    const resizeMap=()=>requestAnimationFrame(()=>{if(map)map.invalidateSize({pan:false,animate:false})});
-    resizeMap();
-    window.addEventListener('resize',resizeMap,{passive:true});
-    if(window.ResizeObserver){
-      const ro=new ResizeObserver(resizeMap);
-      ro.observe(canvas);
-      ro.observe(root);
-    }
-    const markers=new Map();
-    const region=e=>{const c=e.zh?.meta?.map?.country||'';if(c.startsWith('中国'))return '中国';if(c.includes('韩国')||c.includes('日本'))return '东亚';return '全球'};
-    function visible(e,q,r){const hay=JSON.stringify(e.zh||'').toLowerCase();return (!q||hay.includes(q))&&(r==='all'||region(e)===r)}
-    function entryIntro(e){const summary=plain(e.zh?.summary||'');if(summary)return summary;const raw=plain(e.zh?.content||'');return raw.split(/\n+/).map(x=>x.trim()).find(x=>x&&!/^本 Entry |^本条目只陈述|^不把风格相似|^可从本 Entry |^可沿当前 Knowledge World/.test(x))||'该窑址暂无可公开展示的摘要。'}
-    function open(e){const m=e.zh?.meta?.map||{},wikiTitle=m.wikiTitle||e.zh?.title||e.slug,source=(e.sources||[]).find(s=>s&&typeof s==='object'&&/^https?:\/\//i.test(String(s.url||'')))?.url||'',modal=document.getElementById('global-kiln-modal');modal.innerHTML=`<div class="global-kiln-modal"><div class="global-kiln-backdrop" data-close></div><article class="global-kiln-dialog"><button class="global-kiln-close" data-close>×</button><div class="global-kiln-image">${mediaMarkup(e)}</div><div class="global-kiln-content"><div class="global-kiln-tags"><span>${esc(m.country||'')}</span><span>${esc(m.period||'')}</span><span>${esc(m.type||'窑业中心')}</span></div><h2>${esc(e.zh?.title||'窑址')}</h2><p class="global-kiln-intro">${esc(entryIntro(e))}</p><div class="global-kiln-ai"><b>摘要</b><p>${esc(plain(e.zh?.summary||entryIntro(e)))}</p></div><div class="global-kiln-links"><a href="${safeHref(entryUrl(e))||''}">查看知识条目 →</a><a href="${safeHref(ROOT+'network/global/?slug='+encodeURIComponent(e.slug))||''}">全球网络 →</a><a href="${safeHref(ROOT+'search/?q='+encodeURIComponent(e.zh?.title||e.slug))||''}">统一搜索 →</a>${safeHref(source)?`<a href="${safeHref(source)}" target="_blank" rel="noopener noreferrer">资料来源 ↗</a>`:''}</div></div></article></div>`;modal.querySelectorAll('[data-close]').forEach(x=>x.addEventListener('click',()=>{modal.innerHTML='';document.body.classList.remove('global-kiln-open')}));document.body.classList.add('global-kiln-open')}
-    function plain(s){const d=document.createElement('div');d.innerHTML=String(s||'');return d.textContent||d.innerText||''}
-    function render(){const q=(document.getElementById('global-kiln-search')?.value||'').trim().toLowerCase();const active=document.querySelector('.global-kiln-map-toolbar button.is-active')?.dataset.region||'all';if(map)markers.forEach((marker,e)=>{if(visible(e,q,active))marker.addTo(map);else map.removeLayer(marker)});const list=document.getElementById('global-kiln-list');const shown=rows.filter(e=>visible(e,q,active));document.getElementById('global-kiln-count').textContent='显示 '+shown.length+' / '+rows.length+' 个有坐标窑址';list.innerHTML=shown.map(e=>{const m=e.zh.meta.map;return `<button class="global-kiln-list-item" data-slug="${esc(e.slug)}"><b>${esc(e.zh?.title||'窑址')}</b><span>${esc(m.country||'')} · ${esc(m.period||'')}</span></button>`}).join('');list.querySelectorAll('[data-slug]').forEach(btn=>btn.addEventListener('click',()=>{const e=rows.find(x=>x.slug===btn.dataset.slug);if(!e)return;const m=e.zh.meta.map;if(map)map.flyTo([m.lat,m.lng],Math.max(map.getZoom(),5),{duration:.7});open(e)}));resizeMap()}
-    if(map)rows.forEach(e=>{const m=e.zh.meta.map,marker=L.marker([m.lat,m.lng]).bindTooltip(e.zh?.title||'窑址',{direction:'top'}).on('click',()=>open(e));markers.set(e,marker)});
-    document.getElementById('global-kiln-search').addEventListener('input',render);document.querySelectorAll('.global-kiln-map-toolbar button').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.global-kiln-map-toolbar button').forEach(b=>b.classList.remove('is-active'));btn.classList.add('is-active');render()}));render();
+/* A Jingdezhen-first atlas; the searchable directory survives tile failures. */
+(function () {
+  const esc = value => window.JDM_SAFE.esc(value);
+  const href = value => window.JDM_SAFE.safeHref(value);
+  const plain = value => { const node=document.createElement('div');node.innerHTML=String(value||'');return node.textContent||''; };
+  const views = {jdz:{label:'景德镇',center:[29.29,117.21],zoom:11},china:{label:'中国',center:[34,105],zoom:4},asia:{label:'亚洲',center:[30,110],zoom:3},world:{label:'世界',center:[25,15],zoom:2}};
+  async function boot() {
+    const root=document.getElementById('kiln-map');if(!root||!window.JDM_KNOWLEDGE)return;
+    try { init(await window.JDM_KNOWLEDGE.kilnAtlas({limit:250})); }
+    catch (_) { root.innerHTML='<p role="alert">窑址目录暂时无法加载。<button type="button">重试</button></p><p>仍可阅读下方的窑址介绍。</p>';root.querySelector('button').onclick=()=>{window.JDM_KNOWLEDGE.reset();boot()}; }
   }
-  function removeLiteralNewlineArtifacts(){
-    const root=document.querySelector('main')||document.body;
-    if(!root)return;
-    const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);
-    const nodes=[];
-    let node;
-    while(node=walker.nextNode()){
-      if(String(node.nodeValue||'').trim()==='\\n')nodes.push(node);
+  function init(entries) {
+    const root=document.getElementById('kiln-map');
+    const rows=entries.filter(e=>e.category==='窑址'&&Number.isFinite(Number(e.zh?.meta?.map?.lat))&&Number.isFinite(Number(e.zh?.meta?.map?.lng))&&e.zh?.meta?.map?.lat!=null&&e.zh?.meta?.map?.lng!=null);
+    let level='jdz',selected='',query='';
+    root.innerHTML=`<div class="global-kiln-map-toolbar"><label for="global-kiln-search">搜索当前范围的窑址</label><input id="global-kiln-search" type="search" placeholder="窑址、国家或年代"><div aria-label="地图范围">${Object.entries(views).map(([key,v])=>`<button type="button" data-region="${key}" aria-pressed="${key===level}">${v.label}</button>`).join('')}</div><span id="global-kiln-count" role="status"></span><button type="button" id="map-list-toggle" aria-controls="global-kiln-map-canvas" aria-expanded="true">切换地图 / 列表</button></div><div id="global-kiln-map-canvas" class="global-kiln-map-canvas" aria-label="窑址地图"></div><div id="global-kiln-list" class="global-kiln-list" aria-label="窑址目录"></div>`;
+    const canvas=root.querySelector('#global-kiln-map-canvas');
+    const map=window.L?window.L.map(canvas).setView(views.jdz.center,views.jdz.zoom):null;
+    const layer=map?window.L.layerGroup().addTo(map):null;
+    if(map){
+      const tiles=window.L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap contributors'}).addTo(map);
+      let warned=false;tiles.on('tileerror',()=>{if(warned)return;warned=true;const notice=document.createElement('p');notice.setAttribute('role','status');notice.textContent='底图连接暂时不可用，下方目录仍可浏览。';canvas.before(notice)});
+      map.on('zoomend',drawMarkers);
+      if(window.ResizeObserver)new ResizeObserver(()=>map.invalidateSize({pan:false})).observe(canvas);
+    }else canvas.innerHTML='<p>底图暂时不可用，请使用下方窑址目录。</p>';
+    function inRegion(e){const m=e.zh.meta.map,lat=Number(m.lat),lng=Number(m.lng),country=String(m.country||'');if(level==='jdz')return lat>=28.8&&lat<=30&&lng>=116.7&&lng<=117.9;if(level==='china')return country.startsWith('中国');if(level==='asia')return lng>=25&&lng<=180&&lat>=-12&&lat<=80;return true;}
+    function shown(){return rows.filter(e=>inRegion(e)&&(!query||JSON.stringify(e.zh).toLowerCase().includes(query)));}
+    function select(e,fromMarker=false){
+      selected=e.slug;renderList();
+      const button=[...root.querySelectorAll('[data-slug]')].find(b=>b.dataset.slug===e.slug);
+      if(fromMarker)button?.scrollIntoView({block:'nearest',behavior:'auto'});
+      if(map&&!fromMarker){const m=e.zh.meta.map;map.setView([m.lat,m.lng],Math.max(map.getZoom(),12),{animate:false});}
+      open(e);
     }
-    nodes.forEach(node=>node.remove());
+    function open(e){
+      const ui=window.JDM_VISITOR;if(!ui){location.href=window.JDM_KNOWLEDGE.url(e);return;}
+      const modal=ui.dialog(e.zh?.title||e.slug),body=document.createElement('div'),m=e.zh.meta.map;
+      const source=(e.zh?.sources?.length?e.zh.sources:e.sources||[]).find(s=>s&&(!s.status||s.status==='published')&&href(s.url));
+      body.innerHTML=`<p>${esc([m.country,m.period,m.type].filter(Boolean).join(' · '))}</p><p>${esc(plain(e.zh?.summary||e.zh?.content).slice(0,280))}</p><p><a class="visitor-primary" href="${href(window.JDM_KNOWLEDGE.url(e))}">阅读全文 →</a></p><p><a href="${ui.root}network/relations/?node=${encodeURIComponent('entry:'+e.id)}">相关器物与人物 →</a></p>${source?`<p><a href="${href(source.url)}" target="_blank" rel="noopener noreferrer">${esc(source.label||source.title||'资料来源')} ↗</a></p>`:''}`;
+      modal.append(body);modal.showModal();
+    }
+    function renderList(){const list=root.querySelector('#global-kiln-list'),items=shown();root.querySelector('#global-kiln-count').textContent=views[level].label+'范围：'+items.length+' 处窑址';list.innerHTML=items.map(e=>`<button type="button" class="global-kiln-list-item ${selected===e.slug?'is-active':''}" data-slug="${esc(e.slug)}" aria-pressed="${selected===e.slug}"><b>${esc(e.zh?.title||e.slug)}</b><span>${esc(e.zh.meta.map.period||'')}</span></button>`).join('')||'<p>当前范围没有匹配。试试更短的名称，或切换到世界范围。</p>';list.querySelectorAll('[data-slug]').forEach(b=>b.onclick=()=>select(rows.find(e=>e.slug===b.dataset.slug)));}
+    function drawMarkers(){
+      if(!map)return;layer.clearLayers();const items=shown(),groups=new Map();
+      // Screen-space clustering keeps close markers selectable without a second map library.
+      items.forEach(e=>{const m=e.zh.meta.map,p=map.project([m.lat,m.lng],map.getZoom()),key=items.length>12?Math.floor(p.x/56)+':'+Math.floor(p.y/56):e.slug;if(!groups.has(key))groups.set(key,[]);groups.get(key).push(e)});
+      groups.forEach(group=>{const e=group[0],m=e.zh.meta.map;if(group.length===1){window.L.marker([m.lat,m.lng],{title:e.zh?.title||e.slug,alt:e.zh?.title||e.slug,keyboard:true}).bindTooltip(e.zh?.title||e.slug).on('click',()=>select(e,true)).addTo(layer);}else{const center=[group.reduce((v,x)=>v+Number(x.zh.meta.map.lat),0)/group.length,group.reduce((v,x)=>v+Number(x.zh.meta.map.lng),0)/group.length];window.L.marker(center,{title:group.length+'处窑址，放大查看',keyboard:true,icon:window.L.divIcon({className:'visitor-cluster',html:String(group.length),iconSize:[40,40]})}).on('click',()=>map.setView(center,map.getZoom()+2)).addTo(layer);}});
+    }
+    function render(){renderList();drawMarkers();}
+    root.querySelector('#global-kiln-search').oninput=event=>{query=event.target.value.trim().toLowerCase();render();};
+    root.querySelectorAll('[data-region]').forEach(button=>button.onclick=()=>{level=button.dataset.region;root.querySelectorAll('[data-region]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));if(map)map.setView(views[level].center,views[level].zoom,{animate:false});render();});
+    root.querySelector('#map-list-toggle').onclick=event=>{canvas.hidden=!canvas.hidden;event.target.setAttribute('aria-expanded',String(!canvas.hidden));if(map&&!canvas.hidden)map.invalidateSize();};
+    render();const slug=new URLSearchParams(location.search).get('slug'),initial=rows.find(e=>e.slug===slug);if(initial){level='world';render();select(initial);}
   }
-  async function boot(){removeLiteralNewlineArtifacts();if(!window.JDM_KNOWLEDGE)return;try{const rows=window.JDM_KNOWLEDGE.kilnAtlas?await window.JDM_KNOWLEDGE.kilnAtlas({limit:250}):await window.JDM_KNOWLEDGE.list({category:'窑址',limit:250});init(rows)}catch(error){console.error('[JDM kiln atlas]',error);const root=document.getElementById('kiln-map');if(root)root.innerHTML='<div class="kiln-atlas-error"><b>窑址地图暂时无法加载</b><span>请稍后刷新；知识条目数据本身未受影响。</span></div>'}}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
 })();

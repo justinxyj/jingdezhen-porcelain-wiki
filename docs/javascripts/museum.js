@@ -42,7 +42,7 @@
       const global=hrefFor(path('network/global/?slug='+encodeURIComponent(e.slug)));
       const img=mediaImg(im,im?.title||e.zh?.title||'器物图片');
       return '<article class="catalog-card catalog-card-v2">'+
-        (img&&entryH?'<a href="'+entryH+'">'+img+'</a>':img)+
+        (img&&entryH?'<a href="'+entryH+'">'+img+'</a>':img||'<div class="visitor-missing-image">暂无公开图片</div>')+
         '<div class="catalog-card-body">'+
         '<div class="catalog-card-tags">'+(m.period?'<span class="tag">'+esc(m.period)+'</span>':'')+(era?'<span class="tag">'+esc(eraLabel(era))+'</span>':'')+(world?'<span class="tag">'+esc(world.short_title||world.title)+'</span>':'')+'</div>'+
         '<h3>'+(entryH?'<a href="'+entryH+'">'+esc(e.zh?.title||'未命名器物')+'</a>':esc(e.zh?.title||'未命名器物'))+'</h3><p>'+esc(text(e).slice(0,180))+'</p>'+
@@ -128,7 +128,7 @@
   function renderError(root,error){
     if(!root)return;
     const info=window.JDM_AUTH?.describeError?.(error)||{code:error?.code||error?.status||'NETWORK',message:'知识数据暂时无法加载，请稍后重试。'};
-    root.innerHTML='<div class="notice" role="alert">'+esc(info.message)+'（'+esc(info.code)+'）<button type="button" class="jdm-retry">重新加载</button></div>';
+    root.innerHTML='<div class="notice" role="alert">'+esc(info.message)+'<details><summary>技术详情</summary>'+esc(info.code)+'</details><button type="button" class="jdm-retry">重新加载</button></div>';
     root.querySelector('.jdm-retry')?.addEventListener('click',()=>init());
   }
   let initSeq=0,filterData={objects:[],people:[]};
@@ -136,11 +136,12 @@
     const seq=++initSeq;
     if(!window.JDM_KNOWLEDGE)return;
     const roots=[document.getElementById('catalog-list'),document.getElementById('people-list'),document.getElementById('timeline')];
+    if(!roots.some(Boolean))return;
     try{
       const [objects,people,history]=await Promise.all([
-        window.JDM_KNOWLEDGE.objectAtlas({limit:250}),
-        window.JDM_KNOWLEDGE.personAtlas({limit:250}),
-        window.JDM_KNOWLEDGE.list({limit:500})
+        roots[0]?window.JDM_KNOWLEDGE.objectAtlas({limit:250}):Promise.resolve([]),
+        roots[1]?window.JDM_KNOWLEDGE.personAtlas({limit:250}):Promise.resolve([]),
+        roots[2]?window.JDM_KNOWLEDGE.list({limit:500}):Promise.resolve([])
       ]);
       if(seq!==initSeq)return;
       renderCatalog(objects);renderPeople(people);renderTimeline(history);
