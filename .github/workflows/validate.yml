@@ -63,5 +63,11 @@ jobs:
           python scripts/test_editorial_release.py
           python scripts/test_entry_sanitizer.py
 
+      - name: Generate canonical Entry pages for the same build as Pages
+        run: python scripts/generate_entry_pages.py
+
       - name: Build site
         run: mkdocs build --strict
+
+      - name: Check built internal links
+        run: python scripts/check_built_links.py site
