@@ -1,0 +1,238 @@
+{
+  "rule_level_incomplete": 29,
+  "items": [
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/",
+      "scheme": "default",
+      "rule": "color-contrast",
+      "node_count": 10,
+      "status": "需节点级人工判断；阶段A未改代码",
+      "required_evidence": "重新导出selector/html/关联label，计算实际前景背景对比，检查可访问名称与可见文字；不把incomplete记为已确认违规"
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/",
+      "scheme": "slate",
+      "rule": "color-contrast",
+      "node_count": 10,
+      "status": "需节点级人工判断；阶段A未改代码",
+      "required_evidence": "重新导出selector/html/关联label，计算实际前景背景对比，检查可访问名称与可见文字；不把incomplete记为已确认违规"
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/search/?q=青花",
+      "scheme": "default",
+      "rule": "aria-prohibited-attr",
+      "node_count": 2,
+      "status": "需节点级人工判断；阶段A未改代码",
+      "required_evidence": "重新导出selector/html/关联label，计算实际前景背景对比，检查可访问名称与可见文字；不把incomplete记为已确认违规"
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/search/?q=青花",
+      "scheme": "slate",
+      "rule": "aria-prohibited-attr",
+      "node_count": 2,
+      "status": "需节点级人工判断；阶段A未改代码",
+      "required_evidence": "重新导出selector/html/关联label，计算实际前景背景对比，检查可访问名称与可见文字；不把incomplete记为已确认违规"
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/entry/blue-and-white/",
+      "scheme": "default",
+      "rule": "color-contrast",
+      "node_count": 1,
+      "status": "需节点级人工判断；阶段A未改代码",
+      "required_evidence": "重新导出selector/html/关联label，计算实际前景背景对比，检查可访问名称与可见文字；不把incomplete记为已确认违规"
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/entry/blue-and-white/",
+      "scheme": "slate",
+      "rule": "color-contrast",
+      "node_count": 1,
+      "status": "需节点级人工判断；阶段A未改代码",
+      "required_evidence": "重新导出selector/html/关联label，计算实际前景背景对比，检查可访问名称与可见文字；不把incomplete记为已确认违规"
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/kiln-map/",
+      "scheme": "default",
+      "rule": "aria-prohibited-attr",
+      "node_count": 3,
+      "status": "需节点级人工判断；阶段A未改代码",
+      "required_evidence": "重新导出selector/html/关联label，计算实际前景背景对比，检查可访问名称与可见文字；不把incomplete记为已确认违规"
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/kiln-map/",
+      "scheme": "default",
+      "rule": "color-contrast",
+      "node_count": 1,
+      "status": "需节点级人工判断；阶段A未改代码",
+      "required_evidence": "重新导出selector/html/关联label，计算实际前景背景对比，检查可访问名称与可见文字；不把incomplete记为已确认违规"
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/kiln-map/",
+      "scheme": "default",
+      "rule": "label-content-name-mismatch",
+      "node_count": 2,
+      "status": "需节点级人工判断；阶段A未改代码",
+      "required_evidence": "重新导出selector/html/关联label，计算实际前景背景对比，检查可访问名称与可见文字；不把incomplete记为已确认违规"
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/kiln-map/",
+      "scheme": "slate",
+      "rule": "aria-prohibited-attr",
+      "node_count": 3,
+      "status": "需节点级人工判断；阶段A未改代码",
+      "required_evidence": "重新导出selector/html/关联label，计算实际前景背景对比，检查可访问名称与可见文字；不把incomplete记为已确认违规"
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/kiln-map/",
+      "scheme": "slate",
+      "rule": "color-contrast",
+      "node_count": 1,
+      "status": "需节点级人工判断；阶段A未改代码",
+      "required_evidence": "重新导出selector/html/关联label，计算实际前景背景对比，检查可访问名称与可见文字；不把incomplete记为已确认违规"
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/kiln-map/",
+      "scheme": "slate",
+      "rule": "label-content-name-mismatch",
+      "node_count": 2,
+      "status": "需节点级人工判断；阶段A未改代码",
+      "required_evidence": "重新导出selector/html/关联label，计算实际前景背景对比，检查可访问名称与可见文字；不把incomplete记为已确认违规"
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/timeline/",
+      "scheme": "default",
+      "rule": "color-contrast",
+      "node_count": 5,
+      "status": "需节点级人工判断；阶段A未改代码",
+      "required_evidence": "重新导出selector/html/关联label，计算实际前景背景对比，检查可访问名称与可见文字；不把incomplete记为已确认违规"
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/network/relations/",
+      "scheme": "default",
+      "rule": "color-contrast",
+      "node_count": 3,
+      "status": "需节点级人工判断；阶段A未改代码",
+      "required_evidence": "重新导出selector/html/关联label，计算实际前景背景对比，检查可访问名称与可见文字；不把incomplete记为已确认违规"
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/catalog/",
+      "scheme": "default",
+      "rule": "color-contrast",
+      "node_count": 3,
+      "status": "需节点级人工判断；阶段A未改代码",
+      "required_evidence": "重新导出selector/html/关联label，计算实际前景背景对比，检查可访问名称与可见文字；不把incomplete记为已确认违规"
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/people/",
+      "scheme": "default",
+      "rule": "aria-prohibited-attr",
+      "node_count": 51,
+      "status": "需节点级人工判断；阶段A未改代码",
+      "required_evidence": "重新导出selector/html/关联label，计算实际前景背景对比，检查可访问名称与可见文字；不把incomplete记为已确认违规"
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/people/",
+      "scheme": "default",
+      "rule": "color-contrast",
+      "node_count": 3,
+      "status": "需节点级人工判断；阶段A未改代码",
+      "required_evidence": "重新导出selector/html/关联label，计算实际前景背景对比，检查可访问名称与可见文字；不把incomplete记为已确认违规"
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/people/",
+      "scheme": "slate",
+      "rule": "aria-prohibited-attr",
+      "node_count": 51,
+      "status": "需节点级人工判断；阶段A未改代码",
+      "required_evidence": "重新导出selector/html/关联label，计算实际前景背景对比，检查可访问名称与可见文字；不把incomplete记为已确认违规"
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/contemporary/",
+      "scheme": "default",
+      "rule": "color-contrast",
+      "node_count": 45,
+      "status": "需节点级人工判断；阶段A未改代码",
+      "required_evidence": "重新导出selector/html/关联label，计算实际前景背景对比，检查可访问名称与可见文字；不把incomplete记为已确认违规"
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/contemporary/",
+      "scheme": "slate",
+      "rule": "color-contrast",
+      "node_count": 45,
+      "status": "需节点级人工判断；阶段A未改代码",
+      "required_evidence": "重新导出selector/html/关联label，计算实际前景背景对比，检查可访问名称与可见文字；不把incomplete记为已确认违规"
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/network/global/?slug=blue-and-white",
+      "scheme": "default",
+      "rule": "color-contrast",
+      "node_count": 65,
+      "status": "需节点级人工判断；阶段A未改代码",
+      "required_evidence": "重新导出selector/html/关联label，计算实际前景背景对比，检查可访问名称与可见文字；不把incomplete记为已确认违规"
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/network/global/?slug=blue-and-white",
+      "scheme": "default",
+      "rule": "label-content-name-mismatch",
+      "node_count": 2,
+      "status": "需节点级人工判断；阶段A未改代码",
+      "required_evidence": "重新导出selector/html/关联label，计算实际前景背景对比，检查可访问名称与可见文字；不把incomplete记为已确认违规"
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/network/global/?slug=blue-and-white",
+      "scheme": "slate",
+      "rule": "color-contrast",
+      "node_count": 54,
+      "status": "需节点级人工判断；阶段A未改代码",
+      "required_evidence": "重新导出selector/html/关联label，计算实际前景背景对比，检查可访问名称与可见文字；不把incomplete记为已确认违规"
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/network/global/?slug=blue-and-white",
+      "scheme": "slate",
+      "rule": "label-content-name-mismatch",
+      "node_count": 2,
+      "status": "需节点级人工判断；阶段A未改代码",
+      "required_evidence": "重新导出selector/html/关联label，计算实际前景背景对比，检查可访问名称与可见文字；不把incomplete记为已确认违规"
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/craft/technology-tree/",
+      "scheme": "default",
+      "rule": "aria-prohibited-attr",
+      "node_count": 1,
+      "status": "需节点级人工判断；阶段A未改代码",
+      "required_evidence": "重新导出selector/html/关联label，计算实际前景背景对比，检查可访问名称与可见文字；不把incomplete记为已确认违规"
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/craft/technology-tree/",
+      "scheme": "default",
+      "rule": "color-contrast",
+      "node_count": 160,
+      "status": "需节点级人工判断；阶段A未改代码",
+      "required_evidence": "重新导出selector/html/关联label，计算实际前景背景对比，检查可访问名称与可见文字；不把incomplete记为已确认违规"
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/craft/technology-tree/",
+      "scheme": "slate",
+      "rule": "aria-prohibited-attr",
+      "node_count": 1,
+      "status": "需节点级人工判断；阶段A未改代码",
+      "required_evidence": "重新导出selector/html/关联label，计算实际前景背景对比，检查可访问名称与可见文字；不把incomplete记为已确认违规"
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/craft/technology-tree/",
+      "scheme": "slate",
+      "rule": "color-contrast",
+      "node_count": 16,
+      "status": "需节点级人工判断；阶段A未改代码",
+      "required_evidence": "重新导出selector/html/关联label，计算实际前景背景对比，检查可访问名称与可见文字；不把incomplete记为已确认违规"
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/gallery/",
+      "scheme": "default",
+      "rule": "color-contrast",
+      "node_count": 2,
+      "status": "需节点级人工判断；阶段A未改代码",
+      "required_evidence": "重新导出selector/html/关联label，计算实际前景背景对比，检查可访问名称与可见文字；不把incomplete记为已确认违规"
+    }
+  ],
+  "limits": "29是页面/模式/规则级记录，不是29个DOM节点；前轮报告未保存完整selector，不能仅凭计数宣称人工验收完成。"
+}

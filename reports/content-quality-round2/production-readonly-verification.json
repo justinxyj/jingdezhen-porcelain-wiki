@@ -1,0 +1,12 @@
+{
+  "checked_at_utc": "2026-10-08T07:20:19.381498+00:00",
+  "read_only": true,
+  "production_writes": false,
+  "selected_public_fields_unchanged": 250,
+  "entry_content_matches": 79,
+  "process_content_matches": 65,
+  "process_drafts_considered": 65,
+  "timeline_content_matches": 16,
+  "metadata_matches": 22,
+  "method": "所选公开字段再次GET比较；非全库备份或写入演练"
+}

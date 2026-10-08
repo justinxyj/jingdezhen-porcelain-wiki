@@ -1,0 +1,20 @@
+{
+  "entries_250": true,
+  "unique_slugs_250": true,
+  "eight_dimensions_each": true,
+  "relations_58": true,
+  "matrix_csv_rows_251": true,
+  "shortlist_24": true,
+  "shortlist_protects_79": true,
+  "json_files_parse": true,
+  "report_relative_links_exist": true,
+  "sensitive_credential_patterns_absent": true,
+  "production_250_public_records_unchanged": true,
+  "published_79_65_16_22_match": true,
+  "source_anomalies_27_preserved": true,
+  "source_candidate_ledger_8": true,
+  "relation_orphan_endpoints_0": true,
+  "formal_typecheck_exit_code": 0,
+  "frontend_modified": false,
+  "production_database_written": false
+}

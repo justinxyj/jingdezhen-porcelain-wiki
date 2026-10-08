@@ -1,0 +1,1575 @@
+{
+  "read_only": true,
+  "previous_anomalies_reviewed": 27,
+  "unique_requested_urls": 75,
+  "http_request_observations": 100,
+  "source_replacement_candidates": [
+    {
+      "slug": "lang-tingji",
+      "old_url": "https://www.chnmuseum.cn/zp/zpml/201812/t20181218_26821_wap.shtml",
+      "candidate_urls": [
+        "https://www.chnmuseum.cn/zp/zpml/201812/t20181218_26821.shtml"
+      ],
+      "claim": "康熙四十四年至五十一年郎廷极督理景德镇窑务；郎窑红为相关高温红釉品种。",
+      "quote": "“郎窑”是指清康熙四十四年至五十一年，江西巡抚郎廷极督理景德镇窑务时所烧的瓷器。",
+      "locator": "国博“郎窑红釉观音尊”正文第二段",
+      "reason": "旧wap后缀404，正常版与同名对象及对应论述一致",
+      "review_status": "已读对应段落，可准备仅sources URL替换差异；生产未批准"
+    },
+    {
+      "slug": "dehua-kiln",
+      "old_url": "https://whc.unesco.org/en/document/180501",
+      "candidate_urls": [
+        "https://www.metmuseum.org/art/collection/search/45842",
+        "https://whc.unesco.org/en/list/1561/",
+        "https://whc.unesco.org/en/list/1561/maps/"
+      ],
+      "claim": "福建德化白瓷/观音塑像；宋元泉州贸易遗产中的德化窑组成遗址。",
+      "quote": "The ivory white porcelain of the Dehua kilns of Fujian was well-suited to representing Guanyin；Sites of Dehua Kilns (Weilin-Neiban Kilns) / (Qudougong Kiln)",
+      "locator": "Met45842 Overview；UNESCO1561 maps组成编号1561rev-014/015",
+      "reason": "旧文档404；替代资料分别支持器物/遗址，不能由一件塑像证明全部长期外销史",
+      "review_status": "部分论述可对应；进入阶段B须限定贸易时期及逐句diff，不直接整体替换"
+    },
+    {
+      "slug": "qian-qichen",
+      "old_url": "https://www.jdz.gov.cn/zjcd/mljdz/t289353.shtml",
+      "candidate_urls": [],
+      "claim": "2000年观看瓷乐团并题词",
+      "quote": null,
+      "locator": null,
+      "reason": "本轮仍404，未取得官方活动记录/题词原件",
+      "review_status": "未找到充分替代资料；需接待档案或对应官方原文，暂不拟史实修订"
+    },
+    {
+      "slug": "wang-qi",
+      "old_url": "https://www.jdz.gov.cn/zsnj/jdzsz/jdzszdwj/rwz/rwc/P020201114583753053261.pdf",
+      "candidate_urls": [
+        "https://www.mct.gov.cn/whzx/zsdw/whbgwfglzx/202101/t20210127_921041.html"
+      ],
+      "claim": "现有1886—1933及美术组织经历；候选只支持珠山八友展览与作品，不能支持生卒年。",
+      "quote": "将“珠山八友”王琦、王大凡、汪野亭、程意亭、徐仲南、田鹤仙、邓碧珊、刘雨岑、何许人和毕伯涛等十人的作品齐聚一堂",
+      "locator": "MCT恭王府博物馆展览新闻，2021-01-15",
+      "reason": "PDF本次既出现404也出现503，无法读取；展览新闻不能代替人物志",
+      "review_status": "身份/作品范围部分可核，生卒与组织经历仍未核实，不能整体替换原出处"
+    },
+    {
+      "slug": "uk-ceramics",
+      "old_url": "https://www.metmuseum.org/art/collection/search/42490",
+      "candidate_urls": [
+        "https://www.metmuseum.org/art/collection/search/208277"
+      ],
+      "claim": "仅所给产地/工厂具体对象或知识传播的例证，不能替代完整地区工业史",
+      "quote": null,
+      "locator": "对象页Object Information或BnF专题正文",
+      "reason": "原链接是中国元青花，候选与所讲地区直接相关",
+      "review_status": "已读限定范围，可研究使用；整体概述仍需直接产业史，不自动替换全部论述"
+    },
+    {
+      "slug": "stoke-on-trent",
+      "old_url": "https://www.metmuseum.org/art/collection/search/42490",
+      "candidate_urls": [
+        "https://www.metmuseum.org/art/collection/search/208277"
+      ],
+      "claim": "仅所给产地/工厂具体对象或知识传播的例证，不能替代完整地区工业史",
+      "quote": null,
+      "locator": "对象页Object Information或BnF专题正文",
+      "reason": "原链接是中国元青花，候选与所讲地区直接相关",
+      "review_status": "已读限定范围，可研究使用；整体概述仍需直接产业史，不自动替换全部论述"
+    },
+    {
+      "slug": "limoges-porcelain",
+      "old_url": "https://www.metmuseum.org/art/collection/search/42490",
+      "candidate_urls": [
+        "https://www.metmuseum.org/art/collection/search/208000"
+      ],
+      "claim": "仅所给产地/工厂具体对象或知识传播的例证，不能替代完整地区工业史",
+      "quote": null,
+      "locator": "对象页Object Information或BnF专题正文",
+      "reason": "原链接是中国元青花，候选与所讲地区直接相关",
+      "review_status": "已读限定范围，可研究使用；整体概述仍需直接产业史，不自动替换全部论述"
+    },
+    {
+      "slug": "europe-porcelain",
+      "old_url": "https://www.metmuseum.org/art/collection/search/42490",
+      "candidate_urls": [
+        "https://heritage.bnf.fr/france-chine/porcelaine"
+      ],
+      "claim": "仅所给产地/工厂具体对象或知识传播的例证，不能替代完整地区工业史",
+      "quote": null,
+      "locator": "对象页Object Information或BnF专题正文",
+      "reason": "原链接是中国元青花，候选与所讲地区直接相关",
+      "review_status": "已读限定范围，可研究使用；整体概述仍需直接产业史，不自动替换全部论述"
+    }
+  ],
+  "previous_anomalies": [
+    {
+      "original_url": "https://cnki.istiz.org.cn/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFD2025&filename=JGWC202546019",
+      "previous_response": 500,
+      "new_observations": [
+        {
+          "url": "https://cnki.istiz.org.cn/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFD2025&filename=JGWC202546019",
+          "checked_at_utc": "2026-10-08T06:59:44.974080+00:00",
+          "method": "GET, no Range; body examined separately; reachability is not claim verification",
+          "status": 500
+        }
+      ],
+      "state": "响应异常待核，不自动删除；404也需核内容与替代依据"
+    },
+    {
+      "original_url": "https://cnki.istiz.org.cn/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFD2025&filename=LFWW202504007",
+      "previous_response": 500,
+      "new_observations": [
+        {
+          "url": "https://cnki.istiz.org.cn/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFD2025&filename=LFWW202504007",
+          "checked_at_utc": "2026-10-08T06:59:44.974600+00:00",
+          "method": "GET, no Range; body examined separately; reachability is not claim verification",
+          "status": 500
+        }
+      ],
+      "state": "响应异常待核，不自动删除；404也需核内容与替代依据"
+    },
+    {
+      "original_url": "https://cnki.istiz.org.cn/kcms/detail/detailall.aspx?dbcode=CJFQ&dbname=CJFD2025&filename=zgtc202506013",
+      "previous_response": 500,
+      "new_observations": [
+        {
+          "url": "https://cnki.istiz.org.cn/kcms/detail/detailall.aspx?dbcode=CJFQ&dbname=CJFD2025&filename=zgtc202506013",
+          "checked_at_utc": "2026-10-08T06:59:44.974825+00:00",
+          "method": "GET, no Range; body examined separately; reachability is not claim verification",
+          "status": 500
+        }
+      ],
+      "state": "响应异常待核，不自动删除；404也需核内容与替代依据"
+    },
+    {
+      "original_url": "https://ir.pku.edu.cn/handle/20.500.11897/378201",
+      "previous_response": 503,
+      "new_observations": [
+        {
+          "url": "https://ir.pku.edu.cn/handle/20.500.11897/378201",
+          "checked_at_utc": "2026-10-08T06:59:44.975099+00:00",
+          "method": "GET, no Range; body examined separately; reachability is not claim verification",
+          "status": 503
+        }
+      ],
+      "state": "响应异常待核，不自动删除；404也需核内容与替代依据"
+    },
+    {
+      "original_url": "https://ir.pku.edu.cn/handle/20.500.11897/579503",
+      "previous_response": 503,
+      "new_observations": [
+        {
+          "url": "https://ir.pku.edu.cn/handle/20.500.11897/579503",
+          "checked_at_utc": "2026-10-08T06:59:44.975524+00:00",
+          "method": "GET, no Range; body examined separately; reachability is not claim verification",
+          "status": 503
+        }
+      ],
+      "state": "响应异常待核，不自动删除；404也需核内容与替代依据"
+    },
+    {
+      "original_url": "https://ja.wikipedia.org/wiki/日本の陶磁器",
+      "previous_response": null,
+      "new_observations": [
+        {
+          "url": "https://ja.wikipedia.org/wiki/日本の陶磁器",
+          "checked_at_utc": "2026-10-08T06:59:44.982657+00:00",
+          "method": "GET, no Range; body examined separately; reachability is not claim verification",
+          "error_type": "UnicodeEncodeError"
+        },
+        {
+          "url": "https://ja.wikipedia.org/wiki/日本の陶磁器",
+          "checked_at_utc": "2026-10-08T07:02:13.868833+00:00",
+          "method": "GET, no Range; body examined separately; reachability is not claim verification",
+          "status": 404
+        }
+      ],
+      "state": "响应异常待核，不自动删除；404也需核内容与替代依据"
+    },
+    {
+      "original_url": "https://jdz.gov.cn/zjcd/mljdz/sj/t933002.shtml",
+      "previous_response": 503,
+      "new_observations": [
+        {
+          "url": "https://jdz.gov.cn/zjcd/mljdz/sj/t933002.shtml",
+          "checked_at_utc": "2026-10-08T06:59:44.985917+00:00",
+          "method": "GET, no Range; body examined separately; reachability is not claim verification",
+          "status": 503
+        }
+      ],
+      "state": "响应异常待核，不自动删除；404也需核内容与替代依据"
+    },
+    {
+      "original_url": "https://jdz.gov.cn/zwgk/zfgb/2024n/d3q/szfwj_3307/t958190.shtml",
+      "previous_response": 503,
+      "new_observations": [
+        {
+          "url": "https://jdz.gov.cn/zwgk/zfgb/2024n/d3q/szfwj_3307/t958190.shtml",
+          "checked_at_utc": "2026-10-08T06:59:44.986547+00:00",
+          "method": "GET, no Range; body examined separately; reachability is not claim verification",
+          "status": 503
+        }
+      ],
+      "state": "响应异常待核，不自动删除；404也需核内容与替代依据"
+    },
+    {
+      "original_url": "https://jdz.gov.cn/zwzx/jrcd/t1050280.shtml",
+      "previous_response": 503,
+      "new_observations": [
+        {
+          "url": "https://jdz.gov.cn/zwzx/jrcd/t1050280.shtml",
+          "checked_at_utc": "2026-10-08T06:59:44.999848+00:00",
+          "method": "GET, no Range; body examined separately; reachability is not claim verification",
+          "status": 503
+        }
+      ],
+      "state": "响应异常待核，不自动删除；404也需核内容与替代依据"
+    },
+    {
+      "original_url": "https://jdz.gov.cn/zwzx/jrcd/t1099484.shtml",
+      "previous_response": 503,
+      "new_observations": [
+        {
+          "url": "https://jdz.gov.cn/zwzx/jrcd/t1099484.shtml",
+          "checked_at_utc": "2026-10-08T06:59:46.525105+00:00",
+          "method": "GET, no Range; body examined separately; reachability is not claim verification",
+          "status": 503
+        }
+      ],
+      "state": "响应异常待核，不自动删除；404也需核内容与替代依据"
+    },
+    {
+      "original_url": "https://meta.librarydata.cn/metainfo?metaID=140420020210000145",
+      "previous_response": 503,
+      "new_observations": [
+        {
+          "url": "https://meta.librarydata.cn/metainfo?metaID=140420020210000145",
+          "checked_at_utc": "2026-10-08T06:59:46.611002+00:00",
+          "method": "GET, no Range; body examined separately; reachability is not claim verification",
+          "status": 503
+        }
+      ],
+      "state": "响应异常待核，不自动删除；404也需核内容与替代依据"
+    },
+    {
+      "original_url": "https://meta.librarydata.cn/metainfo?metaID=140420020210001657",
+      "previous_response": 503,
+      "new_observations": [
+        {
+          "url": "https://meta.librarydata.cn/metainfo?metaID=140420020210001657",
+          "checked_at_utc": "2026-10-08T06:59:46.913782+00:00",
+          "method": "GET, no Range; body examined separately; reachability is not claim verification",
+          "status": 503
+        }
+      ],
+      "state": "响应异常待核，不自动删除；404也需核内容与替代依据"
+    },
+    {
+      "original_url": "https://meta.librarydata.cn/metainfo?metaID=140420020210001666",
+      "previous_response": 503,
+      "new_observations": [
+        {
+          "url": "https://meta.librarydata.cn/metainfo?metaID=140420020210001666",
+          "checked_at_utc": "2026-10-08T06:59:47.177341+00:00",
+          "method": "GET, no Range; body examined separately; reachability is not claim verification",
+          "status": 503
+        }
+      ],
+      "state": "响应异常待核，不自动删除；404也需核内容与替代依据"
+    },
+    {
+      "original_url": "https://meta.librarydata.cn/metainfo?metaID=140420020210001709",
+      "previous_response": 503,
+      "new_observations": [
+        {
+          "url": "https://meta.librarydata.cn/metainfo?metaID=140420020210001709",
+          "checked_at_utc": "2026-10-08T06:59:48.058788+00:00",
+          "method": "GET, no Range; body examined separately; reachability is not claim verification",
+          "status": 503
+        }
+      ],
+      "state": "响应异常待核，不自动删除；404也需核内容与替代依据"
+    },
+    {
+      "original_url": "https://meta.librarydata.cn/metainfo?metaID=140420020230000213",
+      "previous_response": 503,
+      "new_observations": [
+        {
+          "url": "https://meta.librarydata.cn/metainfo?metaID=140420020230000213",
+          "checked_at_utc": "2026-10-08T06:59:48.367194+00:00",
+          "method": "GET, no Range; body examined separately; reachability is not claim verification",
+          "status": 503
+        }
+      ],
+      "state": "响应异常待核，不自动删除；404也需核内容与替代依据"
+    },
+    {
+      "original_url": "https://meta.librarydata.cn/metainfo?metaID=140420020230001039",
+      "previous_response": 503,
+      "new_observations": [
+        {
+          "url": "https://meta.librarydata.cn/metainfo?metaID=140420020230001039",
+          "checked_at_utc": "2026-10-08T06:59:48.918972+00:00",
+          "method": "GET, no Range; body examined separately; reachability is not claim verification",
+          "status": 503
+        }
+      ],
+      "state": "响应异常待核，不自动删除；404也需核内容与替代依据"
+    },
+    {
+      "original_url": "https://us.macmillan.com/books/9781250128355/theradicalpotter/",
+      "previous_response": 403,
+      "new_observations": [
+        {
+          "url": "https://us.macmillan.com/books/9781250128355/theradicalpotter/",
+          "checked_at_utc": "2026-10-08T06:59:48.967806+00:00",
+          "method": "GET, no Range; body examined separately; reachability is not claim verification",
+          "status": 403
+        }
+      ],
+      "state": "响应异常待核，不自动删除；404也需核内容与替代依据"
+    },
+    {
+      "original_url": "https://whc.unesco.org/en/document/180501",
+      "previous_response": 404,
+      "new_observations": [
+        {
+          "url": "https://whc.unesco.org/en/document/180501",
+          "checked_at_utc": "2026-10-08T06:59:49.377034+00:00",
+          "method": "GET, no Range; body examined separately; reachability is not claim verification",
+          "status": 404
+        }
+      ],
+      "state": "响应异常待核，不自动删除；404也需核内容与替代依据"
+    },
+    {
+      "original_url": "https://www.chinaguyao.com/biaozhunhuajianshezhuanlan/2015-10-28/2708.html",
+      "previous_response": 503,
+      "new_observations": [
+        {
+          "url": "https://www.chinaguyao.com/biaozhunhuajianshezhuanlan/2015-10-28/2708.html",
+          "checked_at_utc": "2026-10-08T06:59:51.720568+00:00",
+          "method": "GET, no Range; body examined separately; reachability is not claim verification",
+          "status": 503
+        }
+      ],
+      "state": "响应异常待核，不自动删除；404也需核内容与替代依据"
+    },
+    {
+      "original_url": "https://www.chnmuseum.cn/zp/zpml/201812/t20181218_26821_wap.shtml",
+      "previous_response": 404,
+      "new_observations": [
+        {
+          "url": "https://www.chnmuseum.cn/zp/zpml/201812/t20181218_26821_wap.shtml",
+          "checked_at_utc": "2026-10-08T06:59:52.565328+00:00",
+          "method": "GET, no Range; body examined separately; reachability is not claim verification",
+          "status": 404
+        }
+      ],
+      "state": "响应异常待核，不自动删除；404也需核内容与替代依据"
+    },
+    {
+      "original_url": "https://www.gotheborg.com/natgeograph/",
+      "previous_response": 503,
+      "new_observations": [
+        {
+          "url": "https://www.gotheborg.com/natgeograph/",
+          "checked_at_utc": "2026-10-08T06:59:53.476482+00:00",
+          "method": "GET, no Range; body examined separately; reachability is not claim verification",
+          "status": 503
+        }
+      ],
+      "state": "响应异常待核，不自动删除；404也需核内容与替代依据"
+    },
+    {
+      "original_url": "https://www.ihchina.cn/project_details/14270/",
+      "previous_response": 503,
+      "new_observations": [
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "checked_at_utc": "2026-10-08T06:59:53.834592+00:00",
+          "method": "GET, no Range; body examined separately; reachability is not claim verification",
+          "status": 503
+        },
+        {
+          "url": "https://www.ihchina.cn/project_details/14270/",
+          "checked_at_utc": "2026-10-08T07:00:06.396311+00:00",
+          "method": "GET, no Range; body examined separately; reachability is not claim verification",
+          "status": 503
+        }
+      ],
+      "state": "响应异常待核，不自动删除；404也需核内容与替代依据"
+    },
+    {
+      "original_url": "https://www.jdz.gov.cn/zjcd/mljdz/t289353.shtml",
+      "previous_response": 404,
+      "new_observations": [
+        {
+          "url": "https://www.jdz.gov.cn/zjcd/mljdz/t289353.shtml",
+          "checked_at_utc": "2026-10-08T06:59:53.835705+00:00",
+          "method": "GET, no Range; body examined separately; reachability is not claim verification",
+          "status": 404
+        }
+      ],
+      "state": "响应异常待核，不自动删除；404也需核内容与替代依据"
+    },
+    {
+      "original_url": "https://www.jdz.gov.cn/zsnj/jdzsz/jdzszdwj/rwz/rwc/P020201114583753053261.pdf",
+      "previous_response": 404,
+      "new_observations": [
+        {
+          "url": "https://www.jdz.gov.cn/zsnj/jdzsz/jdzszdwj/rwz/rwc/P020201114583753053261.pdf",
+          "checked_at_utc": "2026-10-08T06:59:54.288537+00:00",
+          "method": "GET, no Range; body examined separately; reachability is not claim verification",
+          "status": 503
+        },
+        {
+          "url": "https://www.jdz.gov.cn/zsnj/jdzsz/jdzszdwj/rwz/rwc/P020201114583753053261.pdf",
+          "checked_at_utc": "2026-10-08T07:00:06.401323+00:00",
+          "method": "GET, no Range; body examined separately; reachability is not claim verification",
+          "status": 404
+        }
+      ],
+      "state": "响应异常待核，不自动删除；404也需核内容与替代依据"
+    },
+    {
+      "original_url": "https://yangtze.silkroadinfo.org.cn/2022/0120/c702a3980057/page.htm",
+      "previous_response": null,
+      "new_observations": [
+        {
+          "url": "https://yangtze.silkroadinfo.org.cn/2022/0120/c702a3980057/page.htm",
+          "checked_at_utc": "2026-10-08T06:59:55.059255+00:00",
+          "method": "GET, no Range; body examined separately; reachability is not claim verification",
+          "error_type": "URLError"
+        }
+      ],
+      "state": "响应异常待核，不自动删除；404也需核内容与替代依据"
+    },
+    {
+      "original_url": "https://zh.wikisource.org/zh-hans/容齋隨筆/卷四",
+      "previous_response": null,
+      "new_observations": [
+        {
+          "url": "https://zh.wikisource.org/zh-hans/容齋隨筆/卷四",
+          "checked_at_utc": "2026-10-08T06:59:55.201083+00:00",
+          "method": "GET, no Range; body examined separately; reachability is not claim verification",
+          "error_type": "UnicodeEncodeError"
+        },
+        {
+          "url": "https://zh.wikisource.org/zh-hans/容齋隨筆/卷四",
+          "checked_at_utc": "2026-10-08T07:02:13.869969+00:00",
+          "method": "GET, no Range; body examined separately; reachability is not claim verification",
+          "status": 200,
+          "final_url": "https://zh.wikisource.org/zh-hans/%E5%AE%B9%E9%BD%8B%E9%9A%A8%E7%AD%86/%E5%8D%B7%E5%9B%9B",
+          "content_type": "text/html; charset=UTF-8",
+          "bytes_read": 104778,
+          "extracted_body_sha256": "84f9f5f737d96746d19da49a637f88e767deaa487294dc01a4d2a8a8ba71017f",
+          "substantive_response": true,
+          "body_excerpt": "",
+          "claim_verified": false
+        }
+      ],
+      "state": "响应异常待核，不自动删除；404也需核内容与替代依据"
+    },
+    {
+      "original_url": "https://zh.wikisource.org/zh-hans/景德镇陶录",
+      "previous_response": null,
+      "new_observations": [
+        {
+          "url": "https://zh.wikisource.org/zh-hans/景德镇陶录",
+          "checked_at_utc": "2026-10-08T06:59:55.201405+00:00",
+          "method": "GET, no Range; body examined separately; reachability is not claim verification",
+          "error_type": "UnicodeEncodeError"
+        },
+        {
+          "url": "https://zh.wikisource.org/zh-hans/景德镇陶录",
+          "checked_at_utc": "2026-10-08T07:02:13.870527+00:00",
+          "method": "GET, no Range; body examined separately; reachability is not claim verification",
+          "status": 200,
+          "final_url": "https://zh.wikisource.org/zh-hans/%E6%99%AF%E5%BE%B7%E9%95%87%E9%99%B6%E5%BD%95",
+          "content_type": "text/html; charset=UTF-8",
+          "bytes_read": 237251,
+          "extracted_body_sha256": "bbf09197cc134ffd043cd2fdc1905b7f34a9b9a233dfe247df717e226ad42a7d",
+          "substantive_response": true,
+          "body_excerpt": "",
+          "claim_verified": false
+        }
+      ],
+      "state": "响应异常待核，不自动删除；404也需核内容与替代依据"
+    }
+  ],
+  "all_new_observations": [
+    {
+      "url": "http://tcg.jdzol.net/",
+      "checked_at_utc": "2026-10-08T06:59:44.970412+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "http://tcg.jdzol.net/",
+      "content_type": "text/html",
+      "bytes_read": 12,
+      "extracted_body_sha256": "b8817335466c478e8fd277b5237c2cd071d0cb824545beadd7952468ecba4995",
+      "substantive_response": false,
+      "body_excerpt": "[STOP_PROXY]",
+      "claim_verified": false
+    },
+    {
+      "url": "https://archaeology.pku.edu.cn/info/1030/3492.htm",
+      "checked_at_utc": "2026-10-08T06:59:44.972483+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://archaeology.pku.edu.cn/info/1030/3492.htm",
+      "content_type": "text/html",
+      "bytes_read": 91016,
+      "extracted_body_sha256": "23e53e083f650ffb22196464ae031b926b3d2d41b51ea446f3845f5d6f727939",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://cnki.istiz.org.cn/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFD2025&filename=JGWC202546019",
+      "checked_at_utc": "2026-10-08T06:59:44.974080+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 500
+    },
+    {
+      "url": "https://cnki.istiz.org.cn/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFD2025&filename=LFWW202504007",
+      "checked_at_utc": "2026-10-08T06:59:44.974600+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 500
+    },
+    {
+      "url": "https://cnki.istiz.org.cn/kcms/detail/detailall.aspx?dbcode=CJFQ&dbname=CJFD2025&filename=zgtc202506013",
+      "checked_at_utc": "2026-10-08T06:59:44.974825+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 500
+    },
+    {
+      "url": "https://ir.pku.edu.cn/handle/20.500.11897/378201",
+      "checked_at_utc": "2026-10-08T06:59:44.975099+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 503
+    },
+    {
+      "url": "https://ir.pku.edu.cn/handle/20.500.11897/579503",
+      "checked_at_utc": "2026-10-08T06:59:44.975524+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 503
+    },
+    {
+      "url": "https://ja.wikipedia.org/wiki/日本の陶磁器",
+      "checked_at_utc": "2026-10-08T06:59:44.982657+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "error_type": "UnicodeEncodeError"
+    },
+    {
+      "url": "https://jdz.gov.cn/zjcd/mljdz/sj/t933002.shtml",
+      "checked_at_utc": "2026-10-08T06:59:44.985917+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 503
+    },
+    {
+      "url": "https://jdz.gov.cn/zwgk/zfgb/2024n/d3q/szfwj_3307/t958190.shtml",
+      "checked_at_utc": "2026-10-08T06:59:44.986547+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 503
+    },
+    {
+      "url": "https://jdz.gov.cn/zwzx/jrcd/t1050280.shtml",
+      "checked_at_utc": "2026-10-08T06:59:44.999848+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 503
+    },
+    {
+      "url": "https://jdz.gov.cn/zwzx/jrcd/t1099484.shtml",
+      "checked_at_utc": "2026-10-08T06:59:46.525105+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 503
+    },
+    {
+      "url": "https://meta.librarydata.cn/metainfo?metaID=140420020210000145",
+      "checked_at_utc": "2026-10-08T06:59:46.611002+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 503
+    },
+    {
+      "url": "https://meta.librarydata.cn/metainfo?metaID=140420020210001657",
+      "checked_at_utc": "2026-10-08T06:59:46.913782+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 503
+    },
+    {
+      "url": "https://meta.librarydata.cn/metainfo?metaID=140420020210001666",
+      "checked_at_utc": "2026-10-08T06:59:47.177341+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 503
+    },
+    {
+      "url": "https://meta.librarydata.cn/metainfo?metaID=140420020210001709",
+      "checked_at_utc": "2026-10-08T06:59:48.058788+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 503
+    },
+    {
+      "url": "https://meta.librarydata.cn/metainfo?metaID=140420020230000213",
+      "checked_at_utc": "2026-10-08T06:59:48.367194+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 503
+    },
+    {
+      "url": "https://meta.librarydata.cn/metainfo?metaID=140420020230001039",
+      "checked_at_utc": "2026-10-08T06:59:48.918972+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 503
+    },
+    {
+      "url": "https://us.macmillan.com/books/9781250128355/theradicalpotter/",
+      "checked_at_utc": "2026-10-08T06:59:48.967806+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 403
+    },
+    {
+      "url": "https://whc.unesco.org/en/decisions/9170/",
+      "checked_at_utc": "2026-10-08T06:59:49.148459+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://whc.unesco.org/en/decisions/9170/",
+      "content_type": "text/html;charset=UTF-8",
+      "bytes_read": 131587,
+      "extracted_body_sha256": "a58f5c699f5dcd522a0a6b11cbdce092cb2e99378b3fbb2cf418565712e8b320",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://whc.unesco.org/en/document/180501",
+      "checked_at_utc": "2026-10-08T06:59:49.377034+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 404
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/1561/",
+      "checked_at_utc": "2026-10-08T06:59:50.124579+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://whc.unesco.org/en/list/1561/",
+      "content_type": "text/html;charset=UTF-8",
+      "bytes_read": 167240,
+      "extracted_body_sha256": "bda6fbb1e35cb09680101791c07c434cc7e99cf4639598d3440851f9512e6250",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/1765/",
+      "checked_at_utc": "2026-10-08T06:59:50.552735+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://whc.unesco.org/en/list/1765/",
+      "content_type": "text/html;charset=UTF-8",
+      "bytes_read": 176036,
+      "extracted_body_sha256": "24c01a64955c78f55b7a01364b18185bbafc04246683bd46d610e332debd8818",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.bing.com/search?q=site%3Achnmuseum.cn%20%E9%83%8E%E7%AA%91%E7%BA%A2%E9%87%89%E8%A7%82%E9%9F%B3%E5%B0%8A",
+      "checked_at_utc": "2026-10-08T06:59:50.733883+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.bing.com/search?q=site%3Achnmuseum.cn%20%E9%83%8E%E7%AA%91%E7%BA%A2%E9%87%89%E8%A7%82%E9%9F%B3%E5%B0%8A",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 129065,
+      "extracted_body_sha256": "0c492cdf6d501398c4358b27f36335b45835b210930813da54ff3375a0e12358",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.bing.com/search?q=site%3Adpm.org.cn%20%E5%BE%B7%E5%8C%96%E7%AA%91%20%E7%99%BD%E7%93%B7",
+      "checked_at_utc": "2026-10-08T06:59:51.054864+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.bing.com/search?q=site%3Adpm.org.cn%20%E5%BE%B7%E5%8C%96%E7%AA%91%20%E7%99%BD%E7%93%B7",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 124624,
+      "extracted_body_sha256": "400c5c767ede521e0f5beaa5f6642bc89485e27321d2f80493f04235fd50d285",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.bing.com/search?q=site%3Ajdz.gov.cn%20%E7%8E%8B%E7%90%A6%201884%201937",
+      "checked_at_utc": "2026-10-08T06:59:51.222332+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.bing.com/search?q=site%3Ajdz.gov.cn%20%E7%8E%8B%E7%90%A6%201884%201937",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 110400,
+      "extracted_body_sha256": "eba5fcdb1f0c5ed1b216949cb88cb1d23647107647ffacc8cc82a285792fc18a",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.bing.com/search?q=site%3Ajdz.gov.cn%20%E9%92%B1%E5%85%B6%E7%90%9B%202000%20%E7%93%B7%E4%B9%90",
+      "checked_at_utc": "2026-10-08T06:59:51.511575+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.bing.com/search?q=site%3Ajdz.gov.cn%20%E9%92%B1%E5%85%B6%E7%90%9B%202000%20%E7%93%B7%E4%B9%90",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 124033,
+      "extracted_body_sha256": "2b615a63e06dd52af026dcc70aa9f5b99f5c27d27b8c804dbb9ea0e0d4281968",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.chinaguyao.com/biaozhunhuajianshezhuanlan/2015-10-28/2708.html",
+      "checked_at_utc": "2026-10-08T06:59:51.720568+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 503
+    },
+    {
+      "url": "https://www.chnmuseum.cn/zp/zpml/201812/t20181218_26821.shtml",
+      "checked_at_utc": "2026-10-08T06:59:51.875978+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.chnmuseum.cn/zp/zpml/201812/t20181218_26821.shtml",
+      "content_type": "text/html; charset=utf8",
+      "bytes_read": 29103,
+      "extracted_body_sha256": "43464a667a19c350c236f76d54101a227b61e36168e048965d4217367bfc5b7c",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.chnmuseum.cn/zp/zpml/201812/t20181218_26821_wap.shtml",
+      "checked_at_utc": "2026-10-08T06:59:52.565328+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 404
+    },
+    {
+      "url": "https://www.dpm.org.cn/collection/ceramic/226759.html",
+      "checked_at_utc": "2026-10-08T06:59:52.566031+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.dpm.org.cn/collection/ceramic/226759.html",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 124415,
+      "extracted_body_sha256": "e55382d8e794be101e7ac96a2b3a8ed01affb61d925aa4947e63366ed5a8f82a",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.dpm.org.cn/collection/ceramic/227111.html",
+      "checked_at_utc": "2026-10-08T06:59:52.566343+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.dpm.org.cn/collection/ceramic/227111.html",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 97780,
+      "extracted_body_sha256": "9fa8ec861409e06da73e2d0edb1f485adc816330cdeee7fa751f802300219253",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.dpm.org.cn/collection/ceramic/227155.html",
+      "checked_at_utc": "2026-10-08T06:59:52.566868+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.dpm.org.cn/collection/ceramic/227155.html",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 98831,
+      "extracted_body_sha256": "eca448d51168301698532a84078c8d544ac3641a6c3b069f7a3e3d5a0f954dd5",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.gotheborg.com/natgeograph/",
+      "checked_at_utc": "2026-10-08T06:59:53.476482+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 503
+    },
+    {
+      "url": "https://www.ihchina.cn/project_details/14270/",
+      "checked_at_utc": "2026-10-08T06:59:53.834592+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 503
+    },
+    {
+      "url": "https://www.jdz.gov.cn/zjcd/mljdz/t289353.shtml",
+      "checked_at_utc": "2026-10-08T06:59:53.835705+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 404
+    },
+    {
+      "url": "https://www.jdz.gov.cn/zsnj/jdzsz/jdzszdwj/rwz/rwc/P020201114583753053261.pdf",
+      "checked_at_utc": "2026-10-08T06:59:54.288537+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 503
+    },
+    {
+      "url": "https://www.metmuseum.org/essays/east-and-west-chinese-export-porcelain",
+      "checked_at_utc": "2026-10-08T06:59:54.344206+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.metmuseum.org/essays/east-and-west-chinese-export-porcelain",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 199092,
+      "extracted_body_sha256": "ab0025765d913420f969a3df17afa0f0ce0b72f6c378652cd7b64aaf88e219c2",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+      "checked_at_utc": "2026-10-08T06:59:54.540991+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 77906,
+      "extracted_body_sha256": "722deb2b88f77527c2bdfcd37647b24949d0dfd8b8f45c00469dfefb22a529a1",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://yangtze.silkroadinfo.org.cn/2022/0120/c702a3980057/page.htm",
+      "checked_at_utc": "2026-10-08T06:59:55.059255+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "error_type": "URLError"
+    },
+    {
+      "url": "https://zh.wikisource.org/zh-hans/容齋隨筆/卷四",
+      "checked_at_utc": "2026-10-08T06:59:55.201083+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "error_type": "UnicodeEncodeError"
+    },
+    {
+      "url": "https://zh.wikisource.org/zh-hans/景德镇陶录",
+      "checked_at_utc": "2026-10-08T06:59:55.201405+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "error_type": "UnicodeEncodeError"
+    },
+    {
+      "url": "http://tcg.jdzol.net/",
+      "checked_at_utc": "2026-10-08T07:00:06.117192+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "http://tcg.jdzol.net/",
+      "content_type": "text/html",
+      "bytes_read": 12,
+      "extracted_body_sha256": "b8817335466c478e8fd277b5237c2cd071d0cb824545beadd7952468ecba4995",
+      "substantive_response": false,
+      "body_excerpt": "[STOP_PROXY]",
+      "claim_verified": false
+    },
+    {
+      "url": "https://archaeology.pku.edu.cn/info/1030/3492.htm",
+      "checked_at_utc": "2026-10-08T07:00:06.117953+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://archaeology.pku.edu.cn/info/1030/3492.htm",
+      "content_type": "text/html",
+      "bytes_read": 91016,
+      "extracted_body_sha256": "23e53e083f650ffb22196464ae031b926b3d2d41b51ea446f3845f5d6f727939",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://whc.unesco.org/en/decisions/9170/",
+      "checked_at_utc": "2026-10-08T07:00:06.118526+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://whc.unesco.org/en/decisions/9170/",
+      "content_type": "text/html;charset=UTF-8",
+      "bytes_read": 131587,
+      "extracted_body_sha256": "a58f5c699f5dcd522a0a6b11cbdce092cb2e99378b3fbb2cf418565712e8b320",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/1561/",
+      "checked_at_utc": "2026-10-08T07:00:06.118917+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://whc.unesco.org/en/list/1561/",
+      "content_type": "text/html;charset=UTF-8",
+      "bytes_read": 167240,
+      "extracted_body_sha256": "bda6fbb1e35cb09680101791c07c434cc7e99cf4639598d3440851f9512e6250",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/1765/",
+      "checked_at_utc": "2026-10-08T07:00:06.119433+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://whc.unesco.org/en/list/1765/",
+      "content_type": "text/html;charset=UTF-8",
+      "bytes_read": 176036,
+      "extracted_body_sha256": "24c01a64955c78f55b7a01364b18185bbafc04246683bd46d610e332debd8818",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://whc.unesco.org/en/tentativelists/5806/",
+      "checked_at_utc": "2026-10-08T07:00:06.120289+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://whc.unesco.org/en/tentativelists/5806/",
+      "content_type": "text/html;charset=UTF-8",
+      "bytes_read": 124472,
+      "extracted_body_sha256": "fcb105bfe8a167981a0291ac4d6c11c874380d0a5dce13eaca44a62ff92fd0af",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.bing.com/search?q=site%3Achnmuseum.cn%20%E9%83%8E%E7%AA%91%E7%BA%A2%E9%87%89%E8%A7%82%E9%9F%B3%E5%B0%8A",
+      "checked_at_utc": "2026-10-08T07:00:06.121182+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.bing.com/search?q=site%3Achnmuseum.cn%20%E9%83%8E%E7%AA%91%E7%BA%A2%E9%87%89%E8%A7%82%E9%9F%B3%E5%B0%8A",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 125333,
+      "extracted_body_sha256": "0c492cdf6d501398c4358b27f36335b45835b210930813da54ff3375a0e12358",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.bing.com/search?q=site%3Adpm.org.cn%20%E5%BE%B7%E5%8C%96%E7%AA%91%20%E7%99%BD%E7%93%B7",
+      "checked_at_utc": "2026-10-08T07:00:06.124295+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.bing.com/search?q=site%3Adpm.org.cn%20%E5%BE%B7%E5%8C%96%E7%AA%91%20%E7%99%BD%E7%93%B7",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 121403,
+      "extracted_body_sha256": "400c5c767ede521e0f5beaa5f6642bc89485e27321d2f80493f04235fd50d285",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.bing.com/search?q=site%3Ajdz.gov.cn%20%E7%8E%8B%E7%90%A6%201884%201937",
+      "checked_at_utc": "2026-10-08T07:00:06.132316+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.bing.com/search?q=site%3Ajdz.gov.cn%20%E7%8E%8B%E7%90%A6%201884%201937",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 117748,
+      "extracted_body_sha256": "eba5fcdb1f0c5ed1b216949cb88cb1d23647107647ffacc8cc82a285792fc18a",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.bing.com/search?q=site%3Ajdz.gov.cn%20%E9%92%B1%E5%85%B6%E7%90%9B%202000%20%E7%93%B7%E4%B9%90",
+      "checked_at_utc": "2026-10-08T07:00:06.133216+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.bing.com/search?q=site%3Ajdz.gov.cn%20%E9%92%B1%E5%85%B6%E7%90%9B%202000%20%E7%93%B7%E4%B9%90",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 123158,
+      "extracted_body_sha256": "2b615a63e06dd52af026dcc70aa9f5b99f5c27d27b8c804dbb9ea0e0d4281968",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.chnmuseum.cn/zp/zpml/201812/t20181218_26821.shtml",
+      "checked_at_utc": "2026-10-08T07:00:06.290890+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.chnmuseum.cn/zp/zpml/201812/t20181218_26821.shtml",
+      "content_type": "text/html; charset=utf8",
+      "bytes_read": 29103,
+      "extracted_body_sha256": "43464a667a19c350c236f76d54101a227b61e36168e048965d4217367bfc5b7c",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.dpm.org.cn/collection/ceramic/226759.html",
+      "checked_at_utc": "2026-10-08T07:00:06.347756+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.dpm.org.cn/collection/ceramic/226759.html",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 124415,
+      "extracted_body_sha256": "e55382d8e794be101e7ac96a2b3a8ed01affb61d925aa4947e63366ed5a8f82a",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.dpm.org.cn/collection/ceramic/227111.html",
+      "checked_at_utc": "2026-10-08T07:00:06.371350+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.dpm.org.cn/collection/ceramic/227111.html",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 97780,
+      "extracted_body_sha256": "9fa8ec861409e06da73e2d0edb1f485adc816330cdeee7fa751f802300219253",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.dpm.org.cn/collection/ceramic/227155.html",
+      "checked_at_utc": "2026-10-08T07:00:06.388412+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.dpm.org.cn/collection/ceramic/227155.html",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 98831,
+      "extracted_body_sha256": "eca448d51168301698532a84078c8d544ac3641a6c3b069f7a3e3d5a0f954dd5",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.ihchina.cn/project_details/14270/",
+      "checked_at_utc": "2026-10-08T07:00:06.396311+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 503
+    },
+    {
+      "url": "https://www.jdz.gov.cn/zsnj/jdzsz/jdzszdwj/rwz/rwc/P020201114583753053261.pdf",
+      "checked_at_utc": "2026-10-08T07:00:06.401323+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 404
+    },
+    {
+      "url": "https://www.mct.gov.cn/whzx/zsdw/whbgwfglzx/202101/t20210127_921041.html",
+      "checked_at_utc": "2026-10-08T07:00:06.435045+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.mct.gov.cn/whzx/zsdw/whbgwfglzx/202101/t20210127_921041.html",
+      "content_type": "text/html",
+      "bytes_read": 24493,
+      "extracted_body_sha256": "d203271e15cd67f0b54fc11c21ca6b9aaa31a225d0c1179a3340a0b516cac471",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/42490",
+      "checked_at_utc": "2026-10-08T07:00:07.051032+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.metmuseum.org/art/collection/search/42490",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 167716,
+      "extracted_body_sha256": "71043aeff732d3c2f8bc4c6a3f1bd16bd79dd3ecebea4f1dc41b6921244480d4",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/42515",
+      "checked_at_utc": "2026-10-08T07:00:07.144448+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.metmuseum.org/art/collection/search/42515",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 206092,
+      "extracted_body_sha256": "7c287bf37d4eac339d5e15770e1e4e993e78f43d3f8bcd1ba48075b120844cfe",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/46080",
+      "checked_at_utc": "2026-10-08T07:00:07.429549+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.metmuseum.org/art/collection/search/46080",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 174571,
+      "extracted_body_sha256": "90cf5b0658915fab216f5cde68432bfc8fc17f2cc473ffd284bcb8ec2154b7de",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/48308",
+      "checked_at_utc": "2026-10-08T07:00:07.529582+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.metmuseum.org/art/collection/search/48308",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 165255,
+      "extracted_body_sha256": "881bf781a4790503bff11db40df4754a6e2a385db4c11fa499db8ed0bce0a863",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.metmuseum.org/essays/east-and-west-chinese-export-porcelain",
+      "checked_at_utc": "2026-10-08T07:00:07.828387+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.metmuseum.org/essays/east-and-west-chinese-export-porcelain",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 199092,
+      "extracted_body_sha256": "ab0025765d913420f969a3df17afa0f0ce0b72f6c378652cd7b64aaf88e219c2",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+      "checked_at_utc": "2026-10-08T07:00:07.925640+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 77906,
+      "extracted_body_sha256": "722deb2b88f77527c2bdfcd37647b24949d0dfd8b8f45c00469dfefb22a529a1",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://ja.wikipedia.org/wiki/日本の陶磁器",
+      "checked_at_utc": "2026-10-08T07:02:13.868833+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 404
+    },
+    {
+      "url": "https://zh.wikisource.org/zh-hans/容齋隨筆/卷四",
+      "checked_at_utc": "2026-10-08T07:02:13.869969+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://zh.wikisource.org/zh-hans/%E5%AE%B9%E9%BD%8B%E9%9A%A8%E7%AD%86/%E5%8D%B7%E5%9B%9B",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes_read": 104778,
+      "extracted_body_sha256": "84f9f5f737d96746d19da49a637f88e767deaa487294dc01a4d2a8a8ba71017f",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://zh.wikisource.org/zh-hans/景德镇陶录",
+      "checked_at_utc": "2026-10-08T07:02:13.870527+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://zh.wikisource.org/zh-hans/%E6%99%AF%E5%BE%B7%E9%95%87%E9%99%B6%E5%BD%95",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes_read": 237251,
+      "extracted_body_sha256": "bbf09197cc134ffd043cd2fdc1905b7f34a9b9a233dfe247df717e226ad42a7d",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://tcg.jdzol.net/",
+      "checked_at_utc": "2026-10-08T07:02:36.925334+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 503
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/1561/maps/",
+      "checked_at_utc": "2026-10-08T07:02:36.926263+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://whc.unesco.org/en/list/1561/maps/",
+      "content_type": "text/html;charset=UTF-8",
+      "bytes_read": 160614,
+      "extracted_body_sha256": "9f08c152b0dafffbfa4f137531545821df0c1b6ffd42845496a953b848c151b0",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.dpm.org.cn/Uploads/File/2020/05/15/u5ebe4a7333945.pdf",
+      "checked_at_utc": "2026-10-08T07:02:36.927075+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.dpm.org.cn/Uploads/File/2020/05/15/u5ebe4a7333945.pdf",
+      "content_type": "application/pdf",
+      "bytes_read": 4000000
+    },
+    {
+      "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+      "checked_at_utc": "2026-10-08T07:02:36.927913+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+      "content_type": "application/pdf",
+      "bytes_read": 1018864
+    },
+    {
+      "url": "https://www.dpm.org.cn/about/privacy.html",
+      "checked_at_utc": "2026-10-08T07:02:36.928667+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 404
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/42491",
+      "checked_at_utc": "2026-10-08T07:02:36.929188+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.metmuseum.org/art/collection/search/42491",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 185075,
+      "extracted_body_sha256": "34280295924f65ae38a0f3f558cc551cbdae6046ea18db53d16ec824c659af97",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/45842",
+      "checked_at_utc": "2026-10-08T07:02:36.929879+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.metmuseum.org/art/collection/search/45842",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 173136,
+      "extracted_body_sha256": "251c883aedd3858bf18f36a770c553b02e84501829d24fe49cd97ee5d8b7b243",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.metmuseum.org/policies/image-resources",
+      "checked_at_utc": "2026-10-08T07:02:36.930591+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.metmuseum.org/policies/image-resources",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 145654,
+      "extracted_body_sha256": "d56122aa586ce00342f0f4a8875927bfed8ceb7bf55701df0936d618a6bf7322",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/File:Nanfeng_Kiln_39180-Foshan_(49043084327).jpg",
+      "checked_at_utc": "2026-10-08T07:04:28.674293+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Nanfeng_Kiln_39180-Foshan_(49043084327).jpg",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes_read": 117216,
+      "extracted_body_sha256": "1b502be43ce5d8ff95f5d312914090aac58239f33c568971c111faf44ba625b9",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.dpm.org.cn/bottom/privacy/236341.html",
+      "checked_at_utc": "2026-10-08T07:04:28.675092+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.dpm.org.cn/bottom/privacy/236341.html",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 73812,
+      "extracted_body_sha256": "91f6a2adbaae2eb3e9a28af101dc607994afcadfb4e72693e9b53a22e699022c",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.dpm.org.cn/collection/ceramic/227698.html",
+      "checked_at_utc": "2026-10-08T07:04:28.675686+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.dpm.org.cn/collection/ceramic/227698.html",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 94793,
+      "extracted_body_sha256": "712f685b00cea079bb7fc704f7560d58c13c3d8178ccbf987299390d53218064",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/199135",
+      "checked_at_utc": "2026-10-08T07:14:17.757686+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.metmuseum.org/art/collection/search/199135",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 204475,
+      "extracted_body_sha256": "aa5cd56ea7cfbd9584fab40244591ef568b2fbc9593c4b316bc3a4d9d1ae09ee",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/200855",
+      "checked_at_utc": "2026-10-08T07:14:17.758883+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.metmuseum.org/art/collection/search/200855",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 220845,
+      "extracted_body_sha256": "be8d434077c2817cfbce3f122371d939567cf7bdd2cf5b580b5a7f27d6ef760e",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/208000",
+      "checked_at_utc": "2026-10-08T07:14:17.759602+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.metmuseum.org/art/collection/search/208000",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 180495,
+      "extracted_body_sha256": "90a7c2ed8f8ab9c5e63b42dc7dffcd01a33e79d1effa0a347cf908f9c3eca363",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/208277",
+      "checked_at_utc": "2026-10-08T07:14:17.760204+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.metmuseum.org/art/collection/search/208277",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 193962,
+      "extracted_body_sha256": "2d641206b55436666b4bee3fadf970c71684cd6e9e91ea25c420dfef41158cb4",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/42490",
+      "checked_at_utc": "2026-10-08T07:14:17.760813+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.metmuseum.org/art/collection/search/42490",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 167716,
+      "extracted_body_sha256": "71043aeff732d3c2f8bc4c6a3f1bd16bd79dd3ecebea4f1dc41b6921244480d4",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/44735",
+      "checked_at_utc": "2026-10-08T07:14:17.764422+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.metmuseum.org/art/collection/search/44735",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 189026,
+      "extracted_body_sha256": "7f9e367d967be3b810a7db83bdc176091e63aee19d36b8faaeb45794b43c9b49",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/451848",
+      "checked_at_utc": "2026-10-08T07:14:17.768849+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.metmuseum.org/art/collection/search/451848",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 191172,
+      "extracted_body_sha256": "e27468144a2ff597c3b66bb27565ad7589ca90934dfb70941d94053a07ee7f80",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/45842",
+      "checked_at_utc": "2026-10-08T07:14:17.769388+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.metmuseum.org/art/collection/search/45842",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 173136,
+      "extracted_body_sha256": "251c883aedd3858bf18f36a770c553b02e84501829d24fe49cd97ee5d8b7b243",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/460666",
+      "checked_at_utc": "2026-10-08T07:14:17.770030+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.metmuseum.org/art/collection/search/460666",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 202888,
+      "extracted_body_sha256": "3c2eddd54ffa1af3ac99f41d0eeace1ec1eef831a079db8ff3b7f4e8e302c4b0",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/47973",
+      "checked_at_utc": "2026-10-08T07:14:17.773001+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.metmuseum.org/art/collection/search/47973",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 166390,
+      "extracted_body_sha256": "4344c3a3454f010fcea955711698be6bdfab5138e67f66f7fcf843a724d2b873",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/48390",
+      "checked_at_utc": "2026-10-08T07:14:18.385509+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.metmuseum.org/art/collection/search/48390",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 163797,
+      "extracted_body_sha256": "2b939901eb75ecf6240f68bdd57367f5a5975890bf31273ee14694ea9f4ba3e8",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/49291",
+      "checked_at_utc": "2026-10-08T07:14:18.409994+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.metmuseum.org/art/collection/search/49291",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 193106,
+      "extracted_body_sha256": "7e87746d0584130cc00d2111378be6b51ebfdab3f43c13eaad58ebc583c8bad6",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/52672",
+      "checked_at_utc": "2026-10-08T07:14:18.415510+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.metmuseum.org/art/collection/search/52672",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 162557,
+      "extracted_body_sha256": "89172332b9b33f19ffa6f6a1ad6c1037a8c8d413c98825bedf5bb4809fa08719",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/57441",
+      "checked_at_utc": "2026-10-08T07:14:18.425732+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.metmuseum.org/art/collection/search/57441",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 156338,
+      "extracted_body_sha256": "d7355a1d4a59996441f99496b430efc2d7db5f791feb701198fca8f5196354e4",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://heritage.bnf.fr/france-chine/porcelaine",
+      "checked_at_utc": "2026-10-08T07:18:19.241594+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://heritage.bnf.fr/france-chine/porcelaine",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes_read": 48300,
+      "extracted_body_sha256": "d40965535db7483e85c88076bd9e74d97b1558cd8f4b30538590186b4e3a142c",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+      "checked_at_utc": "2026-10-08T07:18:19.242676+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes_read": 156538,
+      "extracted_body_sha256": "752bd385bda76161ace0ee88bce76d29909ebd126cc137b43dcc93ea3ea6e87f",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/42491",
+      "checked_at_utc": "2026-10-08T07:18:19.243202+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.metmuseum.org/art/collection/search/42491",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 185075,
+      "extracted_body_sha256": "34280295924f65ae38a0f3f558cc551cbdae6046ea18db53d16ec824c659af97",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/42497",
+      "checked_at_utc": "2026-10-08T07:18:19.243607+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.metmuseum.org/art/collection/search/42497",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 189864,
+      "extracted_body_sha256": "5c79778e9e62d22fa0a9005f9726f22f18719b2fba0fb07bb718aecf4b794547",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/42507",
+      "checked_at_utc": "2026-10-08T07:18:19.244796+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.metmuseum.org/art/collection/search/42507",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 176867,
+      "extracted_body_sha256": "a07282e61ece54ddc885dbf8ebd808a57077245ddb90c50413a2e8039789878b",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/42515",
+      "checked_at_utc": "2026-10-08T07:18:19.248312+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.metmuseum.org/art/collection/search/42515",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 206092,
+      "extracted_body_sha256": "7c287bf37d4eac339d5e15770e1e4e993e78f43d3f8bcd1ba48075b120844cfe",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/46080",
+      "checked_at_utc": "2026-10-08T07:18:19.248875+00:00",
+      "method": "GET, no Range; body examined separately; reachability is not claim verification",
+      "status": 200,
+      "final_url": "https://www.metmuseum.org/art/collection/search/46080",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 174571,
+      "extracted_body_sha256": "90cf5b0658915fab216f5cde68432bfc8fc17f2cc473ffd284bcb8ec2154b7de",
+      "substantive_response": true,
+      "body_excerpt": "",
+      "claim_verified": false
+    }
+  ],
+  "limits": [
+    "HTTP200不是已核验；代理拦截和不相干检索结果不算有效正文。",
+    "原23异常未自动删除，URL编码失败属于核查客户端问题，不算远端失效。"
+  ]
+}
