@@ -1,0 +1,1403 @@
+{
+  "base": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/",
+  "checks": [
+    {
+      "check": "layout  320 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout  320 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "existing gallery immediately after hero 320",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row  320",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/catalog/ 320 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/catalog/ 320 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "full filter set museum/catalog/ 320",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "readable filters museum/catalog/ 320",
+      "passed": true,
+      "detail": [
+        {
+          "id": "catalog-era",
+          "width": 139,
+          "label": "全部时代"
+        },
+        {
+          "id": "catalog-craft",
+          "width": 139,
+          "label": "全部工艺"
+        },
+        {
+          "id": "catalog-type",
+          "width": 139,
+          "label": "全部类型"
+        },
+        {
+          "id": "catalog-glaze",
+          "width": 139,
+          "label": "全部釉色"
+        },
+        {
+          "id": "catalog-pattern",
+          "width": 139,
+          "label": "全部纹饰"
+        },
+        {
+          "id": "catalog-institution",
+          "width": 288,
+          "label": "全部馆藏机构"
+        }
+      ]
+    },
+    {
+      "check": "header search stays in row museum/catalog/ 320",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/people/ 320 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/people/ 320 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "full filter set museum/people/ 320",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "readable filters museum/people/ 320",
+      "passed": true,
+      "detail": [
+        {
+          "id": "people-era",
+          "width": 139,
+          "label": "全部时代"
+        },
+        {
+          "id": "people-role",
+          "width": 139,
+          "label": "全部身份"
+        },
+        {
+          "id": "people-world",
+          "width": 139,
+          "label": "全部主题"
+        }
+      ]
+    },
+    {
+      "check": "header search stays in row museum/people/ 320",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout entry/qingbai-porcelain/ 320 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout entry/qingbai-porcelain/ 320 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "compact no image entry/qingbai-porcelain/ 320",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row entry/qingbai-porcelain/ 320",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout entry/tang-ying/ 320 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout entry/tang-ying/ 320 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "compact no image entry/tang-ying/ 320",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row entry/tang-ying/ 320",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout search/?q=青花 320 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout search/?q=青花 320 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row search/?q=青花 320",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout craft/technology-tree/ 320 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout craft/technology-tree/ 320 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row craft/technology-tree/ 320",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/timeline/ 320 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/timeline/ 320 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row museum/timeline/ 320",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/kiln-map/ 320 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/kiln-map/ 320 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row museum/kiln-map/ 320",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout contemporary/ 320 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout contemporary/ 320 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row contemporary/ 320",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout  375 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout  375 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "existing gallery immediately after hero 375",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row  375",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/catalog/ 375 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/catalog/ 375 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "full filter set museum/catalog/ 375",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "readable filters museum/catalog/ 375",
+      "passed": true,
+      "detail": [
+        {
+          "id": "catalog-era",
+          "width": 166.5,
+          "label": "全部时代"
+        },
+        {
+          "id": "catalog-craft",
+          "width": 166.5,
+          "label": "全部工艺"
+        },
+        {
+          "id": "catalog-type",
+          "width": 166.5,
+          "label": "全部类型"
+        },
+        {
+          "id": "catalog-glaze",
+          "width": 166.5,
+          "label": "全部釉色"
+        },
+        {
+          "id": "catalog-pattern",
+          "width": 166.5,
+          "label": "全部纹饰"
+        },
+        {
+          "id": "catalog-institution",
+          "width": 343,
+          "label": "全部馆藏机构"
+        }
+      ]
+    },
+    {
+      "check": "header search stays in row museum/catalog/ 375",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/people/ 375 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/people/ 375 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "full filter set museum/people/ 375",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "readable filters museum/people/ 375",
+      "passed": true,
+      "detail": [
+        {
+          "id": "people-era",
+          "width": 166.5,
+          "label": "全部时代"
+        },
+        {
+          "id": "people-role",
+          "width": 166.5,
+          "label": "全部身份"
+        },
+        {
+          "id": "people-world",
+          "width": 166.5,
+          "label": "全部主题"
+        }
+      ]
+    },
+    {
+      "check": "header search stays in row museum/people/ 375",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout entry/qingbai-porcelain/ 375 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout entry/qingbai-porcelain/ 375 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "compact no image entry/qingbai-porcelain/ 375",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row entry/qingbai-porcelain/ 375",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout entry/tang-ying/ 375 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout entry/tang-ying/ 375 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "compact no image entry/tang-ying/ 375",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row entry/tang-ying/ 375",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout search/?q=青花 375 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout search/?q=青花 375 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row search/?q=青花 375",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout craft/technology-tree/ 375 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout craft/technology-tree/ 375 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row craft/technology-tree/ 375",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/timeline/ 375 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/timeline/ 375 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row museum/timeline/ 375",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/kiln-map/ 375 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/kiln-map/ 375 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row museum/kiln-map/ 375",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout contemporary/ 375 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout contemporary/ 375 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row contemporary/ 375",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout  390 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout  390 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "existing gallery immediately after hero 390",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "actual Palace Museum home image loads",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row  390",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/catalog/ 390 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/catalog/ 390 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "full filter set museum/catalog/ 390",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "readable filters museum/catalog/ 390",
+      "passed": true,
+      "detail": [
+        {
+          "id": "catalog-era",
+          "width": 174,
+          "label": "全部时代"
+        },
+        {
+          "id": "catalog-craft",
+          "width": 174,
+          "label": "全部工艺"
+        },
+        {
+          "id": "catalog-type",
+          "width": 174,
+          "label": "全部类型"
+        },
+        {
+          "id": "catalog-glaze",
+          "width": 174,
+          "label": "全部釉色"
+        },
+        {
+          "id": "catalog-pattern",
+          "width": 174,
+          "label": "全部纹饰"
+        },
+        {
+          "id": "catalog-institution",
+          "width": 358,
+          "label": "全部馆藏机构"
+        }
+      ]
+    },
+    {
+      "check": "header search stays in row museum/catalog/ 390",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/people/ 390 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/people/ 390 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "full filter set museum/people/ 390",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "readable filters museum/people/ 390",
+      "passed": true,
+      "detail": [
+        {
+          "id": "people-era",
+          "width": 174,
+          "label": "全部时代"
+        },
+        {
+          "id": "people-role",
+          "width": 174,
+          "label": "全部身份"
+        },
+        {
+          "id": "people-world",
+          "width": 174,
+          "label": "全部主题"
+        }
+      ]
+    },
+    {
+      "check": "header search stays in row museum/people/ 390",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout entry/qingbai-porcelain/ 390 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout entry/qingbai-porcelain/ 390 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "compact no image entry/qingbai-porcelain/ 390",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row entry/qingbai-porcelain/ 390",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout entry/tang-ying/ 390 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout entry/tang-ying/ 390 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "compact no image entry/tang-ying/ 390",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row entry/tang-ying/ 390",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout search/?q=青花 390 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout search/?q=青花 390 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row search/?q=青花 390",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout craft/technology-tree/ 390 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout craft/technology-tree/ 390 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row craft/technology-tree/ 390",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/timeline/ 390 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/timeline/ 390 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row museum/timeline/ 390",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/kiln-map/ 390 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/kiln-map/ 390 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row museum/kiln-map/ 390",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout contemporary/ 390 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout contemporary/ 390 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row contemporary/ 390",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout  768 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout  768 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "existing gallery immediately after hero 768",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row  768",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/catalog/ 768 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/catalog/ 768 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "full filter set museum/catalog/ 768",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "readable filters museum/catalog/ 768",
+      "passed": true,
+      "detail": [
+        {
+          "id": "catalog-era",
+          "width": 363,
+          "label": "全部时代"
+        },
+        {
+          "id": "catalog-craft",
+          "width": 363,
+          "label": "全部工艺"
+        },
+        {
+          "id": "catalog-type",
+          "width": 363,
+          "label": "全部类型"
+        },
+        {
+          "id": "catalog-glaze",
+          "width": 363,
+          "label": "全部釉色"
+        },
+        {
+          "id": "catalog-pattern",
+          "width": 363,
+          "label": "全部纹饰"
+        },
+        {
+          "id": "catalog-institution",
+          "width": 736,
+          "label": "全部馆藏机构"
+        }
+      ]
+    },
+    {
+      "check": "header search stays in row museum/catalog/ 768",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/people/ 768 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/people/ 768 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "full filter set museum/people/ 768",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "readable filters museum/people/ 768",
+      "passed": true,
+      "detail": [
+        {
+          "id": "people-era",
+          "width": 363,
+          "label": "全部时代"
+        },
+        {
+          "id": "people-role",
+          "width": 363,
+          "label": "全部身份"
+        },
+        {
+          "id": "people-world",
+          "width": 363,
+          "label": "全部主题"
+        }
+      ]
+    },
+    {
+      "check": "header search stays in row museum/people/ 768",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout entry/qingbai-porcelain/ 768 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout entry/qingbai-porcelain/ 768 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "compact no image entry/qingbai-porcelain/ 768",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row entry/qingbai-porcelain/ 768",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout entry/tang-ying/ 768 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout entry/tang-ying/ 768 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "compact no image entry/tang-ying/ 768",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row entry/tang-ying/ 768",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout search/?q=青花 768 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout search/?q=青花 768 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row search/?q=青花 768",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout craft/technology-tree/ 768 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout craft/technology-tree/ 768 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row craft/technology-tree/ 768",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/timeline/ 768 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/timeline/ 768 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row museum/timeline/ 768",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/kiln-map/ 768 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/kiln-map/ 768 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row museum/kiln-map/ 768",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout contemporary/ 768 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout contemporary/ 768 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row contemporary/ 768",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout  1440 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout  1440 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "existing gallery immediately after hero 1440",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row  1440",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/catalog/ 1440 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/catalog/ 1440 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "full filter set museum/catalog/ 1440",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "readable filters museum/catalog/ 1440",
+      "passed": true,
+      "detail": [
+        {
+          "id": "catalog-era",
+          "width": 142.5,
+          "label": "全部时代"
+        },
+        {
+          "id": "catalog-craft",
+          "width": 142.5,
+          "label": "全部工艺"
+        },
+        {
+          "id": "catalog-type",
+          "width": 142.5,
+          "label": "全部类型"
+        },
+        {
+          "id": "catalog-glaze",
+          "width": 142.5,
+          "label": "全部釉色"
+        },
+        {
+          "id": "catalog-pattern",
+          "width": 142.5,
+          "label": "全部纹饰"
+        },
+        {
+          "id": "catalog-institution",
+          "width": 142.5,
+          "label": "全部馆藏机构"
+        }
+      ]
+    },
+    {
+      "check": "header search stays in row museum/catalog/ 1440",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/people/ 1440 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/people/ 1440 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "full filter set museum/people/ 1440",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "readable filters museum/people/ 1440",
+      "passed": true,
+      "detail": [
+        {
+          "id": "people-era",
+          "width": 196.796875,
+          "label": "全部时代"
+        },
+        {
+          "id": "people-role",
+          "width": 196.796875,
+          "label": "全部身份"
+        },
+        {
+          "id": "people-world",
+          "width": 196.796875,
+          "label": "全部主题"
+        }
+      ]
+    },
+    {
+      "check": "header search stays in row museum/people/ 1440",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout entry/qingbai-porcelain/ 1440 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout entry/qingbai-porcelain/ 1440 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "compact no image entry/qingbai-porcelain/ 1440",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row entry/qingbai-porcelain/ 1440",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout entry/tang-ying/ 1440 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout entry/tang-ying/ 1440 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "compact no image entry/tang-ying/ 1440",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row entry/tang-ying/ 1440",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout search/?q=青花 1440 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout search/?q=青花 1440 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row search/?q=青花 1440",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout craft/technology-tree/ 1440 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout craft/technology-tree/ 1440 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row craft/technology-tree/ 1440",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/timeline/ 1440 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/timeline/ 1440 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row museum/timeline/ 1440",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/kiln-map/ 1440 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout museum/kiln-map/ 1440 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row museum/kiln-map/ 1440",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout contemporary/ 1440 default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "layout contemporary/ 1440 slate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "header search stays in row contemporary/ 1440",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "catalog selected state visible",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "catalog clear restores results",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "people selected state visible",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "people clear restores results",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Qingbai all existing references resolve",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Revision uses production timestamp/version",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "shared Material header and search",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "visitor feedback no account/no fake submission",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "feedback dialog accessibility default",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "feedback dialog accessibility slate",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "feedback dialog no horizontal scroll",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "feedback download real content",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "feedback dialog keyboard containment",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "feedback dialog keyboard containment",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "feedback dialog keyboard containment",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "feedback dialog keyboard containment",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "feedback dialog keyboard containment",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "feedback dialog keyboard containment",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "feedback dialog keyboard containment",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "feedback dialog keyboard containment",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "feedback dialog keyboard containment",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "feedback ESC focus return",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contemporary real navigation 时间轴",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contemporary real navigation 窑址地图",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contemporary real navigation 器物图谱",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "object never labelled person",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "generic card template removed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "failure state museum/catalog/",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retry recovers museum/catalog/",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "failure state museum/people/",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retry recovers museum/people/",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "failure state search/?q=青花",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retry recovers search/?q=青花",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "failure state craft/technology-tree/",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retry recovers craft/technology-tree/",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "failure state museum/timeline/",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retry recovers museum/timeline/",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "failure state museum/kiln-map/",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retry recovers museum/kiln-map/",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "weak network loading/busy semantics",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "weak network eventually recovers",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "no browser runtime errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "home_metrics": [
+    {
+      "width": 320,
+      "first_image_document_y": 950.6875
+    },
+    {
+      "width": 375,
+      "first_image_document_y": 921.09375
+    },
+    {
+      "width": 390,
+      "first_image_document_y": 921.09375
+    },
+    {
+      "width": 768,
+      "first_image_document_y": 979.140625
+    },
+    {
+      "width": 1440,
+      "first_image_document_y": 1026.4375
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,29 @@
+{
+  "at_utc": "2026-10-08T13:33:14.348860+00:00",
+  "status": "BLOCKED_EXTERNAL_EXECUTION_PROXY",
+  "response_status": 503,
+  "server": "envoy",
+  "response_body": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: immediate connect error: Invalid argument|remote address:envoy://cloudflare_https_tunnel/",
+  "affected_urls": [
+    "https://justinxyj.github.io/jingdezhen-porcelain-wiki/",
+    "https://api.github.com/repos/justinxyj/jingdezhen-porcelain-wiki",
+    "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/world-browser.css"
+  ],
+  "sandbox_external_github_recheck": "same HTTP 503",
+  "published_palette_fix_observed_before_outage": true,
+  "last_actions_observation": {
+    "run_id": 37782683944,
+    "build": "success",
+    "deploy_job": "in_progress",
+    "current_step": "Install Chromium",
+    "deploy_to_pages_step": "completed before current step"
+  },
+  "failed_browser_attempts": [
+    "visitor: first document HTTP status assertion failed",
+    "performance: homepage content unavailable",
+    "accessibility: search results unavailable",
+    "OS palette/graph: contemporary content unavailable"
+  ],
+  "conclusion": "No final production acceptance PASS; these connection failures do not establish a website defect.",
+  "database_write": false
+}

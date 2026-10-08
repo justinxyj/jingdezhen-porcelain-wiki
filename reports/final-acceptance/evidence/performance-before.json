@@ -1,0 +1,3390 @@
+{
+  "measurement": "cold Chromium, 1440×1000, 2s after content ready; no interactions; coverage is UTF-16 source offsets, not transfer bytes; CORS preflights counted separately from database reads",
+  "pages": [
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/",
+      "request_count": 29,
+      "transferred_bytes": 351450,
+      "js_transferred_bytes": 47470,
+      "css_transferred_bytes": 57292,
+      "supabase_requests": 0,
+      "supabase_data_requests": 0,
+      "supabase_preflight_requests": 0,
+      "external_requests": 9,
+      "requests": [
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/",
+          "type": "Document",
+          "status": 200,
+          "bytes": 8744
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/stylesheets/main.ec1eaa64.min.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 23724
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum-images.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 708
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 6200
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/wiki.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 3823
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/official-gallery.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 646
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/site-interactions.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 2505
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum-apple.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 4404
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/curator.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 2211
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/stylesheets/palette.ab4e12ef.min.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 2096
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/people.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 1059
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/visitor.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 5486
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/reception.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 1677
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/media-policy.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 1142
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/site-privacy.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 670
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/museum-images.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 2735
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/dom-safe.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 1292
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/visitor-ui.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 6059
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/javascripts/bundle.d7400e89.min.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 35572
+        },
+        {
+          "url": "https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 2753
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+          "type": "Font",
+          "status": 200,
+          "bytes": 43713
+        },
+        {
+          "url": "https://img.dpm.org.cn/Uploads/Picture/dc/15514%5B1024%5D.jpg",
+          "type": "Image",
+          "status": 200,
+          "bytes": 33332
+        },
+        {
+          "url": "https://img.dpm.org.cn/Uploads/Picture/dc/63%5B1024%5D.jpg",
+          "type": "Image",
+          "status": 200,
+          "bytes": 91598
+        },
+        {
+          "url": "https://img.dpm.org.cn/Uploads/Picture/dc/53101%5B1024%5D.jpg",
+          "type": "Image",
+          "status": 200,
+          "bytes": 64241
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/images/favicon.png",
+          "type": "Other",
+          "status": 200,
+          "bytes": 2050
+        },
+        {
+          "url": "https://api.github.com/repos/justinxyj/jingdezhen-porcelain-wiki/releases/latest",
+          "type": "XHR",
+          "status": 404,
+          "bytes": 1082
+        },
+        {
+          "url": "https://api.github.com/repos/justinxyj/jingdezhen-porcelain-wiki",
+          "type": "XHR",
+          "status": 200,
+          "bytes": 1928
+        },
+        {
+          "url": "data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25m0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41z\"/></svg>",
+          "type": "Image",
+          "status": 200,
+          "bytes": 0
+        },
+        {
+          "url": "data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0M5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0m6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5m-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0\"/></svg>",
+          "type": "Image",
+          "status": 200,
+          "bytes": 0
+        }
+      ],
+      "failures": [],
+      "javascript_coverage": [
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/",
+          "source_utf16_units": 285,
+          "unused_utf16_units": 63
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/",
+          "source_utf16_units": 683,
+          "unused_utf16_units": 638
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/",
+          "source_utf16_units": 132,
+          "unused_utf16_units": 67
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/javascripts/bundle.d7400e89.min.js",
+          "source_utf16_units": 114285,
+          "unused_utf16_units": 68119
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/dom-safe.js",
+          "source_utf16_units": 2839,
+          "unused_utf16_units": 2329
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/media-policy.js",
+          "source_utf16_units": 1159,
+          "unused_utf16_units": 536
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/museum-images.js",
+          "source_utf16_units": 6363,
+          "unused_utf16_units": 4289
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/site-privacy.js",
+          "source_utf16_units": 914,
+          "unused_utf16_units": 55
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/visitor-ui.js",
+          "source_utf16_units": 16094,
+          "unused_utf16_units": 12726
+        }
+      ],
+      "css_coverage": [
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/visitor.css",
+          "source_utf16_units": 23431,
+          "unused_utf16_units": 19163
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/stylesheets/main.ec1eaa64.min.css",
+          "source_utf16_units": 139787,
+          "unused_utf16_units": 114265
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/site-interactions.css",
+          "source_utf16_units": 8595,
+          "unused_utf16_units": 8595
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/wiki.css",
+          "source_utf16_units": 16871,
+          "unused_utf16_units": 16871
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum.css",
+          "source_utf16_units": 24063,
+          "unused_utf16_units": 24063
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/reception.css",
+          "source_utf16_units": 4570,
+          "unused_utf16_units": 4570
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/people.css",
+          "source_utf16_units": 2347,
+          "unused_utf16_units": 2347
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/stylesheets/palette.ab4e12ef.min.css",
+          "source_utf16_units": 12641,
+          "unused_utf16_units": 9833
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum-apple.css",
+          "source_utf16_units": 19640,
+          "unused_utf16_units": 18937
+        },
+        {
+          "url": "https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback",
+          "source_utf16_units": 42696,
+          "unused_utf16_units": 42696
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/",
+          "source_utf16_units": 59,
+          "unused_utf16_units": 0
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum-images.css",
+          "source_utf16_units": 1033,
+          "unused_utf16_units": 1033
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/official-gallery.css",
+          "source_utf16_units": 1025,
+          "unused_utf16_units": 349
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/curator.css",
+          "source_utf16_units": 8215,
+          "unused_utf16_units": 8215
+        }
+      ],
+      "dom": {
+        "height": 4112,
+        "sections": 6,
+        "images": [
+          {
+            "loading": "lazy",
+            "complete": true,
+            "width": 741
+          },
+          {
+            "loading": "lazy",
+            "complete": true,
+            "width": 812
+          },
+          {
+            "loading": "lazy",
+            "complete": true,
+            "width": 756
+          }
+        ],
+        "timing": {
+          "name": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 1659.0999999940395,
+          "navigationId": 8554,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "h2",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "gzip",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 1.2999999821186066,
+          "domainLookupStart": 1.2999999821186066,
+          "domainLookupEnd": 1.2999999821186066,
+          "connectStart": 141.59999999403954,
+          "secureConnectionStart": 161.09999999403954,
+          "connectEnd": 162.7999999821186,
+          "requestStart": 163,
+          "responseStart": 204.2999999821186,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 204.2999999821186,
+          "responseEnd": 205.19999998807907,
+          "transferSize": 8606,
+          "encodedBodySize": 8306,
+          "decodedBodySize": 44792,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 1615.5,
+          "domContentLoadedEventStart": 1615.5999999940395,
+          "domContentLoadedEventEnd": 1650.5,
+          "domComplete": 1659.0999999940395,
+          "loadEventStart": 1659.0999999940395,
+          "loadEventEnd": 1659.0999999940395,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "low"
+          }
+        }
+      }
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/entry/blue-and-white/",
+      "request_count": 36,
+      "transferred_bytes": 377218,
+      "js_transferred_bytes": 132749,
+      "css_transferred_bytes": 57257,
+      "supabase_requests": 0,
+      "supabase_data_requests": 0,
+      "supabase_preflight_requests": 0,
+      "external_requests": 9,
+      "requests": [
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/entry/blue-and-white/",
+          "type": "Document",
+          "status": 200,
+          "bytes": 13491
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/stylesheets/main.ec1eaa64.min.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 23705
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/stylesheets/palette.ab4e12ef.min.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 2102
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/wiki.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 3826
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum-images.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 669
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/official-gallery.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 647
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 6217
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/curator.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 2327
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum-apple.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 4319
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/people.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 1036
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/site-interactions.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 2507
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/visitor.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 5492
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/reception.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 1657
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/javascripts/bundle.d7400e89.min.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 35441
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/runtime-config.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 439
+        },
+        {
+          "url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/42490/177595/main-image",
+          "type": "Image",
+          "status": 200,
+          "bytes": 124954
+        },
+        {
+          "url": "https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 2753
+        },
+        {
+          "url": "data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2m3.1 5.07c.14 0 .28.05.4.16l1.27 1.27c.23.22.23.57 0 .78l-1 1-2.05-2.05 1-1c.1-.11.24-.16.38-.16m-1.97 1.74 2.06 2.06-6.06 6.06H7.07v-2.06z\"/></svg>",
+          "type": "Image",
+          "status": 200,
+          "bytes": 0
+        },
+        {
+          "url": "data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M8.59 16.58 13.17 12 8.59 7.41 10 6l6 6-6 6z\"/></svg>",
+          "type": "Image",
+          "status": 200,
+          "bytes": 0
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+          "type": "Font",
+          "status": 200,
+          "bytes": 43713
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/vendor/supabase/supabase.min.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 56762
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/auth-manager.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 2811
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/data-contract.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 1150
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/dom-safe.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 1296
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/source-references.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 2949
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/knowledge-store.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 13097
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/media-policy.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 1118
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/visitor-ui.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 6046
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/museum-images.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 2746
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/wiki-enhancements.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 8225
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/site-privacy.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 669
+        },
+        {
+          "url": "https://api.github.com/repos/justinxyj/jingdezhen-porcelain-wiki/releases/latest",
+          "type": "XHR",
+          "status": 404,
+          "bytes": 1081
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/images/favicon.png",
+          "type": "Other",
+          "status": 200,
+          "bytes": 2046
+        },
+        {
+          "url": "https://api.github.com/repos/justinxyj/jingdezhen-porcelain-wiki",
+          "type": "XHR",
+          "status": 200,
+          "bytes": 1927
+        },
+        {
+          "url": "data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25m0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41z\"/></svg>",
+          "type": "Image",
+          "status": 200,
+          "bytes": 0
+        },
+        {
+          "url": "data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0M5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0m6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5m-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0\"/></svg>",
+          "type": "Image",
+          "status": 200,
+          "bytes": 0
+        }
+      ],
+      "failures": [],
+      "javascript_coverage": [
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/entry/blue-and-white/",
+          "source_utf16_units": 289,
+          "unused_utf16_units": 63
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/entry/blue-and-white/",
+          "source_utf16_units": 683,
+          "unused_utf16_units": 638
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/entry/blue-and-white/",
+          "source_utf16_units": 132,
+          "unused_utf16_units": 67
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/javascripts/bundle.d7400e89.min.js",
+          "source_utf16_units": 114285,
+          "unused_utf16_units": 67925
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/runtime-config.js",
+          "source_utf16_units": 296,
+          "unused_utf16_units": 0
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/vendor/supabase/supabase.min.js",
+          "source_utf16_units": 218160,
+          "unused_utf16_units": 209440
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/auth-manager.js",
+          "source_utf16_units": 7041,
+          "unused_utf16_units": 5753
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/dom-safe.js",
+          "source_utf16_units": 2839,
+          "unused_utf16_units": 2329
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/media-policy.js",
+          "source_utf16_units": 1159,
+          "unused_utf16_units": 536
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/source-references.js",
+          "source_utf16_units": 5202,
+          "unused_utf16_units": 0
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/data-contract.js",
+          "source_utf16_units": 2579,
+          "unused_utf16_units": 1689
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/knowledge-store.js",
+          "source_utf16_units": 53949,
+          "unused_utf16_units": 49412
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/wiki-enhancements.js",
+          "source_utf16_units": 20869,
+          "unused_utf16_units": 17807
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/museum-images.js",
+          "source_utf16_units": 6363,
+          "unused_utf16_units": 4149
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/site-privacy.js",
+          "source_utf16_units": 914,
+          "unused_utf16_units": 55
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/visitor-ui.js",
+          "source_utf16_units": 16094,
+          "unused_utf16_units": 12726
+        }
+      ],
+      "css_coverage": [
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/entry/blue-and-white/",
+          "source_utf16_units": 59,
+          "unused_utf16_units": 0
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/site-interactions.css",
+          "source_utf16_units": 8595,
+          "unused_utf16_units": 8595
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum-images.css",
+          "source_utf16_units": 1033,
+          "unused_utf16_units": 1033
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/visitor.css",
+          "source_utf16_units": 23431,
+          "unused_utf16_units": 19501
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/stylesheets/main.ec1eaa64.min.css",
+          "source_utf16_units": 139787,
+          "unused_utf16_units": 111834
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/stylesheets/palette.ab4e12ef.min.css",
+          "source_utf16_units": 12641,
+          "unused_utf16_units": 9833
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum.css",
+          "source_utf16_units": 24063,
+          "unused_utf16_units": 24063
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/official-gallery.css",
+          "source_utf16_units": 1025,
+          "unused_utf16_units": 1025
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/reception.css",
+          "source_utf16_units": 4570,
+          "unused_utf16_units": 4570
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/people.css",
+          "source_utf16_units": 2347,
+          "unused_utf16_units": 2347
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum-apple.css",
+          "source_utf16_units": 19640,
+          "unused_utf16_units": 16120
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/curator.css",
+          "source_utf16_units": 8215,
+          "unused_utf16_units": 8215
+        },
+        {
+          "url": "https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback",
+          "source_utf16_units": 42696,
+          "unused_utf16_units": 42696
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/wiki.css",
+          "source_utf16_units": 16871,
+          "unused_utf16_units": 14720
+        },
+        {
+          "url": "",
+          "source_utf16_units": 177,
+          "unused_utf16_units": 177
+        },
+        {
+          "url": "",
+          "source_utf16_units": 177,
+          "unused_utf16_units": 177
+        }
+      ],
+      "dom": {
+        "height": 6468,
+        "sections": 4,
+        "images": [
+          {
+            "loading": "lazy",
+            "complete": true,
+            "width": 627
+          }
+        ],
+        "timing": {
+          "name": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/entry/blue-and-white/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 1405.2000000178814,
+          "navigationId": 2551,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "h2",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "gzip",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.7000000178813934,
+          "domainLookupStart": 0.7000000178813934,
+          "domainLookupEnd": 0.7000000178813934,
+          "connectStart": 51.400000005960464,
+          "secureConnectionStart": 60.5,
+          "connectEnd": 63.900000005960464,
+          "requestStart": 64.09999999403954,
+          "responseStart": 104.7000000178814,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 104.7000000178814,
+          "responseEnd": 106.09999999403954,
+          "transferSize": 13334,
+          "encodedBodySize": 13034,
+          "decodedBodySize": 56880,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 1317.5,
+          "domContentLoadedEventStart": 1317.5,
+          "domContentLoadedEventEnd": 1396,
+          "domComplete": 1405.0999999940395,
+          "loadEventStart": 1405.0999999940395,
+          "loadEventEnd": 1405.2000000178814,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        }
+      }
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/search/?q=青花",
+      "request_count": 51,
+      "transferred_bytes": 640455,
+      "js_transferred_bytes": 130016,
+      "css_transferred_bytes": 59373,
+      "supabase_requests": 12,
+      "supabase_data_requests": 6,
+      "supabase_preflight_requests": 6,
+      "external_requests": 22,
+      "requests": [
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/search/?q=%E9%9D%92%E8%8A%B1",
+          "type": "Document",
+          "status": 200,
+          "bytes": 8429
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/stylesheets/main.ec1eaa64.min.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 23724
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/stylesheets/palette.ab4e12ef.min.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 2094
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum-images.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 667
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 6193
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/official-gallery.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 633
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/wiki.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 3843
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/site-interactions.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 2660
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum-apple.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 4269
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/curator.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 2218
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/reception.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 1659
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/people.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 1052
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/entry-search.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 2119
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/visitor.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 5489
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/runtime-config.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 590
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/data-contract.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 1168
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/auth-manager.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 2829
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/dom-safe.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 1291
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/javascripts/bundle.d7400e89.min.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 35445
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/media-policy.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 1191
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/source-references.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 3003
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/museum-images.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 2744
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/knowledge-store.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 13104
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/entry-search.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 5342
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/visitor-ui.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 6047
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/vendor/supabase/supabase.min.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 56595
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/site-privacy.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 667
+        },
+        {
+          "url": "https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 2753
+        },
+        {
+          "url": "data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2m3.1 5.07c.14 0 .28.05.4.16l1.27 1.27c.23.22.23.57 0 .78l-1 1-2.05-2.05 1-1c.1-.11.24-.16.38-.16m-1.97 1.74 2.06 2.06-6.06 6.06H7.07v-2.06z\"/></svg>",
+          "type": "Image",
+          "status": 200,
+          "bytes": 0
+        },
+        {
+          "url": "data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M8.59 16.58 13.17 12 8.59 7.41 10 6l6 6-6 6z\"/></svg>",
+          "type": "Image",
+          "status": 200,
+          "bytes": 0
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/robotomono/v31/L0x5DF4xlVMF-BfR8bXMIjhLq38.woff2",
+          "type": "Font",
+          "status": 200,
+          "bytes": 33373
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+          "type": "Font",
+          "status": 200,
+          "bytes": 43276
+        },
+        {
+          "url": "https://api.github.com/repos/justinxyj/jingdezhen-porcelain-wiki",
+          "type": "XHR",
+          "status": 200,
+          "bytes": 2723
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/topic-search.json",
+          "type": "Fetch",
+          "status": 200,
+          "bytes": 53528
+        },
+        {
+          "url": "https://api.github.com/repos/justinxyj/jingdezhen-porcelain-wiki/releases/latest",
+          "type": "XHR",
+          "status": 404,
+          "bytes": 285
+        },
+        {
+          "url": "data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25m0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41z\"/></svg>",
+          "type": "Image",
+          "status": 200,
+          "bytes": 0
+        },
+        {
+          "url": "data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0M5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0m6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5m-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0\"/></svg>",
+          "type": "Image",
+          "status": 200,
+          "bytes": 0
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/images/favicon.png",
+          "type": "Other",
+          "status": 200,
+          "bytes": 2043
+        },
+        {
+          "url": "https://jscttuocrulgpwvsfxou.supabase.co/rest/v1/entries?select=id%2Cslug%2Ccategory%2Czh%2Cen%2Cja%2Csources%2Cstatus%2Cversion%2Cupdated_at&status=eq.published&order=id.asc&offset=0&limit=500",
+          "type": "Preflight",
+          "status": 200,
+          "bytes": 0
+        },
+        {
+          "url": "https://jscttuocrulgpwvsfxou.supabase.co/rest/v1/entries?select=id%2Cslug%2Ccategory%2Czh%2Cen%2Cja%2Csources%2Cstatus%2Cversion%2Cupdated_at&status=eq.published&order=id.asc&offset=0&limit=500",
+          "type": "Fetch",
+          "status": 200,
+          "bytes": 166547
+        },
+        {
+          "url": "https://jscttuocrulgpwvsfxou.supabase.co/rest/v1/entry_worlds?select=entry_id%2Cworld_slug%2Crole%2Crationale&entry_id=in.%2846acf042-385b-44e4-8630-ca23898b4956%2Cf2ae381c-27d3-4fea-8c4a-2747a993e50b%2Cca99163f-38ea-43b5-8f0a-faf660a9b4c9%2C24116650-a572-4ba4-bd59-20f312ed8118%2C9cf1e39f-aa35-452c-b1ac-d325854ab087%2C370473c8-cd14-4327-afa0-ebd5db50f551%2C85c66969-b3ad-4596-8195-df0b1bb530fd%2Ceadb2958-f1b7-4b12-bf26-ff357c477339%2C21e34311-14a2-4f6c-87e1-231551315593%2Ceaf75a4d-764f-4454-8b26-5459daa41315%2C4bd8fca8-fb4b-4c8e-a314-df87faf8ded8%2Cd04f08c8-cabb-40ac-a734-12fd756d2ce1%2C4da7e3ec-f219-4394-a95e-c2837dd9e936%2C7fb72d65-88d7-4ad4-92eb-a3e6ec183654%2C3a9fe43e-e09e-4677-a848-88a801b39397%2C22dfaa6d-d756-47e4-b50b-95d1c53a80f5%2C2975b66d-ac4a-453c-8cdb-f5165ee10271%2C256587aa-cb98-4f6a-9277-80cec0368b3d%2Cb341e65e-27f8-4152-93d7-6292fb09c3b1%2C6988d1c3-604e-4184-bbfa-95043c8ff064%2C5f0aea49-0921-495f-b6d0-bc860aa380dd%2C2425c3c7-0c1e-4a55-b74c-d3ee066deda0%2Ca304713e-7c81-4c8a-9200-02e73076de5f%2C96342bc7-888f-42ce-8f35-d07885b138ba%2C0dbe2e86-9daa-42ae-9528-7708e438d445%2Caf489c4a-f38a-4d37-818b-6c4784a31961%2C9038b8d3-0150-44cb-9b7f-aad76987cf3a%2C646b64f7-6f1a-4205-8bc8-6c02b8784ab6%2C5b2fd2b0-1c5f-4375-ba7b-173d5ebbfbc9%2Cdac39df4-4c98-4020-a236-97f3508c4c55%2C36f8fd2a-8159-454b-ba59-01f5ac1a23b3%2Cc7dafc47-fd50-48df-9cd0-64f26f993024%2C9550dcd8-e358-474e-8f59-662b909304ce%2C182d8e44-f573-42c0-bf79-73a700724240%2C3b34b6d2-61ee-4ccc-ab34-427fc626490e%2C139cf330-57b2-4f0b-8a77-a3283a4a5f8e%2C925c476e-ae84-41d1-90a2-808205973e4a%2C41956ea9-5bb6-402b-a932-306599675ed5%2C6e392dd0-9c47-4d59-bb1c-1caaf714f9dc%2C4b46b6ee-a13a-4ef2-adfa-78d0a1963b3d%2C2b6a694a-73ea-4e2d-a13a-ed357fb5088a%2C5d78cc09-2c89-466d-a083-db1d5187cbc8%2C4d9dfe2f-29a6-4285-978c-f18383a8fa5a%2Cd03ad6a7-7467-40c2-a75d-e83bcfdd9508%2C6146630b-4506-416b-892f-70f89574511a%2C30b5c284-8abc-4232-85a2-b9f482faef5e%2C360b4636-dcd4-4260-8242-2bd997db3323%2Cbb9c6549-56df-45ca-827c-e7da2646c493%2Cc0abfc52-b4fe-4f39-a254-e3b75e0c6bd9%2C860fe32e-8f6d-422a-90c0-ec59028a5add%29&order=role.asc%2Cdisplay_order.asc",
+          "type": "Preflight",
+          "status": 200,
+          "bytes": 0
+        },
+        {
+          "url": "https://jscttuocrulgpwvsfxou.supabase.co/rest/v1/knowledge_worlds?select=slug%2Ctitle%2Cshort_title%2Cdescription%2Cdisplay_order&order=display_order.asc",
+          "type": "Preflight",
+          "status": 200,
+          "bytes": 0
+        },
+        {
+          "url": "https://jscttuocrulgpwvsfxou.supabase.co/rest/v1/knowledge_worlds?select=slug%2Ctitle%2Cshort_title%2Cdescription%2Cdisplay_order&order=display_order.asc",
+          "type": "Fetch",
+          "status": 200,
+          "bytes": 1007
+        },
+        {
+          "url": "https://jscttuocrulgpwvsfxou.supabase.co/rest/v1/entry_worlds?select=entry_id%2Cworld_slug%2Crole%2Crationale&entry_id=in.%2846acf042-385b-44e4-8630-ca23898b4956%2Cf2ae381c-27d3-4fea-8c4a-2747a993e50b%2Cca99163f-38ea-43b5-8f0a-faf660a9b4c9%2C24116650-a572-4ba4-bd59-20f312ed8118%2C9cf1e39f-aa35-452c-b1ac-d325854ab087%2C370473c8-cd14-4327-afa0-ebd5db50f551%2C85c66969-b3ad-4596-8195-df0b1bb530fd%2Ceadb2958-f1b7-4b12-bf26-ff357c477339%2C21e34311-14a2-4f6c-87e1-231551315593%2Ceaf75a4d-764f-4454-8b26-5459daa41315%2C4bd8fca8-fb4b-4c8e-a314-df87faf8ded8%2Cd04f08c8-cabb-40ac-a734-12fd756d2ce1%2C4da7e3ec-f219-4394-a95e-c2837dd9e936%2C7fb72d65-88d7-4ad4-92eb-a3e6ec183654%2C3a9fe43e-e09e-4677-a848-88a801b39397%2C22dfaa6d-d756-47e4-b50b-95d1c53a80f5%2C2975b66d-ac4a-453c-8cdb-f5165ee10271%2C256587aa-cb98-4f6a-9277-80cec0368b3d%2Cb341e65e-27f8-4152-93d7-6292fb09c3b1%2C6988d1c3-604e-4184-bbfa-95043c8ff064%2C5f0aea49-0921-495f-b6d0-bc860aa380dd%2C2425c3c7-0c1e-4a55-b74c-d3ee066deda0%2Ca304713e-7c81-4c8a-9200-02e73076de5f%2C96342bc7-888f-42ce-8f35-d07885b138ba%2C0dbe2e86-9daa-42ae-9528-7708e438d445%2Caf489c4a-f38a-4d37-818b-6c4784a31961%2C9038b8d3-0150-44cb-9b7f-aad76987cf3a%2C646b64f7-6f1a-4205-8bc8-6c02b8784ab6%2C5b2fd2b0-1c5f-4375-ba7b-173d5ebbfbc9%2Cdac39df4-4c98-4020-a236-97f3508c4c55%2C36f8fd2a-8159-454b-ba59-01f5ac1a23b3%2Cc7dafc47-fd50-48df-9cd0-64f26f993024%2C9550dcd8-e358-474e-8f59-662b909304ce%2C182d8e44-f573-42c0-bf79-73a700724240%2C3b34b6d2-61ee-4ccc-ab34-427fc626490e%2C139cf330-57b2-4f0b-8a77-a3283a4a5f8e%2C925c476e-ae84-41d1-90a2-808205973e4a%2C41956ea9-5bb6-402b-a932-306599675ed5%2C6e392dd0-9c47-4d59-bb1c-1caaf714f9dc%2C4b46b6ee-a13a-4ef2-adfa-78d0a1963b3d%2C2b6a694a-73ea-4e2d-a13a-ed357fb5088a%2C5d78cc09-2c89-466d-a083-db1d5187cbc8%2C4d9dfe2f-29a6-4285-978c-f18383a8fa5a%2Cd03ad6a7-7467-40c2-a75d-e83bcfdd9508%2C6146630b-4506-416b-892f-70f89574511a%2C30b5c284-8abc-4232-85a2-b9f482faef5e%2C360b4636-dcd4-4260-8242-2bd997db3323%2Cbb9c6549-56df-45ca-827c-e7da2646c493%2Cc0abfc52-b4fe-4f39-a254-e3b75e0c6bd9%2C860fe32e-8f6d-422a-90c0-ec59028a5add%29&order=role.asc%2Cdisplay_order.asc",
+          "type": "Fetch",
+          "status": 200,
+          "bytes": 5814
+        },
+        {
+          "url": "https://jscttuocrulgpwvsfxou.supabase.co/rest/v1/media_public?select=id%2Centry_id%2Cpath%2Ctitle%2Csource%2Csource_url%2Clicense%2Ccreator%2Clocation%2Cis_primary%2Csource_tier&entry_id=in.%2846acf042-385b-44e4-8630-ca23898b4956%2Cf2ae381c-27d3-4fea-8c4a-2747a993e50b%2Cca99163f-38ea-43b5-8f0a-faf660a9b4c9%2C24116650-a572-4ba4-bd59-20f312ed8118%2C9cf1e39f-aa35-452c-b1ac-d325854ab087%2C370473c8-cd14-4327-afa0-ebd5db50f551%2C85c66969-b3ad-4596-8195-df0b1bb530fd%2Ceadb2958-f1b7-4b12-bf26-ff357c477339%2C21e34311-14a2-4f6c-87e1-231551315593%2Ceaf75a4d-764f-4454-8b26-5459daa41315%2C4bd8fca8-fb4b-4c8e-a314-df87faf8ded8%29",
+          "type": "Preflight",
+          "status": 200,
+          "bytes": 0
+        },
+        {
+          "url": "https://jscttuocrulgpwvsfxou.supabase.co/rest/v1/media_public?select=id%2Centry_id%2Cpath%2Ctitle%2Csource%2Csource_url%2Clicense%2Ccreator%2Clocation%2Cis_primary%2Csource_tier&entry_id=in.%2846acf042-385b-44e4-8630-ca23898b4956%2Cf2ae381c-27d3-4fea-8c4a-2747a993e50b%2Cca99163f-38ea-43b5-8f0a-faf660a9b4c9%2C24116650-a572-4ba4-bd59-20f312ed8118%2C9cf1e39f-aa35-452c-b1ac-d325854ab087%2C370473c8-cd14-4327-afa0-ebd5db50f551%2C85c66969-b3ad-4596-8195-df0b1bb530fd%2Ceadb2958-f1b7-4b12-bf26-ff357c477339%2C21e34311-14a2-4f6c-87e1-231551315593%2Ceaf75a4d-764f-4454-8b26-5459daa41315%2C4bd8fca8-fb4b-4c8e-a314-df87faf8ded8%29",
+          "type": "Fetch",
+          "status": 200,
+          "bytes": 1516
+        },
+        {
+          "url": "https://jscttuocrulgpwvsfxou.supabase.co/rest/v1/knowledge_recommendations?select=source_node_id%2Ctarget_node_id%2Ctarget_label%2Ctarget_category%2Cedge_type%2Creason%2Cweight&source_node_id=in.%28entry%3A46acf042-385b-44e4-8630-ca23898b4956%2Centry%3Af2ae381c-27d3-4fea-8c4a-2747a993e50b%2Centry%3Aca99163f-38ea-43b5-8f0a-faf660a9b4c9%2Centry%3A24116650-a572-4ba4-bd59-20f312ed8118%2Centry%3A9cf1e39f-aa35-452c-b1ac-d325854ab087%2Centry%3A370473c8-cd14-4327-afa0-ebd5db50f551%2Centry%3A85c66969-b3ad-4596-8195-df0b1bb530fd%2Centry%3Aeadb2958-f1b7-4b12-bf26-ff357c477339%2Centry%3A21e34311-14a2-4f6c-87e1-231551315593%2Centry%3Aeaf75a4d-764f-4454-8b26-5459daa41315%2Centry%3A4bd8fca8-fb4b-4c8e-a314-df87faf8ded8%29&order=weight.desc%2Ctarget_label.asc&limit=36",
+          "type": "Preflight",
+          "status": 200,
+          "bytes": 0
+        },
+        {
+          "url": "https://jscttuocrulgpwvsfxou.supabase.co/rest/v1/knowledge_recommendations?select=source_node_id%2Ctarget_node_id%2Ctarget_label%2Ctarget_category%2Cedge_type%2Creason%2Cweight&source_node_id=in.%28entry%3A46acf042-385b-44e4-8630-ca23898b4956%2Centry%3Af2ae381c-27d3-4fea-8c4a-2747a993e50b%2Centry%3Aca99163f-38ea-43b5-8f0a-faf660a9b4c9%2Centry%3A24116650-a572-4ba4-bd59-20f312ed8118%2Centry%3A9cf1e39f-aa35-452c-b1ac-d325854ab087%2Centry%3A370473c8-cd14-4327-afa0-ebd5db50f551%2Centry%3A85c66969-b3ad-4596-8195-df0b1bb530fd%2Centry%3Aeadb2958-f1b7-4b12-bf26-ff357c477339%2Centry%3A21e34311-14a2-4f6c-87e1-231551315593%2Centry%3Aeaf75a4d-764f-4454-8b26-5459daa41315%2Centry%3A4bd8fca8-fb4b-4c8e-a314-df87faf8ded8%29&order=weight.desc%2Ctarget_label.asc&limit=36",
+          "type": "Fetch",
+          "status": 200,
+          "bytes": 2129
+        },
+        {
+          "url": "https://jscttuocrulgpwvsfxou.supabase.co/rest/v1/entries?select=id%2Cslug%2Ccategory%2Czh%2Cen%2Cja%2Csources%2Cstatus%2Cversion%2Cupdated_at&status=eq.published&id=in.%2846acf042-385b-44e4-8630-ca23898b4956%2Cfb38415a-9935-404b-a85c-5f230bf90f67%2Ce479a789-c150-4bd2-814c-26546a618473%2C6e392dd0-9c47-4d59-bb1c-1caaf714f9dc%29",
+          "type": "Preflight",
+          "status": 200,
+          "bytes": 0
+        },
+        {
+          "url": "https://jscttuocrulgpwvsfxou.supabase.co/rest/v1/entries?select=id%2Cslug%2Ccategory%2Czh%2Cen%2Cja%2Csources%2Cstatus%2Cversion%2Cupdated_at&status=eq.published&id=in.%2846acf042-385b-44e4-8630-ca23898b4956%2Cfb38415a-9935-404b-a85c-5f230bf90f67%2Ce479a789-c150-4bd2-814c-26546a618473%2C6e392dd0-9c47-4d59-bb1c-1caaf714f9dc%29",
+          "type": "Fetch",
+          "status": 200,
+          "bytes": 5432
+        },
+        {
+          "url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/42490/177595/main-image",
+          "type": "Image",
+          "status": 200,
+          "bytes": 124964
+        }
+      ],
+      "failures": [],
+      "javascript_coverage": [
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/search/?q=%E9%9D%92%E8%8A%B1",
+          "source_utf16_units": 286,
+          "unused_utf16_units": 63
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/search/?q=%E9%9D%92%E8%8A%B1",
+          "source_utf16_units": 683,
+          "unused_utf16_units": 638
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/search/?q=%E9%9D%92%E8%8A%B1",
+          "source_utf16_units": 132,
+          "unused_utf16_units": 67
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/javascripts/bundle.d7400e89.min.js",
+          "source_utf16_units": 114285,
+          "unused_utf16_units": 67801
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/runtime-config.js",
+          "source_utf16_units": 296,
+          "unused_utf16_units": 0
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/vendor/supabase/supabase.min.js",
+          "source_utf16_units": 218160,
+          "unused_utf16_units": 188641
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/auth-manager.js",
+          "source_utf16_units": 7041,
+          "unused_utf16_units": 4189
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/dom-safe.js",
+          "source_utf16_units": 2839,
+          "unused_utf16_units": 2126
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/media-policy.js",
+          "source_utf16_units": 1159,
+          "unused_utf16_units": 56
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/source-references.js",
+          "source_utf16_units": 5202,
+          "unused_utf16_units": 0
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/data-contract.js",
+          "source_utf16_units": 2579,
+          "unused_utf16_units": 894
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/knowledge-store.js",
+          "source_utf16_units": 53949,
+          "unused_utf16_units": 38932
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/entry-search.js",
+          "source_utf16_units": 15144,
+          "unused_utf16_units": 6474
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/museum-images.js",
+          "source_utf16_units": 6363,
+          "unused_utf16_units": 4139
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/site-privacy.js",
+          "source_utf16_units": 914,
+          "unused_utf16_units": 48
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/visitor-ui.js",
+          "source_utf16_units": 16094,
+          "unused_utf16_units": 12315
+        }
+      ],
+      "css_coverage": [
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/official-gallery.css",
+          "source_utf16_units": 1025,
+          "unused_utf16_units": 1025
+        },
+        {
+          "url": "https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback",
+          "source_utf16_units": 42696,
+          "unused_utf16_units": 42696
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum-apple.css",
+          "source_utf16_units": 19640,
+          "unused_utf16_units": 19348
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/visitor.css",
+          "source_utf16_units": 23431,
+          "unused_utf16_units": 19691
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/entry-search.css",
+          "source_utf16_units": 8160,
+          "unused_utf16_units": 3246
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/search/?q=%E9%9D%92%E8%8A%B1",
+          "source_utf16_units": 59,
+          "unused_utf16_units": 0
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/stylesheets/main.ec1eaa64.min.css",
+          "source_utf16_units": 139787,
+          "unused_utf16_units": 111710
+        },
+        {
+          "url": "",
+          "source_utf16_units": 177,
+          "unused_utf16_units": 177
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/reception.css",
+          "source_utf16_units": 4570,
+          "unused_utf16_units": 4570
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum.css",
+          "source_utf16_units": 24063,
+          "unused_utf16_units": 23988
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/site-interactions.css",
+          "source_utf16_units": 8595,
+          "unused_utf16_units": 8595
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/wiki.css",
+          "source_utf16_units": 16871,
+          "unused_utf16_units": 16871
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum-images.css",
+          "source_utf16_units": 1033,
+          "unused_utf16_units": 1033
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/people.css",
+          "source_utf16_units": 2347,
+          "unused_utf16_units": 2347
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/stylesheets/palette.ab4e12ef.min.css",
+          "source_utf16_units": 12641,
+          "unused_utf16_units": 9833
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/curator.css",
+          "source_utf16_units": 8215,
+          "unused_utf16_units": 8215
+        }
+      ],
+      "dom": {
+        "height": 4570,
+        "sections": 0,
+        "images": [
+          {
+            "loading": "lazy",
+            "complete": true,
+            "width": 627
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 0
+          }
+        ],
+        "timing": {
+          "name": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/search/?q=%E9%9D%92%E8%8A%B1",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 1619.4000000059605,
+          "navigationId": 3292,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "h2",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "gzip",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.9000000059604645,
+          "domainLookupStart": 0.9000000059604645,
+          "domainLookupEnd": 0.9000000059604645,
+          "connectStart": 20.099999994039536,
+          "secureConnectionStart": 45.29999998211861,
+          "connectEnd": 47.29999998211861,
+          "requestStart": 47.400000005960464,
+          "responseStart": 75.69999998807907,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 75.69999998807907,
+          "responseEnd": 76.59999999403954,
+          "transferSize": 8275,
+          "encodedBodySize": 7975,
+          "decodedBodySize": 44426,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 1521.0999999940395,
+          "domContentLoadedEventStart": 1528.5999999940395,
+          "domContentLoadedEventEnd": 1604,
+          "domComplete": 1619.2999999821186,
+          "loadEventStart": 1619.4000000059605,
+          "loadEventEnd": 1619.4000000059605,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "low"
+          }
+        }
+      }
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/kiln-map/",
+      "request_count": 60,
+      "transferred_bytes": 587729,
+      "js_transferred_bytes": 172794,
+      "css_transferred_bytes": 63154,
+      "supabase_requests": 4,
+      "supabase_data_requests": 2,
+      "supabase_preflight_requests": 2,
+      "external_requests": 28,
+      "requests": [
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/kiln-map/",
+          "type": "Document",
+          "status": 200,
+          "bytes": 8348
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/stylesheets/main.ec1eaa64.min.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 23705
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/vendor/leaflet/leaflet.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 3759
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 6224
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/wiki.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 3823
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum-images.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 688
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/stylesheets/palette.ab4e12ef.min.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 2080
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/official-gallery.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 793
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/site-interactions.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 2551
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/curator.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 2187
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/global-kiln-map.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 1992
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/people.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 1057
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/visitor.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 5472
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/reception.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 1661
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum-apple.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 4409
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/runtime-config.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 468
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/vendor/leaflet/leaflet.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 43382
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/source-references.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 2952
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/auth-manager.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 2807
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/knowledge-store.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 13228
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/media-policy.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 1139
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/data-contract.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 1189
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/museum-images.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 2730
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/visitor-ui.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 6023
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/dom-safe.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 1294
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/vendor/supabase/supabase.min.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 56596
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/global-kiln-map.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 4698
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/site-privacy.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 694
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/javascripts/bundle.d7400e89.min.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 35594
+        },
+        {
+          "url": "https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 2753
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+          "type": "Font",
+          "status": 200,
+          "bytes": 43713
+        },
+        {
+          "url": "https://jscttuocrulgpwvsfxou.supabase.co/rest/v1/entries?select=id%2Cslug%2Ccategory%2Czh%2Cen%2Cja%2Csources%2Cstatus%2Cversion%2Cupdated_at&status=eq.published&category=eq.%E7%AA%91%E5%9D%80&order=updated_at.desc%2Cid.asc&offset=0&limit=250",
+          "type": "Preflight",
+          "status": 200,
+          "bytes": 0
+        },
+        {
+          "url": "https://api.github.com/repos/justinxyj/jingdezhen-porcelain-wiki/releases/latest",
+          "type": "XHR",
+          "status": 404,
+          "bytes": 1082
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/images/favicon.png",
+          "type": "Other",
+          "status": 200,
+          "bytes": 2086
+        },
+        {
+          "url": "https://api.github.com/repos/justinxyj/jingdezhen-porcelain-wiki",
+          "type": "XHR",
+          "status": 200,
+          "bytes": 1935
+        },
+        {
+          "url": "data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25m0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41z\"/></svg>",
+          "type": "Image",
+          "status": 200,
+          "bytes": 0
+        },
+        {
+          "url": "data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0M5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0m6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5m-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0\"/></svg>",
+          "type": "Image",
+          "status": 200,
+          "bytes": 0
+        },
+        {
+          "url": "https://jscttuocrulgpwvsfxou.supabase.co/rest/v1/entries?select=id%2Cslug%2Ccategory%2Czh%2Cen%2Cja%2Csources%2Cstatus%2Cversion%2Cupdated_at&status=eq.published&category=eq.%E7%AA%91%E5%9D%80&order=updated_at.desc%2Cid.asc&offset=0&limit=250",
+          "type": "Fetch",
+          "status": 200,
+          "bytes": 24526
+        },
+        {
+          "url": "https://jscttuocrulgpwvsfxou.supabase.co/rest/v1/media_public?select=id%2Centry_id%2Cpath%2Ctitle%2Csource%2Clicense%2Ccreator%2Ccaptured_at%2Clocation%2Ccreated_at%2Cusage_type%2Csource_tier%2Cis_primary%2Ccanonical_key%2Csource_url%2Csource_type&entry_id=in.%2830055011-ad42-41de-868d-abcf70864006%2C4d9dfe2f-29a6-4285-978c-f18383a8fa5a%2C41956ea9-5bb6-402b-a932-306599675ed5%2Ce479a789-c150-4bd2-814c-26546a618473%2C36f8fd2a-8159-454b-ba59-01f5ac1a23b3%2C3bef45f5-6ebe-48f9-a6c4-02b3b726b545%2Cd50e2a25-9e89-4957-90b7-6889f4be49bd%2Cdc0052fd-9c6a-4fcc-94c1-5e9bdc4e52e6%2Cf31277c6-351c-40fc-b750-2d8002d92be2%2Cda892d36-fa24-4b30-b53b-e650aaa8acf5%2C062df6f4-0268-4f35-ba9d-236633b0bb91%2C0c868fc7-0a25-4a27-add4-ad41b947624c%2C11f2ce07-e5c8-4d7e-bdb1-131ffdd907bf%2C144e53de-3669-453d-aa2f-9a3ca31b43a8%2C16239e97-95a0-4c62-af0d-1bc4d8fc0206%2C189effa3-0f39-40cc-8db1-4bda54cc13bd%2C1a4d4ac2-d7ba-47a4-ac31-2c2ff900422a%2C2e7aa1b8-5ca2-4592-ae2a-406eb460f747%2C30b5c284-8abc-4232-85a2-b9f482faef5e%2C36dbd563-5c5d-40d9-8d43-e9a3a04a336e%2C520389c9-52d4-4a1e-8a03-fa43d9d67a9e%2C5b2fd2b0-1c5f-4375-ba7b-173d5ebbfbc9%2C5d78cc09-2c89-466d-a083-db1d5187cbc8%2C6146630b-4506-416b-892f-70f89574511a%2C6ccac91e-d92d-47bf-b625-68e3779d32bd%2C867c372e-ec21-4ae7-b5b1-d0a4b165e8ba%2C890da94c-bd7a-493e-b331-287d163e382a%2C96264f90-76c6-4259-b34c-734c0390b074%2Ca4726f87-4711-4876-be05-0b2fd45f1499%2Ca74c7d7e-487b-4667-ada8-f15b30bc2480%2Cbbe7b1f0-d789-4150-97bd-2f2d38c7b13f%2Cbd34d580-40a7-4e89-aedd-545ed525436a%2Cc6ee2bbf-473b-461f-88a4-4f4696bf4939%2Cd1895124-a294-4bf8-a9de-60a761812326%2Cddf5579b-f602-4659-8c4a-397588b3cee8%2Ce253ec16-ca6b-41aa-97e2-c3b86bd0d58c%2Ce4f7b140-40dd-4a81-9d95-f0fd3734ad69%2Cf08b6ef6-27a6-4f7f-b9b3-b247a3221863%2Cf5f20387-c923-4435-bdba-9d4af72ab381%2Cfb38415a-9935-404b-a85c-5f230bf90f67%2Cfe17fcf9-7674-478b-a843-a9cb8cabba70%29&order=is_primary.desc%2Csource_tier.asc%2Ccreated_at.asc%2Cid.asc",
+          "type": "Preflight",
+          "status": 200,
+          "bytes": 0
+        },
+        {
+          "url": "https://jscttuocrulgpwvsfxou.supabase.co/rest/v1/media_public?select=id%2Centry_id%2Cpath%2Ctitle%2Csource%2Clicense%2Ccreator%2Ccaptured_at%2Clocation%2Ccreated_at%2Cusage_type%2Csource_tier%2Cis_primary%2Ccanonical_key%2Csource_url%2Csource_type&entry_id=in.%2830055011-ad42-41de-868d-abcf70864006%2C4d9dfe2f-29a6-4285-978c-f18383a8fa5a%2C41956ea9-5bb6-402b-a932-306599675ed5%2Ce479a789-c150-4bd2-814c-26546a618473%2C36f8fd2a-8159-454b-ba59-01f5ac1a23b3%2C3bef45f5-6ebe-48f9-a6c4-02b3b726b545%2Cd50e2a25-9e89-4957-90b7-6889f4be49bd%2Cdc0052fd-9c6a-4fcc-94c1-5e9bdc4e52e6%2Cf31277c6-351c-40fc-b750-2d8002d92be2%2Cda892d36-fa24-4b30-b53b-e650aaa8acf5%2C062df6f4-0268-4f35-ba9d-236633b0bb91%2C0c868fc7-0a25-4a27-add4-ad41b947624c%2C11f2ce07-e5c8-4d7e-bdb1-131ffdd907bf%2C144e53de-3669-453d-aa2f-9a3ca31b43a8%2C16239e97-95a0-4c62-af0d-1bc4d8fc0206%2C189effa3-0f39-40cc-8db1-4bda54cc13bd%2C1a4d4ac2-d7ba-47a4-ac31-2c2ff900422a%2C2e7aa1b8-5ca2-4592-ae2a-406eb460f747%2C30b5c284-8abc-4232-85a2-b9f482faef5e%2C36dbd563-5c5d-40d9-8d43-e9a3a04a336e%2C520389c9-52d4-4a1e-8a03-fa43d9d67a9e%2C5b2fd2b0-1c5f-4375-ba7b-173d5ebbfbc9%2C5d78cc09-2c89-466d-a083-db1d5187cbc8%2C6146630b-4506-416b-892f-70f89574511a%2C6ccac91e-d92d-47bf-b625-68e3779d32bd%2C867c372e-ec21-4ae7-b5b1-d0a4b165e8ba%2C890da94c-bd7a-493e-b331-287d163e382a%2C96264f90-76c6-4259-b34c-734c0390b074%2Ca4726f87-4711-4876-be05-0b2fd45f1499%2Ca74c7d7e-487b-4667-ada8-f15b30bc2480%2Cbbe7b1f0-d789-4150-97bd-2f2d38c7b13f%2Cbd34d580-40a7-4e89-aedd-545ed525436a%2Cc6ee2bbf-473b-461f-88a4-4f4696bf4939%2Cd1895124-a294-4bf8-a9de-60a761812326%2Cddf5579b-f602-4659-8c4a-397588b3cee8%2Ce253ec16-ca6b-41aa-97e2-c3b86bd0d58c%2Ce4f7b140-40dd-4a81-9d95-f0fd3734ad69%2Cf08b6ef6-27a6-4f7f-b9b3-b247a3221863%2Cf5f20387-c923-4435-bdba-9d4af72ab381%2Cfb38415a-9935-404b-a85c-5f230bf90f67%2Cfe17fcf9-7674-478b-a843-a9cb8cabba70%29&order=is_primary.desc%2Csource_tier.asc%2Ccreated_at.asc%2Cid.asc",
+          "type": "Fetch",
+          "status": 200,
+          "bytes": 3951
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/vendor/leaflet/images/marker-icon.png",
+          "type": "Image",
+          "status": 200,
+          "bytes": 1655
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/vendor/leaflet/images/marker-shadow.png",
+          "type": "Image",
+          "status": 200,
+          "bytes": 777
+        },
+        {
+          "url": "https://b.tile.openstreetmap.org/11/1692/850.png",
+          "type": "Image",
+          "status": 200,
+          "bytes": 13909
+        },
+        {
+          "url": "https://b.tile.openstreetmap.org/11/1690/849.png",
+          "type": "Image",
+          "status": 200,
+          "bytes": 27396
+        },
+        {
+          "url": "https://a.tile.openstreetmap.org/11/1691/850.png",
+          "type": "Image",
+          "status": 200,
+          "bytes": 15063
+        },
+        {
+          "url": "https://b.tile.openstreetmap.org/11/1689/850.png",
+          "type": "Image",
+          "status": 200,
+          "bytes": 13352
+        },
+        {
+          "url": "https://b.tile.openstreetmap.org/11/1693/849.png",
+          "type": "Image",
+          "status": 200,
+          "bytes": 19347
+        },
+        {
+          "url": "https://c.tile.openstreetmap.org/11/1690/850.png",
+          "type": "Image",
+          "status": 200,
+          "bytes": 20154
+        },
+        {
+          "url": "https://a.tile.openstreetmap.org/11/1693/848.png",
+          "type": "Image",
+          "status": 200,
+          "bytes": 14929
+        },
+        {
+          "url": "https://b.tile.openstreetmap.org/11/1688/848.png",
+          "type": "Image",
+          "status": 200,
+          "bytes": 10374
+        },
+        {
+          "url": "https://b.tile.openstreetmap.org/11/1691/848.png",
+          "type": "Image",
+          "status": 200,
+          "bytes": 10133
+        },
+        {
+          "url": "https://a.tile.openstreetmap.org/11/1692/849.png",
+          "type": "Image",
+          "status": 200,
+          "bytes": 16426
+        },
+        {
+          "url": "https://a.tile.openstreetmap.org/11/1689/849.png",
+          "type": "Image",
+          "status": 200,
+          "bytes": 10407
+        },
+        {
+          "url": "https://c.tile.openstreetmap.org/11/1688/849.png",
+          "type": "Image",
+          "status": 200,
+          "bytes": 12232
+        },
+        {
+          "url": "https://a.tile.openstreetmap.org/11/1690/848.png",
+          "type": "Image",
+          "status": 200,
+          "bytes": 10373
+        },
+        {
+          "url": "https://a.tile.openstreetmap.org/11/1688/850.png",
+          "type": "Image",
+          "status": 200,
+          "bytes": 9483
+        },
+        {
+          "url": "https://c.tile.openstreetmap.org/11/1689/848.png",
+          "type": "Image",
+          "status": 200,
+          "bytes": 8309
+        },
+        {
+          "url": "https://c.tile.openstreetmap.org/11/1691/849.png",
+          "type": "Image",
+          "status": 200,
+          "bytes": 17863
+        },
+        {
+          "url": "https://c.tile.openstreetmap.org/11/1693/850.png",
+          "type": "Image",
+          "status": 200,
+          "bytes": 20827
+        },
+        {
+          "url": "https://c.tile.openstreetmap.org/11/1692/848.png",
+          "type": "Image",
+          "status": 200,
+          "bytes": 13131
+        }
+      ],
+      "failures": [],
+      "javascript_coverage": [
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/kiln-map/",
+          "source_utf16_units": 289,
+          "unused_utf16_units": 63
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/kiln-map/",
+          "source_utf16_units": 683,
+          "unused_utf16_units": 638
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/kiln-map/",
+          "source_utf16_units": 132,
+          "unused_utf16_units": 67
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/javascripts/bundle.d7400e89.min.js",
+          "source_utf16_units": 114285,
+          "unused_utf16_units": 65742
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/vendor/leaflet/leaflet.js",
+          "source_utf16_units": 147552,
+          "unused_utf16_units": 97262
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/runtime-config.js",
+          "source_utf16_units": 296,
+          "unused_utf16_units": 0
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/vendor/supabase/supabase.min.js",
+          "source_utf16_units": 218160,
+          "unused_utf16_units": 188778
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/auth-manager.js",
+          "source_utf16_units": 7041,
+          "unused_utf16_units": 4746
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/dom-safe.js",
+          "source_utf16_units": 2839,
+          "unused_utf16_units": 2258
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/media-policy.js",
+          "source_utf16_units": 1159,
+          "unused_utf16_units": 81
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/source-references.js",
+          "source_utf16_units": 5202,
+          "unused_utf16_units": 0
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/data-contract.js",
+          "source_utf16_units": 2579,
+          "unused_utf16_units": 634
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/knowledge-store.js",
+          "source_utf16_units": 53949,
+          "unused_utf16_units": 47076
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/global-kiln-map.js",
+          "source_utf16_units": 11019,
+          "unused_utf16_units": 4968
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/museum-images.js",
+          "source_utf16_units": 6363,
+          "unused_utf16_units": 4202
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/site-privacy.js",
+          "source_utf16_units": 914,
+          "unused_utf16_units": 48
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/visitor-ui.js",
+          "source_utf16_units": 16094,
+          "unused_utf16_units": 12929
+        }
+      ],
+      "css_coverage": [
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/curator.css",
+          "source_utf16_units": 8215,
+          "unused_utf16_units": 8215
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum-images.css",
+          "source_utf16_units": 1033,
+          "unused_utf16_units": 1033
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/vendor/leaflet/leaflet.css",
+          "source_utf16_units": 14806,
+          "unused_utf16_units": 9029
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/stylesheets/palette.ab4e12ef.min.css",
+          "source_utf16_units": 12641,
+          "unused_utf16_units": 9833
+        },
+        {
+          "url": "https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback",
+          "source_utf16_units": 42696,
+          "unused_utf16_units": 42696
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/reception.css",
+          "source_utf16_units": 4570,
+          "unused_utf16_units": 4570
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/stylesheets/main.ec1eaa64.min.css",
+          "source_utf16_units": 139787,
+          "unused_utf16_units": 114679
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/wiki.css",
+          "source_utf16_units": 16871,
+          "unused_utf16_units": 16871
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/official-gallery.css",
+          "source_utf16_units": 1025,
+          "unused_utf16_units": 1025
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/site-interactions.css",
+          "source_utf16_units": 8595,
+          "unused_utf16_units": 8595
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/people.css",
+          "source_utf16_units": 2347,
+          "unused_utf16_units": 2347
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum.css",
+          "source_utf16_units": 24063,
+          "unused_utf16_units": 23299
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/visitor.css",
+          "source_utf16_units": 23431,
+          "unused_utf16_units": 19938
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/kiln-map/",
+          "source_utf16_units": 59,
+          "unused_utf16_units": 0
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/global-kiln-map.css",
+          "source_utf16_units": 6335,
+          "unused_utf16_units": 4130
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum-apple.css",
+          "source_utf16_units": 19640,
+          "unused_utf16_units": 18454
+        }
+      ],
+      "dom": {
+        "height": 2503,
+        "sections": 0,
+        "images": [
+          {
+            "loading": "auto",
+            "complete": true,
+            "width": 256
+          },
+          {
+            "loading": "auto",
+            "complete": true,
+            "width": 256
+          },
+          {
+            "loading": "auto",
+            "complete": true,
+            "width": 256
+          },
+          {
+            "loading": "auto",
+            "complete": true,
+            "width": 256
+          },
+          {
+            "loading": "auto",
+            "complete": true,
+            "width": 256
+          },
+          {
+            "loading": "auto",
+            "complete": true,
+            "width": 256
+          },
+          {
+            "loading": "auto",
+            "complete": true,
+            "width": 256
+          },
+          {
+            "loading": "auto",
+            "complete": true,
+            "width": 256
+          },
+          {
+            "loading": "auto",
+            "complete": true,
+            "width": 256
+          },
+          {
+            "loading": "auto",
+            "complete": true,
+            "width": 256
+          },
+          {
+            "loading": "auto",
+            "complete": true,
+            "width": 256
+          },
+          {
+            "loading": "auto",
+            "complete": true,
+            "width": 256
+          },
+          {
+            "loading": "auto",
+            "complete": true,
+            "width": 256
+          },
+          {
+            "loading": "auto",
+            "complete": true,
+            "width": 256
+          },
+          {
+            "loading": "auto",
+            "complete": true,
+            "width": 256
+          },
+          {
+            "loading": "auto",
+            "complete": true,
+            "width": 256
+          },
+          {
+            "loading": "auto",
+            "complete": true,
+            "width": 256
+          },
+          {
+            "loading": "auto",
+            "complete": true,
+            "width": 256
+          },
+          {
+            "loading": "auto",
+            "complete": true,
+            "width": 41
+          },
+          {
+            "loading": "auto",
+            "complete": true,
+            "width": 41
+          },
+          {
+            "loading": "auto",
+            "complete": true,
+            "width": 41
+          },
+          {
+            "loading": "auto",
+            "complete": true,
+            "width": 41
+          },
+          {
+            "loading": "auto",
+            "complete": true,
+            "width": 41
+          },
+          {
+            "loading": "auto",
+            "complete": true,
+            "width": 25
+          },
+          {
+            "loading": "auto",
+            "complete": true,
+            "width": 25
+          },
+          {
+            "loading": "auto",
+            "complete": true,
+            "width": 25
+          },
+          {
+            "loading": "auto",
+            "complete": true,
+            "width": 25
+          },
+          {
+            "loading": "auto",
+            "complete": true,
+            "width": 25
+          }
+        ],
+        "timing": {
+          "name": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/kiln-map/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 1273.9000000059605,
+          "navigationId": 8014,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "h2",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "gzip",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.5999999940395355,
+          "domainLookupStart": 0.5999999940395355,
+          "domainLookupEnd": 0.5999999940395355,
+          "connectStart": 30.80000001192093,
+          "secureConnectionStart": 41.400000005960464,
+          "connectEnd": 47.5,
+          "requestStart": 47.599999994039536,
+          "responseStart": 76.7000000178814,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 76.7000000178814,
+          "responseEnd": 88,
+          "transferSize": 8192,
+          "encodedBodySize": 7892,
+          "decodedBodySize": 43607,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 1186.800000011921,
+          "domContentLoadedEventStart": 1186.800000011921,
+          "domContentLoadedEventEnd": 1270.5,
+          "domComplete": 1273.7000000178814,
+          "loadEventStart": 1273.800000011921,
+          "loadEventEnd": 1273.9000000059605,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        }
+      }
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/timeline/",
+      "request_count": 46,
+      "transferred_bytes": 565163,
+      "js_transferred_bytes": 130122,
+      "css_transferred_bytes": 62434,
+      "supabase_requests": 6,
+      "supabase_data_requests": 3,
+      "supabase_preflight_requests": 3,
+      "external_requests": 15,
+      "requests": [
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/timeline/",
+          "type": "Document",
+          "status": 200,
+          "bytes": 8251
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/stylesheets/main.ec1eaa64.min.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 23722
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/stylesheets/palette.ab4e12ef.min.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 2097
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 6220
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum-images.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 668
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/timeline-interactive.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 361
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/wiki.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 3824
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/timeline-comparison.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 3471
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/site-interactions.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 2553
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/official-gallery.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 623
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/curator.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 2163
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/people.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 1056
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum-apple.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 4254
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/reception.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 1848
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/timeline-details.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 1348
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/visitor.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 5473
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/dom-safe.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 1318
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/auth-manager.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 2826
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/runtime-config.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 396
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/javascripts/bundle.d7400e89.min.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 35461
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/data-contract.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 1152
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/source-references.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 3119
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/wiki-timeline.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 3376
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/museum-images.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 2755
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/site-privacy.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 651
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/visitor-ui.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 6036
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/timeline-details.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 2009
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/media-policy.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 1306
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/knowledge-store.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 13099
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/vendor/supabase/supabase.min.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 56618
+        },
+        {
+          "url": "https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 2753
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+          "type": "Font",
+          "status": 200,
+          "bytes": 43712
+        },
+        {
+          "url": "https://jscttuocrulgpwvsfxou.supabase.co/rest/v1/entries?select=id%2Cslug%2Ccategory%2Czh%2Cen%2Cja%2Csources%2Cstatus%2Cversion%2Cupdated_at&status=eq.published&order=updated_at.desc&offset=0&limit=500",
+          "type": "Preflight",
+          "status": 200,
+          "bytes": 0
+        },
+        {
+          "url": "https://api.github.com/repos/justinxyj/jingdezhen-porcelain-wiki/releases/latest",
+          "type": "XHR",
+          "status": 404,
+          "bytes": 1083
+        },
+        {
+          "url": "https://api.github.com/repos/justinxyj/jingdezhen-porcelain-wiki",
+          "type": "XHR",
+          "status": 200,
+          "bytes": 1926
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/images/favicon.png",
+          "type": "Other",
+          "status": 200,
+          "bytes": 2066
+        },
+        {
+          "url": "data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25m0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41z\"/></svg>",
+          "type": "Image",
+          "status": 200,
+          "bytes": 0
+        },
+        {
+          "url": "data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0M5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0m6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5m-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0\"/></svg>",
+          "type": "Image",
+          "status": 200,
+          "bytes": 0
+        },
+        {
+          "url": "https://jscttuocrulgpwvsfxou.supabase.co/rest/v1/entries?select=id%2Cslug%2Ccategory%2Czh%2Cen%2Cja%2Csources%2Cstatus%2Cversion%2Cupdated_at&status=eq.published&order=updated_at.desc&offset=0&limit=500",
+          "type": "Fetch",
+          "status": 200,
+          "bytes": 151208
+        },
+        {
+          "url": "https://jscttuocrulgpwvsfxou.supabase.co/rest/v1/media_public?select=id%2Centry_id%2Cpath%2Ctitle%2Csource%2Clicense%2Ccreator%2Ccaptured_at%2Clocation%2Ccreated_at%2Cusage_type%2Csource_tier%2Cis_primary%2Ccanonical_key%2Csource_url%2Csource_type&order=is_primary.desc%2Csource_tier.asc%2Ccreated_at.asc%2Cid.asc&offset=0&limit=500",
+          "type": "Preflight",
+          "status": 200,
+          "bytes": 0
+        },
+        {
+          "url": "https://jscttuocrulgpwvsfxou.supabase.co/rest/v1/timeline_context?select=entry_id%2Chistorical_role%2Crelationship_to_jingdezhen%2Cdescription_source_type%2Cai_summary%2Cofficial_summary%2Cofficial_image_url%2Cofficial_image_credit%2Cofficial_source_title%2Cofficial_source_url%2Cofficial_institution%2Csource_tier%2Creviewed_at&order=source_tier.asc%2Centry_id.asc&offset=0&limit=500",
+          "type": "Preflight",
+          "status": 200,
+          "bytes": 0
+        },
+        {
+          "url": "https://jscttuocrulgpwvsfxou.supabase.co/rest/v1/media_public?select=id%2Centry_id%2Cpath%2Ctitle%2Csource%2Clicense%2Ccreator%2Ccaptured_at%2Clocation%2Ccreated_at%2Cusage_type%2Csource_tier%2Cis_primary%2Ccanonical_key%2Csource_url%2Csource_type&order=is_primary.desc%2Csource_tier.asc%2Ccreated_at.asc%2Cid.asc&offset=0&limit=500",
+          "type": "Fetch",
+          "status": 200,
+          "bytes": 5061
+        },
+        {
+          "url": "https://jscttuocrulgpwvsfxou.supabase.co/rest/v1/timeline_context?select=entry_id%2Chistorical_role%2Crelationship_to_jingdezhen%2Cdescription_source_type%2Cai_summary%2Cofficial_summary%2Cofficial_image_url%2Cofficial_image_credit%2Cofficial_source_title%2Cofficial_source_url%2Cofficial_institution%2Csource_tier%2Creviewed_at&order=source_tier.asc%2Centry_id.asc&offset=0&limit=500",
+          "type": "Fetch",
+          "status": 200,
+          "bytes": 15652
+        },
+        {
+          "url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/44735/1460309/main-image",
+          "type": "Image",
+          "status": 200,
+          "bytes": 37808
+        },
+        {
+          "url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/47973/184101/main-image",
+          "type": "Image",
+          "status": 200,
+          "bytes": 47112
+        },
+        {
+          "url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/57441/74708/main-image",
+          "type": "Image",
+          "status": 200,
+          "bytes": 58728
+        }
+      ],
+      "failures": [],
+      "javascript_coverage": [
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/timeline/",
+          "source_utf16_units": 289,
+          "unused_utf16_units": 63
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/timeline/",
+          "source_utf16_units": 683,
+          "unused_utf16_units": 638
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/timeline/",
+          "source_utf16_units": 132,
+          "unused_utf16_units": 67
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/javascripts/bundle.d7400e89.min.js",
+          "source_utf16_units": 114285,
+          "unused_utf16_units": 65742
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/runtime-config.js",
+          "source_utf16_units": 296,
+          "unused_utf16_units": 0
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/vendor/supabase/supabase.min.js",
+          "source_utf16_units": 218160,
+          "unused_utf16_units": 188927
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/auth-manager.js",
+          "source_utf16_units": 7041,
+          "unused_utf16_units": 4203
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/dom-safe.js",
+          "source_utf16_units": 2839,
+          "unused_utf16_units": 2126
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/media-policy.js",
+          "source_utf16_units": 1159,
+          "unused_utf16_units": 56
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/source-references.js",
+          "source_utf16_units": 5202,
+          "unused_utf16_units": 0
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/data-contract.js",
+          "source_utf16_units": 2579,
+          "unused_utf16_units": 634
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/knowledge-store.js",
+          "source_utf16_units": 53949,
+          "unused_utf16_units": 45646
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/wiki-timeline.js",
+          "source_utf16_units": 7884,
+          "unused_utf16_units": 1272
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/timeline-details.js",
+          "source_utf16_units": 3975,
+          "unused_utf16_units": 3247
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/museum-images.js",
+          "source_utf16_units": 6363,
+          "unused_utf16_units": 4213
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/site-privacy.js",
+          "source_utf16_units": 914,
+          "unused_utf16_units": 48
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/visitor-ui.js",
+          "source_utf16_units": 16094,
+          "unused_utf16_units": 12929
+        }
+      ],
+      "css_coverage": [
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/visitor.css",
+          "source_utf16_units": 23431,
+          "unused_utf16_units": 20340
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum-images.css",
+          "source_utf16_units": 1033,
+          "unused_utf16_units": 1033
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum-apple.css",
+          "source_utf16_units": 19640,
+          "unused_utf16_units": 18378
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/curator.css",
+          "source_utf16_units": 8215,
+          "unused_utf16_units": 8215
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/wiki.css",
+          "source_utf16_units": 16871,
+          "unused_utf16_units": 16871
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/timeline/",
+          "source_utf16_units": 59,
+          "unused_utf16_units": 0
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/official-gallery.css",
+          "source_utf16_units": 1025,
+          "unused_utf16_units": 1025
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/site-interactions.css",
+          "source_utf16_units": 8595,
+          "unused_utf16_units": 8595
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/stylesheets/main.ec1eaa64.min.css",
+          "source_utf16_units": 139787,
+          "unused_utf16_units": 114629
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum.css",
+          "source_utf16_units": 24063,
+          "unused_utf16_units": 23355
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/stylesheets/palette.ab4e12ef.min.css",
+          "source_utf16_units": 12641,
+          "unused_utf16_units": 9833
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/people.css",
+          "source_utf16_units": 2347,
+          "unused_utf16_units": 2347
+        },
+        {
+          "url": "https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback",
+          "source_utf16_units": 42696,
+          "unused_utf16_units": 42696
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/timeline-comparison.css",
+          "source_utf16_units": 12854,
+          "unused_utf16_units": 8269
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/reception.css",
+          "source_utf16_units": 4570,
+          "unused_utf16_units": 4570
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/timeline-interactive.css",
+          "source_utf16_units": 386,
+          "unused_utf16_units": 223
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/timeline-details.css",
+          "source_utf16_units": 3472,
+          "unused_utf16_units": 3472
+        }
+      ],
+      "dom": {
+        "height": 19224,
+        "sections": 21,
+        "images": [
+          {
+            "loading": "lazy",
+            "complete": true,
+            "width": 1200
+          },
+          {
+            "loading": "lazy",
+            "complete": true,
+            "width": 559
+          },
+          {
+            "loading": "lazy",
+            "complete": true,
+            "width": 521
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 0
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 1200
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 0
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 0
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 559
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 521
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 521
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 0
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 0
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 0
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 0
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 0
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 559
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 521
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 0
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 0
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 0
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 0
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 0
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 0
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 559
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 521
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 521
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 0
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 0
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 0
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 0
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 0
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 0
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 0
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 0
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 0
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 559
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 521
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 521
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 0
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 0
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 0
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 0
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 0
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 0
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 0
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 559
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 521
+          },
+          {
+            "loading": "lazy",
+            "complete": false,
+            "width": 521
+          }
+        ],
+        "timing": {
+          "name": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/timeline/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 1163.9000000059605,
+          "navigationId": 222,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "h2",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "gzip",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.5999999940395355,
+          "domainLookupStart": 0.5999999940395355,
+          "domainLookupEnd": 0.5999999940395355,
+          "connectStart": 17.69999998807907,
+          "secureConnectionStart": 26.900000005960464,
+          "connectEnd": 29.599999994039536,
+          "requestStart": 29.69999998807907,
+          "responseStart": 49.19999998807907,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 49.19999998807907,
+          "responseEnd": 50.19999998807907,
+          "transferSize": 8098,
+          "encodedBodySize": 7798,
+          "decodedBodySize": 43178,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 1009,
+          "domContentLoadedEventStart": 1009.0999999940395,
+          "domContentLoadedEventEnd": 1158.699999988079,
+          "domComplete": 1163.9000000059605,
+          "loadEventStart": 1163.9000000059605,
+          "loadEventEnd": 1163.9000000059605,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "low"
+          }
+        }
+      }
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/network/relations/",
+      "request_count": 42,
+      "transferred_bytes": 436051,
+      "js_transferred_bytes": 129596,
+      "css_transferred_bytes": 59291,
+      "supabase_requests": 4,
+      "supabase_data_requests": 2,
+      "supabase_preflight_requests": 2,
+      "external_requests": 14,
+      "requests": [
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/network/relations/",
+          "type": "Document",
+          "status": 200,
+          "bytes": 8654
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/official-gallery.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 694
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/stylesheets/palette.ab4e12ef.min.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 2076
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 6199
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/site-interactions.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 2501
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum-images.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 689
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/wiki.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 3822
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/stylesheets/main.ec1eaa64.min.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 23705
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum-apple.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 4364
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/people.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 1084
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/reception.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 1676
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/curator.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 2162
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/visitor.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 5537
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/dom-safe.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 1285
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/runtime-config.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 465
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/site-privacy.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 673
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/knowledge-store.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 13070
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/network-explorer.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 2028
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/source-references.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 2968
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/auth-manager.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 2914
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/media-policy.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 1091
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/vendor/supabase/supabase.min.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 56677
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/museum-images.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 2728
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/visitor-ui.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 6093
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/javascripts/bundle.d7400e89.min.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 35525
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/data-contract.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 1147
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/network-explorer.js",
+          "type": "Script",
+          "status": 200,
+          "bytes": 4960
+        },
+        {
+          "url": "https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback",
+          "type": "Stylesheet",
+          "status": 200,
+          "bytes": 2754
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+          "type": "Font",
+          "status": 200,
+          "bytes": 43712
+        },
+        {
+          "url": "data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2m3.1 5.07c.14 0 .28.05.4.16l1.27 1.27c.23.22.23.57 0 .78l-1 1-2.05-2.05 1-1c.1-.11.24-.16.38-.16m-1.97 1.74 2.06 2.06-6.06 6.06H7.07v-2.06z\"/></svg>",
+          "type": "Image",
+          "status": 200,
+          "bytes": 0
+        },
+        {
+          "url": "data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M8.59 16.58 13.17 12 8.59 7.41 10 6l6 6-6 6z\"/></svg>",
+          "type": "Image",
+          "status": 200,
+          "bytes": 0
+        },
+        {
+          "url": "https://jscttuocrulgpwvsfxou.supabase.co/rest/v1/knowledge_graph_nodes?select=node_type%2Cnode_id%2Clabel%2Ccategory%2Csummary%2Cmetadata&order=node_type.asc%2Cnode_id.asc&limit=500",
+          "type": "Preflight",
+          "status": 200,
+          "bytes": 0
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/images/favicon.png",
+          "type": "Other",
+          "status": 200,
+          "bytes": 2052
+        },
+        {
+          "url": "https://api.github.com/repos/justinxyj/jingdezhen-porcelain-wiki",
+          "type": "XHR",
+          "status": 200,
+          "bytes": 2721
+        },
+        {
+          "url": "https://api.github.com/repos/justinxyj/jingdezhen-porcelain-wiki/releases/latest",
+          "type": "XHR",
+          "status": 404,
+          "bytes": 285
+        },
+        {
+          "url": "data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25m0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41z\"/></svg>",
+          "type": "Image",
+          "status": 200,
+          "bytes": 0
+        },
+        {
+          "url": "data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0M5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0m6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5m-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0\"/></svg>",
+          "type": "Image",
+          "status": 200,
+          "bytes": 0
+        },
+        {
+          "url": "https://jscttuocrulgpwvsfxou.supabase.co/rest/v1/knowledge_graph_nodes?select=node_type%2Cnode_id%2Clabel%2Ccategory%2Csummary%2Cmetadata&order=node_type.asc%2Cnode_id.asc&limit=500",
+          "type": "Fetch",
+          "status": 200,
+          "bytes": 59969
+        },
+        {
+          "url": "https://jscttuocrulgpwvsfxou.supabase.co/rest/v1/knowledge_graph_edges?select=source_node_id%2Ctarget_node_id%2Cedge_type%2Crationale%2Cdisplay_order%2Cmetadata&order=source_node_id.asc%2Cdisplay_order.asc&limit=2000",
+          "type": "Preflight",
+          "status": 200,
+          "bytes": 0
+        },
+        {
+          "url": "https://jscttuocrulgpwvsfxou.supabase.co/rest/v1/knowledge_graph_edges?select=source_node_id%2Ctarget_node_id%2Cedge_type%2Crationale%2Cdisplay_order%2Cmetadata&order=source_node_id.asc%2Cdisplay_order.asc&limit=2000",
+          "type": "Fetch",
+          "status": 200,
+          "bytes": 67619
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMaxKUBGEe.woff2",
+          "type": "Font",
+          "status": 200,
+          "bytes": 20687
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMawCUBGEe.woff2",
+          "type": "Font",
+          "status": 200,
+          "bytes": 41465
+        }
+      ],
+      "failures": [],
+      "javascript_coverage": [
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/network/relations/",
+          "source_utf16_units": 289,
+          "unused_utf16_units": 63
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/network/relations/",
+          "source_utf16_units": 683,
+          "unused_utf16_units": 638
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/network/relations/",
+          "source_utf16_units": 132,
+          "unused_utf16_units": 67
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/javascripts/bundle.d7400e89.min.js",
+          "source_utf16_units": 114285,
+          "unused_utf16_units": 65518
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/runtime-config.js",
+          "source_utf16_units": 296,
+          "unused_utf16_units": 0
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/vendor/supabase/supabase.min.js",
+          "source_utf16_units": 218160,
+          "unused_utf16_units": 189060
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/auth-manager.js",
+          "source_utf16_units": 7041,
+          "unused_utf16_units": 4249
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/dom-safe.js",
+          "source_utf16_units": 2839,
+          "unused_utf16_units": 2197
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/media-policy.js",
+          "source_utf16_units": 1159,
+          "unused_utf16_units": 536
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/source-references.js",
+          "source_utf16_units": 5202,
+          "unused_utf16_units": 0
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/data-contract.js",
+          "source_utf16_units": 2579,
+          "unused_utf16_units": 1689
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/knowledge-store.js",
+          "source_utf16_units": 53949,
+          "unused_utf16_units": 48249
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/network-explorer.js",
+          "source_utf16_units": 13800,
+          "unused_utf16_units": 6490
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/museum-images.js",
+          "source_utf16_units": 6363,
+          "unused_utf16_units": 4678
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/site-privacy.js",
+          "source_utf16_units": 914,
+          "unused_utf16_units": 48
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/visitor-ui.js",
+          "source_utf16_units": 16094,
+          "unused_utf16_units": 12518
+        }
+      ],
+      "css_coverage": [
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/people.css",
+          "source_utf16_units": 2347,
+          "unused_utf16_units": 2347
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/reception.css",
+          "source_utf16_units": 4570,
+          "unused_utf16_units": 4570
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum-apple.css",
+          "source_utf16_units": 19640,
+          "unused_utf16_units": 18602
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/curator.css",
+          "source_utf16_units": 8215,
+          "unused_utf16_units": 8215
+        },
+        {
+          "url": "https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback",
+          "source_utf16_units": 42696,
+          "unused_utf16_units": 42696
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/visitor.css",
+          "source_utf16_units": 23431,
+          "unused_utf16_units": 19830
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/site-interactions.css",
+          "source_utf16_units": 8595,
+          "unused_utf16_units": 8595
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/network-explorer.css",
+          "source_utf16_units": 6478,
+          "unused_utf16_units": 3557
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum.css",
+          "source_utf16_units": 24063,
+          "unused_utf16_units": 23355
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/stylesheets/palette.ab4e12ef.min.css",
+          "source_utf16_units": 12641,
+          "unused_utf16_units": 9833
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/wiki.css",
+          "source_utf16_units": 16871,
+          "unused_utf16_units": 16871
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/assets/stylesheets/main.ec1eaa64.min.css",
+          "source_utf16_units": 139787,
+          "unused_utf16_units": 111494
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/official-gallery.css",
+          "source_utf16_units": 1025,
+          "unused_utf16_units": 1025
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/museum-images.css",
+          "source_utf16_units": 1033,
+          "unused_utf16_units": 1033
+        },
+        {
+          "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/network/relations/",
+          "source_utf16_units": 59,
+          "unused_utf16_units": 0
+        },
+        {
+          "url": "",
+          "source_utf16_units": 177,
+          "unused_utf16_units": 177
+        }
+      ],
+      "dom": {
+        "height": 2358,
+        "sections": 1,
+        "images": [],
+        "timing": {
+          "name": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/network/relations/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 1452.300000011921,
+          "navigationId": 2907,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "h2",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "gzip",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.7000000178813934,
+          "domainLookupStart": 0.7000000178813934,
+          "domainLookupEnd": 0.7000000178813934,
+          "connectStart": 60.5,
+          "secureConnectionStart": 68.7000000178814,
+          "connectEnd": 73.30000001192093,
+          "requestStart": 73.40000000596046,
+          "responseStart": 150.7000000178814,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 150.7000000178814,
+          "responseEnd": 156,
+          "transferSize": 8498,
+          "encodedBodySize": 8198,
+          "decodedBodySize": 44772,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 1358.7000000178814,
+          "domContentLoadedEventStart": 1358.7000000178814,
+          "domContentLoadedEventEnd": 1418.9000000059605,
+          "domComplete": 1452.300000011921,
+          "loadEventStart": 1452.300000011921,
+          "loadEventEnd": 1452.300000011921,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        }
+      }
+    }
+  ]
+}

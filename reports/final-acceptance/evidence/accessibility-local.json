@@ -1,0 +1,507 @@
+{
+  "automated_wcag": [
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 10
+        }
+      ],
+      "passes": 43
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 10
+        }
+      ],
+      "passes": 43
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/search/?q=青花",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 2
+        }
+      ],
+      "passes": 47
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/search/?q=青花",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 2
+        }
+      ],
+      "passes": 47
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/entry/blue-and-white/",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ],
+      "passes": 46
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/entry/blue-and-white/",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ],
+      "passes": 46
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/museum/kiln-map/",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 3
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 4
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": 2
+        }
+      ],
+      "passes": 46
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/museum/kiln-map/",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 3
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": 2
+        }
+      ],
+      "passes": 45
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/museum/timeline/",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 5
+        }
+      ],
+      "passes": 40
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/museum/timeline/",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [],
+      "passes": 40
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/network/relations/",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 3
+        }
+      ],
+      "passes": 45
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/network/relations/",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [],
+      "passes": 45
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/museum/catalog/",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 3
+        }
+      ],
+      "passes": 45
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/museum/catalog/",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [],
+      "passes": 45
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/museum/people/",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 51
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 3
+        }
+      ],
+      "passes": 43
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/museum/people/",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 51
+        }
+      ],
+      "passes": 43
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/research/evidence/?slug=tang-ying",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [],
+      "passes": 40
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/research/evidence/?slug=tang-ying",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [],
+      "passes": 41
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/contemporary/",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 44
+        }
+      ],
+      "passes": 41
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/contemporary/",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 44
+        }
+      ],
+      "passes": 41
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/network/global/?slug=blue-and-white",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 65
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": 2
+        }
+      ],
+      "passes": 49
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/network/global/?slug=blue-and-white",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 56
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": 2
+        }
+      ],
+      "passes": 49
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/craft/technology-tree/",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 164
+        }
+      ],
+      "passes": 46
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/craft/technology-tree/",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 20
+        }
+      ],
+      "passes": 46
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/museum/gallery/",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 2
+        }
+      ],
+      "passes": 46
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/museum/gallery/",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [],
+      "passes": 46
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/history/",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [],
+      "passes": 41
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/history/",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [],
+      "passes": 41
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/craft/",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [],
+      "passes": 45
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/craft/",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [],
+      "passes": 45
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/objects/",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [],
+      "passes": 41
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/objects/",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [],
+      "passes": 41
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/kilns/",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [],
+      "passes": 41
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/kilns/",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [],
+      "passes": 41
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/people/",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [],
+      "passes": 40
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/people/",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [],
+      "passes": 40
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/research/",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ],
+      "passes": 45
+    },
+    {
+      "url": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/research/",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ],
+      "passes": 45
+    }
+  ],
+  "keyboard": [
+    {
+      "check": "mobile menu Enter opens",
+      "passed": true
+    },
+    {
+      "check": "mobile menu Escape focus return",
+      "passed": true
+    },
+    {
+      "check": "mobile filter accessible dialog",
+      "passed": true
+    },
+    {
+      "check": "Tab focus inside mobile dialog",
+      "passed": true
+    },
+    {
+      "check": "Tab focus inside mobile dialog",
+      "passed": true
+    },
+    {
+      "check": "Tab focus inside mobile dialog",
+      "passed": true
+    },
+    {
+      "check": "Tab focus inside mobile dialog",
+      "passed": true
+    },
+    {
+      "check": "Tab focus inside mobile dialog",
+      "passed": true
+    },
+    {
+      "check": "Tab focus inside mobile dialog",
+      "passed": true
+    },
+    {
+      "check": "Tab focus inside mobile dialog",
+      "passed": true
+    },
+    {
+      "check": "Tab focus inside mobile dialog",
+      "passed": true
+    },
+    {
+      "check": "Tab focus inside mobile dialog",
+      "passed": true
+    },
+    {
+      "check": "Tab focus inside mobile dialog",
+      "passed": true
+    },
+    {
+      "check": "Tab focus inside mobile dialog",
+      "passed": true
+    },
+    {
+      "check": "Tab focus inside mobile dialog",
+      "passed": true
+    },
+    {
+      "check": "Tab focus inside mobile dialog",
+      "passed": true
+    },
+    {
+      "check": "Tab focus inside mobile dialog",
+      "passed": true
+    },
+    {
+      "check": "mobile filter Tab containment",
+      "passed": true
+    },
+    {
+      "check": "Escape and focus return",
+      "passed": true
+    },
+    {
+      "check": "mobile filter applies reliable image field",
+      "passed": true
+    },
+    {
+      "check": "image keyboard and zoom controls",
+      "passed": true
+    },
+    {
+      "check": "image viewer focus return",
+      "passed": true
+    }
+  ],
+  "manual_limits": "Automated rules and browser keyboard checks do not prove human screen-reader comprehension."
+}

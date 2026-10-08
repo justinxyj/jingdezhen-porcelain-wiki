@@ -1,0 +1,97 @@
+{
+  "base": "http://127.0.0.1:8028/jingdezhen-porcelain-wiki/",
+  "checks": [
+    {
+      "check": "OS light / site default / contemporary/",
+      "passed": true,
+      "actual": {
+        "color": "rgb(23, 45, 71)",
+        "background": "rgb(245, 248, 252)",
+        "palette": "#164e9b",
+        "ink": "#172d47"
+      }
+    },
+    {
+      "check": "OS light / site slate / contemporary/",
+      "passed": true,
+      "actual": {
+        "color": "rgb(237, 242, 250)",
+        "background": "rgb(23, 35, 48)",
+        "palette": "#9bc2ff",
+        "ink": "#edf2fa"
+      }
+    },
+    {
+      "check": "OS light / site default / craft/technology-tree/",
+      "passed": true,
+      "actual": {
+        "color": "rgb(22, 78, 155)",
+        "background": "rgba(120, 90, 55, 0.06)",
+        "palette": "#164e9b",
+        "ink": "#172d47"
+      }
+    },
+    {
+      "check": "OS light / site slate / craft/technology-tree/",
+      "passed": true,
+      "actual": {
+        "color": "rgb(155, 194, 255)",
+        "background": "rgba(190, 210, 225, 0.08)",
+        "palette": "#9bc2ff",
+        "ink": "#edf2fa"
+      }
+    },
+    {
+      "check": "OS dark / site default / contemporary/",
+      "passed": true,
+      "actual": {
+        "color": "rgb(23, 45, 71)",
+        "background": "rgb(245, 248, 252)",
+        "palette": "#164e9b",
+        "ink": "#172d47"
+      }
+    },
+    {
+      "check": "OS dark / site slate / contemporary/",
+      "passed": true,
+      "actual": {
+        "color": "rgb(237, 242, 250)",
+        "background": "rgb(23, 35, 48)",
+        "palette": "#9bc2ff",
+        "ink": "#edf2fa"
+      }
+    },
+    {
+      "check": "OS dark / site default / craft/technology-tree/",
+      "passed": true,
+      "actual": {
+        "color": "rgb(22, 78, 155)",
+        "background": "rgba(120, 90, 55, 0.06)",
+        "palette": "#164e9b",
+        "ink": "#172d47"
+      }
+    },
+    {
+      "check": "OS dark / site slate / craft/technology-tree/",
+      "passed": true,
+      "actual": {
+        "color": "rgb(155, 194, 255)",
+        "background": "rgba(190, 210, 225, 0.08)",
+        "palette": "#9bc2ff",
+        "ink": "#edf2fa"
+      }
+    },
+    {
+      "check": "Graph not rendered until expanded",
+      "passed": true
+    },
+    {
+      "check": "Graph keyboard selects real entry",
+      "passed": true
+    },
+    {
+      "check": "Graph detail follows canonical entry",
+      "passed": true
+    }
+  ]
+}

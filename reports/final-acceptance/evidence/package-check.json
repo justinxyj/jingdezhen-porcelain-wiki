@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "checks": [
+    "credential-pattern scan",
+    "all report local link targets exist"
+  ],
+  "findings": [],
+  "local_links_checked": 26,
+  "limitations": "Pattern scan is not a universal secret detector. No runtime headers/keys were saved."
+}

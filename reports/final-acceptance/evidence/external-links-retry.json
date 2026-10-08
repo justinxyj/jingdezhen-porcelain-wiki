@@ -1,0 +1,114 @@
+{
+  "at_utc": "2026-10-08T13:09:49.925376+00:00",
+  "scope": "3 government 404s and 15 observed proxy/service 503s; read-only retry, no database access",
+  "results": [
+    {
+      "url": "https://ir.pku.edu.cn/handle/20.500.11897/378201",
+      "status": 503,
+      "server": "envoy",
+      "proxy_status": null
+    },
+    {
+      "url": "https://ir.pku.edu.cn/handle/20.500.11897/579503",
+      "status": 503,
+      "server": "envoy",
+      "proxy_status": null
+    },
+    {
+      "url": "https://jdz.gov.cn/zjcd/mljdz/sj/t933002.shtml",
+      "status": 503,
+      "server": "envoy",
+      "proxy_status": null
+    },
+    {
+      "url": "https://jdz.gov.cn/zwgk/zfgb/2024n/d3q/szfwj_3307/t958190.shtml",
+      "status": 503,
+      "server": "envoy",
+      "proxy_status": null
+    },
+    {
+      "url": "https://jdz.gov.cn/zwzx/jrcd/t1050280.shtml",
+      "status": 503,
+      "server": "envoy",
+      "proxy_status": null
+    },
+    {
+      "url": "https://jdz.gov.cn/zwzx/jrcd/t1099484.shtml",
+      "status": 503,
+      "server": "envoy",
+      "proxy_status": null
+    },
+    {
+      "url": "https://meta.librarydata.cn/metainfo?metaID=140420020210000145",
+      "status": 503,
+      "server": "envoy",
+      "proxy_status": null
+    },
+    {
+      "url": "https://meta.librarydata.cn/metainfo?metaID=140420020210001657",
+      "status": 503,
+      "server": "envoy",
+      "proxy_status": null
+    },
+    {
+      "url": "https://meta.librarydata.cn/metainfo?metaID=140420020210001659",
+      "status": 503,
+      "server": "envoy",
+      "proxy_status": null
+    },
+    {
+      "url": "https://meta.librarydata.cn/metainfo?metaID=140420020210001666",
+      "status": 503,
+      "server": "envoy",
+      "proxy_status": null
+    },
+    {
+      "url": "https://meta.librarydata.cn/metainfo?metaID=140420020210001709",
+      "status": 503,
+      "server": "envoy",
+      "proxy_status": null
+    },
+    {
+      "url": "https://meta.librarydata.cn/metainfo?metaID=140420020230000213",
+      "status": 503,
+      "server": "envoy",
+      "proxy_status": null
+    },
+    {
+      "url": "https://meta.librarydata.cn/metainfo?metaID=140420020230001039",
+      "status": 503,
+      "server": "envoy",
+      "proxy_status": null
+    },
+    {
+      "url": "https://www.chinaguyao.com/biaozhunhuajianshezhuanlan/2015-10-28/2708.html",
+      "status": 503,
+      "server": "envoy",
+      "proxy_status": null
+    },
+    {
+      "url": "https://www.gotheborg.com/natgeograph/",
+      "status": 503,
+      "server": "envoy",
+      "proxy_status": null
+    },
+    {
+      "url": "https://www.jdz.gov.cn/zjcd/mljdz/t289353.shtml",
+      "status": 404,
+      "server": "envoy",
+      "proxy_status": null
+    },
+    {
+      "url": "https://www.jdz.gov.cn/zsnj/jdzsz/jdzszdwj/rwz/rwc/P020201114583753053261.pdf",
+      "status": 404,
+      "server": "envoy",
+      "proxy_status": null
+    },
+    {
+      "url": "https://www.jdz.gov.cn/zwgk/zfgb/2024n/d3q/szfwj_3307/t958190.shtml",
+      "status": 404,
+      "server": "envoy",
+      "proxy_status": null
+    }
+  ]
+}

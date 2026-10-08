@@ -1,0 +1,55 @@
+{
+  "checks": [
+    {
+      "check": "List hover highlights marker",
+      "passed": true
+    },
+    {
+      "check": "List focus highlights marker",
+      "passed": true
+    },
+    {
+      "check": "Marker focus highlights list",
+      "passed": true
+    },
+    {
+      "check": "Marker click selects and scrolls list",
+      "passed": true
+    },
+    {
+      "check": "Map modal focus returns to list",
+      "passed": true
+    },
+    {
+      "check": "List click centers map on its marker",
+      "passed": true
+    },
+    {
+      "check": "Regional filters are mutually exclusive",
+      "passed": true
+    },
+    {
+      "check": "Regional union equals all locations",
+      "passed": true
+    },
+    {
+      "check": "Map real related object",
+      "passed": true
+    },
+    {
+      "check": "Map real related person",
+      "passed": true
+    }
+  ],
+  "region_sizes": {
+    "world": 41,
+    "jdz": 5,
+    "china": 17,
+    "japan": 3,
+    "korea": 4,
+    "southeast": 3,
+    "west": 3,
+    "europe": 6,
+    "other": 0
+  }
+}

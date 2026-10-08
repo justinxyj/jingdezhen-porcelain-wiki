@@ -1,0 +1,982 @@
+{
+  "automated_wcag": [
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 10
+        }
+      ],
+      "passes": 43
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 10
+        }
+      ],
+      "passes": 43
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/search/?q=青花",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 2
+        }
+      ],
+      "passes": 47
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/search/?q=青花",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 2
+        }
+      ],
+      "passes": 47
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/entry/blue-and-white/",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ],
+      "passes": 46
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/entry/blue-and-white/",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ],
+      "passes": 46
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/kiln-map/",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 3
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 4
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": 2
+        }
+      ],
+      "passes": 46
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/kiln-map/",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 3
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": 2
+        }
+      ],
+      "passes": 45
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/timeline/",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 5
+        }
+      ],
+      "passes": 40
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/timeline/",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [],
+      "passes": 40
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/network/relations/",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 3
+        }
+      ],
+      "passes": 45
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/network/relations/",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [],
+      "passes": 45
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/catalog/",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 3
+        }
+      ],
+      "passes": 45
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/catalog/",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [],
+      "passes": 45
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/people/",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 51
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 3
+        }
+      ],
+      "passes": 43
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/people/",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 51
+        }
+      ],
+      "passes": 43
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/research/evidence/?slug=tang-ying",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [],
+      "passes": 41
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/research/evidence/?slug=tang-ying",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [],
+      "passes": 41
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/contemporary/",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 45
+        }
+      ],
+      "passes": 40
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/contemporary/",
+      "scheme": "slate",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "target": [
+                ".jdm-world-connection:nth-child(2)"
+              ],
+              "html": "<a class=\"jdm-world-connection\" href=\"https://justinxyj.github.io/jingdezhen-porcelain-wiki/research/\">文献 <b>8</b></a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.46 (foreground color: #5488e8, background color: #ffffff, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-connection:nth-child(3)"
+              ],
+              "html": "<a class=\"jdm-world-connection\" href=\"https://justinxyj.github.io/jingdezhen-porcelain-wiki/craft/\">工艺 <b>7</b></a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.46 (foreground color: #5488e8, background color: #ffffff, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-connection:nth-child(4)"
+              ],
+              "html": "<a class=\"jdm-world-connection\" href=\"https://justinxyj.github.io/jingdezhen-porcelain-wiki/history/\">历史 <b>5</b></a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.46 (foreground color: #5488e8, background color: #ffffff, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-connection:nth-child(5)"
+              ],
+              "html": "<a class=\"jdm-world-connection\" href=\"https://justinxyj.github.io/jingdezhen-porcelain-wiki/kilns/\">空间 <b>4</b></a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.46 (foreground color: #5488e8, background color: #ffffff, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-featured-card:nth-child(1) > span"
+              ],
+              "html": "<span>核心条目 · 人物</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.24 (foreground color: #7c91a8, background color: #ffffff, font size: 6.0pt (8px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-featured-card:nth-child(1) > b"
+              ],
+              "html": "<b>黄云鹏</b>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.46 (foreground color: #5488e8, background color: #ffffff, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-featured-card:nth-child(2) > span"
+              ],
+              "html": "<span>核心条目 · 人物</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.24 (foreground color: #7c91a8, background color: #ffffff, font size: 6.0pt (8px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-featured-card:nth-child(2) > b"
+              ],
+              "html": "<b>刘远长</b>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.46 (foreground color: #5488e8, background color: #ffffff, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-featured-card:nth-child(3) > span"
+              ],
+              "html": "<span>核心条目 · 人物</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.24 (foreground color: #7c91a8, background color: #ffffff, font size: 6.0pt (8px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-featured-card:nth-child(3) > b"
+              ],
+              "html": "<b>启功</b>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.46 (foreground color: #5488e8, background color: #ffffff, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-featured-card:nth-child(4) > span"
+              ],
+              "html": "<span>核心条目 · 人物</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.24 (foreground color: #7c91a8, background color: #ffffff, font size: 6.0pt (8px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-featured-card:nth-child(4) > b"
+              ],
+              "html": "<b>秦锡麟</b>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.46 (foreground color: #5488e8, background color: #ffffff, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-featured-card:nth-child(5) > span"
+              ],
+              "html": "<span>核心条目 · 人物</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.24 (foreground color: #7c91a8, background color: #ffffff, font size: 6.0pt (8px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-featured-card:nth-child(5) > b"
+              ],
+              "html": "<b>田汉</b>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.46 (foreground color: #5488e8, background color: #ffffff, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-featured-card:nth-child(6) > span"
+              ],
+              "html": "<span>核心条目 · 人物</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.24 (foreground color: #7c91a8, background color: #ffffff, font size: 6.0pt (8px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-featured-card:nth-child(6) > b"
+              ],
+              "html": "<b>王锡良</b>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.46 (foreground color: #5488e8, background color: #ffffff, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-featured-card:nth-child(7) > span"
+              ],
+              "html": "<span>核心条目 · 人物</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.24 (foreground color: #7c91a8, background color: #ffffff, font size: 6.0pt (8px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-featured-card:nth-child(7) > b"
+              ],
+              "html": "<b>占绍林</b>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.46 (foreground color: #5488e8, background color: #ffffff, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-featured-card:nth-child(8) > span"
+              ],
+              "html": "<span>核心条目 · 人物</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.24 (foreground color: #7c91a8, background color: #ffffff, font size: 6.0pt (8px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-featured-card:nth-child(8) > b"
+              ],
+              "html": "<b>张松茂</b>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.46 (foreground color: #5488e8, background color: #ffffff, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-browser > .jdm-world-browser-grid > .jdm-world-entry-card:nth-child(1) > div > span"
+              ],
+              "html": "<span>核心条目 · 人物</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.24 (foreground color: #7c91a8, background color: #ffffff, font size: 6.8pt (9px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-browser > .jdm-world-browser-grid > .jdm-world-entry-card:nth-child(1) > div > h3"
+              ],
+              "html": "<h3>黄云鹏</h3>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.46 (foreground color: #5488e8, background color: #ffffff, font size: 16.5pt (22px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-browser > .jdm-world-browser-grid > .jdm-world-entry-card:nth-child(1) > div > p"
+              ],
+              "html": "<p>黄云鹏的职业活动连接古陶瓷研究、仿古工艺实践与陶瓷企业，大学校友资料提供了学习和工作经历。</p>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.96 (foreground color: #718198, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-browser > .jdm-world-browser-grid > .jdm-world-entry-card:nth-child(2) > div > span"
+              ],
+              "html": "<span>核心条目 · 人物</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.24 (foreground color: #7c91a8, background color: #ffffff, font size: 6.8pt (9px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-browser > .jdm-world-browser-grid > .jdm-world-entry-card:nth-child(2) > div > h3"
+              ],
+              "html": "<h3>刘远长</h3>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.46 (foreground color: #5488e8, background color: #ffffff, font size: 16.5pt (22px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-browser > .jdm-world-browser-grid > .jdm-world-entry-card:nth-child(2) > div > p"
+              ],
+              "html": "<p>刘远长从陶瓷雕塑教育进入景德镇雕塑瓷厂，创作与生产管理经历呈现现代瓷塑的院校和工厂联系。</p>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.96 (foreground color: #718198, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(3) > div > span"
+              ],
+              "html": "<span>核心条目 · 人物</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.24 (foreground color: #7c91a8, background color: #ffffff, font size: 6.8pt (9px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(3) > div > h3"
+              ],
+              "html": "<h3>启功</h3>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.46 (foreground color: #5488e8, background color: #ffffff, font size: 16.5pt (22px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(3) > div > p"
+              ],
+              "html": "<p>书法家，曾为景德镇陶瓷历史博览区题字。</p>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.96 (foreground color: #718198, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(4) > div > span"
+              ],
+              "html": "<span>核心条目 · 人物</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.24 (foreground color: #7c91a8, background color: #ffffff, font size: 6.8pt (9px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(4) > div > h3"
+              ],
+              "html": "<h3>秦锡麟</h3>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.46 (foreground color: #5488e8, background color: #ffffff, font size: 16.5pt (22px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(4) > div > p"
+              ],
+              "html": "<p>秦锡麟的经历连接陶瓷美术研究机构与高等教育，曾长期参与景德镇陶瓷院校管理。</p>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.96 (foreground color: #718198, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(5) > div > span"
+              ],
+              "html": "<span>核心条目 · 人物</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.24 (foreground color: #7c91a8, background color: #ffffff, font size: 6.8pt (9px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(5) > div > h3"
+              ],
+              "html": "<h3>田汉</h3>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.46 (foreground color: #5488e8, background color: #ffffff, font size: 16.5pt (22px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(5) > div > p"
+              ],
+              "html": "<p>现代戏剧家、诗人。曾以诗歌赞誉景德镇陶瓷艺术家及其作品。</p>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.96 (foreground color: #718198, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(6) > div > span"
+              ],
+              "html": "<span>核心条目 · 人物</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.24 (foreground color: #7c91a8, background color: #ffffff, font size: 6.8pt (9px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(6) > div > h3"
+              ],
+              "html": "<h3>王锡良</h3>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.46 (foreground color: #5488e8, background color: #ffffff, font size: 16.5pt (22px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(6) > div > p"
+              ],
+              "html": "<p>王锡良的经历从家庭学艺延伸至合作社与研究所，反映现代景德镇陶瓷美术组织的变化。</p>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.96 (foreground color: #718198, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(7) > div > span"
+              ],
+              "html": "<span>核心条目 · 人物</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.24 (foreground color: #7c91a8, background color: #ffffff, font size: 6.8pt (9px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(7) > div > h3"
+              ],
+              "html": "<h3>占绍林</h3>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.46 (foreground color: #5488e8, background color: #ffffff, font size: 16.5pt (22px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(7) > div > p"
+              ],
+              "html": "<p>现代景德镇陶瓷艺术人物。</p>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.96 (foreground color: #718198, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(8) > div > span"
+              ],
+              "html": "<span>核心条目 · 人物</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.24 (foreground color: #7c91a8, background color: #ffffff, font size: 6.8pt (9px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(8) > div > h3"
+              ],
+              "html": "<h3>张松茂</h3>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.46 (foreground color: #5488e8, background color: #ffffff, font size: 16.5pt (22px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(8) > div > p"
+              ],
+              "html": "<p>张松茂以釉上粉彩创作为重要方向，作品题材涵盖人物、山水与花鸟，艺术活动连接景德镇研究机构和对外交流。</p>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.96 (foreground color: #718198, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(9) > div > span"
+              ],
+              "html": "<span>核心条目 · 历史</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.24 (foreground color: #7c91a8, background color: #ffffff, font size: 6.8pt (9px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(9) > div > h3"
+              ],
+              "html": "<h3>2026：景德镇手工瓷业遗存</h3>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.46 (foreground color: #5488e8, background color: #ffffff, font size: 16.5pt (22px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(9) > div > p"
+              ],
+              "html": "<p>“景德镇手工瓷业遗存”（Jingdezhen Handicraft Porcelain Industry Sites）于2026年列入《世界遗产名录》，编号1765。第48届世界遗产委员会决定48 COM 8B.16，依据标准(ii)、(iii)、(iv)和(vi)确认其突出普遍价值。它作为系列遗产</p>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.96 (foreground color: #718198, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(10) > div > span"
+              ],
+              "html": "<span>核心条目 · 文献</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.24 (foreground color: #7c91a8, background color: #ffffff, font size: 6.8pt (9px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(10) > div > h3"
+              ],
+              "html": "<h3>国家级非物质文化遗产代表性项目“景德镇手工制瓷技艺”</h3>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.46 (foreground color: #5488e8, background color: #ffffff, font size: 16.5pt (22px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(10) > div > p"
+              ],
+              "html": "<p>2006年第一批国家级非遗代表性项目Ⅷ-7，涵盖原料、成型、装饰、烧成及其专业分工。</p>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.96 (foreground color: #718198, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(11) > div > span"
+              ],
+              "html": "<span>核心条目 · 文献</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.24 (foreground color: #7c91a8, background color: #ffffff, font size: 6.8pt (9px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(11) > div > h3"
+              ],
+              "html": "<h3>《1949～1966年景德镇陶瓷科技文献比较研究》</h3>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.46 (foreground color: #5488e8, background color: #ffffff, font size: 16.5pt (22px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(11) > div > p"
+              ],
+              "html": "<p>论文比较1949—1966年景德镇陶瓷科技文献与此前及外地研究，讨论传统瓷业向现代工业的知识转型。</p>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.96 (foreground color: #718198, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(12) > div > span"
+              ],
+              "html": "<span>核心条目 · 文献</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.24 (foreground color: #7c91a8, background color: #ffffff, font size: 6.8pt (9px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(12) > div > h3"
+              ],
+              "html": "<h3>《改革开放以来景德镇薄胎瓷工艺的发展演变及其特点》</h3>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.46 (foreground color: #5488e8, background color: #ffffff, font size: 16.5pt (22px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(12) > div > p"
+              ],
+              "html": "<p>况立、陈宁结合熊国安口述史，对改革开放以来薄胎瓷工艺的变化提出四阶段分期。</p>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.96 (foreground color: #718198, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(13) > div > span"
+              ],
+              "html": "<span>核心条目 · 文献</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.24 (foreground color: #7c91a8, background color: #ffffff, font size: 6.8pt (9px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(13) > div > h3"
+              ],
+              "html": "<h3>《景德镇陶瓷文化生态保护区总体规划（2021—2035年）》</h3>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.46 (foreground color: #5488e8, background color: #ffffff, font size: 16.5pt (22px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(13) > div > p"
+              ],
+              "html": "<p>景德镇陶瓷文化生态保护区规划。</p>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.96 (foreground color: #718198, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(14) > div > span"
+              ],
+              "html": "<span>核心条目 · 文献</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.24 (foreground color: #7c91a8, background color: #ffffff, font size: 6.8pt (9px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(14) > div > h3"
+              ],
+              "html": "<h3>UNESCO：Jingdezhen Handicraft Porcelain Industry Sites / 景德镇手工瓷业遗存</h3>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.46 (foreground color: #5488e8, background color: #ffffff, font size: 16.5pt (22px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(14) > div > p"
+              ],
+              "html": "<p>UNESCO正式遗产页面记录景德镇手工瓷业遗存2026年列入世界遗产，编号1765，包含五个组成部分。</p>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.96 (foreground color: #718198, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(15) > div > span"
+              ],
+              "html": "<span>核心条目 · 文献</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.24 (foreground color: #7c91a8, background color: #ffffff, font size: 6.8pt (9px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(15) > div > h3"
+              ],
+              "html": "<h3>“景德镇手工瓷业遗存”申遗大事记</h3>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.46 (foreground color: #5488e8, background color: #ffffff, font size: 16.5pt (22px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(15) > div > p"
+              ],
+              "html": "<p>申遗过程官方资料。</p>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.96 (foreground color: #718198, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(16) > div > span"
+              ],
+              "html": "<span>核心条目 · 文献</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.24 (foreground color: #7c91a8, background color: #ffffff, font size: 6.8pt (9px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(16) > div > h3"
+              ],
+              "html": "<h3>《改良陶业 创办中国陶业学堂》</h3>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.46 (foreground color: #5488e8, background color: #ffffff, font size: 16.5pt (22px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".jdm-world-entry-card:nth-child(16) > div > p"
+              ],
+              "html": "<p>景德镇陶瓷大学校史馆资料介绍近代陶业改良、江西瓷业公司和中国陶业学堂，连接企业实践与职业教育。</p>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.96 (foreground color: #718198, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "summary"
+              ],
+              "html": "<summary>与其他主题相关 · 2 个关联条目</summary>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.99 (foreground color: #1455b8, background color: #1c2d45, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 60
+        }
+      ],
+      "passes": 41
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/network/global/?slug=blue-and-white",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 67
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": 2
+        }
+      ],
+      "passes": 49
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/network/global/?slug=blue-and-white",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 56
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": 2
+        }
+      ],
+      "passes": 49
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/craft/technology-tree/",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 160
+        }
+      ],
+      "passes": 44
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/craft/technology-tree/",
+      "scheme": "slate",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "target": [
+                ".is-object > .tech-path-items > a:nth-child(1)"
+              ],
+              "html": "<a href=\"https://justinxyj.github.io/jingdezhen-porcelain-wiki/entry/qingbai-porcelain/\">青白瓷</a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.89 (foreground color: #5488e8, background color: #23303a, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".is-object > .tech-path-items > a:nth-child(2)"
+              ],
+              "html": "<a href=\"https://justinxyj.github.io/jingdezhen-porcelain-wiki/entry/blue-and-white/\">青花瓷</a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.89 (foreground color: #5488e8, background color: #23303a, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".is-object > .tech-path-items > a:nth-child(3)"
+              ],
+              "html": "<a href=\"https://justinxyj.github.io/jingdezhen-porcelain-wiki/entry/fencai/\">粉彩瓷</a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.89 (foreground color: #5488e8, background color: #23303a, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".is-object > .tech-path-items > a:nth-child(4)"
+              ],
+              "html": "<a href=\"https://justinxyj.github.io/jingdezhen-porcelain-wiki/entry/colored-glaze/\">颜色釉瓷</a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.89 (foreground color: #5488e8, background color: #23303a, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".is-kiln > .tech-path-items > a:nth-child(1)"
+              ],
+              "html": "<a href=\"https://justinxyj.github.io/jingdezhen-porcelain-wiki/entry/hutian-kiln/\">湖田窑</a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.89 (foreground color: #5488e8, background color: #23303a, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".is-kiln > .tech-path-items > a:nth-child(2)"
+              ],
+              "html": "<a href=\"https://justinxyj.github.io/jingdezhen-porcelain-wiki/entry/gaoling-mining/\">高岭土矿采掘区</a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.89 (foreground color: #5488e8, background color: #23303a, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".is-kiln > .tech-path-items > a:nth-child(3)"
+              ],
+              "html": "<a href=\"https://justinxyj.github.io/jingdezhen-porcelain-wiki/entry/changling-stone/\">长岭瓷石采掘区</a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.89 (foreground color: #5488e8, background color: #23303a, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".is-kiln > .tech-path-items > a:nth-child(4)"
+              ],
+              "html": "<a href=\"https://justinxyj.github.io/jingdezhen-porcelain-wiki/entry/jiaotan-firewood/\">焦潭柴窑燃料生产区</a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.89 (foreground color: #5488e8, background color: #23303a, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "description": "Ensure the order of headings is semantically correct",
+          "nodes": [
+            {
+              "target": [
+                "h4"
+              ],
+              "html": "<h4>东晋—唐：新平镇与昌南镇</h4>",
+              "failureSummary": "Fix any of the following:\n  Heading order invalid"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 20
+        }
+      ],
+      "passes": 46
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/gallery/",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 2
+        }
+      ],
+      "passes": 46
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/museum/gallery/",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [],
+      "passes": 46
+    }
+  ],
+  "keyboard": [
+    {
+      "check": "mobile menu Enter opens",
+      "passed": true
+    },
+    {
+      "check": "mobile menu Escape focus return",
+      "passed": true
+    },
+    {
+      "check": "mobile filter accessible dialog",
+      "passed": true
+    },
+    {
+      "check": "Tab focus inside mobile dialog",
+      "passed": true
+    },
+    {
+      "check": "Tab focus inside mobile dialog",
+      "passed": true
+    },
+    {
+      "check": "Tab focus inside mobile dialog",
+      "passed": true
+    },
+    {
+      "check": "Tab focus inside mobile dialog",
+      "passed": true
+    },
+    {
+      "check": "Tab focus inside mobile dialog",
+      "passed": true
+    },
+    {
+      "check": "Tab focus inside mobile dialog",
+      "passed": true
+    },
+    {
+      "check": "Tab focus inside mobile dialog",
+      "passed": true
+    },
+    {
+      "check": "Tab focus inside mobile dialog",
+      "passed": true
+    },
+    {
+      "check": "Tab focus inside mobile dialog",
+      "passed": true
+    },
+    {
+      "check": "Tab focus inside mobile dialog",
+      "passed": true
+    },
+    {
+      "check": "Tab focus inside mobile dialog",
+      "passed": true
+    },
+    {
+      "check": "Tab focus inside mobile dialog",
+      "passed": true
+    },
+    {
+      "check": "Tab focus inside mobile dialog",
+      "passed": true
+    },
+    {
+      "check": "Tab focus inside mobile dialog",
+      "passed": true
+    },
+    {
+      "check": "mobile filter Tab containment",
+      "passed": true
+    },
+    {
+      "check": "Escape and focus return",
+      "passed": true
+    },
+    {
+      "check": "mobile filter applies reliable image field",
+      "passed": true
+    },
+    {
+      "check": "image keyboard and zoom controls",
+      "passed": true
+    },
+    {
+      "check": "image viewer focus return",
+      "passed": true
+    }
+  ],
+  "manual_limits": "Automated rules and browser keyboard checks do not prove human screen-reader comprehension."
+}

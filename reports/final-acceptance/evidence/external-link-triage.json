@@ -1,0 +1,29 @@
+{
+  "scope": "Before-deploy HTTP observations, reclassified against the repaired build; not a new HTTP sweep.",
+  "total_external_urls_before": 704,
+  "generated_source_actions_removed": 250,
+  "observed_404_generated_source_links_removed": 81,
+  "remaining_unique_urls": 454,
+  "remaining_initial_status_counts": {
+    "200": 216,
+    "500": 3,
+    "429": 211,
+    "503": 15,
+    "None": 5,
+    "403": 1,
+    "404": 3
+  },
+  "not_marked_pass": [
+    "403",
+    "429",
+    "500",
+    "503",
+    "timeout"
+  ],
+  "unresolved_government_404_urls": [
+    "https://www.jdz.gov.cn/zjcd/mljdz/t289353.shtml",
+    "https://www.jdz.gov.cn/zsnj/jdzsz/jdzszdwj/rwz/rwc/P020201114583753053261.pdf",
+    "https://www.jdz.gov.cn/zwgk/zfgb/2024n/d3q/szfwj_3307/t958190.shtml"
+  ],
+  "production_data_changed": false
+}

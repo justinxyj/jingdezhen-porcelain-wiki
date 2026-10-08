@@ -1,0 +1,15 @@
+{
+  "base": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/",
+  "at_utc": "2026-10-08T13:26:34.307599+00:00",
+  "checks": [
+    {
+      "check": "visitor execution complete",
+      "passed": false,
+      "detail": ""
+    }
+  ],
+  "layouts": [],
+  "errors": [],
+  "database_request_methods": [],
+  "limitations": "Real headless Chromium at the specified viewports; not physical-device testing or human screen-reader certification."
+}

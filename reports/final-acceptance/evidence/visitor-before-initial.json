@@ -1,0 +1,3016 @@
+{
+  "base": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/",
+  "at_utc": "2026-10-08T13:03:00.813252+00:00",
+  "checks": [
+    {
+      "check": "home 320 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "home 320 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "first visit understands museum 320",
+      "passed": true,
+      "detail": "景德镇陶瓷数字博物馆\n\n青花，不止于蓝。\n\n从一件瓷器出发，认识千年窑火、匠人与世界。\n\n你想了解什么？\n搜索\n\n热门：青花 · 唐英 · 御窑厂 · 粉彩\n\n第一次来？从这里开始 ↓"
+    },
+    {
+      "check": "encyclopedia navigation 320",
+      "passed": true,
+      "detail": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/history/"
+    },
+    {
+      "check": "search 320 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "search 320 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "entry 320 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 1,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "entry 320 default one shell",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "entry 320 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 1,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "entry 320 slate one shell",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "catalog 320 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "catalog 320 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "people 320 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "people 320 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "map 320 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "map 320 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "timeline 320 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "timeline 320 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "craft 320 default layout/navigation",
+      "passed": false,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 2,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "craft 320 slate layout/navigation",
+      "passed": false,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 2,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "evidence 320 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "evidence 320 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "global 320 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "global 320 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "research 320 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "research 320 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "contemporary 320 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "contemporary 320 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "home 390 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "home 390 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "first visit understands museum 390",
+      "passed": true,
+      "detail": "景德镇陶瓷数字博物馆\n\n青花，不止于蓝。\n\n从一件瓷器出发，认识千年窑火、匠人与世界。\n\n你想了解什么？\n搜索\n\n热门：青花 · 唐英 · 御窑厂 · 粉彩\n\n第一次来？从这里开始 ↓"
+    },
+    {
+      "check": "encyclopedia navigation 390",
+      "passed": true,
+      "detail": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/history/"
+    },
+    {
+      "check": "search 390 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "search 390 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "entry 390 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 1,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "entry 390 default one shell",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "entry 390 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 1,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "entry 390 slate one shell",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "catalog 390 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "catalog 390 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "people 390 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "people 390 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "map 390 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "map 390 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "timeline 390 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "timeline 390 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "craft 390 default layout/navigation",
+      "passed": false,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 2,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "craft 390 slate layout/navigation",
+      "passed": false,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 2,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "evidence 390 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "evidence 390 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "global 390 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "global 390 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "research 390 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "research 390 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "contemporary 390 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "contemporary 390 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "home 768 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "home 768 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "first visit understands museum 768",
+      "passed": true,
+      "detail": "景德镇陶瓷数字博物馆\n\n青花，不止于蓝。\n\n从一件瓷器出发，认识千年窑火、匠人与世界。\n\n你想了解什么？\n搜索\n\n热门：青花 · 唐英 · 御窑厂 · 粉彩\n\n第一次来？从这里开始 ↓"
+    },
+    {
+      "check": "encyclopedia navigation 768",
+      "passed": true,
+      "detail": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/history/"
+    },
+    {
+      "check": "search 768 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "search 768 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "entry 768 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 1,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "entry 768 default one shell",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "entry 768 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 1,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "entry 768 slate one shell",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "catalog 768 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "catalog 768 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "people 768 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "people 768 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "map 768 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "map 768 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "timeline 768 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "timeline 768 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "craft 768 default layout/navigation",
+      "passed": false,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 2,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "craft 768 slate layout/navigation",
+      "passed": false,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 2,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "evidence 768 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "evidence 768 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "global 768 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "global 768 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "research 768 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "research 768 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "contemporary 768 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "contemporary 768 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "home 1440 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "home 1440 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "first visit understands museum 1440",
+      "passed": true,
+      "detail": "景德镇陶瓷数字博物馆\n\n青花，不止于蓝。\n\n从一件瓷器出发，认识千年窑火、匠人与世界。\n\n你想了解什么？\n搜索\n\n热门：青花 · 唐英 · 御窑厂 · 粉彩\n\n第一次来？从这里开始 ↓"
+    },
+    {
+      "check": "encyclopedia navigation 1440",
+      "passed": true,
+      "detail": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/history/"
+    },
+    {
+      "check": "search 1440 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "search 1440 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "entry 1440 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 1,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "entry 1440 default one shell",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "entry 1440 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 1,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "entry 1440 slate one shell",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "catalog 1440 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "catalog 1440 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "people 1440 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "people 1440 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "map 1440 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "map 1440 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "timeline 1440 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "timeline 1440 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "craft 1440 default layout/navigation",
+      "passed": false,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 2,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "craft 1440 slate layout/navigation",
+      "passed": false,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 2,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "evidence 1440 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "evidence 1440 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "global 1440 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "global 1440 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "research 1440 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "research 1440 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "contemporary 1440 default layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "contemporary 1440 slate layout/navigation",
+      "passed": true,
+      "detail": {
+        "overflow": 0,
+        "headers": 1,
+        "navs": 1,
+        "footers": 1,
+        "cards": 0,
+        "nested": 0,
+        "h1": 1,
+        "altMissing": 0
+      }
+    },
+    {
+      "check": "search exact 青花瓷 390",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "search actual destination 青花瓷 390",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "body never replaced 青花瓷 390",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "entry trustworthy sources affordance 青花瓷 390",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "sources discoverable 青花瓷 390",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "related reading available 青花瓷 390",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "browser Back returns 青花瓷 390",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "search exact 湖田窑 390",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "search actual destination 湖田窑 390",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "body never replaced 湖田窑 390",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "entry trustworthy sources affordance 湖田窑 390",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "sources discoverable 湖田窑 390",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "related reading available 湖田窑 390",
+      "passed": false,
+      "detail": null
+    },
+    {
+      "check": "search exact 唐英 390",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "search actual destination 唐英 390",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "body never replaced 唐英 390",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "entry trustworthy sources affordance 唐英 390",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "sources discoverable 唐英 390",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "related reading available 唐英 390",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "browser Back returns 唐英 390",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "object detail navigation 390",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "map hutian to encyclopedia 390",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "timeline context understandable 390",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "global Jingdezhen relation 390",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "global relation to real entry 390",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "evidence explains verification limits 390",
+      "passed": true,
+      "detail": "唐英\n[1] R04 · 蓝浦：《景德镇陶录》\n阅读原始资料 ↗\n\n参考资料：未提供完整的逐项核验记录\n\n[2] R06 · 《浮梁县志》乾隆四十八年（1783）刻本\n阅读原始资料 ↗\n\n参考资料：未提供完整的逐项核验记录\n\n[3] 故宫博物院·各种釉彩大瓶·唐英资料\n阅读原始资料 ↗\n\n参考资料：未提供完整的逐项核验记录\n\n[4] 故宫博物院·唐英及其助手的制瓷成就\n阅读原始资料 ↗\n\n参考资料：未提供完整的逐项核验记录"
+    },
+    {
+      "check": "search exact 青花瓷 1440",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "search actual destination 青花瓷 1440",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "body never replaced 青花瓷 1440",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "entry trustworthy sources affordance 青花瓷 1440",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "sources discoverable 青花瓷 1440",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "related reading available 青花瓷 1440",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "browser Back returns 青花瓷 1440",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "search exact 湖田窑 1440",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "search actual destination 湖田窑 1440",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "body never replaced 湖田窑 1440",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "entry trustworthy sources affordance 湖田窑 1440",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "sources discoverable 湖田窑 1440",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "related reading available 湖田窑 1440",
+      "passed": false,
+      "detail": null
+    },
+    {
+      "check": "search exact 唐英 1440",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "search actual destination 唐英 1440",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "body never replaced 唐英 1440",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "entry trustworthy sources affordance 唐英 1440",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "sources discoverable 唐英 1440",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "related reading available 唐英 1440",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "browser Back returns 唐英 1440",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "object detail navigation 1440",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "map hutian to encyclopedia 1440",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "timeline context understandable 1440",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "global Jingdezhen relation 1440",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "global relation to real entry 1440",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "evidence explains verification limits 1440",
+      "passed": true,
+      "detail": "唐英\n[1] R04 · 蓝浦：《景德镇陶录》\n阅读原始资料 ↗\n\n参考资料：未提供完整的逐项核验记录\n\n[2] R06 · 《浮梁县志》乾隆四十八年（1783）刻本\n阅读原始资料 ↗\n\n参考资料：未提供完整的逐项核验记录\n\n[3] 故宫博物院·各种釉彩大瓶·唐英资料\n阅读原始资料 ↗\n\n参考资料：未提供完整的逐项核验记录\n\n[4] 故宫博物院·唐英及其助手的制瓷成就\n阅读原始资料 ↗\n\n参考资料：未提供完整的逐项核验记录"
+    },
+    {
+      "check": "gallery attribution visible",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "failed gallery image safe fallback",
+      "passed": true,
+      "detail": "各种釉彩大瓶\n清乾隆 · 故00154493 · 高86.4厘米\n图像出处：故宫博物院网站 · 版权归故宫博物院"
+    },
+    {
+      "check": "no unexpected runtime exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "no database writes",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "layouts": [
+    {
+      "page": "home",
+      "width": 320,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "home",
+      "width": 320,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "search",
+      "width": 320,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "search",
+      "width": 320,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "entry",
+      "width": 320,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 1,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "entry",
+      "width": 320,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 1,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "catalog",
+      "width": 320,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "catalog",
+      "width": 320,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "people",
+      "width": 320,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "people",
+      "width": 320,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "map",
+      "width": 320,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "map",
+      "width": 320,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "timeline",
+      "width": 320,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "timeline",
+      "width": 320,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "craft",
+      "width": 320,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 2,
+      "altMissing": 0
+    },
+    {
+      "page": "craft",
+      "width": 320,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 2,
+      "altMissing": 0
+    },
+    {
+      "page": "evidence",
+      "width": 320,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "evidence",
+      "width": 320,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "global",
+      "width": 320,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "global",
+      "width": 320,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "research",
+      "width": 320,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "research",
+      "width": 320,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "contemporary",
+      "width": 320,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "contemporary",
+      "width": 320,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "home",
+      "width": 390,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "home",
+      "width": 390,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "search",
+      "width": 390,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "search",
+      "width": 390,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "entry",
+      "width": 390,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 1,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "entry",
+      "width": 390,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 1,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "catalog",
+      "width": 390,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "catalog",
+      "width": 390,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "people",
+      "width": 390,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "people",
+      "width": 390,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "map",
+      "width": 390,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "map",
+      "width": 390,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "timeline",
+      "width": 390,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "timeline",
+      "width": 390,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "craft",
+      "width": 390,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 2,
+      "altMissing": 0
+    },
+    {
+      "page": "craft",
+      "width": 390,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 2,
+      "altMissing": 0
+    },
+    {
+      "page": "evidence",
+      "width": 390,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "evidence",
+      "width": 390,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "global",
+      "width": 390,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "global",
+      "width": 390,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "research",
+      "width": 390,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "research",
+      "width": 390,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "contemporary",
+      "width": 390,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "contemporary",
+      "width": 390,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "home",
+      "width": 768,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "home",
+      "width": 768,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "search",
+      "width": 768,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "search",
+      "width": 768,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "entry",
+      "width": 768,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 1,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "entry",
+      "width": 768,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 1,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "catalog",
+      "width": 768,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "catalog",
+      "width": 768,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "people",
+      "width": 768,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "people",
+      "width": 768,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "map",
+      "width": 768,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "map",
+      "width": 768,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "timeline",
+      "width": 768,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "timeline",
+      "width": 768,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "craft",
+      "width": 768,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 2,
+      "altMissing": 0
+    },
+    {
+      "page": "craft",
+      "width": 768,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 2,
+      "altMissing": 0
+    },
+    {
+      "page": "evidence",
+      "width": 768,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "evidence",
+      "width": 768,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "global",
+      "width": 768,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "global",
+      "width": 768,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "research",
+      "width": 768,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "research",
+      "width": 768,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "contemporary",
+      "width": 768,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "contemporary",
+      "width": 768,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "home",
+      "width": 1440,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "home",
+      "width": 1440,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "search",
+      "width": 1440,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "search",
+      "width": 1440,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "entry",
+      "width": 1440,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 1,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "entry",
+      "width": 1440,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 1,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "catalog",
+      "width": 1440,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "catalog",
+      "width": 1440,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "people",
+      "width": 1440,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "people",
+      "width": 1440,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "map",
+      "width": 1440,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "map",
+      "width": 1440,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "timeline",
+      "width": 1440,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "timeline",
+      "width": 1440,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "craft",
+      "width": 1440,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 2,
+      "altMissing": 0
+    },
+    {
+      "page": "craft",
+      "width": 1440,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 2,
+      "altMissing": 0
+    },
+    {
+      "page": "evidence",
+      "width": 1440,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "evidence",
+      "width": 1440,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "global",
+      "width": 1440,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "global",
+      "width": 1440,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "research",
+      "width": 1440,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "research",
+      "width": 1440,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "contemporary",
+      "width": 1440,
+      "scheme": "default",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    },
+    {
+      "page": "contemporary",
+      "width": 1440,
+      "scheme": "slate",
+      "overflow": 0,
+      "headers": 1,
+      "navs": 1,
+      "footers": 1,
+      "cards": 0,
+      "nested": 0,
+      "h1": 1,
+      "altMissing": 0
+    }
+  ],
+  "errors": [],
+  "database_request_methods": [
+    [
+      "GET",
+      "/rest/v1/craft_process_relations"
+    ],
+    [
+      "GET",
+      "/rest/v1/craft_processes"
+    ],
+    [
+      "GET",
+      "/rest/v1/entries"
+    ],
+    [
+      "GET",
+      "/rest/v1/entry_craft_processes"
+    ],
+    [
+      "GET",
+      "/rest/v1/entry_relations"
+    ],
+    [
+      "GET",
+      "/rest/v1/entry_worlds"
+    ],
+    [
+      "GET",
+      "/rest/v1/knowledge_graph_edges"
+    ],
+    [
+      "GET",
+      "/rest/v1/knowledge_recommendations"
+    ],
+    [
+      "GET",
+      "/rest/v1/knowledge_worlds"
+    ],
+    [
+      "GET",
+      "/rest/v1/media_public"
+    ],
+    [
+      "GET",
+      "/rest/v1/timeline_context"
+    ],
+    [
+      "POST",
+      "/rest/v1/rpc/entry_space_peers"
+    ],
+    [
+      "POST",
+      "/rest/v1/rpc/entry_timeline_peers"
+    ]
+  ],
+  "limitations": "Real headless Chromium at the specified viewports; not physical-device testing or human screen-reader certification."
+}
