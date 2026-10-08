@@ -1,0 +1,957 @@
+{
+  "objects": [
+    {
+      "id": "d7dc4c50-7aeb-4554-a4eb-2bdc760d0508",
+      "slug": "yongzheng-celadon-ewer",
+      "title": "雍正青釉花浇",
+      "status": "对象身份待核；已确认当前共用引用不能闭合身份",
+      "official_object_name": null,
+      "institution": null,
+      "object_number": null,
+      "period_and_attribution": null,
+      "glaze": null,
+      "pattern": null,
+      "form": null,
+      "official_object_url": null,
+      "image_url": null,
+      "image_license": null,
+      "current_claim": "<p>大都会博物馆藏雍正景德镇窑青釉花浇显示清宫瓷器对外来器形与中国材料传统的结合。</p>",
+      "excluded_records": [
+        {
+          "source_id": "met-stem",
+          "object_number": "1991.253.40",
+          "why": "宣德青花应龙纹高足杯，不是本题名所指对象"
+        },
+        {
+          "source_id": "bm-red",
+          "object_number": "PDF.560",
+          "why": "永乐铜红釉盘，不是本题名所指对象"
+        }
+      ],
+      "research_performed": [
+        "逐条查看当前正文、sources、中文metadata、其他语言；没有足以匹配对象的编号",
+        "查阅Phase A对象缺口与当前55条media；这25条没有绑定可追溯对应图",
+        "检索仓库原始生成/导入文件，没有发现对应对象号",
+        "复读共用两对象的正式编目，排除错误绑定；另进行限定官方检索，访问限制见source-requests.json"
+      ],
+      "minimum_safe_draft_slug": "yongzheng-celadon-ewer",
+      "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+    },
+    {
+      "id": "ccbf4313-6365-4218-b8c7-a7d80c54c796",
+      "slug": "kangxi-peachbloom-vase",
+      "title": "康熙桃花片釉瓶",
+      "status": "对象身份待核；已确认当前共用引用不能闭合身份",
+      "official_object_name": null,
+      "institution": null,
+      "object_number": null,
+      "period_and_attribution": null,
+      "glaze": null,
+      "pattern": null,
+      "form": null,
+      "official_object_url": null,
+      "image_url": null,
+      "image_license": null,
+      "current_claim": "<p>大都会博物馆藏康熙桃花片釉瓶是清代景德镇颜色釉研究的重要实物。</p>",
+      "excluded_records": [
+        {
+          "source_id": "met-stem",
+          "object_number": "1991.253.40",
+          "why": "宣德青花应龙纹高足杯，不是本题名所指对象"
+        },
+        {
+          "source_id": "bm-red",
+          "object_number": "PDF.560",
+          "why": "永乐铜红釉盘，不是本题名所指对象"
+        }
+      ],
+      "research_performed": [
+        "逐条查看当前正文、sources、中文metadata、其他语言；没有足以匹配对象的编号",
+        "查阅Phase A对象缺口与当前55条media；这25条没有绑定可追溯对应图",
+        "检索仓库原始生成/导入文件，没有发现对应对象号",
+        "复读共用两对象的正式编目，排除错误绑定；另进行限定官方检索，访问限制见source-requests.json"
+      ],
+      "minimum_safe_draft_slug": "kangxi-peachbloom-vase",
+      "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+    },
+    {
+      "id": "7c5e8a4d-7980-4166-a707-c514d1e40762",
+      "slug": "kangxi-famille-verte-dragon",
+      "title": "康熙五彩龙纹盘",
+      "status": "对象身份待核；已确认当前共用引用不能闭合身份",
+      "official_object_name": null,
+      "institution": null,
+      "object_number": null,
+      "period_and_attribution": null,
+      "glaze": null,
+      "pattern": null,
+      "form": null,
+      "official_object_url": null,
+      "image_url": null,
+      "image_license": null,
+      "current_claim": "<p>大都会博物馆藏康熙景德镇窑五彩龙纹盘可用于研究釉上彩与欧洲消费史。</p>",
+      "excluded_records": [
+        {
+          "source_id": "met-stem",
+          "object_number": "1991.253.40",
+          "why": "宣德青花应龙纹高足杯，不是本题名所指对象"
+        },
+        {
+          "source_id": "bm-red",
+          "object_number": "PDF.560",
+          "why": "永乐铜红釉盘，不是本题名所指对象"
+        }
+      ],
+      "research_performed": [
+        "逐条查看当前正文、sources、中文metadata、其他语言；没有足以匹配对象的编号",
+        "查阅Phase A对象缺口与当前55条media；这25条没有绑定可追溯对应图",
+        "检索仓库原始生成/导入文件，没有发现对应对象号",
+        "复读共用两对象的正式编目，排除错误绑定；另进行限定官方检索，访问限制见source-requests.json"
+      ],
+      "minimum_safe_draft_slug": "kangxi-famille-verte-dragon",
+      "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+    },
+    {
+      "id": "05c0a2b6-5c35-471c-96db-fdc1c667afd1",
+      "slug": "yongzheng-doucai-bamboo-cup",
+      "title": "雍正斗彩竹纹杯",
+      "status": "对象身份待核；已确认当前共用引用不能闭合身份",
+      "official_object_name": null,
+      "institution": null,
+      "object_number": null,
+      "period_and_attribution": null,
+      "glaze": null,
+      "pattern": null,
+      "form": null,
+      "official_object_url": null,
+      "image_url": null,
+      "image_license": null,
+      "current_claim": "<p>大都会博物馆藏雍正景德镇窑斗彩竹纹杯提供青花与釉上彩结合的实物证据。</p>",
+      "excluded_records": [
+        {
+          "source_id": "met-stem",
+          "object_number": "1991.253.40",
+          "why": "宣德青花应龙纹高足杯，不是本题名所指对象"
+        },
+        {
+          "source_id": "bm-red",
+          "object_number": "PDF.560",
+          "why": "永乐铜红釉盘，不是本题名所指对象"
+        }
+      ],
+      "research_performed": [
+        "逐条查看当前正文、sources、中文metadata、其他语言；没有足以匹配对象的编号",
+        "查阅Phase A对象缺口与当前55条media；这25条没有绑定可追溯对应图",
+        "检索仓库原始生成/导入文件，没有发现对应对象号",
+        "复读共用两对象的正式编目，排除错误绑定；另进行限定官方检索，访问限制见source-requests.json"
+      ],
+      "minimum_safe_draft_slug": "yongzheng-doucai-bamboo-cup",
+      "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+    },
+    {
+      "id": "22dfaa6d-d756-47e4-b50b-95d1c53a80f5",
+      "slug": "ming-landscape-dish",
+      "title": "明代景德镇青花山水盘",
+      "status": "对象身份待核；已确认当前共用引用不能闭合身份",
+      "official_object_name": null,
+      "institution": null,
+      "object_number": null,
+      "period_and_attribution": null,
+      "glaze": null,
+      "pattern": null,
+      "form": null,
+      "official_object_url": null,
+      "image_url": null,
+      "image_license": null,
+      "current_claim": "<p>英国博物馆藏明代景德镇青花山水盘可用于研究晚明山水题材与款识问题。</p>",
+      "excluded_records": [
+        {
+          "source_id": "met-stem",
+          "object_number": "1991.253.40",
+          "why": "宣德青花应龙纹高足杯，不是本题名所指对象"
+        },
+        {
+          "source_id": "bm-red",
+          "object_number": "PDF.560",
+          "why": "永乐铜红釉盘，不是本题名所指对象"
+        }
+      ],
+      "research_performed": [
+        "逐条查看当前正文、sources、中文metadata、其他语言；没有足以匹配对象的编号",
+        "查阅Phase A对象缺口与当前55条media；这25条没有绑定可追溯对应图",
+        "检索仓库原始生成/导入文件，没有发现对应对象号",
+        "复读共用两对象的正式编目，排除错误绑定；另进行限定官方检索，访问限制见source-requests.json"
+      ],
+      "minimum_safe_draft_slug": "ming-landscape-dish",
+      "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+    },
+    {
+      "id": "517b9031-c7e7-4635-936c-f99928938776",
+      "slug": "ming-kinrande-jar",
+      "title": "明代金襕手风格景德镇器",
+      "status": "对象身份待核；已确认当前共用引用不能闭合身份",
+      "official_object_name": null,
+      "institution": null,
+      "object_number": null,
+      "period_and_attribution": null,
+      "glaze": null,
+      "pattern": null,
+      "form": null,
+      "official_object_url": null,
+      "image_url": null,
+      "image_license": null,
+      "current_claim": "<p>英国博物馆与大都会博物馆藏品显示景德镇金襕手类装饰与日本市场之间的联系。</p>",
+      "excluded_records": [
+        {
+          "source_id": "met-stem",
+          "object_number": "1991.253.40",
+          "why": "宣德青花应龙纹高足杯，不是本题名所指对象"
+        },
+        {
+          "source_id": "bm-red",
+          "object_number": "PDF.560",
+          "why": "永乐铜红釉盘，不是本题名所指对象"
+        }
+      ],
+      "research_performed": [
+        "逐条查看当前正文、sources、中文metadata、其他语言；没有足以匹配对象的编号",
+        "查阅Phase A对象缺口与当前55条media；这25条没有绑定可追溯对应图",
+        "检索仓库原始生成/导入文件，没有发现对应对象号",
+        "复读共用两对象的正式编目，排除错误绑定；另进行限定官方检索，访问限制见source-requests.json"
+      ],
+      "minimum_safe_draft_slug": "ming-kinrande-jar",
+      "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+    },
+    {
+      "id": "3a9fe43e-e09e-4677-a848-88a801b39397",
+      "slug": "jiajing-red-ground-dish",
+      "title": "嘉靖红地青花方盘",
+      "status": "对象身份待核；已确认当前共用引用不能闭合身份",
+      "official_object_name": null,
+      "institution": null,
+      "object_number": null,
+      "period_and_attribution": null,
+      "glaze": null,
+      "pattern": null,
+      "form": null,
+      "official_object_url": null,
+      "image_url": null,
+      "image_license": null,
+      "current_claim": "<p>英国博物馆藏嘉靖红地青花方盘记录了景德镇青花与红彩组合及年款。</p>",
+      "excluded_records": [
+        {
+          "source_id": "met-stem",
+          "object_number": "1991.253.40",
+          "why": "宣德青花应龙纹高足杯，不是本题名所指对象"
+        },
+        {
+          "source_id": "bm-red",
+          "object_number": "PDF.560",
+          "why": "永乐铜红釉盘，不是本题名所指对象"
+        }
+      ],
+      "research_performed": [
+        "逐条查看当前正文、sources、中文metadata、其他语言；没有足以匹配对象的编号",
+        "查阅Phase A对象缺口与当前55条media；这25条没有绑定可追溯对应图",
+        "检索仓库原始生成/导入文件，没有发现对应对象号",
+        "复读共用两对象的正式编目，排除错误绑定；另进行限定官方检索，访问限制见source-requests.json"
+      ],
+      "minimum_safe_draft_slug": "jiajing-red-ground-dish",
+      "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+    },
+    {
+      "id": "2975b66d-ac4a-453c-8cdb-f5165ee10271",
+      "slug": "qing-peach-shaped-ewer",
+      "title": "清代青花釉里红桃形壶",
+      "status": "对象身份待核；已确认当前共用引用不能闭合身份",
+      "official_object_name": null,
+      "institution": null,
+      "object_number": null,
+      "period_and_attribution": null,
+      "glaze": null,
+      "pattern": null,
+      "form": null,
+      "official_object_url": null,
+      "image_url": null,
+      "image_license": null,
+      "current_claim": "<p>大都会博物馆藏清代景德镇青花釉里红桃形壶展示釉下钴蓝与铜红并用。</p>",
+      "excluded_records": [
+        {
+          "source_id": "met-stem",
+          "object_number": "1991.253.40",
+          "why": "宣德青花应龙纹高足杯，不是本题名所指对象"
+        },
+        {
+          "source_id": "bm-red",
+          "object_number": "PDF.560",
+          "why": "永乐铜红釉盘，不是本题名所指对象"
+        }
+      ],
+      "research_performed": [
+        "逐条查看当前正文、sources、中文metadata、其他语言；没有足以匹配对象的编号",
+        "查阅Phase A对象缺口与当前55条media；这25条没有绑定可追溯对应图",
+        "检索仓库原始生成/导入文件，没有发现对应对象号",
+        "复读共用两对象的正式编目，排除错误绑定；另进行限定官方检索，访问限制见source-requests.json"
+      ],
+      "minimum_safe_draft_slug": "qing-peach-shaped-ewer",
+      "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+    },
+    {
+      "id": "1b28709f-ffb4-432f-a7ae-6a76f62947a2",
+      "slug": "kangxi-oxblood-vase",
+      "title": "康熙郎窑红类瓶",
+      "status": "对象身份待核；已确认当前共用引用不能闭合身份",
+      "official_object_name": null,
+      "institution": null,
+      "object_number": null,
+      "period_and_attribution": null,
+      "glaze": null,
+      "pattern": null,
+      "form": null,
+      "official_object_url": null,
+      "image_url": null,
+      "image_license": null,
+      "current_claim": "<p>大都会博物馆藏康熙景德镇红釉瓶可作为清代高温红釉研究的实物入口。</p>",
+      "excluded_records": [
+        {
+          "source_id": "met-stem",
+          "object_number": "1991.253.40",
+          "why": "宣德青花应龙纹高足杯，不是本题名所指对象"
+        },
+        {
+          "source_id": "bm-red",
+          "object_number": "PDF.560",
+          "why": "永乐铜红釉盘，不是本题名所指对象"
+        }
+      ],
+      "research_performed": [
+        "逐条查看当前正文、sources、中文metadata、其他语言；没有足以匹配对象的编号",
+        "查阅Phase A对象缺口与当前55条media；这25条没有绑定可追溯对应图",
+        "检索仓库原始生成/导入文件，没有发现对应对象号",
+        "复读共用两对象的正式编目，排除错误绑定；另进行限定官方检索，访问限制见source-requests.json"
+      ],
+      "minimum_safe_draft_slug": "kangxi-oxblood-vase",
+      "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+    },
+    {
+      "id": "59f0b451-5334-4f87-aa8c-31ea7c0b8d4d",
+      "slug": "kangxi-covered-jar",
+      "title": "康熙五彩盖罐",
+      "status": "对象身份待核；已确认当前共用引用不能闭合身份",
+      "official_object_name": null,
+      "institution": null,
+      "object_number": null,
+      "period_and_attribution": null,
+      "glaze": null,
+      "pattern": null,
+      "form": null,
+      "official_object_url": null,
+      "image_url": null,
+      "image_license": null,
+      "current_claim": "<p>大都会博物馆藏康熙五彩盖罐可用于研究清代景德镇外销与陈设瓷。</p>",
+      "excluded_records": [
+        {
+          "source_id": "met-stem",
+          "object_number": "1991.253.40",
+          "why": "宣德青花应龙纹高足杯，不是本题名所指对象"
+        },
+        {
+          "source_id": "bm-red",
+          "object_number": "PDF.560",
+          "why": "永乐铜红釉盘，不是本题名所指对象"
+        }
+      ],
+      "research_performed": [
+        "逐条查看当前正文、sources、中文metadata、其他语言；没有足以匹配对象的编号",
+        "查阅Phase A对象缺口与当前55条media；这25条没有绑定可追溯对应图",
+        "检索仓库原始生成/导入文件，没有发现对应对象号",
+        "复读共用两对象的正式编目，排除错误绑定；另进行限定官方检索，访问限制见source-requests.json"
+      ],
+      "minimum_safe_draft_slug": "kangxi-covered-jar",
+      "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+    },
+    {
+      "id": "9c5c26a0-51c0-49df-842e-10fe249db2ae",
+      "slug": "kangxi-famille-verte-figure",
+      "title": "康熙五彩人物像",
+      "status": "对象身份待核；已确认当前共用引用不能闭合身份",
+      "official_object_name": null,
+      "institution": null,
+      "object_number": null,
+      "period_and_attribution": null,
+      "glaze": null,
+      "pattern": null,
+      "form": null,
+      "official_object_url": null,
+      "image_url": null,
+      "image_license": null,
+      "current_claim": "<p>大都会博物馆藏康熙五彩人物像显示景德镇釉上彩对立体瓷塑的应用。</p>",
+      "excluded_records": [
+        {
+          "source_id": "met-stem",
+          "object_number": "1991.253.40",
+          "why": "宣德青花应龙纹高足杯，不是本题名所指对象"
+        },
+        {
+          "source_id": "bm-red",
+          "object_number": "PDF.560",
+          "why": "永乐铜红釉盘，不是本题名所指对象"
+        }
+      ],
+      "research_performed": [
+        "逐条查看当前正文、sources、中文metadata、其他语言；没有足以匹配对象的编号",
+        "查阅Phase A对象缺口与当前55条media；这25条没有绑定可追溯对应图",
+        "检索仓库原始生成/导入文件，没有发现对应对象号",
+        "复读共用两对象的正式编目，排除错误绑定；另进行限定官方检索，访问限制见source-requests.json"
+      ],
+      "minimum_safe_draft_slug": "kangxi-famille-verte-figure",
+      "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+    },
+    {
+      "id": "c094cdfc-9d3c-49ec-ae7e-fe3a75364fd8",
+      "slug": "jiajing-kinrande-ewer",
+      "title": "嘉靖至万历金襕手执壶",
+      "status": "对象身份待核；已确认当前共用引用不能闭合身份",
+      "official_object_name": null,
+      "institution": null,
+      "object_number": null,
+      "period_and_attribution": null,
+      "glaze": null,
+      "pattern": null,
+      "form": null,
+      "official_object_url": null,
+      "image_url": null,
+      "image_license": null,
+      "current_claim": "<p>英国博物馆藏嘉靖至万历景德镇金襕手执壶记录了红、绿彩与金彩的组合工艺。</p>",
+      "excluded_records": [
+        {
+          "source_id": "met-stem",
+          "object_number": "1991.253.40",
+          "why": "宣德青花应龙纹高足杯，不是本题名所指对象"
+        },
+        {
+          "source_id": "bm-red",
+          "object_number": "PDF.560",
+          "why": "永乐铜红釉盘，不是本题名所指对象"
+        }
+      ],
+      "research_performed": [
+        "逐条查看当前正文、sources、中文metadata、其他语言；没有足以匹配对象的编号",
+        "查阅Phase A对象缺口与当前55条media；这25条没有绑定可追溯对应图",
+        "检索仓库原始生成/导入文件，没有发现对应对象号",
+        "复读共用两对象的正式编目，排除错误绑定；另进行限定官方检索，访问限制见source-requests.json"
+      ],
+      "minimum_safe_draft_slug": "jiajing-kinrande-ewer",
+      "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+    },
+    {
+      "id": "912c614e-6762-4c59-95df-5f0517c981dd",
+      "slug": "kangxi-covered-ewer",
+      "title": "康熙五彩盖执壶",
+      "status": "对象身份待核；已确认当前共用引用不能闭合身份",
+      "official_object_name": null,
+      "institution": null,
+      "object_number": null,
+      "period_and_attribution": null,
+      "glaze": null,
+      "pattern": null,
+      "form": null,
+      "official_object_url": null,
+      "image_url": null,
+      "image_license": null,
+      "current_claim": "<p>大都会博物馆藏康熙五彩盖执壶是复杂器形与釉上彩装饰的案例。</p>",
+      "excluded_records": [
+        {
+          "source_id": "met-stem",
+          "object_number": "1991.253.40",
+          "why": "宣德青花应龙纹高足杯，不是本题名所指对象"
+        },
+        {
+          "source_id": "bm-red",
+          "object_number": "PDF.560",
+          "why": "永乐铜红釉盘，不是本题名所指对象"
+        }
+      ],
+      "research_performed": [
+        "逐条查看当前正文、sources、中文metadata、其他语言；没有足以匹配对象的编号",
+        "查阅Phase A对象缺口与当前55条media；这25条没有绑定可追溯对应图",
+        "检索仓库原始生成/导入文件，没有发现对应对象号",
+        "复读共用两对象的正式编目，排除错误绑定；另进行限定官方检索，访问限制见source-requests.json"
+      ],
+      "minimum_safe_draft_slug": "kangxi-covered-ewer",
+      "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+    },
+    {
+      "id": "b341e65e-27f8-4152-93d7-6292fb09c3b1",
+      "slug": "xuande-dragon-dish",
+      "title": "宣德青花龙纹盘",
+      "status": "对象身份待核；已确认当前共用引用不能闭合身份",
+      "official_object_name": null,
+      "institution": null,
+      "object_number": null,
+      "period_and_attribution": null,
+      "glaze": null,
+      "pattern": null,
+      "form": null,
+      "official_object_url": null,
+      "image_url": null,
+      "image_license": null,
+      "current_claim": "<p>宣德景德镇青花龙纹盘可用于研究明代早期青花纹样和宫廷生产。</p>",
+      "excluded_records": [
+        {
+          "source_id": "met-stem",
+          "object_number": "1991.253.40",
+          "why": "宣德青花应龙纹高足杯，不是本题名所指对象"
+        },
+        {
+          "source_id": "bm-red",
+          "object_number": "PDF.560",
+          "why": "永乐铜红釉盘，不是本题名所指对象"
+        }
+      ],
+      "research_performed": [
+        "逐条查看当前正文、sources、中文metadata、其他语言；没有足以匹配对象的编号",
+        "查阅Phase A对象缺口与当前55条media；这25条没有绑定可追溯对应图",
+        "检索仓库原始生成/导入文件，没有发现对应对象号",
+        "复读共用两对象的正式编目，排除错误绑定；另进行限定官方检索，访问限制见source-requests.json"
+      ],
+      "minimum_safe_draft_slug": "xuande-dragon-dish",
+      "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+    },
+    {
+      "id": "6988d1c3-604e-4184-bbfa-95043c8ff064",
+      "slug": "xuande-pomegranate-bowl",
+      "title": "宣德青花石榴缠枝莲纹菊瓣碗",
+      "status": "对象身份待核；已确认当前共用引用不能闭合身份",
+      "official_object_name": null,
+      "institution": null,
+      "object_number": null,
+      "period_and_attribution": null,
+      "glaze": null,
+      "pattern": null,
+      "form": null,
+      "official_object_url": null,
+      "image_url": null,
+      "image_license": null,
+      "current_claim": "<p>大都会博物馆藏宣德景德镇窑青花石榴缠枝莲纹菊瓣碗提供了宫廷图式的实物案例。</p>",
+      "excluded_records": [
+        {
+          "source_id": "met-stem",
+          "object_number": "1991.253.40",
+          "why": "宣德青花应龙纹高足杯，不是本题名所指对象"
+        },
+        {
+          "source_id": "bm-red",
+          "object_number": "PDF.560",
+          "why": "永乐铜红釉盘，不是本题名所指对象"
+        }
+      ],
+      "research_performed": [
+        "逐条查看当前正文、sources、中文metadata、其他语言；没有足以匹配对象的编号",
+        "查阅Phase A对象缺口与当前55条media；这25条没有绑定可追溯对应图",
+        "检索仓库原始生成/导入文件，没有发现对应对象号",
+        "复读共用两对象的正式编目，排除错误绑定；另进行限定官方检索，访问限制见source-requests.json"
+      ],
+      "minimum_safe_draft_slug": "xuande-pomegranate-bowl",
+      "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+    },
+    {
+      "id": "d5008a14-422c-41b4-a6c9-7f0b9c3d8b09",
+      "slug": "xuande-copper-red-bowl",
+      "title": "宣德铜红釉碗",
+      "status": "对象身份待核；已确认当前共用引用不能闭合身份",
+      "official_object_name": null,
+      "institution": null,
+      "object_number": null,
+      "period_and_attribution": null,
+      "glaze": null,
+      "pattern": null,
+      "form": null,
+      "official_object_url": null,
+      "image_url": null,
+      "image_license": null,
+      "current_claim": "<p>英国博物馆藏宣德铜红釉碗可用于研究高温铜红釉与明代御窑款识。</p>",
+      "excluded_records": [
+        {
+          "source_id": "met-stem",
+          "object_number": "1991.253.40",
+          "why": "宣德青花应龙纹高足杯，不是本题名所指对象"
+        },
+        {
+          "source_id": "bm-red",
+          "object_number": "PDF.560",
+          "why": "永乐铜红釉盘，不是本题名所指对象"
+        }
+      ],
+      "research_performed": [
+        "逐条查看当前正文、sources、中文metadata、其他语言；没有足以匹配对象的编号",
+        "查阅Phase A对象缺口与当前55条media；这25条没有绑定可追溯对应图",
+        "检索仓库原始生成/导入文件，没有发现对应对象号",
+        "复读共用两对象的正式编目，排除错误绑定；另进行限定官方检索，访问限制见source-requests.json"
+      ],
+      "minimum_safe_draft_slug": "xuande-copper-red-bowl",
+      "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+    },
+    {
+      "id": "30b201d4-fb22-4268-a710-ee91ed9d2415",
+      "slug": "kangxi-black-glaze-vase",
+      "title": "康熙黑釉瓶",
+      "status": "对象身份待核；已确认当前共用引用不能闭合身份",
+      "official_object_name": null,
+      "institution": null,
+      "object_number": null,
+      "period_and_attribution": null,
+      "glaze": null,
+      "pattern": null,
+      "form": null,
+      "official_object_url": null,
+      "image_url": null,
+      "image_license": null,
+      "current_claim": "<p>大都会博物馆藏康熙时期景德镇黑釉瓶展示了清代单色釉生产的一个实物类型。</p>",
+      "excluded_records": [
+        {
+          "source_id": "met-stem",
+          "object_number": "1991.253.40",
+          "why": "宣德青花应龙纹高足杯，不是本题名所指对象"
+        },
+        {
+          "source_id": "bm-red",
+          "object_number": "PDF.560",
+          "why": "永乐铜红釉盘，不是本题名所指对象"
+        }
+      ],
+      "research_performed": [
+        "逐条查看当前正文、sources、中文metadata、其他语言；没有足以匹配对象的编号",
+        "查阅Phase A对象缺口与当前55条media；这25条没有绑定可追溯对应图",
+        "检索仓库原始生成/导入文件，没有发现对应对象号",
+        "复读共用两对象的正式编目，排除错误绑定；另进行限定官方检索，访问限制见source-requests.json"
+      ],
+      "minimum_safe_draft_slug": "kangxi-black-glaze-vase",
+      "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+    },
+    {
+      "id": "814879d7-0a47-436b-82e4-ab7728175a4e",
+      "slug": "yongzheng-turquoise-vase",
+      "title": "雍正绿松石釉瓶",
+      "status": "对象身份待核；已确认当前共用引用不能闭合身份",
+      "official_object_name": null,
+      "institution": null,
+      "object_number": null,
+      "period_and_attribution": null,
+      "glaze": null,
+      "pattern": null,
+      "form": null,
+      "official_object_url": null,
+      "image_url": null,
+      "image_license": null,
+      "current_claim": "<p>大都会博物馆藏雍正景德镇绿松石釉瓶提供清代单色釉器物案例。</p>",
+      "excluded_records": [
+        {
+          "source_id": "met-stem",
+          "object_number": "1991.253.40",
+          "why": "宣德青花应龙纹高足杯，不是本题名所指对象"
+        },
+        {
+          "source_id": "bm-red",
+          "object_number": "PDF.560",
+          "why": "永乐铜红釉盘，不是本题名所指对象"
+        }
+      ],
+      "research_performed": [
+        "逐条查看当前正文、sources、中文metadata、其他语言；没有足以匹配对象的编号",
+        "查阅Phase A对象缺口与当前55条media；这25条没有绑定可追溯对应图",
+        "检索仓库原始生成/导入文件，没有发现对应对象号",
+        "复读共用两对象的正式编目，排除错误绑定；另进行限定官方检索，访问限制见source-requests.json"
+      ],
+      "minimum_safe_draft_slug": "yongzheng-turquoise-vase",
+      "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+    },
+    {
+      "id": "18e78490-6efa-42d1-b2c3-be4318c925ed",
+      "slug": "qianlong-lightblue-vase",
+      "title": "乾隆浅蓝釉瓶",
+      "status": "对象身份待核；已确认当前共用引用不能闭合身份",
+      "official_object_name": null,
+      "institution": null,
+      "object_number": null,
+      "period_and_attribution": null,
+      "glaze": null,
+      "pattern": null,
+      "form": null,
+      "official_object_url": null,
+      "image_url": null,
+      "image_license": null,
+      "current_claim": "<p>大都会博物馆藏乾隆景德镇浅蓝釉瓶可作为清代颜色釉研究对象。</p>",
+      "excluded_records": [
+        {
+          "source_id": "met-stem",
+          "object_number": "1991.253.40",
+          "why": "宣德青花应龙纹高足杯，不是本题名所指对象"
+        },
+        {
+          "source_id": "bm-red",
+          "object_number": "PDF.560",
+          "why": "永乐铜红釉盘，不是本题名所指对象"
+        }
+      ],
+      "research_performed": [
+        "逐条查看当前正文、sources、中文metadata、其他语言；没有足以匹配对象的编号",
+        "查阅Phase A对象缺口与当前55条media；这25条没有绑定可追溯对应图",
+        "检索仓库原始生成/导入文件，没有发现对应对象号",
+        "复读共用两对象的正式编目，排除错误绑定；另进行限定官方检索，访问限制见source-requests.json"
+      ],
+      "minimum_safe_draft_slug": "qianlong-lightblue-vase",
+      "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+    },
+    {
+      "id": "9d0a95e1-b090-4e70-8837-d279ea89d096",
+      "slug": "yongzheng-relief-vase",
+      "title": "雍正刻花青釉瓶",
+      "status": "对象身份待核；已确认当前共用引用不能闭合身份",
+      "official_object_name": null,
+      "institution": null,
+      "object_number": null,
+      "period_and_attribution": null,
+      "glaze": null,
+      "pattern": null,
+      "form": null,
+      "official_object_url": null,
+      "image_url": null,
+      "image_license": null,
+      "current_claim": "<p>大都会博物馆藏雍正景德镇刻花青釉瓶可用于研究胎釉与装饰技法结合。</p>",
+      "excluded_records": [
+        {
+          "source_id": "met-stem",
+          "object_number": "1991.253.40",
+          "why": "宣德青花应龙纹高足杯，不是本题名所指对象"
+        },
+        {
+          "source_id": "bm-red",
+          "object_number": "PDF.560",
+          "why": "永乐铜红釉盘，不是本题名所指对象"
+        }
+      ],
+      "research_performed": [
+        "逐条查看当前正文、sources、中文metadata、其他语言；没有足以匹配对象的编号",
+        "查阅Phase A对象缺口与当前55条media；这25条没有绑定可追溯对应图",
+        "检索仓库原始生成/导入文件，没有发现对应对象号",
+        "复读共用两对象的正式编目，排除错误绑定；另进行限定官方检索，访问限制见source-requests.json"
+      ],
+      "minimum_safe_draft_slug": "yongzheng-relief-vase",
+      "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+    },
+    {
+      "id": "276fabf1-9963-45d7-b183-1a126a6369ec",
+      "slug": "kangxi-famille-verte-vase",
+      "title": "康熙五彩釉上彩瓶",
+      "status": "对象身份待核；已确认当前共用引用不能闭合身份",
+      "official_object_name": null,
+      "institution": null,
+      "object_number": null,
+      "period_and_attribution": null,
+      "glaze": null,
+      "pattern": null,
+      "form": null,
+      "official_object_url": null,
+      "image_url": null,
+      "image_license": null,
+      "current_claim": "<p>大都会博物馆藏康熙景德镇五彩瓶体现釉上彩在清代的成熟与多样化。</p>",
+      "excluded_records": [
+        {
+          "source_id": "met-stem",
+          "object_number": "1991.253.40",
+          "why": "宣德青花应龙纹高足杯，不是本题名所指对象"
+        },
+        {
+          "source_id": "bm-red",
+          "object_number": "PDF.560",
+          "why": "永乐铜红釉盘，不是本题名所指对象"
+        }
+      ],
+      "research_performed": [
+        "逐条查看当前正文、sources、中文metadata、其他语言；没有足以匹配对象的编号",
+        "查阅Phase A对象缺口与当前55条media；这25条没有绑定可追溯对应图",
+        "检索仓库原始生成/导入文件，没有发现对应对象号",
+        "复读共用两对象的正式编目，排除错误绑定；另进行限定官方检索，访问限制见source-requests.json"
+      ],
+      "minimum_safe_draft_slug": "kangxi-famille-verte-vase",
+      "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+    },
+    {
+      "id": "79edb3ad-8b41-4a55-ae69-0154955c280d",
+      "slug": "kangxi-famille-verte-gilt-vase",
+      "title": "康熙五彩描金瓶",
+      "status": "对象身份待核；已确认当前共用引用不能闭合身份",
+      "official_object_name": null,
+      "institution": null,
+      "object_number": null,
+      "period_and_attribution": null,
+      "glaze": null,
+      "pattern": null,
+      "form": null,
+      "official_object_url": null,
+      "image_url": null,
+      "image_license": null,
+      "current_claim": "<p>大都会博物馆藏康熙五彩描金瓶可用于研究釉上彩与金彩组合。</p>",
+      "excluded_records": [
+        {
+          "source_id": "met-stem",
+          "object_number": "1991.253.40",
+          "why": "宣德青花应龙纹高足杯，不是本题名所指对象"
+        },
+        {
+          "source_id": "bm-red",
+          "object_number": "PDF.560",
+          "why": "永乐铜红釉盘，不是本题名所指对象"
+        }
+      ],
+      "research_performed": [
+        "逐条查看当前正文、sources、中文metadata、其他语言；没有足以匹配对象的编号",
+        "查阅Phase A对象缺口与当前55条media；这25条没有绑定可追溯对应图",
+        "检索仓库原始生成/导入文件，没有发现对应对象号",
+        "复读共用两对象的正式编目，排除错误绑定；另进行限定官方检索，访问限制见source-requests.json"
+      ],
+      "minimum_safe_draft_slug": "kangxi-famille-verte-gilt-vase",
+      "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+    },
+    {
+      "id": "0a7e5bbf-84f3-4426-9113-b9aa205aea27",
+      "slug": "kangxi-famille-verte-monteith",
+      "title": "康熙五彩蒙太斯酒钵",
+      "status": "对象身份待核；已确认当前共用引用不能闭合身份",
+      "official_object_name": null,
+      "institution": null,
+      "object_number": null,
+      "period_and_attribution": null,
+      "glaze": null,
+      "pattern": null,
+      "form": null,
+      "official_object_url": null,
+      "image_url": null,
+      "image_license": null,
+      "current_claim": "<p>大都会博物馆藏康熙时期五彩酒钵体现中国瓷器进入欧洲生活器用语境的路径。</p>",
+      "excluded_records": [
+        {
+          "source_id": "met-stem",
+          "object_number": "1991.253.40",
+          "why": "宣德青花应龙纹高足杯，不是本题名所指对象"
+        },
+        {
+          "source_id": "bm-red",
+          "object_number": "PDF.560",
+          "why": "永乐铜红釉盘，不是本题名所指对象"
+        }
+      ],
+      "research_performed": [
+        "逐条查看当前正文、sources、中文metadata、其他语言；没有足以匹配对象的编号",
+        "查阅Phase A对象缺口与当前55条media；这25条没有绑定可追溯对应图",
+        "检索仓库原始生成/导入文件，没有发现对应对象号",
+        "复读共用两对象的正式编目，排除错误绑定；另进行限定官方检索，访问限制见source-requests.json"
+      ],
+      "minimum_safe_draft_slug": "kangxi-famille-verte-monteith",
+      "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+    },
+    {
+      "id": "256587aa-cb98-4f6a-9277-80cec0368b3d",
+      "slug": "wanli-bluewhite-jar",
+      "title": "万历青花花卉纹盖罐",
+      "status": "对象身份待核；已确认当前共用引用不能闭合身份",
+      "official_object_name": null,
+      "institution": null,
+      "object_number": null,
+      "period_and_attribution": null,
+      "glaze": null,
+      "pattern": null,
+      "form": null,
+      "official_object_url": null,
+      "image_url": null,
+      "image_license": null,
+      "current_claim": "<p>大都会博物馆藏万历景德镇青花盖罐可用于研究晚明器型与青花装饰。</p>",
+      "excluded_records": [
+        {
+          "source_id": "met-stem",
+          "object_number": "1991.253.40",
+          "why": "宣德青花应龙纹高足杯，不是本题名所指对象"
+        },
+        {
+          "source_id": "bm-red",
+          "object_number": "PDF.560",
+          "why": "永乐铜红釉盘，不是本题名所指对象"
+        }
+      ],
+      "research_performed": [
+        "逐条查看当前正文、sources、中文metadata、其他语言；没有足以匹配对象的编号",
+        "查阅Phase A对象缺口与当前55条media；这25条没有绑定可追溯对应图",
+        "检索仓库原始生成/导入文件，没有发现对应对象号",
+        "复读共用两对象的正式编目，排除错误绑定；另进行限定官方检索，访问限制见source-requests.json"
+      ],
+      "minimum_safe_draft_slug": "wanli-bluewhite-jar",
+      "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+    },
+    {
+      "id": "bb935a4a-cb13-4107-988c-4c6869f315d9",
+      "slug": "qianlong-poem-vase",
+      "title": "乾隆御题诗文瓶",
+      "status": "对象身份待核；已确认当前共用引用不能闭合身份",
+      "official_object_name": null,
+      "institution": null,
+      "object_number": null,
+      "period_and_attribution": null,
+      "glaze": null,
+      "pattern": null,
+      "form": null,
+      "official_object_url": null,
+      "image_url": null,
+      "image_license": null,
+      "current_claim": "<p>大都会博物馆藏乾隆时期景德镇御题诗文瓶显示瓷器与宫廷文学和装饰的结合。</p>",
+      "excluded_records": [
+        {
+          "source_id": "met-stem",
+          "object_number": "1991.253.40",
+          "why": "宣德青花应龙纹高足杯，不是本题名所指对象"
+        },
+        {
+          "source_id": "bm-red",
+          "object_number": "PDF.560",
+          "why": "永乐铜红釉盘，不是本题名所指对象"
+        }
+      ],
+      "research_performed": [
+        "逐条查看当前正文、sources、中文metadata、其他语言；没有足以匹配对象的编号",
+        "查阅Phase A对象缺口与当前55条media；这25条没有绑定可追溯对应图",
+        "检索仓库原始生成/导入文件，没有发现对应对象号",
+        "复读共用两对象的正式编目，排除错误绑定；另进行限定官方检索，访问限制见source-requests.json"
+      ],
+      "minimum_safe_draft_slug": "qianlong-poem-vase",
+      "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+    }
+  ],
+  "verified_original_identity": 0,
+  "unresolved_original_identity": 25,
+  "important": "0表示没有证实这25条原指的对象，不表示这些器型不存在；另核实的鸡缸杯与仿钧瓶不计入这25条。"
+}

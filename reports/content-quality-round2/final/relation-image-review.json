@@ -1,0 +1,1795 @@
+{
+  "relation_candidates": [
+    {
+      "entry_id": "925c476e-ae84-41d1-90a2-808205973e4a",
+      "related_entry_id": "46acf042-385b-44e4-8630-ca23898b4956",
+      "subject": {
+        "slug": "huang-yunpeng",
+        "title": "黄云鹏",
+        "category": "人物"
+      },
+      "object": {
+        "slug": "blue-and-white",
+        "title": "青花瓷",
+        "category": "器物"
+      },
+      "original_relation_type": "person",
+      "original_note": "文化部非遗资料记载黄云鹏长期从事青花瓷艺术创作、仿古瓷及古陶瓷研究，并以“元青花三顾茅庐纹罐”等为代表作品；该关系将人物与青花瓷知识节点直接连接。",
+      "direction": "huang-yunpeng → blue-and-white",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "bb9c6549-56df-45ca-827c-e7da2646c493",
+      "related_entry_id": "b91b0dd6-f828-425f-b149-a131c2b4d133",
+      "subject": {
+        "slug": "overglaze-enamels",
+        "title": "釉上彩",
+        "category": "工艺"
+      },
+      "object": {
+        "slug": "fencai",
+        "title": "粉彩瓷",
+        "category": "器物"
+      },
+      "original_relation_type": "craft",
+      "original_note": "Famille-rose/fencai belongs to the broader overglaze enamel technology family.",
+      "direction": "overglaze-enamels → fencai",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "10674ca1-7c61-4687-8535-4dbf7017b04e",
+      "related_entry_id": "2e7aa1b8-5ca2-4592-ae2a-406eb460f747",
+      "subject": {
+        "slug": "longquan-imitation-jingdezhen",
+        "title": "景德镇仿龙泉传统",
+        "category": "器物"
+      },
+      "object": {
+        "slug": "longquan-kiln",
+        "title": "龙泉窑·大窑",
+        "category": "窑址"
+      },
+      "original_relation_type": "craft",
+      "original_note": "This entry explicitly concerns Jingdezhen imitation of Longquan traditions.",
+      "direction": "longquan-imitation-jingdezhen → longquan-kiln",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "仿古/比较所参照的传统；不证明同产地或同配方",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "56078b04-e92f-476b-ad3b-9cd14121037a",
+      "related_entry_id": "dc0052fd-9c6a-4fcc-94c1-5e9bdc4e52e6",
+      "subject": {
+        "slug": "jun-glaze-jingdezhen",
+        "title": "景德镇仿钧釉",
+        "category": "器物"
+      },
+      "object": {
+        "slug": "jun-kiln",
+        "title": "钧窑·禹州",
+        "category": "窑址"
+      },
+      "original_relation_type": "craft",
+      "original_note": "Jingdezhen Jun-glaze is explicitly a comparison/imitation node for Jun-type glaze technology.",
+      "direction": "jun-glaze-jingdezhen → jun-kiln",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "仿古/比较所参照的传统；不证明同产地或同配方",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "60aade24-a020-4632-926d-8987260e8316",
+      "related_entry_id": "1a4d4ac2-d7ba-47a4-ac31-2c2ff900422a",
+      "subject": {
+        "slug": "ge-type-imitation",
+        "title": "景德镇仿哥釉",
+        "category": "器物"
+      },
+      "object": {
+        "slug": "ge-kiln",
+        "title": "哥窑",
+        "category": "窑址"
+      },
+      "original_relation_type": "craft",
+      "original_note": "Ge-type imitation is a Jingdezhen imitation corpus related to the Ge-kiln comparison tradition.",
+      "direction": "ge-type-imitation → ge-kiln",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "仿古/比较所参照的传统；不证明同产地或同配方",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "8c0b11ff-4b13-4e31-b5e4-02ddf3345111",
+      "related_entry_id": "b09b06da-133c-4629-890a-bc828c033866",
+      "subject": {
+        "slug": "wood-fired-kiln",
+        "title": "柴窑与燃料系统",
+        "category": "工艺"
+      },
+      "object": {
+        "slug": "kiln-fuel-system",
+        "title": "窑业燃料供应",
+        "category": "窑址与城市空间"
+      },
+      "original_relation_type": "craft",
+      "original_note": "Wood-fired kilns depend on the firewood/fuel supply system documented in the Jingdezhen industrial landscape.",
+      "direction": "wood-fired-kiln → kiln-fuel-system",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "ff9961ba-e9ef-4693-bd63-66493ffd59da",
+      "related_entry_id": "ed0c4fc6-e10e-4d18-a41c-2c4fb81bb03a",
+      "subject": {
+        "slug": "lang-tingji",
+        "title": "郎廷极",
+        "category": "人物"
+      },
+      "object": {
+        "slug": "colored-glaze",
+        "title": "颜色釉瓷",
+        "category": "器物"
+      },
+      "original_relation_type": "person",
+      "original_note": "故宫博物院资料明确说明郎窑红釉因康熙时期郎廷极督理景德镇窑务而得名；郎窑红属于颜色釉/红釉体系。该关系将人物与颜色釉瓷这一现有知识节点直接连接。",
+      "direction": "lang-tingji → colored-glaze",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "41a53512-cede-4838-9cde-dc56269390a0",
+      "related_entry_id": "ed0c4fc6-e10e-4d18-a41c-2c4fb81bb03a",
+      "subject": {
+        "slug": "tang-ying",
+        "title": "唐英",
+        "category": "人物"
+      },
+      "object": {
+        "slug": "colored-glaze",
+        "title": "颜色釉瓷",
+        "category": "器物"
+      },
+      "original_relation_type": "person",
+      "original_note": "故宫博物院资料记载雍正时期唐英驻景德镇御窑厂主持窑务，并记载御窑厂仿古创新的釉彩品种达到57种；该关系用于连接唐英与颜色釉瓷这一现有知识节点。",
+      "direction": "tang-ying → colored-glaze",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "主持御窑釉彩生产",
+      "evidence_urls": [
+        "https://www.dpm.org.cn/collection/ceramic/226759.html"
+      ],
+      "source_support": "已有逐项语义记录；本轮对照故宫来源，不能据此声称本人制作全部器物",
+      "candidate_scope": "保留现有已审语义，不重复修复。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "b09b06da-133c-4629-890a-bc828c033866",
+      "related_entry_id": "182d8e44-f573-42c0-bf79-73a700724240",
+      "subject": {
+        "slug": "kiln-fuel-system",
+        "title": "窑业燃料供应",
+        "category": "窑址与城市空间"
+      },
+      "object": {
+        "slug": "porcelain-raw-material-system",
+        "title": "瓷业原料供应体系",
+        "category": "窑址与城市空间"
+      },
+      "original_relation_type": "craft",
+      "original_note": "Both are upstream supply systems within the integrated production chain described by UNESCO. https://whc.unesco.org/en/decisions/9170/",
+      "direction": "kiln-fuel-system → porcelain-raw-material-system",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [
+        "https://whc.unesco.org/en/decisions/9170/"
+      ],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "ca99163f-38ea-43b5-8f0a-faf660a9b4c9",
+      "related_entry_id": "46acf042-385b-44e4-8630-ca23898b4956",
+      "subject": {
+        "slug": "blue-white-cobalt",
+        "title": "青花钴料",
+        "category": "工艺"
+      },
+      "object": {
+        "slug": "blue-and-white",
+        "title": "青花瓷",
+        "category": "器物"
+      },
+      "original_relation_type": "craft",
+      "original_note": "Cobalt is the pigment technology/material node underlying Jingdezhen blue-and-white decoration.",
+      "direction": "blue-white-cobalt → blue-and-white",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "58e8dfa1-730e-4ce4-b2e4-349c8afc2913",
+      "related_entry_id": "ddd0c44a-5613-48d0-86b1-3b670221ce4e",
+      "subject": {
+        "slug": "porcelain-standardization",
+        "title": "瓷器生产标准化",
+        "category": "工艺"
+      },
+      "object": {
+        "slug": "export-porcelain",
+        "title": "外销瓷",
+        "category": "历史"
+      },
+      "original_relation_type": "craft",
+      "original_note": "Standardisation and specialisation supported Jingdezhen capacity for high-quality large-scale production and global supply. https://whc.unesco.org/en/decisions/9170/",
+      "direction": "porcelain-standardization → export-porcelain",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [
+        "https://whc.unesco.org/en/decisions/9170/"
+      ],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "c0abfc52-b4fe-4f39-a254-e3b75e0c6bd9",
+      "related_entry_id": "ddd0c44a-5613-48d0-86b1-3b670221ce4e",
+      "subject": {
+        "slug": "porcelain-craft-division-labor",
+        "title": "制瓷分工",
+        "category": "工艺"
+      },
+      "object": {
+        "slug": "export-porcelain",
+        "title": "外销瓷",
+        "category": "历史"
+      },
+      "original_relation_type": "craft",
+      "original_note": "Fine division of labour is part of the production model that enabled Jingdezhen global-scale output. https://whc.unesco.org/en/decisions/9170/",
+      "direction": "porcelain-craft-division-labor → export-porcelain",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [
+        "https://whc.unesco.org/en/decisions/9170/"
+      ],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "bb1222f9-07b6-47b1-9321-1948b17d157f",
+      "related_entry_id": "182d8e44-f573-42c0-bf79-73a700724240",
+      "subject": {
+        "slug": "kaolin-clay",
+        "title": "高岭土",
+        "category": "工艺"
+      },
+      "object": {
+        "slug": "porcelain-raw-material-system",
+        "title": "瓷业原料供应体系",
+        "category": "窑址与城市空间"
+      },
+      "original_relation_type": "craft",
+      "original_note": "Kaolin is an identified component of the raw-material supply system.",
+      "direction": "kaolin-clay → porcelain-raw-material-system",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "fd1baa20-bbf5-4591-ad48-314ba7431af1",
+      "related_entry_id": "182d8e44-f573-42c0-bf79-73a700724240",
+      "subject": {
+        "slug": "porcelain-stone",
+        "title": "瓷石",
+        "category": "工艺"
+      },
+      "object": {
+        "slug": "porcelain-raw-material-system",
+        "title": "瓷业原料供应体系",
+        "category": "窑址与城市空间"
+      },
+      "original_relation_type": "craft",
+      "original_note": "Porcelain stone is an identified component of the raw-material supply system.",
+      "direction": "porcelain-stone → porcelain-raw-material-system",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "0dbe2e86-9daa-42ae-9528-7708e438d445",
+      "related_entry_id": "46acf042-385b-44e4-8630-ca23898b4956",
+      "subject": {
+        "slug": "doucai-porcelain",
+        "title": "斗彩",
+        "category": "器物"
+      },
+      "object": {
+        "slug": "blue-and-white",
+        "title": "青花瓷",
+        "category": "器物"
+      },
+      "original_relation_type": "craft",
+      "original_note": "Doucai combines underglaze blue outlining with overglaze colour, linking it to both technical systems.",
+      "direction": "doucai-porcelain → blue-and-white",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "6cec0f53-f2ee-4f06-96c8-5e63a1d4f088",
+      "related_entry_id": "0dbe2e86-9daa-42ae-9528-7708e438d445",
+      "subject": {
+        "slug": "wucai",
+        "title": "五彩瓷",
+        "category": "器物"
+      },
+      "object": {
+        "slug": "doucai-porcelain",
+        "title": "斗彩",
+        "category": "器物"
+      },
+      "original_relation_type": "craft",
+      "original_note": "Both are polychrome Jingdezhen traditions; this relation is comparative and does not collapse their historical development.",
+      "direction": "wucai → doucai-porcelain",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "58ff0bc9-2547-437e-ae3e-0a4664e9d2ac",
+      "related_entry_id": "f08b6ef6-27a6-4f7f-b9b3-b247a3221863",
+      "subject": {
+        "slug": "ru-type-imitation",
+        "title": "景德镇仿汝釉",
+        "category": "器物"
+      },
+      "object": {
+        "slug": "ru-kiln",
+        "title": "汝窑·清凉寺",
+        "category": "窑址"
+      },
+      "original_relation_type": "craft",
+      "original_note": "Ru-type imitation is a Jingdezhen imitation corpus related to the Ru-kiln comparison tradition.",
+      "direction": "ru-type-imitation → ru-kiln",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "仿古/比较所参照的传统；不证明同产地或同配方",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "a6b24c9d-4e2d-42bb-bbf7-b88aa359d38a",
+      "related_entry_id": "f5f20387-c923-4435-bdba-9d4af72ab381",
+      "subject": {
+        "slug": "yin-hong-xu",
+        "title": "殷弘绪（François-Xavier d’Entrecolles）",
+        "category": "人物"
+      },
+      "object": {
+        "slug": "jingdezhen",
+        "title": "景德镇窑",
+        "category": "窑址"
+      },
+      "original_relation_type": "person",
+      "original_note": "François-Xavier d’Entrecolles is a documented early-modern observer of Jingdezhen porcelain production; relation is source/document based.",
+      "direction": "yin-hong-xu → jingdezhen",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "59571713-b654-478f-97c8-a6fae7206341",
+      "related_entry_id": "f5f20387-c923-4435-bdba-9d4af72ab381",
+      "subject": {
+        "slug": "binary-formula",
+        "title": "二元配方",
+        "category": "工艺"
+      },
+      "object": {
+        "slug": "jingdezhen",
+        "title": "景德镇窑",
+        "category": "窑址"
+      },
+      "original_relation_type": "craft",
+      "original_note": "UNESCO 2026 identifies binary formula as an innovation in Jingdezhen porcelain production, mixing porcelain stone with kaolin. https://whc.unesco.org/en/decisions/9170/",
+      "direction": "binary-formula → jingdezhen",
+      "review_status": "观点归属需补的候选",
+      "meaning_review": "原料配制与生产体系（起源年代有不同解释）",
+      "evidence_urls": [
+        "https://whc.unesco.org/en/decisions/9170/",
+        "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf"
+      ],
+      "source_support": "论文第23页摘要与UNESCO概述有不同判定标准，不能把UNESCO创新年代写成无争议起点",
+      "candidate_scope": "仅候选补note的观点归属/争议入口，原正文保持。",
+      "production_change": false,
+      "final_decision": "保留带UNESCO出处的原note；来源观点明确，不改成无争议的起源判断；正文已并列2020年论文。",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "ca99163f-38ea-43b5-8f0a-faf660a9b4c9",
+      "related_entry_id": "f5f20387-c923-4435-bdba-9d4af72ab381",
+      "subject": {
+        "slug": "blue-white-cobalt",
+        "title": "青花钴料",
+        "category": "工艺"
+      },
+      "object": {
+        "slug": "jingdezhen",
+        "title": "景德镇窑",
+        "category": "窑址"
+      },
+      "original_relation_type": "craft",
+      "original_note": "UNESCO states imported cobalt pigments were used in Jingdezhen blue-and-white production in the 13th-15th centuries. https://whc.unesco.org/en/decisions/9170/",
+      "direction": "blue-white-cobalt → jingdezhen",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [
+        "https://whc.unesco.org/en/decisions/9170/"
+      ],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "bb1222f9-07b6-47b1-9321-1948b17d157f",
+      "related_entry_id": "f5f20387-c923-4435-bdba-9d4af72ab381",
+      "subject": {
+        "slug": "kaolin-clay",
+        "title": "高岭土",
+        "category": "工艺"
+      },
+      "object": {
+        "slug": "jingdezhen",
+        "title": "景德镇窑",
+        "category": "窑址"
+      },
+      "original_relation_type": "craft",
+      "original_note": "UNESCO identifies kaolin clay as a key resource in the Jingdezhen industry system. https://whc.unesco.org/en/decisions/9170/",
+      "direction": "kaolin-clay → jingdezhen",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [
+        "https://whc.unesco.org/en/decisions/9170/"
+      ],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "fd1baa20-bbf5-4591-ad48-314ba7431af1",
+      "related_entry_id": "f5f20387-c923-4435-bdba-9d4af72ab381",
+      "subject": {
+        "slug": "porcelain-stone",
+        "title": "瓷石",
+        "category": "工艺"
+      },
+      "object": {
+        "slug": "jingdezhen",
+        "title": "景德镇窑",
+        "category": "窑址"
+      },
+      "original_relation_type": "craft",
+      "original_note": "UNESCO identifies porcelain stone as a key resource and names Changling as the porcelain-stone mining component. https://whc.unesco.org/en/decisions/9170/",
+      "direction": "porcelain-stone → jingdezhen",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [
+        "https://whc.unesco.org/en/decisions/9170/"
+      ],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "80750fb5-6589-4534-bcf3-25daf2980554",
+      "related_entry_id": "f5f20387-c923-4435-bdba-9d4af72ab381",
+      "subject": {
+        "slug": "porcelain-clay-processing",
+        "title": "瓷土加工",
+        "category": "工艺"
+      },
+      "object": {
+        "slug": "jingdezhen",
+        "title": "景德镇窑",
+        "category": "窑址"
+      },
+      "original_relation_type": "craft",
+      "original_note": "UNESCO describes extraction and transportation of raw materials as part of the five-component industry system. https://whc.unesco.org/en/decisions/9170/",
+      "direction": "porcelain-clay-processing → jingdezhen",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [
+        "https://whc.unesco.org/en/decisions/9170/"
+      ],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "182d8e44-f573-42c0-bf79-73a700724240",
+      "related_entry_id": "f5f20387-c923-4435-bdba-9d4af72ab381",
+      "subject": {
+        "slug": "porcelain-raw-material-system",
+        "title": "瓷业原料供应体系",
+        "category": "窑址与城市空间"
+      },
+      "object": {
+        "slug": "jingdezhen",
+        "title": "景德镇窑",
+        "category": "窑址"
+      },
+      "original_relation_type": "craft",
+      "original_note": "UNESCO describes raw-material production areas connected to manufacturing by waterway transport. https://whc.unesco.org/en/decisions/9170/",
+      "direction": "porcelain-raw-material-system → jingdezhen",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [
+        "https://whc.unesco.org/en/decisions/9170/"
+      ],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "b09b06da-133c-4629-890a-bc828c033866",
+      "related_entry_id": "f5f20387-c923-4435-bdba-9d4af72ab381",
+      "subject": {
+        "slug": "kiln-fuel-system",
+        "title": "窑业燃料供应",
+        "category": "窑址与城市空间"
+      },
+      "object": {
+        "slug": "jingdezhen",
+        "title": "景德镇窑",
+        "category": "窑址"
+      },
+      "original_relation_type": "craft",
+      "original_note": "UNESCO identifies firewood forests/production areas as part of the integrated industry system. https://whc.unesco.org/en/decisions/9170/",
+      "direction": "kiln-fuel-system → jingdezhen",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [
+        "https://whc.unesco.org/en/decisions/9170/"
+      ],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "c0abfc52-b4fe-4f39-a254-e3b75e0c6bd9",
+      "related_entry_id": "f5f20387-c923-4435-bdba-9d4af72ab381",
+      "subject": {
+        "slug": "porcelain-craft-division-labor",
+        "title": "制瓷分工",
+        "category": "工艺"
+      },
+      "object": {
+        "slug": "jingdezhen",
+        "title": "景德镇窑",
+        "category": "窑址"
+      },
+      "original_relation_type": "craft",
+      "original_note": "UNESCO explicitly describes fine division of labour in Jingdezhen large-scale production. https://whc.unesco.org/en/decisions/9170/",
+      "direction": "porcelain-craft-division-labor → jingdezhen",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [
+        "https://whc.unesco.org/en/decisions/9170/"
+      ],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "58e8dfa1-730e-4ce4-b2e4-349c8afc2913",
+      "related_entry_id": "f5f20387-c923-4435-bdba-9d4af72ab381",
+      "subject": {
+        "slug": "porcelain-standardization",
+        "title": "瓷器生产标准化",
+        "category": "工艺"
+      },
+      "object": {
+        "slug": "jingdezhen",
+        "title": "景德镇窑",
+        "category": "窑址"
+      },
+      "original_relation_type": "craft",
+      "original_note": "UNESCO explicitly describes standardisation and specialisation as characteristics of Jingdezhen intensive production. https://whc.unesco.org/en/decisions/9170/",
+      "direction": "porcelain-standardization → jingdezhen",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [
+        "https://whc.unesco.org/en/decisions/9170/"
+      ],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "dd2ad305-048d-4fd6-87fb-e036e5cca32c",
+      "related_entry_id": "f5f20387-c923-4435-bdba-9d4af72ab381",
+      "subject": {
+        "slug": "ceramic-workers",
+        "title": "陶工与工匠",
+        "category": "人物"
+      },
+      "object": {
+        "slug": "jingdezhen",
+        "title": "景德镇窑",
+        "category": "窑址"
+      },
+      "original_relation_type": "person",
+      "original_note": "UNESCO describes the spatial/social organisation of production and fine division of labour. https://whc.unesco.org/en/decisions/9170/",
+      "direction": "ceramic-workers → jingdezhen",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [
+        "https://whc.unesco.org/en/decisions/9170/"
+      ],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "360b4636-dcd4-4260-8242-2bd997db3323",
+      "related_entry_id": "46acf042-385b-44e4-8630-ca23898b4956",
+      "subject": {
+        "slug": "underglaze-red",
+        "title": "釉里红",
+        "category": "器物"
+      },
+      "object": {
+        "slug": "blue-and-white",
+        "title": "青花瓷",
+        "category": "器物"
+      },
+      "original_relation_type": "craft",
+      "original_note": "Both are Jingdezhen underglaze decoration systems; this is a technical comparison, not equivalence.",
+      "direction": "underglaze-red → blue-and-white",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "30c98c1d-74c1-40bc-ac60-bf1479124dc5",
+      "related_entry_id": "360b4636-dcd4-4260-8242-2bd997db3323",
+      "subject": {
+        "slug": "red-glaze-jingdezhen",
+        "title": "景德镇高温红釉",
+        "category": "器物"
+      },
+      "object": {
+        "slug": "underglaze-red",
+        "title": "釉里红",
+        "category": "器物"
+      },
+      "original_relation_type": "craft",
+      "original_note": "Copper-red and underglaze-red are closely related copper-based underglaze colour technologies.",
+      "direction": "red-glaze-jingdezhen → underglaze-red",
+      "review_status": "原note术语混淆候选",
+      "meaning_review": "铜呈色工艺比较；颜色釉与釉下彩绘需区分",
+      "evidence_urls": [
+        "https://www.dpm.org.cn/collection/ceramic/227155.html"
+      ],
+      "source_support": "故宫说明铜红釉；原note将二者均写成釉下装饰。釉里红直接专业出处仍须补齐",
+      "candidate_scope": "仅候选修改note，不拟删除边或断言同一工艺。",
+      "production_change": false,
+      "final_decision": "修订note稿已准备",
+      "draft_claim_ids": [
+        "C015"
+      ],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "8c067ac7-bb5f-4843-9127-7b5d35b5e2da",
+      "related_entry_id": "b91b0dd6-f828-425f-b149-a131c2b4d133",
+      "subject": {
+        "slug": "zhang-songmao",
+        "title": "张松茂",
+        "category": "人物"
+      },
+      "object": {
+        "slug": "fencai",
+        "title": "粉彩瓷",
+        "category": "器物"
+      },
+      "original_relation_type": "person",
+      "original_note": "张松茂条目定位为现代粉彩技艺传承人物；其与粉彩瓷的关系用于连接现代粉彩传承知识。",
+      "direction": "zhang-songmao → fencai",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "3b34b6d2-61ee-4ccc-ab34-427fc626490e",
+      "related_entry_id": "b91b0dd6-f828-425f-b149-a131c2b4d133",
+      "subject": {
+        "slug": "fencai-technique",
+        "title": "粉彩装饰技术",
+        "category": "工艺"
+      },
+      "object": {
+        "slug": "fencai",
+        "title": "粉彩瓷",
+        "category": "器物"
+      },
+      "original_relation_type": "craft",
+      "original_note": "The technique entry documents the decorative process underlying the broader famille-rose corpus.",
+      "direction": "fencai-technique → fencai",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "6e392dd0-9c47-4d59-bb1c-1caaf714f9dc",
+      "related_entry_id": "5d78cc09-2c89-466d-a083-db1d5187cbc8",
+      "subject": {
+        "slug": "japanese-export-porcelain",
+        "title": "面向日本市场的景德镇瓷",
+        "category": "东亚"
+      },
+      "object": {
+        "slug": "japan-ceramics",
+        "title": "日本陶瓷",
+        "category": "窑址"
+      },
+      "original_relation_type": "object",
+      "original_note": "British Museum records a Jingdezhen blue-and-white set made to order for Japanese customers. https://www.britishmuseum.org/collection/object/A_PDF-687",
+      "direction": "japanese-export-porcelain → japan-ceramics",
+      "review_status": "产品产地/市场方向需明确的候选",
+      "meaning_review": "中国景德镇制作、面向日本市场；不是日本制造",
+      "evidence_urls": [
+        "https://www.britishmuseum.org/collection/object/A_PDF-687",
+        "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics"
+      ],
+      "source_support": "V&A FE.6-1982明确景德镇1621—1627年销日盘；不外推日本本土技术源于此",
+      "candidate_scope": "方向解释候选；不把同一商品市场关系写成技术迁移。",
+      "production_change": false,
+      "final_decision": "保留从景德镇销日产品到日本陶瓷主题的方向；不由消费地改写为日本产瓷，也不增贸易路线；PDF.687独立核引仍待取得。",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "fb17c098-ee90-4c39-9023-8f4a1193bd1d",
+      "related_entry_id": "6e392dd0-9c47-4d59-bb1c-1caaf714f9dc",
+      "subject": {
+        "slug": "kinrande-export",
+        "title": "金襕手与日本市场",
+        "category": "东亚"
+      },
+      "object": {
+        "slug": "japanese-export-porcelain",
+        "title": "面向日本市场的景德镇瓷",
+        "category": "东亚"
+      },
+      "original_relation_type": "object",
+      "original_note": "Japan-market Jingdezhen export context; exact circulation pathways remain source-dependent.",
+      "direction": "kinrande-export → japanese-export-porcelain",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "41a53512-cede-4838-9cde-dc56269390a0",
+      "related_entry_id": "b91b0dd6-f828-425f-b149-a131c2b4d133",
+      "subject": {
+        "slug": "tang-ying",
+        "title": "唐英",
+        "category": "人物"
+      },
+      "object": {
+        "slug": "fencai",
+        "title": "粉彩瓷",
+        "category": "器物"
+      },
+      "original_relation_type": "person",
+      "original_note": "故宫博物院资料记载唐英长期管理景德镇御窑厂并推动制瓷工艺创新；清代粉彩在雍正、乾隆时期成熟，唐英所处的御窑生产体系正处于这一发展阶段。",
+      "direction": "tang-ying → fencai",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "41a53512-cede-4838-9cde-dc56269390a0",
+      "related_entry_id": "da892d36-fa24-4b30-b53b-e650aaa8acf5",
+      "subject": {
+        "slug": "tang-ying",
+        "title": "唐英",
+        "category": "人物"
+      },
+      "object": {
+        "slug": "imperial-kiln",
+        "title": "御窑厂遗址",
+        "category": "窑址"
+      },
+      "original_relation_type": "person",
+      "original_note": "故宫博物院资料记载唐英自雍正六年驻景德镇御窑厂任协理官，并长期管理御窑厂窑务。",
+      "direction": "tang-ying → imperial-kiln",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "督陶",
+      "evidence_urls": [
+        "https://www.dpm.org.cn/collection/ceramic/226759.html"
+      ],
+      "source_support": "已有逐项语义记录；本轮对照故宫来源，不能据此声称本人制作全部器物",
+      "candidate_scope": "保留现有已审语义，不重复修复。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "1a4fc228-20b6-44fc-b3d3-c932a831b20a",
+      "related_entry_id": "b91b0dd6-f828-425f-b149-a131c2b4d133",
+      "subject": {
+        "slug": "tian-hexian",
+        "title": "田鹤仙",
+        "category": "人物"
+      },
+      "object": {
+        "slug": "fencai",
+        "title": "粉彩瓷",
+        "category": "器物"
+      },
+      "original_relation_type": "person",
+      "original_note": "文化和旅游部恭王府博物馆与景德镇中国陶瓷博物馆展览资料将田鹤仙列入珠山八友，并说明该画派以粉彩工笔细描等工艺推动新粉彩瓷发展。",
+      "direction": "tian-hexian → fencai",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [
+        "https://www.mct.gov.cn/whzx/zsdw/whbgwfglzx/202101/t20210127_921041.html"
+      ],
+      "source_support": "MCT展览新闻支持画派成员与集体风格；具体个人作品/技法仍需对象证据",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "9038b8d3-0150-44cb-9b7f-aad76987cf3a",
+      "related_entry_id": "46acf042-385b-44e4-8630-ca23898b4956",
+      "subject": {
+        "slug": "wang-bu",
+        "title": "王步",
+        "category": "人物"
+      },
+      "object": {
+        "slug": "blue-and-white",
+        "title": "青花瓷",
+        "category": "器物"
+      },
+      "original_relation_type": "person",
+      "original_note": "景德镇皇窑陶瓷艺术博物馆资料称王步“尤以青花盖世”，并将其列为民国青花创新的重要代表。",
+      "direction": "wang-bu → blue-and-white",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "d72cb21f-a950-4f28-b3b4-ab65d2cafb23",
+      "related_entry_id": "b91b0dd6-f828-425f-b149-a131c2b4d133",
+      "subject": {
+        "slug": "wang-qi",
+        "title": "王琦",
+        "category": "人物"
+      },
+      "object": {
+        "slug": "fencai",
+        "title": "粉彩瓷",
+        "category": "器物"
+      },
+      "original_relation_type": "person",
+      "original_note": "国家博物馆研究指出王琦是“绘画神技”代表；文化和旅游部恭王府博物馆展览资料将王琦列入珠山八友，而该画派以粉彩工笔精描推动新粉彩瓷发展。",
+      "direction": "wang-qi → fencai",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [
+        "https://www.mct.gov.cn/whzx/zsdw/whbgwfglzx/202101/t20210127_921041.html"
+      ],
+      "source_support": "MCT展览新闻支持画派成员与集体风格；具体个人作品/技法仍需对象证据",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "41a53512-cede-4838-9cde-dc56269390a0",
+      "related_entry_id": "8c6bad40-5b25-4a82-b9c7-43ec5e3d01cd",
+      "subject": {
+        "slug": "tang-ying",
+        "title": "唐英",
+        "category": "人物"
+      },
+      "object": {
+        "slug": "tang-ying-jun-vase",
+        "title": "雍正仿钧新紫釉天球瓶",
+        "category": "器物"
+      },
+      "original_relation_type": "person",
+      "original_note": "故宫博物院藏品资料将雍正仿钧新紫釉天球瓶置于景德镇清代御窑生产背景，并记载唐英自雍正六年驻景德镇御窑厂任协理官、长期管理窑务；该关系用于连接唐英与雍正时期御窑器物体系。",
+      "direction": "tang-ying → tang-ying-jun-vase",
+      "review_status": "来源说明可补正的候选",
+      "meaning_review": "督陶时期的御窑仿钧背景（不是亲手制作）",
+      "evidence_urls": [
+        "https://www.metmuseum.org/art/collection/search/46080"
+      ],
+      "source_support": "Met46080正文直接提Tang Ying、新紫釉与雍正对象",
+      "candidate_scope": "原note引用故宫泛化信息；候选补此对象直接出处，保留管理/制作区分。",
+      "production_change": false,
+      "final_decision": "修订note稿已准备",
+      "draft_claim_ids": [
+        "C005",
+        "C006"
+      ],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "24c2b479-5331-4450-b160-d77247d28835",
+      "related_entry_id": "8de73166-d68d-414d-89a0-1440d92c56f2",
+      "subject": {
+        "slug": "celadon-glaze-jingdezhen",
+        "title": "景德镇青釉",
+        "category": "器物"
+      },
+      "object": {
+        "slug": "qingbai-porcelain",
+        "title": "青白瓷",
+        "category": "器物"
+      },
+      "original_relation_type": "craft",
+      "original_note": "Jingdezhen celadon/blue-green glaze traditions can be compared with qingbai as distinct glaze traditions; this edge is comparative.",
+      "direction": "celadon-glaze-jingdezhen → qingbai-porcelain",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "2425c3c7-0c1e-4a55-b74c-d3ee066deda0",
+      "related_entry_id": "46acf042-385b-44e4-8630-ca23898b4956",
+      "subject": {
+        "slug": "chenghua-doucai",
+        "title": "成化斗彩",
+        "category": "器物"
+      },
+      "object": {
+        "slug": "blue-and-white",
+        "title": "青花瓷",
+        "category": "器物"
+      },
+      "original_relation_type": "craft",
+      "original_note": "Chenghua doucai uses underglaze blue as part of its decorative process; the edge is technical, not an identity claim.",
+      "direction": "chenghua-doucai → blue-and-white",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "360b4636-dcd4-4260-8242-2bd997db3323",
+      "related_entry_id": "30c98c1d-74c1-40bc-ac60-bf1479124dc5",
+      "subject": {
+        "slug": "underglaze-red",
+        "title": "釉里红",
+        "category": "器物"
+      },
+      "object": {
+        "slug": "red-glaze-jingdezhen",
+        "title": "景德镇高温红釉",
+        "category": "器物"
+      },
+      "original_relation_type": "craft",
+      "original_note": "Both document copper-based underglaze red technology in Jingdezhen; the relationship is technical.",
+      "direction": "underglaze-red → red-glaze-jingdezhen",
+      "review_status": "原note术语混淆候选",
+      "meaning_review": "铜呈色工艺比较；颜色釉与釉下彩绘需区分",
+      "evidence_urls": [
+        "https://www.dpm.org.cn/collection/ceramic/227155.html"
+      ],
+      "source_support": "故宫说明铜红釉；原note将二者均写成釉下装饰。釉里红直接专业出处仍须补齐",
+      "candidate_scope": "仅候选修改note，不拟删除边或断言同一工艺。",
+      "production_change": false,
+      "final_decision": "修订note稿已准备",
+      "draft_claim_ids": [
+        "C015"
+      ],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "646b64f7-6f1a-4205-8bc8-6c02b8784ab6",
+      "related_entry_id": "f5f20387-c923-4435-bdba-9d4af72ab381",
+      "subject": {
+        "slug": "wang-shixing",
+        "title": "王士性",
+        "category": "人物"
+      },
+      "object": {
+        "slug": "jingdezhen",
+        "title": "景德镇窑",
+        "category": "窑址"
+      },
+      "original_relation_type": "person",
+      "original_note": "Wang Shixing is connected to Jingdezhen through historical writing/geographical observation; biographical claims remain tied to cited sources.",
+      "direction": "wang-shixing → jingdezhen",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "8c0b11ff-4b13-4e31-b5e4-02ddf3345111",
+      "related_entry_id": "f5f20387-c923-4435-bdba-9d4af72ab381",
+      "subject": {
+        "slug": "wood-fired-kiln",
+        "title": "柴窑与燃料系统",
+        "category": "工艺"
+      },
+      "object": {
+        "slug": "jingdezhen",
+        "title": "景德镇窑",
+        "category": "窑址"
+      },
+      "original_relation_type": "craft",
+      "original_note": "Historic kiln production is a core component of Jingdezhen handicraft porcelain industry system.",
+      "direction": "wood-fired-kiln → jingdezhen",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "205ef5ba-79a4-409f-8ab9-a5fd7fc22e68",
+      "related_entry_id": "f5f20387-c923-4435-bdba-9d4af72ab381",
+      "subject": {
+        "slug": "qin-xilin",
+        "title": "秦锡麟",
+        "category": "人物"
+      },
+      "object": {
+        "slug": "jingdezhen",
+        "title": "景德镇窑",
+        "category": "窑址"
+      },
+      "original_relation_type": "person",
+      "original_note": "Qin Xilin is a modern Jingdezhen ceramic figure; this is a person-to-place context edge and does not imply authorship of historical objects.",
+      "direction": "qin-xilin → jingdezhen",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "c094cdfc-9d3c-49ec-ae7e-fe3a75364fd8",
+      "related_entry_id": "fb17c098-ee90-4c39-9023-8f4a1193bd1d",
+      "subject": {
+        "slug": "jiajing-kinrande-ewer",
+        "title": "嘉靖至万历金襕手执壶",
+        "category": "器物"
+      },
+      "object": {
+        "slug": "kinrande-export",
+        "title": "金襕手与日本市场",
+        "category": "东亚"
+      },
+      "original_relation_type": "object",
+      "original_note": "Jiajing/Wanli kinrande ewer → kinrande export corpus; object-level bridge from a dated Jingdezhen form to the Japan-market/export network.",
+      "direction": "jiajing-kinrande-ewer → kinrande-export",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "具体器物→装饰/市场专题；日本市场归属仍须对象记录核引",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "517b9031-c7e7-4635-936c-f99928938776",
+      "related_entry_id": "fb17c098-ee90-4c39-9023-8f4a1193bd1d",
+      "subject": {
+        "slug": "ming-kinrande-jar",
+        "title": "明代金襕手风格景德镇器",
+        "category": "器物"
+      },
+      "object": {
+        "slug": "kinrande-export",
+        "title": "金襕手与日本市场",
+        "category": "东亚"
+      },
+      "original_relation_type": "object",
+      "original_note": "Ming kinrande-style Jingdezhen vessel → kinrande export/comparative corpus.",
+      "direction": "ming-kinrande-jar → kinrande-export",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "具体器物→装饰/市场专题；日本市场归属仍须对象记录核引",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "79edb3ad-8b41-4a55-ae69-0154955c280d",
+      "related_entry_id": "bb9c6549-56df-45ca-827c-e7da2646c493",
+      "subject": {
+        "slug": "kangxi-famille-verte-gilt-vase",
+        "title": "康熙五彩描金瓶",
+        "category": "器物"
+      },
+      "object": {
+        "slug": "overglaze-enamels",
+        "title": "釉上彩",
+        "category": "工艺"
+      },
+      "original_relation_type": "object",
+      "original_note": "Kangxi famille-verte gilt vase → overglaze enamel technology family.",
+      "direction": "kangxi-famille-verte-gilt-vase → overglaze-enamels",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "具体器物→装饰技术；需逐件核对馆方medium字段",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "0a7e5bbf-84f3-4426-9113-b9aa205aea27",
+      "related_entry_id": "bb9c6549-56df-45ca-827c-e7da2646c493",
+      "subject": {
+        "slug": "kangxi-famille-verte-monteith",
+        "title": "康熙五彩蒙太斯酒钵",
+        "category": "器物"
+      },
+      "object": {
+        "slug": "overglaze-enamels",
+        "title": "釉上彩",
+        "category": "工艺"
+      },
+      "original_relation_type": "object",
+      "original_note": "Kangxi famille-verte monteith → overglaze enamel technology/comparative export corpus.",
+      "direction": "kangxi-famille-verte-monteith → overglaze-enamels",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "具体器物→装饰技术；需逐件核对馆方medium字段",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "276fabf1-9963-45d7-b183-1a126a6369ec",
+      "related_entry_id": "bb9c6549-56df-45ca-827c-e7da2646c493",
+      "subject": {
+        "slug": "kangxi-famille-verte-vase",
+        "title": "康熙五彩釉上彩瓶",
+        "category": "器物"
+      },
+      "object": {
+        "slug": "overglaze-enamels",
+        "title": "釉上彩",
+        "category": "工艺"
+      },
+      "original_relation_type": "object",
+      "original_note": "Kangxi famille-verte vase → overglaze enamel technology family.",
+      "direction": "kangxi-famille-verte-vase → overglaze-enamels",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "具体器物→装饰技术；需逐件核对馆方medium字段",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "912c614e-6762-4c59-95df-5f0517c981dd",
+      "related_entry_id": "bb9c6549-56df-45ca-827c-e7da2646c493",
+      "subject": {
+        "slug": "kangxi-covered-ewer",
+        "title": "康熙五彩盖执壶",
+        "category": "器物"
+      },
+      "object": {
+        "slug": "overglaze-enamels",
+        "title": "釉上彩",
+        "category": "工艺"
+      },
+      "original_relation_type": "object",
+      "original_note": "Kangxi wucai covered ewer → overglaze enamel technology family; object-level bridge.",
+      "direction": "kangxi-covered-ewer → overglaze-enamels",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "具体器物→装饰技术；需逐件核对馆方medium字段",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "59f0b451-5334-4f87-aa8c-31ea7c0b8d4d",
+      "related_entry_id": "bb9c6549-56df-45ca-827c-e7da2646c493",
+      "subject": {
+        "slug": "kangxi-covered-jar",
+        "title": "康熙五彩盖罐",
+        "category": "器物"
+      },
+      "object": {
+        "slug": "overglaze-enamels",
+        "title": "釉上彩",
+        "category": "工艺"
+      },
+      "original_relation_type": "object",
+      "original_note": "Kangxi wucai covered jar → overglaze enamel technology family.",
+      "direction": "kangxi-covered-jar → overglaze-enamels",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "具体器物→装饰技术；需逐件核对馆方medium字段",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "59b7c597-9272-464e-b955-49f39d411acc",
+      "related_entry_id": "30c98c1d-74c1-40bc-ac60-bf1479124dc5",
+      "subject": {
+        "slug": "sacrificial-red",
+        "title": "祭红",
+        "category": "器物"
+      },
+      "object": {
+        "slug": "red-glaze-jingdezhen",
+        "title": "景德镇高温红釉",
+        "category": "器物"
+      },
+      "original_relation_type": "craft",
+      "original_note": "Sacrificial red → Jingdezhen red-glaze corpus; connects a named glaze tradition to the broader technology network.",
+      "direction": "sacrificial-red → red-glaze-jingdezhen",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "32602c47-2d96-4920-868e-98a407c5ae13",
+      "related_entry_id": "30c98c1d-74c1-40bc-ac60-bf1479124dc5",
+      "subject": {
+        "slug": "peachbloom-glaze",
+        "title": "豇豆红与桃花片",
+        "category": "器物"
+      },
+      "object": {
+        "slug": "red-glaze-jingdezhen",
+        "title": "景德镇高温红釉",
+        "category": "器物"
+      },
+      "original_relation_type": "craft",
+      "original_note": "Peachbloom glaze → Jingdezhen red-glaze family; technical/glaze comparison.",
+      "direction": "peachbloom-glaze → red-glaze-jingdezhen",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "f93043f1-b2e6-4e6e-b8bc-84772e7de102",
+      "related_entry_id": "1c027418-7f7e-4250-8f33-304d582afd81",
+      "subject": {
+        "slug": "porcelain-sherds",
+        "title": "瓷片与考古标本",
+        "category": "全球"
+      },
+      "object": {
+        "slug": "archaeological-stratigraphy",
+        "title": "窑址地层学",
+        "category": "全球"
+      },
+      "original_relation_type": "craft",
+      "original_note": "Porcelain sherds → archaeological stratigraphy; this links object evidence to archaeological context rather than treating sherds as isolated objects.",
+      "direction": "porcelain-sherds → archaeological-stratigraphy",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "dc8711e0-d9fd-47c2-84bb-bad8c834f7a9",
+      "related_entry_id": "f93043f1-b2e6-4e6e-b8bc-84772e7de102",
+      "subject": {
+        "slug": "imperial-porcelain-debris",
+        "title": "御窑落选瓷片",
+        "category": "全球"
+      },
+      "object": {
+        "slug": "porcelain-sherds",
+        "title": "瓷片与考古标本",
+        "category": "全球"
+      },
+      "original_relation_type": "object",
+      "original_note": "Imperial kiln debris → archaeological sherd/material evidence network.",
+      "direction": "imperial-porcelain-debris → porcelain-sherds",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    },
+    {
+      "entry_id": "1c027418-7f7e-4250-8f33-304d582afd81",
+      "related_entry_id": "f93043f1-b2e6-4e6e-b8bc-84772e7de102",
+      "subject": {
+        "slug": "archaeological-stratigraphy",
+        "title": "窑址地层学",
+        "category": "全球"
+      },
+      "object": {
+        "slug": "porcelain-sherds",
+        "title": "瓷片与考古标本",
+        "category": "全球"
+      },
+      "original_relation_type": "craft",
+      "original_note": "Archaeological stratigraphy → porcelain sherd evidence; connects archaeological method to material evidence.",
+      "direction": "archaeological-stratigraphy → porcelain-sherds",
+      "review_status": "索引类型与目标类别不同，不据此判定边错误",
+      "meaning_review": "保留普通相关内容；原note仅作待核线索，不自动转成语义标签",
+      "evidence_urls": [],
+      "source_support": "未完成直接外部核引",
+      "candidate_scope": "不拟关系写入；先核原note出处和既有分类规则。",
+      "production_change": false,
+      "final_decision": "保留现关系；未取得足以证明方向/语义错误的直接证据",
+      "draft_claim_ids": [],
+      "type_reason": "relation_type是既有索引角色，不自动要求等于目标category；前端已显示目标类别。"
+    }
+  ],
+  "relation_note_drafts": [
+    {
+      "table": "entry_relations",
+      "key": {
+        "entry_id": "30c98c1d-74c1-40bc-ac60-bf1479124dc5",
+        "related_entry_id": "360b4636-dcd4-4260-8242-2bd997db3323",
+        "relation_type": "craft"
+      },
+      "subject_slug": "red-glaze-jingdezhen",
+      "object_slug": "underglaze-red",
+      "expected_record_fields": [
+        "entry_id",
+        "related_entry_id",
+        "relation_type",
+        "note",
+        "created_at",
+        "evidence_grade"
+      ],
+      "expected_record_sha256": "b58d76d7485944e29e4e17c9996c5236f5a3b0db9be6200df7a34391fea3a300",
+      "before": {
+        "note": "Copper-red and underglaze-red are closely related copper-based underglaze colour technologies."
+      },
+      "after": {
+        "note": "两者均涉及铜呈色，但装饰方法不同：铜红釉以釉层呈色，釉里红先用彩料描绘纹饰再罩透明釉；此关系用于工艺比较，不表示同一种釉下彩。 https://www.ihchina.cn/Article/Index/detail?id=24981"
+      },
+      "field_diffs": [
+        {
+          "path": "/note",
+          "operation": "replace",
+          "before": "Copper-red and underglaze-red are closely related copper-based underglaze colour technologies.",
+          "after": "两者均涉及铜呈色，但装饰方法不同：铜红釉以釉层呈色，釉里红先用彩料描绘纹饰再罩透明釉；此关系用于工艺比较，不表示同一种釉下彩。 https://www.ihchina.cn/Article/Index/detail?id=24981"
+        }
+      ],
+      "claim_ids": [
+        "C015"
+      ],
+      "rollback_original_values": {
+        "note": "Copper-red and underglaze-red are closely related copper-based underglaze colour technologies."
+      },
+      "approval_status": "DRAFT_AWAITING_ONE_USER_APPROVAL",
+      "impact": "仅修正note的出处/语义；不更改端点、索引类型或证据等级。不自动为现存A+认证。"
+    },
+    {
+      "table": "entry_relations",
+      "key": {
+        "entry_id": "41a53512-cede-4838-9cde-dc56269390a0",
+        "related_entry_id": "8c6bad40-5b25-4a82-b9c7-43ec5e3d01cd",
+        "relation_type": "person"
+      },
+      "subject_slug": "tang-ying",
+      "object_slug": "tang-ying-jun-vase",
+      "expected_record_fields": [
+        "entry_id",
+        "related_entry_id",
+        "relation_type",
+        "note",
+        "created_at",
+        "evidence_grade"
+      ],
+      "expected_record_sha256": "5b5a28a8cb5117d61e17ffe17cc3dbdff5abf368df0a689d5a9ca3b3deac73a2",
+      "before": {
+        "note": "故宫博物院藏品资料将雍正仿钧新紫釉天球瓶置于景德镇清代御窑生产背景，并记载唐英自雍正六年驻景德镇御窑厂任协理官、长期管理窑务；该关系用于连接唐英与雍正时期御窑器物体系。"
+      },
+      "after": {
+        "note": "大都会艺术博物馆将雍正仿钧新紫釉瓶（14.40.163）的釉色再现置于唐英督陶背景中；这是生产管理与工艺背景，不是唐英亲手制作此瓶的证明。 https://www.metmuseum.org/art/collection/search/46080"
+      },
+      "field_diffs": [
+        {
+          "path": "/note",
+          "operation": "replace",
+          "before": "故宫博物院藏品资料将雍正仿钧新紫釉天球瓶置于景德镇清代御窑生产背景，并记载唐英自雍正六年驻景德镇御窑厂任协理官、长期管理窑务；该关系用于连接唐英与雍正时期御窑器物体系。",
+          "after": "大都会艺术博物馆将雍正仿钧新紫釉瓶（14.40.163）的釉色再现置于唐英督陶背景中；这是生产管理与工艺背景，不是唐英亲手制作此瓶的证明。 https://www.metmuseum.org/art/collection/search/46080"
+        }
+      ],
+      "claim_ids": [
+        "C005",
+        "C006"
+      ],
+      "rollback_original_values": {
+        "note": "故宫博物院藏品资料将雍正仿钧新紫釉天球瓶置于景德镇清代御窑生产背景，并记载唐英自雍正六年驻景德镇御窑厂任协理官、长期管理窑务；该关系用于连接唐英与雍正时期御窑器物体系。"
+      },
+      "approval_status": "DRAFT_AWAITING_ONE_USER_APPROVAL",
+      "impact": "仅修正note的出处/语义；不更改端点、索引类型或证据等级。不自动为现存A+认证。"
+    },
+    {
+      "table": "entry_relations",
+      "key": {
+        "entry_id": "360b4636-dcd4-4260-8242-2bd997db3323",
+        "related_entry_id": "30c98c1d-74c1-40bc-ac60-bf1479124dc5",
+        "relation_type": "craft"
+      },
+      "subject_slug": "underglaze-red",
+      "object_slug": "red-glaze-jingdezhen",
+      "expected_record_fields": [
+        "entry_id",
+        "related_entry_id",
+        "relation_type",
+        "note",
+        "created_at",
+        "evidence_grade"
+      ],
+      "expected_record_sha256": "f7cfccb4ae4cb0960c484690e8b1f2634cdf79d8c6af1d8da613b551fd8a2381",
+      "before": {
+        "note": "Both document copper-based underglaze red technology in Jingdezhen; the relationship is technical."
+      },
+      "after": {
+        "note": "釉里红与铜红釉具有材料联系，须区分先绘饰再罩透明釉与直接施红色釉料；此关系是比较，不是工艺等同。 https://www.ihchina.cn/Article/Index/detail?id=24981"
+      },
+      "field_diffs": [
+        {
+          "path": "/note",
+          "operation": "replace",
+          "before": "Both document copper-based underglaze red technology in Jingdezhen; the relationship is technical.",
+          "after": "釉里红与铜红釉具有材料联系，须区分先绘饰再罩透明釉与直接施红色釉料；此关系是比较，不是工艺等同。 https://www.ihchina.cn/Article/Index/detail?id=24981"
+        }
+      ],
+      "claim_ids": [
+        "C015"
+      ],
+      "rollback_original_values": {
+        "note": "Both document copper-based underglaze red technology in Jingdezhen; the relationship is technical."
+      },
+      "approval_status": "DRAFT_AWAITING_ONE_USER_APPROVAL",
+      "impact": "仅修正note的出处/语义；不更改端点、索引类型或证据等级。不自动为现存A+认证。"
+    }
+  ],
+  "image_insert_drafts": [
+    {
+      "table": "media",
+      "operation": "proposed_insert",
+      "entry_id": "a304713e-7c81-4c8a-9200-02e73076de5f",
+      "slug": "chenghua-doucai-chicken-cup",
+      "id": null,
+      "id_assignment": "批准后沿用数据库UUID默认值；不预造已存在的ID",
+      "expected_public_existing_rows": [],
+      "expected_public_existing_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_entry_version": 4,
+      "expected_entry_record_sha256": "d5a1d6c77cd3e1d6d3d0392a827c6a6b6545fc343dd422cf1bd2e939a9281181",
+      "values": {
+        "entry_id": "a304713e-7c81-4c8a-9200-02e73076de5f",
+        "path": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/42515/1434930/main-image",
+        "title": "成化斗彩鸡缸杯 · 1987.85 · 大都会艺术博物馆",
+        "source": "https://www.metmuseum.org/art/collection/search/42515",
+        "source_url": "https://www.metmuseum.org/art/collection/search/42515",
+        "source_type": "museum",
+        "license": "CC0 / Public Domain (The Met Open Access)",
+        "creator": null,
+        "captured_at": null,
+        "location": null,
+        "usage_type": "object",
+        "source_tier": 1,
+        "is_primary": true,
+        "canonical_key": "https://www.metmuseum.org/art/collection/search/42515",
+        "status": "approved",
+        "review_state": "verified",
+        "verification_note": "对象页主体标注Public Domain，主图preload对应同一对象；许可按Met Open Access。原始照片作者未提供，不把博物馆写成摄影者。"
+      },
+      "claim_ids": [
+        "C001",
+        "C003",
+        "C029"
+      ],
+      "institution": "大都会艺术博物馆",
+      "photographer": "未提供，不填",
+      "license_verification": "对象页Public Domain与Met开放政策相互对应",
+      "delivery_condition": "公开对象页已核对，但直接图像GET受当前代理限制；正式插入前必须取得图像200响应并确认对应对象。不能将候选URL误报为图片已发布。",
+      "rollback": "事务内记录实际新UUID；恢复时只删除本次插入ID，禁止按entry_id批量删除。",
+      "sql_preflight": "public media_public为空不是隐藏media表也为空；批准后须用有权限的连接检查media真实行、唯一约束、RLS及现有主图，无重复后插入。",
+      "approval_status": "DRAFT_CONDITIONAL_IMAGE_PREVIEW_REQUIRED",
+      "production_applied": false
+    },
+    {
+      "table": "media",
+      "operation": "proposed_insert",
+      "entry_id": "8c6bad40-5b25-4a82-b9c7-43ec5e3d01cd",
+      "slug": "tang-ying-jun-vase",
+      "id": null,
+      "id_assignment": "批准后沿用数据库UUID默认值；不预造已存在的ID",
+      "expected_public_existing_rows": [],
+      "expected_public_existing_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_entry_version": 4,
+      "expected_entry_record_sha256": "416437f41f118b720189f22927690fc21f55faa493460e076379770f4ee37297",
+      "values": {
+        "entry_id": "8c6bad40-5b25-4a82-b9c7-43ec5e3d01cd",
+        "path": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/46080/2520425/main-image",
+        "title": "雍正仿钧新紫釉天球瓶 · 14.40.163 · 大都会艺术博物馆",
+        "source": "https://www.metmuseum.org/art/collection/search/46080",
+        "source_url": "https://www.metmuseum.org/art/collection/search/46080",
+        "source_type": "museum",
+        "license": "CC0 / Public Domain (The Met Open Access)",
+        "creator": null,
+        "captured_at": null,
+        "location": null,
+        "usage_type": "object",
+        "source_tier": 1,
+        "is_primary": true,
+        "canonical_key": "https://www.metmuseum.org/art/collection/search/46080",
+        "status": "approved",
+        "review_state": "verified",
+        "verification_note": "对象页主体标注Public Domain，主图preload对应同一对象；许可按Met Open Access。原始照片作者未提供，不把博物馆写成摄影者。"
+      },
+      "claim_ids": [
+        "C005",
+        "C007",
+        "C029"
+      ],
+      "institution": "大都会艺术博物馆",
+      "photographer": "未提供，不填",
+      "license_verification": "对象页Public Domain与Met开放政策相互对应",
+      "delivery_condition": "公开对象页已核对，但直接图像GET受当前代理限制；正式插入前必须取得图像200响应并确认对应对象。不能将候选URL误报为图片已发布。",
+      "rollback": "事务内记录实际新UUID；恢复时只删除本次插入ID，禁止按entry_id批量删除。",
+      "sql_preflight": "public media_public为空不是隐藏media表也为空；批准后须用有权限的连接检查media真实行、唯一约束、RLS及现有主图，无重复后插入。",
+      "approval_status": "DRAFT_CONDITIONAL_IMAGE_PREVIEW_REQUIRED",
+      "production_applied": false
+    }
+  ],
+  "classification_decision": "本轮不迁移category，不改slug。全球类的瓷片/地层/款识是研究主题，现有分类本身不是可证明史实错误；人物中的工匠/窑主是群体索引。若改分类会影响Entry目录、搜索、地图、世界网络与417条entry_worlds，需要另有分类规则，不据字面直接迁移。",
+  "same_title_decision": {
+    "slugs": [
+      "xuande-dragon-dish",
+      "xuande-blue-and-white-dish"
+    ],
+    "action": "保留两个slug及关联；前者在25对象待核清单，后者没有独立对象号，不据同名认定同件、不合并",
+    "external_requirement": "两条的原始对象对应表或明确的主题/对象定义"
+  },
+  "image_policies": [
+    "两条rejected人物关联图保持排除",
+    "25件待核对象不配相似照片",
+    "故宫来源可信不等于CC0；不新增许可不明图",
+    "文献复用器物图不能作为报告封面；既有media版权字段不编造",
+    "两张拟增加的Met图片不写入、不硬编码前端；直接图像和media真实表审查为正式发布条件"
+  ]
+}

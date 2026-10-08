@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "scope": "All final package files",
+  "checks": [
+    "JWT credential-shaped values",
+    "GitHub/Supabase secret token patterns",
+    "database connection URLs",
+    "URL username/password",
+    "local Markdown link targets"
+  ],
+  "limitations": "Pattern scan plus inspection of read-only data construction; not a universal secret detector. No credential headers or runtime keys were written into this package."
+}

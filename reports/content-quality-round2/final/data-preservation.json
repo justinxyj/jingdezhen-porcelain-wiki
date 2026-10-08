@@ -1,0 +1,13 @@
+{
+  "checked_at_utc": "2026-10-08T11:38:36.306238+00:00",
+  "read_only": true,
+  "entries_matching_released_drafts": 79,
+  "processes_matching_released_drafts": 65,
+  "timeline_contexts_matching_released_drafts": 16,
+  "metadata_matching_released_drafts": 22,
+  "errors": [],
+  "production_writes": false,
+  "full_backup": false,
+  "scope": "公开字段GET与正式已发布数据稿比较；不是全库备份。",
+  "public_snapshot_at_utc": "2026-10-08T11:17:48.485642+00:00"
+}

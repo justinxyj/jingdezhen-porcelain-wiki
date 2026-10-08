@@ -1,0 +1,412 @@
+{
+  "sources": [
+    {
+      "id": "met-chicken",
+      "url": "https://www.metmuseum.org/art/collection/search/42515",
+      "title": "The Met：Chicken cup，1987.85",
+      "source_category": "博物馆与馆藏机构",
+      "read_mode": "本轮实际读取保存正文",
+      "text_sha256": "5df3b2b89d395628ecbfd9098c4ffc3cb9ce265dabb1f157dc31b55915c70dd3"
+    },
+    {
+      "id": "met-jun",
+      "url": "https://www.metmuseum.org/art/collection/search/46080",
+      "title": "The Met：Bottle vase，14.40.163",
+      "source_category": "博物馆与馆藏机构",
+      "read_mode": "本轮实际读取保存正文",
+      "text_sha256": "d4b1671ec3c7d2354eb2ff060c5655849b7357ff575464be3646dd5d702c1289"
+    },
+    {
+      "id": "met-guanyin",
+      "url": "https://www.metmuseum.org/art/collection/search/45842",
+      "title": "The Met：White-Robed Guanyin，50.145.237",
+      "source_category": "博物馆与馆藏机构",
+      "read_mode": "本轮实际读取保存正文",
+      "text_sha256": "d21d9c3f44bb0cf22e800207180ca3c071a6d0e59ed260db684aa83a2a1c5202"
+    },
+    {
+      "id": "met-stem",
+      "url": "https://www.metmuseum.org/art/collection/search/42507",
+      "title": "The Met：Stem cup with dragons，1991.253.40",
+      "source_category": "博物馆与馆藏机构",
+      "read_mode": "本轮实际读取保存正文",
+      "text_sha256": "b2e008f28f2a54fc379a0346ce74b5c729c3d7e3074e06abb8f29be2ef59070c"
+    },
+    {
+      "id": "met-yuan",
+      "url": "https://www.metmuseum.org/art/collection/search/42490",
+      "title": "The Met：Vase with lotus pond scene，1991.253.33",
+      "source_category": "博物馆与馆藏机构",
+      "read_mode": "本轮实际读取保存正文",
+      "text_sha256": "9bb15806fe86af312fab59fd83bac1ffb0a20979334a3caae2a2f7142e850b85"
+    },
+    {
+      "id": "bm-red",
+      "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+      "title": "British Museum：永乐铜红釉盘 PDF.560",
+      "source_category": "博物馆与馆藏机构",
+      "read_mode": "本轮实际读取保存正文",
+      "text_sha256": "45de924cbddba6c792cc34b65972fc326c40e512b4f8b056467aefb1e36b839b"
+    },
+    {
+      "id": "dpm-glaze",
+      "url": "https://www.dpm.org.cn/collection/ceramic/226759.html",
+      "title": "故宫：各种釉彩大瓶及青花、斗彩释义",
+      "source_category": "博物馆与馆藏机构",
+      "read_mode": "复用已保存原文，重新读取对应段落",
+      "text_sha256": "6e073e2cedc4495d363b32ccebe042c4ab1df3431c452b437e0e3d05a2b4b86a"
+    },
+    {
+      "id": "dpm-lang",
+      "url": "https://www.dpm.org.cn/collection/ceramic/227698.html",
+      "title": "故宫：郎窑红梅瓶及郎廷极说明",
+      "source_category": "博物馆与馆藏机构",
+      "read_mode": "复用已保存原文，重新读取对应段落",
+      "text_sha256": "44efb7139224a2754c2b9e15f0673011045970189a0d73bc1f9eae914e7ba020"
+    },
+    {
+      "id": "va",
+      "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+      "title": "V&A：Chinese blue-and-white ceramics",
+      "source_category": "博物馆与馆藏机构",
+      "read_mode": "本轮实际读取保存正文",
+      "text_sha256": "5d742df8c03967a52772f19c649421e721e7e189bd982d512bb1685caf26e6f0"
+    },
+    {
+      "id": "bnf",
+      "url": "https://heritage.bnf.fr/france-chine/porcelaine",
+      "title": "Jean-Pierre Drège：Porcelaine，BnF",
+      "source_category": "学术研究",
+      "read_mode": "本轮实际读取保存正文",
+      "text_sha256": "e675c0251fef9ac91effbe36b9f537530b339df5f8c97da4fd7017c69c9576cb"
+    },
+    {
+      "id": "unesco",
+      "url": "https://whc.unesco.org/en/decisions/9170/",
+      "title": "UNESCO：48 COM 8B.16",
+      "source_category": "官方资料",
+      "read_mode": "本轮实际读取保存正文",
+      "text_sha256": "028bc8e13fe52467f74708eb62d40364754f03421c0ba009c4960fc841c5c08f"
+    },
+    {
+      "id": "ich",
+      "url": "https://www.ihchina.cn/art/detail/id/14270.html",
+      "title": "国家级非遗：景德镇手工制瓷技艺",
+      "source_category": "官方资料",
+      "read_mode": "本轮实际读取保存正文",
+      "text_sha256": "b7e5d34f17a70d1c8c876fb922c8530ee42ceec23c09631ebde9adee1e402a46"
+    },
+    {
+      "id": "smithsonian",
+      "url": "https://asia-archive.si.edu/exhibition/porcelain-production-jingdezhen/",
+      "title": "Smithsonian：Porcelain Production at Jingdezhen",
+      "source_category": "博物馆与馆藏机构",
+      "read_mode": "本轮实际读取保存正文",
+      "text_sha256": "33169d2ea756ced1f03fbecb47046c48450adfe16f5de16b3aec7af341762593"
+    },
+    {
+      "id": "export",
+      "url": "https://www.metmuseum.org/essays/east-and-west-chinese-export-porcelain",
+      "title": "Alice Cooney Frelinghuysen、Jeffrey H. Munger：East and West: Chinese Export Porcelain",
+      "source_category": "学术研究",
+      "read_mode": "本轮实际读取保存正文",
+      "text_sha256": "4617c07a8375a43f59b84290f227eb46bb5038f148cfa30bfb1a1e89db192298"
+    },
+    {
+      "id": "copper",
+      "url": "https://www.ihchina.cn/Article/Index/detail?id=24981",
+      "title": "高冉：清代初期高温铜红釉烧造工艺及特点",
+      "source_category": "学术研究",
+      "read_mode": "复用已保存原文，重新读取对应段落",
+      "text_sha256": "b80cc4bf02534e100f2c00146ab33e8ca9c18a709b9599c8bb2d405451193d7f"
+    },
+    {
+      "id": "mct",
+      "url": "https://www.mct.gov.cn/whzx/zsdw/whbgwfglzx/202101/t20210127_921041.html",
+      "title": "恭王府博物馆：珠山八友主题瓷绘作品特展",
+      "source_category": "博物馆与馆藏机构",
+      "read_mode": "复用已保存原文，重新读取对应段落",
+      "text_sha256": "0a3a71a16c3824bc57b5f71f47c636e2dcf0559b00c2e763bf7e40d7ee8599c6"
+    },
+    {
+      "id": "met-license",
+      "url": "https://www.metmuseum.org/policies/image-resources",
+      "title": "The Met：Image and Data Resources",
+      "source_category": "官方资料",
+      "read_mode": "本轮实际读取保存正文",
+      "text_sha256": "27762d1839f2698829a8a08d20ce4c022721ef427bf47a9cf72ddd299a946a7c"
+    },
+    {
+      "id": "unesco-5806",
+      "url": "https://whc.unesco.org/en/tentativelists/5806/",
+      "title": "UNESCO：浙江青瓷窑址预备名单",
+      "source_category": "官方资料",
+      "read_mode": "本轮实际读取保存正文",
+      "text_sha256": "b3bf0b923d3b3f1038042ba352668931a93e61f5b541d39a4763326e14baf840"
+    }
+  ],
+  "claims": [
+    {
+      "id": "C001",
+      "source_id": "met-chicken",
+      "assertion": "鸡缸杯馆藏号为1987.85；对象42515，不能移给别的杯。",
+      "quote": "Object Number: 1987.85",
+      "locator": "Artwork Details / Object Number",
+      "status": "对应原文已读，支持此限定论述",
+      "excludes": "不自动核验全文其他论述或对象；不推导技术、人际或贸易路线。"
+    },
+    {
+      "id": "C002",
+      "source_id": "met-chicken",
+      "assertion": "先烧釉下青花，再填釉上彩并较低温度复烧。",
+      "quote": "The cobalt-blue design, drawn on the vessel before glazing, was fired at a high temperature. The images were then filled in with overglaze enamel pigments, which were fired again—this time at a lower temperature",
+      "locator": "Overview首段",
+      "status": "对应原文已读，支持此限定论述",
+      "excludes": "不自动核验全文其他论述或对象；不推导技术、人际或贸易路线。"
+    },
+    {
+      "id": "C003",
+      "source_id": "met-chicken",
+      "assertion": "该杯为成化款及成化时期；不泛用于所有成化杯。",
+      "quote": "Ming dynasty (1368–1644), Chenghua mark and period (1465–87)",
+      "locator": "Period",
+      "status": "对应原文已读，支持此限定论述",
+      "excludes": "不自动核验全文其他论述或对象；不推导技术、人际或贸易路线。"
+    },
+    {
+      "id": "C004",
+      "source_id": "met-chicken",
+      "assertion": "鸡群养育寓意按馆方解释表达，不推断个人所有者。",
+      "quote": "These “chicken-cups” convey a core Chinese value: nurturing the young is essential for the continuation of the family.",
+      "locator": "Overview末句",
+      "status": "对应原文已读，支持此限定论述",
+      "excludes": "不自动核验全文其他论述或对象；不推导技术、人际或贸易路线。"
+    },
+    {
+      "id": "C005",
+      "source_id": "met-jun",
+      "assertion": "仿钧瓶编号14.40.163。",
+      "quote": "Object Number: 14.40.163",
+      "locator": "Artwork Details",
+      "status": "对应原文已读，支持此限定论述",
+      "excludes": "不自动核验全文其他论述或对象；不推导技术、人际或贸易路线。"
+    },
+    {
+      "id": "C006",
+      "source_id": "met-jun",
+      "assertion": "馆方将仿钧新紫釉置于唐英督陶的技术再现背景；不确定本人亲手制作。",
+      "quote": "Tang Ying (1682–1756), a supervisor of the imperial porcelain factory in Jingdezhen, recreated the celebrated ceramic type with fresh glaze variations such as the “new purple” on this example.",
+      "locator": "Overview首段",
+      "status": "对应原文已读，支持此限定论述",
+      "excludes": "不自动核验全文其他论述或对象；不推导技术、人际或贸易路线。"
+    },
+    {
+      "id": "C007",
+      "source_id": "met-jun",
+      "assertion": "馆方材料描述为蓝釉泛红的景德镇瓷；属雍正时期1723—1735。",
+      "quote": "Medium: Porcelain with crimson-flushed blue glaze (Jingdezhen ware)",
+      "locator": "Medium，结合Period",
+      "status": "对应原文已读，支持此限定论述",
+      "excludes": "不自动核验全文其他论述或对象；不推导技术、人际或贸易路线。"
+    },
+    {
+      "id": "C008",
+      "source_id": "dpm-glaze",
+      "assertion": "青花钴料及罩釉烧成基本顺序。",
+      "quote": "其原料为含氧化钴的钴土矿，以蓝青色料在瓷胎上描绘纹饰，然后施透明釉，在高温还原焰中一次烧成。",
+      "locator": "名词释义：青花",
+      "status": "对应原文已读，支持此限定论述",
+      "excludes": "不自动核验全文其他论述或对象；不推导技术、人际或贸易路线。"
+    },
+    {
+      "id": "C009",
+      "source_id": "va",
+      "assertion": "V&A对元代钴料来源的概括，不指定所有器物矿源。",
+      "quote": "using cobalt pigment produced in Yunnan province or imported from the Middle East",
+      "locator": "青花历史首段",
+      "status": "对应原文已读，支持此限定论述",
+      "excludes": "不自动核验全文其他论述或对象；不推导技术、人际或贸易路线。"
+    },
+    {
+      "id": "C010",
+      "source_id": "dpm-glaze",
+      "assertion": "斗彩是组合工艺，不能只按照片颜色命名。",
+      "quote": "釉下青花与釉上彩相结合的彩瓷品种。",
+      "locator": "名词释义：斗彩",
+      "status": "对应原文已读，支持此限定论述",
+      "excludes": "不自动核验全文其他论述或对象；不推导技术、人际或贸易路线。"
+    },
+    {
+      "id": "C011",
+      "source_id": "dpm-glaze",
+      "assertion": "故宫采用成化时期成熟的表述。",
+      "quote": "真正的斗彩则成熟于明成化年间。",
+      "locator": "名词释义：斗彩",
+      "status": "对应原文已读，支持此限定论述",
+      "excludes": "不自动核验全文其他论述或对象；不推导技术、人际或贸易路线。"
+    },
+    {
+      "id": "C012",
+      "source_id": "met-guanyin",
+      "assertion": "德化在福建，象牙白瓷用于观音造像；实例不代表所有德化产品。",
+      "quote": "The ivory white porcelain of the Dehua kilns of Fujian was well-suited to representing Guanyin",
+      "locator": "Overview",
+      "status": "对应原文已读，支持此限定论述",
+      "excludes": "不自动核验全文其他论述或对象；不推导技术、人际或贸易路线。"
+    },
+    {
+      "id": "C013",
+      "source_id": "met-guanyin",
+      "assertion": "白衣观音实例：18世纪，50.145.237，白釉德化瓷。",
+      "quote": "Object Number: 50.145.237",
+      "locator": "Date / Medium / Object Number",
+      "status": "对应原文已读，支持此限定论述",
+      "excludes": "不自动核验全文其他论述或对象；不推导技术、人际或贸易路线。"
+    },
+    {
+      "id": "C014",
+      "source_id": "dpm-lang",
+      "assertion": "郎廷极督陶时期及郎窑红命名，不引出生卒年或制作者身份。",
+      "quote": "郎窑红釉是因康熙四十四年至五十一年时任景德镇御器厂督陶官的郎廷极而得名。",
+      "locator": "郎窑红梅瓶说明第二段",
+      "status": "对应原文已读，支持此限定论述",
+      "excludes": "不自动核验全文其他论述或对象；不推导技术、人际或贸易路线。"
+    },
+    {
+      "id": "C015",
+      "source_id": "copper",
+      "assertion": "釉里红与红釉使用铜呈色但装饰位置和方法不同。",
+      "quote": "只是釉里红是用色料描绘纹饰之后需要再罩一层透明釉，而红釉是直接通体施以红色釉料",
+      "locator": "正文：元代釉里红与红釉比较段",
+      "status": "对应原文已读，支持此限定论述",
+      "excludes": "不自动核验全文其他论述或对象；不推导技术、人际或贸易路线。"
+    },
+    {
+      "id": "C016",
+      "source_id": "va",
+      "assertion": "19世纪50—60年代英国唯美主义圈收藏青花；不支持英国骨瓷或本土工厂史。",
+      "quote": "In the 1850s and 60s, antique blue-and-white ceramics were discovered by a small group of artists and intellectuals linked to the Aestheticism movement",
+      "locator": "'Chinamania': the craze for blue-and-white in Britain",
+      "status": "对应原文已读，支持此限定论述",
+      "excludes": "不自动核验全文其他论述或对象；不推导技术、人际或贸易路线。"
+    },
+    {
+      "id": "C017",
+      "source_id": "bnf",
+      "assertion": "BnF叙述1708年伯特格与切恩豪斯的欧洲瓷器实验；不将1712书信写为唯一起因。",
+      "quote": "Le premier a lieu en 1708",
+      "locator": "La fabrication de la porcelaine整段，含Böttger/Tschirnhaus",
+      "status": "对应原文已读，支持此限定论述",
+      "excludes": "不自动核验全文其他论述或对象；不推导技术、人际或贸易路线。"
+    },
+    {
+      "id": "C018",
+      "source_id": "export",
+      "assertion": "中国瓷器输入欧洲及珍贵品收藏背景；不能推定利摩日或斯托克建厂。",
+      "quote": "Introduced to Europe in the fourteenth century, Chinese porcelains were regarded as objects of great rarity and luxury.",
+      "locator": "正文首段",
+      "status": "对应原文已读，支持此限定论述",
+      "excludes": "不自动核验全文其他论述或对象；不推导技术、人际或贸易路线。"
+    },
+    {
+      "id": "C019",
+      "source_id": "va",
+      "assertion": "景德镇克拉克瓷实例及馆藏号；贸易背景限定此实例。",
+      "quote": "Dish, unknown maker, 1573 – 1620, Jingdezhen, China. Museum no. C.230-1926.",
+      "locator": "Kraak porcelain图注及前一段",
+      "status": "对应原文已读，支持此限定论述",
+      "excludes": "不自动核验全文其他论述或对象；不推导技术、人际或贸易路线。"
+    },
+    {
+      "id": "C020",
+      "source_id": "va",
+      "assertion": "景德镇外销油醋壶与欧洲用途，结合该段盖罐陈设说明。",
+      "quote": "a vessel imitating a glass condiment bottle designed to separate oil and vinegar",
+      "locator": "As the trade expanded段落及C.91-1956/C.113-1963图注",
+      "status": "对应原文已读，支持此限定论述",
+      "excludes": "不自动核验全文其他论述或对象；不推导技术、人际或贸易路线。"
+    },
+    {
+      "id": "C021",
+      "source_id": "unesco",
+      "assertion": "木柴、矿产和水运构成遗产生产背景；不规定所有历史窑型或炉温。",
+      "quote": "rich reserves of porcelain stone, kaolin clay, firewood forests and water transportation",
+      "locator": "Brief synthesis首段",
+      "status": "对应原文已读，支持此限定论述",
+      "excludes": "不自动核验全文其他论述或对象；不推导技术、人际或贸易路线。"
+    },
+    {
+      "id": "C022",
+      "source_id": "unesco",
+      "assertion": "分工、标准化、专业化生产组织；不等于所有产品完全相同。",
+      "quote": "an industrial chain with fine divisions of labour, standardisation and specialisation",
+      "locator": "Brief synthesis",
+      "status": "对应原文已读，支持此限定论述",
+      "excludes": "不自动核验全文其他论述或对象；不推导技术、人际或贸易路线。"
+    },
+    {
+      "id": "C023",
+      "source_id": "ich",
+      "assertion": "复杂分工的工序范围；七十二为概括，不强制所有瓷器同一路线。",
+      "quote": "采矿、淘洗、制不、练泥、陈腐、拉坯、利坯、画坯、施釉、烧窑、画红、烧炉、选瓷、包装等工序环环紧扣",
+      "locator": "景德镇手工制瓷技艺：明清工序段",
+      "status": "对应原文已读，支持此限定论述",
+      "excludes": "不自动核验全文其他论述或对象；不推导技术、人际或贸易路线。"
+    },
+    {
+      "id": "C024",
+      "source_id": "ich",
+      "assertion": "民国商帮和瓷行等组织及运输联系；不推定每座会馆经营史。",
+      "quote": "各商帮都有自己的瓷行、瓷庄或瓷号，他们加强了景德镇与外地的联系",
+      "locator": "瓷业习俗：民国段",
+      "status": "对应原文已读，支持此限定论述",
+      "excludes": "不自动核验全文其他论述或对象；不推导技术、人际或贸易路线。"
+    },
+    {
+      "id": "C025",
+      "source_id": "mct",
+      "assertion": "展览所列成员与作品，不支持王琦生卒年或美术社任职。",
+      "quote": "“珠山八友”王琦、王大凡、汪野亭、程意亭、徐仲南、田鹤仙、邓碧珊、刘雨岑、何许人和毕伯涛等十人的作品齐聚一堂",
+      "locator": "正文第四段",
+      "status": "对应原文已读，支持此限定论述",
+      "excludes": "不自动核验全文其他论述或对象；不推导技术、人际或贸易路线。"
+    },
+    {
+      "id": "C026",
+      "source_id": "met-stem",
+      "assertion": "共用Met42507只对应宣德应龙纹高足杯，不是25个其他器物的对象依据。",
+      "quote": "Object Number: 1991.253.40",
+      "locator": "标题 / Medium / Object Number",
+      "status": "对应原文已读，支持此限定论述",
+      "excludes": "不自动核验全文其他论述或对象；不推导技术、人际或贸易路线。"
+    },
+    {
+      "id": "C027",
+      "source_id": "bm-red",
+      "assertion": "BM PDF.560是当前永乐铜红釉盘的编号，不能证明宣德碗、青花盘或清代瓶。",
+      "quote": "PDF.560",
+      "locator": "Museum number，结合Description / Production date",
+      "status": "对应原文已读，支持此限定论述",
+      "excludes": "不自动核验全文其他论述或对象；不推导技术、人际或贸易路线。"
+    },
+    {
+      "id": "C028",
+      "source_id": "met-yuan",
+      "assertion": "Met42490是元代景德镇青花莲池纹瓶，不是英国或法国本地生产资料。",
+      "quote": "Object Number: 1991.253.33",
+      "locator": "Artwork Details，结合Title / Period / Medium",
+      "status": "对应原文已读，支持此限定论述",
+      "excludes": "不自动核验全文其他论述或对象；不推导技术、人际或贸易路线。"
+    },
+    {
+      "id": "C029",
+      "source_id": "met-license",
+      "assertion": "Met公共领域图像按Open Access / CC0开放；不扩展到未标开放的图像。",
+      "quote": "in accordance with the Creative Commons Zero (CC0) designation",
+      "locator": "Open Access policy",
+      "status": "对应原文已读，支持此限定论述",
+      "excludes": "不自动核验全文其他论述或对象；不推导技术、人际或贸易路线。"
+    }
+  ],
+  "rule": "来源可访问不等于已核验。仅这些编号论述有对应定位；物品编目依机构，评论按研究者观点表达。"
+}

@@ -1,0 +1,1625 @@
+{
+  "source_changes": [
+    {
+      "id": "ff9961ba-e9ef-4693-bd63-66493ffd59da",
+      "slug": "lang-tingji",
+      "original_links": [
+        {
+          "url": "https://www.chnmuseum.cn/zp/zpml/201812/t20181218_26821_wap.shtml",
+          "label": "中国国家博物馆·郎窑红釉观音尊"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/15/u5ebe4a7333945.pdf",
+          "label": "故宫博物院·以督窑官名字命名的窑"
+        },
+        {
+          "url": "https://www.dpm.org.cn/collection/ceramic/227698.html",
+          "label": "故宫博物院·郎窑红梅瓶"
+        }
+      ],
+      "proposed_links": [
+        {
+          "url": "https://www.dpm.org.cn/collection/ceramic/227698.html",
+          "label": "故宫：郎窑红梅瓶及郎廷极说明"
+        }
+      ],
+      "claim_ids": [
+        "C014"
+      ],
+      "reason": "旧国博wap链接404；故宫已保存正文直接支持督陶与郎窑红。只收敛来源，不改生平正文。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "30055011-ad42-41de-868d-abcf70864006",
+      "slug": "dehua-kiln",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/document/180501",
+          "label": "资料来源"
+        }
+      ],
+      "proposed_links": [
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/45842",
+          "label": "The Met：White-Robed Guanyin，50.145.237"
+        }
+      ],
+      "claim_ids": [
+        "C012",
+        "C013"
+      ],
+      "reason": "以实物记录替换失效文档，删除未经限定的“长期参与海外贸易”概括；不由单件造像外推贸易。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "a304713e-7c81-4c8a-9200-02e73076de5f",
+      "slug": "chenghua-doucai-chicken-cup",
+      "original_links": [
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42515",
+          "label": "The Met Open Access"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42515",
+          "label": "The Metropolitan Museum of Art·Chenghua Chicken Cup"
+        }
+      ],
+      "proposed_links": [
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42515",
+          "label": "The Met：Chicken cup，1987.85"
+        }
+      ],
+      "claim_ids": [
+        "C001",
+        "C002",
+        "C003",
+        "C004"
+      ],
+      "reason": "删除系统式证据说明，补具体身份和装饰顺序，不混用其他鸡缸杯。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "8c6bad40-5b25-4a82-b9c7-43ec5e3d01cd",
+      "slug": "tang-ying-jun-vase",
+      "original_links": [
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/46080",
+          "label": "The Met Open Access"
+        }
+      ],
+      "proposed_links": [
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/46080",
+          "label": "The Met：Bottle vase，14.40.163"
+        }
+      ],
+      "claim_ids": [
+        "C005",
+        "C006",
+        "C007"
+      ],
+      "reason": "替换“连接节点”式说明，明确对象编号和督陶管理关系。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "ca99163f-38ea-43b5-8f0a-faf660a9b4c9",
+      "slug": "blue-white-cobalt",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO World Heritage Committee·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "Victoria and Albert Museum·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://asia-archive.si.edu/exhibition/porcelain-production-jingdezhen/",
+          "label": "Smithsonian National Museum of Asian Art·Porcelain Production at Jingdezhen"
+        }
+      ],
+      "proposed_links": [
+        {
+          "url": "https://www.dpm.org.cn/collection/ceramic/226759.html",
+          "label": "故宫：各种釉彩大瓶及青花、斗彩释义"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A：Chinese blue-and-white ceramics"
+        }
+      ],
+      "claim_ids": [
+        "C008",
+        "C009"
+      ],
+      "reason": "补解释材料位置和来源范围；不填统一配方或产地。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "0dbe2e86-9daa-42ae-9528-7708e438d445",
+      "slug": "doucai-porcelain",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO World Heritage Committee·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "Victoria and Albert Museum·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://asia-archive.si.edu/exhibition/porcelain-production-jingdezhen/",
+          "label": "Smithsonian National Museum of Asian Art·Porcelain Production at Jingdezhen"
+        }
+      ],
+      "proposed_links": [
+        {
+          "url": "https://www.dpm.org.cn/collection/ceramic/226759.html",
+          "label": "故宫：各种釉彩大瓶及青花、斗彩释义"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42515",
+          "label": "The Met：Chicken cup，1987.85"
+        }
+      ],
+      "claim_ids": [
+        "C010",
+        "C011",
+        "C002"
+      ],
+      "reason": "以工艺顺序解释品类，加入真实对象参照。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "2425c3c7-0c1e-4a55-b74c-d3ee066deda0",
+      "slug": "chenghua-doucai",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO World Heritage Committee·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "Victoria and Albert Museum·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://asia-archive.si.edu/exhibition/porcelain-production-jingdezhen/",
+          "label": "Smithsonian National Museum of Asian Art·Porcelain Production at Jingdezhen"
+        }
+      ],
+      "proposed_links": [
+        {
+          "url": "https://www.dpm.org.cn/collection/ceramic/226759.html",
+          "label": "故宫：各种釉彩大瓶及青花、斗彩释义"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42515",
+          "label": "The Met：Chicken cup，1987.85"
+        }
+      ],
+      "claim_ids": [
+        "C011",
+        "C001",
+        "C002"
+      ],
+      "reason": "明确是品类，避免误把品类当无馆藏号的单件。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "360b4636-dcd4-4260-8242-2bd997db3323",
+      "slug": "underglaze-red",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO World Heritage Committee·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "Victoria and Albert Museum·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://asia-archive.si.edu/exhibition/porcelain-production-jingdezhen/",
+          "label": "Smithsonian National Museum of Asian Art·Porcelain Production at Jingdezhen"
+        }
+      ],
+      "proposed_links": [
+        {
+          "url": "https://www.ihchina.cn/Article/Index/detail?id=24981",
+          "label": "高冉：清代初期高温铜红釉烧造工艺及特点"
+        },
+        {
+          "url": "https://www.dpm.org.cn/collection/ceramic/226759.html",
+          "label": "故宫：各种釉彩大瓶及青花、斗彩释义"
+        }
+      ],
+      "claim_ids": [
+        "C015",
+        "C008"
+      ],
+      "reason": "纠正釉里红与铜红釉的混称，并限定鉴定边界。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "36f8fd2a-8159-454b-ba59-01f5ac1a23b3",
+      "slug": "uk-ceramics",
+      "original_links": [
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42490",
+          "label": "资料来源"
+        }
+      ],
+      "proposed_links": [
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A：Chinese blue-and-white ceramics"
+        }
+      ],
+      "claim_ids": [
+        "C016",
+        "C028"
+      ],
+      "reason": "剔除元青花瓶错配来源，正文限缩到有对应资料的英国接受史；本土制造史另列待核。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "e479a789-c150-4bd2-814c-26546a618473",
+      "slug": "europe-porcelain",
+      "original_links": [
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42490",
+          "label": "资料来源"
+        },
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO World Heritage Committee·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://asia-archive.si.edu/exhibition/porcelain-production-jingdezhen/",
+          "label": "Smithsonian National Museum of Asian Art·Porcelain Production at Jingdezhen"
+        }
+      ],
+      "proposed_links": [
+        {
+          "url": "https://heritage.bnf.fr/france-chine/porcelaine",
+          "label": "Jean-Pierre Drège：Porcelaine，BnF"
+        },
+        {
+          "url": "https://www.metmuseum.org/essays/east-and-west-chinese-export-porcelain",
+          "label": "Alice Cooney Frelinghuysen、Jeffrey H. Munger：East and West: Chinese Export Porcelain"
+        }
+      ],
+      "claim_ids": [
+        "C017",
+        "C018"
+      ],
+      "reason": "移除不支持欧洲生产史的元青花瓶，收敛原宏观因果。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "41956ea9-5bb6-402b-a932-306599675ed5",
+      "slug": "limoges-porcelain",
+      "original_links": [
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42490",
+          "label": "资料来源"
+        }
+      ],
+      "proposed_links": [],
+      "claim_ids": [
+        "C028"
+      ],
+      "reason": "已确认对象来源错配，移除该链接并明确资料范围；保留既有主题，不新增当地史实。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "4d9dfe2f-29a6-4285-978c-f18383a8fa5a",
+      "slug": "stoke-on-trent",
+      "original_links": [
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42490",
+          "label": "资料来源"
+        }
+      ],
+      "proposed_links": [],
+      "claim_ids": [
+        "C028"
+      ],
+      "reason": "已确认对象来源错配，移除该链接并明确资料范围；保留既有主题，不新增当地史实。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "8c0b11ff-4b13-4e31-b5e4-02ddf3345111",
+      "slug": "wood-fired-kiln",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO World Heritage Committee·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "Victoria and Albert Museum·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://asia-archive.si.edu/exhibition/porcelain-production-jingdezhen/",
+          "label": "Smithsonian National Museum of Asian Art·Porcelain Production at Jingdezhen"
+        }
+      ],
+      "proposed_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：48 COM 8B.16"
+        },
+        {
+          "url": "https://www.ihchina.cn/art/detail/id/14270.html",
+          "label": "国家级非遗：景德镇手工制瓷技艺"
+        }
+      ],
+      "claim_ids": [
+        "C021",
+        "C023"
+      ],
+      "reason": "解释燃料与窑炉区别，不给未经核实的统一炉温。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "58e8dfa1-730e-4ce4-b2e4-349c8afc2913",
+      "slug": "porcelain-standardization",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO World Heritage Committee·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "Victoria and Albert Museum·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://asia-archive.si.edu/exhibition/porcelain-production-jingdezhen/",
+          "label": "Smithsonian National Museum of Asian Art·Porcelain Production at Jingdezhen"
+        }
+      ],
+      "proposed_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：48 COM 8B.16"
+        },
+        {
+          "url": "https://www.ihchina.cn/art/detail/id/14270.html",
+          "label": "国家级非遗：景德镇手工制瓷技艺"
+        }
+      ],
+      "claim_ids": [
+        "C022",
+        "C023"
+      ],
+      "reason": "将抽象概括变成可理解的生产组织说明，不添加统计数字。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "6523c0a0-e9f8-4108-8251-670186d2f2e5",
+      "slug": "porcelain-trade",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO World Heritage Committee·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "Victoria and Albert Museum·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://asia-archive.si.edu/exhibition/porcelain-production-jingdezhen/",
+          "label": "Smithsonian National Museum of Asian Art·Porcelain Production at Jingdezhen"
+        }
+      ],
+      "proposed_links": [
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A：Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/essays/east-and-west-chinese-export-porcelain",
+          "label": "Alice Cooney Frelinghuysen、Jeffrey H. Munger：East and West: Chinese Export Porcelain"
+        }
+      ],
+      "claim_ids": [
+        "C019",
+        "C020",
+        "C018"
+      ],
+      "reason": "用具体贸易器物说明市场反馈，避免无档案的路线和数量。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "b09b06da-133c-4629-890a-bc828c033866",
+      "slug": "kiln-fuel-system",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO World Heritage Committee·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "Victoria and Albert Museum·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://asia-archive.si.edu/exhibition/porcelain-production-jingdezhen/",
+          "label": "Smithsonian National Museum of Asian Art·Porcelain Production at Jingdezhen"
+        }
+      ],
+      "proposed_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：48 COM 8B.16"
+        },
+        {
+          "url": "https://www.ihchina.cn/art/detail/id/14270.html",
+          "label": "国家级非遗：景德镇手工制瓷技艺"
+        }
+      ],
+      "claim_ids": [
+        "C021"
+      ],
+      "reason": "以对应生产/组织资料补足主题解释，限定档案不足部分。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "0ffb24d1-7d55-4802-b58b-7ecbcd50e1fc",
+      "slug": "porcelain-market",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO World Heritage Committee·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "Victoria and Albert Museum·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://asia-archive.si.edu/exhibition/porcelain-production-jingdezhen/",
+          "label": "Smithsonian National Museum of Asian Art·Porcelain Production at Jingdezhen"
+        }
+      ],
+      "proposed_links": [
+        {
+          "url": "https://www.ihchina.cn/art/detail/id/14270.html",
+          "label": "国家级非遗：景德镇手工制瓷技艺"
+        }
+      ],
+      "claim_ids": [
+        "C024"
+      ],
+      "reason": "以对应生产/组织资料补足主题解释，限定档案不足部分。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "ab1e144d-c3b5-4a22-b497-5a6a47052052",
+      "slug": "ceramic-guilds",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO World Heritage Committee·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "Victoria and Albert Museum·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://asia-archive.si.edu/exhibition/porcelain-production-jingdezhen/",
+          "label": "Smithsonian National Museum of Asian Art·Porcelain Production at Jingdezhen"
+        }
+      ],
+      "proposed_links": [
+        {
+          "url": "https://www.ihchina.cn/art/detail/id/14270.html",
+          "label": "国家级非遗：景德镇手工制瓷技艺"
+        }
+      ],
+      "claim_ids": [
+        "C024",
+        "C023"
+      ],
+      "reason": "以对应生产/组织资料补足主题解释，限定档案不足部分。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "d7dc4c50-7aeb-4554-a4eb-2bdc760d0508",
+      "slug": "yongzheng-celadon-ewer",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "proposed_links": [],
+      "claim_ids": [
+        "C026",
+        "C027"
+      ],
+      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "ccbf4313-6365-4218-b8c7-a7d80c54c796",
+      "slug": "kangxi-peachbloom-vase",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "proposed_links": [],
+      "claim_ids": [
+        "C026",
+        "C027"
+      ],
+      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "7c5e8a4d-7980-4166-a707-c514d1e40762",
+      "slug": "kangxi-famille-verte-dragon",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "proposed_links": [],
+      "claim_ids": [
+        "C026",
+        "C027"
+      ],
+      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "05c0a2b6-5c35-471c-96db-fdc1c667afd1",
+      "slug": "yongzheng-doucai-bamboo-cup",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "proposed_links": [],
+      "claim_ids": [
+        "C026",
+        "C027"
+      ],
+      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "22dfaa6d-d756-47e4-b50b-95d1c53a80f5",
+      "slug": "ming-landscape-dish",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "proposed_links": [],
+      "claim_ids": [
+        "C026",
+        "C027"
+      ],
+      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "517b9031-c7e7-4635-936c-f99928938776",
+      "slug": "ming-kinrande-jar",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "proposed_links": [],
+      "claim_ids": [
+        "C026",
+        "C027"
+      ],
+      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "3a9fe43e-e09e-4677-a848-88a801b39397",
+      "slug": "jiajing-red-ground-dish",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "proposed_links": [],
+      "claim_ids": [
+        "C026",
+        "C027"
+      ],
+      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "2975b66d-ac4a-453c-8cdb-f5165ee10271",
+      "slug": "qing-peach-shaped-ewer",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "proposed_links": [],
+      "claim_ids": [
+        "C026",
+        "C027"
+      ],
+      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "1b28709f-ffb4-432f-a7ae-6a76f62947a2",
+      "slug": "kangxi-oxblood-vase",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "proposed_links": [],
+      "claim_ids": [
+        "C026",
+        "C027"
+      ],
+      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "59f0b451-5334-4f87-aa8c-31ea7c0b8d4d",
+      "slug": "kangxi-covered-jar",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "proposed_links": [],
+      "claim_ids": [
+        "C026",
+        "C027"
+      ],
+      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "9c5c26a0-51c0-49df-842e-10fe249db2ae",
+      "slug": "kangxi-famille-verte-figure",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "proposed_links": [],
+      "claim_ids": [
+        "C026",
+        "C027"
+      ],
+      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "c094cdfc-9d3c-49ec-ae7e-fe3a75364fd8",
+      "slug": "jiajing-kinrande-ewer",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "proposed_links": [],
+      "claim_ids": [
+        "C026",
+        "C027"
+      ],
+      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "912c614e-6762-4c59-95df-5f0517c981dd",
+      "slug": "kangxi-covered-ewer",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "proposed_links": [],
+      "claim_ids": [
+        "C026",
+        "C027"
+      ],
+      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "b341e65e-27f8-4152-93d7-6292fb09c3b1",
+      "slug": "xuande-dragon-dish",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "proposed_links": [],
+      "claim_ids": [
+        "C026",
+        "C027"
+      ],
+      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "6988d1c3-604e-4184-bbfa-95043c8ff064",
+      "slug": "xuande-pomegranate-bowl",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "proposed_links": [],
+      "claim_ids": [
+        "C026",
+        "C027"
+      ],
+      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "d5008a14-422c-41b4-a6c9-7f0b9c3d8b09",
+      "slug": "xuande-copper-red-bowl",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "proposed_links": [],
+      "claim_ids": [
+        "C026",
+        "C027"
+      ],
+      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "30b201d4-fb22-4268-a710-ee91ed9d2415",
+      "slug": "kangxi-black-glaze-vase",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "proposed_links": [],
+      "claim_ids": [
+        "C026",
+        "C027"
+      ],
+      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "814879d7-0a47-436b-82e4-ab7728175a4e",
+      "slug": "yongzheng-turquoise-vase",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "proposed_links": [],
+      "claim_ids": [
+        "C026",
+        "C027"
+      ],
+      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "18e78490-6efa-42d1-b2c3-be4318c925ed",
+      "slug": "qianlong-lightblue-vase",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "proposed_links": [],
+      "claim_ids": [
+        "C026",
+        "C027"
+      ],
+      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "9d0a95e1-b090-4e70-8837-d279ea89d096",
+      "slug": "yongzheng-relief-vase",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "proposed_links": [],
+      "claim_ids": [
+        "C026",
+        "C027"
+      ],
+      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "276fabf1-9963-45d7-b183-1a126a6369ec",
+      "slug": "kangxi-famille-verte-vase",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "proposed_links": [],
+      "claim_ids": [
+        "C026",
+        "C027"
+      ],
+      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "79edb3ad-8b41-4a55-ae69-0154955c280d",
+      "slug": "kangxi-famille-verte-gilt-vase",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "proposed_links": [],
+      "claim_ids": [
+        "C026",
+        "C027"
+      ],
+      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "0a7e5bbf-84f3-4426-9113-b9aa205aea27",
+      "slug": "kangxi-famille-verte-monteith",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "proposed_links": [],
+      "claim_ids": [
+        "C026",
+        "C027"
+      ],
+      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "256587aa-cb98-4f6a-9277-80cec0368b3d",
+      "slug": "wanli-bluewhite-jar",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "proposed_links": [],
+      "claim_ids": [
+        "C026",
+        "C027"
+      ],
+      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    },
+    {
+      "id": "bb935a4a-cb13-4107-988c-4c6869f315d9",
+      "slug": "qianlong-poem-vase",
+      "original_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "proposed_links": [],
+      "claim_ids": [
+        "C026",
+        "C027"
+      ],
+      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "status": "待批准来源差异；不是已上线修正",
+      "production_applied": false
+    }
+  ],
+  "pending": [
+    {
+      "slug": "qian-qichen",
+      "original_sources": [
+        {
+          "url": "https://www.jdz.gov.cn/zjcd/mljdz/t289353.shtml",
+          "label": "景德镇市人民政府·古窑民俗博览区"
+        }
+      ],
+      "state": "地方史/人物活动待核；不冒充完整替代",
+      "reason": "原官方URL404；限定检索未取得2000年瓷乐演出/题词原件。不用外交家身份代替到访证据。",
+      "required": "原官方URL404；限定检索未取得2000年瓷乐演出/题词原件。不用外交家身份代替到访证据。",
+      "proposed_source_fix": false
+    },
+    {
+      "slug": "wang-qi",
+      "original_sources": [
+        {
+          "url": "https://www.mct.gov.cn/whzx/zsdw/whbgwfglzx/202101/t20210127_921041.html",
+          "label": "文化和旅游部·珠山八友主题瓷绘作品特展"
+        },
+        {
+          "url": "https://www.jdz.gov.cn/zsnj/jdzsz/jdzszdwj/rwz/rwc/P020201114583753053261.pdf",
+          "label": "《景德镇市志》·人物志·王琦"
+        }
+      ],
+      "state": "地方史/人物活动待核；不冒充完整替代",
+      "reason": "文化和旅游部所载恭王府展览可确认成员与参展作品；不可确认1886—1933或研究社经历。原地方志PDF访问异常，日期不改成网上另一组年份，也不标已核实。",
+      "required": "文化和旅游部所载恭王府展览可确认成员与参展作品；不可确认1886—1933或研究社经历。原地方志PDF访问异常，日期不改成网上另一组年份，也不标已核实。",
+      "proposed_source_fix": false
+    },
+    {
+      "slug": "qigong",
+      "original_sources": [
+        {
+          "url": "https://www.mingyanjiaju.org/fanwen/daoyoucifanwen/12844140.html",
+          "label": "景德镇古窑题字资料"
+        }
+      ],
+      "state": "地方史/人物活动待核；不冒充完整替代",
+      "reason": "当前唯一出处是导游范文，未见题词原件或馆方接待档案；不扩写题词与访问时间。",
+      "required": "当前唯一出处是导游范文，未见题词原件或馆方接待档案；不扩写题词与访问时间。",
+      "proposed_source_fix": false
+    },
+    {
+      "slug": "shu-tong",
+      "original_sources": [
+        {
+          "url": "https://www.mingyanjiaju.org/fanwen/daoyoucifanwen/12844140.html",
+          "label": "景德镇古窑题字资料"
+        }
+      ],
+      "state": "地方史/人物活动待核；不冒充完整替代",
+      "reason": "导游范文不足以证明具体署名，题词原件、时间及馆方记录未取得；保留现记录并标待核。",
+      "required": "导游范文不足以证明具体署名，题词原件、时间及馆方记录未取得；保留现记录并标待核。",
+      "proposed_source_fix": false
+    },
+    {
+      "slug": "limoges-porcelain",
+      "original_sources": [
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42490",
+          "label": "资料来源"
+        }
+      ],
+      "state": "地方史/人物活动待核；不冒充完整替代",
+      "reason": "已确认对象来源错配，移除该链接并明确资料范围；保留既有主题，不新增当地史实。",
+      "required": "具体对象/当地历史仍待直接资料",
+      "proposed_source_fix": true
+    },
+    {
+      "slug": "stoke-on-trent",
+      "original_sources": [
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42490",
+          "label": "资料来源"
+        }
+      ],
+      "state": "地方史/人物活动待核；不冒充完整替代",
+      "reason": "已确认对象来源错配，移除该链接并明确资料范围；保留既有主题，不新增当地史实。",
+      "required": "具体对象/当地历史仍待直接资料",
+      "proposed_source_fix": true
+    },
+    {
+      "slug": "xing-kiln",
+      "original_sources": [
+        {
+          "url": "https://whc.unesco.org/en/tentativelists/5806/",
+          "label": "资料来源"
+        }
+      ],
+      "state": "地方史/人物活动待核；不冒充完整替代",
+      "reason": "邢窑需当地馆藏、考古或机构史资料；UNESCO5806主要是浙江青瓷遗址及部分东亚影响比较，不足以核验此条完整历史。保留现记录待核，不借越窑/龙泉纪年补其身份或工艺。",
+      "required": "邢窑需当地馆藏、考古或机构史资料；UNESCO5806主要是浙江青瓷遗址及部分东亚影响比较，不足以核验此条完整历史。保留现记录待核，不借越窑/龙泉纪年补其身份或工艺。",
+      "proposed_source_fix": false
+    },
+    {
+      "slug": "korea-ceramics",
+      "original_sources": [
+        {
+          "url": "https://whc.unesco.org/en/tentativelists/5806/",
+          "label": "资料来源"
+        }
+      ],
+      "state": "地方史/人物活动待核；不冒充完整替代",
+      "reason": "朝鲜半岛陶瓷需当地馆藏、考古或机构史资料；UNESCO5806主要是浙江青瓷遗址及部分东亚影响比较，不足以核验此条完整历史。保留现记录待核，不借越窑/龙泉纪年补其身份或工艺。",
+      "required": "朝鲜半岛陶瓷需当地馆藏、考古或机构史资料；UNESCO5806主要是浙江青瓷遗址及部分东亚影响比较，不足以核验此条完整历史。保留现记录待核，不借越窑/龙泉纪年补其身份或工艺。",
+      "proposed_source_fix": false
+    },
+    {
+      "slug": "yaozhou-kiln",
+      "original_sources": [
+        {
+          "url": "https://whc.unesco.org/en/tentativelists/5806/",
+          "label": "资料来源"
+        }
+      ],
+      "state": "地方史/人物活动待核；不冒充完整替代",
+      "reason": "耀州窑·黄堡需当地馆藏、考古或机构史资料；UNESCO5806主要是浙江青瓷遗址及部分东亚影响比较，不足以核验此条完整历史。保留现记录待核，不借越窑/龙泉纪年补其身份或工艺。",
+      "required": "耀州窑·黄堡需当地馆藏、考古或机构史资料；UNESCO5806主要是浙江青瓷遗址及部分东亚影响比较，不足以核验此条完整历史。保留现记录待核，不借越窑/龙泉纪年补其身份或工艺。",
+      "proposed_source_fix": false
+    },
+    {
+      "slug": "icheon-ceramics",
+      "original_sources": [
+        {
+          "url": "https://whc.unesco.org/en/tentativelists/5806/",
+          "label": "资料来源"
+        }
+      ],
+      "state": "地方史/人物活动待核；不冒充完整替代",
+      "reason": "利川陶瓷需当地馆藏、考古或机构史资料；UNESCO5806主要是浙江青瓷遗址及部分东亚影响比较，不足以核验此条完整历史。保留现记录待核，不借越窑/龙泉纪年补其身份或工艺。",
+      "required": "利川陶瓷需当地馆藏、考古或机构史资料；UNESCO5806主要是浙江青瓷遗址及部分东亚影响比较，不足以核验此条完整历史。保留现记录待核，不借越窑/龙泉纪年补其身份或工艺。",
+      "proposed_source_fix": false
+    },
+    {
+      "slug": "ding-kiln",
+      "original_sources": [
+        {
+          "url": "https://whc.unesco.org/en/tentativelists/5806/",
+          "label": "资料来源"
+        }
+      ],
+      "state": "地方史/人物活动待核；不冒充完整替代",
+      "reason": "定窑·曲阳需当地馆藏、考古或机构史资料；UNESCO5806主要是浙江青瓷遗址及部分东亚影响比较，不足以核验此条完整历史。保留现记录待核，不借越窑/龙泉纪年补其身份或工艺。",
+      "required": "定窑·曲阳需当地馆藏、考古或机构史资料；UNESCO5806主要是浙江青瓷遗址及部分东亚影响比较，不足以核验此条完整历史。保留现记录待核，不借越窑/龙泉纪年补其身份或工艺。",
+      "proposed_source_fix": false
+    },
+    {
+      "slug": "cizhou-kiln",
+      "original_sources": [
+        {
+          "url": "https://whc.unesco.org/en/tentativelists/5806/",
+          "label": "资料来源"
+        }
+      ],
+      "state": "地方史/人物活动待核；不冒充完整替代",
+      "reason": "磁州窑·观台需当地馆藏、考古或机构史资料；UNESCO5806主要是浙江青瓷遗址及部分东亚影响比较，不足以核验此条完整历史。保留现记录待核，不借越窑/龙泉纪年补其身份或工艺。",
+      "required": "磁州窑·观台需当地馆藏、考古或机构史资料；UNESCO5806主要是浙江青瓷遗址及部分东亚影响比较，不足以核验此条完整历史。保留现记录待核，不借越窑/龙泉纪年补其身份或工艺。",
+      "proposed_source_fix": false
+    },
+    {
+      "slug": "guan-kiln",
+      "original_sources": [
+        {
+          "url": "https://whc.unesco.org/en/tentativelists/5806/",
+          "label": "资料来源"
+        }
+      ],
+      "state": "地方史/人物活动待核；不冒充完整替代",
+      "reason": "官窑需当地馆藏、考古或机构史资料；UNESCO5806主要是浙江青瓷遗址及部分东亚影响比较，不足以核验此条完整历史。保留现记录待核，不借越窑/龙泉纪年补其身份或工艺。",
+      "required": "官窑需当地馆藏、考古或机构史资料；UNESCO5806主要是浙江青瓷遗址及部分东亚影响比较，不足以核验此条完整历史。保留现记录待核，不借越窑/龙泉纪年补其身份或工艺。",
+      "proposed_source_fix": false
+    },
+    {
+      "slug": "ge-kiln",
+      "original_sources": [
+        {
+          "url": "https://whc.unesco.org/en/tentativelists/5806/",
+          "label": "资料来源"
+        }
+      ],
+      "state": "地方史/人物活动待核；不冒充完整替代",
+      "reason": "哥窑需当地馆藏、考古或机构史资料；UNESCO5806主要是浙江青瓷遗址及部分东亚影响比较，不足以核验此条完整历史。保留现记录待核，不借越窑/龙泉纪年补其身份或工艺。",
+      "required": "哥窑需当地馆藏、考古或机构史资料；UNESCO5806主要是浙江青瓷遗址及部分东亚影响比较，不足以核验此条完整历史。保留现记录待核，不借越窑/龙泉纪年补其身份或工艺。",
+      "proposed_source_fix": false
+    },
+    {
+      "slug": "goryeo-celadon",
+      "original_sources": [
+        {
+          "url": "https://whc.unesco.org/en/tentativelists/5806/",
+          "label": "资料来源"
+        },
+        {
+          "url": "https://whc.unesco.org/en/tentativelists/5806/",
+          "label": "UNESCO·Goryeo Celadon Kiln Sites of Gangjin"
+        }
+      ],
+      "state": "地方史/人物活动待核；不冒充完整替代",
+      "reason": "保存既有概述与技术比较界限；浙江青瓷名录不能独立证明高丽完整生产史，对既有额外资料须再核引，不改年代或工匠传播。",
+      "required": "保存既有概述与技术比较界限；浙江青瓷名录不能独立证明高丽完整生产史，对既有额外资料须再核引，不改年代或工匠传播。",
+      "proposed_source_fix": false
+    },
+    {
+      "slug": "joseon-ceramics",
+      "original_sources": [
+        {
+          "url": "https://whc.unesco.org/en/tentativelists/5806/",
+          "label": "资料来源"
+        }
+      ],
+      "state": "地方史/人物活动待核；不冒充完整替代",
+      "reason": "朝鲜王朝陶瓷需当地馆藏、考古或机构史资料；UNESCO5806主要是浙江青瓷遗址及部分东亚影响比较，不足以核验此条完整历史。保留现记录待核，不借越窑/龙泉纪年补其身份或工艺。",
+      "required": "朝鲜王朝陶瓷需当地馆藏、考古或机构史资料；UNESCO5806主要是浙江青瓷遗址及部分东亚影响比较，不足以核验此条完整历史。保留现记录待核，不借越窑/龙泉纪年补其身份或工艺。",
+      "proposed_source_fix": false
+    },
+    {
+      "slug": "islamic-ceramics",
+      "original_sources": [
+        {
+          "url": "https://whc.unesco.org/en/tentativelists/5806/",
+          "label": "资料来源"
+        }
+      ],
+      "state": "地方史/人物活动待核；不冒充完整替代",
+      "reason": "伊斯兰世界陶瓷需当地馆藏、考古或机构史资料；UNESCO5806主要是浙江青瓷遗址及部分东亚影响比较，不足以核验此条完整历史。保留现记录待核，不借越窑/龙泉纪年补其身份或工艺。",
+      "required": "伊斯兰世界陶瓷需当地馆藏、考古或机构史资料；UNESCO5806主要是浙江青瓷遗址及部分东亚影响比较，不足以核验此条完整历史。保留现记录待核，不借越窑/龙泉纪年补其身份或工艺。",
+      "proposed_source_fix": false
+    },
+    {
+      "slug": "zhangzhou-kiln",
+      "original_sources": [
+        {
+          "url": "https://whc.unesco.org/en/tentativelists/5806/",
+          "label": "资料来源"
+        }
+      ],
+      "state": "地方史/人物活动待核；不冒充完整替代",
+      "reason": "漳州窑需当地馆藏、考古或机构史资料；UNESCO5806主要是浙江青瓷遗址及部分东亚影响比较，不足以核验此条完整历史。保留现记录待核，不借越窑/龙泉纪年补其身份或工艺。",
+      "required": "漳州窑需当地馆藏、考古或机构史资料；UNESCO5806主要是浙江青瓷遗址及部分东亚影响比较，不足以核验此条完整历史。保留现记录待核，不借越窑/龙泉纪年补其身份或工艺。",
+      "proposed_source_fix": false
+    },
+    {
+      "slug": "southeast-asia-ceramics",
+      "original_sources": [
+        {
+          "url": "https://whc.unesco.org/en/tentativelists/5806/",
+          "label": "资料来源"
+        }
+      ],
+      "state": "地方史/人物活动待核；不冒充完整替代",
+      "reason": "东南亚陶瓷需当地馆藏、考古或机构史资料；UNESCO5806主要是浙江青瓷遗址及部分东亚影响比较，不足以核验此条完整历史。保留现记录待核，不借越窑/龙泉纪年补其身份或工艺。",
+      "required": "东南亚陶瓷需当地馆藏、考古或机构史资料；UNESCO5806主要是浙江青瓷遗址及部分东亚影响比较，不足以核验此条完整历史。保留现记录待核，不借越窑/龙泉纪年补其身份或工艺。",
+      "proposed_source_fix": false
+    },
+    {
+      "slug": "shiwan-kiln",
+      "original_sources": [
+        {
+          "url": "https://whc.unesco.org/en/tentativelists/5806/",
+          "label": "资料来源"
+        }
+      ],
+      "state": "地方史/人物活动待核；不冒充完整替代",
+      "reason": "石湾窑需当地馆藏、考古或机构史资料；UNESCO5806主要是浙江青瓷遗址及部分东亚影响比较，不足以核验此条完整历史。保留现记录待核，不借越窑/龙泉纪年补其身份或工艺。",
+      "required": "石湾窑需当地馆藏、考古或机构史资料；UNESCO5806主要是浙江青瓷遗址及部分东亚影响比较，不足以核验此条完整历史。保留现记录待核，不借越窑/龙泉纪年补其身份或工艺。",
+      "proposed_source_fix": false
+    },
+    {
+      "slug": "changsha-kiln",
+      "original_sources": [
+        {
+          "url": "https://whc.unesco.org/en/tentativelists/5806/",
+          "label": "资料来源"
+        }
+      ],
+      "state": "地方史/人物活动待核；不冒充完整替代",
+      "reason": "长沙窑需当地馆藏、考古或机构史资料；UNESCO5806主要是浙江青瓷遗址及部分东亚影响比较，不足以核验此条完整历史。保留现记录待核，不借越窑/龙泉纪年补其身份或工艺。",
+      "required": "长沙窑需当地馆藏、考古或机构史资料；UNESCO5806主要是浙江青瓷遗址及部分东亚影响比较，不足以核验此条完整历史。保留现记录待核，不借越窑/龙泉纪年补其身份或工艺。",
+      "proposed_source_fix": false
+    },
+    {
+      "slug": "liling-kiln",
+      "original_sources": [
+        {
+          "url": "https://whc.unesco.org/en/tentativelists/5806/",
+          "label": "资料来源"
+        }
+      ],
+      "state": "地方史/人物活动待核；不冒充完整替代",
+      "reason": "醴陵窑需当地馆藏、考古或机构史资料；UNESCO5806主要是浙江青瓷遗址及部分东亚影响比较，不足以核验此条完整历史。保留现记录待核，不借越窑/龙泉纪年补其身份或工艺。",
+      "required": "醴陵窑需当地馆藏、考古或机构史资料；UNESCO5806主要是浙江青瓷遗址及部分东亚影响比较，不足以核验此条完整历史。保留现记录待核，不借越窑/龙泉纪年补其身份或工艺。",
+      "proposed_source_fix": false
+    },
+    {
+      "slug": "ru-kiln",
+      "original_sources": [
+        {
+          "url": "https://whc.unesco.org/en/tentativelists/5806/",
+          "label": "资料来源"
+        }
+      ],
+      "state": "地方史/人物活动待核；不冒充完整替代",
+      "reason": "汝窑·清凉寺需当地馆藏、考古或机构史资料；UNESCO5806主要是浙江青瓷遗址及部分东亚影响比较，不足以核验此条完整历史。保留现记录待核，不借越窑/龙泉纪年补其身份或工艺。",
+      "required": "汝窑·清凉寺需当地馆藏、考古或机构史资料；UNESCO5806主要是浙江青瓷遗址及部分东亚影响比较，不足以核验此条完整历史。保留现记录待核，不借越窑/龙泉纪年补其身份或工艺。",
+      "proposed_source_fix": false
+    },
+    {
+      "slug": "west-asia-ceramics",
+      "original_sources": [
+        {
+          "url": "https://whc.unesco.org/en/tentativelists/5806/",
+          "label": "资料来源"
+        }
+      ],
+      "state": "地方史/人物活动待核；不冒充完整替代",
+      "reason": "西亚陶瓷需当地馆藏、考古或机构史资料；UNESCO5806主要是浙江青瓷遗址及部分东亚影响比较，不足以核验此条完整历史。保留现记录待核，不借越窑/龙泉纪年补其身份或工艺。",
+      "required": "西亚陶瓷需当地馆藏、考古或机构史资料；UNESCO5806主要是浙江青瓷遗址及部分东亚影响比较，不足以核验此条完整历史。保留现记录待核，不借越窑/龙泉纪年补其身份或工艺。",
+      "proposed_source_fix": false
+    }
+  ],
+  "persistent_404": {
+    "lang-tingji": "拟删除失效wap，仅使用可支持同论述的故宫出处；原链接保留归档",
+    "dehua-kiln": "拟替换为德化白衣观音对象，正文限缩到该直接资料支持范围，不冒充完整贸易史",
+    "qian-qichen": "仍待官方活动档案，不填替代URL",
+    "wang-qi": "已读展览资料不支持生卒年，原地方志链接保留待核，未准备未经证实的日期更新"
+  },
+  "other_23_anomalies": "沿用阶段A逐次观测和本轮请求记录，403/5xx或代理错误不判定永久失效；不自动删除",
+  "source_verified_count_basis": "只有source-evidence.json中的限定论述有引文定位；链接数量、GET200与来源数量均不作为已核验数量。"
+}

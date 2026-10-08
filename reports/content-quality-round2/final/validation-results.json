@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "entries_with_decision": 250,
+  "draft_entries": 43,
+  "object_identity_unresolved": 25,
+  "relation_candidates": 58,
+  "relation_note_drafts": 3,
+  "conditional_image_drafts": 2,
+  "priority_24_closed": 24,
+  "protected_body_overlap": 0,
+  "negative_guard_checks_rejected": [
+    "version",
+    "slug",
+    "zh",
+    "incorrect diff original"
+  ],
+  "offline_field_diff_and_original_value_restore": "PASS",
+  "draft_html_allowlist": {
+    "passed": 43,
+    "failed": 0
+  },
+  "live_database_dry_run": false,
+  "production_write": false,
+  "limits": "Consistency/guards are tested. This does not independently validate every historical claim."
+}

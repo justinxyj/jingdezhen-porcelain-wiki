@@ -1,0 +1,12 @@
+
+> typecheck
+> npm run typecheck:contracts && npm run typecheck:js
+
+
+> typecheck:contracts
+> tsc --noEmit -p tsconfig.contracts.json
+
+
+> typecheck:js
+> tsc --noEmit -p tsconfig.json
+

@@ -1,0 +1,1 @@
+PASS: immutable static article, lazy successful/failed enhancement, no initial reads, idempotent dynamic div/article hosts
