@@ -16,5 +16,6 @@
   "relation_orphan_endpoints_0": true,
   "formal_typecheck_exit_code": 0,
   "frontend_modified": false,
-  "production_database_written": false
+  "production_database_written": false,
+  "csv_line_endings_lf": true
 }
