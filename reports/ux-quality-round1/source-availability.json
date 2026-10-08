@@ -1,0 +1,736 @@
+{
+  "method": "Read-only GET limited to 1024 bytes; HTTP reachability is not source verification. 403/timeouts are not confirmed dead links.",
+  "results": [
+    {
+      "url": "https://apisites.jmapps.ne.jp/mocoor_o/en/collection/91",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://apisites.jmapps.ne.jp/mocoor_o/en/collection/91"
+    },
+    {
+      "url": "https://archaeology.pku.edu.cn/info/1030/3492.htm",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://archaeology.pku.edu.cn/info/1030/3492.htm"
+    },
+    {
+      "url": "https://asia-archive.si.edu/exhibition/porcelain-production-jingdezhen/",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://asia-archive.si.edu/exhibition/porcelain-production-jingdezhen/"
+    },
+    {
+      "url": "https://books.google.com/books/about/%E6%99%AF%E5%BE%B7%E9%8E%AE%E6%B9%96%E7%94%B0%E7%AA%91%E5%9D%80.html?id=JJb20AEACAAJ",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://books.google.com/books/about/%E6%99%AF%E5%BE%B7%E9%8E%AE%E6%B9%96%E7%94%B0%E7%AA%91%E5%9D%80.html?id=JJb20AEACAAJ"
+    },
+    {
+      "url": "https://books.google.com/books/about/%E6%99%AF%E5%BE%B7%E9%95%87%E6%B9%96%E7%94%B0%E7%AA%91%E5%9D%80.html?id=JJb20AEACAAJ",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://books.google.com/books/about/%E6%99%AF%E5%BE%B7%E9%95%87%E6%B9%96%E7%94%B0%E7%AA%91%E5%9D%80.html?id=JJb20AEACAAJ"
+    },
+    {
+      "url": "https://ci.nii.ac.jp/ncid/BD20508160",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://ci.nii.ac.jp/ncid/BD20508160"
+    },
+    {
+      "url": "https://cnki.istiz.org.cn/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFD2025&filename=JGWC202546019",
+      "status": 500,
+      "result": "http_error_needs_review"
+    },
+    {
+      "url": "https://cnki.istiz.org.cn/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFD2025&filename=LFWW202504007",
+      "status": 500,
+      "result": "http_error_needs_review"
+    },
+    {
+      "url": "https://cnki.istiz.org.cn/kcms/detail/detailall.aspx?dbcode=CJFQ&dbname=CJFD2025&filename=zgtc202506013",
+      "status": 500,
+      "result": "http_error_needs_review"
+    },
+    {
+      "url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/42490",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/42490"
+    },
+    {
+      "url": "https://credit.jdz.gov.cn/cms/content/queryOfPreview.action?contentId=25152",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://credit.jdz.gov.cn/cms/content/queryOfPreview.action?contentId=25152"
+    },
+    {
+      "url": "https://ctext.org/wiki.pl?chapter=482547&if=gb&remap=gb",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://ctext.org/wiki.pl?chapter=482547&if=gb&remap=gb"
+    },
+    {
+      "url": "https://ctext.org/wiki.pl?if=gb&res=336161",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://ctext.org/wiki.pl?if=gb&res=336161"
+    },
+    {
+      "url": "https://culture.people.com.cn/n1/2016/1224/c1013-28973781.html",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://culture.people.com.cn/n1/2016/1224/c1013-28973781.html"
+    },
+    {
+      "url": "https://edt.cqvip.com/journal/tcxb/article/551164637",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://edt.cqvip.com/journal/tcxb/article/551164637"
+    },
+    {
+      "url": "https://ggzl.dpm.org.cn/app/api/app/exhibitionListPc/140",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://ggzl.dpm.org.cn/app/api/app/exhibitionListPc/140"
+    },
+    {
+      "url": "https://gl.jdz.gov.cn/zwzx/gzdt/t847243.shtml",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://gl.jdz.gov.cn/zwzx/gzdt/t847243.shtml"
+    },
+    {
+      "url": "https://heritage.bnf.fr/france-chine/porcelaine",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://heritage.bnf.fr/france-chine/porcelaine"
+    },
+    {
+      "url": "https://img.dpm.org.cn/Uploads/File/2021/07/23/u60fa314146024.pdf",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://img.dpm.org.cn/Uploads/File/2021/07/23/u60fa314146024.pdf"
+    },
+    {
+      "url": "https://ir.pku.edu.cn/handle/20.500.11897/378201",
+      "status": 503,
+      "result": "http_error_needs_review"
+    },
+    {
+      "url": "https://ir.pku.edu.cn/handle/20.500.11897/579503",
+      "status": 503,
+      "result": "http_error_needs_review"
+    },
+    {
+      "url": "https://ja.wikipedia.org/wiki/日本の陶磁器",
+      "status": null,
+      "result": "indeterminate",
+      "reason": "UnicodeEncodeError"
+    },
+    {
+      "url": "https://jdz.gov.cn/zjcd/mljdz/sj/t933002.shtml",
+      "status": 503,
+      "result": "http_error_needs_review"
+    },
+    {
+      "url": "https://jdz.gov.cn/zwgk/zfgb/2024n/d3q/szfwj_3307/t958190.shtml",
+      "status": 503,
+      "result": "http_error_needs_review"
+    },
+    {
+      "url": "https://jdz.gov.cn/zwzx/jrcd/t1050280.shtml",
+      "status": 503,
+      "result": "http_error_needs_review"
+    },
+    {
+      "url": "https://jdz.gov.cn/zwzx/jrcd/t1099484.shtml",
+      "status": 503,
+      "result": "http_error_needs_review"
+    },
+    {
+      "url": "https://jdzk.cbpt.cnki.net/portal/journal/portal/client/paper/7dcd72eae86f1be2fc190e7c87f77e70",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://jdzk.cbpt.cnki.net/portal/journal/portal/client/paper/7dcd72eae86f1be2fc190e7c87f77e70"
+    },
+    {
+      "url": "https://meta.librarydata.cn/metainfo?metaID=140420020210000145",
+      "status": 503,
+      "result": "http_error_needs_review"
+    },
+    {
+      "url": "https://meta.librarydata.cn/metainfo?metaID=140420020210001657",
+      "status": 503,
+      "result": "http_error_needs_review"
+    },
+    {
+      "url": "https://meta.librarydata.cn/metainfo?metaID=140420020210001666",
+      "status": 503,
+      "result": "http_error_needs_review"
+    },
+    {
+      "url": "https://meta.librarydata.cn/metainfo?metaID=140420020210001709",
+      "status": 503,
+      "result": "http_error_needs_review"
+    },
+    {
+      "url": "https://meta.librarydata.cn/metainfo?metaID=140420020230000213",
+      "status": 503,
+      "result": "http_error_needs_review"
+    },
+    {
+      "url": "https://meta.librarydata.cn/metainfo?metaID=140420020230001039",
+      "status": 503,
+      "result": "http_error_needs_review"
+    },
+    {
+      "url": "https://mt.sohu.com/20170804/n505431027.shtml",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://mt.sohu.com/20170804/n505431027.shtml"
+    },
+    {
+      "url": "https://newetds.lib.tsinghua.edu.cn/qh/paper/summary?dbCode=ETDQH&sysId=215437",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://newetds.lib.tsinghua.edu.cn/qh/paper/summary?dbCode=ETDQH&sysId=215437"
+    },
+    {
+      "url": "https://paper.people.com.cn/rmrbhwb/html/2020-06/18/content_1992823.htm",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://paper.people.com.cn/rmrbhwb/html/2020-06/18/content_1992823.htm"
+    },
+    {
+      "url": "https://qkzzs.jci.edu.cn/info/1011/2918.htm",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://qkzzs.jci.edu.cn/info/1011/2918.htm"
+    },
+    {
+      "url": "https://qkzzs.jci.edu.cn/zgtcgy/info/1025/3796.htm",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://qkzzs.jci.edu.cn/zgtcgy/info/1025/3796.htm"
+    },
+    {
+      "url": "https://qkzzs.jcu.edu.cn/info/1011/1768.htm",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://qkzzs.jcu.edu.cn/info/1011/1768.htm"
+    },
+    {
+      "url": "https://qkzzs.jcu.edu.cn/info/1011/3023.htm",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://qkzzs.jcu.edu.cn/info/1011/3023.htm"
+    },
+    {
+      "url": "https://qkzzs.jcu.edu.cn/info/1011/5455.htm",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://qkzzs.jcu.edu.cn/info/1011/5455.htm"
+    },
+    {
+      "url": "https://qkzzs.jcu.edu.cn/info/1011/6133.htm",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://qkzzs.jcu.edu.cn/info/1011/6133.htm"
+    },
+    {
+      "url": "https://qkzzs.jcu.edu.cn/zgtcgy/info/1025/1261.htm",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://qkzzs.jcu.edu.cn/zgtcgy/info/1025/1261.htm"
+    },
+    {
+      "url": "https://qkzzs.jcu.edu.cn/zgtcgy/info/1025/2256.htm",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://qkzzs.jcu.edu.cn/zgtcgy/info/1025/2256.htm"
+    },
+    {
+      "url": "https://qkzzs.jcu.edu.cn/zgtcgy/info/1025/2617.htm",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://qkzzs.jcu.edu.cn/zgtcgy/info/1025/2617.htm"
+    },
+    {
+      "url": "https://resources.metmuseum.org/resources/metpublications/pdf/European_Porcelain_in_The_Metropolitan_Museum_of_Art.pdf",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://resources.metmuseum.org/resources/metpublications/pdf/European_Porcelain_in_The_Metropolitan_Museum_of_Art.pdf"
+    },
+    {
+      "url": "https://resources.metmuseum.org/resources/metpublications/pdf/Japanese_Art_from_the_Gerry_Collection_in_The_Metropolitan_Museum_of_Art.pdf",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://resources.metmuseum.org/resources/metpublications/pdf/Japanese_Art_from_the_Gerry_Collection_in_The_Metropolitan_Museum_of_Art.pdf"
+    },
+    {
+      "url": "https://tys.jcu.edu.cn/info/1037/2078.htm",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://tys.jcu.edu.cn/info/1037/2078.htm"
+    },
+    {
+      "url": "https://tys.jcu.edu.cn/info/1037/2083.htm",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://tys.jcu.edu.cn/info/1037/2083.htm"
+    },
+    {
+      "url": "https://us.macmillan.com/books/9781250128355/theradicalpotter/",
+      "status": 403,
+      "result": "http_error_needs_review"
+    },
+    {
+      "url": "https://whc.unesco.org/document/224054",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://whc.unesco.org/document/224054"
+    },
+    {
+      "url": "https://whc.unesco.org/document/226090",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://whc.unesco.org/document/226090"
+    },
+    {
+      "url": "https://whc.unesco.org/en/decisions/9170/",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://whc.unesco.org/en/decisions/9170/"
+    },
+    {
+      "url": "https://whc.unesco.org/en/document/180501",
+      "status": 404,
+      "result": "http_error_needs_review",
+      "second_get_status": 404
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/1765/",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://whc.unesco.org/en/list/1765/"
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/1765/maps",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://whc.unesco.org/en/list/1765/maps"
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/574",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://whc.unesco.org/en/list/574"
+    },
+    {
+      "url": "https://whc.unesco.org/en/tentativelists/5806/",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://whc.unesco.org/en/tentativelists/5806/"
+    },
+    {
+      "url": "https://whc.unesco.org/zh/list/1765",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://whc.unesco.org/zh/list/1765"
+    },
+    {
+      "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.britishmuseum.org/collection/object/A_PDF-560"
+    },
+    {
+      "url": "https://www.chinaguyao.com/biaozhunhuajianshezhuanlan/2015-10-28/2708.html",
+      "status": 503,
+      "result": "http_error_needs_review"
+    },
+    {
+      "url": "https://www.chnmuseum.cn/zp/zpml/201812/t20181218_26821_wap.shtml",
+      "status": 404,
+      "result": "http_error_needs_review",
+      "second_get_status": 404
+    },
+    {
+      "url": "https://www.clc86.com/down/2516/",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://www.clc86.com/down/2516/"
+    },
+    {
+      "url": "https://www.cssn.cn/skgz/bwyc/202311/t20231103_5694635.shtml",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://www.cssn.cn/skgz/bwyc/202311/t20231103_5694635.shtml"
+    },
+    {
+      "url": "https://www.daowen.com/lilun/1574622.html",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.daowen.com/lilun/1574622.html"
+    },
+    {
+      "url": "https://www.dpm.org.cn/Uploads/File/2018/05/31/u5b0fbd8e2d5e4.pdf",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.dpm.org.cn/Uploads/File/2018/05/31/u5b0fbd8e2d5e4.pdf"
+    },
+    {
+      "url": "https://www.dpm.org.cn/Uploads/File/2018/05/31/u5b0fbe1ccf7d5.pdf",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.dpm.org.cn/Uploads/File/2018/05/31/u5b0fbe1ccf7d5.pdf"
+    },
+    {
+      "url": "https://www.dpm.org.cn/Uploads/File/2018/06/04/u5b152c9f3396b.pdf",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.dpm.org.cn/Uploads/File/2018/06/04/u5b152c9f3396b.pdf"
+    },
+    {
+      "url": "https://www.dpm.org.cn/Uploads/File/2020/05/15/u5ebe4a7333945.pdf",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.dpm.org.cn/Uploads/File/2020/05/15/u5ebe4a7333945.pdf"
+    },
+    {
+      "url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.dpm.org.cn/Uploads/File/2020/05/28/u5ecf790701eb6.pdf"
+    },
+    {
+      "url": "https://www.dpm.org.cn/Uploads/File/2020/11/13/u5fae1d783e93c.pdf",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.dpm.org.cn/Uploads/File/2020/11/13/u5fae1d783e93c.pdf"
+    },
+    {
+      "url": "https://www.dpm.org.cn/Uploads/pdf/1530/T00079_00.pdf",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.dpm.org.cn/Uploads/pdf/1530/T00079_00.pdf"
+    },
+    {
+      "url": "https://www.dpm.org.cn/Uploads/pdf/1566/T00018_00.pdf",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.dpm.org.cn/Uploads/pdf/1566/T00018_00.pdf"
+    },
+    {
+      "url": "https://www.dpm.org.cn/collection/ceramic/226759.html",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://www.dpm.org.cn/collection/ceramic/226759.html"
+    },
+    {
+      "url": "https://www.dpm.org.cn/collection/ceramic/227155.html",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://www.dpm.org.cn/collection/ceramic/227155.html"
+    },
+    {
+      "url": "https://www.dpm.org.cn/collection/ceramic/227698.html",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://www.dpm.org.cn/collection/ceramic/227698.html"
+    },
+    {
+      "url": "https://www.dpm.org.cn/collection/ceramics.html",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://www.dpm.org.cn/collection/ceramics.html"
+    },
+    {
+      "url": "https://www.gotheborg.com/natgeograph/",
+      "status": 503,
+      "result": "http_error_needs_review"
+    },
+    {
+      "url": "https://www.gov.cn/zwgk/2006-06/02/content_297818.htm",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://www.gov.cn/zwgk/2006-06/02/content_297818.htm"
+    },
+    {
+      "url": "https://www.gutenberg.org/files/67970/67970-h/67970-h.htm",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.gutenberg.org/files/67970/67970-h/67970-h.htm"
+    },
+    {
+      "url": "https://www.hwlongfellow.org/poems_poem.php?pid=307",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://www.hwlongfellow.org/poems_poem.php?pid=307"
+    },
+    {
+      "url": "https://www.ihchina.cn/Article/Index/detail?id=24981",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://www.ihchina.cn/Article/Index/detail?id=24981"
+    },
+    {
+      "url": "https://www.ihchina.cn/art/detail/id/14270.html",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://www.ihchina.cn/art/detail/id/14270.html"
+    },
+    {
+      "url": "https://www.ihchina.cn/project_details/10946",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://www.ihchina.cn/project_details/10946"
+    },
+    {
+      "url": "https://www.ihchina.cn/project_details/14270/",
+      "status": 503,
+      "result": "http_error_needs_review"
+    },
+    {
+      "url": "https://www.jci.edu.cn/info/1175/34080.htm",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.jci.edu.cn/info/1175/34080.htm"
+    },
+    {
+      "url": "https://www.jcu.edu.cn/info/1175/33472.htm",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.jcu.edu.cn/info/1175/33472.htm"
+    },
+    {
+      "url": "https://www.jcu.edu.cn/info/1175/37825.htm",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.jcu.edu.cn/info/1175/37825.htm"
+    },
+    {
+      "url": "https://www.jdz.gov.cn/zjcd/mljdz/t289353.shtml",
+      "status": 404,
+      "result": "http_error_needs_review",
+      "second_get_status": 404
+    },
+    {
+      "url": "https://www.jdz.gov.cn/zsnj/jdzsz/jdzszdwj/rwz/rwc/P020201114583753053261.pdf",
+      "status": 404,
+      "result": "http_error_needs_review",
+      "second_get_status": 404
+    },
+    {
+      "url": "https://www.jdzmuseum.cn/h-col-103.html",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://www.jdzmuseum.cn/h-col-103.html"
+    },
+    {
+      "url": "https://www.jstor.org/stable/10.1525/j.ctt1pnfm7",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://www.jstor.org/stable/10.1525/j.ctt1pnfm7"
+    },
+    {
+      "url": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002643095",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002643095"
+    },
+    {
+      "url": "https://www.mct.gov.cn/whzx/zsdw/whbgwfglzx/202101/t20210127_921041.html",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.mct.gov.cn/whzx/zsdw/whbgwfglzx/202101/t20210127_921041.html"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/37464",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.metmuseum.org/art/collection/search/37464"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/37509",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.metmuseum.org/art/collection/search/37509"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/37558",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.metmuseum.org/art/collection/search/37558"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/42323",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.metmuseum.org/art/collection/search/42323"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/42490",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.metmuseum.org/art/collection/search/42490"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/42491",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.metmuseum.org/art/collection/search/42491"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/42497",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.metmuseum.org/art/collection/search/42497"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/42507",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.metmuseum.org/art/collection/search/42507"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/42515",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.metmuseum.org/art/collection/search/42515"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/451833",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.metmuseum.org/art/collection/search/451833"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/451841",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.metmuseum.org/art/collection/search/451841"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/46027",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.metmuseum.org/art/collection/search/46027"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/46080",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.metmuseum.org/art/collection/search/46080"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/49291",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.metmuseum.org/art/collection/search/49291"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/52223",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.metmuseum.org/art/collection/search/52223"
+    },
+    {
+      "url": "https://www.metmuseum.org/essays/east-and-west-chinese-export-porcelain",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.metmuseum.org/essays/east-and-west-chinese-export-porcelain"
+    },
+    {
+      "url": "https://www.metmuseum.org/essays/edo-period-japanese-porcelain",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.metmuseum.org/essays/edo-period-japanese-porcelain"
+    },
+    {
+      "url": "https://www.metmuseum.org/ja/art/collection/search/48115",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.metmuseum.org/art/collection/search/48115"
+    },
+    {
+      "url": "https://www.metmuseum.org/toah/hd/jpor/ho_2002.447.123.htm",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.metmuseum.org/essays/edo-period-japanese-porcelain"
+    },
+    {
+      "url": "https://www.metmuseum.org/toah/works-of-art/1991.172",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.metmuseum.org/art/collection/search/453324"
+    },
+    {
+      "url": "https://www.mingyanjiaju.org/fanwen/daoyoucifanwen/12844140.html",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://www.mingyanjiaju.org/fanwen/daoyoucifanwen/12844140.html"
+    },
+    {
+      "url": "https://www.sohu.com/a/312041015_680746",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://www.sohu.com/a/312041015_680746"
+    },
+    {
+      "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics"
+    },
+    {
+      "url": "https://www.xinhuanet.com/politics/20260726/f050b9317dd4422cbadad9b917f141e2/c.html",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://www.xinhuanet.com/politics/20260726/f050b9317dd4422cbadad9b917f141e2/c.html"
+    },
+    {
+      "url": "https://xsg.jcu.edu.cn/info/1023/1280.htm",
+      "status": 206,
+      "result": "reachable",
+      "final_url": "https://xsg.jcu.edu.cn/info/1023/1280.htm"
+    },
+    {
+      "url": "https://yangtze.silkroadinfo.org.cn/2022/0120/c702a3980057/page.htm",
+      "status": null,
+      "result": "indeterminate",
+      "reason": "URLError"
+    },
+    {
+      "url": "https://zgtc.cbpt.cnki.net/portal/journal/portal/client/paper/5f28d9a9085181a2bf7f7f7dab1b0763",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://zgtc.cbpt.cnki.net/portal/journal/portal/client/paper/5f28d9a9085181a2bf7f7f7dab1b0763"
+    },
+    {
+      "url": "https://zh.wikisource.org/zh-hans/%E5%A4%A9%E5%B7%A5%E9%96%8B%E7%89%A9/%E7%99%BD%E7%93%B7",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://zh.wikisource.org/zh-hans/%E5%A4%A9%E5%B7%A5%E9%96%8B%E7%89%A9/%E7%99%BD%E7%93%B7"
+    },
+    {
+      "url": "https://zh.wikisource.org/zh-hans/%E6%99%AF%E5%BE%B7%E9%8E%AE%E9%99%B6%E9%8C%84",
+      "status": 200,
+      "result": "reachable",
+      "final_url": "https://zh.wikisource.org/zh-hans/%E6%99%AF%E5%BE%B7%E9%8E%AE%E9%99%B6%E9%8C%84"
+    },
+    {
+      "url": "https://zh.wikisource.org/zh-hans/容齋隨筆/卷四",
+      "status": null,
+      "result": "indeterminate",
+      "reason": "UnicodeEncodeError"
+    },
+    {
+      "url": "https://zh.wikisource.org/zh-hans/景德镇陶录",
+      "status": null,
+      "result": "indeterminate",
+      "reason": "UnicodeEncodeError"
+    }
+  ]
+}

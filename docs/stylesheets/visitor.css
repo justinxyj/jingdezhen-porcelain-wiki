@@ -107,3 +107,21 @@
 :is(.visitor-dialog,.visitor-bottom-sheet,.jdm-search-filter-panel,.museum-toolbar,.global-kiln-map-toolbar) :is(input,select){min-height:44px;border:1px solid var(--visitor-line);border-radius:var(--visitor-radius-sm);background:var(--visitor-paper);color:var(--visitor-ink);font:inherit}
 
 .md-header button[for="__drawer"]{background:transparent;border:0;color:inherit}
+
+/* Quality fixes: keep every filter while giving mobile controls readable widths. */
+@media(max-width:800px){
+ .museum-toolbar.catalog-discovery-toolbar,.museum-toolbar.people-discovery-toolbar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .museum-toolbar :is(input,select){box-sizing:border-box;min-width:0!important;width:100%;font-size:16px;min-height:44px;padding:10px 8px}
+ .museum-toolbar :is(input,#catalog-institution,.catalog-count,.people-count,.visitor-filter-status){grid-column:1/-1;min-width:0;white-space:normal}
+}
+.visitor-filter-status{grid-column:1/-1;flex-basis:100%;overflow-wrap:anywhere;color:var(--visitor-muted);font-size:14px}
+.visitor-filter-status button{margin-left:12px;min-height:44px;padding:8px 12px;border:1px solid var(--visitor-line);border-radius:8px;background:var(--visitor-paper);color:var(--visitor-blue);cursor:pointer}
+.wiki-entry-header:has(>.visitor-missing-image){grid-template-columns:minmax(0,1fr)!important}
+.wiki-entry-header>.visitor-missing-image{padding:8px 12px;margin:0;font-size:14px}
+.catalog-card .visitor-missing-image{min-height:0;padding:12px}
+.wiki-entry-text{white-space:normal}
+.visitor-entry-revision{font-size:13px!important;color:var(--visitor-muted)!important;margin:8px 0!important}
+@media(max-width:700px){.visitor-static-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:12px;text-align:center}.visitor-static-nav a,.visitor-static-nav button{min-height:44px;display:grid;place-items:center;margin:0;font-size:14px}.visitor-static-nav a{color:var(--visitor-blue)}}
+.visitor-feedback-form{min-width:0;overflow-wrap:anywhere}
+.visitor-feedback-form textarea{width:100%;box-sizing:border-box;min-height:140px;padding:12px;border:1px solid var(--visitor-line);border-radius:8px;color:inherit;background:var(--visitor-paper);font:inherit}
+.visitor-feedback-form label{display:block;margin-top:12px}.visitor-feedback-form .visitor-feedback-actions{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0}.visitor-feedback-status{font-size:14px;color:var(--visitor-muted)}

@@ -11,9 +11,14 @@ import json
 import os
 import re
 from html.parser import HTMLParser
+from datetime import datetime
+from zoneinfo import ZoneInfo
 from pathlib import Path
 from urllib.parse import quote, urlencode
 from urllib.request import Request, urlopen
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from source_reference_catalog import resolve_sources
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
@@ -245,7 +250,7 @@ def body_has_source_refs(content: str) -> bool:
 
 
 def source_links(sources: list, numbered: bool = False) -> str:
-    items = visible_sources(sources)
+    items = visible_sources(resolve_sources(sources))
     if not items:
         return "<li>当前知识条目尚无已公开来源链接。</li>"
     if numbered:
@@ -264,7 +269,7 @@ def source_list_html(entry: dict, content: str) -> str:
     zh = entry.get("zh") or {}
     zh_sources = zh.get("sources")
     sources = zh_sources if isinstance(zh_sources, list) and zh_sources else entry.get("sources")
-    numbered = body_has_source_refs(content) and bool(visible_sources(sources))
+    numbered = body_has_source_refs(content) and bool(visible_sources(resolve_sources(sources)))
     tag = "ol" if numbered else "ul"
     cls = "wiki-entry-source-links wiki-entry-source-refs" if numbered else "wiki-entry-source-links"
     return f'<{tag} class="{cls}">{source_links(sources, numbered)}</{tag}>'
@@ -273,6 +278,7 @@ def source_list_html(entry: dict, content: str) -> str:
 def source_panel_html(entry: dict, content: str) -> str:
     zh = entry.get('zh') or {}
     sources = zh.get('sources') if isinstance(zh.get('sources'), list) and zh.get('sources') else entry.get('sources') or []
+    sources = resolve_sources(sources)
     visible = visible_sources(sources)
     categories = {'museum': '博物馆与馆藏机构', 'collection': '博物馆与馆藏机构', 'academic': '学术研究', 'journal': '学术研究', 'thesis': '学术研究', 'historical_document': '历史文献', 'official': '官方资料'}
     counts = {}
@@ -284,6 +290,20 @@ def source_panel_html(entry: dict, content: str) -> str:
     labels = ' · '.join(html.escape(label) + ' ' + str(count) for label, count in counts.items())
     return '<details class="visitor-references"><summary>参考资料 ' + str(len(visible)) + '</summary><p>' + labels + '</p>' + source_list_html(entry, content) + '</details>'
 
+
+def revision_html(entry):
+    items=[]
+    value=entry.get('updated_at')
+    if isinstance(value,str):
+        try:
+            dt=datetime.fromisoformat(value.replace('Z','+00:00'))
+            if dt.tzinfo:
+                label=dt.astimezone(ZoneInfo('Asia/Tokyo')).strftime('%Y-%m-%d')
+                items.append('数据更新：<time datetime="'+html.escape(value,quote=True)+'">'+label+'</time>')
+        except ValueError:pass
+    version=entry.get('version')
+    if isinstance(version,int) and version>0:items.append('版本 '+str(version))
+    return '<p class="visitor-entry-revision">'+' · '.join(items)+'</p>' if items else ''
 
 def entry_html(entry: dict, world_by_entry: dict[str, list[dict]],
                media_by_entry: dict[str, list[dict]],
@@ -332,9 +352,9 @@ def entry_html(entry: dict, world_by_entry: dict[str, list[dict]],
     relation_labels = {"person":"相关人物", "object":"相关器物", "craft":"相关工艺", "kiln":"相关窑址", "period":"时代背景", "related":"相关条目"}
     relation_html = "".join(
         f'<li><a href="{SITE_URL}entry/{quote(str(rel.get("target_slug") or ""))}/">'
-        f'<span>{html.escape(str(rel.get("target_category") or "相关条目"))} · {html.escape(semantic_labels.get(str(rel.get("target_slug")), relation_labels.get(str(rel.get("relation_type")), "相关内容")))}</span>'
+        f'<span>{html.escape(str(rel.get("target_category") or "相关条目"))} · {html.escape(semantic_labels.get(str(rel.get("target_slug")), "相关" + str(rel.get("target_category") or "内容")))}</span>'
         f'<b>{html.escape(str(rel.get("target_title") or ""))}</b>'
-        f'<small>{html.escape(str(semantic_notes.get(str(rel.get("target_slug"))) or "阅读相关内容的历史与参考资料"))}</small></a></li>'
+        f'<small>{html.escape(str(semantic_notes.get(str(rel.get("target_slug"))) or rel.get("target_summary") or ""))}</small></a></li>'
         for rel in relations if rel.get("target_slug")
     )
     paths = json.loads((DOCS / "data/reading-paths.json").read_text(encoding="utf-8")).get(slug, [])
@@ -430,7 +450,7 @@ main{{max-width:1240px;margin:0 auto;padding:24px 24px 72px}}
 <div><div class="wiki-entry-kicker">知识条目 · {html.escape(str(entry.get("category") or "知识"))}</div>
 <h1>{html.escape(title)}</h1>
 {'<h2>为什么重要</h2>' if entry.get("category") == "人物" else ""}
-<p class="entry-static-summary">{html.escape(str(intro))}</p></div>
+<p class="entry-static-summary">{html.escape(str(intro))}</p>{revision_html(entry)}</div>
 {image_html}
 </header>
 {f'<div class="wiki-entry-v2-tags">{"".join("<span>"+html.escape(x)+"</span>" for x in tags)}</div>' if tags else ""}
@@ -452,6 +472,7 @@ window.JDM_STATIC_ENTRY_SLUG={json.dumps(slug,ensure_ascii=False)};
 <script src="{SITE_URL}javascripts/dom-safe.js"></script>
 <script src="{SITE_URL}javascripts/auth-manager.js"></script>
 <script src="{SITE_URL}javascripts/media-policy.js"></script>
+<script src="{SITE_URL}assets/source-references.js"></script>
 <script src="{SITE_URL}javascripts/data-contract.js"></script>
 <script src="{SITE_URL}javascripts/knowledge-store.js"></script>
 <script src="{SITE_URL}javascripts/wiki-enhancements.js"></script>
@@ -465,7 +486,7 @@ def main() -> None:
     base, key = runtime_config()
     entries = fetch_rows(
         base, key, "entries",
-        "id,slug,category,zh,en,ja,sources,status,updated_at",
+        "id,slug,category,zh,en,ja,sources,status,version,updated_at",
         "status=eq.published&order=slug.asc&limit=1000",
     )
     if not entries:
@@ -524,11 +545,11 @@ def main() -> None:
         if not a or not b:
             continue
         relations_by_entry.setdefault(a["id"], []).append({
-            "target_category": b.get("category"), "note": row.get("note"), "target_slug": b["slug"], "target_title": (b.get("zh") or {}).get("title") or b["slug"],
+            "target_summary": plain((b.get("zh") or {}).get("summary") or "")[:100], "target_category": b.get("category"), "note": row.get("note"), "target_slug": b["slug"], "target_title": (b.get("zh") or {}).get("title") or b["slug"],
             "relation_type": row.get("relation_type") or "关联",
         })
         relations_by_entry.setdefault(b["id"], []).append({
-            "target_category": a.get("category"), "note": row.get("note"), "target_slug": a["slug"], "target_title": (a.get("zh") or {}).get("title") or a["slug"],
+            "target_summary": plain((a.get("zh") or {}).get("summary") or "")[:100], "target_category": a.get("category"), "note": row.get("note"), "target_slug": a["slug"], "target_title": (a.get("zh") or {}).get("title") or a["slug"],
             "relation_type": row.get("relation_type") or "关联",
         })
 

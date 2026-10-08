@@ -184,7 +184,7 @@
         <div class="network-detail-meta"><span>${links.length} 条已建立关系</span></div>
         ${url?`<a class="network-detail-entry" href="${safeHref(url)||''}">进入知识条目 →</a>`:''}
         <div class="network-neighbor-title">继续探索</div>
-        <div class="network-neighbor-list">${direct.length?direct.map(x=>`<button type="button" data-node="${esc(x.node.node_id)}"><span>${esc(relationLabel(String(x?.edge.edge_type||'相关').replace(/^entry_relation:/,'').replace(/^world_.*/, '所属主题')))} · ${esc(nodeCategory(x.node)||'主题')}</span><b>${esc(label(x.node))}</b></button>`).join(''):'<div class="network-no-neighbor">当前节点暂无可展示的核心邻接节点。</div>'}</div>`;
+        <div class="network-neighbor-list">${direct.length?direct.map(x=>`<button type="button" data-node="${esc(x.node.node_id)}"><span>${esc(String(x.edge.edge_type||'').startsWith('entry_relation:')?'相关'+(nodeCategory(x.node)||'内容'):relationLabel(String(x?.edge.edge_type||'相关').replace(/^world_.*/, '所属主题')))} · ${esc(nodeCategory(x.node)||'主题')}</span><b>${esc(label(x.node))}</b></button>`).join(''):'<div class="network-no-neighbor">当前节点暂无可展示的核心邻接节点。</div>'}</div>`;
       /** @type {NodeListOf<HTMLElement>} */(detail.querySelectorAll('[data-node]')).forEach(b=>b.addEventListener('click',()=>selectNode(b.dataset.node||'')));
       draw();
       if(fromGraph||fromList||fromDetail){

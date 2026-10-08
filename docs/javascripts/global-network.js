@@ -19,7 +19,7 @@
   /** @param {import('../../types/knowledge').Entry} e @param {string} [extra] */
   function card(e,extra=''){return '<a class="jdm-gn-card" href="'+(safeHref(entryUrl(e))||'')+'"><div><span>'+esc(e.category||'知识条目')+'</span><h3>'+esc(e.zh?.title||e.slug)+'</h3>'+extra+'</div><b>→</b></a>'}
   /** @param {import('../../types/knowledge').Relation} r */
-  function relationCard(r){const e=r.entry;if(!e)return '';return '<a class="jdm-gn-relation" href="'+(safeHref(entryUrl(e))||'')+'"><span>'+esc(r.semantic_label||relationLabel(r.relation_type||'关联'))+'</span><strong>'+esc(e.zh?.title||e.slug)+'</strong><small>'+esc(r.semantic_note||'对应条目的正文与参考资料提供背景。')+'</small></a>'}
+  function relationCard(r){const e=r.entry;if(!e)return '';return '<a class="jdm-gn-relation" href="'+(safeHref(entryUrl(e))||'')+'"><span>'+esc(r.semantic_label||'相关'+(e.category||'内容'))+'</span><strong>'+esc(e.zh?.title||e.slug)+'</strong><small>'+esc(r.semantic_note||String(e.zh?.summary||'').replace(/<[^>]*>/g,'').slice(0,100))+'</small></a>'}
   /** @param {import('../../types/knowledge').Entry[]} rows */
   function renderSearchResults(rows){const root=document.getElementById('jdm-global-network-search-results');if(!root)return;root.innerHTML=rows.filter(e=>e.source_type!=='markdown').slice(0,8).map(e=>'<button type="button" data-global-result="'+esc(e.id)+'"><span>'+esc(e.category||'知识条目')+'</span><b>'+esc(e.zh?.title||e.slug)+'</b></button>').join('');/** @type {NodeListOf<HTMLElement>} */(root.querySelectorAll('[data-global-result]')).forEach(b=>b.addEventListener('click',()=>select(b.dataset.globalResult||'')))}
   /** @param {string} q */

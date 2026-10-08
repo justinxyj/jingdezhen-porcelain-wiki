@@ -9,7 +9,7 @@
   function loadData() {
     if (window.JDM_KNOWLEDGE) return Promise.resolve(window.JDM_KNOWLEDGE);
     if (!dataPromise) dataPromise = (async () => {
-      for (const path of ['javascripts/runtime-config.js', 'vendor/supabase/supabase.min.js', 'javascripts/auth-manager.js', 'javascripts/data-contract.js', 'javascripts/knowledge-store.js']) {
+      for (const path of ['javascripts/runtime-config.js', 'vendor/supabase/supabase.min.js', 'javascripts/auth-manager.js', 'assets/source-references.js', 'javascripts/data-contract.js', 'javascripts/knowledge-store.js']) {
         await new Promise((resolve, reject) => {
           const node = document.createElement('script');
           node.src = new URL(path, base).href;
@@ -87,10 +87,31 @@
     }
     host.replaceChildren(box);host.setAttribute('aria-busy',String(kind==='loading'));
   }
+  function openFeedback(){
+    const modal=dialog('反馈此页');const form=document.createElement('form');form.className='visitor-feedback-form';
+    const title=document.querySelector('h1')?.textContent?.trim()||document.title;
+    const url=document.querySelector('link[rel="canonical"]')?.getAttribute('href')||location.origin+location.pathname;
+    const context=document.createElement('p');context.textContent=title+' · '+url;
+    const notice=document.createElement('p');notice.textContent='无需 GitHub 账户。填写后可复制或下载反馈记录，转交项目维护者；本站暂未提供匿名自动接收服务。';
+    const label=document.createElement('label');label.htmlFor='visitor-feedback-description';label.textContent='问题说明（必填）';
+    const input=document.createElement('textarea');input.id=label.htmlFor;input.required=true;input.maxLength=5000;
+    const sourceLabel=document.createElement('label');sourceLabel.htmlFor='visitor-feedback-source';sourceLabel.textContent='参考资料网址（选填）';
+    const source=document.createElement('input');source.id=sourceLabel.htmlFor;source.type='url';
+    const status=document.createElement('p');status.className='visitor-feedback-status';status.setAttribute('role','status');status.textContent='反馈记录尚未发送。';
+    const text=()=>['页面：'+title,'地址：'+url,'问题：'+input.value.trim(),'参考资料：'+source.value.trim()].join('\n');
+    const actions=document.createElement('div');actions.className='visitor-feedback-actions';
+    const copy=document.createElement('button');copy.type='submit';copy.textContent='复制反馈记录';
+    const download=document.createElement('button');download.type='button';download.textContent='下载反馈记录';
+    form.addEventListener('submit',async event=>{event.preventDefault();if(!form.reportValidity())return;try{await navigator.clipboard.writeText(text());status.textContent='已复制，尚未发送。请转交项目维护者。';}catch{status.textContent='浏览器未允许复制，请使用下载反馈记录。';}});
+    download.addEventListener('click',()=>{if(!form.reportValidity())return;const href=URL.createObjectURL(new Blob([text()],{type:'text/plain;charset=utf-8'}));const a=document.createElement('a');a.href=href;a.download='陶瓷百科反馈.txt';a.click();setTimeout(()=>URL.revokeObjectURL(href),1000);status.textContent='已生成下载记录，尚未发送。请转交项目维护者。';});
+    const optional=document.createElement('a');optional.textContent='使用 GitHub 反馈（可选）';optional.href='https://github.com/justinxyj/jingdezhen-porcelain-wiki/issues/new';optional.target='_blank';optional.rel='noopener noreferrer';
+    actions.append(copy,download);form.append(context,notice,label,input,sourceLabel,source,actions,status,optional);modal.append(form);modal.showModal();input.focus();
+  }
   window.JDM_VISITOR = { loadData, dialog, root, openSearch, renderState };
   function init() {
-    const host = document.querySelector('.md-header__inner') || document.querySelector('.wiki-chrome');
-    if (host) { const button = document.createElement('button'); button.className = 'visitor-search-trigger'; button.type = 'button'; button.textContent = '搜索'; button.setAttribute('aria-label', '搜索（Ctrl 或 Command 加 K）'); button.addEventListener('click', openSearch); host.append(button); }
+    document.addEventListener('click',event=>{if(event.target instanceof Element&&event.target.closest('.visitor-feedback a')){event.preventDefault();openFeedback();}});
+    const host = document.querySelector('.md-header__inner') || document.querySelector('.visitor-static-nav');
+    if (host) { const button = document.createElement('button'); button.className = 'visitor-search-trigger'; button.type = 'button'; button.textContent = '搜索'; button.setAttribute('aria-label', '搜索（Ctrl 或 Command 加 K）'); button.addEventListener('click', openSearch); const existing=host.querySelector('a[href$="/search/"]');if(existing)existing.replaceWith(button);else host.append(button); }
     const menu=(()=>{
       const label=document.querySelector('.md-header [for="__drawer"]');
       if(!(label instanceof HTMLLabelElement))return label;

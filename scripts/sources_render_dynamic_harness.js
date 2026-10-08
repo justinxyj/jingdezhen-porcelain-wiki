@@ -13,6 +13,8 @@ try { ({ JSDOM } = require("jsdom")); } catch (err) {
 
 const JS = path.join(__dirname, "..", "docs", "javascripts");
 const read = (name) => fs.readFileSync(path.join(JS, name), "utf8");
+const {execFileSync}=require('child_process');
+const bibliography=JSON.parse(execFileSync('python3',['-c',"import sys,json;sys.path.insert(0,'scripts');from source_reference_catalog import source_catalog;print(json.dumps(source_catalog()))"],{encoding:'utf8'}));
 const entries = JSON.parse(fs.readFileSync(0, "utf8"));
 
 async function renderOne(entry) {
@@ -22,6 +24,9 @@ async function renderOne(entry) {
     runScripts: "outside-only",
   });
   const w = dom.window;
+  w.JDM_SOURCE_REFERENCES=bibliography;
+  w.eval(read("data-contract.js"));
+  entry=w.JDM_CONTRACT.entry(entry);
   w.JDM_KNOWLEDGE = {
     url: (e) => "/jingdezhen-porcelain-wiki/entry/?slug=" + encodeURIComponent(e.slug),
     get: async () => entry,

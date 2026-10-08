@@ -55,6 +55,7 @@ declare global {
       reset(): void;
     };
     JDM_VISITOR?: {loadData():Promise<NonNullable<Window['JDM_KNOWLEDGE']>>;dialog(title:string):HTMLDialogElement;root:string;openSearch():void;renderState(host:Element,kind:'loading'|'error'|'empty',options?:{message?:string;error?:unknown;retry?:()=>void}):void};
+    JDM_SOURCE_REFERENCES?: Record<string,import('./knowledge').Source>;
     JDM_CONTRACT?: {
       entry(value: unknown): Entry;
       media(value: unknown): Media;

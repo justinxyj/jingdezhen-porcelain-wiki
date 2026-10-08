@@ -43,3 +43,8 @@ def on_post_build(config):
     target=Path(config.site_dir)/'assets'/'topic-search.json'
     target.parent.mkdir(parents=True,exist_ok=True)
     target.write_text(json.dumps(_records,ensure_ascii=False,separators=(',',':')),encoding='utf-8')
+
+    import sys
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
+    from source_reference_catalog import source_catalog
+    (target.parent/'source-references.js').write_text('window.JDM_SOURCE_REFERENCES='+json.dumps(source_catalog(),ensure_ascii=False).replace('</','<\\/')+';\n',encoding='utf-8')

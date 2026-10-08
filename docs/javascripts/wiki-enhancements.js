@@ -55,6 +55,13 @@
     const facts=[m.era||m.period,m.role,m.location,m.region,m.craft].filter(Boolean).join('、');
     return text||(facts?facts+'。该条目结合可核验文献、考古与馆藏资料说明其历史位置及与景德镇陶瓷发展的关系。':'该条目结合可核验史料、研究与馆藏信息说明相关历史背景及其与景德镇陶瓷史的联系。');
   }
+  /** @param {import('../../types/knowledge').Entry} e */
+  function revisionHtml(e){
+    const parts=[];const date=typeof e.updated_at==='string'?new Date(e.updated_at):null;
+    if(date&&!Number.isNaN(date.getTime()))parts.push('数据更新：<time datetime="'+esc(e.updated_at)+'">'+date.toLocaleDateString('zh-CN',{timeZone:'Asia/Tokyo'})+'</time>');
+    if(typeof e.version==='number'&&Number.isInteger(e.version)&&e.version>0)parts.push('版本 '+e.version);
+    return parts.length?'<p class="visitor-entry-revision">'+parts.join(' · ')+'</p>':'';
+  }
   /** @param {HTMLElement} root @param {import('../../types/knowledge').Entry} e @param {Partial<import('../../types/knowledge').NetworkContext>|null} network */
   function render(root,e,network){
     const m=e.zh?.meta||{},im=validMedia(e);
@@ -64,7 +71,7 @@
     const worlds=network?.worlds||[], timelinePeers=network?.timelinePeers||[], spaceEntries=network?.spaceEntries||[], craftProcesses=network?.craftProcesses||[];
     const tags=[m.period,m.era,m.role,m.location,m.region,m.craft].filter(Boolean);
     const relatedGroups=[...new Set(relations.map(r=>r.entry.category||'条目'))];
-    const relationCards=relatedGroups.map(category=>'<div class="visitor-related-group"><h3>相关'+esc(category)+'</h3>'+relations.filter(r=>(r.entry.category||'条目')===category).slice(0,8).map(r=>{const h=hrefFor(url(r.entry));return h?'<a href="'+h+'"><span>'+esc(r.semantic_label?((e.zh?.title||e.slug)+' → '+r.semantic_label+' →'):relationLabels[r.relation_type||'']||'相关内容')+'</span><b>'+esc(r.entry.zh?.title||r.entry.slug)+'</b><small>'+esc(r.semantic_note||'阅读相关内容的历史与参考资料')+' →</small></a>':''}).join('')+'</div>').join('');
+    const relationCards=relatedGroups.map(category=>'<div class="visitor-related-group"><h3>相关'+esc(category)+'</h3>'+relations.filter(r=>(r.entry.category||'条目')===category).slice(0,8).map(r=>{const h=hrefFor(url(r.entry));return h?'<a href="'+h+'"><span>'+esc(r.semantic_label?((e.zh?.title||e.slug)+' → '+r.semantic_label+' →'):'相关'+(r.entry.category||'内容'))+'</span><b>'+esc(r.entry.zh?.title||r.entry.slug)+'</b><small>'+esc(r.semantic_note||plain(r.entry.zh?.summary||'').slice(0,100))+' →</small></a>':''}).join('')+'</div>').join('');
     /** @param {Partial<import('../../types/knowledge').World>} w */
     const worldPath=w=>ROOT+(w.slug==='history'?'history/':w.slug==='craft'?'craft/':w.slug==='objects'?'objects/':w.slug==='space'?'kilns/':w.slug==='people'?'people/':w.slug==='research'?'research/':w.slug==='contemporary'?'contemporary/':'');
     const worldLinks=worlds.map(w=>{const h=hrefFor(worldPath(w));return h?'<a class="wiki-entry-world-link" href="'+h+'">'+esc(w.short_title||w.title||w.slug)+' →</a>':''}).filter(Boolean).join('');
@@ -77,7 +84,7 @@
     const sourceGroups=[...new Set(visSources.map(s=>s.category))].map(category=>'<p>'+esc(category)+' '+visSources.filter(s=>s.category===category).length+'</p>').join('');
     const sourceBlock='<details class="visitor-references"><summary>参考资料 '+visSources.length+'</summary>'+sourceGroups+ungroupedSourceBlock+'</details>';
     root.innerHTML='<article class="wiki-entry-card wiki-entry-v2">'+
-      '<header class="wiki-entry-header"><div><div class="wiki-entry-kicker">'+esc(e.category||'知识')+'</div><h1>'+esc(e.zh?.title||e.slug)+'</h1>'+(e.category==='人物'?'<h2>为什么重要</h2>':'')+'<p>'+esc(intro)+'</p></div>'+(im&&safeHref(im.path)?'<figure class="wiki-entry-cover"><img data-museum-image="1" data-source-url="'+esc(safeHref(im.source_url))+'" data-creator="'+esc(im.creator||'')+'" data-license="'+esc(im.license||'')+'" data-institution="'+esc(im.institution||(e.category==='器物'?(Array.isArray(m.institution)?m.institution.join('、'):m.institution||''):''))+'" data-era="'+esc(m.period||m.map?.period||'')+'" src="'+safeHref(im.path)+'" alt="'+esc(im.title||e.zh?.title||e.slug)+'"><figcaption>'+esc(im.title||'')+' · '+esc(im.source||'')+' · '+esc(im.license||'')+(safeHref(im.source_url)?' · <a href="'+safeHref(im.source_url)+'" target="_blank" rel="noopener noreferrer">图片来源 ↗</a>':'')+'</figcaption></figure>':'<p class="visitor-missing-image">暂无公开图片。图片需具备可追溯来源与使用许可。</p>')+'</header>'+
+      '<header class="wiki-entry-header"><div><div class="wiki-entry-kicker">'+esc(e.category||'知识')+'</div><h1>'+esc(e.zh?.title||e.slug)+'</h1>'+(e.category==='人物'?'<h2>为什么重要</h2>':'')+'<p>'+esc(intro)+'</p>'+revisionHtml(e)+'</div>'+(im&&safeHref(im.path)?'<figure class="wiki-entry-cover"><img data-museum-image="1" data-source-url="'+esc(safeHref(im.source_url))+'" data-creator="'+esc(im.creator||'')+'" data-license="'+esc(im.license||'')+'" data-institution="'+esc(im.institution||(e.category==='器物'?(Array.isArray(m.institution)?m.institution.join('、'):m.institution||''):''))+'" data-era="'+esc(m.period||m.map?.period||'')+'" src="'+safeHref(im.path)+'" alt="'+esc(im.title||e.zh?.title||e.slug)+'"><figcaption>'+esc(im.title||'')+' · '+esc(im.source||'')+' · '+esc(im.license||'')+(safeHref(im.source_url)?' · <a href="'+safeHref(im.source_url)+'" target="_blank" rel="noopener noreferrer">图片来源 ↗</a>':'')+'</figcaption></figure>':'<p class="visitor-missing-image">暂无公开图片。图片需具备可追溯来源与使用许可。</p>')+'</header>'+
       (tags.length?'<div class="wiki-entry-v2-tags">'+tags.map(x=>'<span>'+esc(x)+'</span>').join('')+'</div>':'')+
       (worldLinks?'<div class="wiki-entry-world-path"><span>相关阅读主题</span><div>'+worldLinks+'</div></div>':'')+
       '<div class="visitor-entry-shortcuts">'+(m.map?.lat!=null?'<a href="'+ROOT+'museum/kiln-map/?slug='+encodeURIComponent(e.slug)+'">在地图中查看 →</a>':'')+(m.timeline?.length?'<a href="'+ROOT+'museum/timeline/?slug='+encodeURIComponent(e.slug)+'">在时间轴中查看 →</a>':'')+'</div>'+

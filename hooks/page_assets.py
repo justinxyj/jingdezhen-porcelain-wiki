@@ -29,6 +29,8 @@ def on_post_page(output, page, config):
         name=m.group(1).split('?')[0].split('/')[-1]
         return m.group(0) if name not in configured or name in wanted else ''
     output=re.sub(r'<script[^>]*src="([^"]+)"[^>]*>\s*</script>',script,output)
+    if 'data-contract.js' in wanted:
+        output=re.sub(r'(<script[^>]*src="([^\"]*)javascripts/data-contract.js"[^>]*>)',lambda m: '<script src="'+m.group(2)+'assets/source-references.js"></script>'+m.group(1),output)
     def css(m):
         name=m.group(1).split('/')[-1]
         return '' if name in CSS and not matches(CSS[name]) else m.group(0)

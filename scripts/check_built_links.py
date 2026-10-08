@@ -17,7 +17,9 @@ for page in root.rglob('*.html'):
  for raw in parser.urls:
   if not raw or raw.startswith(('#','data:','mailto:','javascript:')):continue
   url=urlsplit(urljoin(origin,raw))
-  if url.netloc!='justinxyj.github.io' or not url.path.startswith(base):continue
+  if url.netloc!='justinxyj.github.io':continue
+  if not url.path.startswith(base):
+   failures.append((str(page.relative_to(root)),raw+' [outside project path]'));checked+=1;continue
   path=root/unquote(url.path[len(base):])
   if path.is_dir():path=path/'index.html'
   checked+=1

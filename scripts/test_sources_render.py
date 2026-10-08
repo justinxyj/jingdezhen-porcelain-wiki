@@ -72,6 +72,7 @@ CASES = {
     "legacy": entry("legacy", [LEGACY], "<p>没有引用标记。</p>"),
     "status-published": entry("status-published", [{**A, "status": "published"}]),
     "bare-strings": entry("bare-strings", ["R08", "R16"]),
+    "unknown-strings": entry("unknown-strings", ["R99"]),
 }
 
 
@@ -95,7 +96,8 @@ def run_static() -> dict[str, str]:
     check("static/refs-pending: numbers keep array positions", re.findall(r"\[(\d+)\]</span>", out["refs-pending"]) == ["1", "3"])
     check("static/refs-dup: numbers keep array positions", re.findall(r"\[(\d+)\]</span>", out["refs-dup"]) == ["1", "3"])
     check("static/status-published: shown", len(links_of(out["status-published"])) == 1)
-    check("static/bare-strings: not rendered (empty state)", "尚无已公开来源" in out["bare-strings"])
+    check("static/bare-strings: known bibliography resolved", len(links_of(out["bare-strings"])) == 2)
+    check("static/unknown-strings: not invented", "尚无已公开来源" in out["unknown-strings"])
     check("static/no sup in body", "<sup" not in g.entry_html(CASES["refs"], {}, {}, {}))
     return out
 

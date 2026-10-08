@@ -5,13 +5,19 @@
   const fail=(code,message,details)=>{const e=new Error(message);e.code=code;e.details=details;return e};
   /** @param {unknown} value @returns {Record<string,unknown>} */
   function record(value){return value&&typeof value==='object'&&!Array.isArray(value)?/** @type {Record<string,unknown>} */(value):{};}
+  /** @param {unknown} values @returns {import('../../types/knowledge').Source[]} */
+  function sources(values){
+    if(!Array.isArray(values))return [];
+    return values.map(s=>typeof s==='string'?(window.JDM_SOURCE_REFERENCES?.[s]||null):s).filter(s=>s&&typeof s==='object');
+  }
   /** @param {unknown} value @returns {import('../../types/knowledge').Entry} */
   function entry(value){
     const x=record(value);
     if(!x||typeof x.id!=='string'||typeof x.slug!=='string'||typeof x.category!=='string'||!x.zh||typeof x.zh!=='object'){
       throw fail('JDM_ENTRY_CONTRACT','公开条目数据结构异常',{slug:x?.slug});
     }
-    return /** @type {import('../../types/knowledge').Entry} */(/** @type {unknown} */(x));
+    const zh=record(x.zh);
+    return /** @type {import('../../types/knowledge').Entry} */(/** @type {unknown} */({...x,sources:sources(x.sources),zh:{...zh,...(Array.isArray(zh.sources)?{sources:sources(zh.sources)}:{})}}));
   }
   /** @param {unknown} value @returns {import('../../types/knowledge').Media} */
   function media(value){

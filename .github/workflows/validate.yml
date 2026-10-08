@@ -58,6 +58,9 @@ jobs:
           node scripts/test_evidence_disclosure.mjs
           node scripts/test_body_sanitizer.mjs
 
+      - name: Internal link checker regression
+        run: python scripts/test_built_links.py
+
       - name: Editorial release safety boundaries
         run: |
           python scripts/test_editorial_release.py

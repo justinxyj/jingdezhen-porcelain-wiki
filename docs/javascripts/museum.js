@@ -43,9 +43,20 @@
       select.disabled=!values.length;select.title=values.length?'仅按有记录的资料筛选':'暂无可用于筛选的'+label+'记录';
     }
   }
+  /** @param {string} prefix @param {()=>void} rerender */
+  function filterStatus(prefix,rerender){
+    const toolbar=document.querySelector('.'+prefix+'-discovery-toolbar');if(!toolbar)return;
+    let status=toolbar.querySelector('.visitor-filter-status');
+    if(!status){status=document.createElement('div');status.className='visitor-filter-status';status.setAttribute('role','status');toolbar.append(status);}
+    const controls=Array.from(toolbar.querySelectorAll('input,select')).filter(/** @returns {e is HTMLInputElement|HTMLSelectElement} */e=>e instanceof HTMLInputElement||e instanceof HTMLSelectElement);
+    const selected=controls.filter(e=>e.value.trim());status.replaceChildren();
+    const text=document.createElement('span');text.textContent=selected.length?'已选 '+selected.length+' 项：'+selected.map(e=>(e.getAttribute('aria-label')||'搜索')+'：'+(e instanceof HTMLSelectElement?e.selectedOptions[0]?.textContent:e.value)).join('；'):'当前未设置筛选';status.append(text);
+    if(selected.length){const reset=document.createElement('button');reset.type='button';reset.textContent='清除全部筛选';reset.addEventListener('click',()=>{controls.forEach(e=>{e.value='';});rerender();controls[0]?.focus();});status.append(reset);}
+  }
   /** @param {import('../../types/knowledge').ObjectAtlas[]} items */
   function renderCatalog(items){
     const root=document.getElementById('catalog-list');if(!root)return;
+    filterStatus('catalog',()=>renderCatalog(items));
     const q=value('catalog-search').trim().toLowerCase();
     const era=value('catalog-era').trim();
     const craft=value('catalog-craft').trim();
@@ -88,6 +99,7 @@
   /** @param {import('../../types/knowledge').PersonAtlas[]} items */
   function renderPeople(items){
     const root=document.getElementById('people-list');if(!root)return;
+    filterStatus('people',()=>renderPeople(items));
     const q=value('people-search').trim().toLowerCase();
     const era=value('people-era').trim();
     const role=value('people-role').trim();
