@@ -1,6 +1,8 @@
 {
   "status": "PASS",
-  "scope": "All final package files",
+  "scope": "All final package files after final proofreading",
+  "checked_at_utc": "2026-10-08T12:09:59.940480+00:00",
+  "files_scanned": 20,
   "checks": [
     "JWT credential-shaped values",
     "GitHub/Supabase secret token patterns",
@@ -8,5 +10,7 @@
     "URL username/password",
     "local Markdown link targets"
   ],
+  "local_links_checked": 62,
+  "findings": [],
   "limitations": "Pattern scan plus inspection of read-only data construction; not a universal secret detector. No credential headers or runtime keys were written into this package."
 }

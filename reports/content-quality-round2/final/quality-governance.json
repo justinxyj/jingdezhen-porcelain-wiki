@@ -5329,10 +5329,11 @@
       "priority": "P1",
       "decision": "修正来源",
       "actions": [
-        "修正来源"
+        "修正来源",
+        "最小正文校对"
       ],
       "actual_result": "有依据的待批准稿已准备；生产未修改",
-      "decision_reason": "旧国博wap链接404；故宫已保存正文直接支持督陶与郎窑红。只收敛来源，不改生平正文。",
+      "decision_reason": "收敛到已读的故宫郎窑红梅瓶记录，删除没有配套来源的中国国家博物馆表述；仅作出处一致性校对，不增加生平事实。",
       "baseline_version": 4,
       "baseline_record_sha256": "ecc654ad2afe76b7931c25f42659428e41a8d71b8a2bf38dd693aac27593ea56",
       "snapshot_fields": [

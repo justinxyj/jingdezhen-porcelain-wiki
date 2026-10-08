@@ -1,0 +1,1563 @@
+{
+  "state": "READ_ONLY_NO_SQL_NO_WRITE",
+  "at_utc": "2026-10-08T12:03:37.805705+00:00",
+  "main": "d669f0faeb97eaf48fa88955344f5f90578b1390",
+  "purpose": "仅重新读取并核对46个发布目标的守卫；没有重新开展250条审查。",
+  "entry_targets": 43,
+  "relation_targets": 3,
+  "entry_guards_unchanged": 43,
+  "relation_guards_unchanged": 3,
+  "source": {
+    "entries": {
+      "count": 250,
+      "status": "READ_OK"
+    },
+    "entry_relations": {
+      "count": 350,
+      "status": "READ_OK"
+    }
+  },
+  "entries": [
+    {
+      "id": "ff9961ba-e9ef-4693-bd63-66493ffd59da",
+      "slug": "lang-tingji",
+      "category": "人物",
+      "zh": {
+        "meta": {
+          "kind": "person",
+          "era_group": "qing",
+          "mediaPolicy": {
+            "priority": [
+              "官方条目/博物馆/遗址机构",
+              "UNESCO/国家博物馆/大学",
+              "Wikimedia Commons（版权可核验）",
+              "其他仅作索引且必须明确标注"
+            ],
+            "categoryRule": "可靠肖像或官方人物资料图；无肖像时明确标为关联作品图"
+          }
+        },
+        "title": "郎廷极",
+        "content": "<p>郎廷极是清康熙时期与景德镇御窑管理有关的官员。“郎窑”通常用于称呼与其督理窑务时期相关的一类景德镇瓷器，其中郎窑红是最具代表性的高温红釉品种之一。</p><h2>郎窑红</h2><p>郎窑红属于高温铜红釉体系，对烧成温度和还原气氛要求较高。故宫及中国国家博物馆等馆藏资料所见郎窑红器物，可以用于研究康熙时期景德镇高温红釉技术。</p><h2>郎廷极与御窑管理</h2><p>故宫资料记载，郎廷极于康熙四十四年至五十一年主持景德镇御窑场工作。“郎窑”这一名称与其督陶身份及相应生产时期有关。</p><h2>人物与器物</h2><p>郎廷极首先是窑务管理者，而不是可以据此认定为具体器物制作者的人物。研究“郎窑”时，需要区分官员管理、窑务制度和工匠实际生产三个层次。具体器物的年代和归属仍需馆藏或考古证据支持。</p>",
+        "summary": "清康熙时期督陶官。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://www.chnmuseum.cn/zp/zpml/201812/t20181218_26821_wap.shtml",
+          "label": "中国国家博物馆·郎窑红釉观音尊"
+        },
+        {
+          "url": "https://www.dpm.org.cn/Uploads/File/2020/05/15/u5ebe4a7333945.pdf",
+          "label": "故宫博物院·以督窑官名字命名的窑"
+        },
+        {
+          "url": "https://www.dpm.org.cn/collection/ceramic/227698.html",
+          "label": "故宫博物院·郎窑红梅瓶"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "30055011-ad42-41de-868d-abcf70864006",
+      "slug": "dehua-kiln",
+      "category": "窑址",
+      "zh": {
+        "meta": {
+          "map": {
+            "lat": 25.49,
+            "lng": 118.24,
+            "type": "历史窑业/陶瓷中心",
+            "period": "宋—清",
+            "country": "中国·福建"
+          },
+          "kind": "kiln",
+          "timeline": [
+            {
+              "era": "yuan",
+              "lane": "china"
+            },
+            {
+              "era": "ming",
+              "lane": "china"
+            },
+            {
+              "era": "qing",
+              "lane": "china"
+            }
+          ],
+          "wikiTitle": "德化窑",
+          "mediaPolicy": {
+            "priority": [
+              "官方条目/博物馆/遗址机构",
+              "UNESCO/国家博物馆/大学",
+              "Wikimedia Commons（版权可核验）",
+              "其他仅作索引且必须明确标注"
+            ],
+            "categoryRule": "遗址现场/考古/官方遗产图"
+          }
+        },
+        "title": "德化窑",
+        "content": "福建德化白瓷窑业中心，长期参与海外贸易。<p>德化可用于比较南方白瓷、雕塑与海上贸易。</p>",
+        "summary": "德化可用于比较南方白瓷、雕塑与海上贸易。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/document/180501",
+          "label": "资料来源"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "a304713e-7c81-4c8a-9200-02e73076de5f",
+      "slug": "chenghua-doucai-chicken-cup",
+      "category": "器物",
+      "zh": {
+        "meta": {
+          "kind": "object",
+          "timeline": [
+            {
+              "era": "ming",
+              "lane": "jdz"
+            }
+          ],
+          "mediaPolicy": {
+            "priority": [
+              "官方条目/博物馆/遗址机构",
+              "UNESCO/国家博物馆/大学",
+              "Wikimedia Commons（版权可核验）",
+              "其他仅作索引且必须明确标注"
+            ],
+            "categoryRule": "具体器物官方馆藏图；优先Public Domain/Open Access"
+          }
+        },
+        "title": "成化斗彩鸡缸杯",
+        "content": "明成化时期景德镇御窑斗彩代表器物，采用釉下青花与釉上彩结合的装饰方式。<p>斗彩鸡缸杯展示景德镇御窑在青花与釉上彩结合方面的成熟。</p><p>大都会艺术博物馆将此杯记录为明成化时期景德镇御窑器物，并提供独立馆藏记录、对象编号与研究资源。该对象可作为研究斗彩技术、成化御窑和明代宫廷瓷器制度的具体证据。</p><p>研究时应把“对象记录”与“时代性结论”分开：单件馆藏能够证明该件器物的编目、材质和馆藏研究信息，但不能单独代表整个成化时期景德镇生产。</p>",
+        "summary": "斗彩鸡缸杯展示景德镇御窑在青花与釉上彩结合方面的成熟。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42515",
+          "label": "The Met Open Access"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42515",
+          "label": "The Metropolitan Museum of Art·Chenghua Chicken Cup"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "8c6bad40-5b25-4a82-b9c7-43ec5e3d01cd",
+      "slug": "tang-ying-jun-vase",
+      "category": "器物",
+      "zh": {
+        "meta": {
+          "kind": "object",
+          "timeline": [
+            {
+              "era": "qing",
+              "lane": "jdz"
+            }
+          ],
+          "mediaPolicy": {
+            "priority": [
+              "官方条目/博物馆/遗址机构",
+              "UNESCO/国家博物馆/大学",
+              "Wikimedia Commons（版权可核验）",
+              "其他仅作索引且必须明确标注"
+            ],
+            "categoryRule": "具体器物官方馆藏图；优先Public Domain/Open Access"
+          }
+        },
+        "title": "雍正仿钧新紫釉天球瓶",
+        "content": "清雍正时期景德镇御窑仿钧釉器物，与唐英督陶时期的仿古创新相关。<p>该器物可以把唐英人物条目、颜色釉工艺和清代御窑生产系统连接起来。</p>",
+        "summary": "该器物可以把唐英人物条目、颜色釉工艺和清代御窑生产系统连接起来。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/46080",
+          "label": "The Met Open Access"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "ca99163f-38ea-43b5-8f0a-faf660a9b4c9",
+      "slug": "blue-white-cobalt",
+      "category": "工艺",
+      "zh": {
+        "title": "青花钴料",
+        "content": "<p>青花使用钴料进行釉下装饰，景德镇在元明时期形成成熟生产体系。</p>",
+        "summary": "青花使用钴料进行釉下装饰，景德镇在元明时期形成成熟生产体系。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO World Heritage Committee·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "Victoria and Albert Museum·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://asia-archive.si.edu/exhibition/porcelain-production-jingdezhen/",
+          "label": "Smithsonian National Museum of Asian Art·Porcelain Production at Jingdezhen"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "0dbe2e86-9daa-42ae-9528-7708e438d445",
+      "slug": "doucai-porcelain",
+      "category": "器物",
+      "zh": {
+        "title": "斗彩",
+        "content": "<p>斗彩结合釉下青花轮廓与釉上彩色，是明清景德镇彩瓷研究的重要品类。</p>",
+        "summary": "斗彩结合釉下青花轮廓与釉上彩色，是明清景德镇彩瓷研究的重要品类。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO World Heritage Committee·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "Victoria and Albert Museum·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://asia-archive.si.edu/exhibition/porcelain-production-jingdezhen/",
+          "label": "Smithsonian National Museum of Asian Art·Porcelain Production at Jingdezhen"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "2425c3c7-0c1e-4a55-b74c-d3ee066deda0",
+      "slug": "chenghua-doucai",
+      "category": "器物",
+      "zh": {
+        "title": "成化斗彩",
+        "content": "<p>成化斗彩是明代景德镇彩瓷研究的重要类型。</p>",
+        "summary": "成化斗彩是明代景德镇彩瓷研究的重要类型。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO World Heritage Committee·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "Victoria and Albert Museum·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://asia-archive.si.edu/exhibition/porcelain-production-jingdezhen/",
+          "label": "Smithsonian National Museum of Asian Art·Porcelain Production at Jingdezhen"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "360b4636-dcd4-4260-8242-2bd997db3323",
+      "slug": "underglaze-red",
+      "category": "器物",
+      "zh": {
+        "title": "釉里红",
+        "content": "<p>釉里红使用铜呈色材料进行釉下装饰，是景德镇釉下彩绘体系的重要分支。</p>",
+        "summary": "釉里红使用铜呈色材料进行釉下装饰，是景德镇釉下彩绘体系的重要分支。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO World Heritage Committee·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "Victoria and Albert Museum·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://asia-archive.si.edu/exhibition/porcelain-production-jingdezhen/",
+          "label": "Smithsonian National Museum of Asian Art·Porcelain Production at Jingdezhen"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "36f8fd2a-8159-454b-ba59-01f5ac1a23b3",
+      "slug": "uk-ceramics",
+      "category": "窑址",
+      "zh": {
+        "meta": {
+          "map": {
+            "lat": 52.95,
+            "lng": -1.15,
+            "type": "区域陶瓷传统",
+            "period": "18世纪—至今",
+            "country": "英国"
+          },
+          "kind": "region",
+          "timeline": [
+            {
+              "era": "qing",
+              "lane": "world"
+            },
+            {
+              "era": "modern",
+              "lane": "world"
+            }
+          ],
+          "era_group": "modern",
+          "wikiTitle": "British ceramics",
+          "mediaPolicy": {
+            "priority": [
+              "官方条目/博物馆/遗址机构",
+              "UNESCO/国家博物馆/大学",
+              "Wikimedia Commons（版权可核验）",
+              "其他仅作索引且必须明确标注"
+            ],
+            "categoryRule": "遗址现场/考古/官方遗产图"
+          }
+        },
+        "title": "英国陶瓷",
+        "content": "英国形成从陶器、骨瓷到工业化陶瓷的多条生产路线。<p>用于观察中国瓷器输入与欧洲工业陶瓷发展之间的关系。</p>",
+        "summary": "用于观察中国瓷器输入与欧洲工业陶瓷发展之间的关系。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42490",
+          "label": "资料来源"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "e479a789-c150-4bd2-814c-26546a618473",
+      "slug": "europe-porcelain",
+      "category": "窑址",
+      "zh": {
+        "meta": {
+          "map": {
+            "lat": 50.85,
+            "lng": 4.35,
+            "type": "区域陶瓷传统",
+            "period": "16世纪—至今",
+            "country": "欧洲"
+          },
+          "kind": "region",
+          "timeline": [
+            {
+              "era": "ming",
+              "lane": "world"
+            },
+            {
+              "era": "qing",
+              "lane": "world"
+            },
+            {
+              "era": "modern",
+              "lane": "world"
+            }
+          ],
+          "era_group": "modern",
+          "wikiTitle": "欧洲瓷器",
+          "mediaPolicy": {
+            "priority": [
+              "官方条目/博物馆/遗址机构",
+              "UNESCO/国家博物馆/大学",
+              "Wikimedia Commons（版权可核验）",
+              "其他仅作索引且必须明确标注"
+            ],
+            "categoryRule": "遗址现场/考古/官方遗产图"
+          }
+        },
+        "title": "欧洲瓷器",
+        "content": "中国瓷器进入欧洲后，收藏、仿制与本土硬质瓷工业逐步形成。<p>用于展示景德镇瓷器在欧洲消费、模仿和工业化中的影响。</p><h2>全球传播证据链</h2><p>UNESCO指出，16世纪以后景德镇形成连接生产中心、原料和燃料产区以及贸易网络的复杂产业结构，并通过青花、釉上彩和其他产品把技术、艺术与商品传播到世界。Smithsonian的研究也把景德镇放在全球陶瓷贸易史中，强调16世纪欧洲市场扩张以及后来欧洲仿制瓷业形成后的持续影响。</p><p>欧洲瓷器的研究重点因此不应只是“欧洲仿制中国瓷器”，而应同时观察消费、收藏、图案传播、技术模仿和本土产业形成等多个层面。</p>",
+        "summary": "用于展示景德镇瓷器在欧洲消费、模仿和工业化中的影响。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42490",
+          "label": "资料来源"
+        },
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO World Heritage Committee·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://asia-archive.si.edu/exhibition/porcelain-production-jingdezhen/",
+          "label": "Smithsonian National Museum of Asian Art·Porcelain Production at Jingdezhen"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "41956ea9-5bb6-402b-a932-306599675ed5",
+      "slug": "limoges-porcelain",
+      "category": "窑址",
+      "zh": {
+        "meta": {
+          "map": {
+            "lat": 45.83,
+            "lng": 1.26,
+            "type": "现代瓷业中心",
+            "period": "18世纪—至今",
+            "country": "法国"
+          },
+          "kind": "kiln",
+          "timeline": [
+            {
+              "era": "modern",
+              "lane": "world"
+            }
+          ],
+          "era_group": "modern",
+          "wikiTitle": "Limoges porcelain",
+          "mediaPolicy": {
+            "priority": [
+              "官方条目/博物馆/遗址机构",
+              "UNESCO/国家博物馆/大学",
+              "Wikimedia Commons（版权可核验）",
+              "其他仅作索引且必须明确标注"
+            ],
+            "categoryRule": "遗址现场/考古/官方遗产图"
+          }
+        },
+        "title": "利摩日瓷器",
+        "content": "法国重要硬质瓷与工业瓷产区。<p>用于近现代欧洲瓷业的产业化比较。</p>",
+        "summary": "用于近现代欧洲瓷业的产业化比较。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42490",
+          "label": "资料来源"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "4d9dfe2f-29a6-4285-978c-f18383a8fa5a",
+      "slug": "stoke-on-trent",
+      "category": "窑址",
+      "zh": {
+        "meta": {
+          "map": {
+            "lat": 53.0,
+            "lng": -2.18,
+            "type": "工业陶瓷中心",
+            "period": "18世纪—至今",
+            "country": "英国"
+          },
+          "kind": "kiln",
+          "timeline": [
+            {
+              "era": "qing",
+              "lane": "world"
+            },
+            {
+              "era": "modern",
+              "lane": "world"
+            }
+          ],
+          "era_group": "modern",
+          "wikiTitle": "Stoke-on-Trent",
+          "mediaPolicy": {
+            "priority": [
+              "官方条目/博物馆/遗址机构",
+              "UNESCO/国家博物馆/大学",
+              "Wikimedia Commons（版权可核验）",
+              "其他仅作索引且必须明确标注"
+            ],
+            "categoryRule": "遗址现场/考古/官方遗产图"
+          }
+        },
+        "title": "斯托克陶瓷",
+        "content": "英国陶瓷工业的重要城市区域。<p>展示陶瓷工业化、企业组织和规模生产。</p>",
+        "summary": "展示陶瓷工业化、企业组织和规模生产。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42490",
+          "label": "资料来源"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "8c0b11ff-4b13-4e31-b5e4-02ddf3345111",
+      "slug": "wood-fired-kiln",
+      "category": "工艺",
+      "zh": {
+        "title": "柴窑与燃料系统",
+        "content": "<p>景德镇传统瓷业与木柴燃料供应密切相关。</p>",
+        "summary": "景德镇传统瓷业与木柴燃料供应密切相关。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO World Heritage Committee·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "Victoria and Albert Museum·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://asia-archive.si.edu/exhibition/porcelain-production-jingdezhen/",
+          "label": "Smithsonian National Museum of Asian Art·Porcelain Production at Jingdezhen"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "58e8dfa1-730e-4ce4-b2e4-349c8afc2913",
+      "slug": "porcelain-standardization",
+      "category": "工艺",
+      "zh": {
+        "title": "瓷器生产标准化",
+        "content": "<p>专业化与标准化使景德镇能够持续生产数量庞大且质量稳定的瓷器。</p>",
+        "summary": "专业化与标准化使景德镇能够持续生产数量庞大且质量稳定的瓷器。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO World Heritage Committee·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "Victoria and Albert Museum·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://asia-archive.si.edu/exhibition/porcelain-production-jingdezhen/",
+          "label": "Smithsonian National Museum of Asian Art·Porcelain Production at Jingdezhen"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "6523c0a0-e9f8-4108-8251-670186d2f2e5",
+      "slug": "porcelain-trade",
+      "category": "历史",
+      "zh": {
+        "title": "瓷器贸易网络",
+        "content": "<p>瓷器贸易把景德镇与东亚、东南亚、中东和欧洲市场联系起来。</p>",
+        "summary": "瓷器贸易把景德镇与东亚、东南亚、中东和欧洲市场联系起来。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO World Heritage Committee·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "Victoria and Albert Museum·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://asia-archive.si.edu/exhibition/porcelain-production-jingdezhen/",
+          "label": "Smithsonian National Museum of Asian Art·Porcelain Production at Jingdezhen"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "b09b06da-133c-4629-890a-bc828c033866",
+      "slug": "kiln-fuel-system",
+      "category": "窑址与城市空间",
+      "zh": {
+        "title": "窑业燃料供应",
+        "content": "<p>燃料生产区与城市窑业之间的联系，是景德镇完整生产系统的重要组成。</p>",
+        "summary": "燃料生产区与城市窑业之间的联系，是景德镇完整生产系统的重要组成。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO World Heritage Committee·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "Victoria and Albert Museum·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://asia-archive.si.edu/exhibition/porcelain-production-jingdezhen/",
+          "label": "Smithsonian National Museum of Asian Art·Porcelain Production at Jingdezhen"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "0ffb24d1-7d55-4802-b58b-7ecbcd50e1fc",
+      "slug": "porcelain-market",
+      "category": "窑址与城市空间",
+      "zh": {
+        "title": "瓷业市场空间",
+        "content": "<p>城市市场连接生产者、商人和消费者。</p>",
+        "summary": "城市市场连接生产者、商人和消费者。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO World Heritage Committee·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "Victoria and Albert Museum·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://asia-archive.si.edu/exhibition/porcelain-production-jingdezhen/",
+          "label": "Smithsonian National Museum of Asian Art·Porcelain Production at Jingdezhen"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "ab1e144d-c3b5-4a22-b497-5a6a47052052",
+      "slug": "ceramic-guilds",
+      "category": "历史",
+      "zh": {
+        "title": "陶瓷行会与行业组织",
+        "content": "<p>行业组织连接生产、贸易和地方社会，是研究景德镇城市生产网络的重要社会史材料。</p>",
+        "summary": "行业组织连接生产、贸易和地方社会，是研究景德镇城市生产网络的社会史节点。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO World Heritage Committee·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "Victoria and Albert Museum·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://asia-archive.si.edu/exhibition/porcelain-production-jingdezhen/",
+          "label": "Smithsonian National Museum of Asian Art·Porcelain Production at Jingdezhen"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "d7dc4c50-7aeb-4554-a4eb-2bdc760d0508",
+      "slug": "yongzheng-celadon-ewer",
+      "category": "器物",
+      "zh": {
+        "title": "雍正青釉花浇",
+        "content": "<p>大都会博物馆藏雍正景德镇窑青釉花浇显示清宫瓷器对外来器形与中国材料传统的结合。</p>",
+        "summary": "大都会博物馆藏雍正景德镇窑青釉花浇显示清宫瓷器对外来器形与中国材料传统的结合。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "ccbf4313-6365-4218-b8c7-a7d80c54c796",
+      "slug": "kangxi-peachbloom-vase",
+      "category": "器物",
+      "zh": {
+        "title": "康熙桃花片釉瓶",
+        "content": "<p>大都会博物馆藏康熙桃花片釉瓶是清代景德镇颜色釉研究的重要实物。</p>",
+        "summary": "大都会博物馆藏康熙桃花片釉瓶是清代景德镇颜色釉研究的重要实物。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "7c5e8a4d-7980-4166-a707-c514d1e40762",
+      "slug": "kangxi-famille-verte-dragon",
+      "category": "器物",
+      "zh": {
+        "title": "康熙五彩龙纹盘",
+        "content": "<p>大都会博物馆藏康熙景德镇窑五彩龙纹盘可用于研究釉上彩与欧洲消费史。</p>",
+        "summary": "大都会博物馆藏康熙景德镇窑五彩龙纹盘可用于研究釉上彩与欧洲消费史。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "05c0a2b6-5c35-471c-96db-fdc1c667afd1",
+      "slug": "yongzheng-doucai-bamboo-cup",
+      "category": "器物",
+      "zh": {
+        "title": "雍正斗彩竹纹杯",
+        "content": "<p>大都会博物馆藏雍正景德镇窑斗彩竹纹杯提供青花与釉上彩结合的实物证据。</p>",
+        "summary": "大都会博物馆藏雍正景德镇窑斗彩竹纹杯提供青花与釉上彩结合的实物证据。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "22dfaa6d-d756-47e4-b50b-95d1c53a80f5",
+      "slug": "ming-landscape-dish",
+      "category": "器物",
+      "zh": {
+        "title": "明代景德镇青花山水盘",
+        "content": "<p>英国博物馆藏明代景德镇青花山水盘可用于研究晚明山水题材与款识问题。</p>",
+        "summary": "英国博物馆藏明代景德镇青花山水盘可用于研究晚明山水题材与款识问题。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "517b9031-c7e7-4635-936c-f99928938776",
+      "slug": "ming-kinrande-jar",
+      "category": "器物",
+      "zh": {
+        "title": "明代金襕手风格景德镇器",
+        "content": "<p>英国博物馆与大都会博物馆藏品显示景德镇金襕手类装饰与日本市场之间的联系。</p>",
+        "summary": "英国博物馆与大都会博物馆藏品显示景德镇金襕手类装饰与日本市场之间的联系。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "3a9fe43e-e09e-4677-a848-88a801b39397",
+      "slug": "jiajing-red-ground-dish",
+      "category": "器物",
+      "zh": {
+        "title": "嘉靖红地青花方盘",
+        "content": "<p>英国博物馆藏嘉靖红地青花方盘记录了景德镇青花与红彩组合及年款。</p>",
+        "summary": "英国博物馆藏嘉靖红地青花方盘记录了景德镇青花与红彩组合及年款。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "2975b66d-ac4a-453c-8cdb-f5165ee10271",
+      "slug": "qing-peach-shaped-ewer",
+      "category": "器物",
+      "zh": {
+        "title": "清代青花釉里红桃形壶",
+        "content": "<p>大都会博物馆藏清代景德镇青花釉里红桃形壶展示釉下钴蓝与铜红并用。</p>",
+        "summary": "大都会博物馆藏清代景德镇青花釉里红桃形壶展示釉下钴蓝与铜红并用。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "1b28709f-ffb4-432f-a7ae-6a76f62947a2",
+      "slug": "kangxi-oxblood-vase",
+      "category": "器物",
+      "zh": {
+        "title": "康熙郎窑红类瓶",
+        "content": "<p>大都会博物馆藏康熙景德镇红釉瓶可作为清代高温红釉研究的实物入口。</p>",
+        "summary": "大都会博物馆藏康熙景德镇红釉瓶可作为清代高温红釉研究的实物入口。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "59f0b451-5334-4f87-aa8c-31ea7c0b8d4d",
+      "slug": "kangxi-covered-jar",
+      "category": "器物",
+      "zh": {
+        "title": "康熙五彩盖罐",
+        "content": "<p>大都会博物馆藏康熙五彩盖罐可用于研究清代景德镇外销与陈设瓷。</p>",
+        "summary": "大都会博物馆藏康熙五彩盖罐可用于研究清代景德镇外销与陈设瓷。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "9c5c26a0-51c0-49df-842e-10fe249db2ae",
+      "slug": "kangxi-famille-verte-figure",
+      "category": "器物",
+      "zh": {
+        "title": "康熙五彩人物像",
+        "content": "<p>大都会博物馆藏康熙五彩人物像显示景德镇釉上彩对立体瓷塑的应用。</p>",
+        "summary": "大都会博物馆藏康熙五彩人物像显示景德镇釉上彩对立体瓷塑的应用。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "c094cdfc-9d3c-49ec-ae7e-fe3a75364fd8",
+      "slug": "jiajing-kinrande-ewer",
+      "category": "器物",
+      "zh": {
+        "title": "嘉靖至万历金襕手执壶",
+        "content": "<p>英国博物馆藏嘉靖至万历景德镇金襕手执壶记录了红、绿彩与金彩的组合工艺。</p>",
+        "summary": "英国博物馆藏嘉靖至万历景德镇金襕手执壶记录了红、绿彩与金彩的组合工艺。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "912c614e-6762-4c59-95df-5f0517c981dd",
+      "slug": "kangxi-covered-ewer",
+      "category": "器物",
+      "zh": {
+        "title": "康熙五彩盖执壶",
+        "content": "<p>大都会博物馆藏康熙五彩盖执壶是复杂器形与釉上彩装饰的案例。</p>",
+        "summary": "大都会博物馆藏康熙五彩盖执壶是复杂器形与釉上彩装饰的案例。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "b341e65e-27f8-4152-93d7-6292fb09c3b1",
+      "slug": "xuande-dragon-dish",
+      "category": "器物",
+      "zh": {
+        "title": "宣德青花龙纹盘",
+        "content": "<p>宣德景德镇青花龙纹盘可用于研究明代早期青花纹样和宫廷生产。</p>",
+        "summary": "宣德景德镇青花龙纹盘可用于研究明代早期青花纹样和宫廷生产。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "6988d1c3-604e-4184-bbfa-95043c8ff064",
+      "slug": "xuande-pomegranate-bowl",
+      "category": "器物",
+      "zh": {
+        "title": "宣德青花石榴缠枝莲纹菊瓣碗",
+        "content": "<p>大都会博物馆藏宣德景德镇窑青花石榴缠枝莲纹菊瓣碗提供了宫廷图式的实物案例。</p>",
+        "summary": "大都会博物馆藏宣德景德镇窑青花石榴缠枝莲纹菊瓣碗提供了宫廷图式的实物案例。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "d5008a14-422c-41b4-a6c9-7f0b9c3d8b09",
+      "slug": "xuande-copper-red-bowl",
+      "category": "器物",
+      "zh": {
+        "title": "宣德铜红釉碗",
+        "content": "<p>英国博物馆藏宣德铜红釉碗可用于研究高温铜红釉与明代御窑款识。</p>",
+        "summary": "英国博物馆藏宣德铜红釉碗可用于研究高温铜红釉与明代御窑款识。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "30b201d4-fb22-4268-a710-ee91ed9d2415",
+      "slug": "kangxi-black-glaze-vase",
+      "category": "器物",
+      "zh": {
+        "title": "康熙黑釉瓶",
+        "content": "<p>大都会博物馆藏康熙时期景德镇黑釉瓶展示了清代单色釉生产的一个实物类型。</p>",
+        "summary": "大都会博物馆藏康熙时期景德镇黑釉瓶展示了清代单色釉生产的一个实物类型。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "814879d7-0a47-436b-82e4-ab7728175a4e",
+      "slug": "yongzheng-turquoise-vase",
+      "category": "器物",
+      "zh": {
+        "title": "雍正绿松石釉瓶",
+        "content": "<p>大都会博物馆藏雍正景德镇绿松石釉瓶提供清代单色釉器物案例。</p>",
+        "summary": "大都会博物馆藏雍正景德镇绿松石釉瓶提供清代单色釉器物案例。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "18e78490-6efa-42d1-b2c3-be4318c925ed",
+      "slug": "qianlong-lightblue-vase",
+      "category": "器物",
+      "zh": {
+        "title": "乾隆浅蓝釉瓶",
+        "content": "<p>大都会博物馆藏乾隆景德镇浅蓝釉瓶可作为清代颜色釉研究对象。</p>",
+        "summary": "大都会博物馆藏乾隆景德镇浅蓝釉瓶可作为清代颜色釉研究对象。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "9d0a95e1-b090-4e70-8837-d279ea89d096",
+      "slug": "yongzheng-relief-vase",
+      "category": "器物",
+      "zh": {
+        "title": "雍正刻花青釉瓶",
+        "content": "<p>大都会博物馆藏雍正景德镇刻花青釉瓶可用于研究胎釉与装饰技法结合。</p>",
+        "summary": "大都会博物馆藏雍正景德镇刻花青釉瓶可用于研究胎釉与装饰技法结合。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "276fabf1-9963-45d7-b183-1a126a6369ec",
+      "slug": "kangxi-famille-verte-vase",
+      "category": "器物",
+      "zh": {
+        "title": "康熙五彩釉上彩瓶",
+        "content": "<p>大都会博物馆藏康熙景德镇五彩瓶体现釉上彩在清代的成熟与多样化。</p>",
+        "summary": "大都会博物馆藏康熙景德镇五彩瓶体现釉上彩在清代的成熟与多样化。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "79edb3ad-8b41-4a55-ae69-0154955c280d",
+      "slug": "kangxi-famille-verte-gilt-vase",
+      "category": "器物",
+      "zh": {
+        "title": "康熙五彩描金瓶",
+        "content": "<p>大都会博物馆藏康熙五彩描金瓶可用于研究釉上彩与金彩组合。</p>",
+        "summary": "大都会博物馆藏康熙五彩描金瓶可用于研究釉上彩与金彩组合。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "0a7e5bbf-84f3-4426-9113-b9aa205aea27",
+      "slug": "kangxi-famille-verte-monteith",
+      "category": "器物",
+      "zh": {
+        "title": "康熙五彩蒙太斯酒钵",
+        "content": "<p>大都会博物馆藏康熙时期五彩酒钵体现中国瓷器进入欧洲生活器用语境的路径。</p>",
+        "summary": "大都会博物馆藏康熙时期五彩酒钵体现中国瓷器进入欧洲生活器用语境的路径。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "256587aa-cb98-4f6a-9277-80cec0368b3d",
+      "slug": "wanli-bluewhite-jar",
+      "category": "器物",
+      "zh": {
+        "title": "万历青花花卉纹盖罐",
+        "content": "<p>大都会博物馆藏万历景德镇青花盖罐可用于研究晚明器型与青花装饰。</p>",
+        "summary": "大都会博物馆藏万历景德镇青花盖罐可用于研究晚明器型与青花装饰。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    },
+    {
+      "id": "bb935a4a-cb13-4107-988c-4c6869f315d9",
+      "slug": "qianlong-poem-vase",
+      "category": "器物",
+      "zh": {
+        "title": "乾隆御题诗文瓶",
+        "content": "<p>大都会博物馆藏乾隆时期景德镇御题诗文瓶显示瓷器与宫廷文学和装饰的结合。</p>",
+        "summary": "大都会博物馆藏乾隆时期景德镇御题诗文瓶显示瓷器与宫廷文学和装饰的结合。"
+      },
+      "en": {},
+      "ja": {},
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO·48 COM 8B.16·2026"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A·Chinese blue-and-white ceramics"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/42507",
+          "label": "The Met·Jingdezhen porcelain collection"
+        },
+        {
+          "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+          "label": "British Museum·Jingdezhen porcelain"
+        }
+      ],
+      "status": "published",
+      "version": 4,
+      "updated_at": "2026-09-29T14:58:47.18038+00:00"
+    }
+  ],
+  "entry_relations": [
+    {
+      "entry_id": "30c98c1d-74c1-40bc-ac60-bf1479124dc5",
+      "related_entry_id": "360b4636-dcd4-4260-8242-2bd997db3323",
+      "relation_type": "craft",
+      "note": "Copper-red and underglaze-red are closely related copper-based underglaze colour technologies.",
+      "created_at": "2026-09-20T04:51:05.241263+00:00",
+      "evidence_grade": "B"
+    },
+    {
+      "entry_id": "41a53512-cede-4838-9cde-dc56269390a0",
+      "related_entry_id": "8c6bad40-5b25-4a82-b9c7-43ec5e3d01cd",
+      "relation_type": "person",
+      "note": "故宫博物院藏品资料将雍正仿钧新紫釉天球瓶置于景德镇清代御窑生产背景，并记载唐英自雍正六年驻景德镇御窑厂任协理官、长期管理窑务；该关系用于连接唐英与雍正时期御窑器物体系。",
+      "created_at": "2026-09-19T13:34:21.275273+00:00",
+      "evidence_grade": "A"
+    },
+    {
+      "entry_id": "360b4636-dcd4-4260-8242-2bd997db3323",
+      "related_entry_id": "30c98c1d-74c1-40bc-ac60-bf1479124dc5",
+      "relation_type": "craft",
+      "note": "Both document copper-based underglaze red technology in Jingdezhen; the relationship is technical.",
+      "created_at": "2026-09-20T04:53:39.814185+00:00",
+      "evidence_grade": "B"
+    }
+  ],
+  "media_writes_in_release": 0,
+  "database_write": false,
+  "database_transaction_dry_run": false,
+  "complete_backup": false,
+  "live_preflight_still_required": true
+}

@@ -26,7 +26,7 @@
       "claim_ids": [
         "C014"
       ],
-      "reason": "旧国博wap链接404；故宫已保存正文直接支持督陶与郎窑红。只收敛来源，不改生平正文。",
+      "reason": "收敛到已读的故宫郎窑红梅瓶记录，删除没有配套来源的中国国家博物馆表述；仅作出处一致性校对，不增加生平事实。",
       "status": "待批准来源差异；不是已上线修正",
       "production_applied": false
     },
@@ -562,14 +562,27 @@
           "label": "British Museum·Jingdezhen porcelain"
         }
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "reason": "馆藏身份尚未确认，正文仅保留简短待核说明；移除两条错误对象引用，逐项保留并标明相关的一般背景资料，不将背景资料当作对象出处。",
       "status": "待批准来源差异；不是已上线修正",
-      "production_applied": false
+      "production_applied": false,
+      "per_source_review": {
+        "file": "object-provenance.json",
+        "slug": "yongzheng-celadon-ewer",
+        "field": "source_review",
+        "reviewed_original_sources": 4
+      }
     },
     {
       "id": "ccbf4313-6365-4218-b8c7-a7d80c54c796",
@@ -592,14 +605,27 @@
           "label": "British Museum·Jingdezhen porcelain"
         }
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "reason": "馆藏身份尚未确认，正文仅保留简短待核说明；移除两条错误对象引用，逐项保留并标明相关的一般背景资料，不将背景资料当作对象出处。",
       "status": "待批准来源差异；不是已上线修正",
-      "production_applied": false
+      "production_applied": false,
+      "per_source_review": {
+        "file": "object-provenance.json",
+        "slug": "kangxi-peachbloom-vase",
+        "field": "source_review",
+        "reviewed_original_sources": 4
+      }
     },
     {
       "id": "7c5e8a4d-7980-4166-a707-c514d1e40762",
@@ -622,14 +648,27 @@
           "label": "British Museum·Jingdezhen porcelain"
         }
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "reason": "馆藏身份尚未确认，正文仅保留简短待核说明；移除两条错误对象引用，逐项保留并标明相关的一般背景资料，不将背景资料当作对象出处。",
       "status": "待批准来源差异；不是已上线修正",
-      "production_applied": false
+      "production_applied": false,
+      "per_source_review": {
+        "file": "object-provenance.json",
+        "slug": "kangxi-famille-verte-dragon",
+        "field": "source_review",
+        "reviewed_original_sources": 4
+      }
     },
     {
       "id": "05c0a2b6-5c35-471c-96db-fdc1c667afd1",
@@ -652,14 +691,27 @@
           "label": "British Museum·Jingdezhen porcelain"
         }
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "reason": "馆藏身份尚未确认，正文仅保留简短待核说明；移除两条错误对象引用，逐项保留并标明相关的一般背景资料，不将背景资料当作对象出处。",
       "status": "待批准来源差异；不是已上线修正",
-      "production_applied": false
+      "production_applied": false,
+      "per_source_review": {
+        "file": "object-provenance.json",
+        "slug": "yongzheng-doucai-bamboo-cup",
+        "field": "source_review",
+        "reviewed_original_sources": 4
+      }
     },
     {
       "id": "22dfaa6d-d756-47e4-b50b-95d1c53a80f5",
@@ -682,14 +734,33 @@
           "label": "British Museum·Jingdezhen porcelain"
         }
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+        }
+      ],
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022",
+        "C009",
+        "C019"
       ],
-      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "reason": "馆藏身份尚未确认，正文仅保留简短待核说明；移除两条错误对象引用，逐项保留并标明相关的一般背景资料，不将背景资料当作对象出处。",
       "status": "待批准来源差异；不是已上线修正",
-      "production_applied": false
+      "production_applied": false,
+      "per_source_review": {
+        "file": "object-provenance.json",
+        "slug": "ming-landscape-dish",
+        "field": "source_review",
+        "reviewed_original_sources": 4
+      }
     },
     {
       "id": "517b9031-c7e7-4635-936c-f99928938776",
@@ -712,14 +783,27 @@
           "label": "British Museum·Jingdezhen porcelain"
         }
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "reason": "馆藏身份尚未确认，正文仅保留简短待核说明；移除两条错误对象引用，逐项保留并标明相关的一般背景资料，不将背景资料当作对象出处。",
       "status": "待批准来源差异；不是已上线修正",
-      "production_applied": false
+      "production_applied": false,
+      "per_source_review": {
+        "file": "object-provenance.json",
+        "slug": "ming-kinrande-jar",
+        "field": "source_review",
+        "reviewed_original_sources": 4
+      }
     },
     {
       "id": "3a9fe43e-e09e-4677-a848-88a801b39397",
@@ -742,14 +826,33 @@
           "label": "British Museum·Jingdezhen porcelain"
         }
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+        }
+      ],
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022",
+        "C009",
+        "C019"
       ],
-      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "reason": "馆藏身份尚未确认，正文仅保留简短待核说明；移除两条错误对象引用，逐项保留并标明相关的一般背景资料，不将背景资料当作对象出处。",
       "status": "待批准来源差异；不是已上线修正",
-      "production_applied": false
+      "production_applied": false,
+      "per_source_review": {
+        "file": "object-provenance.json",
+        "slug": "jiajing-red-ground-dish",
+        "field": "source_review",
+        "reviewed_original_sources": 4
+      }
     },
     {
       "id": "2975b66d-ac4a-453c-8cdb-f5165ee10271",
@@ -772,14 +875,33 @@
           "label": "British Museum·Jingdezhen porcelain"
         }
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+        }
+      ],
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022",
+        "C009",
+        "C019"
       ],
-      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "reason": "馆藏身份尚未确认，正文仅保留简短待核说明；移除两条错误对象引用，逐项保留并标明相关的一般背景资料，不将背景资料当作对象出处。",
       "status": "待批准来源差异；不是已上线修正",
-      "production_applied": false
+      "production_applied": false,
+      "per_source_review": {
+        "file": "object-provenance.json",
+        "slug": "qing-peach-shaped-ewer",
+        "field": "source_review",
+        "reviewed_original_sources": 4
+      }
     },
     {
       "id": "1b28709f-ffb4-432f-a7ae-6a76f62947a2",
@@ -802,14 +924,27 @@
           "label": "British Museum·Jingdezhen porcelain"
         }
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "reason": "馆藏身份尚未确认，正文仅保留简短待核说明；移除两条错误对象引用，逐项保留并标明相关的一般背景资料，不将背景资料当作对象出处。",
       "status": "待批准来源差异；不是已上线修正",
-      "production_applied": false
+      "production_applied": false,
+      "per_source_review": {
+        "file": "object-provenance.json",
+        "slug": "kangxi-oxblood-vase",
+        "field": "source_review",
+        "reviewed_original_sources": 4
+      }
     },
     {
       "id": "59f0b451-5334-4f87-aa8c-31ea7c0b8d4d",
@@ -832,14 +967,27 @@
           "label": "British Museum·Jingdezhen porcelain"
         }
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "reason": "馆藏身份尚未确认，正文仅保留简短待核说明；移除两条错误对象引用，逐项保留并标明相关的一般背景资料，不将背景资料当作对象出处。",
       "status": "待批准来源差异；不是已上线修正",
-      "production_applied": false
+      "production_applied": false,
+      "per_source_review": {
+        "file": "object-provenance.json",
+        "slug": "kangxi-covered-jar",
+        "field": "source_review",
+        "reviewed_original_sources": 4
+      }
     },
     {
       "id": "9c5c26a0-51c0-49df-842e-10fe249db2ae",
@@ -862,14 +1010,27 @@
           "label": "British Museum·Jingdezhen porcelain"
         }
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "reason": "馆藏身份尚未确认，正文仅保留简短待核说明；移除两条错误对象引用，逐项保留并标明相关的一般背景资料，不将背景资料当作对象出处。",
       "status": "待批准来源差异；不是已上线修正",
-      "production_applied": false
+      "production_applied": false,
+      "per_source_review": {
+        "file": "object-provenance.json",
+        "slug": "kangxi-famille-verte-figure",
+        "field": "source_review",
+        "reviewed_original_sources": 4
+      }
     },
     {
       "id": "c094cdfc-9d3c-49ec-ae7e-fe3a75364fd8",
@@ -892,14 +1053,27 @@
           "label": "British Museum·Jingdezhen porcelain"
         }
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "reason": "馆藏身份尚未确认，正文仅保留简短待核说明；移除两条错误对象引用，逐项保留并标明相关的一般背景资料，不将背景资料当作对象出处。",
       "status": "待批准来源差异；不是已上线修正",
-      "production_applied": false
+      "production_applied": false,
+      "per_source_review": {
+        "file": "object-provenance.json",
+        "slug": "jiajing-kinrande-ewer",
+        "field": "source_review",
+        "reviewed_original_sources": 4
+      }
     },
     {
       "id": "912c614e-6762-4c59-95df-5f0517c981dd",
@@ -922,14 +1096,27 @@
           "label": "British Museum·Jingdezhen porcelain"
         }
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "reason": "馆藏身份尚未确认，正文仅保留简短待核说明；移除两条错误对象引用，逐项保留并标明相关的一般背景资料，不将背景资料当作对象出处。",
       "status": "待批准来源差异；不是已上线修正",
-      "production_applied": false
+      "production_applied": false,
+      "per_source_review": {
+        "file": "object-provenance.json",
+        "slug": "kangxi-covered-ewer",
+        "field": "source_review",
+        "reviewed_original_sources": 4
+      }
     },
     {
       "id": "b341e65e-27f8-4152-93d7-6292fb09c3b1",
@@ -952,14 +1139,33 @@
           "label": "British Museum·Jingdezhen porcelain"
         }
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+        }
+      ],
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022",
+        "C009",
+        "C019"
       ],
-      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "reason": "馆藏身份尚未确认，正文仅保留简短待核说明；移除两条错误对象引用，逐项保留并标明相关的一般背景资料，不将背景资料当作对象出处。",
       "status": "待批准来源差异；不是已上线修正",
-      "production_applied": false
+      "production_applied": false,
+      "per_source_review": {
+        "file": "object-provenance.json",
+        "slug": "xuande-dragon-dish",
+        "field": "source_review",
+        "reviewed_original_sources": 4
+      }
     },
     {
       "id": "6988d1c3-604e-4184-bbfa-95043c8ff064",
@@ -982,14 +1188,33 @@
           "label": "British Museum·Jingdezhen porcelain"
         }
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+        }
+      ],
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022",
+        "C009",
+        "C019"
       ],
-      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "reason": "馆藏身份尚未确认，正文仅保留简短待核说明；移除两条错误对象引用，逐项保留并标明相关的一般背景资料，不将背景资料当作对象出处。",
       "status": "待批准来源差异；不是已上线修正",
-      "production_applied": false
+      "production_applied": false,
+      "per_source_review": {
+        "file": "object-provenance.json",
+        "slug": "xuande-pomegranate-bowl",
+        "field": "source_review",
+        "reviewed_original_sources": 4
+      }
     },
     {
       "id": "d5008a14-422c-41b4-a6c9-7f0b9c3d8b09",
@@ -1012,14 +1237,27 @@
           "label": "British Museum·Jingdezhen porcelain"
         }
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "reason": "馆藏身份尚未确认，正文仅保留简短待核说明；移除两条错误对象引用，逐项保留并标明相关的一般背景资料，不将背景资料当作对象出处。",
       "status": "待批准来源差异；不是已上线修正",
-      "production_applied": false
+      "production_applied": false,
+      "per_source_review": {
+        "file": "object-provenance.json",
+        "slug": "xuande-copper-red-bowl",
+        "field": "source_review",
+        "reviewed_original_sources": 4
+      }
     },
     {
       "id": "30b201d4-fb22-4268-a710-ee91ed9d2415",
@@ -1042,14 +1280,27 @@
           "label": "British Museum·Jingdezhen porcelain"
         }
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "reason": "馆藏身份尚未确认，正文仅保留简短待核说明；移除两条错误对象引用，逐项保留并标明相关的一般背景资料，不将背景资料当作对象出处。",
       "status": "待批准来源差异；不是已上线修正",
-      "production_applied": false
+      "production_applied": false,
+      "per_source_review": {
+        "file": "object-provenance.json",
+        "slug": "kangxi-black-glaze-vase",
+        "field": "source_review",
+        "reviewed_original_sources": 4
+      }
     },
     {
       "id": "814879d7-0a47-436b-82e4-ab7728175a4e",
@@ -1072,14 +1323,27 @@
           "label": "British Museum·Jingdezhen porcelain"
         }
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "reason": "馆藏身份尚未确认，正文仅保留简短待核说明；移除两条错误对象引用，逐项保留并标明相关的一般背景资料，不将背景资料当作对象出处。",
       "status": "待批准来源差异；不是已上线修正",
-      "production_applied": false
+      "production_applied": false,
+      "per_source_review": {
+        "file": "object-provenance.json",
+        "slug": "yongzheng-turquoise-vase",
+        "field": "source_review",
+        "reviewed_original_sources": 4
+      }
     },
     {
       "id": "18e78490-6efa-42d1-b2c3-be4318c925ed",
@@ -1102,14 +1366,27 @@
           "label": "British Museum·Jingdezhen porcelain"
         }
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "reason": "馆藏身份尚未确认，正文仅保留简短待核说明；移除两条错误对象引用，逐项保留并标明相关的一般背景资料，不将背景资料当作对象出处。",
       "status": "待批准来源差异；不是已上线修正",
-      "production_applied": false
+      "production_applied": false,
+      "per_source_review": {
+        "file": "object-provenance.json",
+        "slug": "qianlong-lightblue-vase",
+        "field": "source_review",
+        "reviewed_original_sources": 4
+      }
     },
     {
       "id": "9d0a95e1-b090-4e70-8837-d279ea89d096",
@@ -1132,14 +1409,27 @@
           "label": "British Museum·Jingdezhen porcelain"
         }
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "reason": "馆藏身份尚未确认，正文仅保留简短待核说明；移除两条错误对象引用，逐项保留并标明相关的一般背景资料，不将背景资料当作对象出处。",
       "status": "待批准来源差异；不是已上线修正",
-      "production_applied": false
+      "production_applied": false,
+      "per_source_review": {
+        "file": "object-provenance.json",
+        "slug": "yongzheng-relief-vase",
+        "field": "source_review",
+        "reviewed_original_sources": 4
+      }
     },
     {
       "id": "276fabf1-9963-45d7-b183-1a126a6369ec",
@@ -1162,14 +1452,27 @@
           "label": "British Museum·Jingdezhen porcelain"
         }
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "reason": "馆藏身份尚未确认，正文仅保留简短待核说明；移除两条错误对象引用，逐项保留并标明相关的一般背景资料，不将背景资料当作对象出处。",
       "status": "待批准来源差异；不是已上线修正",
-      "production_applied": false
+      "production_applied": false,
+      "per_source_review": {
+        "file": "object-provenance.json",
+        "slug": "kangxi-famille-verte-vase",
+        "field": "source_review",
+        "reviewed_original_sources": 4
+      }
     },
     {
       "id": "79edb3ad-8b41-4a55-ae69-0154955c280d",
@@ -1192,14 +1495,27 @@
           "label": "British Museum·Jingdezhen porcelain"
         }
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "reason": "馆藏身份尚未确认，正文仅保留简短待核说明；移除两条错误对象引用，逐项保留并标明相关的一般背景资料，不将背景资料当作对象出处。",
       "status": "待批准来源差异；不是已上线修正",
-      "production_applied": false
+      "production_applied": false,
+      "per_source_review": {
+        "file": "object-provenance.json",
+        "slug": "kangxi-famille-verte-gilt-vase",
+        "field": "source_review",
+        "reviewed_original_sources": 4
+      }
     },
     {
       "id": "0a7e5bbf-84f3-4426-9113-b9aa205aea27",
@@ -1222,14 +1538,27 @@
           "label": "British Museum·Jingdezhen porcelain"
         }
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "reason": "馆藏身份尚未确认，正文仅保留简短待核说明；移除两条错误对象引用，逐项保留并标明相关的一般背景资料，不将背景资料当作对象出处。",
       "status": "待批准来源差异；不是已上线修正",
-      "production_applied": false
+      "production_applied": false,
+      "per_source_review": {
+        "file": "object-provenance.json",
+        "slug": "kangxi-famille-verte-monteith",
+        "field": "source_review",
+        "reviewed_original_sources": 4
+      }
     },
     {
       "id": "256587aa-cb98-4f6a-9277-80cec0368b3d",
@@ -1252,14 +1581,33 @@
           "label": "British Museum·Jingdezhen porcelain"
         }
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+        }
+      ],
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022",
+        "C009",
+        "C019"
       ],
-      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "reason": "馆藏身份尚未确认，正文仅保留简短待核说明；移除两条错误对象引用，逐项保留并标明相关的一般背景资料，不将背景资料当作对象出处。",
       "status": "待批准来源差异；不是已上线修正",
-      "production_applied": false
+      "production_applied": false,
+      "per_source_review": {
+        "file": "object-provenance.json",
+        "slug": "wanli-bluewhite-jar",
+        "field": "source_review",
+        "reviewed_original_sources": 4
+      }
     },
     {
       "id": "bb935a4a-cb13-4107-988c-4c6869f315d9",
@@ -1282,14 +1630,27 @@
           "label": "British Museum·Jingdezhen porcelain"
         }
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "reason": "原文宣称具体馆藏却没有对象编号；共用引用指向别物。仅撤回无法支撑的对象绑定并清楚提示待核，不指定相似藏品。",
+      "reason": "馆藏身份尚未确认，正文仅保留简短待核说明；移除两条错误对象引用，逐项保留并标明相关的一般背景资料，不将背景资料当作对象出处。",
       "status": "待批准来源差异；不是已上线修正",
-      "production_applied": false
+      "production_applied": false,
+      "per_source_review": {
+        "file": "object-provenance.json",
+        "slug": "qianlong-poem-vase",
+        "field": "source_review",
+        "reviewed_original_sources": 4
+      }
     }
   ],
   "pending": [
@@ -1621,5 +1982,6 @@
     "wang-qi": "已读展览资料不支持生卒年，原地方志链接保留待核，未准备未经证实的日期更新"
   },
   "other_23_anomalies": "沿用阶段A逐次观测和本轮请求记录，403/5xx或代理错误不判定永久失效；不自动删除",
-  "source_verified_count_basis": "只有source-evidence.json中的限定论述有引文定位；链接数量、GET200与来源数量均不作为已核验数量。"
+  "source_verified_count_basis": "只有source-evidence.json中的限定论述有引文定位；链接数量、GET200与来源数量均不作为已核验数量。",
+  "copyedit_rule": "25条逐项区分背景资料与错配对象出处；没有新增对象身份认证，背景资料标签明确限于背景。"
 }

@@ -6,6 +6,8 @@
   "relation_candidates": 58,
   "relation_note_drafts": 3,
   "conditional_image_drafts": 2,
+  "current_release_media_writes": 0,
+  "images_excluded_from_release": true,
   "priority_24_closed": 24,
   "protected_body_overlap": 0,
   "negative_guard_checks_rejected": [
@@ -18,6 +20,15 @@
   "draft_html_allowlist": {
     "passed": 43,
     "failed": 0
+  },
+  "copyedit_checks": {
+    "short_object_notices": 25,
+    "per_object_source_reviews": 25,
+    "url_free_relation_notes": 3,
+    "lang_source_alignment": "PASS",
+    "fresh_read_entry_guards": 43,
+    "fresh_read_relation_guards": 3,
+    "production_package_matches_drafts": "PASS"
   },
   "live_database_dry_run": false,
   "production_write": false,

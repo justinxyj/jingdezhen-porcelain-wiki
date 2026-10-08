@@ -5,11 +5,11 @@
   "tables": {
     "entries": 43,
     "entry_relations": 3,
-    "media_conditional_inserts": 2
+    "media_conditional_inserts": 0
   },
   "target_entries_unique": 43,
   "existing_row_updates": 46,
-  "new_rows_conditional": 2,
+  "new_rows_conditional": 0,
   "entries": [
     {
       "table": "entries",
@@ -80,7 +80,7 @@
             }
           },
           "title": "郎廷极",
-          "content": "<p>郎廷极是清康熙时期与景德镇御窑管理有关的官员。“郎窑”通常用于称呼与其督理窑务时期相关的一类景德镇瓷器，其中郎窑红是最具代表性的高温红釉品种之一。</p><h2>郎窑红</h2><p>郎窑红属于高温铜红釉体系，对烧成温度和还原气氛要求较高。故宫及中国国家博物馆等馆藏资料所见郎窑红器物，可以用于研究康熙时期景德镇高温红釉技术。</p><h2>郎廷极与御窑管理</h2><p>故宫资料记载，郎廷极于康熙四十四年至五十一年主持景德镇御窑场工作。“郎窑”这一名称与其督陶身份及相应生产时期有关。</p><h2>人物与器物</h2><p>郎廷极首先是窑务管理者，而不是可以据此认定为具体器物制作者的人物。研究“郎窑”时，需要区分官员管理、窑务制度和工匠实际生产三个层次。具体器物的年代和归属仍需馆藏或考古证据支持。</p>",
+          "content": "<p>郎廷极是清康熙时期与景德镇御窑管理有关的官员。“郎窑”通常用于称呼与其督理窑务时期相关的一类景德镇瓷器，其中郎窑红是最具代表性的高温红釉品种之一。</p><h2>郎窑红</h2><p>郎窑红属于高温铜红釉体系，对烧成温度和还原气氛要求较高。故宫博物院藏郎窑红梅瓶，可作为观察康熙时期景德镇红釉瓷器的实物参照。</p><h2>郎廷极与御窑管理</h2><p>故宫资料记载，郎廷极于康熙四十四年至五十一年主持景德镇御窑场工作。“郎窑”这一名称与其督陶身份及相应生产时期有关。</p><h2>人物与器物</h2><p>郎廷极首先是窑务管理者，而不是可以据此认定为具体器物制作者的人物。研究“郎窑”时，需要区分官员管理、窑务制度和工匠实际生产三个层次。具体器物的年代和归属仍需馆藏或考古证据支持。</p>",
           "summary": "清康熙时期督陶官。",
           "sources": [
             {
@@ -129,9 +129,14 @@
           "after": 5
         },
         {
+          "path": "/zh/content",
+          "operation": "replace",
+          "before": "<p>郎廷极是清康熙时期与景德镇御窑管理有关的官员。“郎窑”通常用于称呼与其督理窑务时期相关的一类景德镇瓷器，其中郎窑红是最具代表性的高温红釉品种之一。</p><h2>郎窑红</h2><p>郎窑红属于高温铜红釉体系，对烧成温度和还原气氛要求较高。故宫及中国国家博物馆等馆藏资料所见郎窑红器物，可以用于研究康熙时期景德镇高温红釉技术。</p><h2>郎廷极与御窑管理</h2><p>故宫资料记载，郎廷极于康熙四十四年至五十一年主持景德镇御窑场工作。“郎窑”这一名称与其督陶身份及相应生产时期有关。</p><h2>人物与器物</h2><p>郎廷极首先是窑务管理者，而不是可以据此认定为具体器物制作者的人物。研究“郎窑”时，需要区分官员管理、窑务制度和工匠实际生产三个层次。具体器物的年代和归属仍需馆藏或考古证据支持。</p>",
+          "after": "<p>郎廷极是清康熙时期与景德镇御窑管理有关的官员。“郎窑”通常用于称呼与其督理窑务时期相关的一类景德镇瓷器，其中郎窑红是最具代表性的高温红釉品种之一。</p><h2>郎窑红</h2><p>郎窑红属于高温铜红釉体系，对烧成温度和还原气氛要求较高。故宫博物院藏郎窑红梅瓶，可作为观察康熙时期景德镇红釉瓷器的实物参照。</p><h2>郎廷极与御窑管理</h2><p>故宫资料记载，郎廷极于康熙四十四年至五十一年主持景德镇御窑场工作。“郎窑”这一名称与其督陶身份及相应生产时期有关。</p><h2>人物与器物</h2><p>郎廷极首先是窑务管理者，而不是可以据此认定为具体器物制作者的人物。研究“郎窑”时，需要区分官员管理、窑务制度和工匠实际生产三个层次。具体器物的年代和归属仍需馆藏或考古证据支持。</p>"
+        },
+        {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
           "after": [
             {
               "url": "https://www.dpm.org.cn/collection/ceramic/227698.html",
@@ -178,7 +183,8 @@
       "claim_ids": [
         "C014"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "500117aba446f112239afc6c3c5adc3fc585164476c5727bfff615c8b3b6524f"
     },
     {
       "table": "entries",
@@ -332,7 +338,6 @@
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
           "after": [
             {
               "url": "https://www.metmuseum.org/art/collection/search/45842",
@@ -399,7 +404,8 @@
         "C012",
         "C013"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "491e0a1bdf89aea986f9e97d8451efb17254410c1343d2de45bba24736149432"
     },
     {
       "table": "entries",
@@ -535,43 +541,36 @@
         {
           "path": "/zh/meta/form",
           "operation": "add",
-          "before_exists": false,
           "after": "杯"
         },
         {
           "path": "/zh/meta/institution",
           "operation": "add",
-          "before_exists": false,
           "after": "大都会艺术博物馆"
         },
         {
           "path": "/zh/meta/object_number",
           "operation": "add",
-          "before_exists": false,
           "after": "1987.85"
         },
         {
           "path": "/zh/meta/object_url",
           "operation": "add",
-          "before_exists": false,
           "after": "https://www.metmuseum.org/art/collection/search/42515"
         },
         {
           "path": "/zh/meta/period",
           "operation": "add",
-          "before_exists": false,
           "after": "明成化款及成化时期（1465—1487）"
         },
         {
           "path": "/zh/meta/technique",
           "operation": "add",
-          "before_exists": false,
           "after": "釉下青花与釉上彩"
         },
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
           "after": [
             {
               "url": "https://www.metmuseum.org/art/collection/search/42515",
@@ -628,7 +627,8 @@
         "C003",
         "C004"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "5ac4f701588d50b0c57d0466c03a786af0965dd5b56d35b00ec708ef8daa0fd5"
     },
     {
       "table": "entries",
@@ -758,13 +758,11 @@
         {
           "path": "/zh/meta/form",
           "operation": "add",
-          "before_exists": false,
           "after": "天球瓶"
         },
         {
           "path": "/zh/meta/glaze",
           "operation": "add",
-          "before_exists": false,
           "after": [
             "仿钧新紫釉"
           ]
@@ -772,31 +770,26 @@
         {
           "path": "/zh/meta/institution",
           "operation": "add",
-          "before_exists": false,
           "after": "大都会艺术博物馆"
         },
         {
           "path": "/zh/meta/object_number",
           "operation": "add",
-          "before_exists": false,
           "after": "14.40.163"
         },
         {
           "path": "/zh/meta/object_url",
           "operation": "add",
-          "before_exists": false,
           "after": "https://www.metmuseum.org/art/collection/search/46080"
         },
         {
           "path": "/zh/meta/period",
           "operation": "add",
-          "before_exists": false,
           "after": "清雍正时期（1723—1735）"
         },
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
           "after": [
             {
               "url": "https://www.metmuseum.org/art/collection/search/46080",
@@ -848,7 +841,8 @@
         "C006",
         "C007"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "c47cf970b615011e6543ee67564e6647070e4244bfd6f64c2aebaf930b4d5c0d"
     },
     {
       "table": "entries",
@@ -962,7 +956,6 @@
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
           "after": [
             {
               "url": "https://www.dpm.org.cn/collection/ceramic/226759.html",
@@ -1007,7 +1000,8 @@
         "C008",
         "C009"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "9b02a99f80b07856f3c8b43d380acdfc26d1c2b477fa0b38d121c4d9aa5cab5f"
     },
     {
       "table": "entries",
@@ -1121,7 +1115,6 @@
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
           "after": [
             {
               "url": "https://www.dpm.org.cn/collection/ceramic/226759.html",
@@ -1167,7 +1160,8 @@
         "C011",
         "C002"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "1c058cbec2f170b5f95c233ebe57e60b7c14252e453a4f2eb13a8eafd729ebb6"
     },
     {
       "table": "entries",
@@ -1281,7 +1275,6 @@
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
           "after": [
             {
               "url": "https://www.dpm.org.cn/collection/ceramic/226759.html",
@@ -1327,7 +1320,8 @@
         "C001",
         "C002"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "8b93ef031593b721c903732d977722e09d5e7ded31e2d05f1deeec1ebf1880fa"
     },
     {
       "table": "entries",
@@ -1441,7 +1435,6 @@
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
           "after": [
             {
               "url": "https://www.ihchina.cn/Article/Index/detail?id=24981",
@@ -1486,7 +1479,8 @@
         "C015",
         "C008"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "04ac28a77c73e640844f5940c2903755c91d7e4856f18e95d614925f79624b67"
     },
     {
       "table": "entries",
@@ -1634,7 +1628,6 @@
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
           "after": [
             {
               "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
@@ -1698,7 +1691,8 @@
         "C016",
         "C028"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "ef6daeccd539a9b1054313db482427a9ad051d3ea4aaca5307638916838a2d01"
     },
     {
       "table": "entries",
@@ -1882,7 +1876,6 @@
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
           "after": [
             {
               "url": "https://heritage.bnf.fr/france-chine/porcelaine",
@@ -1962,7 +1955,8 @@
         "C017",
         "C018"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "365fc60adcf82f3cfadfa35b476a4cf709fb9b1e7c9c1449811e5be0394fdf8f"
     },
     {
       "table": "entries",
@@ -2087,7 +2081,6 @@
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
           "after": []
         },
         {
@@ -2141,7 +2134,8 @@
       "claim_ids": [
         "C028"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "f7ccd6e299b9af2633a0818bc1983c14db23de72290b5fff49091ebaf185ef7f"
     },
     {
       "table": "entries",
@@ -2274,7 +2268,6 @@
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
           "after": []
         },
         {
@@ -2332,7 +2325,8 @@
       "claim_ids": [
         "C028"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "58a94c2cb3ff589b05b28b8d6a6dd91058d417a7c431789e56fdc113e5e65888"
     },
     {
       "table": "entries",
@@ -2446,7 +2440,6 @@
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
           "after": [
             {
               "url": "https://whc.unesco.org/en/decisions/9170/",
@@ -2491,7 +2484,8 @@
         "C021",
         "C023"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "9bc773c85992baf518b823074fca5569b31cf24ba7470100f8c9d593dbfeaf64"
     },
     {
       "table": "entries",
@@ -2605,7 +2599,6 @@
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
           "after": [
             {
               "url": "https://whc.unesco.org/en/decisions/9170/",
@@ -2650,7 +2643,8 @@
         "C022",
         "C023"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "e0956dface2805a716d657f3c371484bb306a26a2184c5deaf80154957ff9722"
     },
     {
       "table": "entries",
@@ -2764,7 +2758,6 @@
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
           "after": [
             {
               "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
@@ -2810,7 +2803,8 @@
         "C020",
         "C018"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "e8f390462463338701a1721f989a5dbc5c00e3837fa7e6849a4167a2009590d6"
     },
     {
       "table": "entries",
@@ -2924,7 +2918,6 @@
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
           "after": [
             {
               "url": "https://whc.unesco.org/en/decisions/9170/",
@@ -2968,7 +2961,8 @@
       "claim_ids": [
         "C021"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "17ac01a12ba81d5395dae95c74d6c7d38089ac49f2f7430edcb3e4c8c0016b81"
     },
     {
       "table": "entries",
@@ -3070,7 +3064,6 @@
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
           "after": [
             {
               "url": "https://www.ihchina.cn/art/detail/id/14270.html",
@@ -3110,7 +3103,8 @@
       "claim_ids": [
         "C024"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "9ea426927084c7e0f0dc876461a81f1b4a031678ea1acbae609668320a95591f"
     },
     {
       "table": "entries",
@@ -3212,7 +3206,6 @@
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
           "after": [
             {
               "url": "https://www.ihchina.cn/art/detail/id/14270.html",
@@ -3253,7 +3246,8 @@
         "C024",
         "C023"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "f7065955466e81d8678b6eea0128b21c2670f923d649a713277aff5dcaa2b700"
     },
     {
       "table": "entries",
@@ -3302,11 +3296,21 @@
       "after": {
         "zh": {
           "title": "雍正青釉花浇",
-          "content": "<p>“雍正青釉花浇”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>",
-          "summary": "雍正青釉花浇：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。",
-          "sources": []
+          "content": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>",
+          "summary": "馆藏出处待核，具体年代与归属暂未确认。",
+          "sources": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
-        "sources": [],
+        "sources": [
+          {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          }
+        ],
         "version": 5
       },
       "field_diffs": [
@@ -3331,7 +3335,12 @@
               "label": "British Museum·Jingdezhen porcelain"
             }
           ],
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/version",
@@ -3343,19 +3352,23 @@
           "path": "/zh/content",
           "operation": "replace",
           "before": "<p>大都会博物馆藏雍正景德镇窑青釉花浇显示清宫瓷器对外来器形与中国材料传统的结合。</p>",
-          "after": "<p>“雍正青釉花浇”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>"
+          "after": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
         },
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/zh/summary",
           "operation": "replace",
           "before": "大都会博物馆藏雍正景德镇窑青釉花浇显示清宫瓷器对外来器形与中国材料传统的结合。",
-          "after": "雍正青釉花浇：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。"
+          "after": "馆藏出处待核，具体年代与归属暂未确认。"
         }
       ],
       "rollback_original_values": {
@@ -3386,9 +3399,12 @@
       },
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "152ccbb75bf20e12a10b0de2397a17eb6d109a6a24edf06e2d18e1c841fd83a9"
     },
     {
       "table": "entries",
@@ -3437,11 +3453,21 @@
       "after": {
         "zh": {
           "title": "康熙桃花片釉瓶",
-          "content": "<p>“康熙桃花片釉瓶”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>",
-          "summary": "康熙桃花片釉瓶：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。",
-          "sources": []
+          "content": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>",
+          "summary": "馆藏出处待核，具体年代与归属暂未确认。",
+          "sources": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
-        "sources": [],
+        "sources": [
+          {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          }
+        ],
         "version": 5
       },
       "field_diffs": [
@@ -3466,7 +3492,12 @@
               "label": "British Museum·Jingdezhen porcelain"
             }
           ],
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/version",
@@ -3478,19 +3509,23 @@
           "path": "/zh/content",
           "operation": "replace",
           "before": "<p>大都会博物馆藏康熙桃花片釉瓶是清代景德镇颜色釉研究的重要实物。</p>",
-          "after": "<p>“康熙桃花片釉瓶”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>"
+          "after": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
         },
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/zh/summary",
           "operation": "replace",
           "before": "大都会博物馆藏康熙桃花片釉瓶是清代景德镇颜色釉研究的重要实物。",
-          "after": "康熙桃花片釉瓶：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。"
+          "after": "馆藏出处待核，具体年代与归属暂未确认。"
         }
       ],
       "rollback_original_values": {
@@ -3521,9 +3556,12 @@
       },
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "8cc0bedeb850ed0345e9c74702db5b430a69efcf2dec62b7f6099c9ba74d7821"
     },
     {
       "table": "entries",
@@ -3572,11 +3610,21 @@
       "after": {
         "zh": {
           "title": "康熙五彩龙纹盘",
-          "content": "<p>“康熙五彩龙纹盘”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>",
-          "summary": "康熙五彩龙纹盘：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。",
-          "sources": []
+          "content": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>",
+          "summary": "馆藏出处待核，具体年代与归属暂未确认。",
+          "sources": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
-        "sources": [],
+        "sources": [
+          {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          }
+        ],
         "version": 5
       },
       "field_diffs": [
@@ -3601,7 +3649,12 @@
               "label": "British Museum·Jingdezhen porcelain"
             }
           ],
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/version",
@@ -3613,19 +3666,23 @@
           "path": "/zh/content",
           "operation": "replace",
           "before": "<p>大都会博物馆藏康熙景德镇窑五彩龙纹盘可用于研究釉上彩与欧洲消费史。</p>",
-          "after": "<p>“康熙五彩龙纹盘”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>"
+          "after": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
         },
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/zh/summary",
           "operation": "replace",
           "before": "大都会博物馆藏康熙景德镇窑五彩龙纹盘可用于研究釉上彩与欧洲消费史。",
-          "after": "康熙五彩龙纹盘：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。"
+          "after": "馆藏出处待核，具体年代与归属暂未确认。"
         }
       ],
       "rollback_original_values": {
@@ -3656,9 +3713,12 @@
       },
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "0e9c7888641bc99faca057580bd60e947039e2c8c7c321e1fc2f61aa1840270c"
     },
     {
       "table": "entries",
@@ -3707,11 +3767,21 @@
       "after": {
         "zh": {
           "title": "雍正斗彩竹纹杯",
-          "content": "<p>“雍正斗彩竹纹杯”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>",
-          "summary": "雍正斗彩竹纹杯：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。",
-          "sources": []
+          "content": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>",
+          "summary": "馆藏出处待核，具体年代与归属暂未确认。",
+          "sources": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
-        "sources": [],
+        "sources": [
+          {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          }
+        ],
         "version": 5
       },
       "field_diffs": [
@@ -3736,7 +3806,12 @@
               "label": "British Museum·Jingdezhen porcelain"
             }
           ],
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/version",
@@ -3748,19 +3823,23 @@
           "path": "/zh/content",
           "operation": "replace",
           "before": "<p>大都会博物馆藏雍正景德镇窑斗彩竹纹杯提供青花与釉上彩结合的实物证据。</p>",
-          "after": "<p>“雍正斗彩竹纹杯”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>"
+          "after": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
         },
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/zh/summary",
           "operation": "replace",
           "before": "大都会博物馆藏雍正景德镇窑斗彩竹纹杯提供青花与釉上彩结合的实物证据。",
-          "after": "雍正斗彩竹纹杯：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。"
+          "after": "馆藏出处待核，具体年代与归属暂未确认。"
         }
       ],
       "rollback_original_values": {
@@ -3791,9 +3870,12 @@
       },
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "3b49729a4ff80267d1965c10c5831c8deb39addaaaec55e6263249bcf0cf5e7c"
     },
     {
       "table": "entries",
@@ -3842,11 +3924,29 @@
       "after": {
         "zh": {
           "title": "明代景德镇青花山水盘",
-          "content": "<p>“明代景德镇青花山水盘”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>",
-          "summary": "明代景德镇青花山水盘：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。",
-          "sources": []
+          "content": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>",
+          "summary": "馆藏出处待核，具体年代与归属暂未确认。",
+          "sources": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            },
+            {
+              "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+              "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
-        "sources": [],
+        "sources": [
+          {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          },
+          {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+          }
+        ],
         "version": 5
       },
       "field_diffs": [
@@ -3871,7 +3971,16 @@
               "label": "British Museum·Jingdezhen porcelain"
             }
           ],
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            },
+            {
+              "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+              "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/version",
@@ -3883,19 +3992,27 @@
           "path": "/zh/content",
           "operation": "replace",
           "before": "<p>英国博物馆藏明代景德镇青花山水盘可用于研究晚明山水题材与款识问题。</p>",
-          "after": "<p>“明代景德镇青花山水盘”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>"
+          "after": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
         },
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            },
+            {
+              "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+              "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/zh/summary",
           "operation": "replace",
           "before": "英国博物馆藏明代景德镇青花山水盘可用于研究晚明山水题材与款识问题。",
-          "after": "明代景德镇青花山水盘：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。"
+          "after": "馆藏出处待核，具体年代与归属暂未确认。"
         }
       ],
       "rollback_original_values": {
@@ -3926,9 +4043,14 @@
       },
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022",
+        "C009",
+        "C019"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "2eebe9dc5f858b050d40cd7c4ca896725863f8854d4c6c261e718a1899bb606f"
     },
     {
       "table": "entries",
@@ -3977,11 +4099,21 @@
       "after": {
         "zh": {
           "title": "明代金襕手风格景德镇器",
-          "content": "<p>“明代金襕手风格景德镇器”这一题名所指的题名所涉器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>",
-          "summary": "明代金襕手风格景德镇器：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。",
-          "sources": []
+          "content": "<p>相关器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>",
+          "summary": "馆藏出处待核，具体年代与归属暂未确认。",
+          "sources": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
-        "sources": [],
+        "sources": [
+          {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          }
+        ],
         "version": 5
       },
       "field_diffs": [
@@ -4006,7 +4138,12 @@
               "label": "British Museum·Jingdezhen porcelain"
             }
           ],
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/version",
@@ -4018,19 +4155,23 @@
           "path": "/zh/content",
           "operation": "replace",
           "before": "<p>英国博物馆与大都会博物馆藏品显示景德镇金襕手类装饰与日本市场之间的联系。</p>",
-          "after": "<p>“明代金襕手风格景德镇器”这一题名所指的题名所涉器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>"
+          "after": "<p>相关器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
         },
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/zh/summary",
           "operation": "replace",
           "before": "英国博物馆与大都会博物馆藏品显示景德镇金襕手类装饰与日本市场之间的联系。",
-          "after": "明代金襕手风格景德镇器：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。"
+          "after": "馆藏出处待核，具体年代与归属暂未确认。"
         }
       ],
       "rollback_original_values": {
@@ -4061,9 +4202,12 @@
       },
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "5ed421e620951466f50c2e4a39490a2c783a13f9be5d13e4cd88e7beb49c0fbc"
     },
     {
       "table": "entries",
@@ -4112,11 +4256,29 @@
       "after": {
         "zh": {
           "title": "嘉靖红地青花方盘",
-          "content": "<p>“嘉靖红地青花方盘”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>",
-          "summary": "嘉靖红地青花方盘：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。",
-          "sources": []
+          "content": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>",
+          "summary": "馆藏出处待核，具体年代与归属暂未确认。",
+          "sources": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            },
+            {
+              "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+              "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
-        "sources": [],
+        "sources": [
+          {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          },
+          {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+          }
+        ],
         "version": 5
       },
       "field_diffs": [
@@ -4141,7 +4303,16 @@
               "label": "British Museum·Jingdezhen porcelain"
             }
           ],
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            },
+            {
+              "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+              "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/version",
@@ -4153,19 +4324,27 @@
           "path": "/zh/content",
           "operation": "replace",
           "before": "<p>英国博物馆藏嘉靖红地青花方盘记录了景德镇青花与红彩组合及年款。</p>",
-          "after": "<p>“嘉靖红地青花方盘”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>"
+          "after": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
         },
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            },
+            {
+              "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+              "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/zh/summary",
           "operation": "replace",
           "before": "英国博物馆藏嘉靖红地青花方盘记录了景德镇青花与红彩组合及年款。",
-          "after": "嘉靖红地青花方盘：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。"
+          "after": "馆藏出处待核，具体年代与归属暂未确认。"
         }
       ],
       "rollback_original_values": {
@@ -4196,9 +4375,14 @@
       },
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022",
+        "C009",
+        "C019"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "02060eb3042391750f9a0c75e1913294ba7e5b18a74c39462e38b9e3da1c7bb2"
     },
     {
       "table": "entries",
@@ -4247,11 +4431,29 @@
       "after": {
         "zh": {
           "title": "清代青花釉里红桃形壶",
-          "content": "<p>“清代青花釉里红桃形壶”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>",
-          "summary": "清代青花釉里红桃形壶：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。",
-          "sources": []
+          "content": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>",
+          "summary": "馆藏出处待核，具体年代与归属暂未确认。",
+          "sources": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            },
+            {
+              "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+              "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
-        "sources": [],
+        "sources": [
+          {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          },
+          {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+          }
+        ],
         "version": 5
       },
       "field_diffs": [
@@ -4276,7 +4478,16 @@
               "label": "British Museum·Jingdezhen porcelain"
             }
           ],
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            },
+            {
+              "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+              "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/version",
@@ -4288,19 +4499,27 @@
           "path": "/zh/content",
           "operation": "replace",
           "before": "<p>大都会博物馆藏清代景德镇青花釉里红桃形壶展示釉下钴蓝与铜红并用。</p>",
-          "after": "<p>“清代青花釉里红桃形壶”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>"
+          "after": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
         },
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            },
+            {
+              "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+              "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/zh/summary",
           "operation": "replace",
           "before": "大都会博物馆藏清代景德镇青花釉里红桃形壶展示釉下钴蓝与铜红并用。",
-          "after": "清代青花釉里红桃形壶：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。"
+          "after": "馆藏出处待核，具体年代与归属暂未确认。"
         }
       ],
       "rollback_original_values": {
@@ -4331,9 +4550,14 @@
       },
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022",
+        "C009",
+        "C019"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "463b4d634c895dce53a56d3863b794a5533dbfc6705a2128e3d10a593db29bd6"
     },
     {
       "table": "entries",
@@ -4382,11 +4606,21 @@
       "after": {
         "zh": {
           "title": "康熙郎窑红类瓶",
-          "content": "<p>“康熙郎窑红类瓶”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>",
-          "summary": "康熙郎窑红类瓶：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。",
-          "sources": []
+          "content": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>",
+          "summary": "馆藏出处待核，具体年代与归属暂未确认。",
+          "sources": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
-        "sources": [],
+        "sources": [
+          {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          }
+        ],
         "version": 5
       },
       "field_diffs": [
@@ -4411,7 +4645,12 @@
               "label": "British Museum·Jingdezhen porcelain"
             }
           ],
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/version",
@@ -4423,19 +4662,23 @@
           "path": "/zh/content",
           "operation": "replace",
           "before": "<p>大都会博物馆藏康熙景德镇红釉瓶可作为清代高温红釉研究的实物入口。</p>",
-          "after": "<p>“康熙郎窑红类瓶”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>"
+          "after": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
         },
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/zh/summary",
           "operation": "replace",
           "before": "大都会博物馆藏康熙景德镇红釉瓶可作为清代高温红釉研究的实物入口。",
-          "after": "康熙郎窑红类瓶：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。"
+          "after": "馆藏出处待核，具体年代与归属暂未确认。"
         }
       ],
       "rollback_original_values": {
@@ -4466,9 +4709,12 @@
       },
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "c6c74718c2cfc0e1ca2654537f75b4087e3b2d10f9eb6a18e156b63de388b655"
     },
     {
       "table": "entries",
@@ -4517,11 +4763,21 @@
       "after": {
         "zh": {
           "title": "康熙五彩盖罐",
-          "content": "<p>“康熙五彩盖罐”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>",
-          "summary": "康熙五彩盖罐：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。",
-          "sources": []
+          "content": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>",
+          "summary": "馆藏出处待核，具体年代与归属暂未确认。",
+          "sources": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
-        "sources": [],
+        "sources": [
+          {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          }
+        ],
         "version": 5
       },
       "field_diffs": [
@@ -4546,7 +4802,12 @@
               "label": "British Museum·Jingdezhen porcelain"
             }
           ],
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/version",
@@ -4558,19 +4819,23 @@
           "path": "/zh/content",
           "operation": "replace",
           "before": "<p>大都会博物馆藏康熙五彩盖罐可用于研究清代景德镇外销与陈设瓷。</p>",
-          "after": "<p>“康熙五彩盖罐”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>"
+          "after": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
         },
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/zh/summary",
           "operation": "replace",
           "before": "大都会博物馆藏康熙五彩盖罐可用于研究清代景德镇外销与陈设瓷。",
-          "after": "康熙五彩盖罐：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。"
+          "after": "馆藏出处待核，具体年代与归属暂未确认。"
         }
       ],
       "rollback_original_values": {
@@ -4601,9 +4866,12 @@
       },
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "a13940a10315c42169d8cc80c1831eb48b12d168076b5a57e26babd9c5d93b99"
     },
     {
       "table": "entries",
@@ -4652,11 +4920,21 @@
       "after": {
         "zh": {
           "title": "康熙五彩人物像",
-          "content": "<p>“康熙五彩人物像”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>",
-          "summary": "康熙五彩人物像：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。",
-          "sources": []
+          "content": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>",
+          "summary": "馆藏出处待核，具体年代与归属暂未确认。",
+          "sources": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
-        "sources": [],
+        "sources": [
+          {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          }
+        ],
         "version": 5
       },
       "field_diffs": [
@@ -4681,7 +4959,12 @@
               "label": "British Museum·Jingdezhen porcelain"
             }
           ],
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/version",
@@ -4693,19 +4976,23 @@
           "path": "/zh/content",
           "operation": "replace",
           "before": "<p>大都会博物馆藏康熙五彩人物像显示景德镇釉上彩对立体瓷塑的应用。</p>",
-          "after": "<p>“康熙五彩人物像”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>"
+          "after": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
         },
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/zh/summary",
           "operation": "replace",
           "before": "大都会博物馆藏康熙五彩人物像显示景德镇釉上彩对立体瓷塑的应用。",
-          "after": "康熙五彩人物像：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。"
+          "after": "馆藏出处待核，具体年代与归属暂未确认。"
         }
       ],
       "rollback_original_values": {
@@ -4736,9 +5023,12 @@
       },
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "1ead982769bd9e6648c8ae62d0157c72309d2c1513d9bee32d90cb27a7603e7c"
     },
     {
       "table": "entries",
@@ -4787,11 +5077,21 @@
       "after": {
         "zh": {
           "title": "嘉靖至万历金襕手执壶",
-          "content": "<p>“嘉靖至万历金襕手执壶”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>",
-          "summary": "嘉靖至万历金襕手执壶：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。",
-          "sources": []
+          "content": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>",
+          "summary": "馆藏出处待核，具体年代与归属暂未确认。",
+          "sources": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
-        "sources": [],
+        "sources": [
+          {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          }
+        ],
         "version": 5
       },
       "field_diffs": [
@@ -4816,7 +5116,12 @@
               "label": "British Museum·Jingdezhen porcelain"
             }
           ],
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/version",
@@ -4828,19 +5133,23 @@
           "path": "/zh/content",
           "operation": "replace",
           "before": "<p>英国博物馆藏嘉靖至万历景德镇金襕手执壶记录了红、绿彩与金彩的组合工艺。</p>",
-          "after": "<p>“嘉靖至万历金襕手执壶”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>"
+          "after": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
         },
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/zh/summary",
           "operation": "replace",
           "before": "英国博物馆藏嘉靖至万历景德镇金襕手执壶记录了红、绿彩与金彩的组合工艺。",
-          "after": "嘉靖至万历金襕手执壶：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。"
+          "after": "馆藏出处待核，具体年代与归属暂未确认。"
         }
       ],
       "rollback_original_values": {
@@ -4871,9 +5180,12 @@
       },
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "c809148a9695bbf3ae7a6c17026fe1b8ab62623b587923af45aacafae0a13f5c"
     },
     {
       "table": "entries",
@@ -4922,11 +5234,21 @@
       "after": {
         "zh": {
           "title": "康熙五彩盖执壶",
-          "content": "<p>“康熙五彩盖执壶”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>",
-          "summary": "康熙五彩盖执壶：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。",
-          "sources": []
+          "content": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>",
+          "summary": "馆藏出处待核，具体年代与归属暂未确认。",
+          "sources": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
-        "sources": [],
+        "sources": [
+          {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          }
+        ],
         "version": 5
       },
       "field_diffs": [
@@ -4951,7 +5273,12 @@
               "label": "British Museum·Jingdezhen porcelain"
             }
           ],
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/version",
@@ -4963,19 +5290,23 @@
           "path": "/zh/content",
           "operation": "replace",
           "before": "<p>大都会博物馆藏康熙五彩盖执壶是复杂器形与釉上彩装饰的案例。</p>",
-          "after": "<p>“康熙五彩盖执壶”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>"
+          "after": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
         },
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/zh/summary",
           "operation": "replace",
           "before": "大都会博物馆藏康熙五彩盖执壶是复杂器形与釉上彩装饰的案例。",
-          "after": "康熙五彩盖执壶：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。"
+          "after": "馆藏出处待核，具体年代与归属暂未确认。"
         }
       ],
       "rollback_original_values": {
@@ -5006,9 +5337,12 @@
       },
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "24f065d1ed3135353fb34c6c6534010d3d0e4a410daa2525fa86e72298142c78"
     },
     {
       "table": "entries",
@@ -5057,11 +5391,29 @@
       "after": {
         "zh": {
           "title": "宣德青花龙纹盘",
-          "content": "<p>“宣德青花龙纹盘”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>",
-          "summary": "宣德青花龙纹盘：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。",
-          "sources": []
+          "content": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>",
+          "summary": "馆藏出处待核，具体年代与归属暂未确认。",
+          "sources": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            },
+            {
+              "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+              "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
-        "sources": [],
+        "sources": [
+          {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          },
+          {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+          }
+        ],
         "version": 5
       },
       "field_diffs": [
@@ -5086,7 +5438,16 @@
               "label": "British Museum·Jingdezhen porcelain"
             }
           ],
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            },
+            {
+              "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+              "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/version",
@@ -5098,19 +5459,27 @@
           "path": "/zh/content",
           "operation": "replace",
           "before": "<p>宣德景德镇青花龙纹盘可用于研究明代早期青花纹样和宫廷生产。</p>",
-          "after": "<p>“宣德青花龙纹盘”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>"
+          "after": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
         },
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            },
+            {
+              "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+              "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/zh/summary",
           "operation": "replace",
           "before": "宣德景德镇青花龙纹盘可用于研究明代早期青花纹样和宫廷生产。",
-          "after": "宣德青花龙纹盘：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。"
+          "after": "馆藏出处待核，具体年代与归属暂未确认。"
         }
       ],
       "rollback_original_values": {
@@ -5141,9 +5510,14 @@
       },
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022",
+        "C009",
+        "C019"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "e62cf73aa054a5e35fb176725172c2939407b95add5694d41ec10062b8e9d784"
     },
     {
       "table": "entries",
@@ -5192,11 +5566,29 @@
       "after": {
         "zh": {
           "title": "宣德青花石榴缠枝莲纹菊瓣碗",
-          "content": "<p>“宣德青花石榴缠枝莲纹菊瓣碗”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>",
-          "summary": "宣德青花石榴缠枝莲纹菊瓣碗：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。",
-          "sources": []
+          "content": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>",
+          "summary": "馆藏出处待核，具体年代与归属暂未确认。",
+          "sources": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            },
+            {
+              "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+              "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
-        "sources": [],
+        "sources": [
+          {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          },
+          {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+          }
+        ],
         "version": 5
       },
       "field_diffs": [
@@ -5221,7 +5613,16 @@
               "label": "British Museum·Jingdezhen porcelain"
             }
           ],
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            },
+            {
+              "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+              "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/version",
@@ -5233,19 +5634,27 @@
           "path": "/zh/content",
           "operation": "replace",
           "before": "<p>大都会博物馆藏宣德景德镇窑青花石榴缠枝莲纹菊瓣碗提供了宫廷图式的实物案例。</p>",
-          "after": "<p>“宣德青花石榴缠枝莲纹菊瓣碗”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>"
+          "after": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
         },
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            },
+            {
+              "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+              "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/zh/summary",
           "operation": "replace",
           "before": "大都会博物馆藏宣德景德镇窑青花石榴缠枝莲纹菊瓣碗提供了宫廷图式的实物案例。",
-          "after": "宣德青花石榴缠枝莲纹菊瓣碗：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。"
+          "after": "馆藏出处待核，具体年代与归属暂未确认。"
         }
       ],
       "rollback_original_values": {
@@ -5276,9 +5685,14 @@
       },
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022",
+        "C009",
+        "C019"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "5b34fe8fd32014601d10c431bfb02b780d4f21235c2daaa6644f478b3147ba35"
     },
     {
       "table": "entries",
@@ -5327,11 +5741,21 @@
       "after": {
         "zh": {
           "title": "宣德铜红釉碗",
-          "content": "<p>“宣德铜红釉碗”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>",
-          "summary": "宣德铜红釉碗：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。",
-          "sources": []
+          "content": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>",
+          "summary": "馆藏出处待核，具体年代与归属暂未确认。",
+          "sources": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
-        "sources": [],
+        "sources": [
+          {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          }
+        ],
         "version": 5
       },
       "field_diffs": [
@@ -5356,7 +5780,12 @@
               "label": "British Museum·Jingdezhen porcelain"
             }
           ],
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/version",
@@ -5368,19 +5797,23 @@
           "path": "/zh/content",
           "operation": "replace",
           "before": "<p>英国博物馆藏宣德铜红釉碗可用于研究高温铜红釉与明代御窑款识。</p>",
-          "after": "<p>“宣德铜红釉碗”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>"
+          "after": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
         },
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/zh/summary",
           "operation": "replace",
           "before": "英国博物馆藏宣德铜红釉碗可用于研究高温铜红釉与明代御窑款识。",
-          "after": "宣德铜红釉碗：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。"
+          "after": "馆藏出处待核，具体年代与归属暂未确认。"
         }
       ],
       "rollback_original_values": {
@@ -5411,9 +5844,12 @@
       },
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "fbe2e3a2336b1b8d72f363e05d422a59a515935014aae4391e9ce598541b0bfa"
     },
     {
       "table": "entries",
@@ -5462,11 +5898,21 @@
       "after": {
         "zh": {
           "title": "康熙黑釉瓶",
-          "content": "<p>“康熙黑釉瓶”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>",
-          "summary": "康熙黑釉瓶：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。",
-          "sources": []
+          "content": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>",
+          "summary": "馆藏出处待核，具体年代与归属暂未确认。",
+          "sources": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
-        "sources": [],
+        "sources": [
+          {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          }
+        ],
         "version": 5
       },
       "field_diffs": [
@@ -5491,7 +5937,12 @@
               "label": "British Museum·Jingdezhen porcelain"
             }
           ],
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/version",
@@ -5503,19 +5954,23 @@
           "path": "/zh/content",
           "operation": "replace",
           "before": "<p>大都会博物馆藏康熙时期景德镇黑釉瓶展示了清代单色釉生产的一个实物类型。</p>",
-          "after": "<p>“康熙黑釉瓶”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>"
+          "after": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
         },
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/zh/summary",
           "operation": "replace",
           "before": "大都会博物馆藏康熙时期景德镇黑釉瓶展示了清代单色釉生产的一个实物类型。",
-          "after": "康熙黑釉瓶：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。"
+          "after": "馆藏出处待核，具体年代与归属暂未确认。"
         }
       ],
       "rollback_original_values": {
@@ -5546,9 +6001,12 @@
       },
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "f6ff8e0e685567f566d59e2d7fbfb88bf1ef920cc6a023c3df846d1de05aa802"
     },
     {
       "table": "entries",
@@ -5597,11 +6055,21 @@
       "after": {
         "zh": {
           "title": "雍正绿松石釉瓶",
-          "content": "<p>“雍正绿松石釉瓶”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>",
-          "summary": "雍正绿松石釉瓶：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。",
-          "sources": []
+          "content": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>",
+          "summary": "馆藏出处待核，具体年代与归属暂未确认。",
+          "sources": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
-        "sources": [],
+        "sources": [
+          {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          }
+        ],
         "version": 5
       },
       "field_diffs": [
@@ -5626,7 +6094,12 @@
               "label": "British Museum·Jingdezhen porcelain"
             }
           ],
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/version",
@@ -5638,19 +6111,23 @@
           "path": "/zh/content",
           "operation": "replace",
           "before": "<p>大都会博物馆藏雍正景德镇绿松石釉瓶提供清代单色釉器物案例。</p>",
-          "after": "<p>“雍正绿松石釉瓶”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>"
+          "after": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
         },
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/zh/summary",
           "operation": "replace",
           "before": "大都会博物馆藏雍正景德镇绿松石釉瓶提供清代单色釉器物案例。",
-          "after": "雍正绿松石釉瓶：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。"
+          "after": "馆藏出处待核，具体年代与归属暂未确认。"
         }
       ],
       "rollback_original_values": {
@@ -5681,9 +6158,12 @@
       },
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "efc1f4d9b910f0cfcb077f7ad23b6dd8d57cc118935d38123194f37a5ce19548"
     },
     {
       "table": "entries",
@@ -5732,11 +6212,21 @@
       "after": {
         "zh": {
           "title": "乾隆浅蓝釉瓶",
-          "content": "<p>“乾隆浅蓝釉瓶”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>",
-          "summary": "乾隆浅蓝釉瓶：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。",
-          "sources": []
+          "content": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>",
+          "summary": "馆藏出处待核，具体年代与归属暂未确认。",
+          "sources": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
-        "sources": [],
+        "sources": [
+          {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          }
+        ],
         "version": 5
       },
       "field_diffs": [
@@ -5761,7 +6251,12 @@
               "label": "British Museum·Jingdezhen porcelain"
             }
           ],
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/version",
@@ -5773,19 +6268,23 @@
           "path": "/zh/content",
           "operation": "replace",
           "before": "<p>大都会博物馆藏乾隆景德镇浅蓝釉瓶可作为清代颜色釉研究对象。</p>",
-          "after": "<p>“乾隆浅蓝釉瓶”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>"
+          "after": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
         },
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/zh/summary",
           "operation": "replace",
           "before": "大都会博物馆藏乾隆景德镇浅蓝釉瓶可作为清代颜色釉研究对象。",
-          "after": "乾隆浅蓝釉瓶：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。"
+          "after": "馆藏出处待核，具体年代与归属暂未确认。"
         }
       ],
       "rollback_original_values": {
@@ -5816,9 +6315,12 @@
       },
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "08806348d3a88c073f28a460d388bd51f5249049e3d87208031b49a72f7c9418"
     },
     {
       "table": "entries",
@@ -5867,11 +6369,21 @@
       "after": {
         "zh": {
           "title": "雍正刻花青釉瓶",
-          "content": "<p>“雍正刻花青釉瓶”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>",
-          "summary": "雍正刻花青釉瓶：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。",
-          "sources": []
+          "content": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>",
+          "summary": "馆藏出处待核，具体年代与归属暂未确认。",
+          "sources": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
-        "sources": [],
+        "sources": [
+          {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          }
+        ],
         "version": 5
       },
       "field_diffs": [
@@ -5896,7 +6408,12 @@
               "label": "British Museum·Jingdezhen porcelain"
             }
           ],
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/version",
@@ -5908,19 +6425,23 @@
           "path": "/zh/content",
           "operation": "replace",
           "before": "<p>大都会博物馆藏雍正景德镇刻花青釉瓶可用于研究胎釉与装饰技法结合。</p>",
-          "after": "<p>“雍正刻花青釉瓶”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>"
+          "after": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
         },
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/zh/summary",
           "operation": "replace",
           "before": "大都会博物馆藏雍正景德镇刻花青釉瓶可用于研究胎釉与装饰技法结合。",
-          "after": "雍正刻花青釉瓶：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。"
+          "after": "馆藏出处待核，具体年代与归属暂未确认。"
         }
       ],
       "rollback_original_values": {
@@ -5951,9 +6472,12 @@
       },
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "5a95c988ef271aed21ae3ac4e79d8beab84fc085a37ee18754ef7251ce93805c"
     },
     {
       "table": "entries",
@@ -6002,11 +6526,21 @@
       "after": {
         "zh": {
           "title": "康熙五彩釉上彩瓶",
-          "content": "<p>“康熙五彩釉上彩瓶”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>",
-          "summary": "康熙五彩釉上彩瓶：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。",
-          "sources": []
+          "content": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>",
+          "summary": "馆藏出处待核，具体年代与归属暂未确认。",
+          "sources": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
-        "sources": [],
+        "sources": [
+          {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          }
+        ],
         "version": 5
       },
       "field_diffs": [
@@ -6031,7 +6565,12 @@
               "label": "British Museum·Jingdezhen porcelain"
             }
           ],
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/version",
@@ -6043,19 +6582,23 @@
           "path": "/zh/content",
           "operation": "replace",
           "before": "<p>大都会博物馆藏康熙景德镇五彩瓶体现釉上彩在清代的成熟与多样化。</p>",
-          "after": "<p>“康熙五彩釉上彩瓶”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>"
+          "after": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
         },
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/zh/summary",
           "operation": "replace",
           "before": "大都会博物馆藏康熙景德镇五彩瓶体现釉上彩在清代的成熟与多样化。",
-          "after": "康熙五彩釉上彩瓶：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。"
+          "after": "馆藏出处待核，具体年代与归属暂未确认。"
         }
       ],
       "rollback_original_values": {
@@ -6086,9 +6629,12 @@
       },
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "4fb519b6d8bd49e98cc1eaf58eaa3c5d3d6668f8c56aaa2ccfaa8ea04c81e2c7"
     },
     {
       "table": "entries",
@@ -6137,11 +6683,21 @@
       "after": {
         "zh": {
           "title": "康熙五彩描金瓶",
-          "content": "<p>“康熙五彩描金瓶”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>",
-          "summary": "康熙五彩描金瓶：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。",
-          "sources": []
+          "content": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>",
+          "summary": "馆藏出处待核，具体年代与归属暂未确认。",
+          "sources": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
-        "sources": [],
+        "sources": [
+          {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          }
+        ],
         "version": 5
       },
       "field_diffs": [
@@ -6166,7 +6722,12 @@
               "label": "British Museum·Jingdezhen porcelain"
             }
           ],
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/version",
@@ -6178,19 +6739,23 @@
           "path": "/zh/content",
           "operation": "replace",
           "before": "<p>大都会博物馆藏康熙五彩描金瓶可用于研究釉上彩与金彩组合。</p>",
-          "after": "<p>“康熙五彩描金瓶”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>"
+          "after": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
         },
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/zh/summary",
           "operation": "replace",
           "before": "大都会博物馆藏康熙五彩描金瓶可用于研究釉上彩与金彩组合。",
-          "after": "康熙五彩描金瓶：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。"
+          "after": "馆藏出处待核，具体年代与归属暂未确认。"
         }
       ],
       "rollback_original_values": {
@@ -6221,9 +6786,12 @@
       },
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "1cde127f51099f6f8782968df734b0ceefaabeb7065a1fd042d3ac99324dc733"
     },
     {
       "table": "entries",
@@ -6272,11 +6840,21 @@
       "after": {
         "zh": {
           "title": "康熙五彩蒙太斯酒钵",
-          "content": "<p>“康熙五彩蒙太斯酒钵”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>",
-          "summary": "康熙五彩蒙太斯酒钵：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。",
-          "sources": []
+          "content": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>",
+          "summary": "馆藏出处待核，具体年代与归属暂未确认。",
+          "sources": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
-        "sources": [],
+        "sources": [
+          {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          }
+        ],
         "version": 5
       },
       "field_diffs": [
@@ -6301,7 +6879,12 @@
               "label": "British Museum·Jingdezhen porcelain"
             }
           ],
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/version",
@@ -6313,19 +6896,23 @@
           "path": "/zh/content",
           "operation": "replace",
           "before": "<p>大都会博物馆藏康熙时期五彩酒钵体现中国瓷器进入欧洲生活器用语境的路径。</p>",
-          "after": "<p>“康熙五彩蒙太斯酒钵”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>"
+          "after": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
         },
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/zh/summary",
           "operation": "replace",
           "before": "大都会博物馆藏康熙时期五彩酒钵体现中国瓷器进入欧洲生活器用语境的路径。",
-          "after": "康熙五彩蒙太斯酒钵：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。"
+          "after": "馆藏出处待核，具体年代与归属暂未确认。"
         }
       ],
       "rollback_original_values": {
@@ -6356,9 +6943,12 @@
       },
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "9690c0e56e12dcb26c0b6bc80be51ca367c1592201f14006995628de66679c52"
     },
     {
       "table": "entries",
@@ -6407,11 +6997,29 @@
       "after": {
         "zh": {
           "title": "万历青花花卉纹盖罐",
-          "content": "<p>“万历青花花卉纹盖罐”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>",
-          "summary": "万历青花花卉纹盖罐：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。",
-          "sources": []
+          "content": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>",
+          "summary": "馆藏出处待核，具体年代与归属暂未确认。",
+          "sources": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            },
+            {
+              "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+              "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
-        "sources": [],
+        "sources": [
+          {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          },
+          {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+          }
+        ],
         "version": 5
       },
       "field_diffs": [
@@ -6436,7 +7044,16 @@
               "label": "British Museum·Jingdezhen porcelain"
             }
           ],
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            },
+            {
+              "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+              "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/version",
@@ -6448,19 +7065,27 @@
           "path": "/zh/content",
           "operation": "replace",
           "before": "<p>大都会博物馆藏万历景德镇青花盖罐可用于研究晚明器型与青花装饰。</p>",
-          "after": "<p>“万历青花花卉纹盖罐”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>"
+          "after": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
         },
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            },
+            {
+              "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+              "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/zh/summary",
           "operation": "replace",
           "before": "大都会博物馆藏万历景德镇青花盖罐可用于研究晚明器型与青花装饰。",
-          "after": "万历青花花卉纹盖罐：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。"
+          "after": "馆藏出处待核，具体年代与归属暂未确认。"
         }
       ],
       "rollback_original_values": {
@@ -6491,9 +7116,14 @@
       },
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022",
+        "C009",
+        "C019"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "2a8f8b850a05161d41a4312d83064cd12115a373c5101cab4a2858184b6407f4"
     },
     {
       "table": "entries",
@@ -6542,11 +7172,21 @@
       "after": {
         "zh": {
           "title": "乾隆御题诗文瓶",
-          "content": "<p>“乾隆御题诗文瓶”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>",
-          "summary": "乾隆御题诗文瓶：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。",
-          "sources": []
+          "content": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>",
+          "summary": "馆藏出处待核，具体年代与归属暂未确认。",
+          "sources": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
-        "sources": [],
+        "sources": [
+          {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          }
+        ],
         "version": 5
       },
       "field_diffs": [
@@ -6571,7 +7211,12 @@
               "label": "British Museum·Jingdezhen porcelain"
             }
           ],
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/version",
@@ -6583,19 +7228,23 @@
           "path": "/zh/content",
           "operation": "replace",
           "before": "<p>大都会博物馆藏乾隆时期景德镇御题诗文瓶显示瓷器与宫廷文学和装饰的结合。</p>",
-          "after": "<p>“乾隆御题诗文瓶”这一题名所指的单件器物尚未与可追溯的馆藏编号对应。现有参考资料中的宣德应龙纹高足杯和永乐铜红釉盘是其他对象，不能用来确认本页器物。</p><h2>资料限度</h2><p>在取得直接的馆藏记录前，暂不据此确认收藏机构、年代、尺寸、款识或作者，也不将相似器物图片作为本页对象图。题名中的年代和装饰称谓仍需逐项核实。</p>"
+          "after": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
         },
         {
           "path": "/zh/sources",
           "operation": "add",
-          "before_exists": false,
-          "after": []
+          "after": [
+            {
+              "url": "https://whc.unesco.org/en/decisions/9170/",
+              "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+            }
+          ]
         },
         {
           "path": "/zh/summary",
           "operation": "replace",
           "before": "大都会博物馆藏乾隆时期景德镇御题诗文瓶显示瓷器与宫廷文学和装饰的结合。",
-          "after": "乾隆御题诗文瓶：具体馆藏身份待核，现有资料不用于确认其编号、归属或年代。"
+          "after": "馆藏出处待核，具体年代与归属暂未确认。"
         }
       ],
       "rollback_original_values": {
@@ -6626,9 +7275,12 @@
       },
       "claim_ids": [
         "C026",
-        "C027"
+        "C027",
+        "C021",
+        "C022"
       ],
-      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。"
+      "risk": "新知识限列出的引用范围；来源移除不删除历史归档。待核提示不等于核实了器物身份。采用版本/哈希锁，不能覆盖之后的修改。",
+      "proposed_after_sha256": "698e8c14f2e7ea7c8821c2a64b41ffdad324e4aa4af6da0d23aad5c5e11a913a"
     }
   ],
   "entry_relations": [
@@ -6654,14 +7306,14 @@
         "note": "Copper-red and underglaze-red are closely related copper-based underglaze colour technologies."
       },
       "after": {
-        "note": "两者均涉及铜呈色，但装饰方法不同：铜红釉以釉层呈色，釉里红先用彩料描绘纹饰再罩透明釉；此关系用于工艺比较，不表示同一种釉下彩。 https://www.ihchina.cn/Article/Index/detail?id=24981"
+        "note": "铜红釉与釉里红均以铜呈色，但前者以釉层呈色，后者先绘饰再罩透明釉，装饰方法不同。"
       },
       "field_diffs": [
         {
           "path": "/note",
           "operation": "replace",
           "before": "Copper-red and underglaze-red are closely related copper-based underglaze colour technologies.",
-          "after": "两者均涉及铜呈色，但装饰方法不同：铜红釉以釉层呈色，釉里红先用彩料描绘纹饰再罩透明釉；此关系用于工艺比较，不表示同一种釉下彩。 https://www.ihchina.cn/Article/Index/detail?id=24981"
+          "after": "铜红釉与釉里红均以铜呈色，但前者以釉层呈色，后者先绘饰再罩透明釉，装饰方法不同。"
         }
       ],
       "claim_ids": [
@@ -6671,7 +7323,22 @@
         "note": "Copper-red and underglaze-red are closely related copper-based underglaze colour technologies."
       },
       "approval_status": "DRAFT_AWAITING_ONE_USER_APPROVAL",
-      "impact": "仅修正note的出处/语义；不更改端点、索引类型或证据等级。不自动为现存A+认证。"
+      "impact": "仅修正note的出处/语义；不更改端点、索引类型或证据等级。不自动为现存A+认证。",
+      "proposed_after_sha256": "6aeee5a421ef429bae48ac5ad6e53fbce4c76e63d6d45cc3a75312b4f40ce965",
+      "source_refs": [
+        {
+          "source_id": "copper",
+          "url": "https://www.ihchina.cn/Article/Index/detail?id=24981",
+          "title": "高冉：清代初期高温铜红釉烧造工艺及特点",
+          "claim_ids": [
+            "C015"
+          ],
+          "locators": [
+            "正文：元代釉里红与红釉比较段"
+          ]
+        }
+      ],
+      "source_refs_scope": "审核材料中的出处，不写入note或新增数据库字段；现有证据页面会直接显示note，故访客说明不附完整网址。"
     },
     {
       "table": "entry_relations",
@@ -6695,14 +7362,14 @@
         "note": "故宫博物院藏品资料将雍正仿钧新紫釉天球瓶置于景德镇清代御窑生产背景，并记载唐英自雍正六年驻景德镇御窑厂任协理官、长期管理窑务；该关系用于连接唐英与雍正时期御窑器物体系。"
       },
       "after": {
-        "note": "大都会艺术博物馆将雍正仿钧新紫釉瓶（14.40.163）的釉色再现置于唐英督陶背景中；这是生产管理与工艺背景，不是唐英亲手制作此瓶的证明。 https://www.metmuseum.org/art/collection/search/46080"
+        "note": "大都会艺术博物馆将雍正仿钧新紫釉瓶（14.40.163）置于唐英督陶背景中。这说明了器物的生产管理与工艺背景，不代表它由唐英亲手制作。"
       },
       "field_diffs": [
         {
           "path": "/note",
           "operation": "replace",
           "before": "故宫博物院藏品资料将雍正仿钧新紫釉天球瓶置于景德镇清代御窑生产背景，并记载唐英自雍正六年驻景德镇御窑厂任协理官、长期管理窑务；该关系用于连接唐英与雍正时期御窑器物体系。",
-          "after": "大都会艺术博物馆将雍正仿钧新紫釉瓶（14.40.163）的釉色再现置于唐英督陶背景中；这是生产管理与工艺背景，不是唐英亲手制作此瓶的证明。 https://www.metmuseum.org/art/collection/search/46080"
+          "after": "大都会艺术博物馆将雍正仿钧新紫釉瓶（14.40.163）置于唐英督陶背景中。这说明了器物的生产管理与工艺背景，不代表它由唐英亲手制作。"
         }
       ],
       "claim_ids": [
@@ -6713,7 +7380,24 @@
         "note": "故宫博物院藏品资料将雍正仿钧新紫釉天球瓶置于景德镇清代御窑生产背景，并记载唐英自雍正六年驻景德镇御窑厂任协理官、长期管理窑务；该关系用于连接唐英与雍正时期御窑器物体系。"
       },
       "approval_status": "DRAFT_AWAITING_ONE_USER_APPROVAL",
-      "impact": "仅修正note的出处/语义；不更改端点、索引类型或证据等级。不自动为现存A+认证。"
+      "impact": "仅修正note的出处/语义；不更改端点、索引类型或证据等级。不自动为现存A+认证。",
+      "proposed_after_sha256": "a19cd535faa1b654c10ad3644a68ab2fb5132b422eb07f6fa1c7fabf141e2a77",
+      "source_refs": [
+        {
+          "source_id": "met-jun",
+          "url": "https://www.metmuseum.org/art/collection/search/46080",
+          "title": "The Met：Bottle vase，14.40.163",
+          "claim_ids": [
+            "C005",
+            "C006"
+          ],
+          "locators": [
+            "Artwork Details",
+            "Overview首段"
+          ]
+        }
+      ],
+      "source_refs_scope": "审核材料中的出处，不写入note或新增数据库字段；现有证据页面会直接显示note，故访客说明不附完整网址。"
     },
     {
       "table": "entry_relations",
@@ -6737,14 +7421,14 @@
         "note": "Both document copper-based underglaze red technology in Jingdezhen; the relationship is technical."
       },
       "after": {
-        "note": "釉里红与铜红釉具有材料联系，须区分先绘饰再罩透明釉与直接施红色釉料；此关系是比较，不是工艺等同。 https://www.ihchina.cn/Article/Index/detail?id=24981"
+        "note": "釉里红先绘饰再罩透明釉，铜红釉则直接施红色釉料。两者以铜呈色，但装饰方法不同。"
       },
       "field_diffs": [
         {
           "path": "/note",
           "operation": "replace",
           "before": "Both document copper-based underglaze red technology in Jingdezhen; the relationship is technical.",
-          "after": "釉里红与铜红釉具有材料联系，须区分先绘饰再罩透明釉与直接施红色釉料；此关系是比较，不是工艺等同。 https://www.ihchina.cn/Article/Index/detail?id=24981"
+          "after": "釉里红先绘饰再罩透明釉，铜红釉则直接施红色釉料。两者以铜呈色，但装饰方法不同。"
         }
       ],
       "claim_ids": [
@@ -6754,99 +7438,25 @@
         "note": "Both document copper-based underglaze red technology in Jingdezhen; the relationship is technical."
       },
       "approval_status": "DRAFT_AWAITING_ONE_USER_APPROVAL",
-      "impact": "仅修正note的出处/语义；不更改端点、索引类型或证据等级。不自动为现存A+认证。"
+      "impact": "仅修正note的出处/语义；不更改端点、索引类型或证据等级。不自动为现存A+认证。",
+      "proposed_after_sha256": "8dbfed9c4c48f62250b959685bf9b3f5e8b5d512cfc604cf634004b408d714cb",
+      "source_refs": [
+        {
+          "source_id": "copper",
+          "url": "https://www.ihchina.cn/Article/Index/detail?id=24981",
+          "title": "高冉：清代初期高温铜红釉烧造工艺及特点",
+          "claim_ids": [
+            "C015"
+          ],
+          "locators": [
+            "正文：元代釉里红与红釉比较段"
+          ]
+        }
+      ],
+      "source_refs_scope": "审核材料中的出处，不写入note或新增数据库字段；现有证据页面会直接显示note，故访客说明不附完整网址。"
     }
   ],
-  "media_conditional_inserts": [
-    {
-      "table": "media",
-      "operation": "proposed_insert",
-      "entry_id": "a304713e-7c81-4c8a-9200-02e73076de5f",
-      "slug": "chenghua-doucai-chicken-cup",
-      "id": null,
-      "id_assignment": "批准后沿用数据库UUID默认值；不预造已存在的ID",
-      "expected_public_existing_rows": [],
-      "expected_public_existing_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-      "expected_entry_version": 4,
-      "expected_entry_record_sha256": "d5a1d6c77cd3e1d6d3d0392a827c6a6b6545fc343dd422cf1bd2e939a9281181",
-      "values": {
-        "entry_id": "a304713e-7c81-4c8a-9200-02e73076de5f",
-        "path": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/42515/1434930/main-image",
-        "title": "成化斗彩鸡缸杯 · 1987.85 · 大都会艺术博物馆",
-        "source": "https://www.metmuseum.org/art/collection/search/42515",
-        "source_url": "https://www.metmuseum.org/art/collection/search/42515",
-        "source_type": "museum",
-        "license": "CC0 / Public Domain (The Met Open Access)",
-        "creator": null,
-        "captured_at": null,
-        "location": null,
-        "usage_type": "object",
-        "source_tier": 1,
-        "is_primary": true,
-        "canonical_key": "https://www.metmuseum.org/art/collection/search/42515",
-        "status": "approved",
-        "review_state": "verified",
-        "verification_note": "对象页主体标注Public Domain，主图preload对应同一对象；许可按Met Open Access。原始照片作者未提供，不把博物馆写成摄影者。"
-      },
-      "claim_ids": [
-        "C001",
-        "C003",
-        "C029"
-      ],
-      "institution": "大都会艺术博物馆",
-      "photographer": "未提供，不填",
-      "license_verification": "对象页Public Domain与Met开放政策相互对应",
-      "delivery_condition": "公开对象页已核对，但直接图像GET受当前代理限制；正式插入前必须取得图像200响应并确认对应对象。不能将候选URL误报为图片已发布。",
-      "rollback": "事务内记录实际新UUID；恢复时只删除本次插入ID，禁止按entry_id批量删除。",
-      "sql_preflight": "public media_public为空不是隐藏media表也为空；批准后须用有权限的连接检查media真实行、唯一约束、RLS及现有主图，无重复后插入。",
-      "approval_status": "DRAFT_CONDITIONAL_IMAGE_PREVIEW_REQUIRED",
-      "production_applied": false
-    },
-    {
-      "table": "media",
-      "operation": "proposed_insert",
-      "entry_id": "8c6bad40-5b25-4a82-b9c7-43ec5e3d01cd",
-      "slug": "tang-ying-jun-vase",
-      "id": null,
-      "id_assignment": "批准后沿用数据库UUID默认值；不预造已存在的ID",
-      "expected_public_existing_rows": [],
-      "expected_public_existing_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-      "expected_entry_version": 4,
-      "expected_entry_record_sha256": "416437f41f118b720189f22927690fc21f55faa493460e076379770f4ee37297",
-      "values": {
-        "entry_id": "8c6bad40-5b25-4a82-b9c7-43ec5e3d01cd",
-        "path": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/46080/2520425/main-image",
-        "title": "雍正仿钧新紫釉天球瓶 · 14.40.163 · 大都会艺术博物馆",
-        "source": "https://www.metmuseum.org/art/collection/search/46080",
-        "source_url": "https://www.metmuseum.org/art/collection/search/46080",
-        "source_type": "museum",
-        "license": "CC0 / Public Domain (The Met Open Access)",
-        "creator": null,
-        "captured_at": null,
-        "location": null,
-        "usage_type": "object",
-        "source_tier": 1,
-        "is_primary": true,
-        "canonical_key": "https://www.metmuseum.org/art/collection/search/46080",
-        "status": "approved",
-        "review_state": "verified",
-        "verification_note": "对象页主体标注Public Domain，主图preload对应同一对象；许可按Met Open Access。原始照片作者未提供，不把博物馆写成摄影者。"
-      },
-      "claim_ids": [
-        "C005",
-        "C007",
-        "C029"
-      ],
-      "institution": "大都会艺术博物馆",
-      "photographer": "未提供，不填",
-      "license_verification": "对象页Public Domain与Met开放政策相互对应",
-      "delivery_condition": "公开对象页已核对，但直接图像GET受当前代理限制；正式插入前必须取得图像200响应并确认对应对象。不能将候选URL误报为图片已发布。",
-      "rollback": "事务内记录实际新UUID；恢复时只删除本次插入ID，禁止按entry_id批量删除。",
-      "sql_preflight": "public media_public为空不是隐藏media表也为空；批准后须用有权限的连接检查media真实行、唯一约束、RLS及现有主图，无重复后插入。",
-      "approval_status": "DRAFT_CONDITIONAL_IMAGE_PREVIEW_REQUIRED",
-      "production_applied": false
-    }
-  ],
+  "media_conditional_inserts": [],
   "unmodified": [
     "id",
     "slug",
@@ -6871,11 +7481,18 @@
     "核对当前RLS、角色、版本/audit触发器与列约束。不能根据公开GET推断写入能力",
     "使用SERIALIZABLE事务和锁超时；仅更新列出的zh/sources与note。版本/updated_at/updated_by按现行机制处理，不伪造当前用户身份",
     "预演事务ROLLBACK，保存实际diff摘要；比较sources与zh.sources，既有meta键/其他语言/关系端点不丢失",
-    "media必须检查真实表所有状态（不仅public view），对象主图200与许可、关联entry当前哈希；无重复时沿用默认UUID。条件不满足不插入",
     "先给用户最终live preview和备份信息，批准范围之外的数据不能写",
     "正式事务失败全部回滚；成功后再GET验证精确字段、版本，重生成250页并验SEO/Header/单层正文、检查实际网站",
     "恢复使用before的原字段值并锁定本次发布后哈希；version是历史守卫信息，是否恢复/递增按现行审计规则，不能盲目倒退版本",
-    "新增media恢复只按实际新UUID删除；其他图片记录不批量删除"
+    "本次media写入范围为0；两张有条件图片已排除，不得连带插入。"
   ],
-  "offline_preview": "当前仅离线字段差异和恢复演算通过，未执行数据库Dry Run，不报告生产已发布"
+  "offline_preview": "当前仅离线字段差异和恢复演算通过，未执行数据库Dry Run，不报告生产已发布",
+  "copyedit_main": "d669f0faeb97eaf48fa88955344f5f90578b1390",
+  "copyedit_snapshot_at_utc": "2026-10-08T12:03:37.805705+00:00",
+  "excluded_image_candidates": {
+    "count": 2,
+    "path": "relation-image-review.json",
+    "included_in_current_release": false,
+    "blocks_current_release": false
+  }
 }

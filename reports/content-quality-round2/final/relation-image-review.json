@@ -1583,14 +1583,14 @@
         "note": "Copper-red and underglaze-red are closely related copper-based underglaze colour technologies."
       },
       "after": {
-        "note": "两者均涉及铜呈色，但装饰方法不同：铜红釉以釉层呈色，釉里红先用彩料描绘纹饰再罩透明釉；此关系用于工艺比较，不表示同一种釉下彩。 https://www.ihchina.cn/Article/Index/detail?id=24981"
+        "note": "铜红釉与釉里红均以铜呈色，但前者以釉层呈色，后者先绘饰再罩透明釉，装饰方法不同。"
       },
       "field_diffs": [
         {
           "path": "/note",
           "operation": "replace",
           "before": "Copper-red and underglaze-red are closely related copper-based underglaze colour technologies.",
-          "after": "两者均涉及铜呈色，但装饰方法不同：铜红釉以釉层呈色，釉里红先用彩料描绘纹饰再罩透明釉；此关系用于工艺比较，不表示同一种釉下彩。 https://www.ihchina.cn/Article/Index/detail?id=24981"
+          "after": "铜红釉与釉里红均以铜呈色，但前者以釉层呈色，后者先绘饰再罩透明釉，装饰方法不同。"
         }
       ],
       "claim_ids": [
@@ -1600,7 +1600,22 @@
         "note": "Copper-red and underglaze-red are closely related copper-based underglaze colour technologies."
       },
       "approval_status": "DRAFT_AWAITING_ONE_USER_APPROVAL",
-      "impact": "仅修正note的出处/语义；不更改端点、索引类型或证据等级。不自动为现存A+认证。"
+      "impact": "仅修正note的出处/语义；不更改端点、索引类型或证据等级。不自动为现存A+认证。",
+      "proposed_after_sha256": "6aeee5a421ef429bae48ac5ad6e53fbce4c76e63d6d45cc3a75312b4f40ce965",
+      "source_refs": [
+        {
+          "source_id": "copper",
+          "url": "https://www.ihchina.cn/Article/Index/detail?id=24981",
+          "title": "高冉：清代初期高温铜红釉烧造工艺及特点",
+          "claim_ids": [
+            "C015"
+          ],
+          "locators": [
+            "正文：元代釉里红与红釉比较段"
+          ]
+        }
+      ],
+      "source_refs_scope": "审核材料中的出处，不写入note或新增数据库字段；现有证据页面会直接显示note，故访客说明不附完整网址。"
     },
     {
       "table": "entry_relations",
@@ -1624,14 +1639,14 @@
         "note": "故宫博物院藏品资料将雍正仿钧新紫釉天球瓶置于景德镇清代御窑生产背景，并记载唐英自雍正六年驻景德镇御窑厂任协理官、长期管理窑务；该关系用于连接唐英与雍正时期御窑器物体系。"
       },
       "after": {
-        "note": "大都会艺术博物馆将雍正仿钧新紫釉瓶（14.40.163）的釉色再现置于唐英督陶背景中；这是生产管理与工艺背景，不是唐英亲手制作此瓶的证明。 https://www.metmuseum.org/art/collection/search/46080"
+        "note": "大都会艺术博物馆将雍正仿钧新紫釉瓶（14.40.163）置于唐英督陶背景中。这说明了器物的生产管理与工艺背景，不代表它由唐英亲手制作。"
       },
       "field_diffs": [
         {
           "path": "/note",
           "operation": "replace",
           "before": "故宫博物院藏品资料将雍正仿钧新紫釉天球瓶置于景德镇清代御窑生产背景，并记载唐英自雍正六年驻景德镇御窑厂任协理官、长期管理窑务；该关系用于连接唐英与雍正时期御窑器物体系。",
-          "after": "大都会艺术博物馆将雍正仿钧新紫釉瓶（14.40.163）的釉色再现置于唐英督陶背景中；这是生产管理与工艺背景，不是唐英亲手制作此瓶的证明。 https://www.metmuseum.org/art/collection/search/46080"
+          "after": "大都会艺术博物馆将雍正仿钧新紫釉瓶（14.40.163）置于唐英督陶背景中。这说明了器物的生产管理与工艺背景，不代表它由唐英亲手制作。"
         }
       ],
       "claim_ids": [
@@ -1642,7 +1657,24 @@
         "note": "故宫博物院藏品资料将雍正仿钧新紫釉天球瓶置于景德镇清代御窑生产背景，并记载唐英自雍正六年驻景德镇御窑厂任协理官、长期管理窑务；该关系用于连接唐英与雍正时期御窑器物体系。"
       },
       "approval_status": "DRAFT_AWAITING_ONE_USER_APPROVAL",
-      "impact": "仅修正note的出处/语义；不更改端点、索引类型或证据等级。不自动为现存A+认证。"
+      "impact": "仅修正note的出处/语义；不更改端点、索引类型或证据等级。不自动为现存A+认证。",
+      "proposed_after_sha256": "a19cd535faa1b654c10ad3644a68ab2fb5132b422eb07f6fa1c7fabf141e2a77",
+      "source_refs": [
+        {
+          "source_id": "met-jun",
+          "url": "https://www.metmuseum.org/art/collection/search/46080",
+          "title": "The Met：Bottle vase，14.40.163",
+          "claim_ids": [
+            "C005",
+            "C006"
+          ],
+          "locators": [
+            "Artwork Details",
+            "Overview首段"
+          ]
+        }
+      ],
+      "source_refs_scope": "审核材料中的出处，不写入note或新增数据库字段；现有证据页面会直接显示note，故访客说明不附完整网址。"
     },
     {
       "table": "entry_relations",
@@ -1666,14 +1698,14 @@
         "note": "Both document copper-based underglaze red technology in Jingdezhen; the relationship is technical."
       },
       "after": {
-        "note": "釉里红与铜红釉具有材料联系，须区分先绘饰再罩透明釉与直接施红色釉料；此关系是比较，不是工艺等同。 https://www.ihchina.cn/Article/Index/detail?id=24981"
+        "note": "釉里红先绘饰再罩透明釉，铜红釉则直接施红色釉料。两者以铜呈色，但装饰方法不同。"
       },
       "field_diffs": [
         {
           "path": "/note",
           "operation": "replace",
           "before": "Both document copper-based underglaze red technology in Jingdezhen; the relationship is technical.",
-          "after": "釉里红与铜红釉具有材料联系，须区分先绘饰再罩透明釉与直接施红色釉料；此关系是比较，不是工艺等同。 https://www.ihchina.cn/Article/Index/detail?id=24981"
+          "after": "釉里红先绘饰再罩透明釉，铜红釉则直接施红色釉料。两者以铜呈色，但装饰方法不同。"
         }
       ],
       "claim_ids": [
@@ -1683,7 +1715,22 @@
         "note": "Both document copper-based underglaze red technology in Jingdezhen; the relationship is technical."
       },
       "approval_status": "DRAFT_AWAITING_ONE_USER_APPROVAL",
-      "impact": "仅修正note的出处/语义；不更改端点、索引类型或证据等级。不自动为现存A+认证。"
+      "impact": "仅修正note的出处/语义；不更改端点、索引类型或证据等级。不自动为现存A+认证。",
+      "proposed_after_sha256": "8dbfed9c4c48f62250b959685bf9b3f5e8b5d512cfc604cf634004b408d714cb",
+      "source_refs": [
+        {
+          "source_id": "copper",
+          "url": "https://www.ihchina.cn/Article/Index/detail?id=24981",
+          "title": "高冉：清代初期高温铜红釉烧造工艺及特点",
+          "claim_ids": [
+            "C015"
+          ],
+          "locators": [
+            "正文：元代釉里红与红釉比较段"
+          ]
+        }
+      ],
+      "source_refs_scope": "审核材料中的出处，不写入note或新增数据库字段；现有证据页面会直接显示note，故访客说明不附完整网址。"
     }
   ],
   "image_insert_drafts": [
@@ -1728,8 +1775,10 @@
       "delivery_condition": "公开对象页已核对，但直接图像GET受当前代理限制；正式插入前必须取得图像200响应并确认对应对象。不能将候选URL误报为图片已发布。",
       "rollback": "事务内记录实际新UUID；恢复时只删除本次插入ID，禁止按entry_id批量删除。",
       "sql_preflight": "public media_public为空不是隐藏media表也为空；批准后须用有权限的连接检查media真实行、唯一约束、RLS及现有主图，无重复后插入。",
-      "approval_status": "DRAFT_CONDITIONAL_IMAGE_PREVIEW_REQUIRED",
-      "production_applied": false
+      "approval_status": "EXCLUDED_FROM_CURRENT_RELEASE_CONDITIONAL_REVIEW_ONLY",
+      "production_applied": false,
+      "included_in_current_release": false,
+      "exclusion_reason": "真实图片响应、许可适用性及真实media全状态记录尚未完成联合核验；本次43条百科及3条关系发布不包含任何media写入。"
     },
     {
       "table": "media",
@@ -1772,8 +1821,10 @@
       "delivery_condition": "公开对象页已核对，但直接图像GET受当前代理限制；正式插入前必须取得图像200响应并确认对应对象。不能将候选URL误报为图片已发布。",
       "rollback": "事务内记录实际新UUID；恢复时只删除本次插入ID，禁止按entry_id批量删除。",
       "sql_preflight": "public media_public为空不是隐藏media表也为空；批准后须用有权限的连接检查media真实行、唯一约束、RLS及现有主图，无重复后插入。",
-      "approval_status": "DRAFT_CONDITIONAL_IMAGE_PREVIEW_REQUIRED",
-      "production_applied": false
+      "approval_status": "EXCLUDED_FROM_CURRENT_RELEASE_CONDITIONAL_REVIEW_ONLY",
+      "production_applied": false,
+      "included_in_current_release": false,
+      "exclusion_reason": "真实图片响应、许可适用性及真实media全状态记录尚未完成联合核验；本次43条百科及3条关系发布不包含任何media写入。"
     }
   ],
   "classification_decision": "本轮不迁移category，不改slug。全球类的瓷片/地层/款识是研究主题，现有分类本身不是可证明史实错误；人物中的工匠/窑主是群体索引。若改分类会影响Entry目录、搜索、地图、世界网络与417条entry_worlds，需要另有分类规则，不据字面直接迁移。",
@@ -1791,5 +1842,12 @@
     "故宫来源可信不等于CC0；不新增许可不明图",
     "文献复用器物图不能作为报告封面；既有media版权字段不编造",
     "两张拟增加的Met图片不写入、不硬编码前端；直接图像和media真实表审查为正式发布条件"
-  ]
+  ],
+  "current_release_media_write_count": 0,
+  "note_display_review": {
+    "file": "docs/javascripts/evidence-chain.js",
+    "line": 38,
+    "behavior": "原始关系记录详情会直接显示relation.note；因此三条拟用note移除URL，出处保留在source_refs和source-evidence.json。",
+    "frontend_changed": false
+  }
 }

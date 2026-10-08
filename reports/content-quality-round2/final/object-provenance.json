@@ -36,7 +36,74 @@
       ],
       "minimum_safe_draft_slug": "yongzheng-celadon-ewer",
       "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
-      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效",
+      "source_review": [
+        {
+          "original": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO·48 COM 8B.16·2026"
+          },
+          "supports_specific_object_identity": false,
+          "action": "保留一般背景",
+          "proposed": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          },
+          "source_id": "unesco",
+          "claim_ids": [
+            "C021",
+            "C022"
+          ],
+          "scope": "景德镇手工瓷业的资源与生产组织背景；不证明本器物产地、年代、归属或馆藏号。"
+        },
+        {
+          "original": {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A·Chinese blue-and-white ceramics"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除不直接相关的背景资料",
+          "source_id": "va",
+          "claim_ids": [
+            "C009",
+            "C019"
+          ],
+          "scope": "青花工艺与贸易概述；不确认本器物身份，也不用于证明釉里红、金襕手、斗彩或其他釉彩品种。"
+        },
+        {
+          "original": {
+            "url": "https://www.metmuseum.org/art/collection/search/42507",
+            "label": "The Met·Jingdezhen porcelain collection"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "met-stem",
+          "claim_ids": [
+            "C026"
+          ],
+          "scope": "指向宣德青花应龙纹高足杯1991.253.40；不是本条目器物，不再作为其对象出处。"
+        },
+        {
+          "original": {
+            "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+            "label": "British Museum·Jingdezhen porcelain"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "bm-red",
+          "claim_ids": [
+            "C027"
+          ],
+          "scope": "指向永乐铜红釉盘PDF.560；不是本条目器物，不再作为其对象出处。"
+        }
+      ],
+      "retained_background_sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
+      "minimum_safe_draft_content_html": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
     },
     {
       "id": "ccbf4313-6365-4218-b8c7-a7d80c54c796",
@@ -74,7 +141,74 @@
       ],
       "minimum_safe_draft_slug": "kangxi-peachbloom-vase",
       "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
-      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效",
+      "source_review": [
+        {
+          "original": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO·48 COM 8B.16·2026"
+          },
+          "supports_specific_object_identity": false,
+          "action": "保留一般背景",
+          "proposed": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          },
+          "source_id": "unesco",
+          "claim_ids": [
+            "C021",
+            "C022"
+          ],
+          "scope": "景德镇手工瓷业的资源与生产组织背景；不证明本器物产地、年代、归属或馆藏号。"
+        },
+        {
+          "original": {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A·Chinese blue-and-white ceramics"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除不直接相关的背景资料",
+          "source_id": "va",
+          "claim_ids": [
+            "C009",
+            "C019"
+          ],
+          "scope": "青花工艺与贸易概述；不确认本器物身份，也不用于证明釉里红、金襕手、斗彩或其他釉彩品种。"
+        },
+        {
+          "original": {
+            "url": "https://www.metmuseum.org/art/collection/search/42507",
+            "label": "The Met·Jingdezhen porcelain collection"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "met-stem",
+          "claim_ids": [
+            "C026"
+          ],
+          "scope": "指向宣德青花应龙纹高足杯1991.253.40；不是本条目器物，不再作为其对象出处。"
+        },
+        {
+          "original": {
+            "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+            "label": "British Museum·Jingdezhen porcelain"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "bm-red",
+          "claim_ids": [
+            "C027"
+          ],
+          "scope": "指向永乐铜红釉盘PDF.560；不是本条目器物，不再作为其对象出处。"
+        }
+      ],
+      "retained_background_sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
+      "minimum_safe_draft_content_html": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
     },
     {
       "id": "7c5e8a4d-7980-4166-a707-c514d1e40762",
@@ -112,7 +246,74 @@
       ],
       "minimum_safe_draft_slug": "kangxi-famille-verte-dragon",
       "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
-      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效",
+      "source_review": [
+        {
+          "original": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO·48 COM 8B.16·2026"
+          },
+          "supports_specific_object_identity": false,
+          "action": "保留一般背景",
+          "proposed": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          },
+          "source_id": "unesco",
+          "claim_ids": [
+            "C021",
+            "C022"
+          ],
+          "scope": "景德镇手工瓷业的资源与生产组织背景；不证明本器物产地、年代、归属或馆藏号。"
+        },
+        {
+          "original": {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A·Chinese blue-and-white ceramics"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除不直接相关的背景资料",
+          "source_id": "va",
+          "claim_ids": [
+            "C009",
+            "C019"
+          ],
+          "scope": "青花工艺与贸易概述；不确认本器物身份，也不用于证明釉里红、金襕手、斗彩或其他釉彩品种。"
+        },
+        {
+          "original": {
+            "url": "https://www.metmuseum.org/art/collection/search/42507",
+            "label": "The Met·Jingdezhen porcelain collection"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "met-stem",
+          "claim_ids": [
+            "C026"
+          ],
+          "scope": "指向宣德青花应龙纹高足杯1991.253.40；不是本条目器物，不再作为其对象出处。"
+        },
+        {
+          "original": {
+            "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+            "label": "British Museum·Jingdezhen porcelain"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "bm-red",
+          "claim_ids": [
+            "C027"
+          ],
+          "scope": "指向永乐铜红釉盘PDF.560；不是本条目器物，不再作为其对象出处。"
+        }
+      ],
+      "retained_background_sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
+      "minimum_safe_draft_content_html": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
     },
     {
       "id": "05c0a2b6-5c35-471c-96db-fdc1c667afd1",
@@ -150,7 +351,74 @@
       ],
       "minimum_safe_draft_slug": "yongzheng-doucai-bamboo-cup",
       "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
-      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效",
+      "source_review": [
+        {
+          "original": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO·48 COM 8B.16·2026"
+          },
+          "supports_specific_object_identity": false,
+          "action": "保留一般背景",
+          "proposed": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          },
+          "source_id": "unesco",
+          "claim_ids": [
+            "C021",
+            "C022"
+          ],
+          "scope": "景德镇手工瓷业的资源与生产组织背景；不证明本器物产地、年代、归属或馆藏号。"
+        },
+        {
+          "original": {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A·Chinese blue-and-white ceramics"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除不直接相关的背景资料",
+          "source_id": "va",
+          "claim_ids": [
+            "C009",
+            "C019"
+          ],
+          "scope": "青花工艺与贸易概述；不确认本器物身份，也不用于证明釉里红、金襕手、斗彩或其他釉彩品种。"
+        },
+        {
+          "original": {
+            "url": "https://www.metmuseum.org/art/collection/search/42507",
+            "label": "The Met·Jingdezhen porcelain collection"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "met-stem",
+          "claim_ids": [
+            "C026"
+          ],
+          "scope": "指向宣德青花应龙纹高足杯1991.253.40；不是本条目器物，不再作为其对象出处。"
+        },
+        {
+          "original": {
+            "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+            "label": "British Museum·Jingdezhen porcelain"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "bm-red",
+          "claim_ids": [
+            "C027"
+          ],
+          "scope": "指向永乐铜红釉盘PDF.560；不是本条目器物，不再作为其对象出处。"
+        }
+      ],
+      "retained_background_sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
+      "minimum_safe_draft_content_html": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
     },
     {
       "id": "22dfaa6d-d756-47e4-b50b-95d1c53a80f5",
@@ -188,7 +456,82 @@
       ],
       "minimum_safe_draft_slug": "ming-landscape-dish",
       "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
-      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效",
+      "source_review": [
+        {
+          "original": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO·48 COM 8B.16·2026"
+          },
+          "supports_specific_object_identity": false,
+          "action": "保留一般背景",
+          "proposed": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          },
+          "source_id": "unesco",
+          "claim_ids": [
+            "C021",
+            "C022"
+          ],
+          "scope": "景德镇手工瓷业的资源与生产组织背景；不证明本器物产地、年代、归属或馆藏号。"
+        },
+        {
+          "original": {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A·Chinese blue-and-white ceramics"
+          },
+          "supports_specific_object_identity": false,
+          "action": "保留一般背景",
+          "source_id": "va",
+          "claim_ids": [
+            "C009",
+            "C019"
+          ],
+          "scope": "青花工艺与贸易概述；不确认本器物身份，也不用于证明釉里红、金襕手、斗彩或其他釉彩品种。",
+          "proposed": {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+          }
+        },
+        {
+          "original": {
+            "url": "https://www.metmuseum.org/art/collection/search/42507",
+            "label": "The Met·Jingdezhen porcelain collection"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "met-stem",
+          "claim_ids": [
+            "C026"
+          ],
+          "scope": "指向宣德青花应龙纹高足杯1991.253.40；不是本条目器物，不再作为其对象出处。"
+        },
+        {
+          "original": {
+            "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+            "label": "British Museum·Jingdezhen porcelain"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "bm-red",
+          "claim_ids": [
+            "C027"
+          ],
+          "scope": "指向永乐铜红釉盘PDF.560；不是本条目器物，不再作为其对象出处。"
+        }
+      ],
+      "retained_background_sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+        }
+      ],
+      "minimum_safe_draft_content_html": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
     },
     {
       "id": "517b9031-c7e7-4635-936c-f99928938776",
@@ -226,7 +569,74 @@
       ],
       "minimum_safe_draft_slug": "ming-kinrande-jar",
       "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
-      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效",
+      "source_review": [
+        {
+          "original": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO·48 COM 8B.16·2026"
+          },
+          "supports_specific_object_identity": false,
+          "action": "保留一般背景",
+          "proposed": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          },
+          "source_id": "unesco",
+          "claim_ids": [
+            "C021",
+            "C022"
+          ],
+          "scope": "景德镇手工瓷业的资源与生产组织背景；不证明本器物产地、年代、归属或馆藏号。"
+        },
+        {
+          "original": {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A·Chinese blue-and-white ceramics"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除不直接相关的背景资料",
+          "source_id": "va",
+          "claim_ids": [
+            "C009",
+            "C019"
+          ],
+          "scope": "青花工艺与贸易概述；不确认本器物身份，也不用于证明釉里红、金襕手、斗彩或其他釉彩品种。"
+        },
+        {
+          "original": {
+            "url": "https://www.metmuseum.org/art/collection/search/42507",
+            "label": "The Met·Jingdezhen porcelain collection"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "met-stem",
+          "claim_ids": [
+            "C026"
+          ],
+          "scope": "指向宣德青花应龙纹高足杯1991.253.40；不是本条目器物，不再作为其对象出处。"
+        },
+        {
+          "original": {
+            "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+            "label": "British Museum·Jingdezhen porcelain"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "bm-red",
+          "claim_ids": [
+            "C027"
+          ],
+          "scope": "指向永乐铜红釉盘PDF.560；不是本条目器物，不再作为其对象出处。"
+        }
+      ],
+      "retained_background_sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
+      "minimum_safe_draft_content_html": "<p>相关器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
     },
     {
       "id": "3a9fe43e-e09e-4677-a848-88a801b39397",
@@ -264,7 +674,82 @@
       ],
       "minimum_safe_draft_slug": "jiajing-red-ground-dish",
       "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
-      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效",
+      "source_review": [
+        {
+          "original": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO·48 COM 8B.16·2026"
+          },
+          "supports_specific_object_identity": false,
+          "action": "保留一般背景",
+          "proposed": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          },
+          "source_id": "unesco",
+          "claim_ids": [
+            "C021",
+            "C022"
+          ],
+          "scope": "景德镇手工瓷业的资源与生产组织背景；不证明本器物产地、年代、归属或馆藏号。"
+        },
+        {
+          "original": {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A·Chinese blue-and-white ceramics"
+          },
+          "supports_specific_object_identity": false,
+          "action": "保留一般背景",
+          "source_id": "va",
+          "claim_ids": [
+            "C009",
+            "C019"
+          ],
+          "scope": "青花工艺与贸易概述；不确认本器物身份，也不用于证明釉里红、金襕手、斗彩或其他釉彩品种。",
+          "proposed": {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+          }
+        },
+        {
+          "original": {
+            "url": "https://www.metmuseum.org/art/collection/search/42507",
+            "label": "The Met·Jingdezhen porcelain collection"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "met-stem",
+          "claim_ids": [
+            "C026"
+          ],
+          "scope": "指向宣德青花应龙纹高足杯1991.253.40；不是本条目器物，不再作为其对象出处。"
+        },
+        {
+          "original": {
+            "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+            "label": "British Museum·Jingdezhen porcelain"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "bm-red",
+          "claim_ids": [
+            "C027"
+          ],
+          "scope": "指向永乐铜红釉盘PDF.560；不是本条目器物，不再作为其对象出处。"
+        }
+      ],
+      "retained_background_sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+        }
+      ],
+      "minimum_safe_draft_content_html": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
     },
     {
       "id": "2975b66d-ac4a-453c-8cdb-f5165ee10271",
@@ -302,7 +787,82 @@
       ],
       "minimum_safe_draft_slug": "qing-peach-shaped-ewer",
       "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
-      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效",
+      "source_review": [
+        {
+          "original": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO·48 COM 8B.16·2026"
+          },
+          "supports_specific_object_identity": false,
+          "action": "保留一般背景",
+          "proposed": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          },
+          "source_id": "unesco",
+          "claim_ids": [
+            "C021",
+            "C022"
+          ],
+          "scope": "景德镇手工瓷业的资源与生产组织背景；不证明本器物产地、年代、归属或馆藏号。"
+        },
+        {
+          "original": {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A·Chinese blue-and-white ceramics"
+          },
+          "supports_specific_object_identity": false,
+          "action": "保留一般背景",
+          "source_id": "va",
+          "claim_ids": [
+            "C009",
+            "C019"
+          ],
+          "scope": "青花工艺与贸易概述；不确认本器物身份，也不用于证明釉里红、金襕手、斗彩或其他釉彩品种。",
+          "proposed": {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+          }
+        },
+        {
+          "original": {
+            "url": "https://www.metmuseum.org/art/collection/search/42507",
+            "label": "The Met·Jingdezhen porcelain collection"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "met-stem",
+          "claim_ids": [
+            "C026"
+          ],
+          "scope": "指向宣德青花应龙纹高足杯1991.253.40；不是本条目器物，不再作为其对象出处。"
+        },
+        {
+          "original": {
+            "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+            "label": "British Museum·Jingdezhen porcelain"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "bm-red",
+          "claim_ids": [
+            "C027"
+          ],
+          "scope": "指向永乐铜红釉盘PDF.560；不是本条目器物，不再作为其对象出处。"
+        }
+      ],
+      "retained_background_sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+        }
+      ],
+      "minimum_safe_draft_content_html": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
     },
     {
       "id": "1b28709f-ffb4-432f-a7ae-6a76f62947a2",
@@ -340,7 +900,74 @@
       ],
       "minimum_safe_draft_slug": "kangxi-oxblood-vase",
       "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
-      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效",
+      "source_review": [
+        {
+          "original": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO·48 COM 8B.16·2026"
+          },
+          "supports_specific_object_identity": false,
+          "action": "保留一般背景",
+          "proposed": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          },
+          "source_id": "unesco",
+          "claim_ids": [
+            "C021",
+            "C022"
+          ],
+          "scope": "景德镇手工瓷业的资源与生产组织背景；不证明本器物产地、年代、归属或馆藏号。"
+        },
+        {
+          "original": {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A·Chinese blue-and-white ceramics"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除不直接相关的背景资料",
+          "source_id": "va",
+          "claim_ids": [
+            "C009",
+            "C019"
+          ],
+          "scope": "青花工艺与贸易概述；不确认本器物身份，也不用于证明釉里红、金襕手、斗彩或其他釉彩品种。"
+        },
+        {
+          "original": {
+            "url": "https://www.metmuseum.org/art/collection/search/42507",
+            "label": "The Met·Jingdezhen porcelain collection"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "met-stem",
+          "claim_ids": [
+            "C026"
+          ],
+          "scope": "指向宣德青花应龙纹高足杯1991.253.40；不是本条目器物，不再作为其对象出处。"
+        },
+        {
+          "original": {
+            "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+            "label": "British Museum·Jingdezhen porcelain"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "bm-red",
+          "claim_ids": [
+            "C027"
+          ],
+          "scope": "指向永乐铜红釉盘PDF.560；不是本条目器物，不再作为其对象出处。"
+        }
+      ],
+      "retained_background_sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
+      "minimum_safe_draft_content_html": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
     },
     {
       "id": "59f0b451-5334-4f87-aa8c-31ea7c0b8d4d",
@@ -378,7 +1005,74 @@
       ],
       "minimum_safe_draft_slug": "kangxi-covered-jar",
       "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
-      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效",
+      "source_review": [
+        {
+          "original": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO·48 COM 8B.16·2026"
+          },
+          "supports_specific_object_identity": false,
+          "action": "保留一般背景",
+          "proposed": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          },
+          "source_id": "unesco",
+          "claim_ids": [
+            "C021",
+            "C022"
+          ],
+          "scope": "景德镇手工瓷业的资源与生产组织背景；不证明本器物产地、年代、归属或馆藏号。"
+        },
+        {
+          "original": {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A·Chinese blue-and-white ceramics"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除不直接相关的背景资料",
+          "source_id": "va",
+          "claim_ids": [
+            "C009",
+            "C019"
+          ],
+          "scope": "青花工艺与贸易概述；不确认本器物身份，也不用于证明釉里红、金襕手、斗彩或其他釉彩品种。"
+        },
+        {
+          "original": {
+            "url": "https://www.metmuseum.org/art/collection/search/42507",
+            "label": "The Met·Jingdezhen porcelain collection"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "met-stem",
+          "claim_ids": [
+            "C026"
+          ],
+          "scope": "指向宣德青花应龙纹高足杯1991.253.40；不是本条目器物，不再作为其对象出处。"
+        },
+        {
+          "original": {
+            "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+            "label": "British Museum·Jingdezhen porcelain"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "bm-red",
+          "claim_ids": [
+            "C027"
+          ],
+          "scope": "指向永乐铜红釉盘PDF.560；不是本条目器物，不再作为其对象出处。"
+        }
+      ],
+      "retained_background_sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
+      "minimum_safe_draft_content_html": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
     },
     {
       "id": "9c5c26a0-51c0-49df-842e-10fe249db2ae",
@@ -416,7 +1110,74 @@
       ],
       "minimum_safe_draft_slug": "kangxi-famille-verte-figure",
       "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
-      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效",
+      "source_review": [
+        {
+          "original": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO·48 COM 8B.16·2026"
+          },
+          "supports_specific_object_identity": false,
+          "action": "保留一般背景",
+          "proposed": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          },
+          "source_id": "unesco",
+          "claim_ids": [
+            "C021",
+            "C022"
+          ],
+          "scope": "景德镇手工瓷业的资源与生产组织背景；不证明本器物产地、年代、归属或馆藏号。"
+        },
+        {
+          "original": {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A·Chinese blue-and-white ceramics"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除不直接相关的背景资料",
+          "source_id": "va",
+          "claim_ids": [
+            "C009",
+            "C019"
+          ],
+          "scope": "青花工艺与贸易概述；不确认本器物身份，也不用于证明釉里红、金襕手、斗彩或其他釉彩品种。"
+        },
+        {
+          "original": {
+            "url": "https://www.metmuseum.org/art/collection/search/42507",
+            "label": "The Met·Jingdezhen porcelain collection"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "met-stem",
+          "claim_ids": [
+            "C026"
+          ],
+          "scope": "指向宣德青花应龙纹高足杯1991.253.40；不是本条目器物，不再作为其对象出处。"
+        },
+        {
+          "original": {
+            "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+            "label": "British Museum·Jingdezhen porcelain"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "bm-red",
+          "claim_ids": [
+            "C027"
+          ],
+          "scope": "指向永乐铜红釉盘PDF.560；不是本条目器物，不再作为其对象出处。"
+        }
+      ],
+      "retained_background_sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
+      "minimum_safe_draft_content_html": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
     },
     {
       "id": "c094cdfc-9d3c-49ec-ae7e-fe3a75364fd8",
@@ -454,7 +1215,74 @@
       ],
       "minimum_safe_draft_slug": "jiajing-kinrande-ewer",
       "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
-      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效",
+      "source_review": [
+        {
+          "original": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO·48 COM 8B.16·2026"
+          },
+          "supports_specific_object_identity": false,
+          "action": "保留一般背景",
+          "proposed": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          },
+          "source_id": "unesco",
+          "claim_ids": [
+            "C021",
+            "C022"
+          ],
+          "scope": "景德镇手工瓷业的资源与生产组织背景；不证明本器物产地、年代、归属或馆藏号。"
+        },
+        {
+          "original": {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A·Chinese blue-and-white ceramics"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除不直接相关的背景资料",
+          "source_id": "va",
+          "claim_ids": [
+            "C009",
+            "C019"
+          ],
+          "scope": "青花工艺与贸易概述；不确认本器物身份，也不用于证明釉里红、金襕手、斗彩或其他釉彩品种。"
+        },
+        {
+          "original": {
+            "url": "https://www.metmuseum.org/art/collection/search/42507",
+            "label": "The Met·Jingdezhen porcelain collection"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "met-stem",
+          "claim_ids": [
+            "C026"
+          ],
+          "scope": "指向宣德青花应龙纹高足杯1991.253.40；不是本条目器物，不再作为其对象出处。"
+        },
+        {
+          "original": {
+            "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+            "label": "British Museum·Jingdezhen porcelain"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "bm-red",
+          "claim_ids": [
+            "C027"
+          ],
+          "scope": "指向永乐铜红釉盘PDF.560；不是本条目器物，不再作为其对象出处。"
+        }
+      ],
+      "retained_background_sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
+      "minimum_safe_draft_content_html": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
     },
     {
       "id": "912c614e-6762-4c59-95df-5f0517c981dd",
@@ -492,7 +1320,74 @@
       ],
       "minimum_safe_draft_slug": "kangxi-covered-ewer",
       "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
-      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效",
+      "source_review": [
+        {
+          "original": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO·48 COM 8B.16·2026"
+          },
+          "supports_specific_object_identity": false,
+          "action": "保留一般背景",
+          "proposed": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          },
+          "source_id": "unesco",
+          "claim_ids": [
+            "C021",
+            "C022"
+          ],
+          "scope": "景德镇手工瓷业的资源与生产组织背景；不证明本器物产地、年代、归属或馆藏号。"
+        },
+        {
+          "original": {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A·Chinese blue-and-white ceramics"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除不直接相关的背景资料",
+          "source_id": "va",
+          "claim_ids": [
+            "C009",
+            "C019"
+          ],
+          "scope": "青花工艺与贸易概述；不确认本器物身份，也不用于证明釉里红、金襕手、斗彩或其他釉彩品种。"
+        },
+        {
+          "original": {
+            "url": "https://www.metmuseum.org/art/collection/search/42507",
+            "label": "The Met·Jingdezhen porcelain collection"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "met-stem",
+          "claim_ids": [
+            "C026"
+          ],
+          "scope": "指向宣德青花应龙纹高足杯1991.253.40；不是本条目器物，不再作为其对象出处。"
+        },
+        {
+          "original": {
+            "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+            "label": "British Museum·Jingdezhen porcelain"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "bm-red",
+          "claim_ids": [
+            "C027"
+          ],
+          "scope": "指向永乐铜红釉盘PDF.560；不是本条目器物，不再作为其对象出处。"
+        }
+      ],
+      "retained_background_sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
+      "minimum_safe_draft_content_html": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
     },
     {
       "id": "b341e65e-27f8-4152-93d7-6292fb09c3b1",
@@ -530,7 +1425,82 @@
       ],
       "minimum_safe_draft_slug": "xuande-dragon-dish",
       "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
-      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效",
+      "source_review": [
+        {
+          "original": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO·48 COM 8B.16·2026"
+          },
+          "supports_specific_object_identity": false,
+          "action": "保留一般背景",
+          "proposed": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          },
+          "source_id": "unesco",
+          "claim_ids": [
+            "C021",
+            "C022"
+          ],
+          "scope": "景德镇手工瓷业的资源与生产组织背景；不证明本器物产地、年代、归属或馆藏号。"
+        },
+        {
+          "original": {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A·Chinese blue-and-white ceramics"
+          },
+          "supports_specific_object_identity": false,
+          "action": "保留一般背景",
+          "source_id": "va",
+          "claim_ids": [
+            "C009",
+            "C019"
+          ],
+          "scope": "青花工艺与贸易概述；不确认本器物身份，也不用于证明釉里红、金襕手、斗彩或其他釉彩品种。",
+          "proposed": {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+          }
+        },
+        {
+          "original": {
+            "url": "https://www.metmuseum.org/art/collection/search/42507",
+            "label": "The Met·Jingdezhen porcelain collection"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "met-stem",
+          "claim_ids": [
+            "C026"
+          ],
+          "scope": "指向宣德青花应龙纹高足杯1991.253.40；不是本条目器物，不再作为其对象出处。"
+        },
+        {
+          "original": {
+            "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+            "label": "British Museum·Jingdezhen porcelain"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "bm-red",
+          "claim_ids": [
+            "C027"
+          ],
+          "scope": "指向永乐铜红釉盘PDF.560；不是本条目器物，不再作为其对象出处。"
+        }
+      ],
+      "retained_background_sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+        }
+      ],
+      "minimum_safe_draft_content_html": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
     },
     {
       "id": "6988d1c3-604e-4184-bbfa-95043c8ff064",
@@ -568,7 +1538,82 @@
       ],
       "minimum_safe_draft_slug": "xuande-pomegranate-bowl",
       "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
-      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效",
+      "source_review": [
+        {
+          "original": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO·48 COM 8B.16·2026"
+          },
+          "supports_specific_object_identity": false,
+          "action": "保留一般背景",
+          "proposed": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          },
+          "source_id": "unesco",
+          "claim_ids": [
+            "C021",
+            "C022"
+          ],
+          "scope": "景德镇手工瓷业的资源与生产组织背景；不证明本器物产地、年代、归属或馆藏号。"
+        },
+        {
+          "original": {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A·Chinese blue-and-white ceramics"
+          },
+          "supports_specific_object_identity": false,
+          "action": "保留一般背景",
+          "source_id": "va",
+          "claim_ids": [
+            "C009",
+            "C019"
+          ],
+          "scope": "青花工艺与贸易概述；不确认本器物身份，也不用于证明釉里红、金襕手、斗彩或其他釉彩品种。",
+          "proposed": {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+          }
+        },
+        {
+          "original": {
+            "url": "https://www.metmuseum.org/art/collection/search/42507",
+            "label": "The Met·Jingdezhen porcelain collection"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "met-stem",
+          "claim_ids": [
+            "C026"
+          ],
+          "scope": "指向宣德青花应龙纹高足杯1991.253.40；不是本条目器物，不再作为其对象出处。"
+        },
+        {
+          "original": {
+            "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+            "label": "British Museum·Jingdezhen porcelain"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "bm-red",
+          "claim_ids": [
+            "C027"
+          ],
+          "scope": "指向永乐铜红釉盘PDF.560；不是本条目器物，不再作为其对象出处。"
+        }
+      ],
+      "retained_background_sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+        }
+      ],
+      "minimum_safe_draft_content_html": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
     },
     {
       "id": "d5008a14-422c-41b4-a6c9-7f0b9c3d8b09",
@@ -606,7 +1651,74 @@
       ],
       "minimum_safe_draft_slug": "xuande-copper-red-bowl",
       "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
-      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效",
+      "source_review": [
+        {
+          "original": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO·48 COM 8B.16·2026"
+          },
+          "supports_specific_object_identity": false,
+          "action": "保留一般背景",
+          "proposed": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          },
+          "source_id": "unesco",
+          "claim_ids": [
+            "C021",
+            "C022"
+          ],
+          "scope": "景德镇手工瓷业的资源与生产组织背景；不证明本器物产地、年代、归属或馆藏号。"
+        },
+        {
+          "original": {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A·Chinese blue-and-white ceramics"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除不直接相关的背景资料",
+          "source_id": "va",
+          "claim_ids": [
+            "C009",
+            "C019"
+          ],
+          "scope": "青花工艺与贸易概述；不确认本器物身份，也不用于证明釉里红、金襕手、斗彩或其他釉彩品种。"
+        },
+        {
+          "original": {
+            "url": "https://www.metmuseum.org/art/collection/search/42507",
+            "label": "The Met·Jingdezhen porcelain collection"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "met-stem",
+          "claim_ids": [
+            "C026"
+          ],
+          "scope": "指向宣德青花应龙纹高足杯1991.253.40；不是本条目器物，不再作为其对象出处。"
+        },
+        {
+          "original": {
+            "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+            "label": "British Museum·Jingdezhen porcelain"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "bm-red",
+          "claim_ids": [
+            "C027"
+          ],
+          "scope": "指向永乐铜红釉盘PDF.560；不是本条目器物，不再作为其对象出处。"
+        }
+      ],
+      "retained_background_sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
+      "minimum_safe_draft_content_html": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
     },
     {
       "id": "30b201d4-fb22-4268-a710-ee91ed9d2415",
@@ -644,7 +1756,74 @@
       ],
       "minimum_safe_draft_slug": "kangxi-black-glaze-vase",
       "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
-      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效",
+      "source_review": [
+        {
+          "original": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO·48 COM 8B.16·2026"
+          },
+          "supports_specific_object_identity": false,
+          "action": "保留一般背景",
+          "proposed": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          },
+          "source_id": "unesco",
+          "claim_ids": [
+            "C021",
+            "C022"
+          ],
+          "scope": "景德镇手工瓷业的资源与生产组织背景；不证明本器物产地、年代、归属或馆藏号。"
+        },
+        {
+          "original": {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A·Chinese blue-and-white ceramics"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除不直接相关的背景资料",
+          "source_id": "va",
+          "claim_ids": [
+            "C009",
+            "C019"
+          ],
+          "scope": "青花工艺与贸易概述；不确认本器物身份，也不用于证明釉里红、金襕手、斗彩或其他釉彩品种。"
+        },
+        {
+          "original": {
+            "url": "https://www.metmuseum.org/art/collection/search/42507",
+            "label": "The Met·Jingdezhen porcelain collection"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "met-stem",
+          "claim_ids": [
+            "C026"
+          ],
+          "scope": "指向宣德青花应龙纹高足杯1991.253.40；不是本条目器物，不再作为其对象出处。"
+        },
+        {
+          "original": {
+            "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+            "label": "British Museum·Jingdezhen porcelain"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "bm-red",
+          "claim_ids": [
+            "C027"
+          ],
+          "scope": "指向永乐铜红釉盘PDF.560；不是本条目器物，不再作为其对象出处。"
+        }
+      ],
+      "retained_background_sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
+      "minimum_safe_draft_content_html": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
     },
     {
       "id": "814879d7-0a47-436b-82e4-ab7728175a4e",
@@ -682,7 +1861,74 @@
       ],
       "minimum_safe_draft_slug": "yongzheng-turquoise-vase",
       "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
-      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效",
+      "source_review": [
+        {
+          "original": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO·48 COM 8B.16·2026"
+          },
+          "supports_specific_object_identity": false,
+          "action": "保留一般背景",
+          "proposed": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          },
+          "source_id": "unesco",
+          "claim_ids": [
+            "C021",
+            "C022"
+          ],
+          "scope": "景德镇手工瓷业的资源与生产组织背景；不证明本器物产地、年代、归属或馆藏号。"
+        },
+        {
+          "original": {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A·Chinese blue-and-white ceramics"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除不直接相关的背景资料",
+          "source_id": "va",
+          "claim_ids": [
+            "C009",
+            "C019"
+          ],
+          "scope": "青花工艺与贸易概述；不确认本器物身份，也不用于证明釉里红、金襕手、斗彩或其他釉彩品种。"
+        },
+        {
+          "original": {
+            "url": "https://www.metmuseum.org/art/collection/search/42507",
+            "label": "The Met·Jingdezhen porcelain collection"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "met-stem",
+          "claim_ids": [
+            "C026"
+          ],
+          "scope": "指向宣德青花应龙纹高足杯1991.253.40；不是本条目器物，不再作为其对象出处。"
+        },
+        {
+          "original": {
+            "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+            "label": "British Museum·Jingdezhen porcelain"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "bm-red",
+          "claim_ids": [
+            "C027"
+          ],
+          "scope": "指向永乐铜红釉盘PDF.560；不是本条目器物，不再作为其对象出处。"
+        }
+      ],
+      "retained_background_sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
+      "minimum_safe_draft_content_html": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
     },
     {
       "id": "18e78490-6efa-42d1-b2c3-be4318c925ed",
@@ -720,7 +1966,74 @@
       ],
       "minimum_safe_draft_slug": "qianlong-lightblue-vase",
       "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
-      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效",
+      "source_review": [
+        {
+          "original": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO·48 COM 8B.16·2026"
+          },
+          "supports_specific_object_identity": false,
+          "action": "保留一般背景",
+          "proposed": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          },
+          "source_id": "unesco",
+          "claim_ids": [
+            "C021",
+            "C022"
+          ],
+          "scope": "景德镇手工瓷业的资源与生产组织背景；不证明本器物产地、年代、归属或馆藏号。"
+        },
+        {
+          "original": {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A·Chinese blue-and-white ceramics"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除不直接相关的背景资料",
+          "source_id": "va",
+          "claim_ids": [
+            "C009",
+            "C019"
+          ],
+          "scope": "青花工艺与贸易概述；不确认本器物身份，也不用于证明釉里红、金襕手、斗彩或其他釉彩品种。"
+        },
+        {
+          "original": {
+            "url": "https://www.metmuseum.org/art/collection/search/42507",
+            "label": "The Met·Jingdezhen porcelain collection"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "met-stem",
+          "claim_ids": [
+            "C026"
+          ],
+          "scope": "指向宣德青花应龙纹高足杯1991.253.40；不是本条目器物，不再作为其对象出处。"
+        },
+        {
+          "original": {
+            "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+            "label": "British Museum·Jingdezhen porcelain"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "bm-red",
+          "claim_ids": [
+            "C027"
+          ],
+          "scope": "指向永乐铜红釉盘PDF.560；不是本条目器物，不再作为其对象出处。"
+        }
+      ],
+      "retained_background_sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
+      "minimum_safe_draft_content_html": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
     },
     {
       "id": "9d0a95e1-b090-4e70-8837-d279ea89d096",
@@ -758,7 +2071,74 @@
       ],
       "minimum_safe_draft_slug": "yongzheng-relief-vase",
       "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
-      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效",
+      "source_review": [
+        {
+          "original": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO·48 COM 8B.16·2026"
+          },
+          "supports_specific_object_identity": false,
+          "action": "保留一般背景",
+          "proposed": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          },
+          "source_id": "unesco",
+          "claim_ids": [
+            "C021",
+            "C022"
+          ],
+          "scope": "景德镇手工瓷业的资源与生产组织背景；不证明本器物产地、年代、归属或馆藏号。"
+        },
+        {
+          "original": {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A·Chinese blue-and-white ceramics"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除不直接相关的背景资料",
+          "source_id": "va",
+          "claim_ids": [
+            "C009",
+            "C019"
+          ],
+          "scope": "青花工艺与贸易概述；不确认本器物身份，也不用于证明釉里红、金襕手、斗彩或其他釉彩品种。"
+        },
+        {
+          "original": {
+            "url": "https://www.metmuseum.org/art/collection/search/42507",
+            "label": "The Met·Jingdezhen porcelain collection"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "met-stem",
+          "claim_ids": [
+            "C026"
+          ],
+          "scope": "指向宣德青花应龙纹高足杯1991.253.40；不是本条目器物，不再作为其对象出处。"
+        },
+        {
+          "original": {
+            "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+            "label": "British Museum·Jingdezhen porcelain"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "bm-red",
+          "claim_ids": [
+            "C027"
+          ],
+          "scope": "指向永乐铜红釉盘PDF.560；不是本条目器物，不再作为其对象出处。"
+        }
+      ],
+      "retained_background_sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
+      "minimum_safe_draft_content_html": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
     },
     {
       "id": "276fabf1-9963-45d7-b183-1a126a6369ec",
@@ -796,7 +2176,74 @@
       ],
       "minimum_safe_draft_slug": "kangxi-famille-verte-vase",
       "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
-      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效",
+      "source_review": [
+        {
+          "original": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO·48 COM 8B.16·2026"
+          },
+          "supports_specific_object_identity": false,
+          "action": "保留一般背景",
+          "proposed": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          },
+          "source_id": "unesco",
+          "claim_ids": [
+            "C021",
+            "C022"
+          ],
+          "scope": "景德镇手工瓷业的资源与生产组织背景；不证明本器物产地、年代、归属或馆藏号。"
+        },
+        {
+          "original": {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A·Chinese blue-and-white ceramics"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除不直接相关的背景资料",
+          "source_id": "va",
+          "claim_ids": [
+            "C009",
+            "C019"
+          ],
+          "scope": "青花工艺与贸易概述；不确认本器物身份，也不用于证明釉里红、金襕手、斗彩或其他釉彩品种。"
+        },
+        {
+          "original": {
+            "url": "https://www.metmuseum.org/art/collection/search/42507",
+            "label": "The Met·Jingdezhen porcelain collection"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "met-stem",
+          "claim_ids": [
+            "C026"
+          ],
+          "scope": "指向宣德青花应龙纹高足杯1991.253.40；不是本条目器物，不再作为其对象出处。"
+        },
+        {
+          "original": {
+            "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+            "label": "British Museum·Jingdezhen porcelain"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "bm-red",
+          "claim_ids": [
+            "C027"
+          ],
+          "scope": "指向永乐铜红釉盘PDF.560；不是本条目器物，不再作为其对象出处。"
+        }
+      ],
+      "retained_background_sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
+      "minimum_safe_draft_content_html": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
     },
     {
       "id": "79edb3ad-8b41-4a55-ae69-0154955c280d",
@@ -834,7 +2281,74 @@
       ],
       "minimum_safe_draft_slug": "kangxi-famille-verte-gilt-vase",
       "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
-      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效",
+      "source_review": [
+        {
+          "original": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO·48 COM 8B.16·2026"
+          },
+          "supports_specific_object_identity": false,
+          "action": "保留一般背景",
+          "proposed": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          },
+          "source_id": "unesco",
+          "claim_ids": [
+            "C021",
+            "C022"
+          ],
+          "scope": "景德镇手工瓷业的资源与生产组织背景；不证明本器物产地、年代、归属或馆藏号。"
+        },
+        {
+          "original": {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A·Chinese blue-and-white ceramics"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除不直接相关的背景资料",
+          "source_id": "va",
+          "claim_ids": [
+            "C009",
+            "C019"
+          ],
+          "scope": "青花工艺与贸易概述；不确认本器物身份，也不用于证明釉里红、金襕手、斗彩或其他釉彩品种。"
+        },
+        {
+          "original": {
+            "url": "https://www.metmuseum.org/art/collection/search/42507",
+            "label": "The Met·Jingdezhen porcelain collection"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "met-stem",
+          "claim_ids": [
+            "C026"
+          ],
+          "scope": "指向宣德青花应龙纹高足杯1991.253.40；不是本条目器物，不再作为其对象出处。"
+        },
+        {
+          "original": {
+            "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+            "label": "British Museum·Jingdezhen porcelain"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "bm-red",
+          "claim_ids": [
+            "C027"
+          ],
+          "scope": "指向永乐铜红釉盘PDF.560；不是本条目器物，不再作为其对象出处。"
+        }
+      ],
+      "retained_background_sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
+      "minimum_safe_draft_content_html": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
     },
     {
       "id": "0a7e5bbf-84f3-4426-9113-b9aa205aea27",
@@ -872,7 +2386,74 @@
       ],
       "minimum_safe_draft_slug": "kangxi-famille-verte-monteith",
       "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
-      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效",
+      "source_review": [
+        {
+          "original": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO·48 COM 8B.16·2026"
+          },
+          "supports_specific_object_identity": false,
+          "action": "保留一般背景",
+          "proposed": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          },
+          "source_id": "unesco",
+          "claim_ids": [
+            "C021",
+            "C022"
+          ],
+          "scope": "景德镇手工瓷业的资源与生产组织背景；不证明本器物产地、年代、归属或馆藏号。"
+        },
+        {
+          "original": {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A·Chinese blue-and-white ceramics"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除不直接相关的背景资料",
+          "source_id": "va",
+          "claim_ids": [
+            "C009",
+            "C019"
+          ],
+          "scope": "青花工艺与贸易概述；不确认本器物身份，也不用于证明釉里红、金襕手、斗彩或其他釉彩品种。"
+        },
+        {
+          "original": {
+            "url": "https://www.metmuseum.org/art/collection/search/42507",
+            "label": "The Met·Jingdezhen porcelain collection"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "met-stem",
+          "claim_ids": [
+            "C026"
+          ],
+          "scope": "指向宣德青花应龙纹高足杯1991.253.40；不是本条目器物，不再作为其对象出处。"
+        },
+        {
+          "original": {
+            "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+            "label": "British Museum·Jingdezhen porcelain"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "bm-red",
+          "claim_ids": [
+            "C027"
+          ],
+          "scope": "指向永乐铜红釉盘PDF.560；不是本条目器物，不再作为其对象出处。"
+        }
+      ],
+      "retained_background_sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
+      "minimum_safe_draft_content_html": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
     },
     {
       "id": "256587aa-cb98-4f6a-9277-80cec0368b3d",
@@ -910,7 +2491,82 @@
       ],
       "minimum_safe_draft_slug": "wanli-bluewhite-jar",
       "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
-      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效",
+      "source_review": [
+        {
+          "original": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO·48 COM 8B.16·2026"
+          },
+          "supports_specific_object_identity": false,
+          "action": "保留一般背景",
+          "proposed": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          },
+          "source_id": "unesco",
+          "claim_ids": [
+            "C021",
+            "C022"
+          ],
+          "scope": "景德镇手工瓷业的资源与生产组织背景；不证明本器物产地、年代、归属或馆藏号。"
+        },
+        {
+          "original": {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A·Chinese blue-and-white ceramics"
+          },
+          "supports_specific_object_identity": false,
+          "action": "保留一般背景",
+          "source_id": "va",
+          "claim_ids": [
+            "C009",
+            "C019"
+          ],
+          "scope": "青花工艺与贸易概述；不确认本器物身份，也不用于证明釉里红、金襕手、斗彩或其他釉彩品种。",
+          "proposed": {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+          }
+        },
+        {
+          "original": {
+            "url": "https://www.metmuseum.org/art/collection/search/42507",
+            "label": "The Met·Jingdezhen porcelain collection"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "met-stem",
+          "claim_ids": [
+            "C026"
+          ],
+          "scope": "指向宣德青花应龙纹高足杯1991.253.40；不是本条目器物，不再作为其对象出处。"
+        },
+        {
+          "original": {
+            "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+            "label": "British Museum·Jingdezhen porcelain"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "bm-red",
+          "claim_ids": [
+            "C027"
+          ],
+          "scope": "指向永乐铜红釉盘PDF.560；不是本条目器物，不再作为其对象出处。"
+        }
+      ],
+      "retained_background_sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        },
+        {
+          "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+          "label": "V&A：青花瓷背景（不作为本器物身份出处）"
+        }
+      ],
+      "minimum_safe_draft_content_html": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
     },
     {
       "id": "bb935a4a-cb13-4107-988c-4c6869f315d9",
@@ -948,7 +2604,74 @@
       ],
       "minimum_safe_draft_slug": "qianlong-poem-vase",
       "required_external_material": "原始导入清单或明确的馆藏号/官方对象URL；有同型藏品不等于找到本站原指对象",
-      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效"
+      "decision": "不删除条目、不改slug、不改关系；仅准备撤回确定性馆藏表述的稿件，审核后才生效",
+      "source_review": [
+        {
+          "original": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO·48 COM 8B.16·2026"
+          },
+          "supports_specific_object_identity": false,
+          "action": "保留一般背景",
+          "proposed": {
+            "url": "https://whc.unesco.org/en/decisions/9170/",
+            "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+          },
+          "source_id": "unesco",
+          "claim_ids": [
+            "C021",
+            "C022"
+          ],
+          "scope": "景德镇手工瓷业的资源与生产组织背景；不证明本器物产地、年代、归属或馆藏号。"
+        },
+        {
+          "original": {
+            "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics",
+            "label": "V&A·Chinese blue-and-white ceramics"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除不直接相关的背景资料",
+          "source_id": "va",
+          "claim_ids": [
+            "C009",
+            "C019"
+          ],
+          "scope": "青花工艺与贸易概述；不确认本器物身份，也不用于证明釉里红、金襕手、斗彩或其他釉彩品种。"
+        },
+        {
+          "original": {
+            "url": "https://www.metmuseum.org/art/collection/search/42507",
+            "label": "The Met·Jingdezhen porcelain collection"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "met-stem",
+          "claim_ids": [
+            "C026"
+          ],
+          "scope": "指向宣德青花应龙纹高足杯1991.253.40；不是本条目器物，不再作为其对象出处。"
+        },
+        {
+          "original": {
+            "url": "https://www.britishmuseum.org/collection/object/A_PDF-560",
+            "label": "British Museum·Jingdezhen porcelain"
+          },
+          "supports_specific_object_identity": false,
+          "action": "移除错误对象引用",
+          "source_id": "bm-red",
+          "claim_ids": [
+            "C027"
+          ],
+          "scope": "指向永乐铜红釉盘PDF.560；不是本条目器物，不再作为其对象出处。"
+        }
+      ],
+      "retained_background_sources": [
+        {
+          "url": "https://whc.unesco.org/en/decisions/9170/",
+          "label": "UNESCO：景德镇制瓷背景（不作为本器物身份出处）"
+        }
+      ],
+      "minimum_safe_draft_content_html": "<p>这件器物的馆藏出处尚待核实，具体年代与归属暂未确认。</p>"
     }
   ],
   "verified_original_identity": 0,
