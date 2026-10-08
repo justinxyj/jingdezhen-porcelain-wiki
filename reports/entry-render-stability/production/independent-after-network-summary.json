@@ -1,0 +1,48 @@
+{
+  "base": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/",
+  "passed": 275,
+  "failed": 10,
+  "failed_cases": [
+    {
+      "case": "tang-ying-768-default-offline",
+      "error": "Locator.wait_for: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\".wiki-entry-body\") to be visible\n"
+    },
+    {
+      "case": "hutian-kiln-768-default-database-error",
+      "error": "Locator.wait_for: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\".wiki-entry-body\") to be visible\n"
+    },
+    {
+      "case": "blue-and-white-768-slate-slow",
+      "error": "Locator.wait_for: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\".wiki-entry-body\") to be visible\n"
+    },
+    {
+      "case": "tang-ying-768-slate-offline",
+      "error": "Page.wait_for_function: Timeout 30000ms exceeded."
+    },
+    {
+      "case": "blue-and-white-768-slate-no-js",
+      "error": "Locator.wait_for: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\".wiki-entry-body\") to be visible\n"
+    },
+    {
+      "case": "blue-and-white-1440-default-slow",
+      "error": "Locator.wait_for: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\".wiki-entry-body\") to be visible\n"
+    },
+    {
+      "case": "hutian-kiln-1440-default-database-error",
+      "error": "Page.wait_for_function: Timeout 30000ms exceeded."
+    },
+    {
+      "case": "dynamic-blue-and-white",
+      "error": "Locator.wait_for: Timeout 90000ms exceeded.\nCall log:\n  - waiting for locator(\".wiki-entry-body\") to be visible\n"
+    },
+    {
+      "case": "dynamic-tang-ying",
+      "error": "Locator.wait_for: Timeout 90000ms exceeded.\nCall log:\n  - waiting for locator(\".wiki-entry-body\") to be visible\n"
+    },
+    {
+      "case": "dynamic-hutian-kiln",
+      "error": "Locator.wait_for: Timeout 90000ms exceeded.\nCall log:\n  - waiting for locator(\".wiki-entry-body\") to be visible\n"
+    }
+  ],
+  "network_diagnosis": "HTTP 503 from envoy: cloudflare_https_tunnel remote connection failure. Further outside-sandbox run was stopped after confirming the same transport failure. This run is not counted as a pass."
+}

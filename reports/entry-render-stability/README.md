@@ -27,4 +27,24 @@
 
 TypeScript：0 errors。90 项来源渲染检查、正文清理、Evidence 披露、渲染所有权单元检查通过；250 页 SEO/正文及全站 308 页共享 Header 检查通过，31,660 个内部目标零缺失。
 
-GitHub 提交与正式网站部署验收仍待实际完成，不将本地结果称作已发布。
+## 正式发布与 Smoke 修复验收
+
+渲染修复提交：`ae3adbb9e529418274c8968ed2276af0a4d93ca0`。首次 Pages 运行 37763629260 已部署，但旧 Smoke 仍在两处等待 `#wiki-entry-root .wiki-entry-card`，错误地要求第二层外框，因此失败。
+
+测试修复提交：`4afa74b7f81eb1e3eb1c77c159e5246a32d12499`。只修改 `scripts/pages_smoke.py` 和 `scripts/pages_smoke.mjs`：Python 共享断言等待根 article 本身，并要求全页恰好一个 card、嵌套数量为零；两个续读路径改用该断言。JavaScript Smoke 同样增加数量及禁止嵌套断言。检查其他自动化脚本未发现仍要求双层 DOM 的断言；现有所有权和 250 页稳定性测试继续保留。
+
+- [完整 Pages 运行 37765154553](https://github.com/justinxyj/jingdezhen-porcelain-wiki/actions/runs/37765154553)：**Success**。Build、Deploy、部署后 Smoke、共享 Header 浏览器检查、正式网站 250 页稳定性检查及 ACL 只读检查全部成功。成功状态及每步结果见 `production/pages-run-success.json`；Actions 的 production Entry artifact 包含部署后完整 DOM 与截图。
+- [Validate 运行 37765154375](https://github.com/justinxyj/jingdezhen-porcelain-wiki/actions/runs/37765154375)：**Success**。状态见 `production/validate-run-success.json`。
+- 测试修复部署前，针对已上线的相同渲染修复版本进行了独立真实浏览器全量检查：**285/285，0 失败**，全部 250 静态页面完成各阶段检查，见 `production/independent-dom-results.json`。
+- 新部署后的全量真实浏览器检查由 GitHub Pages deploy job 再次执行并成功。当前云环境的补充独立重测遇到 envoy / cloudflare_https_tunnel 的 HTTP 503，导致页面加载超时；不能计为通过。沙箱外重试同样遭遇该传输错误，确认后停止，不改测试、不伪造页面。失败运行摘要另存 `production/independent-after-network-summary.json`。
+
+| 浏览器阶段 | 部署前单层版本 | 新部署后 CI 全量检查 |
+| --- | --- | --- |
+| 首次 HTML | card 1，nested 0 | card 1，nested 0 |
+| DOMContentLoaded | card 1，nested 0 | card 1，nested 0 |
+| 增强加载中 | card 1，nested 0 | card 1，nested 0 |
+| 增强完成 | card 1，nested 0 | card 1，nested 0 |
+
+各阶段正文、标题、图片原节点保持一致。主动展开研究区之后，加载中与完成后的外框和正文位置/尺寸、滚动位置、选中文本保持一致；没有正文替换或非预期异步布局变化。320/390/768/1440、浅色/深色、慢网、断网、数据库异常和无 JavaScript 场景均由成功 CI 覆盖。独立线上三阶段截图见 `production/`（390px 与 1440px）；新部署后截图见成功运行的 production Entry artifact。
+
+未修改百科正文、共享 Header、canonical、JSON-LD、生产数据库或 Supabase 读取逻辑。250 页重新生成、SEO、内部链接及共享 Header 门禁继续运行；本轮没有删除或跳过旧测试。
