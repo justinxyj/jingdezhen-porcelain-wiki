@@ -206,7 +206,7 @@ Production verified：**NO**。这里的 NO 指新版内容未发布、未能验
 | Dead code | 删除从未加载的旧 timeline-interactive.js；当前两个时间轴脚本仍正式检查 |
 | Incorrect tsconfig scope | 覆盖 18 个活动 JS，包括共享 dom-safe；未排除核心源码 |
 
-strict/noImplicitAny/strictNullChecks 保持；没有新增批量 any、@ts-ignore、关闭 strict 或第三方豁免。基线已存在的 skipLibCheck 未更改。证据：[782 原始错误](ux-final-evidence/typecheck-before.log)、[最终正式输出](ux-final-evidence/typecheck-current.log)。
+strict/noImplicitAny/strictNullChecks 保持；没有新增批量 any、@ts-ignore、关闭 strict 或第三方豁免。基线已存在的 skipLibCheck 未更改。证据：[782 原始错误](ux-final-evidence/typecheck-before.txt)、[最终正式输出](ux-final-evidence/typecheck-current.txt)。
 
 ## 10. Production Test
 

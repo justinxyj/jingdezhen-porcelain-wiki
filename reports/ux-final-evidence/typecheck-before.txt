@@ -1,0 +1,823 @@
+
+> typecheck:js
+> tsc --noEmit -p tsconfig.json
+
+docs/javascripts/auth-manager.js(4,7): error TS7034: Variable 'client' implicitly has type 'any' in some locations where its type cannot be determined.
+docs/javascripts/auth-manager.js(6,7): error TS7034: Variable 'refreshPromise' implicitly has type 'any' in some locations where its type cannot be determined.
+docs/javascripts/auth-manager.js(9,27): error TS7006: Parameter 'error' implicitly has an 'any' type.
+docs/javascripts/auth-manager.js(18,16): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/auth-manager.js(19,48): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Type 'string | undefined' is not assignable to type 'string'.
+      Type 'undefined' is not assignable to type 'string'.
+docs/javascripts/auth-manager.js(21,21): error TS7006: Parameter 'raw' implicitly has an 'any' type.
+docs/javascripts/auth-manager.js(37,8): error TS7005: Variable 'client' implicitly has an 'any' type.
+docs/javascripts/auth-manager.js(45,49): error TS7006: Parameter 'event' implicitly has an 'any' type.
+docs/javascripts/auth-manager.js(45,55): error TS7006: Parameter 'session' implicitly has an 'any' type.
+docs/javascripts/auth-manager.js(61,8): error TS7005: Variable 'refreshPromise' implicitly has an 'any' type.
+docs/javascripts/auth-manager.js(70,24): error TS7006: Parameter 'cause' implicitly has an 'any' type.
+docs/javascripts/auth-manager.js(75,29): error TS7006: Parameter 'err' implicitly has an 'any' type.
+docs/javascripts/auth-manager.js(78,26): error TS7006: Parameter 'factory' implicitly has an 'any' type.
+docs/javascripts/auth-manager.js(109,59): error TS2322: Type 'string' is not assignable to type 'null'.
+docs/javascripts/auth-manager.js(111,26): error TS7006: Parameter 'error' implicitly has an 'any' type.
+docs/javascripts/entry-search.js(7,19): error TS7006: Parameter 'raw' implicitly has an 'any' type.
+docs/javascripts/entry-search.js(7,23): error TS7006: Parameter 'opts' implicitly has an 'any' type.
+docs/javascripts/entry-search.js(8,15): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/entry-search.js(9,18): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/entry-search.js(10,18): error TS7006: Parameter 'slug' implicitly has an 'any' type.
+docs/javascripts/entry-search.js(10,30): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ history: string; craft: string; objects: string; space: string; people: string; research: string; contemporary: string; }'.
+docs/javascripts/entry-search.js(11,18): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/entry-search.js(11,22): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ tang: string; song: string; yuan: string; ming: string; qing: string; 'near-modern': string; modern: string; }'.
+docs/javascripts/entry-search.js(12,19): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/entry-search.js(12,23): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ jdz: string; china: string; world: string; }'.
+docs/javascripts/entry-search.js(13,23): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/entry-search.js(13,27): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ 人物: string; 历史: string; 器物: string; 文献: string; 窑址: string; }'.
+docs/javascripts/entry-search.js(31,17): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/entry-search.js(34,48): error TS7006: Parameter 'w' implicitly has an 'any' type.
+docs/javascripts/entry-search.js(35,55): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/entry-search.js(36,57): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/entry-search.js(38,55): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/entry-search.js(43,30): error TS7006: Parameter 'rows' implicitly has an 'any' type.
+docs/javascripts/entry-search.js(45,40): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/entry-search.js(54,99): error TS2339: Property 'dataset' does not exist on type 'Element'.
+docs/javascripts/entry-search.js(55,102): error TS2339: Property 'dataset' does not exist on type 'Element'.
+docs/javascripts/entry-search.js(56,97): error TS2339: Property 'dataset' does not exist on type 'Element'.
+docs/javascripts/entry-search.js(57,98): error TS2339: Property 'dataset' does not exist on type 'Element'.
+docs/javascripts/entry-search.js(58,100): error TS2339: Property 'dataset' does not exist on type 'Element'.
+docs/javascripts/entry-search.js(58,130): error TS2339: Property 'dataset' does not exist on type 'Element'.
+docs/javascripts/entry-search.js(58,156): error TS2339: Property 'dataset' does not exist on type 'Element'.
+docs/javascripts/entry-search.js(58,213): error TS2339: Property 'dataset' does not exist on type 'Element'.
+docs/javascripts/entry-search.js(61,26): error TS7006: Parameter 'q' implicitly has an 'any' type.
+docs/javascripts/entry-search.js(64,49): error TS18048: 'window.JDM_KNOWLEDGE' is possibly 'undefined'.
+docs/javascripts/entry-search.js(77,73): error TS18048: 'window.JDM_KNOWLEDGE' is possibly 'undefined'.
+docs/javascripts/entry-search.js(89,72): error TS2339: Property 'code' does not exist on type '{}'.
+docs/javascripts/entry-search.js(89,85): error TS2339: Property 'status' does not exist on type '{}'.
+docs/javascripts/entry-search.js(101,25): error TS7006: Parameter 'key' implicitly has an 'any' type.
+docs/javascripts/entry-search.js(101,29): error TS7006: Parameter 'value' implicitly has an 'any' type.
+docs/javascripts/entry-search.js(102,5): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ q: string; world: string; category: string; era: string; lane: string; hasMap: string; hasTimeline: string; }'.
+docs/javascripts/entry-search.js(102,16): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ q: string; world: string; category: string; era: string; lane: string; hasMap: string; hasTimeline: string; }'.
+docs/javascripts/entry-search.js(111,20): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+docs/javascripts/entry-search.js(112,45): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+docs/javascripts/entry-search.js(114,111): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+docs/javascripts/entry-search.js(116,124): error TS2339: Property 'dataset' does not exist on type 'Element'.
+docs/javascripts/entry-search.js(116,154): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+docs/javascripts/entry-search.js(116,162): error TS2339: Property 'dataset' does not exist on type 'Element'.
+docs/javascripts/entry-search.js(118,16): error TS18047: 'e.target' is possibly 'null'.
+docs/javascripts/entry-search.js(118,25): error TS2339: Property 'closest' does not exist on type 'EventTarget'.
+docs/javascripts/global-network.js(8,13): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/global-network.js(8,53): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Type 'string | undefined' is not assignable to type 'string'.
+      Type 'undefined' is not assignable to type 'string'.
+docs/javascripts/global-network.js(9,19): error TS7006: Parameter 'raw' implicitly has an 'any' type.
+docs/javascripts/global-network.js(9,23): error TS7006: Parameter 'opts' implicitly has an 'any' type.
+docs/javascripts/global-network.js(10,14): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/global-network.js(11,18): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/global-network.js(14,17): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/global-network.js(15,25): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/global-network.js(16,32): error TS7006: Parameter 'rows' implicitly has an 'any' type.
+docs/javascripts/global-network.js(16,161): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/global-network.js(16,415): error TS2339: Property 'dataset' does not exist on type 'Element'.
+docs/javascripts/global-network.js(17,25): error TS7006: Parameter 'q' implicitly has an 'any' type.
+docs/javascripts/global-network.js(17,107): error TS18047: 'root' is possibly 'null'.
+docs/javascripts/global-network.js(17,162): error TS18048: 'window.JDM_KNOWLEDGE' is possibly 'undefined'.
+docs/javascripts/global-network.js(17,220): error TS18047: 'root' is possibly 'null'.
+docs/javascripts/global-network.js(18,25): error TS7006: Parameter 'ctx' implicitly has an 'any' type.
+docs/javascripts/global-network.js(20,240): error TS7006: Parameter 'n' implicitly has an 'any' type.
+docs/javascripts/global-network.js(22,28): error TS7006: Parameter 'ctx' implicitly has an 'any' type.
+docs/javascripts/global-network.js(23,64): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/global-network.js(23,80): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ tang: string; song: string; yuan: string; ming: string; qing: string; 'near-modern': string; modern: string; }'.
+docs/javascripts/global-network.js(24,117): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/global-network.js(24,149): error TS7006: Parameter 't' implicitly has an 'any' type.
+docs/javascripts/global-network.js(24,294): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/global-network.js(24,335): error TS7006: Parameter 't' implicitly has an 'any' type.
+docs/javascripts/global-network.js(24,368): error TS7006: Parameter 't' implicitly has an 'any' type.
+docs/javascripts/global-network.js(24,382): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ tang: string; song: string; yuan: string; ming: string; qing: string; 'near-modern': string; modern: string; }'.
+docs/javascripts/global-network.js(27,23): error TS7006: Parameter 'ctx' implicitly has an 'any' type.
+docs/javascripts/global-network.js(27,69): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/global-network.js(27,432): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/global-network.js(28,28): error TS7006: Parameter 'ctx' implicitly has an 'any' type.
+docs/javascripts/global-network.js(28,472): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/global-network.js(29,21): error TS7006: Parameter 'ctx' implicitly has an 'any' type.
+docs/javascripts/global-network.js(29,89): error TS7006: Parameter 'w' implicitly has an 'any' type.
+docs/javascripts/global-network.js(29,266): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/global-network.js(29,299): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/global-network.js(29,705): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/global-network.js(29,708): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ tang: string; song: string; yuan: string; ming: string; qing: string; 'near-modern': string; modern: string; }'.
+docs/javascripts/global-network.js(30,19): error TS7006: Parameter 'ctx' implicitly has an 'any' type.
+docs/javascripts/global-network.js(31,20): error TS7006: Parameter 'ctx' implicitly has an 'any' type.
+docs/javascripts/global-network.js(31,87): error TS2304: Cannot find name 'L'.
+docs/javascripts/global-network.js(31,151): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/global-network.js(31,333): error TS2304: Cannot find name 'L'.
+docs/javascripts/global-network.js(31,395): error TS2304: Cannot find name 'L'.
+docs/javascripts/global-network.js(31,523): error TS7034: Variable 'bounds' implicitly has type 'any[]' in some locations where its type cannot be determined.
+docs/javascripts/global-network.js(31,546): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/global-network.js(31,575): error TS2304: Cannot find name 'L'.
+docs/javascripts/global-network.js(31,887): error TS7005: Variable 'bounds' implicitly has an 'any[]' type.
+docs/javascripts/global-network.js(32,25): error TS7006: Parameter 'id' implicitly has an 'any' type.
+docs/javascripts/global-network.js(32,165): error TS18048: 'window.JDM_KNOWLEDGE' is possibly 'undefined'.
+docs/javascripts/global-network.js(33,334): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+docs/javascripts/global-network.js(33,488): error TS2339: Property 'dataset' does not exist on type 'Element'.
+docs/javascripts/global-network.js(33,632): error TS2339: Property 'dataset' does not exist on type 'Element'.
+docs/javascripts/global-network.js(33,750): error TS18047: 'input' is possibly 'null'.
+docs/javascripts/global-network.js(33,756): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+docs/javascripts/global-network.js(33,764): error TS2339: Property 'dataset' does not exist on type 'Element'.
+docs/javascripts/global-network.js(33,795): error TS2339: Property 'dataset' does not exist on type 'Element'.
+docs/javascripts/knowledge-store.js(6,7): error TS7034: Variable 'allPromise' implicitly has type 'any' in some locations where its type cannot be determined.
+docs/javascripts/knowledge-store.js(9,92): error TS18048: 'window.JDM_RUNTIME_CONFIG' is possibly 'undefined'.
+docs/javascripts/knowledge-store.js(9,130): error TS18048: 'window.JDM_RUNTIME_CONFIG' is possibly 'undefined'.
+docs/javascripts/knowledge-store.js(10,27): error TS7006: Parameter 'error' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(10,33): error TS7006: Parameter 'status' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(22,24): error TS7006: Parameter 'builderFactory' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(25,84): error TS2353: Object literal may only specify known properties, and 'anonFallback' does not exist in type '{ retryAuth?: boolean | undefined; timeoutMs?: number | undefined; }'.
+docs/javascripts/knowledge-store.js(36,24): error TS7006: Parameter 'builderFactory' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(39,31): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(39,34): error TS7006: Parameter 'signal' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(45,21): error TS7006: Parameter 'm' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(51,27): error TS7006: Parameter 'list' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(52,30): error TS7006: Parameter 'm' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(52,53): error TS7006: Parameter 'a' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(52,55): error TS7006: Parameter 'b' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(54,26): error TS7006: Parameter 'err' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(54,63): error TS2322: Type 'number' is not assignable to type 'null'.
+docs/javascripts/knowledge-store.js(55,31): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(55,34): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(57,14): error TS7006: Parameter 'd' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(57,16): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(58,14): error TS7006: Parameter 'd' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(58,16): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(60,17): error TS18048: 'window.JDM_CONTRACT' is possibly 'undefined'.
+docs/javascripts/knowledge-store.js(65,58): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(65,61): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(66,9): error TS18048: 'rows' is possibly 'undefined'.
+docs/javascripts/knowledge-store.js(67,15): error TS18048: 'rows' is possibly 'undefined'.
+docs/javascripts/knowledge-store.js(69,14): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(69,17): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(70,14): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(70,17): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(72,17): error TS18048: 'window.JDM_CONTRACT' is possibly 'undefined'.
+docs/javascripts/knowledge-store.js(75,35): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(76,18): error TS18048: 'rows' is possibly 'undefined'.
+docs/javascripts/knowledge-store.js(80,8): error TS7005: Variable 'allPromise' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(83,21): error TS18048: 'window.JDM_CONTRACT' is possibly 'undefined'.
+docs/javascripts/knowledge-store.js(83,61): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(85,15): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(86,15): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(88,19): error TS18048: 'window.JDM_CONTRACT' is possibly 'undefined'.
+docs/javascripts/knowledge-store.js(93,77): error TS2322: Type 'number' is not assignable to type 'null'.
+docs/javascripts/knowledge-store.js(97,22): error TS7006: Parameter 'slugOrId' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(104,21): error TS18048: 'window.JDM_CONTRACT' is possibly 'undefined'.
+docs/javascripts/knowledge-store.js(104,62): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(104,65): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(108,56): error TS2322: Type 'number' is not assignable to type 'null'.
+docs/javascripts/knowledge-store.js(109,114): error TS2322: Type 'number' is not assignable to type 'null'.
+docs/javascripts/knowledge-store.js(113,53): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(113,56): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(115,26): error TS7006: Parameter 'worldSlug' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(117,30): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(117,33): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(123,25): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(124,61): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(124,64): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(126,22): error TS7006: Parameter 'link' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(126,78): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(126,94): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(128,31): error TS7006: Parameter 'entryId' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(131,34): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(131,37): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(132,45): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(132,88): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(133,43): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(133,46): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(134,36): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(135,37): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(135,119): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(137,32): error TS7006: Parameter 'worldSlug' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(139,65): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(139,68): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(141,30): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(141,33): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(143,25): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(144,61): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(144,64): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(146,27): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(146,137): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(147,33): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(147,36): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(148,44): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(150,44): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(151,46): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(151,104): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(153,34): error TS7006: Parameter 'entryId' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(155,29): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(155,32): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(157,36): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(158,61): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(158,64): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(160,21): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(160,108): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(165,32): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(165,35): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(166,54): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(167,43): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(167,46): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(170,30): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(170,33): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(172,30): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(172,33): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(175,7): error TS7034: Variable 'searchIndexPromise' implicitly has type 'any' in some locations where its type cannot be determined.
+docs/javascripts/knowledge-store.js(176,24): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(177,44): error TS2339: Property 'era' does not exist on type 'never'.
+docs/javascripts/knowledge-store.js(200,32): error TS7006: Parameter 'term' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(202,9): error TS7005: Variable 'searchIndexPromise' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(203,32): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(207,46): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(208,41): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(208,125): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(209,42): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(209,106): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(210,81): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(211,71): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(213,59): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(214,42): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(214,75): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(215,36): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(217,33): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(237,18): error TS7006: Parameter 'a' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(237,20): error TS7006: Parameter 'b' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(238,26): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(238,107): error TS7031: Binding element '_searchScore' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(240,38): error TS7006: Parameter 'term' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(243,27): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(246,14): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(246,17): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(248,46): error TS7006: Parameter 'w' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(250,19): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(255,23): error TS7006: Parameter 'values' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(255,66): error TS7006: Parameter 'v' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(257,41): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(258,39): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(258,101): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(259,40): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(259,102): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(260,35): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(261,29): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(262,28): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(265,34): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(265,37): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(265,169): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(266,44): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(267,64): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(267,67): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(268,56): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(269,84): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(269,87): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(272,32): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(273,38): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(273,86): error TS7006: Parameter 'm' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(273,414): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(273,490): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(273,613): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(276,34): error TS7006: Parameter 'term' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(279,37): error TS7006: Parameter 'ids' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(280,36): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(280,39): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(284,16): error TS18048: 'window.JDM_CONTRACT' is possibly 'undefined'.
+docs/javascripts/knowledge-store.js(284,57): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(284,60): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(288,38): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(288,41): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(289,28): error TS18048: 'window.JDM_CONTRACT' is possibly 'undefined'.
+docs/javascripts/knowledge-store.js(291,38): error TS7006: Parameter 'm' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(299,14): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(299,17): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(300,14): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(300,17): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(301,14): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(301,17): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(302,14): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(302,17): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(308,53): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(308,96): error TS7006: Parameter 'id' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(309,50): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(309,53): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(310,47): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(310,87): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(311,50): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(311,53): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(312,40): error TS7006: Parameter 'w' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(312,87): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(312,131): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(314,23): error TS7006: Parameter 'w' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(315,26): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(324,24): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(329,30): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(329,64): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(330,30): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(330,64): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(331,34): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(331,68): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(332,38): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(332,72): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(333,55): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(343,14): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(343,17): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(344,14): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(344,17): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(345,14): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(345,17): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(346,14): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(346,17): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(352,48): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(353,54): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(353,57): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(354,47): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(354,87): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(355,50): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(355,53): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(356,40): error TS7006: Parameter 'w' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(357,43): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(358,40): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(360,23): error TS7006: Parameter 'w' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(361,23): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(362,24): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(370,27): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(370,60): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(371,26): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(371,59): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(372,30): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(372,63): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(384,20): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(384,23): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(397,38): error TS7006: Parameter 'processId' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(400,38): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(400,41): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(404,14): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(404,17): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(405,14): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(405,17): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(409,45): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(411,30): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(411,33): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(412,30): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(412,33): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(413,30): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(413,33): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(418,47): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(419,49): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(419,52): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(420,39): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(421,40): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(423,20): error TS7006: Parameter 'w' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(425,23): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(426,23): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(429,43): error TS7006: Parameter 't' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(434,33): error TS7006: Parameter 'link' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(446,27): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(446,61): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(447,28): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(447,62): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(448,26): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(448,60): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(449,30): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(449,64): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(452,56): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(452,103): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(453,53): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(453,56): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(454,45): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(455,54): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(456,50): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(463,44): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(463,62): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(464,43): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(464,60): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(465,42): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(465,58): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(466,46): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(466,66): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(467,37): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(468,49): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(468,63): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(473,45): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(473,61): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(474,46): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(474,63): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(475,44): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(475,59): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(476,48): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(476,67): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(477,39): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(478,44): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(478,58): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(483,38): error TS7006: Parameter 'entryId' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(493,14): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(493,17): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(494,14): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(494,17): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(496,14): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(496,17): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(498,45): error TS7006: Parameter 'w' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(499,32): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(499,114): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(500,47): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(501,51): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(501,54): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(502,45): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(504,41): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(505,40): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(507,26): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(507,29): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(508,14): error TS7006: Parameter 'db' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(508,17): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(517,37): error TS7006: Parameter 'n' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(517,73): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(527,29): error TS7006: Parameter 'category' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(528,16): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/knowledge-store.js(529,29): error TS2353: Object literal may only specify known properties, and 'kilnAtlas' does not exist in type '{ all(): Promise<{ category: string; created_at: string; en: Json; id: string; ja: Json; slug: string; sources: Json; status: string; updated_at: string; updated_by: string | null; version: number; zh: Json; }[]>; ... 20 more ...; reset(): void; }'.
+docs/javascripts/museum-admin.js(4,107): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Type 'string | undefined' is not assignable to type 'string'.
+      Type 'undefined' is not assignable to type 'string'.
+docs/javascripts/museum-admin.js(5,19): error TS7006: Parameter 'raw' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(5,23): error TS7006: Parameter 'opts' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(6,26): error TS7006: Parameter 'raw' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(10,58): error TS2488: Type 'NodeListOf<ChildNode>' must have a '[Symbol.iterator]()' method that returns an iterator.
+docs/javascripts/museum-admin.js(11,11): error TS2488: Type 'NamedNodeMap' must have a '[Symbol.iterator]()' method that returns an iterator.
+docs/javascripts/museum-admin.js(21,21): error TS7006: Parameter 'v' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(21,26): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ published: string; draft: string; archived: string; }'.
+docs/javascripts/museum-admin.js(22,21): error TS7006: Parameter 'v' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(22,26): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ verified: string; unreviewed: string; rejected: string; expired: string; }'.
+docs/javascripts/museum-admin.js(49,25): error TS7006: Parameter 'settled' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(49,33): error TS7006: Parameter 'limit' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(67,52): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(68,48): error TS7006: Parameter 'm' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(69,11): error TS7034: Variable 'sources' implicitly has type 'any[]' in some locations where its type cannot be determined.
+docs/javascripts/museum-admin.js(71,33): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(72,100): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(72,102): error TS7006: Parameter 'i' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(83,7): error TS7005: Variable 'sources' implicitly has an 'any[]' type.
+docs/javascripts/museum-admin.js(98,19): error TS7006: Parameter 'data' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(101,11): error TS7034: Variable 'issues' implicitly has type 'any[]' in some locations where its type cannot be determined.
+docs/javascripts/museum-admin.js(106,28): error TS7006: Parameter 'm' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(108,28): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(115,28): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(123,26): error TS7006: Parameter 'm' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(136,7): error TS7005: Variable 'issues' implicitly has an 'any[]' type.
+docs/javascripts/museum-admin.js(144,24): error TS7006: Parameter 'name' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(144,29): error TS7006: Parameter 'domain' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(155,30): error TS7006: Parameter 'value' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(196,35): error TS7006: Parameter 'slug' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(204,33): error TS7006: Parameter 'entryId' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(224,26): error TS7006: Parameter 'row' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(240,20): error TS7006: Parameter 'existingZh' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(240,31): error TS7006: Parameter 'title' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(240,37): error TS7006: Parameter 'summary' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(240,45): error TS7006: Parameter 'content' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(252,28): error TS7006: Parameter 'slug' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(284,34): error TS7006: Parameter 'slug' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(284,39): error TS7006: Parameter 'revisionId' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(316,26): error TS7006: Parameter 'slug' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(322,23): error TS7006: Parameter 'iso' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(331,26): error TS7006: Parameter 'root' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(331,31): error TS7006: Parameter 'data' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(348,66): error TS7006: Parameter 'btn' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(355,86): error TS2339: Property 'message' does not exist on type '{}'.
+docs/javascripts/museum-admin.js(360,55): error TS7006: Parameter 'el' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(368,19): error TS7006: Parameter 'root' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(368,24): error TS7006: Parameter 'data' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(369,56): error TS7006: Parameter 'k' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(385,37): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(398,164): error TS7006: Parameter 'm' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(402,20): error TS7006: Parameter 'cmd' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(402,24): error TS7006: Parameter 'value' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(406,29): error TS7006: Parameter 'root' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(406,34): error TS7006: Parameter 'slug' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(415,78): error TS2339: Property 'message' does not exist on type '{}'.
+docs/javascripts/museum-admin.js(526,37): error TS2339: Property 'message' does not exist on type '{}'.
+docs/javascripts/museum-admin.js(546,82): error TS2339: Property 'message' does not exist on type '{}'.
+docs/javascripts/museum-admin.js(556,23): error TS7006: Parameter 'root' implicitly has an 'any' type.
+docs/javascripts/museum-admin.js(566,27): error TS2339: Property 'code' does not exist on type '{}'.
+docs/javascripts/museum-admin.js(566,38): error TS2339: Property 'status' does not exist on type '{}'.
+docs/javascripts/museum-admin.js(567,15): error TS2339: Property 'code' does not exist on type '{}'.
+docs/javascripts/museum-admin.js(567,44): error TS2339: Property 'status' does not exist on type '{}'.
+docs/javascripts/museum-admin.js(571,15): error TS2339: Property 'code' does not exist on type '{}'.
+docs/javascripts/museum-admin.js(571,45): error TS2339: Property 'status' does not exist on type '{}'.
+docs/javascripts/museum-admin.js(575,73): error TS18046: 'err' is of type 'unknown'.
+docs/javascripts/museum-images.js(4,44): error TS7034: Variable 'queue' implicitly has type 'any[]' in some locations where its type cannot be determined.
+docs/javascripts/museum-images.js(7,23): error TS7006: Parameter 'img' implicitly has an 'any' type.
+docs/javascripts/museum-images.js(8,24): error TS7006: Parameter 'src' implicitly has an 'any' type.
+docs/javascripts/museum-images.js(9,34): error TS7006: Parameter 'src' implicitly has an 'any' type.
+docs/javascripts/museum-images.js(10,23): error TS7006: Parameter 'img' implicitly has an 'any' type.
+docs/javascripts/museum-images.js(11,24): error TS7006: Parameter 'img' implicitly has an 'any' type.
+docs/javascripts/museum-images.js(11,28): error TS7006: Parameter 'label' implicitly has an 'any' type.
+docs/javascripts/museum-images.js(11,89): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Type 'string | undefined' is not assignable to type 'string'.
+      Type 'undefined' is not assignable to type 'string'.
+docs/javascripts/museum-images.js(12,15): error TS7006: Parameter 'ms' implicitly has an 'any' type.
+docs/javascripts/museum-images.js(13,30): error TS7006: Parameter 'url' implicitly has an 'any' type.
+docs/javascripts/museum-images.js(23,23): error TS7006: Parameter 'id' implicitly has an 'any' type.
+docs/javascripts/museum-images.js(24,32): error TS7006: Parameter 'id' implicitly has an 'any' type.
+docs/javascripts/museum-images.js(32,20): error TS7006: Parameter 'task' implicitly has an 'any' type.
+docs/javascripts/museum-images.js(33,74): error TS7005: Variable 'queue' implicitly has an 'any[]' type.
+docs/javascripts/museum-images.js(34,29): error TS7006: Parameter 'img' implicitly has an 'any' type.
+docs/javascripts/museum-images.js(50,20): error TS7006: Parameter 'img' implicitly has an 'any' type.
+docs/javascripts/museum-images.js(51,17): error TS7006: Parameter 'img' implicitly has an 'any' type.
+docs/javascripts/museum-images.js(52,17): error TS7006: Parameter 'root' implicitly has an 'any' type.
+docs/javascripts/museum-images.js(53,134): error TS2554: Expected 1 arguments, but got 2.
+docs/javascripts/museum.js(4,13): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/museum.js(4,107): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Type 'string | undefined' is not assignable to type 'string'.
+      Type 'undefined' is not assignable to type 'string'.
+docs/javascripts/museum.js(5,19): error TS7006: Parameter 'raw' implicitly has an 'any' type.
+docs/javascripts/museum.js(5,23): error TS7006: Parameter 'opts' implicitly has an 'any' type.
+docs/javascripts/museum.js(6,15): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/museum.js(7,14): error TS7006: Parameter 'p' implicitly has an 'any' type.
+docs/javascripts/museum.js(8,18): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/museum.js(9,17): error TS7006: Parameter 'u' implicitly has an 'any' type.
+docs/javascripts/museum.js(10,17): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/museum.js(11,17): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/museum.js(12,26): error TS7006: Parameter 'rows' implicitly has an 'any' type.
+docs/javascripts/museum.js(12,31): error TS7006: Parameter 'label' implicitly has an 'any' type.
+docs/javascripts/museum.js(13,32): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/museum.js(15,21): error TS7006: Parameter 'im' implicitly has an 'any' type.
+docs/javascripts/museum.js(15,24): error TS7006: Parameter 'alt' implicitly has an 'any' type.
+docs/javascripts/museum.js(19,26): error TS7006: Parameter 'items' implicitly has an 'any' type.
+docs/javascripts/museum.js(21,57): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+docs/javascripts/museum.js(22,56): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+docs/javascripts/museum.js(23,60): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+docs/javascripts/museum.js(24,58): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+docs/javascripts/museum.js(25,33): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/museum.js(28,40): error TS7006: Parameter 't' implicitly has an 'any' type.
+docs/javascripts/museum.js(30,93): error TS7006: Parameter 'p' implicitly has an 'any' type.
+docs/javascripts/museum.js(36,20): error TS7006: Parameter 'a' implicitly has an 'any' type.
+docs/javascripts/museum.js(36,22): error TS7006: Parameter 'b' implicitly has an 'any' type.
+docs/javascripts/museum.js(37,33): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/museum.js(38,98): error TS7006: Parameter 't' implicitly has an 'any' type.
+docs/javascripts/museum.js(41,58): error TS7006: Parameter 'p' implicitly has an 'any' type.
+docs/javascripts/museum.js(57,21): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/museum.js(57,32): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ tang: string; song: string; yuan: string; ming: string; qing: string; 'near-modern': string; modern: string; }'.
+docs/javascripts/museum.js(59,25): error TS7006: Parameter 'items' implicitly has an 'any' type.
+docs/javascripts/museum.js(61,56): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+docs/javascripts/museum.js(62,55): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+docs/javascripts/museum.js(63,57): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+docs/javascripts/museum.js(64,59): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+docs/javascripts/museum.js(65,33): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/museum.js(70,49): error TS7006: Parameter 'w' implicitly has an 'any' type.
+docs/javascripts/museum.js(74,33): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/museum.js(78,57): error TS7006: Parameter 'p' implicitly has an 'any' type.
+docs/javascripts/museum.js(79,49): error TS7006: Parameter 'p' implicitly has an 'any' type.
+docs/javascripts/museum.js(82,59): error TS7006: Parameter 'p' implicitly has an 'any' type.
+docs/javascripts/museum.js(101,28): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/museum.js(111,13): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ tang: number; song: number; yuan: number; ming: number; qing: number; modern: number; }'.
+docs/javascripts/museum.js(113,27): error TS7006: Parameter 'entries' implicitly has an 'any' type.
+docs/javascripts/museum.js(117,31): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/museum.js(117,66): error TS7006: Parameter 'a' implicitly has an 'any' type.
+docs/javascripts/museum.js(117,68): error TS7006: Parameter 'b' implicitly has an 'any' type.
+docs/javascripts/museum.js(122,54): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/museum.js(129,24): error TS7006: Parameter 'root' implicitly has an 'any' type.
+docs/javascripts/museum.js(129,29): error TS7006: Parameter 'error' implicitly has an 'any' type.
+docs/javascripts/museum.js(150,19): error TS2322: Type 'unknown[]' is not assignable to type 'never[]'.
+  Type 'unknown' is not assignable to type 'never'.
+docs/javascripts/museum.js(150,27): error TS2322: Type 'unknown[]' is not assignable to type 'never[]'.
+  Type 'unknown' is not assignable to type 'never'.
+docs/javascripts/museum.js(150,278): error TS2339: Property 'id' does not exist on type 'EventTarget'.
+docs/javascripts/network-explorer.js(22,21): error TS7034: Variable 'nodes' implicitly has type 'any[]' in some locations where its type cannot be determined.
+docs/javascripts/network-explorer.js(22,31): error TS7034: Variable 'edges' implicitly has type 'any[]' in some locations where its type cannot be determined.
+docs/javascripts/network-explorer.js(22,41): error TS7034: Variable 'active' implicitly has type 'any' in some locations where its type cannot be determined.
+docs/javascripts/network-explorer.js(24,16): error TS7006: Parameter 'v' implicitly has an 'any' type.
+docs/javascripts/network-explorer.js(24,56): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Type 'string | undefined' is not assignable to type 'string'.
+      Type 'undefined' is not assignable to type 'string'.
+docs/javascripts/network-explorer.js(25,21): error TS7006: Parameter 'raw' implicitly has an 'any' type.
+docs/javascripts/network-explorer.js(25,25): error TS7006: Parameter 'opts' implicitly has an 'any' type.
+docs/javascripts/network-explorer.js(26,18): error TS7006: Parameter 'n' implicitly has an 'any' type.
+docs/javascripts/network-explorer.js(27,25): error TS7006: Parameter 'n' implicitly has an 'any' type.
+docs/javascripts/network-explorer.js(28,19): error TS7006: Parameter 'n' implicitly has an 'any' type.
+docs/javascripts/network-explorer.js(29,21): error TS7006: Parameter 'n' implicitly has an 'any' type.
+docs/javascripts/network-explorer.js(32,19): error TS18048: 'window.JDM_KNOWLEDGE' is possibly 'undefined'.
+docs/javascripts/network-explorer.js(35,22): error TS7006: Parameter 'text' implicitly has an 'any' type.
+docs/javascripts/network-explorer.js(36,7): error TS18047: 'status' is possibly 'null'.
+docs/javascripts/network-explorer.js(37,7): error TS18047: 'status' is possibly 'null'.
+docs/javascripts/network-explorer.js(37,14): error TS2339: Property 'dataset' does not exist on type 'Element'.
+docs/javascripts/network-explorer.js(41,14): error TS7005: Variable 'nodes' implicitly has an 'any[]' type.
+docs/javascripts/network-explorer.js(54,28): error TS7006: Parameter 'visible' implicitly has an 'any' type.
+docs/javascripts/network-explorer.js(55,37): error TS7006: Parameter 'n' implicitly has an 'any' type.
+docs/javascripts/network-explorer.js(56,14): error TS7005: Variable 'edges' implicitly has an 'any[]' type.
+docs/javascripts/network-explorer.js(62,21): error TS7006: Parameter 'vnodes' implicitly has an 'any' type.
+docs/javascripts/network-explorer.js(64,33): error TS7006: Parameter 'n' implicitly has an 'any' type.
+docs/javascripts/network-explorer.js(65,33): error TS7006: Parameter 'n' implicitly has an 'any' type.
+docs/javascripts/network-explorer.js(67,22): error TS7006: Parameter 'n' implicitly has an 'any' type.
+docs/javascripts/network-explorer.js(67,24): error TS7006: Parameter 'i' implicitly has an 'any' type.
+docs/javascripts/network-explorer.js(71,22): error TS7006: Parameter 'n' implicitly has an 'any' type.
+docs/javascripts/network-explorer.js(71,24): error TS7006: Parameter 'i' implicitly has an 'any' type.
+docs/javascripts/network-explorer.js(78,24): error TS7006: Parameter 'n' implicitly has an 'any' type.
+docs/javascripts/network-explorer.js(103,7): error TS18047: 'svg' is possibly 'null'.
+docs/javascripts/network-explorer.js(111,52): error TS7005: Variable 'active' implicitly has an 'any' type.
+docs/javascripts/network-explorer.js(115,7): error TS18047: 'svg' is possibly 'null'.
+docs/javascripts/network-explorer.js(119,27): error TS7005: Variable 'active' implicitly has an 'any' type.
+docs/javascripts/network-explorer.js(124,33): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+  Type 'number' is not assignable to type 'string'.
+docs/javascripts/network-explorer.js(125,61): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ 历史: string; 工艺: string; 器物: string; 窑址: string; 人物: string; 文献: string; 现代: string; }'.
+  No index signature with a parameter of type 'string' was found on type '{ 历史: string; 工艺: string; 器物: string; 窑址: string; 人物: string; 文献: string; 现代: string; }'.
+docs/javascripts/network-explorer.js(129,31): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+  Type 'number' is not assignable to type 'string'.
+docs/javascripts/network-explorer.js(140,24): error TS7006: Parameter 'n' implicitly has an 'any' type.
+docs/javascripts/network-explorer.js(141,14): error TS7005: Variable 'edges' implicitly has an 'any[]' type.
+docs/javascripts/network-explorer.js(143,21): error TS7005: Variable 'nodes' implicitly has an 'any[]' type.
+docs/javascripts/network-explorer.js(145,44): error TS18047: 'a' is possibly 'null'.
+docs/javascripts/network-explorer.js(145,72): error TS18047: 'b' is possibly 'null'.
+docs/javascripts/network-explorer.js(148,25): error TS7006: Parameter 'id' implicitly has an 'any' type.
+docs/javascripts/network-explorer.js(149,14): error TS7005: Variable 'nodes' implicitly has an 'any[]' type.
+docs/javascripts/network-explorer.js(150,19): error TS18047: 'detail' is possibly 'null'.
+docs/javascripts/network-explorer.js(152,43): error TS18047: 'x' is possibly 'null'.
+docs/javascripts/network-explorer.js(154,7): error TS18047: 'detail' is possibly 'null'.
+docs/javascripts/network-explorer.js(154,66): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ entry: string; world: string; }'.
+docs/javascripts/network-explorer.js(160,114): error TS18047: 'x' is possibly 'null'.
+docs/javascripts/network-explorer.js(160,274): error TS18047: 'x' is possibly 'null'.
+docs/javascripts/network-explorer.js(160,311): error TS18047: 'x' is possibly 'null'.
+docs/javascripts/network-explorer.js(161,7): error TS18047: 'detail' is possibly 'null'.
+docs/javascripts/network-explorer.js(161,101): error TS2339: Property 'dataset' does not exist on type 'Element'.
+docs/javascripts/network-explorer.js(165,25): error TS7006: Parameter 'vnodes' implicitly has an 'any' type.
+docs/javascripts/network-explorer.js(167,7): error TS18047: 'list' is possibly 'null'.
+docs/javascripts/network-explorer.js(167,34): error TS7006: Parameter 'n' implicitly has an 'any' type.
+docs/javascripts/network-explorer.js(167,87): error TS7005: Variable 'active' implicitly has an 'any' type.
+docs/javascripts/network-explorer.js(168,7): error TS18047: 'list' is possibly 'null'.
+docs/javascripts/network-explorer.js(168,99): error TS2339: Property 'dataset' does not exist on type 'Element'.
+docs/javascripts/network-explorer.js(172,5): error TS18047: 'search' is possibly 'null'.
+docs/javascripts/network-explorer.js(172,48): error TS18047: 'search' is possibly 'null'.
+docs/javascripts/network-explorer.js(172,55): error TS2339: Property 'value' does not exist on type 'Element'.
+docs/javascripts/network-explorer.js(173,5): error TS18047: 'filter' is possibly 'null'.
+docs/javascripts/network-explorer.js(173,48): error TS18047: 'filter' is possibly 'null'.
+docs/javascripts/network-explorer.js(173,55): error TS2339: Property 'value' does not exist on type 'Element'.
+docs/javascripts/network-explorer.js(174,5): error TS18047: 'reset' is possibly 'null'.
+docs/javascripts/network-explorer.js(174,61): error TS18047: 'search' is possibly 'null'.
+docs/javascripts/network-explorer.js(174,68): error TS2339: Property 'value' does not exist on type 'Element'.
+docs/javascripts/network-explorer.js(174,77): error TS18047: 'filter' is possibly 'null'.
+docs/javascripts/network-explorer.js(174,84): error TS2339: Property 'value' does not exist on type 'Element'.
+docs/javascripts/network-explorer.js(174,108): error TS18047: 'detail' is possibly 'null'.
+docs/javascripts/network-explorer.js(179,13): error TS18046: 'graph' is of type 'unknown'.
+docs/javascripts/network-explorer.js(179,35): error TS18046: 'graph' is of type 'unknown'.
+docs/javascripts/network-explorer.js(183,30): error TS7006: Parameter 'n' implicitly has an 'any' type.
+docs/javascripts/network-explorer.js(183,68): error TS7006: Parameter 'n' implicitly has an 'any' type.
+docs/javascripts/network-explorer.js(183,131): error TS7006: Parameter 'n' implicitly has an 'any' type.
+docs/javascripts/network-explorer.js(187,173): error TS18047: 'status' is possibly 'null'.
+docs/javascripts/network-explorer.js(188,7): error TS18047: 'detail' is possibly 'null'.
+docs/javascripts/technology-tree.js(3,13): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/technology-tree.js(3,53): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Type 'string | undefined' is not assignable to type 'string'.
+      Type 'undefined' is not assignable to type 'string'.
+docs/javascripts/technology-tree.js(4,19): error TS7006: Parameter 'raw' implicitly has an 'any' type.
+docs/javascripts/technology-tree.js(4,23): error TS7006: Parameter 'opts' implicitly has an 'any' type.
+docs/javascripts/technology-tree.js(14,18): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/technology-tree.js(14,179): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ material: { url: string; credit: string; }; kneading: { url: string; credit: string; }; forming: { url: string; credit: string; }; decoration: { url: string; credit: string; }; glaze: { url: string; credit: string; }; kiln: { ...; }; }'.
+docs/javascripts/technology-tree.js(15,18): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/technology-tree.js(15,22): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ tang: string; song: string; yuan: string; ming: string; qing: string; 'near-modern': string; modern: string; }'.
+docs/javascripts/technology-tree.js(16,18): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/technology-tree.js(20,133): error TS18047: 'detail' is possibly 'null'.
+docs/javascripts/technology-tree.js(21,165): error TS18047: 'detail' is possibly 'null'.
+docs/javascripts/technology-tree.js(22,9): error TS7034: Variable 'DATA' implicitly has type 'any[]' in some locations where its type cannot be determined.
+docs/javascripts/technology-tree.js(23,135): error TS2339: Property 'code' does not exist on type '{}'.
+docs/javascripts/technology-tree.js(23,144): error TS2339: Property 'status' does not exist on type '{}'.
+docs/javascripts/technology-tree.js(23,231): error TS18047: 'detail' is possibly 'null'.
+docs/javascripts/technology-tree.js(23,408): error TS18047: 'detail' is possibly 'null'.
+docs/javascripts/technology-tree.js(24,22): error TS18047: 'detail' is possibly 'null'.
+docs/javascripts/technology-tree.js(29,5): error TS18047: 'toolbar' is possibly 'null'.
+docs/javascripts/technology-tree.js(30,22): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/technology-tree.js(30,24): error TS7006: Parameter 'f' implicitly has an 'any' type.
+docs/javascripts/technology-tree.js(30,26): error TS7006: Parameter 'q' implicitly has an 'any' type.
+docs/javascripts/technology-tree.js(31,48): error TS18047: 'svg' is possibly 'null'.
+docs/javascripts/technology-tree.js(31,74): error TS18047: 'root' is possibly 'null'.
+docs/javascripts/technology-tree.js(31,103): error TS18047: 'svg' is possibly 'null'.
+docs/javascripts/technology-tree.js(31,137): error TS18047: 'root' is possibly 'null'.
+docs/javascripts/technology-tree.js(31,170): error TS18047: 'nodes' is possibly 'null'.
+docs/javascripts/technology-tree.js(31,218): error TS18047: 'nodes' is possibly 'null'.
+docs/javascripts/technology-tree.js(31,664): error TS18047: 'svg' is possibly 'null'.
+docs/javascripts/technology-tree.js(32,35): error TS18047: 'nodes' is possibly 'null'.
+docs/javascripts/technology-tree.js(32,219): error TS7005: Variable 'DATA' implicitly has an 'any[]' type.
+docs/javascripts/technology-tree.js(32,312): error TS7005: Variable 'DATA' implicitly has an 'any[]' type.
+docs/javascripts/technology-tree.js(32,592): error TS18047: 'nodes' is possibly 'null'.
+docs/javascripts/technology-tree.js(32,642): error TS2339: Property 'onclick' does not exist on type 'Element'.
+docs/javascripts/technology-tree.js(32,663): error TS2339: Property 'dataset' does not exist on type 'Element'.
+docs/javascripts/technology-tree.js(33,27): error TS7006: Parameter 'id' implicitly has an 'any' type.
+docs/javascripts/technology-tree.js(35,7): error TS18047: 'nodes' is possibly 'null'.
+docs/javascripts/technology-tree.js(35,90): error TS2339: Property 'dataset' does not exist on type 'Element'.
+docs/javascripts/technology-tree.js(36,7): error TS18047: 'detail' is possibly 'null'.
+docs/javascripts/technology-tree.js(37,34): error TS18048: 'window.JDM_KNOWLEDGE' is possibly 'undefined'.
+docs/javascripts/technology-tree.js(37,178): error TS2339: Property 'code' does not exist on type '{}'.
+docs/javascripts/technology-tree.js(37,187): error TS2339: Property 'status' does not exist on type '{}'.
+docs/javascripts/technology-tree.js(37,260): error TS18047: 'detail' is possibly 'null'.
+docs/javascripts/technology-tree.js(38,16): error TS18047: 'detail' is possibly 'null'.
+docs/javascripts/technology-tree.js(40,40): error TS7006: Parameter 'item' implicitly has an 'any' type.
+docs/javascripts/technology-tree.js(41,23): error TS7006: Parameter 'title' implicitly has an 'any' type.
+docs/javascripts/technology-tree.js(41,29): error TS7006: Parameter 'count' implicitly has an 'any' type.
+docs/javascripts/technology-tree.js(41,35): error TS7006: Parameter 'items' implicitly has an 'any' type.
+docs/javascripts/technology-tree.js(41,41): error TS7006: Parameter 'cls' implicitly has an 'any' type.
+docs/javascripts/technology-tree.js(41,217): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/technology-tree.js(42,45): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/technology-tree.js(45,7): error TS18047: 'detail' is possibly 'null'.
+docs/javascripts/technology-tree.js(45,1918): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/technology-tree.js(45,2093): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/technology-tree.js(46,7): error TS18047: 'detail' is possibly 'null'.
+docs/javascripts/technology-tree.js(46,59): error TS2339: Property 'onclick' does not exist on type 'Element'.
+docs/javascripts/technology-tree.js(46,80): error TS2339: Property 'dataset' does not exist on type 'Element'.
+docs/javascripts/technology-tree.js(48,5): error TS2531: Object is possibly 'null'.
+docs/javascripts/technology-tree.js(48,45): error TS2339: Property 'oninput' does not exist on type 'Element'.
+docs/javascripts/technology-tree.js(48,53): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/technology-tree.js(48,118): error TS2339: Property 'dataset' does not exist on type 'Element'.
+docs/javascripts/technology-tree.js(49,5): error TS18047: 'toolbar' is possibly 'null'.
+docs/javascripts/technology-tree.js(49,50): error TS18047: 'e.target' is possibly 'null'.
+docs/javascripts/technology-tree.js(49,59): error TS2339: Property 'closest' does not exist on type 'EventTarget'.
+docs/javascripts/technology-tree.js(49,103): error TS18047: 'toolbar' is possibly 'null'.
+docs/javascripts/technology-tree.js(49,235): error TS2531: Object is possibly 'null'.
+docs/javascripts/technology-tree.js(49,275): error TS2339: Property 'value' does not exist on type 'Element'.
+docs/javascripts/timeline-interactive.js(3,13): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/timeline-interactive.js(3,53): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Type 'string | undefined' is not assignable to type 'string'.
+      Type 'undefined' is not assignable to type 'string'.
+docs/javascripts/timeline-interactive.js(4,14): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/timeline-interactive.js(5,20): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/timeline-interactive.js(12,18): error TS7006: Parameter 'raw' implicitly has an 'any' type.
+docs/javascripts/timeline-interactive.js(13,23): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/timeline-interactive.js(19,21): error TS7006: Parameter 'node' implicitly has an 'any' type.
+docs/javascripts/timeline-interactive.js(19,26): error TS7006: Parameter 'bySlug' implicitly has an 'any' type.
+docs/javascripts/timeline-interactive.js(26,39): error TS7006: Parameter 'ev' implicitly has an 'any' type.
+docs/javascripts/timeline-interactive.js(27,41): error TS7006: Parameter 'ev' implicitly has an 'any' type.
+docs/javascripts/timeline-interactive.js(31,17): error TS7006: Parameter 'root' implicitly has an 'any' type.
+docs/javascripts/timeline-interactive.js(31,22): error TS7006: Parameter 'entries' implicitly has an 'any' type.
+docs/javascripts/timeline-interactive.js(32,38): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/timeline-interactive.js(33,56): error TS7006: Parameter 'node' implicitly has an 'any' type.
+docs/javascripts/timeline-interactive.js(36,17): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/timeline-interactive.js(37,125): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/timeline-interactive.js(55,5): error TS2531: Object is possibly 'null'.
+docs/javascripts/timeline-interactive.js(55,48): error TS2339: Property 'onclick' does not exist on type 'Element'.
+docs/javascripts/timeline-interactive.js(55,62): error TS2531: Object is possibly 'null'.
+docs/javascripts/timeline-interactive.js(55,108): error TS2339: Property 'onclick' does not exist on type 'Element'.
+docs/javascripts/timeline-interactive.js(56,17): error TS7006: Parameter 'ev' implicitly has an 'any' type.
+docs/javascripts/timeline-interactive.js(59,7): error TS7034: Variable 'observer' implicitly has type 'any' in some locations where its type cannot be determined.
+docs/javascripts/timeline-interactive.js(62,5): error TS7005: Variable 'observer' implicitly has an 'any' type.
+docs/javascripts/timeline-interactive.js(77,24): error TS2339: Property 'onclick' does not exist on type 'Element'.
+docs/javascripts/timeline-interactive.js(77,37): error TS18048: 'window.JDM_KNOWLEDGE' is possibly 'undefined'.
+docs/javascripts/wiki-enhancements.js(3,13): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(3,106): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Type 'string | undefined' is not assignable to type 'string'.
+      Type 'undefined' is not assignable to type 'string'.
+docs/javascripts/wiki-enhancements.js(9,15): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(10,13): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(11,19): error TS7006: Parameter 'raw' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(11,23): error TS7006: Parameter 'opts' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(12,17): error TS7006: Parameter 'u' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(13,19): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(14,21): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(16,25): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(18,24): error TS7006: Parameter 'list' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(18,52): error TS7034: Variable 'out' implicitly has type 'any[]' in some locations where its type cannot be determined.
+docs/javascripts/wiki-enhancements.js(18,90): error TS7005: Variable 'out' implicitly has an 'any[]' type.
+docs/javascripts/wiki-enhancements.js(18,317): error TS7005: Variable 'out' implicitly has an 'any[]' type.
+docs/javascripts/wiki-enhancements.js(19,21): error TS7006: Parameter 'raw' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(20,22): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(21,20): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(22,26): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(32,19): error TS7006: Parameter 'root' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(32,24): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(32,26): error TS7006: Parameter 'network' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(41,21): error TS7006: Parameter 'w' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(42,33): error TS7006: Parameter 'w' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(43,23): error TS7006: Parameter 'items' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(43,29): error TS7006: Parameter 'kind' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(43,57): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(59,197): error TS7006: Parameter 'p' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(60,271): error TS7006: Parameter 'r' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(64,29): error TS7006: Parameter 'raw' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(70,58): error TS2488: Type 'NodeListOf<ChildNode>' must have a '[Symbol.iterator]()' method that returns an iterator.
+docs/javascripts/wiki-enhancements.js(71,11): error TS2488: Type 'NamedNodeMap' must have a '[Symbol.iterator]()' method that returns an iterator.
+docs/javascripts/wiki-enhancements.js(84,27): error TS7006: Parameter 'e' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(84,29): error TS7006: Parameter 'intro' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(101,9): error TS2488: Type 'NodeListOf<HTMLParagraphElement>' must have a '[Symbol.iterator]()' method that returns an iterator.
+docs/javascripts/wiki-enhancements.js(108,9): error TS2488: Type 'NodeListOf<HTMLHeadingElement>' must have a '[Symbol.iterator]()' method that returns an iterator.
+docs/javascripts/wiki-enhancements.js(125,32): error TS7006: Parameter 'entryId' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(129,28): error TS7006: Parameter 'field' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(129,34): error TS7006: Parameter 'd' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(129,36): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(138,25): error TS7006: Parameter 'd' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(138,27): error TS7006: Parameter 's' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(140,40): error TS7006: Parameter 'x' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(144,34): error TS7006: Parameter 'root' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(149,5): error TS2531: Object is possibly 'null'.
+docs/javascripts/wiki-enhancements.js(152,28): error TS7006: Parameter 'root' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(152,33): error TS7006: Parameter 'error' implicitly has an 'any' type.
+docs/javascripts/wiki-enhancements.js(155,47): error TS18048: 'window.JDM_KNOWLEDGE' is possibly 'undefined'.
+docs/javascripts/wiki-enhancements.js(163,73): error TS2339: Property 'JDM_STATIC_ENTRY_SLUG' does not exist on type 'Window & typeof globalThis'.
+docs/javascripts/wiki-enhancements.js(173,11): error TS18048: 'window.JDM_KNOWLEDGE' is possibly 'undefined'.
+docs/javascripts/wiki-enhancements.js(174,11): error TS18048: 'window.JDM_KNOWLEDGE' is possibly 'undefined'.
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
