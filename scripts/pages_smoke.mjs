@@ -25,6 +25,7 @@ for(const [name,path,selector] of checks){await check(path,selector);console.log
 async function checkEntryPresentation(slug){
   await page.goto(base+'entry/'+slug+'/',{waitUntil:'domcontentloaded',timeout:30000});
   await page.locator('#wiki-entry-root.wiki-entry-card.wiki-entry-v2').waitFor({state:'visible',timeout:20000});
+  if(await page.locator('.wiki-entry-card').count()!==1 || await page.locator('.wiki-entry-card .wiki-entry-card').count()!==0)throw new Error(slug+': expected one non-nested Entry shell');
   const result=await page.evaluate(()=>{
     const root=document.querySelector('#wiki-entry-root');
     const summary=(root?.querySelector('.wiki-entry-header p')?.textContent||'').trim();

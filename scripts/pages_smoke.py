@@ -27,6 +27,13 @@ ROUTES=[
     ("全球陶瓷网络","network/global/","body"),
 ]
 
+def check_entry_shell(page):
+    page.locator("#wiki-entry-root.wiki-entry-card.wiki-entry-v2").wait_for(state="visible",timeout=20000)
+    if page.locator(".wiki-entry-card").count() != 1:
+        raise RuntimeError("百科页面必须只有一个外框")
+    if page.locator(".wiki-entry-card .wiki-entry-card").count() != 0:
+        raise RuntimeError("百科页面出现嵌套外框")
+
 def check_viewport(browser, width, height, label):
     page=browser.new_page(viewport={"width":width,"height":height})
     page.on("pageerror", lambda e: errors.append(f"{label} pageerror: {e}"))
@@ -72,6 +79,7 @@ with sync_playwright() as p:
         raise RuntimeError("Entry meta description missing")
     if not page.locator("head script[type='application/ld+json']").count():
         raise RuntimeError("Entry JSON-LD missing")
+    check_entry_shell(page)
     if page.locator("#wiki-entry-root.wiki-entry-card.wiki-entry-v2").count()<1:
         raise RuntimeError("知识条目未使用统一 Entry Detail 2.0 外壳")
     if page.locator("#wiki-entry-root .wiki-entry-v2-grid").count()<1:
@@ -172,7 +180,7 @@ with sync_playwright() as p:
         for href in world_hrefs:
             entry_target=urljoin(page.url,href)
             page.goto(entry_target,wait_until="domcontentloaded",timeout=30000)
-            page.locator("#wiki-entry-root .wiki-entry-card").first.wait_for(state="visible",timeout=20000)
+            check_entry_shell(page)
             exits=page.locator(".wiki-recommendation-card, .wiki-entry-v2-relations a, .wiki-entry-explore-card")
             exit_hrefs=exits.evaluate_all("(links)=>links.map(link=>link.getAttribute('href')).filter(Boolean)")
             for second_href in exit_hrefs:
@@ -180,7 +188,7 @@ with sync_playwright() as p:
                 if "/entry/" not in second_target:
                     continue
                 page.goto(second_target,wait_until="domcontentloaded",timeout=30000)
-                page.locator("#wiki-entry-root .wiki-entry-card").first.wait_for(state="visible",timeout=20000)
+                check_entry_shell(page)
                 found_continuation=True
                 break
             if found_continuation:
