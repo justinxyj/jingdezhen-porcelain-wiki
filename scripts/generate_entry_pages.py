@@ -317,14 +317,24 @@ def entry_html(entry: dict, world_by_entry: dict[str, list[dict]],
     intro = (person_importance(entry) if entry.get("category") == "人物" else "") or intro_for(entry)
     content = str(zh.get("content") or "")
     body_html = clean_body_html(content, intro) if content.strip() else f"<p>{html.escape(intro)}</p>"
+    headings = re.findall(r'<h([23])>(.*?)</h\1>', body_html, re.S)
+    toc_html = ""
+    if len(plain(body_html)) >= 300 and len(headings) >= 2:
+        for i, (level, label) in enumerate(headings):
+            body_html = body_html.replace(f'<h{level}>{label}</h{level}>', f'<h{level} id="entry-section-{i}">{label}</h{level}>', 1)
+        toc_html = '<nav class="visitor-entry-toc" aria-label="文章章节">' + ' · '.join(f'<a href="#entry-section-{i}">{html.escape(plain(label))}</a>' for i, (_, label) in enumerate(headings)) + '</nav>'
     media = first_media(media_by_entry, entry["id"])
     worlds = world_by_entry.get(entry["id"], [])
     relations = relations_by_entry.get(entry["id"], [])[:24]
     meta = zh.get("meta") or {}
+    pending = {x["slug"] for x in json.loads((ROOT / "reports/content-quality-round2/final/object-provenance.json").read_text())["objects"]}
+    object_notice = '<p class="visitor-provenance">馆藏资料待核 · 以下背景资料不代表本器物身份出处。</p>' if slug in pending else ""
+    if not object_notice and meta.get('institution') and meta.get('object_number') and str(meta.get('object_url') or '').startswith('https://'):
+        object_notice = '<p class="visitor-provenance">馆藏记录：' + html.escape(str(meta['institution'])) + ' · ' + html.escape(str(meta['object_number'])) + ' <a href="' + html.escape(meta['object_url'], quote=True) + '">查看原始对象记录 ↗</a></p>'
     tags = [str(x) for x in [meta.get("period"), meta.get("era"), meta.get("role"), meta.get("location"), meta.get("region"), meta.get("craft")] if x]
     tags = list(dict.fromkeys(tags))[:6]
 
-    image_html = '<p class="visitor-missing-image">暂无公开图片。图片需具备可追溯来源与使用许可。</p>'
+    image_html = '<p class="visitor-missing-image">暂无可展示图片。</p>'
     image_url = ""
     if media and str(media.get("path") or "").startswith(("https://", "http://")):
         image_url = str(media["path"])
@@ -359,11 +369,13 @@ def entry_html(entry: dict, world_by_entry: dict[str, list[dict]],
         for rel in relations if rel.get("target_slug")
     )
     paths = json.loads((DOCS / "data/reading-paths.json").read_text(encoding="utf-8")).get(slug, [])
+    if slug in pending and not paths:
+        paths = [{"path": "objects/", "title": "认识器形、釉色与纹饰", "description": "同主题阅读：先了解器物分类；不代表当前器物身份已经确认。"}, {"path": "craft/technology-tree/", "title": "一件瓷器怎样制作", "description": "同主题阅读：从原料到烧成认识传统制瓷。"}]
     reading_html = "".join(
         f'<a href="{SITE_URL}{html.escape(item["path"],quote=True)}"><b>{html.escape(item["title"])}</b><p>{html.escape(item["description"])}</p></a>'
         for item in paths
     )
-    reading_html = f'<section class="visitor-reading-path"><h2>延伸阅读</h2><p>编辑选读：补充理解当前主题的背景。</p><div class="visitor-grid">{reading_html}</div></section>' if reading_html else ""
+    reading_html = f'<section class="visitor-reading-path"><h2>继续探索</h2><p>编辑选读：补充理解当前主题的背景。</p><div class="visitor-grid">{reading_html}</div></section>' if reading_html else ""
 
 
 
@@ -406,25 +418,38 @@ def entry_html(entry: dict, world_by_entry: dict[str, list[dict]],
                 "entry_category": [category_label, category_routes.get(category, 'entry/')],
                 "hide": ["navigation", "toc"]}
     frontmatter = "---\n" + json.dumps(metadata, ensure_ascii=False) + "\n---\n\n"
-    return frontmatter + f"""<article id="wiki-entry-root" class="wiki-entry-card wiki-entry-v2" data-entry-slug="{html.escape(slug, quote=True)}" data-static-rendered="true">
+    return frontmatter + f"""<article id="wiki-entry-root" class="wiki-entry-card wiki-entry-v2 {'visitor-entry-compact' if len(plain(body_html)) < 300 else 'visitor-entry-full'}" data-entry-slug="{html.escape(slug, quote=True)}" data-static-rendered="true">
 <header class="wiki-entry-header">
 <div><div class="wiki-entry-kicker">知识条目 · {html.escape(str(entry.get("category") or "知识"))}</div>
-<h1>{html.escape(title)}</h1>
+<h1>{html.escape(title)}</h1>{object_notice}
 {'<h2>为什么重要</h2>' if entry.get("category") == "人物" else ""}
-<p class="entry-static-summary">{html.escape(str(intro))}</p>{revision_html(entry)}</div>
+<p class="entry-static-summary">{html.escape(str(intro))}</p>{revision_html(entry)}<p class="visitor-entry-source-shortcut"><a href="#entry-references">参考资料 ↓</a></p></div>
 {image_html}
 </header>
 {f'<div class="wiki-entry-v2-tags">{"".join("<span>"+html.escape(x)+"</span>" for x in tags)}</div>' if tags else ""}
 {f'<div class="wiki-entry-world-path"><span>相关阅读主题</span><div>{world_html}</div></div>' if world_html else ""}
-<div class="wiki-entry-v2-grid"><div class="wiki-entry-v2-main"><section class="wiki-entry-body"><h2>详细介绍</h2>{body_html}</section>
+<div class="wiki-entry-v2-grid"><div class="wiki-entry-v2-main"><section class="wiki-entry-body"><h2>详细介绍</h2>{toc_html}{body_html}</section>
 {f'<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">知识关系</div><h2>它与哪些知识相连</h2><ul class="wiki-entry-v2-relations">{relation_html}</ul></section>' if relations else ""}
 {reading_html}
-<section class="wiki-entry-v2-section"><h2>参考资料</h2>{source_panel_html(entry, content)}<p><a href="{SITE_URL}research/evidence/?slug={quote(slug)}">查看完整证据链 →</a></p></section>
+<section id="entry-references" class="wiki-entry-v2-section"><h2>参考资料</h2>{source_panel_html(entry, content)}<p><a href="{SITE_URL}research/evidence/?slug={quote(slug)}">查看完整证据链 →</a></p></section>
 <details class="visitor-research"><summary>深入研究</summary><p><a href="{SITE_URL}network/relations/?node=entry:{entry['id']}">关系图</a> · <a href="{SITE_URL}research/">研究方法</a></p></details><p class="visitor-feedback"><a href="https://github.com/justinxyj/jingdezhen-porcelain-wiki/issues/new?title={quote('条目反馈：'+title)}">发现错误？反馈此条目 →</a></p><p><a href="{SITE_URL}search/?category={quote(str(entry.get('category') or ''))}">继续阅读同类条目 →</a></p>
 </div></div><footer class="wiki-entry-footer">年代、归属与解释请结合参考资料阅读。</footer>
 </article>
 """.replace('href="'+SITE_URL, 'href="/jingdezhen-porcelain-wiki/').replace('src="'+SITE_URL, 'src="/jingdezhen-porcelain-wiki/')
 
+
+def write_public_snapshot(entries: list[dict]) -> None:
+    # Same public build snapshot used by static pages; fallback is not an edited database.
+    assets = DOCS / "assets"
+    assets.mkdir(exist_ok=True)
+    snapshot = {"entries": entries, "pending_objects": [x["slug"] for x in json.loads((ROOT / "reports/content-quality-round2/final/object-provenance.json").read_text())["objects"]]}
+    object_records = {}
+    for entry in entries:
+        m = (entry.get('zh') or {}).get('meta') or {}
+        if entry['slug'] not in snapshot['pending_objects'] and m.get('institution') and m.get('object_number') and str(m.get('object_url') or '').startswith('https://'):
+            object_records[entry['slug']] = {k: m[k] for k in ['institution', 'object_number', 'object_url']}
+    (assets / "visitor-object-status.json").write_text(json.dumps({"pending_objects": snapshot["pending_objects"], "object_records": object_records}, ensure_ascii=False), encoding="utf-8")
+    (assets / "visitor-entry-snapshot.json").write_text(json.dumps(snapshot, ensure_ascii=False), encoding="utf-8")
 
 def main() -> None:
     base, key = runtime_config()
@@ -497,6 +522,7 @@ def main() -> None:
             "relation_type": row.get("relation_type") or "关联",
         })
 
+    write_public_snapshot(entries)
     ENTRY_ROOT.mkdir(parents=True, exist_ok=True)
     expected = set()
     for entry in entries:

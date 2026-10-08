@@ -99,7 +99,7 @@
     const title=document.querySelector('h1')?.textContent?.trim()||document.title;
     const url=document.querySelector('link[rel="canonical"]')?.getAttribute('href')||location.origin+location.pathname;
     const context=document.createElement('p');context.textContent=title+' · '+url;
-    const notice=document.createElement('p');notice.textContent='无需 GitHub 账户。填写后可复制或下载反馈记录，转交项目维护者；本站暂未提供匿名自动接收服务。';
+    const notice=document.createElement('p');notice.textContent='可通过 GitHub Issues 向维护者反馈，需要 GitHub 账户。没有账户时可复制或下载记录；本站目前没有匿名接收渠道，这两项操作不会发送反馈。';
     const label=document.createElement('label');label.htmlFor='visitor-feedback-description';label.textContent='问题说明（必填）';
     const input=document.createElement('textarea');input.id=label.htmlFor;input.required=true;input.maxLength=5000;
     const sourceLabel=document.createElement('label');sourceLabel.htmlFor='visitor-feedback-source';sourceLabel.textContent='参考资料网址（选填）';
@@ -111,12 +111,29 @@
     const download=document.createElement('button');download.type='button';download.textContent='下载反馈记录';
     form.addEventListener('submit',async event=>{event.preventDefault();if(!form.reportValidity())return;try{await navigator.clipboard.writeText(text());status.textContent='已复制，尚未发送。请转交项目维护者。';}catch{status.textContent='浏览器未允许复制，请使用下载反馈记录。';}});
     download.addEventListener('click',()=>{if(!form.reportValidity())return;const href=URL.createObjectURL(new Blob([text()],{type:'text/plain;charset=utf-8'}));const a=document.createElement('a');a.href=href;a.download='陶瓷百科反馈.txt';a.click();setTimeout(()=>URL.revokeObjectURL(href),1000);status.textContent='已生成下载记录，尚未发送。请转交项目维护者。';});
-    const optional=document.createElement('a');optional.textContent='使用 GitHub 反馈（可选）';optional.href='https://github.com/justinxyj/jingdezhen-porcelain-wiki/issues/new';optional.target='_blank';optional.rel='noopener noreferrer';
-    actions.append(copy,download);form.append(context,notice,label,input,sourceLabel,source,actions,status,optional);modal.append(form);modal.showModal();input.focus();
+    const optional=document.createElement('a');optional.textContent='在 GitHub 发送反馈（需要账户）';optional.href='https://github.com/justinxyj/jingdezhen-porcelain-wiki/issues/new';optional.target='_blank';optional.rel='noopener noreferrer';
+    const prepareIssue=()=>{optional.href='https://github.com/justinxyj/jingdezhen-porcelain-wiki/issues/new?title='+encodeURIComponent('页面反馈：'+title)+'&body='+encodeURIComponent(text());};input.addEventListener('input',prepareIssue);source.addEventListener('input',prepareIssue);prepareIssue();actions.append(copy,download);form.append(context,notice,label,input,sourceLabel,source,actions,status,optional);modal.append(form);modal.showModal();input.focus();
   }
   window.JDM_VISITOR = { loadData, dialog, root, openSearch, renderState };
   function init() {
-    document.addEventListener('click',event=>{if(event.target instanceof Element&&event.target.closest('.visitor-feedback a')){event.preventDefault();openFeedback();}});
+    if(document.querySelector('#catalog-list,[data-entry-search]')){
+      fetch(root+'assets/visitor-object-status.json').then(r=>r.ok?r.json():null).then(snapshot=>{
+        if(!snapshot)return;
+        const pending=new Set(snapshot.pending_objects);
+        const annotate=()=>document.querySelectorAll('.catalog-card,.jdm-search-result').forEach(card=>{
+          const link=card.querySelector('a[href*="/entry/"]');if(!(link instanceof HTMLAnchorElement))return;
+          const slug=new URL(link.href).pathname.split('/').filter(Boolean).pop();if(!slug)return;
+          if(card.querySelector('.visitor-provenance'))return;
+          const record=snapshot.object_records?.[slug];if(!pending.has(slug)&&!record)return;
+          const label=document.createElement('p');label.className='visitor-provenance';label.textContent=pending.has(slug)?'馆藏资料待核':'馆藏记录：'+record.institution+' · '+record.object_number;
+          card.querySelector('h2,h3')?.after(label);
+        });
+        const host=document.querySelector('#catalog-list,#jdm-search-results');
+        if(host){new MutationObserver(annotate).observe(host,{childList:true});annotate();}
+      }).catch(()=>{/* Missing status metadata must never imply verification. */});
+    }
+
+    document.addEventListener('click',event=>{if(event.target instanceof Element&&event.target.closest('.visitor-feedback a,.visitor-footer a[href*="/issues/new"]')){event.preventDefault();openFeedback();}});
     const host = document.querySelector('.md-header__inner');
     if (host && !host.querySelector('.visitor-search-trigger')) { const button = document.createElement('button'); button.className = 'visitor-search-trigger'; button.type = 'button'; button.textContent = '搜索'; button.setAttribute('aria-label', '搜索（Ctrl 或 Command 加 K）'); button.addEventListener('click', openSearch); host.append(button); }
     const menu=(()=>{

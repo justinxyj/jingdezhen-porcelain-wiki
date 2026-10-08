@@ -6,14 +6,14 @@ hide:
   - toc
 ---
 <div class="visitor-home" id="jdm-apple-home">
-<section class="visitor-hero">
+<section class="visitor-hero"><div class="visitor-hero-copy">
 <p class="visitor-eyebrow">景德镇陶瓷数字博物馆</p>
 <h1>青花，不止于蓝。</h1>
 <p>从一件瓷器出发，认识千年窑火、匠人与世界。</p>
 <form class="visitor-home-search" action="/jingdezhen-porcelain-wiki/search/" role="search"><label for="home-query">你想了解什么？</label><div><input id="home-query" name="q" type="search" placeholder="搜索青花、唐英、湖田窑……"><button type="submit">搜索</button></div></form>
 <p class="visitor-popular">热门：<a href="/jingdezhen-porcelain-wiki/search/?q=青花">青花</a> · <a href="/jingdezhen-porcelain-wiki/search/?q=唐英">唐英</a> · <a href="/jingdezhen-porcelain-wiki/kilns/imperial-kiln/">御窑厂</a> · <a href="/jingdezhen-porcelain-wiki/craft/fencai/">粉彩</a></p>
 <a href="#first-visit">第一次来？从这里开始 ↓</a>
-</section>
+</div><figure class="visitor-hero-object"><img src="https://images.metmuseum.org/CRDImages/as/web-large/1991_253_33.jpg" alt="大都会艺术博物馆藏莲池纹青花瓶" width="380" height="420" loading="eager" fetchpriority="high" data-museum-image data-source-url="https://www.metmuseum.org/art/collection/search/42490" data-license="Public Domain · CC0"><figcaption>莲池纹青花瓶 · 大都会艺术博物馆<br><a href="https://www.metmuseum.org/art/collection/search/42490">馆藏编号1991.253.33 · 公有领域图像</a></figcaption></figure></section>
 <section id="museum"><h2>从器物看工艺</h2><p>观察釉彩、器形与烧成痕迹。以下图片来自故宫博物院，保留完整器形与官方出处。</p><div class="visitor-object-grid"><figure class="official-gallery-card">
     <img src="https://img.dpm.org.cn/Uploads/Picture/dc/63%5B1024%5D.jpg" alt="故宫博物院藏清乾隆各种釉彩大瓶正面" loading="lazy" data-museum-image data-source-url="https://www.dpm.org.cn/collection/ceramic/226759.html">
     <figcaption><b>各种釉彩大瓶</b><span>清乾隆 · 故00154493 · 高86.4厘米</span><a href="https://www.dpm.org.cn/collection/ceramic/226759.html" target="_blank" rel="noopener">图像出处：故宫博物院网站 · 版权归故宫博物院</a></figcaption>

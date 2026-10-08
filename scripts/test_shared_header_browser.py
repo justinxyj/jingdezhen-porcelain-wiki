@@ -3,7 +3,7 @@ import functools
 import hashlib
 import http.server
 import io
-from PIL import Image, ImageChops
+from PIL import Image, ImageChops, ImageDraw
 import json
 import os
 from pathlib import Path
@@ -78,6 +78,9 @@ with sync_playwright() as p:
                 header_bottom = page.locator('.visitor-primary-nav').bounding_box()['y'] + page.locator('.visitor-primary-nav').bounding_box()['height']
                 image = page.screenshot(path=str(OUT / f'{name}-{width}-{scheme}-header.png'), clip={'x':0,'y':0,'width':width,'height':header_bottom}, animations='disabled')
                 pixels = Image.open(io.BytesIO(image)).convert('RGB')
+                for rect in page.locator('.visitor-primary-nav a').evaluate_all('(es)=>es.map(e=>{const r=e.getBoundingClientRect();return [Math.floor(r.left),Math.floor(r.bottom)-4,Math.ceil(r.right),Math.ceil(r.bottom)]})'):
+                    ImageDraw.Draw(pixels).rectangle(tuple(rect),fill=(0,0,0))
+                check(f'{name} active primary section {width} {scheme}', page.locator('.visitor-primary-nav a[aria-current="page"]').count() == 1)
                 if reference_image is None:
                     reference_image = pixels
                 changed = None

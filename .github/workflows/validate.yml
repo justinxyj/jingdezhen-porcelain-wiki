@@ -87,6 +87,12 @@ jobs:
       - name: Shared Header visual and keyboard regression (four widths, two themes)
         run: python scripts/test_shared_header_browser.py
 
+      - name: Protect published body in all 250 visitor templates
+        run: python scripts/test_visitor_entry_presentation.py
+
+      - name: Visitor exhibition interactions and read-only fallback
+        run: python scripts/test_visitor_exhibition.py
+
       - name: Verify authoritative Entry DOM across all 250 pages
         run: python scripts/test_entry_render_stability.py
 

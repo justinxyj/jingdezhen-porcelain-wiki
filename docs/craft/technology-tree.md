@@ -2,11 +2,21 @@
 
 <div class="tech-tree-hero"><div><div class="eyebrow">CRAFT · 72 PROCESSES</div><h2>传统制瓷：沿着工序理解材料与制作。</h2><p>把景德镇手工制瓷的主要工艺链拆成72个可点击节点：从原料、制泥，到成型、彩绘、施釉，再到装窑与烧成。节点提供工序说明与前后关系；详情中区分对应工序图像和明确标注的阶段代表图。</p></div><div class="tech-tree-hero-mark">石 → 泥 → 坯<br>→ 釉 → 火 → 瓷</div></div>
 
+<details class="visitor-method"><summary>工艺资料与“72道”的说明</summary>
+
 > **资料说明**：景德镇官方资料长期以“过手七十二，方克成器”概括传统手工制瓷体系。2024年《景德镇陶瓷文化生态保护区总体规划》进一步公布了“原料、成型、装饰、烧成、辅助”五大类工艺体系分类；2026年景德镇市人民政府与新华社均再次将景德镇传统手工制瓷概括为以72道工序为主的工艺体系。下面的72个节点，是依据这些官方分类和公开工艺描述整理出的**数字化主流程版本**，不是声称存在一份唯一固定的“1—72官方逐项名册”。详见[景德镇市人民政府工艺体系分类表](https://www.jdz.gov.cn/zwgk/zfgb/2024n/d3q/szfwj_3307/t958190.shtml)、[中国非物质文化遗产网项目资料](https://www.ihchina.cn/project_details/14270/)和[新华网景德镇专题](https://www.xinhuanet.com/politics/20260725/39351a0d75ef4846b01af614c016b2bf/c.html)。
 
 <div class="tech-official-source"><div><b>官方全流程图</b><span>景德镇市人民政府 · 2026-07-31</span></div><a href="https://www.jdz.gov.cn/zwzx/jrcd/t1100183.shtml" target="_blank" rel="noopener">查看《从一块泥到一件瓷，景德镇手工瓷业全流程图解》 ↗</a></div>
 
 <div class="tech-discovery-note"><strong>工艺知识发现</strong><br>从一道工序继续追踪它关联的知识条目、材料、技术作用、器物、时代、窑址、人物与文献；进入具体知识条目后，还可以继续前往全球陶瓷网络。工序负责回答“怎么做”，知识网络负责回答“它与什么相连”。</div>
+
+</details>
+
+## 先认识六个制作阶段
+
+<div class="visitor-craft-route"><a href="../raw-materials/">原料</a><span>→</span><a href="../raw-materials/">制泥</a><span>→</span><a href="../forming-and-finishing/">成型</a><span>→</span><a href="../qinghua/">装饰</a><span>→</span><a href="../colored-glaze/">施釉</a><span>→</span><a href="../kiln-firing/">装烧与烧成</a></div>
+
+这是入门阅读顺序；不同器型与装饰的实际制作路线有所不同。下面可继续浏览完整72道工序。
 
 <div id="porcelain-tech-tree" class="porcelain-tech-tree">
 <div class="tech-tree-toolbar"><input id="tech-tree-search" type="search" placeholder="搜索72道工序：揉泥、拉坯、利坯、青花、施釉、烧窑……" aria-label="搜索72道制瓷工序"><div class="tech-tree-filters"><button class="is-active" data-filter="all">全部72道</button><button data-filter="material">原料</button><button data-filter="kneading">制泥</button><button data-filter="forming">成型与修整</button><button data-filter="decoration">坯体与彩绘</button><button data-filter="glaze">施釉</button><button data-filter="kiln">装烧与烧成</button></div></div>

@@ -50,6 +50,12 @@ jobs:
       - name: Shared Header visual and keyboard regression before publishing
         run: python scripts/test_shared_header_browser.py
 
+      - name: Protect published body in all 250 visitor templates
+        run: python scripts/test_visitor_entry_presentation.py
+
+      - name: Visitor exhibition interactions and read-only fallback
+        run: python scripts/test_visitor_exhibition.py
+
       - name: Verify authoritative Entry DOM across all 250 pages
         run: python scripts/test_entry_render_stability.py
 
@@ -109,6 +115,11 @@ jobs:
         env:
           HEADER_BASE_URL: ${{ steps.deployment.outputs.page_url }}
         run: python scripts/test_shared_header_browser.py
+
+      - name: Verify published visitor exhibition paths
+        env:
+          UX_BASE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: python scripts/test_visitor_exhibition.py
 
       - name: Verify published Entry render stability
         env:

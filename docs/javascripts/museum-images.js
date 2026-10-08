@@ -66,7 +66,7 @@
   /** @param {HTMLImageElement} img */
   function recover(img){return enqueue(()=>recoverNow(img))}
   /** @param {HTMLImageElement} img */
-  function bind(img){if(!img||img.dataset.imageBound||!isMuseumImage(img))return;img.dataset.imageBound='1';img.dataset.originalSrc=img.getAttribute('src')||'';img.setAttribute('loading','lazy');img.setAttribute('decoding','async');img.setAttribute('referrerpolicy','no-referrer');img.addEventListener('error',()=>recover(img));if(img.complete&&img.naturalWidth===0&&img.getAttribute('src'))recover(img)}
+  function bind(img){if(!img||img.dataset.imageBound||!isMuseumImage(img))return;img.dataset.imageBound='1';img.dataset.originalSrc=img.getAttribute('src')||'';if(img.getAttribute('loading')!=='eager'&&img.getAttribute('fetchpriority')!=='high')img.setAttribute('loading','lazy');img.setAttribute('decoding','async');img.setAttribute('referrerpolicy','no-referrer');img.addEventListener('error',()=>recover(img));if(img.complete&&img.naturalWidth===0&&img.getAttribute('src'))recover(img)}
   /** @param {Node} root */
   function scan(root){
     if(root instanceof HTMLImageElement)bind(root);

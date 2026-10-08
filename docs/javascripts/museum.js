@@ -71,6 +71,7 @@
       const typeOk=!type||typeText.includes(type.toLowerCase());
       return (!q||hay.includes(q))&&eraOk&&craftOk&&typeOk&&['glaze','pattern','institution'].every(key=>{const selected=value('catalog-'+key);return !selected||metadataValues(e,key).includes(selected);});
     });
+    const address=new URL(location.href);for(const key of ['search','era','craft','type','glaze','pattern','institution']){const v=value('catalog-'+key);if(v)address.searchParams.set(key,v);else address.searchParams.delete(key);}history.replaceState(null,'',address);
     const count=document.getElementById('catalog-count');if(count)count.textContent='显示 '+filtered.length+' / '+items.length+' 件器物';
     filtered.sort((a,b)=>Number(Boolean(b.entry.media?.length))-Number(Boolean(a.entry.media?.length)));
     root.innerHTML=filtered.map(x=>{
@@ -85,7 +86,7 @@
         (img&&entryH?'<a href="'+entryH+'">'+img+'</a>':img||'<div class="visitor-missing-image">暂无公开图片</div>')+
         '<div class="catalog-card-body">'+
         '<div class="catalog-card-tags">'+(m.period?'<span class="tag">'+esc(m.period)+'</span>':'')+(era?'<span class="tag">'+esc(eraLabel(era))+'</span>':'')+(world?'<span class="tag">'+esc(world.short_title||world.title)+'</span>':'')+'</div>'+
-        '<h3>'+(entryH?'<a href="'+entryH+'">'+esc(e.zh?.title||'未命名器物')+'</a>':esc(e.zh?.title||'未命名器物'))+'</h3><p>'+esc(text(e).slice(0,180))+'</p>'+
+        (m.institution&&m.object_number&&safeHref(m.object_url)?'<p class="visitor-provenance">馆藏记录：'+esc(m.institution)+' · '+esc(m.object_number)+'</p>':'')+'<h3>'+(entryH?'<a href="'+entryH+'">'+esc(e.zh?.title||'未命名器物')+'</a>':esc(e.zh?.title||'未命名器物'))+'</h3><p>'+esc(text(e).slice(0,180))+'</p>'+
         (crafts?'<div class="catalog-knowledge-row"><b>工艺</b>'+crafts+'</div>':'')+
         (people?'<div class="catalog-knowledge-row"><b>人物</b>'+people+'</div>':'')+
         (kilns?'<div class="catalog-knowledge-row"><b>窑址</b>'+kilns+'</div>':'')+
@@ -193,7 +194,17 @@
         roots[2]?window.JDM_KNOWLEDGE.list({limit:500}):Promise.resolve([])
       ]);
       if(seq!==initSeq)return;
-      populateCatalogFacets(objects);renderCatalog(objects);renderPeople(people);renderTimeline(history);
+      const panel=document.querySelector('.visitor-catalog-filters');
+      if(panel instanceof HTMLDetailsElement&&!panel.dataset.enhanced){
+        panel.dataset.enhanced='true';const desktop=matchMedia('(min-width:701px)');panel.open=desktop.matches;desktop.addEventListener('change',()=>{panel.open=desktop.matches;});
+        const actions=document.createElement('div');actions.className='visitor-catalog-filter-actions';
+        const clear=document.createElement('button');clear.type='button';clear.textContent='清除条件';
+        clear.addEventListener('click',()=>{panel.querySelectorAll('select').forEach(e=>e.value='');renderCatalog(objects);});
+        const apply=document.createElement('button');apply.type='button';apply.textContent='查看结果';
+        apply.addEventListener('click',()=>{panel.open=desktop.matches;if(!desktop.matches)panel.querySelector('summary')?.focus();document.getElementById('catalog-list')?.scrollIntoView({block:'start',behavior:'instant'});});
+        actions.append(clear,apply);panel.append(actions);
+      }
+      populateCatalogFacets(objects);const saved=new URL(location.href).searchParams;for(const key of ['search','era','craft','type','glaze','pattern','institution']){const field=document.getElementById('catalog-'+key);if(field instanceof HTMLInputElement||field instanceof HTMLSelectElement)field.value=saved.get(key)||'';}renderCatalog(objects);renderPeople(people);renderTimeline(history);
       roots.forEach(root=>root?.setAttribute('aria-busy','false'));
       const search=document.getElementById('catalog-search');if(search&&!search.dataset.bound){search.dataset.bound='1';let raf=0;search.addEventListener('input',()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(()=>renderCatalog(objects))})}
       filterData={objects,people};const filterRoot=document.getElementById('catalog-list')?.parentElement?.parentElement||document.body;if(!filterRoot.dataset.filtersBound){filterRoot.dataset.filtersBound='1';filterRoot.addEventListener('change',event=>{const id=event.target instanceof HTMLElement?event.target.id:'';if(['catalog-era','catalog-craft','catalog-type','catalog-glaze','catalog-pattern','catalog-institution'].includes(id))renderCatalog(filterData.objects);if(['people-era','people-role','people-world'].includes(id))renderPeople(filterData.people)})}

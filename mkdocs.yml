@@ -1,9 +1,7 @@
-site_name: 景德镇陶瓷数字博物馆 · Jingdezhen Porcelain Wiki
+site_name: 景德镇陶瓷数字博物馆
 site_description: 景德镇陶瓷历史、工艺、器物、窑址、人物与当代文化数字博物馆
 site_url: https://justinxyj.github.io/jingdezhen-porcelain-wiki/
-repo_url: https://github.com/justinxyj/jingdezhen-porcelain-wiki
-repo_name: justinxyj/jingdezhen-porcelain-wiki
-edit_uri: edit/main/docs/
+edit_uri: ""
 exclude_docs: |
   /README.md
   /contemporary/README.md
@@ -18,7 +16,6 @@ theme:
   - search.suggest
   - search.highlight
   - content.code.copy
-  - content.action.view
   palette:
   - media: '(prefers-color-scheme: light)'
     scheme: default

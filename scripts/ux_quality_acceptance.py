@@ -21,6 +21,7 @@ with sync_playwright() as p:
     page.evaluate('(s)=>document.body.setAttribute("data-md-color-scheme",s)',scheme)
     record(f'layout {route} {width} {scheme}',page.evaluate('document.documentElement.scrollWidth-innerWidth')<=1)
    page.evaluate('document.body.setAttribute("data-md-color-scheme","default")')
+   if route=='museum/catalog/':page.locator('.visitor-catalog-filters').evaluate('(e)=>e.open=true')
    selects=page.locator('.museum-toolbar select').evaluate_all('(es)=>es.map(e=>({id:e.id,width:e.getBoundingClientRect().width,label:e.selectedOptions[0]?.textContent}))')
    if selects:
     record(f'full filter set {route} {width}',len(selects)==(6 if 'catalog' in route else 3))
@@ -38,7 +39,9 @@ with sync_playwright() as p:
  # Real filter selections and clearing preserve the full original result count.
  page.set_viewport_size({'width':390,'height':844})
  for route,prefix,card,field,val in [('museum/catalog/','catalog','.catalog-card','glaze','铜红釉'),('museum/people/','people','.person-card','era','qing')]:
-  page.goto(BASE+route);page.locator(card).first.wait_for(timeout=60000);count=page.locator(card).count();page.locator('#'+prefix+'-'+field).select_option(val);page.wait_for_timeout(100)
+  page.goto(BASE+route);page.locator(card).first.wait_for(timeout=60000);count=page.locator(card).count();
+  if prefix=='catalog':page.locator('.visitor-catalog-filters summary').click()
+  page.locator('#'+prefix+'-'+field).select_option(val);page.wait_for_timeout(100)
   record(prefix+' selected state visible',val in page.locator('.visitor-filter-status').inner_text() or '清' in page.locator('.visitor-filter-status').inner_text())
   page.locator('.visitor-filter-status').scroll_into_view_if_needed();page.screenshot(path=str(OUT/(prefix+'-selected-390.png')))
   page.get_by_role('button',name='清除全部筛选').click();record(prefix+' clear restores results',page.locator(card).count()==count and page.locator('#'+prefix+'-'+field).input_value()=='')
@@ -47,7 +50,7 @@ with sync_playwright() as p:
  page.wait_for_function('typeof window.JDM_KNOWLEDGE?.get==="function"');actual=page.evaluate('async()=>{const e=await window.JDM_KNOWLEDGE.get("qingbai-porcelain");return {version:e.version,updated_at:e.updated_at}}')
  record('Revision uses production timestamp/version',page.locator('.visitor-entry-revision time').get_attribute('datetime')==actual['updated_at'] and ('版本 '+str(actual['version'])) in page.locator('.visitor-entry-revision').inner_text())
  record('shared Material header and search',page.locator('.md-header').count()==1 and page.locator('.visitor-primary-nav').count()==1 and page.locator('.md-header .visitor-search-trigger').count()==1 and page.locator('.visitor-static-nav').count()==0)
- page.locator('.visitor-feedback a').click();dialog=page.locator('dialog[open]');record('visitor feedback no account/no fake submission','无需 GitHub 账户' in dialog.inner_text() and '尚未发送' in dialog.inner_text())
+ page.locator('.visitor-feedback a').click();dialog=page.locator('dialog[open]');record('visitor feedback no account/no fake submission','需要 GitHub 账户' in dialog.inner_text() and '没有匿名接收渠道' in dialog.inner_text() and '尚未发送' in dialog.inner_text())
  page.add_script_tag(path=os.getenv('AXE_SCRIPT','/tmp/ux2-a11y/node_modules/axe-core/axe.min.js'))
  for scheme in ['default','slate']:
   page.evaluate('(s)=>document.body.setAttribute("data-md-color-scheme",s)',scheme)
@@ -70,8 +73,12 @@ with sync_playwright() as p:
  for route,ready in [('museum/catalog/','.catalog-card'),('museum/people/','.person-card'),('search/?q=青花','.jdm-search-result'),('craft/technology-tree/','.tech-node'),('museum/timeline/','.compare-node'),('museum/kiln-map/','.global-kiln-list-item')]:
   c=b.new_context(ignore_https_errors=True,viewport={'width':390,'height':844});f=c.new_page();f.route('**/*.supabase.co/**',lambda r:r.abort());f.goto(BASE+route)
   try:
-   f.locator('.visitor-state-error').first.wait_for(timeout=40000);record('failure state '+route,'暂时无法加载' in f.locator('.visitor-state-error').first.inner_text())
-   f.unroute('**/*.supabase.co/**');f.get_by_role('button',name='重新加载',exact=True).first.click();f.locator(ready).first.wait_for(timeout=60000);record('retry recovers '+route,True)
+   if route.startswith('search/'):
+    f.locator(ready).first.wait_for(timeout=40000);record('search static fallback under database failure','构建时的百科索引' in f.locator('#jdm-search-status').inner_text())
+    f.unroute('**/*.supabase.co/**');f.reload();f.locator(ready).first.wait_for(timeout=60000);record('search live recovery', '构建时的百科索引' not in f.locator('#jdm-search-status').inner_text())
+   else:
+    f.locator('.visitor-state-error').first.wait_for(timeout=40000);record('failure state '+route,'暂时无法加载' in f.locator('.visitor-state-error').first.inner_text())
+    f.unroute('**/*.supabase.co/**');f.get_by_role('button',name='重新加载',exact=True).first.click();f.locator(ready).first.wait_for(timeout=60000);record('retry recovers '+route,True)
   except Exception as e:record('failure/retry '+route,False,str(e)[:180])
   c.close()
  # Simulated slow initial REST reads: release only after the visible loading state is checked.

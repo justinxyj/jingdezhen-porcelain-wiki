@@ -94,6 +94,7 @@
       const filters=selectedFilters();
       const filterText=Object.keys(filters).length?' · 已应用 '+Object.keys(filters).length+' 项筛选':'';
       status.textContent=state.q?(data.total?'找到 '+data.total+' 个相关知识条目'+filterText+'。':'没有找到直接匹配的知识条目，可以换一个更具体的名称或关闭筛选。'):'当前展示 '+data.total+' 个公开知识条目'+filterText+'。';
+      if(store.state().status==='fallback')status.textContent+=' 当前使用网站构建时的百科索引；实时资料暂不可用。';
       const html=data.results.map(card).join('');
       if(append)results.insertAdjacentHTML('beforeend',html);else results.innerHTML=html||'<div class="jdm-search-empty"><p>没有找到“'+esc(state.q||'符合当前筛选的内容')+'”</p><button type="button" id="search-empty-clear">清除筛选</button><p>相关类别：<a href="?category=器物">器物</a> · <a href="?category=人物">人物</a> · <a href="?category=窑址">窑址</a> · <a href="?category=工艺">工艺</a></p><p>热门内容：<a href="?q=青花">青花</a> · <a href="?q=唐英">唐英</a> · <a href="?q=湖田">湖田窑</a></p></div>';
       if(!data.total&&state.q){const suggestion=window.JDM_KNOWLEDGE?.suggestSearch(state.q);if(suggestion){const p=document.createElement('p');p.textContent='你可能想找：';const a=document.createElement('a');a.href='?q='+encodeURIComponent(suggestion);a.textContent=suggestion;p.append(a);results.querySelector('.jdm-search-empty')?.append(p);}}

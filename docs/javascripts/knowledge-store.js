@@ -9,6 +9,13 @@
   /** @type {{status:string,error:unknown,updatedAt:number|null}} */
   let state={status:'idle',error:null,updatedAt:null};
 
+  /** The exact build-time public entries, used only when a live search request fails. */
+  async function staticEntries(){
+    const response=await fetch('/jingdezhen-porcelain-wiki/assets/visitor-entry-snapshot.json');
+    if(!response.ok)throw new Error('静态百科索引暂不可用');
+    const snapshot=await response.json();
+    return contract().entries(snapshot.entries);
+  }
   function client(){
     if(window.JDM_AUTH)return window.JDM_AUTH.getClient();
     const config=window.JDM_RUNTIME_CONFIG;
@@ -287,7 +294,7 @@
   async function searchEntries(term,{limit=20,category=null,worldSlug=null,era=null,lane=null,hasMap=null,hasTimeline=null,hasImage=null,hasLiterature:literature=null}={}) {
     const q=normalizeSearch(term);
     if(!searchIndexPromise){
-      searchIndexPromise=paged(db=>db.from('entries').select('id,slug,category,zh,en,ja,sources,status,version,updated_at').eq('status','published').order('id',{ascending:true})).then(rows=>contract().entries(rows)).catch(error=>{searchIndexPromise=null;throw error});
+      searchIndexPromise=paged(db=>db.from('entries').select('id,slug,category,zh,en,ja,sources,status,version,updated_at').eq('status','published').order('id',{ascending:true})).then(rows=>{if(state.status==='fallback')state={status:'ready',error:null,updatedAt:Date.now()};return contract().entries(rows);}).catch(async error=>{searchIndexPromise=null;const rows=await staticEntries();state={status:'fallback',error,updatedAt:Date.now()};return rows;});
     }
     const [databaseRows,topics]=await Promise.all([searchIndexPromise||Promise.resolve([]),topicEntries()]);
     let candidates=[...databaseRows,...topics];
@@ -335,6 +342,7 @@
   async function searchDiscoveryPage(term,{limit=12,offset=0,recommendationLimit=3,category=null,worldSlug=null,era=null,lane=null,hasMap=null,hasTimeline=null,hasImage=null,hasLiterature:literature=null}={}) {
     const entries=await searchEntries(term,{limit:2000,category,worldSlug,era,lane,hasMap,hasTimeline,hasImage,hasLiterature:literature});
     if(!entries.length)return {results:[],total:0,facets:{categories:[],eras:[],lanes:[]}};
+    if(state.status==='fallback')return {results:entries.slice(offset,offset+limit).map(resultSchema),total:entries.length,facets:{categories:[],eras:[],lanes:[]}};
     const ids=entries.filter(e=>e.source_type!=='markdown').map(e=>e.id);
     const [links,worldRows]=await Promise.all([
       queryEntriesWorlds(ids),

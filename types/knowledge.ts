@@ -5,7 +5,7 @@ export interface TimelinePoint {era?:string; lane?:string; year?:number; label?:
 export interface MapPoint {lat:number; lng:number; country?:string; period?:string; type?:string; location?:string}
 export interface EntryMeta {
  kind?:string; era?:string; era_group?:string; period?:string; role?:string; location?:string; region?:string; craft?:string;
- form?:string; type?:string; shape?:string; glaze?:string|string[]; pattern?:string|string[]; institution?:string;
+ form?:string; type?:string; shape?:string; glaze?:string|string[]; pattern?:string|string[]; institution?:string; object_number?:string; object_url?:string;
  birth_year?:string|number; death_year?:string|number; lifespan?:string; importance?:string; keywords?:string[];
  description?:string; context?:string; quote_context?:string; quote?:string; quote_work?:string; quote_original?:string; quote_translation?:string;
  relation_to_jingdezhen?:string; jingdezhen_relation?:string; timeline_sort_year?:number;

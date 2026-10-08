@@ -33,3 +33,7 @@ __pycache__/
 /docs/entry/
 /docs/sitemap-entries.xml
 /docs/robots.txt
+
+# Exact public snapshot generated alongside the static encyclopedia
+/docs/assets/visitor-entry-snapshot.json
+/docs/assets/visitor-object-status.json

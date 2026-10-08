@@ -17,5 +17,6 @@ def on_page_context(context, page, config, nav):
         group = ('博物馆', 'museum/')
     if page.meta.get('entry_category'):
         group = page.meta['entry_category']
+    context['visitor_section'] = ('home' if page.is_homepage else 'time' if path in ['museum/timeline.md','museum/kiln-map.md','museum/time-and-map.md'] else 'search' if path == 'search.md' else 'research' if path.startswith('research/') else 'museum' if path.startswith('museum/') else 'encyclopedia')
     context['visitor_category'] = group if group and page.url != group[1] else None
     return context

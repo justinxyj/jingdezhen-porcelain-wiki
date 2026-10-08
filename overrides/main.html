@@ -15,7 +15,7 @@
 {% endblock %}
 {% block header %}
 {{ super() }}
-<nav class="visitor-primary-nav" aria-label="主导航"><a href="{{ '' | url }}">首页</a><a href="{{ 'history/' | url }}">百科</a><a href="{{ 'museum/' | url }}">博物馆</a><a href="{{ 'museum/kiln-map/' | url }}">地图与时间</a><a href="{{ 'research/' | url }}">研究</a><a href="{{ 'search/' | url }}">搜索</a></nav>
+<nav class="visitor-primary-nav" aria-label="主导航"><a href="{{ '' | url }}"{% if visitor_section == 'home' %} aria-current="page"{% endif %}>首页</a><a href="{{ 'explore/' | url }}"{% if visitor_section == 'encyclopedia' %} aria-current="page"{% endif %}>百科</a><a href="{{ 'museum/' | url }}"{% if visitor_section == 'museum' %} aria-current="page"{% endif %}>博物馆</a><a href="{{ 'museum/time-and-map/' | url }}"{% if visitor_section == 'time' %} aria-current="page"{% endif %}>地图与时间</a><a href="{{ 'research/' | url }}"{% if visitor_section == 'research' %} aria-current="page"{% endif %}>研究</a><a href="{{ 'search/' | url }}"{% if visitor_section == 'search' %} aria-current="page"{% endif %}>搜索</a></nav>
 {% endblock %}
 {% block content %}
 {% if page and not page.is_homepage %}<nav class="visitor-breadcrumb" aria-label="面包屑"><a href="{{ '' | url }}">首页</a>{% if visitor_category %}<span aria-hidden="true"> › </span><a href="{{ visitor_category[1] | url }}">{{ visitor_category[0] }}</a>{% endif %}<span aria-hidden="true"> › </span><span aria-current="page">{{ page.title }}</span></nav>{% endif %}
