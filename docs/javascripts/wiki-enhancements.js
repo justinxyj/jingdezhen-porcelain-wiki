@@ -180,7 +180,7 @@
     const root=document.getElementById('wiki-entry-root');
     const store=window.JDM_KNOWLEDGE;if(!root||!store)return;
     const staticRendered=root.dataset.staticRendered==='true';
-    const slug=new URLSearchParams(location.search).get('slug')||window.JDM_STATIC_ENTRY_SLUG||root.dataset.entrySlug;
+    const slug=new URLSearchParams(location.search).get('slug')||root.dataset.entrySlug;
     if(!slug){if(!staticRendered)window.JDM_VISITOR?.renderState(root,'empty',{message:'没有指定条目。'});return}
     if(!staticRendered)window.JDM_VISITOR?.renderState(root,'loading',{message:'正在加载知识条目…'});
     try{

@@ -39,6 +39,24 @@ jobs:
       - name: Check built internal links before publishing
         run: python scripts/check_built_links.py site
 
+      - name: Verify all 250 shared Headers before publishing
+        run: python scripts/check_shared_header.py site
+
+      - name: Install Header browser regression dependencies
+        run: |
+          pip install playwright Pillow
+          python -m playwright install --with-deps chromium
+
+      - name: Shared Header visual and keyboard regression before publishing
+        run: python scripts/test_shared_header_browser.py
+
+      - name: Upload Header comparison screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: shared-header-release-gate
+          path: /tmp/shared-header-browser/
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
@@ -67,7 +85,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install Playwright
-        run: pip install playwright
+        run: pip install playwright Pillow
 
       - name: Install Chromium
         run: python -m playwright install --with-deps chromium
@@ -76,6 +94,18 @@ jobs:
         env:
           SITE_URL: ${{ steps.deployment.outputs.page_url }}
         run: python scripts/pages_smoke.py
+
+      - name: Verify deployed shared Header interactions
+        env:
+          HEADER_BASE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: python scripts/test_shared_header_browser.py
+
+      - name: Upload production Header screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: shared-header-production
+          path: /tmp/shared-header-browser/
 
       - name: Post-deploy Supabase ACL smoke
         run: python scripts/runtime_smoke.py --check acl

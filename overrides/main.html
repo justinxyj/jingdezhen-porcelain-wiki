@@ -1,4 +1,18 @@
 {% extends "base.html" %}
+{% block extrahead %}
+{{ super() }}
+{% if page and page.meta.entry_schema %}
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:title" content="{{ page.title | e }}">
+<meta property="og:description" content="{{ page.meta.description | e }}">
+<meta property="og:url" content="{{ page.canonical_url | e }}">
+<meta property="og:site_name" content="{{ config.site_name | e }}">
+<meta property="og:locale" content="zh_CN">
+{% if page.meta.entry_schema.image %}<meta property="og:image" content="{{ page.meta.entry_schema.image | e }}">{% endif %}
+<script type="application/ld+json">{{ page.meta.entry_schema | tojson }}</script>
+{% endif %}
+{% endblock %}
 {% block header %}
 {{ super() }}
 <nav class="visitor-primary-nav" aria-label="主导航"><a href="{{ '' | url }}">首页</a><a href="{{ 'history/' | url }}">百科</a><a href="{{ 'museum/' | url }}">博物馆</a><a href="{{ 'museum/kiln-map/' | url }}">地图与时间</a><a href="{{ 'research/' | url }}">研究</a><a href="{{ 'search/' | url }}">搜索</a></nav>

@@ -46,7 +46,7 @@ with sync_playwright() as p:
  record('Qingbai all existing references resolve',all(code in text for code in ['R01','R09','R10']) and page.locator('.wiki-entry-source-links a').count()==3 and '已核验' not in text)
  page.wait_for_function('typeof window.JDM_KNOWLEDGE?.get==="function"');actual=page.evaluate('async()=>{const e=await window.JDM_KNOWLEDGE.get("qingbai-porcelain");return {version:e.version,updated_at:e.updated_at}}')
  record('Revision uses production timestamp/version',page.locator('.visitor-entry-revision time').get_attribute('datetime')==actual['updated_at'] and ('版本 '+str(actual['version'])) in page.locator('.visitor-entry-revision').inner_text())
- record('static navigation search integrated',page.locator('.visitor-static-nav .visitor-search-trigger').count()==1 and page.locator('.wiki-chrome .visitor-search-trigger').count()==0)
+ record('shared Material header and search',page.locator('.md-header').count()==1 and page.locator('.visitor-primary-nav').count()==1 and page.locator('.md-header .visitor-search-trigger').count()==1 and page.locator('.visitor-static-nav').count()==0)
  page.locator('.visitor-feedback a').click();dialog=page.locator('dialog[open]');record('visitor feedback no account/no fake submission','无需 GitHub 账户' in dialog.inner_text() and '尚未发送' in dialog.inner_text())
  page.add_script_tag(path=os.getenv('AXE_SCRIPT','/tmp/ux2-a11y/node_modules/axe-core/axe.min.js'))
  for scheme in ['default','slate']:
@@ -59,7 +59,7 @@ with sync_playwright() as p:
  with page.expect_download() as download:dialog.get_by_role('button',name='下载反馈记录').click()
  file=download.value.path();record('feedback download real content','回归测试' in Path(file).read_text() and 'qingbai-porcelain' in Path(file).read_text())
  for _ in range(9):page.keyboard.press('Tab');record('feedback dialog keyboard containment',dialog.evaluate('(e)=>e.contains(document.activeElement)'))
- page.keyboard.press('Escape');record('feedback ESC focus return',page.locator('.visitor-feedback a').evaluate('(e)=>e===document.activeElement'))
+ page.keyboard.press('Escape');page.wait_for_function('!document.querySelector("dialog.visitor-dialog")');record('feedback ESC focus return',page.locator('.visitor-feedback a').evaluate('(e)=>e===document.activeElement'))
  # Correct internal URLs are followed, not merely inspected as strings.
  for label,target,ready in [('时间轴','museum/timeline/','.compare-node'),('窑址地图','museum/kiln-map/','.global-kiln-list-item'),('器物图谱','museum/catalog/','.catalog-card')]:
   page.goto(BASE+'contemporary/');page.locator('.modern-closing-actions a').filter(has_text=label).click();page.locator(ready).first.wait_for(timeout=60000);record('contemporary real navigation '+label,target in page.url)

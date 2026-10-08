@@ -1,0 +1,876 @@
+{
+  "checks": [
+    {
+      "check": "HTTP ",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "single h1 ",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "check": "layout  375 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout  375 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout  390 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout  390 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout  430 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout  430 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout  1366 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout  1366 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout  1440 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout  1440 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout  1920 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout  1920 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "HTTP search/?q=青花",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "single h1 search/?q=青花",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "check": "layout search/?q=青花 375 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout search/?q=青花 375 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout search/?q=青花 390 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout search/?q=青花 390 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout search/?q=青花 430 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout search/?q=青花 430 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout search/?q=青花 1366 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout search/?q=青花 1366 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout search/?q=青花 1440 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout search/?q=青花 1440 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout search/?q=青花 1920 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout search/?q=青花 1920 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "HTTP museum/kiln-map/",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "single h1 museum/kiln-map/",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "check": "layout museum/kiln-map/ 375 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/kiln-map/ 375 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/kiln-map/ 390 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/kiln-map/ 390 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/kiln-map/ 430 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/kiln-map/ 430 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/kiln-map/ 1366 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/kiln-map/ 1366 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/kiln-map/ 1440 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/kiln-map/ 1440 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/kiln-map/ 1920 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/kiln-map/ 1920 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "HTTP museum/timeline/",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "single h1 museum/timeline/",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "check": "layout museum/timeline/ 375 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/timeline/ 375 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/timeline/ 390 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/timeline/ 390 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/timeline/ 430 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/timeline/ 430 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/timeline/ 1366 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/timeline/ 1366 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/timeline/ 1440 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/timeline/ 1440 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/timeline/ 1920 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/timeline/ 1920 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "HTTP museum/catalog/",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "single h1 museum/catalog/",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "check": "layout museum/catalog/ 375 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/catalog/ 375 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/catalog/ 390 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/catalog/ 390 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/catalog/ 430 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/catalog/ 430 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/catalog/ 1366 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/catalog/ 1366 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/catalog/ 1440 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/catalog/ 1440 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/catalog/ 1920 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/catalog/ 1920 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "HTTP museum/people/",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "single h1 museum/people/",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "check": "layout museum/people/ 375 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/people/ 375 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/people/ 390 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/people/ 390 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/people/ 430 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/people/ 430 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/people/ 1366 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/people/ 1366 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/people/ 1440 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/people/ 1440 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/people/ 1920 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/people/ 1920 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "HTTP network/relations/",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "single h1 network/relations/",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "check": "layout network/relations/ 375 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout network/relations/ 375 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout network/relations/ 390 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout network/relations/ 390 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout network/relations/ 430 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout network/relations/ 430 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout network/relations/ 1366 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout network/relations/ 1366 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout network/relations/ 1440 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout network/relations/ 1440 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout network/relations/ 1920 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout network/relations/ 1920 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "HTTP network/global/?slug=blue-and-white",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "single h1 network/global/?slug=blue-and-white",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "check": "layout network/global/?slug=blue-and-white 375 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout network/global/?slug=blue-and-white 375 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout network/global/?slug=blue-and-white 390 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout network/global/?slug=blue-and-white 390 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout network/global/?slug=blue-and-white 430 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout network/global/?slug=blue-and-white 430 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout network/global/?slug=blue-and-white 1366 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout network/global/?slug=blue-and-white 1366 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout network/global/?slug=blue-and-white 1440 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout network/global/?slug=blue-and-white 1440 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout network/global/?slug=blue-and-white 1920 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout network/global/?slug=blue-and-white 1920 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "HTTP entry/blue-and-white/",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "single h1 entry/blue-and-white/",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "check": "layout entry/blue-and-white/ 375 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout entry/blue-and-white/ 375 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout entry/blue-and-white/ 390 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout entry/blue-and-white/ 390 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout entry/blue-and-white/ 430 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout entry/blue-and-white/ 430 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout entry/blue-and-white/ 1366 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout entry/blue-and-white/ 1366 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout entry/blue-and-white/ 1440 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout entry/blue-and-white/ 1440 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout entry/blue-and-white/ 1920 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout entry/blue-and-white/ 1920 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "HTTP research/",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "single h1 research/",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "check": "layout research/ 375 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout research/ 375 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout research/ 390 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout research/ 390 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout research/ 430 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout research/ 430 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout research/ 1366 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout research/ 1366 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout research/ 1440 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout research/ 1440 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout research/ 1920 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout research/ 1920 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "HTTP museum/gallery/",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "single h1 museum/gallery/",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "check": "layout museum/gallery/ 375 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/gallery/ 375 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/gallery/ 390 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/gallery/ 390 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/gallery/ 430 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/gallery/ 430 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/gallery/ 1366 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/gallery/ 1366 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/gallery/ 1440 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/gallery/ 1440 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/gallery/ 1920 default",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "layout museum/gallery/ 1920 slate",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "global suggestions canonical",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "dialog focus restore",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "search pagination unique",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "empty search",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "journey A Yuan reading route",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "journey B imperial link",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "entry map shortcut",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "map default Jingdezhen",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "modal keyboard contained",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "journey C related objects",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "journey D full entry sources",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "legacy query URL",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "no JS ",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "no JS entry/tang-ying/",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "no JS kilns/hutian-kiln/",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "no JS museum/kiln-map/",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "no JS network/relations/",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "backend failure preserves entry",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "homepage light resources",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "browser runtime errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "failures": []
+}

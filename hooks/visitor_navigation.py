@@ -11,5 +11,7 @@ def on_page_context(context, page, config, nav):
     group = GROUPS.get(path.split('/')[0])
     if path.startswith('museum/'):
         group = ('博物馆', 'museum/')
+    if page.meta.get('entry_category'):
+        group = page.meta['entry_category']
     context['visitor_category'] = group if group and page.url != group[1] else None
     return context

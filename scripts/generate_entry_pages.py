@@ -2,7 +2,8 @@
 """Build-time static Entry pages for SEO/indexability.
 
 Uses only public Supabase data allowed by RLS. No secret/service-role key is used.
-The generated HTML is copied by MkDocs because it lives under docs/entry/<slug>/index.html.
+Generates Markdown containing the unchanged Entry HTML fragment and SEO metadata.
+MkDocs renders every Entry through the same Material main.html template as the homepage.
 """
 from __future__ import annotations
 
@@ -366,13 +367,6 @@ def entry_html(entry: dict, world_by_entry: dict[str, list[dict]],
 
 
 
-    navigation = json.loads((DOCS / "data/visitor-navigation.json").read_text(encoding="utf-8"))
-    footer_html = '<footer class="visitor-footer">' + ''.join(
-        '<div><strong>' + html.escape(heading) + '</strong>' + ''.join(
-            '<a href="' + html.escape(path if path.startswith('https://') else SITE_URL + path, quote=True) + '">' + html.escape(label) + '</a>'
-            for label, path in links
-        ) + '</div>' for heading, links in navigation.items()
-    ) + '</footer>'
     category = str(entry.get('category') or '')
     category_routes = {'人物': 'museum/people/', '器物': 'museum/catalog/', '窑址': 'kilns/', '工艺': 'craft/', '历史': 'history/', '文献': 'research/'}
     category_label = category if category in category_routes else '百科'
@@ -407,45 +401,12 @@ def entry_html(entry: dict, world_by_entry: dict[str, list[dict]],
         schema["image"] = image_url
         schema["mainEntity"]["image"] = image_url
 
-    schema_json = json.dumps(schema, ensure_ascii=False).replace("</script>", "<\\/script>")
-    return f"""<!doctype html>
-<html lang="zh-CN">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{html.escape(title)} | 景德镇陶瓷数字博物馆</title>
-<meta name="description" content="{html.escape(description, quote=True)}">
-<meta name="robots" content="index,follow,max-image-preview:large">
-<link rel="canonical" href="{html.escape(url, quote=True)}">
-<meta property="og:type" content="article">
-<meta property="og:title" content="{html.escape(title, quote=True)}">
-<meta property="og:description" content="{html.escape(description, quote=True)}">
-<meta property="og:url" content="{html.escape(url, quote=True)}">
-<meta property="og:site_name" content="景德镇陶瓷数字博物馆">
-<meta property="og:locale" content="zh_CN">
-{f'<meta property="og:image" content="{html.escape(image_url, quote=True)}">' if image_url else ""}
-<script type="application/ld+json">{schema_json}</script>
-<link rel="stylesheet" href="{SITE_URL}stylesheets/wiki.css">
-<link rel="stylesheet" href="{SITE_URL}stylesheets/museum-apple.css">
-<link rel="stylesheet" href="{SITE_URL}stylesheets/visitor.css">
-<style>
-/* Standalone SEO shell only — entry surfaces come from museum-apple + wiki.css */
-html,body{{margin:0;padding:0}}
-body{{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue","Noto Sans SC",Arial,sans-serif;background:var(--jdm-paper,#f5f8fc);color:var(--jdm-ink,#071a35);line-height:1.8}}
-main{{max-width:1240px;margin:0 auto;padding:24px 24px 72px}}
-.wiki-breadcrumb a{{color:#6d7d8d;text-decoration:none}}
-.wiki-entry-card[data-static-rendered="true"] .wiki-entry-footer{{display:block!important;margin-top:30px;padding-top:15px;border-top:1px solid var(--jdm-line,rgba(7,26,53,.11));color:#8291a0;font-size:12px}}
-.wiki-entry-v2-relations{{list-style:none;padding:0;margin:1rem 0 0}}
-.wiki-entry-v2-relations li{{list-style:none;padding:0;margin:0;border:0;background:transparent}}
-.wiki-entry-source-links{{list-style:none;padding:0;margin:0}}
-.wiki-entry-source-links li{{list-style:none}}
-</style>
-</head>
-<body>
-<nav class="visitor-static-nav" aria-label="主导航"><a href="{SITE_URL}">首页</a><a href="{SITE_URL}history/">百科</a><a href="{SITE_URL}museum/">博物馆</a><a href="{SITE_URL}museum/kiln-map/">地图与时间</a><a href="{SITE_URL}research/">研究</a><a href="{SITE_URL}search/">搜索</a></nav>
-<main>
-<div class="wiki-chrome"><nav class="wiki-breadcrumb" aria-label="面包屑"><a href="{SITE_URL}">首页</a><span aria-hidden="true">›</span><a href="{category_url}">{html.escape(category_label)}</a><span aria-hidden="true">›</span><b aria-current="page">{html.escape(title)}</b></nav></div>
-<article id="wiki-entry-root" class="wiki-entry-card wiki-entry-v2" data-entry-slug="{html.escape(slug, quote=True)}" data-static-rendered="true">
+    # JSON is valid YAML: serialize metadata without hand-escaping titles or descriptions.
+    metadata = {"title": title, "description": description, "entry_schema": schema,
+                "entry_category": [category_label, category_routes.get(category, 'entry/')],
+                "hide": ["navigation", "toc"]}
+    frontmatter = "---\n" + json.dumps(metadata, ensure_ascii=False) + "\n---\n\n"
+    return frontmatter + f"""<article id="wiki-entry-root" class="wiki-entry-card wiki-entry-v2" data-entry-slug="{html.escape(slug, quote=True)}" data-static-rendered="true">
 <header class="wiki-entry-header">
 <div><div class="wiki-entry-kicker">知识条目 · {html.escape(str(entry.get("category") or "知识"))}</div>
 <h1>{html.escape(title)}</h1>
@@ -462,24 +423,7 @@ main{{max-width:1240px;margin:0 auto;padding:24px 24px 72px}}
 <details class="visitor-research"><summary>深入研究</summary><p><a href="{SITE_URL}network/relations/?node=entry:{entry['id']}">关系图</a> · <a href="{SITE_URL}research/">研究方法</a></p></details><p class="visitor-feedback"><a href="https://github.com/justinxyj/jingdezhen-porcelain-wiki/issues/new?title={quote('条目反馈：'+title)}">发现错误？反馈此条目 →</a></p><p><a href="{SITE_URL}search/?category={quote(str(entry.get('category') or ''))}">继续阅读同类条目 →</a></p>
 </div></div><footer class="wiki-entry-footer">年代、归属与解释请结合参考资料阅读。</footer>
 </article>
-</main>
-{footer_html}
-<script>
-window.JDM_STATIC_ENTRY_SLUG={json.dumps(slug,ensure_ascii=False)};
-</script>
-<script src="{SITE_URL}javascripts/runtime-config.js"></script>
-<script src="{SITE_URL}vendor/supabase/supabase.min.js"></script>
-<script src="{SITE_URL}javascripts/dom-safe.js"></script>
-<script src="{SITE_URL}javascripts/auth-manager.js"></script>
-<script src="{SITE_URL}javascripts/media-policy.js"></script>
-<script src="{SITE_URL}assets/source-references.js"></script>
-<script src="{SITE_URL}javascripts/data-contract.js"></script>
-<script src="{SITE_URL}javascripts/knowledge-store.js"></script>
-<script src="{SITE_URL}javascripts/wiki-enhancements.js"></script>
-<script src="{SITE_URL}javascripts/visitor-ui.js"></script>
-</body>
-</html>
-""".replace('href="'+SITE_URL, 'href="/jingdezhen-porcelain-wiki/').replace('src="'+SITE_URL, 'src="/jingdezhen-porcelain-wiki/').replace('rel="canonical" href="/jingdezhen-porcelain-wiki/', 'rel="canonical" href="'+SITE_URL)
+""".replace('href="'+SITE_URL, 'href="/jingdezhen-porcelain-wiki/').replace('src="'+SITE_URL, 'src="/jingdezhen-porcelain-wiki/')
 
 
 def main() -> None:
@@ -558,7 +502,9 @@ def main() -> None:
     for entry in entries:
         slug = str(entry["slug"])
         expected.add(slug)
-        target = ENTRY_ROOT / slug / "index.html"
+        target = ENTRY_ROOT / slug / "index.md"
+        # Remove the obsolete generator-owned standalone shell; never ship both.
+        (ENTRY_ROOT / slug / "index.html").unlink(missing_ok=True)
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(
             entry_html(entry, world_by_entry, media_by_entry, relations_by_entry),

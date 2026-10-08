@@ -17,7 +17,7 @@
 .visitor-category-tabs{margin:24px 0}.jdm-search-filter-panel summary,.visitor-research summary{cursor:pointer;padding:12px;font-weight:600}.visitor-result-image{width:120px;height:150px;object-fit:contain;flex-shrink:0}.jdm-search-suggestions a{display:flex;padding:12px;gap:16px}.jdm-search-result mark{background:#ffe8a5;color:#172d47}.jdm-search-result-actions>a:not(:first-child){display:none}.jdm-search-result{gap:20px}#jdm-search-more{padding:14px 24px;border:1px solid var(--visitor-line);border-radius:10px;margin:24px 0;cursor:pointer}.visitor-primary{display:inline-block;padding:12px 18px;background:var(--visitor-blue);color:var(--md-default-bg-color,#fff)!important;border-radius:10px}.visitor-detail-image{max-width:100%;height:260px;object-fit:contain}.visitor-missing-image{padding:24px;background:var(--visitor-paper);color:var(--visitor-muted);font-size:14px}.visitor-entry-shortcuts{display:flex;gap:20px;flex-wrap:wrap;margin:20px 0}.wiki-entry-v2-grid{grid-template-columns:minmax(0,1fr)!important}.wiki-entry-v2-main{width:100%;margin:auto;min-width:0}.wiki-entry-source-links{overflow-wrap:anywhere}.visitor-research{border:1px solid var(--visitor-line);border-radius:10px;padding:12px}.catalog-card img{object-fit:contain!important}.catalog-card .visitor-missing-image{min-height:160px;display:grid;place-items:center}
 @media(max-width:700px){.visitor-result-image{width:80px;height:100px}.jdm-search-result{display:flex;flex-wrap:wrap}.jdm-search-result-main{min-width:0;flex:1}.jdm-search-result-recs{width:100%}.jdm-search-hero h1{font-size:32px!important}.wiki-entry-header{display:block!important}.wiki-entry-cover{margin:20px 0!important}}
 .global-kiln-map-toolbar [aria-pressed=true],.global-kiln-list-item.is-active{background:var(--visitor-blue)!important;color:var(--md-default-bg-color,#fff)!important}.visitor-cluster{display:grid;place-items:center;border-radius:50%;background:var(--visitor-blue);color:var(--md-default-bg-color,#fff);font-size:16px;font-weight:700;border:3px solid white}.global-kiln-map-canvas{height:60vh!important;min-height:320px!important}.global-kiln-map-toolbar input{min-width:0;max-width:100%;color:var(--visitor-ink);background:var(--visitor-paper)}.global-kiln-list-item{min-height:60px}.global-kiln-map-toolbar button{min-height:44px}.global-kiln-map-toolbar label{display:block;width:100%;color:var(--visitor-ink)}
-#network-graph-toggle{margin-top:24px;border:1px solid var(--visitor-line);border-radius:12px;padding:16px}#network-graph-toggle summary{cursor:pointer;font-weight:600}.network-node-list{max-height:400px;overflow:auto}.network-detail{max-height:none!important}.network-neighbor-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}.visitor-static-nav{display:flex;flex-wrap:wrap;gap:24px;padding:20px;justify-content:center;background:var(--visitor-paper);color:var(--visitor-ink)}
+#network-graph-toggle{margin-top:24px;border:1px solid var(--visitor-line);border-radius:12px;padding:16px}#network-graph-toggle summary{cursor:pointer;font-weight:600}.network-node-list{max-height:400px;overflow:auto}.network-detail{max-height:none!important}.network-neighbor-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
 [data-md-color-scheme=slate] :is(.jdm-search-page,.jdm-search-box,.jdm-search-result,.jdm-search-filter-panel,.network-detail,.network-graph-panel,.catalog-card,.person-card,.global-kiln-map-toolbar,.global-kiln-list-item,.jdm-gn-section,.jdm-gn-identity,.wiki-entry-card){background:var(--visitor-paper)!important;color:var(--visitor-ink)!important;border-color:var(--visitor-line)!important}
 [data-md-color-scheme=slate] :is(.jdm-search-page,.network-explorer,.catalog-card,.person-card,.jdm-global-network,.wiki-entry-card) :is(h1,h2,h3,h4,b,strong,p,label,small){color:inherit!important}
 [data-md-color-scheme=slate] :is(.jdm-search-page,.network-explorer,.catalog-card,.person-card,.jdm-global-network,.wiki-entry-card) a{color:var(--visitor-blue)}
@@ -73,7 +73,7 @@
 [data-md-color-scheme=slate] :is(.modern-section-head,.modern-flow-line,.modern-closing) :is(h2,strong){color:var(--visitor-ink)!important}
 [data-md-color-scheme=slate] .modern-section-head .modern-section-kicker{color:var(--visitor-blue)!important}
 .wiki-entry-section-kicker{opacity:1!important}
-.visitor-static-nav a,.visitor-footer a{color:var(--visitor-blue)}
+.visitor-footer a{color:var(--visitor-blue)}
 :is(.timeline-discovery-controls,.compare-era-heading,.compare-axis,.compare-node-body) :is(small,.compare-node-kicker,.compare-node-detail-hint){color:var(--visitor-muted)!important;opacity:1!important}
 .timeline-discovery-controls>div>span,.compare-axis>span{color:var(--visitor-muted)!important}
 .timeline-discovery-controls .is-active{background:var(--visitor-blue)!important;color:var(--visitor-paper)!important}
@@ -121,7 +121,16 @@
 .catalog-card .visitor-missing-image{min-height:0;padding:12px}
 .wiki-entry-text{white-space:normal}
 .visitor-entry-revision{font-size:13px!important;color:var(--visitor-muted)!important;margin:8px 0!important}
-@media(max-width:700px){.visitor-static-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:12px;text-align:center}.visitor-static-nav a,.visitor-static-nav button{min-height:44px;display:grid;place-items:center;margin:0;font-size:14px}.visitor-static-nav a{color:var(--visitor-blue)}}
+
 .visitor-feedback-form{min-width:0;overflow-wrap:anywhere}
 .visitor-feedback-form textarea{width:100%;box-sizing:border-box;min-height:140px;padding:12px;border:1px solid var(--visitor-line);border-radius:8px;color:inherit;background:var(--visitor-paper);font:inherit}
 .visitor-feedback-form label{display:block;margin-top:12px}.visitor-feedback-form .visitor-feedback-actions{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0}.visitor-feedback-status{font-size:14px;color:var(--visitor-muted)}
+
+/* Generated Entry fragments share Material chrome; only article-specific layout lives here. */
+.wiki-entry-card[data-static-rendered="true"] .wiki-entry-footer{display:block!important;margin-top:30px;padding-top:15px;border-top:1px solid var(--jdm-line);color:var(--visitor-muted);font-size:12px}
+.wiki-entry-card[data-static-rendered="true"] .wiki-entry-v2-relations{list-style:none;padding:0;margin:1rem 0 0}
+.wiki-entry-card[data-static-rendered="true"] .wiki-entry-v2-relations li{list-style:none;padding:0;margin:0;border:0;background:transparent}
+.wiki-entry-card[data-static-rendered="true"] .wiki-entry-source-links{list-style:none;padding:0;margin:0}
+.wiki-entry-card[data-static-rendered="true"] .wiki-entry-source-links li{list-style:none}
+/* Material's hidden desktop sidebar still supplies the checkbox-driven no-JS mobile drawer. */
+@media(max-width:76.1875em){.md-sidebar--primary[hidden]{display:block!important}}

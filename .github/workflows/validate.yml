@@ -74,3 +74,21 @@ jobs:
 
       - name: Check built internal links
         run: python scripts/check_built_links.py site
+
+      - name: Verify all 250 shared Headers and reject legacy UI regressions
+        run: python scripts/check_shared_header.py site
+
+      - name: Install Header browser regression dependencies
+        run: |
+          pip install playwright Pillow
+          python -m playwright install --with-deps chromium
+
+      - name: Shared Header visual and keyboard regression (four widths, two themes)
+        run: python scripts/test_shared_header_browser.py
+
+      - name: Upload Header comparison screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: shared-header-regression
+          path: /tmp/shared-header-browser/

@@ -8,7 +8,6 @@ declare global {
   const L: typeof import('leaflet');
   interface Window {
     L?:typeof import('leaflet');
-    JDM_STATIC_ENTRY_SLUG?:string;
     JDM_RUNTIME_CONFIG?: {
       supabaseUrl: string;
       supabaseAnonKey: string;

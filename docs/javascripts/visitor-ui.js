@@ -40,7 +40,14 @@
       }
       if(event.key==='Escape'){event.preventDefault();event.stopPropagation();node.close();}
     });
-    node.addEventListener('close', () => { node.remove(); if(previous instanceof HTMLElement||previous instanceof SVGElement)previous.focus(); }, { once: true });
+    node.addEventListener('close', () => {
+      node.remove();
+      // Entry enrichment can replace the link while its dialog is open.
+      const target = previous instanceof HTMLAnchorElement && !previous.isConnected
+        ? Array.from(document.querySelectorAll('a[href]')).find(link => link.getAttribute('href') === previous.getAttribute('href'))
+        : previous;
+      if(target instanceof HTMLElement||target instanceof SVGElement)target.focus();
+    }, { once: true });
     document.body.append(node);
     return node;
   }
@@ -110,8 +117,8 @@
   window.JDM_VISITOR = { loadData, dialog, root, openSearch, renderState };
   function init() {
     document.addEventListener('click',event=>{if(event.target instanceof Element&&event.target.closest('.visitor-feedback a')){event.preventDefault();openFeedback();}});
-    const host = document.querySelector('.md-header__inner') || document.querySelector('.visitor-static-nav');
-    if (host) { const button = document.createElement('button'); button.className = 'visitor-search-trigger'; button.type = 'button'; button.textContent = '搜索'; button.setAttribute('aria-label', '搜索（Ctrl 或 Command 加 K）'); button.addEventListener('click', openSearch); const existing=host.querySelector('a[href$="/search/"]');if(existing)existing.replaceWith(button);else host.append(button); }
+    const host = document.querySelector('.md-header__inner');
+    if (host && !host.querySelector('.visitor-search-trigger')) { const button = document.createElement('button'); button.className = 'visitor-search-trigger'; button.type = 'button'; button.textContent = '搜索'; button.setAttribute('aria-label', '搜索（Ctrl 或 Command 加 K）'); button.addEventListener('click', openSearch); host.append(button); }
     const menu=(()=>{
       const label=document.querySelector('.md-header [for="__drawer"]');
       if(!(label instanceof HTMLLabelElement))return label;
