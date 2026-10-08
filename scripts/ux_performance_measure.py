@@ -22,6 +22,7 @@ with sync_playwright() as p:
  for route,selector in ROUTES:
   context=browser.new_context(ignore_https_errors=True,viewport={'width':1440,'height':1000})
   page=context.new_page();cdp=context.new_cdp_session(page);requests={};failures=[]
+  page.add_init_script("window.__acceptanceCLS=0;new PerformanceObserver(list=>{for(const e of list.getEntries())if(!e.hadRecentInput)window.__acceptanceCLS+=e.value}).observe({type:'layout-shift',buffered:true});")
   cdp.send('Network.enable');cdp.send('Network.setCacheDisabled',{'cacheDisabled':True})
   cdp.send('Debugger.enable');cdp.send('Profiler.enable');cdp.send('Profiler.startPreciseCoverage',{'callCount':False,'detailed':True})
   cdp.send('DOM.enable');cdp.send('CSS.enable');cdp.send('CSS.startRuleUsageTracking')
@@ -32,9 +33,10 @@ with sync_playwright() as p:
   cdp.on('Network.loadingFinished',finished)
   cdp.on('Network.loadingFailed',lambda e:failures.append({'reason':e['errorText'],'type':e['type']}))
   page.goto(BASE+route,wait_until='domcontentloaded');page.locator(selector).first.wait_for(timeout=60000)
-  # Entry navigation and related records hydrate after its initial static body.
+  # Static Entries are complete at first output; research enhancement is opt-in.
+  # Measuring an idle visit must not wait for the removed hydration-only shortcuts.
   if route.startswith('entry/'):
-   page.locator('.visitor-entry-shortcuts').first.wait_for(timeout=60000)
+   page.locator('#wiki-entry-root[data-static-rendered="true"]').wait_for(timeout=60000)
   page.wait_for_timeout(2000)
   js=[]
   for item in cdp.send('Profiler.takePreciseCoverage')['result']:
@@ -53,7 +55,7 @@ with sync_playwright() as p:
    used=union_length([(r['startOffset'],r['endOffset']) for r in rules if r['styleSheetId']==sid and r['used']])
    css.append({'url':header.get('sourceURL','inline'),'source_utf16_units':length,'unused_utf16_units':max(0,length-used)})
   rows=list(requests.values())
-  dom=page.evaluate('''()=>({height:document.documentElement.scrollHeight,sections:document.querySelectorAll('main section').length,images:[...document.images].map(i=>({loading:i.loading,complete:i.complete,width:i.naturalWidth})),timing:performance.getEntriesByType('navigation')[0].toJSON()})''')
+  dom=page.evaluate('''()=>({height:document.documentElement.scrollHeight,sections:document.querySelectorAll('main section').length,layout_shift:window.__acceptanceCLS,images:[...document.images].map(i=>({loading:i.loading,complete:i.complete,width:i.naturalWidth})),timing:performance.getEntriesByType('navigation')[0].toJSON()})''')
   result={'url':BASE+route,'request_count':len(rows),'transferred_bytes':sum(r['bytes'] for r in rows),'js_transferred_bytes':sum(r['bytes'] for r in rows if r['type']=='Script'),'css_transferred_bytes':sum(r['bytes'] for r in rows if r['type']=='Stylesheet'),'supabase_requests':sum('supabase.co/' in r['url'] for r in rows),'supabase_data_requests':sum('supabase.co/' in r['url'] and r['type']!='Preflight' for r in rows),'supabase_preflight_requests':sum('supabase.co/' in r['url'] and r['type']=='Preflight' for r in rows),'external_requests':sum(not r['url'].startswith(BASE) for r in rows),'requests':rows,'failures':failures,'javascript_coverage':js,'css_coverage':css,'dom':dom}
   results.append(result);print(json.dumps({k:result[k] for k in ['url','request_count','transferred_bytes','js_transferred_bytes','css_transferred_bytes','supabase_requests']},ensure_ascii=False),flush=True)
   context.close()

@@ -67,6 +67,7 @@ def validate(text, url, home, site):
     canon = [a.get('href') for tag, a in doc.tags if tag == 'link' and a.get('rel') == 'canonical']
     assert canon == [url], 'canonical URL missing or duplicated'
     assert doc.count_class('wiki-entry-card') == 1, 'Entry article missing or duplicated'
+    assert not any(tag == 'a' and 'md-content__button' in a.get('class', '').split() and 'github.com/' in a.get('href', '') for tag, a in doc.tags), 'generated Entry has a nonexistent GitHub source action'
     assert '<h2>详细介绍</h2>' in text and '<h2>参考资料</h2>' in text, 'readable body and sources required'
     assert 'data-static-rendered="true"' in text, 'server-rendered reading required'
     assert len(doc.schema) == 1, 'exactly one JSON-LD document required'
@@ -102,7 +103,8 @@ def main():
     mutations = [sample.replace('</body>', '<nav class="visitor-static-nav"></nav></body>'),
                  sample.replace('</body>', '<header class="md-header"></header></body>'),
                  sample.replace('visitor-primary-nav', 'removed-primary-nav', 1),
-                 sample.replace('data-md-component="header"', 'data-md-component="old-header"', 1)]
+                 sample.replace('data-md-component="header"', 'data-md-component="old-header"', 1),
+                 sample.replace('</body>', '<a class="md-content__button" href="https://github.com/justinxyj/jingdezhen-porcelain-wiki/raw/main/docs/entry/missing/index.md">source</a></body>')]
     for bad in mutations:
         try:
             validate(bad, BASE + f'entry/{pages[0].parent.name}/', home, site)
@@ -113,7 +115,7 @@ def main():
         assert 'visitor-static-nav' not in (ROOT/path).read_text(), f'{path}: obsolete implementation returned'
     for path in ['scripts/generate_entry_pages.py', 'docs/javascripts/wiki-enhancements.js', 'types/jdm-globals.d.ts']:
         assert 'JDM_STATIC_ENTRY_SLUG' not in (ROOT/path).read_text(), f'{path}: obsolete static-shell global returned'
-    print(f'PASS: 250 Entry SEO/body checks; {len(all_pages)} site pages share one Header/navigation; links checked; 4 regression mutations rejected')
+    print(f'PASS: 250 Entry SEO/body checks; {len(all_pages)} site pages share one Header/navigation; links checked; {len(mutations)} regression mutations rejected')
 
 if __name__ == '__main__':
     main()

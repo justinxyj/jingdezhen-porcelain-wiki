@@ -7,6 +7,10 @@ def on_env(env, config, files):
     env.globals['visitor_footer'] = json.loads((ROOT / 'docs/data/visitor-navigation.json').read_text(encoding='utf-8'))
     return env
 def on_page_context(context, page, config, nav):
+    # Generated Entries are build artifacts, not tracked Markdown source files.
+    # Material's source-view action would point to a nonexistent GitHub raw path.
+    if page.meta.get('entry_schema'):
+        page.edit_url = None
     path = page.file.src_uri
     group = GROUPS.get(path.split('/')[0])
     if path.startswith('museum/'):

@@ -5,7 +5,7 @@ from playwright.sync_api import sync_playwright
 BASE=os.getenv('UX_BASE_URL','http://127.0.0.1:8013/jingdezhen-porcelain-wiki/')
 AXE=os.getenv('AXE_SCRIPT','/tmp/ux2-a11y/node_modules/axe-core/axe.min.js')
 OUT=Path(os.getenv('UX_ACCESSIBILITY_OUTPUT','/tmp/ux2-accessibility.json'))
-ROUTES=[('', '.visitor-hero'),('search/?q=青花','.jdm-search-result'),('entry/blue-and-white/','.wiki-entry-body'),('museum/kiln-map/','.global-kiln-list-item'),('museum/timeline/','.compare-node'),('network/relations/','.network-list-item'),('museum/catalog/','.catalog-card'),('museum/people/','.person-card'),('research/evidence/?slug=tang-ying','[data-evidence-chain] h2'),('contemporary/','.modern-hero'),('network/global/?slug=blue-and-white','.jdm-gn-identity'),('craft/technology-tree/','.tech-node'),('museum/gallery/','.official-gallery-card')]
+ROUTES=[('', '.visitor-hero'),('search/?q=青花','.jdm-search-result'),('entry/blue-and-white/','.wiki-entry-body'),('museum/kiln-map/','.global-kiln-list-item'),('museum/timeline/','.compare-node'),('network/relations/','.network-list-item'),('museum/catalog/','.catalog-card'),('museum/people/','.person-card'),('research/evidence/?slug=tang-ying','[data-evidence-chain] h2'),('contemporary/','.jdm-world-entry-card'),('network/global/?slug=blue-and-white','.jdm-gn-identity'),('craft/technology-tree/','.tech-entry-card'),('museum/gallery/','.official-gallery-card')]+[(r,'.jdm-world-entry-card') for r in ['history/','craft/','objects/','kilns/','people/','research/']]
 results=[];keyboard=[]
 with sync_playwright() as p:
  opts={'headless':True,'executable_path':shutil.which('chromium')}
@@ -37,3 +37,4 @@ with sync_playwright() as p:
  keyboard.append({'check':'image keyboard and zoom controls','passed':True});page.keyboard.press('Escape');keyboard.append({'check':'image viewer focus return','passed':page.evaluate('document.activeElement.matches(".wiki-entry-cover img")')})
  browser.close()
 OUT.write_text(json.dumps({'automated_wcag':results,'keyboard':keyboard,'manual_limits':'Automated rules and browser keyboard checks do not prove human screen-reader comprehension.'},ensure_ascii=False,indent=2)+'\n')
+if any(r['violations'] for r in results) or any(not k['passed'] for k in keyboard):raise SystemExit(1)
