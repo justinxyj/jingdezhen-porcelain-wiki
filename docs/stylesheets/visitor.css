@@ -134,3 +134,6 @@
 .wiki-entry-card[data-static-rendered="true"] .wiki-entry-source-links li{list-style:none}
 /* Material's hidden desktop sidebar still supplies the checkbox-driven no-JS mobile drawer. */
 @media(max-width:76.1875em){.md-sidebar--primary[hidden]{display:block!important}}
+
+/* Live research occupies reserved space; loading cannot move the authoritative article. */
+.wiki-entry-live-related{height:18rem;overflow:auto;contain:layout;overflow-anchor:none}

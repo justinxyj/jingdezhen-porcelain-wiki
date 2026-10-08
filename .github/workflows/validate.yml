@@ -57,6 +57,7 @@ jobs:
           python scripts/test_sources_render.py --require-dynamic
           node scripts/test_evidence_disclosure.mjs
           node scripts/test_body_sanitizer.mjs
+          node scripts/test_entry_ownership.mjs
 
       - name: Internal link checker regression
         run: python scripts/test_built_links.py
@@ -85,6 +86,16 @@ jobs:
 
       - name: Shared Header visual and keyboard regression (four widths, two themes)
         run: python scripts/test_shared_header_browser.py
+
+      - name: Verify authoritative Entry DOM across all 250 pages
+        run: python scripts/test_entry_render_stability.py
+
+      - name: Upload Entry stability stages and DOM measurements
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: entry-render-stability
+          path: /tmp/entry-render-stability/
 
       - name: Upload Header comparison screenshots
         if: always()

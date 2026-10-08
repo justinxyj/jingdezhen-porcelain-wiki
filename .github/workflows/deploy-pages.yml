@@ -50,6 +50,16 @@ jobs:
       - name: Shared Header visual and keyboard regression before publishing
         run: python scripts/test_shared_header_browser.py
 
+      - name: Verify authoritative Entry DOM across all 250 pages
+        run: python scripts/test_entry_render_stability.py
+
+      - name: Upload Entry stability stages and DOM measurements
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: entry-render-stability
+          path: /tmp/entry-render-stability/
+
       - name: Upload Header comparison screenshots
         if: always()
         uses: actions/upload-artifact@v4
@@ -99,6 +109,18 @@ jobs:
         env:
           HEADER_BASE_URL: ${{ steps.deployment.outputs.page_url }}
         run: python scripts/test_shared_header_browser.py
+
+      - name: Verify published Entry render stability
+        env:
+          ENTRY_BASE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: python scripts/test_entry_render_stability.py
+
+      - name: Upload production Entry stages
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: entry-render-stability-production
+          path: /tmp/entry-render-stability/
 
       - name: Upload production Header screenshots
         if: always()

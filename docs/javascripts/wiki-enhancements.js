@@ -4,8 +4,6 @@
   const esc=s=>window.JDM_SAFE?.esc?.(s)??window.JDM_AUTH?.esc?.(s)??String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]||m));
   /** @type {Record<string,Array<{path:string,title:string,description:string}>>} */
   let readingPaths={};
-  /** @type {Record<string,string>} */
-  const relationLabels={person:'相关人物',object:'相关器物',craft:'相关工艺',kiln:'相关窑址',period:'时代背景',related:'相关条目'};
   const ROOT='/jingdezhen-porcelain-wiki/';
   /** @param {unknown} s */
   const plain=s=>{const d=document.createElement('div');d.innerHTML=String(s||'');return d.textContent||d.innerText||''};
@@ -62,8 +60,40 @@
     if(typeof e.version==='number'&&Number.isInteger(e.version)&&e.version>0)parts.push('版本 '+e.version);
     return parts.length?'<p class="visitor-entry-revision">'+parts.join(' · ')+'</p>':'';
   }
+  /** @param {NonNullable<import('../../types/knowledge').NetworkContext['recommendations']>} recommendations */
+  function recommendationHtml(recommendations){
+    return (recommendations.length?'<section class="wiki-entry-recommendations"><div class="wiki-entry-section-kicker">知识探索</div><h2>你可能还想了解</h2><p class="wiki-recommendation-intro">这些条目可以补充当前主题的背景；具体关系以各自来源为依据。</p><div class="wiki-recommendation-grid">'+recommendations.map(r=>{const h=hrefFor(url(r.entry));return h?'<a class="wiki-recommendation-card" href="'+h+'"><span class="wiki-recommendation-category">'+esc(r.target_category||r.entry.category||'知识')+'</span><b>'+esc(r.target_label||r.entry.zh?.title||r.entry.slug)+'</b><small>'+esc(r.reason||'相关知识入口')+' →</small></a>':''}).filter(Boolean).join('')+'</div></section>':'');
+  }
+  /** Static HTML is authoritative. Only an explicitly opened research module loads live recommendations.
+   * @param {HTMLElement} root */
+  function enhanceStatic(root){
+    if(root.dataset.enhancementState)return;
+    root.dataset.enhancementState='idle';
+    const research=root.querySelector('details.visitor-research');
+    if(!(research instanceof HTMLDetailsElement))return;
+    research.addEventListener('toggle',async()=>{
+      if(!research.open||root.dataset.enhancementState!=='idle')return;
+      const module=document.createElement('section');module.className='wiki-entry-live-related';
+      const status=document.createElement('p');status.setAttribute('role','status');status.textContent='正在加载相关推荐…';
+      module.append(status);research.append(module);root.dataset.enhancementState='loading';
+      try{
+        const store=window.JDM_KNOWLEDGE;
+        if(!store)throw new Error('资料服务未加载');
+        const entry=await store.get(root.dataset.entrySlug||'');
+        if(!entry)throw new Error('未找到公开条目');
+        const recommendations=await store.recommendations(entry.id,{limit:8});
+        const content=document.createElement('div');content.innerHTML=recommendationHtml(recommendations);
+        if(recommendations.length){module.replaceChildren(content);}else{status.textContent='暂无更多相关推荐。';}
+        root.dataset.enhancementState='ready';
+      }catch(error){
+        status.textContent='相关推荐暂时无法加载，正文和已有关系仍可正常阅读。';
+        root.dataset.enhancementState='error';
+      }
+    });
+  }
   /** @param {HTMLElement} root @param {import('../../types/knowledge').Entry} e @param {Partial<import('../../types/knowledge').NetworkContext>|null} network */
   function render(root,e,network){
+    if(root.dataset.staticRendered==='true')return;
     const m=e.zh?.meta||{},im=validMedia(e);
     const intro=(e.category==='人物'?window.JDM_KNOWLEDGE?.personImportance?.(e):'')||detailedIntro(e), recommendations=network?.recommendations||[];
 
@@ -83,7 +113,7 @@
     const ungroupedSourceBlock=numberedSources?'<ol class="wiki-entry-source-links wiki-entry-source-refs" style="list-style:none;padding:0;margin:0">'+sourceLinks+'</ol>':'<div class="wiki-entry-source-links">'+(sourceLinks||'<span>暂无外部来源。</span>')+'</div>';
     const sourceGroups=[...new Set(visSources.map(s=>s.category))].map(category=>'<p>'+esc(category)+' '+visSources.filter(s=>s.category===category).length+'</p>').join('');
     const sourceBlock='<details class="visitor-references"><summary>参考资料 '+visSources.length+'</summary>'+sourceGroups+ungroupedSourceBlock+'</details>';
-    root.innerHTML='<article class="wiki-entry-card wiki-entry-v2">'+
+    const markup='<article class="wiki-entry-card wiki-entry-v2">'+
       '<header class="wiki-entry-header"><div><div class="wiki-entry-kicker">'+esc(e.category||'知识')+'</div><h1>'+esc(e.zh?.title||e.slug)+'</h1>'+(e.category==='人物'?'<h2>为什么重要</h2>':'')+'<p>'+esc(intro)+'</p>'+revisionHtml(e)+'</div>'+(im&&safeHref(im.path)?'<figure class="wiki-entry-cover"><img data-museum-image="1" data-source-url="'+esc(safeHref(im.source_url))+'" data-creator="'+esc(im.creator||'')+'" data-license="'+esc(im.license||'')+'" data-institution="'+esc(im.institution||(e.category==='器物'?(Array.isArray(m.institution)?m.institution.join('、'):m.institution||''):''))+'" data-era="'+esc(m.period||m.map?.period||'')+'" src="'+safeHref(im.path)+'" alt="'+esc(im.title||e.zh?.title||e.slug)+'"><figcaption>'+esc(im.title||'')+' · '+esc(im.source||'')+' · '+esc(im.license||'')+(safeHref(im.source_url)?' · <a href="'+safeHref(im.source_url)+'" target="_blank" rel="noopener noreferrer">图片来源 ↗</a>':'')+'</figcaption></figure>':'<p class="visitor-missing-image">暂无公开图片。图片需具备可追溯来源与使用许可。</p>')+'</header>'+
       (tags.length?'<div class="wiki-entry-v2-tags">'+tags.map(x=>'<span>'+esc(x)+'</span>').join('')+'</div>':'')+
       (worldLinks?'<div class="wiki-entry-world-path"><span>相关阅读主题</span><div>'+worldLinks+'</div></div>':'')+
@@ -95,9 +125,13 @@
       (timelinePeers.length?'<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">同一时代</div><h2>同一时代，还可以看</h2><div class="wiki-entry-explore-grid">'+entryCards(timelinePeers,'同一时代')+'</div></section>':'')+
       (spaceEntries.length?'<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">空间语境</div><h2>同一空间语境，还可以看</h2><div class="wiki-entry-explore-grid">'+entryCards(spaceEntries,'空间关联')+'</div></section>':'')+
       (craftProcesses.length?'<section class="wiki-entry-v2-section"><div class="wiki-entry-section-kicker">工艺</div><h2>相关工艺</h2><div class="wiki-entry-craft-list">'+craftProcesses.slice(0,8).map(p=>{const h=hrefFor(ROOT+'craft/technology-tree/?process='+encodeURIComponent(p.node_id||''));return h?'<a href="'+h+'"><span>工序</span><b>'+esc(p.label||p.node_id)+'</b><small>进入72道工艺 →</small></a>':''}).filter(Boolean).join('')+'</div></section>':'')+
-      (recommendations.length?'<section class="wiki-entry-recommendations"><div class="wiki-entry-section-kicker">知识探索</div><h2>你可能还想了解</h2><p class="wiki-recommendation-intro">这些条目可以补充当前主题的背景；具体关系以各自来源为依据。</p><div class="wiki-recommendation-grid">'+recommendations.map(r=>{const h=hrefFor(url(r.entry));return h?'<a class="wiki-recommendation-card" href="'+h+'"><span class="wiki-recommendation-category">'+esc(r.target_category||r.entry.category||'知识')+'</span><b>'+esc(r.target_label||r.entry.zh?.title||r.entry.slug)+'</b><small>'+esc(r.reason||'相关知识入口')+' →</small></a>':''}).filter(Boolean).join('')+'</div></section>':'')+
+      recommendationHtml(recommendations)+
       (reading?'<section class="visitor-reading-path"><h2>延伸阅读</h2><p>编辑选读：补充理解当前主题的背景。</p><div class="visitor-grid">'+reading+'</div></section>':'')+
       '<section class="wiki-entry-v2-section"><h2>参考资料与来源</h2><p>'+visSources.length+' 条来源记录；数量不代表结论已获核验。</p>'+sourceBlock+'</section><p><a href="'+ROOT+'research/evidence/?slug='+encodeURIComponent(e.slug)+'">查看完整证据链 →</a></p><details class="visitor-research"><summary>深入研究：关系图与研究方法</summary><p><a href="'+ROOT+'network/relations/?node='+encodeURIComponent('entry:'+e.id)+'">查看关系图</a> · <a href="'+ROOT+'research/">阅读研究方法</a></p></details><p class="visitor-feedback"><a href="https://github.com/justinxyj/jingdezhen-porcelain-wiki/issues/new?title='+encodeURIComponent('条目反馈：'+(e.zh?.title||e.slug))+'">发现错误？反馈此条目 →</a></p><p>继续阅读：<a href="'+ROOT+'search/?category='+encodeURIComponent(e.category||'')+'">更多'+esc(e.category||'相关')+'条目 →</a></p></div></div></article>';
+    const template=document.createElement('template');template.innerHTML=markup;
+    const article=template.content.firstElementChild;
+    if(root.matches('.wiki-entry-card')&&article){root.replaceChildren(...article.childNodes);}
+    else{root.replaceChildren(template.content);}
   }
   /** @param {unknown} raw */
   function sanitizeBodyHtml(raw){
@@ -161,15 +195,6 @@
     const cleaned=sanitizeBodyHtml(tpl.innerHTML).trim();
     return cleaned||'<p>'+esc(summary||intro)+'</p>';
   }
-  /** @param {HTMLElement} root */
-  function renderRelationWarning(root){
-    const note=document.createElement('div');
-    note.className='wiki-entry-relation-warning';
-    note.setAttribute('role','status');
-    note.innerHTML='相关内容暂时加载失败。<button type="button">重试</button>';
-    note.querySelector('button')?.addEventListener('click',()=>init());
-    root.prepend(note);
-  }
   /** @param {HTMLElement} root @param {unknown} error */
   function renderLoadError(root,error){
     window.JDM_VISITOR?.renderState(root,'error',{error,retry:()=>{window.JDM_KNOWLEDGE?.reset();init()}});
@@ -178,15 +203,16 @@
   async function init(){
     const seq=++initSeq;
     const root=document.getElementById('wiki-entry-root');
-    const store=window.JDM_KNOWLEDGE;if(!root||!store)return;
-    const staticRendered=root.dataset.staticRendered==='true';
+    if(!root)return;
+    if(root.dataset.staticRendered==='true'){enhanceStatic(root);return;}
+    const store=window.JDM_KNOWLEDGE;if(!store)return;
     const slug=new URLSearchParams(location.search).get('slug')||root.dataset.entrySlug;
-    if(!slug){if(!staticRendered)window.JDM_VISITOR?.renderState(root,'empty',{message:'没有指定条目。'});return}
-    if(!staticRendered)window.JDM_VISITOR?.renderState(root,'loading',{message:'正在加载知识条目…'});
+    if(!slug){window.JDM_VISITOR?.renderState(root,'empty',{message:'没有指定条目。'});return}
+    window.JDM_VISITOR?.renderState(root,'loading',{message:'正在加载知识条目…'});
     try{
       if(typeof fetch==='function')readingPaths=await fetch(ROOT+'data/reading-paths.json').then(response=>response.ok?response.json():{}).catch(()=>({}));
       const e=await store.get(slug);
-      if(!e){if(staticRendered)return;window.JDM_VISITOR?.renderState(root,'empty',{message:'没有找到这个公开条目。'});return}
+      if(!e){window.JDM_VISITOR?.renderState(root,'empty',{message:'没有找到这个公开条目。'});return}
       /** @type {(Partial<import('../../types/knowledge').NetworkContext>&{networkError?:unknown})|null} */
       const network=await store.entryNetworkContext(e.id,{timelineLimit:8,spaceLimit:12}).catch(async networkError=>{
         const [ctx,recs]=await Promise.all([
@@ -195,17 +221,14 @@
         ]);
         return {entry:e,worlds:[],relations:ctx.relations||[],recommendations:Array.isArray(recs)?recs:[],timelinePeers:[],spaceEntries:[],craftProcesses:[],networkError};
       });
-      if(!network){if(staticRendered)return;window.JDM_VISITOR?.renderState(root,'empty',{message:'没有找到这个公开条目。'});return}
-      const error=null; const truncated=false;
+      if(!network){window.JDM_VISITOR?.renderState(root,'empty',{message:'没有找到这个公开条目。'});return}
       if(seq!==initSeq)return;
       render(root,e,network);
-      const relations=network.relations||[], recommendations=network.recommendations||[];
       const relationTruncated=Boolean(network.relationTruncated||network.stats?.relationTruncated);
       const recommendationError=network.networkError?network.networkError:null;
       if(recommendationError){const note=document.createElement('div');note.className='wiki-entry-recommendation-warning';note.setAttribute('role','status');note.textContent='部分相关阅读暂时无法加载，正文仍可正常浏览。';root.querySelector('.wiki-entry-card')?.appendChild(note);}
-      if(error)renderRelationWarning(root);
       if(relationTruncated){const note=document.createElement('div');note.className='wiki-entry-relation-warning';note.setAttribute('role','status');note.textContent='相关内容较多，当前仅显示部分关系。';root.querySelector('.wiki-entry-card')?.appendChild(note)}
-    }catch(error){if(staticRendered){console.warn('[JDM entry] enhancement failed; keeping static content',error)}else{renderLoadError(root,error)}}
+    }catch(error){renderLoadError(root,error)}
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();

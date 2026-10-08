@@ -1,7 +1,7 @@
 /* Keep implementation metadata out of the public interface.
    Hide only explicit internal nodes; never delete content by matching visible text. */
 (function(){
-  const selectors=['.wiki-entry-footer','.jdm-backend-badge','.editor-locked','.backend-only','.data-principles','.internal-meta'];
+  const selectors=['.jdm-backend-badge','.editor-locked','.backend-only','.data-principles','.internal-meta'];
   function clean(root=document){
     selectors.forEach(sel=>root.querySelectorAll(sel).forEach(el=>el.remove()));
     if(root.nodeType===1&&root.matches?.(selectors.join(',')))root.remove();
