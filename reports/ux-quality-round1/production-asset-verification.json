@@ -1,0 +1,45 @@
+{
+  "production_code_commit": "2fd937e5af774f18cdd07516092d88545f90dcd0",
+  "asset_checks": [
+    {
+      "asset": "javascripts/visitor-ui.js",
+      "sha256": "a3e7295b5ba3659eb38b1dc889f735c7e8b6795e06cc577892d40011b7eb3d67",
+      "matches_local_source_or_build": true
+    },
+    {
+      "asset": "javascripts/data-contract.js",
+      "sha256": "c9ce8629667bef0d98ffb41af6a2cefabaa3feb1e891e8fc7ca840be87856519",
+      "matches_local_source_or_build": true
+    },
+    {
+      "asset": "javascripts/museum.js",
+      "sha256": "8b45bae35d14b4616239d3d50539fe8638865bbee0cd63059dbffe586d29e809",
+      "matches_local_source_or_build": true
+    },
+    {
+      "asset": "javascripts/wiki-enhancements.js",
+      "sha256": "47cf343a61161553ad500f5ac45c6576c6bec8a952317ac5e9d24098b3e4646b",
+      "matches_local_source_or_build": true
+    },
+    {
+      "asset": "javascripts/global-network.js",
+      "sha256": "580e14d6e76fa1ddefa2d7c1b58ee36a18ef04b8d1de628f40d999f544264603",
+      "matches_local_source_or_build": true
+    },
+    {
+      "asset": "javascripts/network-explorer.js",
+      "sha256": "301ac12f10e41953652eb078644c6a7fc1133154d441e01049c08c1ea55d5854",
+      "matches_local_source_or_build": true
+    },
+    {
+      "asset": "stylesheets/visitor.css",
+      "sha256": "eb99faa73a50315af11e79b34896d312bbbd7600a32a8a60c05f854e74def394",
+      "matches_local_source_or_build": true
+    },
+    {
+      "asset": "assets/source-references.js",
+      "sha256": "1d5f02ba584e34c8080c5e32b18afeb3397db03df89d534cc79ff5bcc6837578",
+      "matches_local_source_or_build": true
+    }
+  ]
+}

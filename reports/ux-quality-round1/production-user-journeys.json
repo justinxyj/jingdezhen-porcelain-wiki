@@ -1,0 +1,78 @@
+[
+  {
+    "check": "Entry blue-and-white",
+    "passed": true
+  },
+  {
+    "check": "Entry yuan-blue-white",
+    "passed": true
+  },
+  {
+    "check": "Entry hutian-kiln",
+    "passed": true
+  },
+  {
+    "check": "Entry imperial-kiln",
+    "passed": true
+  },
+  {
+    "check": "Entry tang-ying",
+    "passed": true
+  },
+  {
+    "check": "Path A complete",
+    "passed": true
+  },
+  {
+    "check": "Entry tang-ying",
+    "passed": true
+  },
+  {
+    "check": "Path B importance",
+    "passed": true
+  },
+  {
+    "check": "Entry imperial-kiln",
+    "passed": true
+  },
+  {
+    "check": "Entry tang-ying-jun-vase",
+    "passed": true
+  },
+  {
+    "check": "Path B complete",
+    "passed": true
+  },
+  {
+    "check": "Path C Jingdezhen selected",
+    "passed": true
+  },
+  {
+    "check": "Entry hutian-kiln",
+    "passed": true
+  },
+  {
+    "check": "Entry qingbai-porcelain",
+    "passed": true
+  },
+  {
+    "check": "Path C complete",
+    "passed": true
+  },
+  {
+    "check": "Path D concrete sourced relation",
+    "passed": true
+  },
+  {
+    "check": "Entry chinoiserie",
+    "passed": true
+  },
+  {
+    "check": "Path D Evidence actual source",
+    "passed": true
+  },
+  {
+    "check": "Path D complete",
+    "passed": true
+  }
+]

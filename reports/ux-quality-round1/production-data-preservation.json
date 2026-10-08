@@ -1,0 +1,11 @@
+{
+  "checked_at_tokyo": "2026-10-08T15:48:45.800604+09:00",
+  "method": "Read-only REST GET; compare selected public fields, not a full-database transaction snapshot",
+  "database_writes_performed": false,
+  "published_entries": 250,
+  "all_250_public_record_fields_unchanged": 250,
+  "entry_content_matches": 79,
+  "process_matches": 65,
+  "context_matches": 16,
+  "metadata_matches": 22
+}

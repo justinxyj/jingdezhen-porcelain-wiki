@@ -1,0 +1,91 @@
+PASS static/pending: no wikipedia search link
+PASS static/dup: no wikipedia search link
+PASS static/empty: no wikipedia search link
+PASS static/empty-only-pending: no wikipedia search link
+PASS static/title-only: no wikipedia search link
+PASS static/evil: no wikipedia search link
+PASS static/refs: no wikipedia search link
+PASS static/refs-pending: no wikipedia search link
+PASS static/refs-dup: no wikipedia search link
+PASS static/legacy: no wikipedia search link
+PASS static/status-published: no wikipedia search link
+PASS static/bare-strings: no wikipedia search link
+PASS static/unknown-strings: no wikipedia search link
+PASS static/pending: hidden
+PASS static/pending: others kept
+PASS static/pending: tier/grade not shown
+PASS static/dup: url listed once
+PASS static/empty: empty state
+PASS static/empty-only-pending: empty state
+PASS static/title-only: title used
+PASS static/evil: label escaped
+PASS static/evil: javascript: url dropped
+PASS static/evil: safe link kept
+PASS static/legacy: plain ul, no numbers
+PASS static/refs: ol with [1][2]
+PASS static/refs-pending: numbers keep array positions
+PASS static/refs-dup: numbers keep array positions
+PASS static/status-published: shown
+PASS static/bare-strings: known bibliography resolved
+PASS static/unknown-strings: not invented
+PASS static/no sup in body
+PASS dynamic/pending: rendered
+PASS dynamic/pending: no wikipedia search link
+PASS consistent/pending: same source set static vs dynamic
+PASS consistent/pending: same numbering static vs dynamic
+PASS dynamic/dup: rendered
+PASS dynamic/dup: no wikipedia search link
+PASS consistent/dup: same source set static vs dynamic
+PASS consistent/dup: same numbering static vs dynamic
+PASS dynamic/empty: rendered
+PASS dynamic/empty: no wikipedia search link
+PASS consistent/empty: same source set static vs dynamic
+PASS consistent/empty: same numbering static vs dynamic
+PASS dynamic/empty-only-pending: rendered
+PASS dynamic/empty-only-pending: no wikipedia search link
+PASS consistent/empty-only-pending: same source set static vs dynamic
+PASS consistent/empty-only-pending: same numbering static vs dynamic
+PASS dynamic/title-only: rendered
+PASS dynamic/title-only: no wikipedia search link
+PASS consistent/title-only: same source set static vs dynamic
+PASS consistent/title-only: same numbering static vs dynamic
+PASS dynamic/evil: rendered
+PASS dynamic/evil: no wikipedia search link
+PASS consistent/evil: same source set static vs dynamic
+PASS consistent/evil: same numbering static vs dynamic
+PASS dynamic/refs: rendered
+PASS dynamic/refs: no wikipedia search link
+PASS consistent/refs: same source set static vs dynamic
+PASS consistent/refs: same numbering static vs dynamic
+PASS dynamic/refs-pending: rendered
+PASS dynamic/refs-pending: no wikipedia search link
+PASS consistent/refs-pending: same source set static vs dynamic
+PASS consistent/refs-pending: same numbering static vs dynamic
+PASS dynamic/refs-dup: rendered
+PASS dynamic/refs-dup: no wikipedia search link
+PASS consistent/refs-dup: same source set static vs dynamic
+PASS consistent/refs-dup: same numbering static vs dynamic
+PASS dynamic/legacy: rendered
+PASS dynamic/legacy: no wikipedia search link
+PASS consistent/legacy: same source set static vs dynamic
+PASS consistent/legacy: same numbering static vs dynamic
+PASS dynamic/status-published: rendered
+PASS dynamic/status-published: no wikipedia search link
+PASS consistent/status-published: same source set static vs dynamic
+PASS consistent/status-published: same numbering static vs dynamic
+PASS dynamic/bare-strings: rendered
+PASS dynamic/bare-strings: no wikipedia search link
+PASS consistent/bare-strings: same source set static vs dynamic
+PASS consistent/bare-strings: same numbering static vs dynamic
+PASS dynamic/unknown-strings: rendered
+PASS dynamic/unknown-strings: no wikipedia search link
+PASS consistent/unknown-strings: same source set static vs dynamic
+PASS consistent/unknown-strings: same numbering static vs dynamic
+PASS dynamic/empty: empty state
+PASS dynamic/empty-only-pending: empty state
+PASS dynamic/evil: label escaped
+PASS dynamic/evil: javascript: dropped
+PASS dynamic/title-only: title used
+PASS dynamic/legacy: no ol, no numbers
+PASS dynamic/refs: ol with [1][2]
+90 passed, 0 failed
