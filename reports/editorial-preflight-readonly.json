@@ -1,0 +1,2656 @@
+{
+  "checked_at_utc": "2026-10-08T04:31:10.015955+00:00",
+  "repository_commit": "0bcef6f2b50c824bf56eeb4bdd34e8bd3e984419",
+  "project_id": "jscttuocrulgpwvsfxou",
+  "access_used": "Public REST GET only",
+  "supabase_mcp_available": false,
+  "postgres_sql_permissions_checked": false,
+  "full_backup_performed": false,
+  "live_dry_run_performed": false,
+  "database_writes_performed": false,
+  "draft_file_hashes": [
+    {
+      "path": "content/editorial/entry-drafts.json",
+      "sha256": "4486e83b4d9e673ab3aa2972af926f4d03a35f03560464f71edeea7207a7f332"
+    },
+    {
+      "path": "content/editorial/process-drafts.json",
+      "sha256": "514ae1f948bed3c90f03318b511e4a2cb22c6b9e8a18a78c996e01859f6ad1da"
+    },
+    {
+      "path": "content/editorial/timeline-drafts.json",
+      "sha256": "432ea267662313d5adc83697f407d1d3085d1881d31bbfa22be43fe9b25e9998"
+    }
+  ],
+  "target_summary": [
+    {
+      "table": "entries",
+      "public_rows_read": 250,
+      "target_count": 79,
+      "identity_version_hash_passed": 79,
+      "metadata_update_count": 22
+    },
+    {
+      "table": "craft_processes",
+      "public_rows_read": 72,
+      "target_count": 65,
+      "identity_version_hash_passed": 65,
+      "metadata_update_count": 0
+    },
+    {
+      "table": "timeline_context",
+      "public_rows_read": 50,
+      "target_count": 16,
+      "identity_version_hash_passed": 16,
+      "metadata_update_count": 0
+    }
+  ],
+  "release_targets_unique": 160,
+  "offline_content_diff_sha256": "774c08d2548cf496b807a1dcfb0399e252aff8c93e1b6c0522e871b1105382e9",
+  "offline_content_diff_is_not_live_preview": true,
+  "targets": [
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "dd2ad305-048d-4fd6-87fb-e036e5cca32c",
+      "slug": "ceramic-workers",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "182d8e44-f573-42c0-bf79-73a700724240",
+      "slug": "porcelain-raw-material-system",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "c0abfc52-b4fe-4f39-a254-e3b75e0c6bd9",
+      "slug": "porcelain-craft-division-labor",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "e45d648d-df19-4f9c-a540-d6de71832232",
+      "slug": "imperial-civilian-kilns",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "ed0c4fc6-e10e-4d18-a41c-2c4fb81bb03a",
+      "slug": "colored-glaze",
+      "original_guard_passed": true,
+      "expected_version": 3,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [
+        "keywords"
+      ],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "f2ae381c-27d3-4fea-8c4a-2747a993e50b",
+      "slug": "yuan-blue-white",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [
+        "keywords"
+      ],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "d03ad6a7-7467-40c2-a75d-e83bcfdd9508",
+      "slug": "five-dynasties-song",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "42c6e771-1c1a-4ec1-a585-6ee95c1355a7",
+      "slug": "r25",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "f31277c6-351c-40fc-b750-2d8002d92be2",
+      "slug": "hutian-kiln",
+      "original_guard_passed": true,
+      "expected_version": 3,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [
+        "keywords"
+      ],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "b91b0dd6-f828-425f-b149-a131c2b4d133",
+      "slug": "fencai",
+      "original_guard_passed": true,
+      "expected_version": 3,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [
+        "keywords"
+      ],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "d41a560b-ed35-4203-a225-561334bff045",
+      "slug": "modern-industry",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "f8d6ca91-80a5-410e-a704-4b9bfba9c6cf",
+      "slug": "r19",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "c7dafc47-fd50-48df-9cd0-64f26f993024",
+      "slug": "unesco-2026",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "01195120-9889-407f-b0b2-be22cdc26231",
+      "slug": "r11",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "ac26e854-9c9a-44f5-b0ef-22079cc9a446",
+      "slug": "ming-imperial-kiln",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "fd1baa20-bbf5-4591-ad48-314ba7431af1",
+      "slug": "porcelain-stone",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [
+        "keywords"
+      ],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "bb1222f9-07b6-47b1-9321-1948b17d157f",
+      "slug": "kaolin-clay",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [
+        "keywords"
+      ],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "59571713-b654-478f-97c8-a6fae7206341",
+      "slug": "binary-formula",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [
+        "keywords"
+      ],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "80750fb5-6589-4534-bcf3-25daf2980554",
+      "slug": "porcelain-clay-processing",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "860fe32e-8f6d-422a-90c0-ec59028a5add",
+      "slug": "kiln-firing",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "30c98c1d-74c1-40bc-ac60-bf1479124dc5",
+      "slug": "red-glaze-jingdezhen",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "0daf6e2e-f401-4e0f-9397-09cc4d9311b7",
+      "slug": "langyao-red",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [
+        "keywords"
+      ],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "3b34b6d2-61ee-4ccc-ab34-427fc626490e",
+      "slug": "fencai-technique",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "bb9c6549-56df-45ca-827c-e7da2646c493",
+      "slug": "overglaze-enamels",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "1c027418-7f7e-4250-8f33-304d582afd81",
+      "slug": "archaeological-stratigraphy",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "f93043f1-b2e6-4e6e-b8bc-84772e7de102",
+      "slug": "porcelain-sherds",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "fe56a082-1768-494a-afcc-96255d4708c8",
+      "slug": "kiln-waste",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "dc8711e0-d9fd-47c2-84bb-bad8c834f7a9",
+      "slug": "imperial-porcelain-debris",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "8d7e1841-0b67-4028-af17-dd1c0741c409",
+      "slug": "active-archaeology",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "5f3869dd-e5ea-4e0c-9849-852eda45ad4f",
+      "slug": "imperial-kiln-management",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "ddd0c44a-5613-48d0-86b1-3b670221ce4e",
+      "slug": "export-porcelain",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [
+        "keywords"
+      ],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "5f0aea49-0921-495f-b6d0-bc860aa380dd",
+      "slug": "kraak-porcelain",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [
+        "keywords"
+      ],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "6e392dd0-9c47-4d59-bb1c-1caaf714f9dc",
+      "slug": "japanese-export-porcelain",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "d04f08c8-cabb-40ac-a734-12fd756d2ce1",
+      "slug": "arita-jingdezhen",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "139cf330-57b2-4f0b-8a77-a3283a4a5f8e",
+      "slug": "dutch-east-india-company",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "2b6a694a-73ea-4e2d-a13a-ed357fb5088a",
+      "slug": "portuguese-porcelain-trade",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "4b46b6ee-a13a-4ef2-adfa-78d0a1963b3d",
+      "slug": "chinoiserie",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "0b779f7e-f6b1-4bf6-b0c7-1b492e404e63",
+      "slug": "export-kiln-production",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "a6b7ed86-48f4-438c-984d-8d1c953e7e10",
+      "slug": "yongle-copper-red-dish",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [
+        "institution",
+        "glaze",
+        "metadata_source"
+      ],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "85c66969-b3ad-4596-8195-df0b1bb530fd",
+      "slug": "met-1991-253-33",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [
+        "institution",
+        "pattern",
+        "metadata_source"
+      ],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "8ff2cb4f-d2d2-48f1-821b-88011ac60b00",
+      "slug": "r03",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "77c16ae9-0876-4821-b9f8-f5f5b07972d5",
+      "slug": "r10",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "c5ca2a39-eb8f-4db4-8de4-61066bb7420d",
+      "slug": "r32",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "94ddabc3-a23b-4cb5-ae14-0ac2c0816279",
+      "slug": "r23",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "a6b24c9d-4e2d-42bb-bbf7-b88aa359d38a",
+      "slug": "yin-hong-xu",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [
+        "role",
+        "importance",
+        "keywords"
+      ],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "76c14f6b-0312-4f90-87bb-12c28a50e1a5",
+      "slug": "jean-baptiste-du-halde",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "7b36bec3-a889-4ead-9180-1ba9a2e63b67",
+      "slug": "lettres-edifiantes-porcelaine",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "183ddb24-1b4a-4673-9d5a-4375eae7369d",
+      "slug": "jingdezhen-taolu",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "3bef45f5-6ebe-48f9-a6c4-02b3b726b545",
+      "slug": "meissen-porcelain",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "7dac9636-1c05-4a16-8a27-a4118168bf91",
+      "slug": "meissen-jingdezhen",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "d50e2a25-9e89-4957-90b7-6889f4be49bd",
+      "slug": "sevres-porcelain",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "24116650-a572-4ba4-bd59-20f312ed8118",
+      "slug": "chinese-bluewhite-global-copy",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "646b64f7-6f1a-4205-8bc8-6c02b8784ab6",
+      "slug": "wang-shixing",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [
+        "role",
+        "importance",
+        "keywords"
+      ],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "b0a0cee6-a717-4a5c-8be8-f17c45447f93",
+      "slug": "shen-defu",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [
+        "role",
+        "importance",
+        "keywords"
+      ],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "d389b823-58af-4f14-b001-84d3d6b616b6",
+      "slug": "wen-zhenheng",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [
+        "role",
+        "importance",
+        "keywords"
+      ],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "9550dcd8-e358-474e-8f59-662b909304ce",
+      "slug": "porcelain-marks",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "8fbb9161-01d6-430a-ac15-4f560384b257",
+      "slug": "reign-marks",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "aa4e70f9-cb35-476b-8397-bb42a12fdaf1",
+      "slug": "sweet-white-porcelain",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [
+        "keywords"
+      ],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "e9fd8661-ae5c-4caf-b321-46da0d8b20cb",
+      "slug": "markley",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "8074d3ec-e4a5-4e32-85f1-cf6aa4a7e51d",
+      "slug": "li-zhengdao",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "8c067ac7-bb5f-4843-9127-7b5d35b5e2da",
+      "slug": "zhang-songmao",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [
+        "role",
+        "importance",
+        "keywords",
+        "birth_year"
+      ],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "925c476e-ae84-41d1-90a2-808205973e4a",
+      "slug": "huang-yunpeng",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [
+        "role",
+        "importance",
+        "keywords"
+      ],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "4886d78e-f0da-4300-aae0-9e1a11f17345",
+      "slug": "liu-yuanchang",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [
+        "role",
+        "importance",
+        "keywords"
+      ],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "205ef5ba-79a4-409f-8ab9-a5fd7fc22e68",
+      "slug": "qin-xilin",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [
+        "role",
+        "importance",
+        "keywords",
+        "birth_year"
+      ],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "fa5f2d1f-c31f-44c8-91c6-2c913cca13f5",
+      "slug": "r13",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "265c8494-a595-46f0-a3ec-05b043362cc0",
+      "slug": "r12",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "b949ed9e-8a0e-4ff6-b225-267d1f7f4270",
+      "slug": "r14",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "ab27d50d-90a6-4db7-a2b5-4a20a015fa0b",
+      "slug": "r15",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "93f3562e-4bb3-4147-b562-5ab21c92ac7a",
+      "slug": "r26",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "adbff0df-f988-4360-84ee-6580b8a3b9dd",
+      "slug": "r28",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "80fe43c5-4533-47d6-8f49-95314a4cb884",
+      "slug": "r30",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "538f8d7d-474b-4290-bab8-3c1b8c61bfb2",
+      "slug": "r09",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "e5be3a1c-e7f9-47ca-a19e-075fe758a02a",
+      "slug": "r35",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "a8ff3173-ab32-4be5-933c-47f11dad2e86",
+      "slug": "r21",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "4eac51c2-7dcb-4307-8e31-2001342e7216",
+      "slug": "longfellow",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "a6e4cd46-3d12-4c73-b6ce-613f21008b83",
+      "slug": "wang-xiliang",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [
+        "role",
+        "importance",
+        "keywords",
+        "birth_year"
+      ],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "aab50925-2f05-47d2-aa3f-5d1e34800f1e",
+      "slug": "r20",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "3ba11de0-7496-4933-96e0-4eedbef6f2bb",
+      "slug": "industry-transition",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "entries",
+      "key_column": "id",
+      "id": "dc0052fd-9c6a-4fcc-94c1-5e9bdc4e52e6",
+      "slug": "jun-kiln",
+      "original_guard_passed": true,
+      "expected_version": 4,
+      "updated_fields": [
+        "zh",
+        "sources",
+        "version",
+        "updated_by",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "b9793ec3-2aa2-426b-a14a-4b5d5887a6b0",
+      "slug": "mining",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "f356d063-fcb7-46db-b7fe-b630d3e4e11b",
+      "slug": "ore-selection",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "2213b4b8-20de-49e9-bd02-a10345b21ed6",
+      "slug": "stone-quarrying",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "bb64140d-578a-43c4-a42e-9f8033afa50c",
+      "slug": "crushing",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "57b59266-46c7-4118-9e88-4abc9f0910d1",
+      "slug": "pounding",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "4bbdfaf9-6940-4c77-9533-cb55b2e6212b",
+      "slug": "washing",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "0dbcde9d-51d2-4a7f-aa79-6576687b523e",
+      "slug": "sieving",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "4011e382-9fa4-49bf-ad8c-4b7613c85cc0",
+      "slug": "iron-removal",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "22df60ab-8ef4-4648-8248-0a3cf8b90d93",
+      "slug": "settling",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "05e7b7ad-6fb3-453d-98ec-c7f923ad4007",
+      "slug": "dewatering",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "a6d3a750-11cb-45cd-a400-805eebdfe7ba",
+      "slug": "batching",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "1cd30dec-2b9d-4807-a986-2107f3ac4edc",
+      "slug": "grinding",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "075dde35-3bcb-4dc3-abe5-9fe572ace72d",
+      "slug": "mixing",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "6a49fdb1-ad03-43f3-a214-458a1e3cc4a5",
+      "slug": "kneading",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "186d17bb-34fb-4fef-b505-561ea53928c6",
+      "slug": "kneading-by-hand",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "cba61682-33aa-4b03-a785-4bc8240ecc20",
+      "slug": "aging",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "8a2c0d08-1a2b-4e47-9cfa-66e904a40c9a",
+      "slug": "portioning",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "e0d60d38-61b6-407f-bc19-11f8f514d42f",
+      "slug": "clay-quantity",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "62764c1d-665b-4d49-92c8-e5e445d265e7",
+      "slug": "mud-washing",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "39302dbe-e403-498f-88af-10da7542b962",
+      "slug": "clay-resting",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "6d1ec8fc-779e-44d9-a0cf-ec1855e26889",
+      "slug": "on-wheel",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "b61daac1-458a-4c2b-bc71-cad97aa1c052",
+      "slug": "centering",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "b26c0387-c64c-4477-962a-ea9fd486a309",
+      "slug": "throwing",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "7ff88857-fb04-40d8-b48b-1a82ed4cbd8d",
+      "slug": "trimming-greenware",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "937e3750-50e7-4940-9b15-e5a483974d39",
+      "slug": "molding",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "437689d5-02da-4e92-90af-eeda8e817a62",
+      "slug": "joining-parts",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "fe69572d-1b09-4123-b76b-4d0a0077aaa9",
+      "slug": "drying-greenware",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "a674fc8a-d3a2-4e50-a1b1-0bb0dfc7e8e5",
+      "slug": "liju",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "23f24a3a-a61a-4b08-a93c-a90ff4586dd7",
+      "slug": "gualing",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "fad6218e-51b2-4cad-a368-2c7b8b7d7998",
+      "slug": "finishing",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "72b36882-8509-41e3-b8f4-b5189b651131",
+      "slug": "foot-cutting",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "ebe2d852-cf14-43ba-bd71-e703c73fd5d6",
+      "slug": "foot-finishing",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "49823097-fce7-4064-8390-3187bca7a7de",
+      "slug": "water-correction",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "a73d62bf-8322-4d91-8180-b8cc4237874c",
+      "slug": "attach-handle-spout-ear",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "c3e1585e-52cc-4725-9e60-1059aa9ae56e",
+      "slug": "incising",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "2b83a0a8-04d6-4f2c-ad23-1633064aadc2",
+      "slug": "sgraffito",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "e9e53a9d-ff41-442e-8aa9-9d62b10e0ed3",
+      "slug": "stamping-pattern",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "002db0f8-464c-4bca-9a37-a96ba9f21254",
+      "slug": "openwork-carving",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "caeb9982-a8a4-4cc8-8945-d76d0aeda852",
+      "slug": "relief",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "4b38d5d4-25e3-48fc-a638-e1fefd30cc02",
+      "slug": "applique-relief",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "8559eca6-1631-489d-94ad-c8592d84154b",
+      "slug": "design-layout",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "ee39c5c0-57b1-4780-b37d-6a361e4159f4",
+      "slug": "select-cobalt",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "86e368c6-ae3d-4601-8a76-61e356b0f4bf",
+      "slug": "grind-cobalt",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "e0d6ecde-bfc7-40a5-9aa0-4422e4684582",
+      "slug": "prepare-underglaze-blue",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "cd0822f1-70fe-4656-acc9-8ececd5c1c04",
+      "slug": "underglaze-blue-painting",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "3b19fd66-aedf-4601-9999-124cc64e5900",
+      "slug": "glazing",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "f5fc039a-1a01-4369-8d9a-87e496a71acd",
+      "slug": "dipping-glaze",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "086fc872-86ac-4519-9a8d-3ef727e2db19",
+      "slug": "swirling-glaze",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "481ae8f5-d8f1-4c2f-860d-ce88f3e022f1",
+      "slug": "blown-glaze",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "ab72f5c1-1bc7-404c-a5c1-4b0feba16588",
+      "slug": "pour-glaze",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "20603f37-485b-4a99-8ebb-41194f2956ca",
+      "slug": "spray-glaze",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "d50dba30-c5bb-462e-aedf-df87746bc51d",
+      "slug": "scatter-glaze",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "eb4d831a-05f5-4d21-b2d6-a3e5030fcd25",
+      "slug": "immersion-glaze",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "97e9251a-b225-4320-9fb5-37f1ffdd33f2",
+      "slug": "brush-glaze",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "538d9898-43d5-4b07-8e51-9c2e8fa71606",
+      "slug": "dry-glaze",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "e0e8269c-95ef-44ee-b140-0945a76b9460",
+      "slug": "saggars-clay",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "fdbdd1a8-e6fe-4d62-b461-966c95dcb0cb",
+      "slug": "saggars-making",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "c11dade5-3496-4b6b-b48a-6c06ac3e5872",
+      "slug": "saggars-repair",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "181ed8fe-faa1-4726-a79e-37f8bb22be3f",
+      "slug": "loading",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "12c3e92c-75bf-4795-a292-62513a9736a2",
+      "slug": "filling-kiln",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "3973ccb3-d620-4def-b067-7719a6d41df7",
+      "slug": "firing-master-control",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "068e73c8-4440-491a-960e-a9b1b2073b39",
+      "slug": "carrying-greenware",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "faab1216-0441-4f31-a1d8-44e265bac4cd",
+      "slug": "ignition",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "27199957-3860-495c-bec8-7c6b774cc626",
+      "slug": "kiln-firing",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "craft_processes",
+      "key_column": "id",
+      "id": "88b3cf97-71d4-4a09-81b1-4a6e4dd04a08",
+      "slug": "cooling",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "description_zh",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "timeline_context",
+      "key_column": "entry_id",
+      "id": "30b5c284-8abc-4232-85a2-b9f482faef5e",
+      "slug": "arita-kiln",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "historical_role",
+        "relationship_to_jingdezhen",
+        "ai_summary",
+        "description_source_type",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "timeline_context",
+      "key_column": "entry_id",
+      "id": "e479a789-c150-4bd2-814c-26546a618473",
+      "slug": "europe-porcelain",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "historical_role",
+        "relationship_to_jingdezhen",
+        "ai_summary",
+        "description_source_type",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "timeline_context",
+      "key_column": "entry_id",
+      "id": "36f8fd2a-8159-454b-ba59-01f5ac1a23b3",
+      "slug": "uk-ceramics",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "historical_role",
+        "relationship_to_jingdezhen",
+        "ai_summary",
+        "description_source_type",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "timeline_context",
+      "key_column": "entry_id",
+      "id": "5d78cc09-2c89-466d-a083-db1d5187cbc8",
+      "slug": "japan-ceramics",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "historical_role",
+        "relationship_to_jingdezhen",
+        "ai_summary",
+        "description_source_type",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "timeline_context",
+      "key_column": "entry_id",
+      "id": "da892d36-fa24-4b30-b53b-e650aaa8acf5",
+      "slug": "imperial-kiln",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "historical_role",
+        "relationship_to_jingdezhen",
+        "ai_summary",
+        "description_source_type",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "timeline_context",
+      "key_column": "entry_id",
+      "id": "f5f20387-c923-4435-bdba-9d4af72ab381",
+      "slug": "jingdezhen",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "historical_role",
+        "relationship_to_jingdezhen",
+        "ai_summary",
+        "description_source_type",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "timeline_context",
+      "key_column": "entry_id",
+      "id": "f31277c6-351c-40fc-b750-2d8002d92be2",
+      "slug": "hutian-kiln",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "historical_role",
+        "relationship_to_jingdezhen",
+        "ai_summary",
+        "description_source_type",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "timeline_context",
+      "key_column": "entry_id",
+      "id": "d1895124-a294-4bf8-a9de-60a761812326",
+      "slug": "gaoling-mining",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "historical_role",
+        "relationship_to_jingdezhen",
+        "ai_summary",
+        "description_source_type",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "timeline_context",
+      "key_column": "entry_id",
+      "id": "d03ad6a7-7467-40c2-a75d-e83bcfdd9508",
+      "slug": "five-dynasties-song",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "historical_role",
+        "relationship_to_jingdezhen",
+        "ai_summary",
+        "description_source_type",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "timeline_context",
+      "key_column": "entry_id",
+      "id": "f2ae381c-27d3-4fea-8c4a-2747a993e50b",
+      "slug": "yuan-blue-white",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "historical_role",
+        "relationship_to_jingdezhen",
+        "ai_summary",
+        "description_source_type",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "timeline_context",
+      "key_column": "entry_id",
+      "id": "ac26e854-9c9a-44f5-b0ef-22079cc9a446",
+      "slug": "ming-imperial-kiln",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "historical_role",
+        "relationship_to_jingdezhen",
+        "ai_summary",
+        "description_source_type",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "timeline_context",
+      "key_column": "entry_id",
+      "id": "832a7646-2137-4cd0-9625-0eb3bb102a02",
+      "slug": "qing-colors",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "historical_role",
+        "relationship_to_jingdezhen",
+        "ai_summary",
+        "description_source_type",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "timeline_context",
+      "key_column": "entry_id",
+      "id": "d41a560b-ed35-4203-a225-561334bff045",
+      "slug": "modern-industry",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "historical_role",
+        "relationship_to_jingdezhen",
+        "ai_summary",
+        "description_source_type",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "timeline_context",
+      "key_column": "entry_id",
+      "id": "8d7e1841-0b67-4028-af17-dd1c0741c409",
+      "slug": "active-archaeology",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "historical_role",
+        "relationship_to_jingdezhen",
+        "ai_summary",
+        "description_source_type",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "timeline_context",
+      "key_column": "entry_id",
+      "id": "c7dafc47-fd50-48df-9cd0-64f26f993024",
+      "slug": "unesco-2026",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "historical_role",
+        "relationship_to_jingdezhen",
+        "ai_summary",
+        "description_source_type",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    },
+    {
+      "table": "timeline_context",
+      "key_column": "entry_id",
+      "id": "dc0052fd-9c6a-4fcc-94c1-5e9bdc4e52e6",
+      "slug": "jun-kiln",
+      "original_guard_passed": true,
+      "expected_version": null,
+      "updated_fields": [
+        "historical_role",
+        "relationship_to_jingdezhen",
+        "ai_summary",
+        "description_source_type",
+        "updated_at"
+      ],
+      "metadata_fields": [],
+      "source_list_present": true
+    }
+  ],
+  "sql_checks_required": [
+    "current SQL identity and grants",
+    "current RLS policies",
+    "all target columns and constraints",
+    "version and audit triggers",
+    "updated_by reset to NULL and updated_at update",
+    "transaction rollback side effects",
+    "full backup and restore readiness"
+  ]
+}
