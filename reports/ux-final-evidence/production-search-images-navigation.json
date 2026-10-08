@@ -1,0 +1,454 @@
+{
+  "base": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/",
+  "checks": [
+    {
+      "check": "Unified search database",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Unified search Markdown",
+      "passed": true,
+      "detail": [
+        {
+          "url": "/jingdezhen-porcelain-wiki/craft/qinghua/",
+          "title": "青花"
+        },
+        {
+          "url": "/jingdezhen-porcelain-wiki/museum/",
+          "title": "博物馆总览"
+        },
+        {
+          "url": "/jingdezhen-porcelain-wiki/museum/catalog/",
+          "title": "器物"
+        },
+        {
+          "url": "/jingdezhen-porcelain-wiki/network/global/",
+          "title": "全球陶瓷交流"
+        },
+        {
+          "url": "/jingdezhen-porcelain-wiki/",
+          "title": "首页"
+        },
+        {
+          "url": "/jingdezhen-porcelain-wiki/history/song-yuan/",
+          "title": "宋元"
+        },
+        {
+          "url": "/jingdezhen-porcelain-wiki/history/export-and-exchange/",
+          "title": "外销与跨文化交流"
+        },
+        {
+          "url": "/jingdezhen-porcelain-wiki/aesthetics/patterns/",
+          "title": "纹饰与题材"
+        },
+        {
+          "url": "/jingdezhen-porcelain-wiki/aesthetics/glazes-and-decoration/",
+          "title": "釉色与装饰：区分材料、位置和制作方法"
+        },
+        {
+          "url": "/jingdezhen-porcelain-wiki/research/museum-sources/",
+          "title": "博物馆资料与图像来源"
+        },
+        {
+          "url": "/jingdezhen-porcelain-wiki/contemporary/art/",
+          "title": "当代艺术"
+        },
+        {
+          "url": "/jingdezhen-porcelain-wiki/craft/",
+          "title": "工艺总览"
+        },
+        {
+          "url": "/jingdezhen-porcelain-wiki/network/relations/",
+          "title": "关系探索"
+        },
+        {
+          "url": "/jingdezhen-porcelain-wiki/research/sources/",
+          "title": "核心文献库"
+        },
+        {
+          "url": "/jingdezhen-porcelain-wiki/history/",
+          "title": "历史总览"
+        },
+        {
+          "url": "/jingdezhen-porcelain-wiki/objects/",
+          "title": "器物分类"
+        },
+        {
+          "url": "/jingdezhen-porcelain-wiki/research/heritage/",
+          "title": "世界遗产"
+        },
+        {
+          "url": "/jingdezhen-porcelain-wiki/history/tang-wudai/",
+          "title": "唐五代"
+        },
+        {
+          "url": "/jingdezhen-porcelain-wiki/museum/gallery/",
+          "title": "图片馆"
+        },
+        {
+          "url": "/jingdezhen-porcelain-wiki/craft/kiln-firing/",
+          "title": "窑炉与烧成"
+        },
+        {
+          "url": "/jingdezhen-porcelain-wiki/craft/raw-materials/",
+          "title": "原料与配方"
+        },
+        {
+          "url": "/jingdezhen-porcelain-wiki/craft/technology-tree/",
+          "title": "制瓷技术树"
+        }
+      ]
+    },
+    {
+      "check": "Alias/pinyin/traditional qinghua",
+      "passed": true,
+      "detail": 56
+    },
+    {
+      "check": "Alias/pinyin/traditional qinghuaci",
+      "passed": true,
+      "detail": 56
+    },
+    {
+      "check": "Alias/pinyin/traditional yuyao",
+      "passed": true,
+      "detail": 59
+    },
+    {
+      "check": "Alias/pinyin/traditional hutian",
+      "passed": true,
+      "detail": 18
+    },
+    {
+      "check": "Alias/pinyin/traditional tangying",
+      "passed": true,
+      "detail": 6
+    },
+    {
+      "check": "Alias/pinyin/traditional gaoling",
+      "passed": true,
+      "detail": 26
+    },
+    {
+      "check": "Alias/pinyin/traditional jingdezhen",
+      "passed": true,
+      "detail": 100
+    },
+    {
+      "check": "Alias/pinyin/traditional fen cai",
+      "passed": true,
+      "detail": 22
+    },
+    {
+      "check": "Alias/pinyin/traditional fencai",
+      "passed": true,
+      "detail": 22
+    },
+    {
+      "check": "Alias/pinyin/traditional qingbai",
+      "passed": true,
+      "detail": 21
+    },
+    {
+      "check": "Alias/pinyin/traditional 御窯廠",
+      "passed": true,
+      "detail": 59
+    },
+    {
+      "check": "Alias/pinyin/traditional 景德鎮",
+      "passed": true,
+      "detail": 100
+    },
+    {
+      "check": "Alias/pinyin/traditional 雞缸杯",
+      "passed": true,
+      "detail": 2
+    },
+    {
+      "check": "Alias/pinyin/traditional 玲瓏瓷",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "check": "Alias/pinyin/traditional 琺瑯彩",
+      "passed": true,
+      "detail": 2
+    },
+    {
+      "check": "Markdown actual page",
+      "passed": true,
+      "detail": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/craft/qinghua/"
+    },
+    {
+      "check": "Image filter actual visible results",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Literature filter actual academic topic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Empty state exact query/category/popular/reset",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Evidence default collapsed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Ordinary URLs not labelled verified",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Evidence complete chain sources and relationships",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Entry shared viewer",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Entry zoom changes both dimensions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Entry zoom out restores size",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Entry fit preserves aspect ratio",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Entry fit stays inside viewport",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Entry viewer ESC",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Catalog shared viewer",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Catalog image source label retained",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Catalog image era retained",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Catalog zoom changes both dimensions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Catalog zoom out restores size",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Catalog fit preserves aspect ratio",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Catalog fit stays inside viewport",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Catalog viewer ESC",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "People viewer entrance",
+      "passed": true,
+      "detail": "NOT APPLICABLE: no image records in this live surface"
+    },
+    {
+      "check": "Gallery shared viewer",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Gallery image source retained",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Gallery zoom changes both dimensions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Gallery zoom out restores size",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Gallery fit preserves aspect ratio",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Gallery fit stays inside viewport",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Gallery viewer ESC",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Search shared viewer",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Search image source label retained",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Search zoom changes both dimensions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Search zoom out restores size",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Search fit preserves aspect ratio",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Search fit stays inside viewport",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Search viewer ESC",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Map shared viewer",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Map image era retained",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Map zoom changes both dimensions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Map zoom out restores size",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Map fit preserves aspect ratio",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Map fit stays inside viewport",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Map viewer ESC",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Timeline shared viewer",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Timeline existing institution and source",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Production craft Entry",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Single footer ",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Single footer entry/tang-ying/",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Breadcrumb current entry/tang-ying/",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Single footer craft/qinghua/",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Breadcrumb current craft/qinghua/",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Single footer museum/catalog/",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Breadcrumb current museum/catalog/",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Single footer museum/people/",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Breadcrumb current museum/people/",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}

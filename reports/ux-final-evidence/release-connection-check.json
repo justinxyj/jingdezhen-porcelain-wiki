@@ -1,0 +1,9 @@
+{
+  "workflow_run": 37671062659,
+  "workflow_url": "https://github.com/justinxyj/jingdezhen-porcelain-wiki/actions/runs/37671062659",
+  "conclusion": "failure",
+  "exit_code": 2,
+  "message": "BLOCKED: H3_DB_URL is not configured. No preview or writes performed.",
+  "live_preview_performed": false,
+  "database_writes_performed": false
+}

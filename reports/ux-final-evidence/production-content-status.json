@@ -1,0 +1,979 @@
+{
+  "read_at_utc": "2026-10-08T01:52:24.610477+00:00",
+  "production_database_content_matches": {
+    "entries": 0,
+    "craft_processes": 0,
+    "timeline_context": 0
+  },
+  "original_records_still_unchanged": {
+    "entries": 79,
+    "craft_processes": 65,
+    "timeline_context": 16
+  },
+  "database_write_performed": false,
+  "live_dry_run_performed": false,
+  "website_new_editorial_verified": false,
+  "write_credentials_available": false,
+  "targets": [
+    {
+      "table": "entries",
+      "slug": "ceramic-workers",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "porcelain-raw-material-system",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "porcelain-craft-division-labor",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "imperial-civilian-kilns",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "colored-glaze",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "yuan-blue-white",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "five-dynasties-song",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "r25",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "hutian-kiln",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "fencai",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "modern-industry",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "r19",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "unesco-2026",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "r11",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "ming-imperial-kiln",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "porcelain-stone",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "kaolin-clay",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "binary-formula",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "porcelain-clay-processing",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "kiln-firing",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "red-glaze-jingdezhen",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "langyao-red",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "fencai-technique",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "overglaze-enamels",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "archaeological-stratigraphy",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "porcelain-sherds",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "kiln-waste",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "imperial-porcelain-debris",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "active-archaeology",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "imperial-kiln-management",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "export-porcelain",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "kraak-porcelain",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "japanese-export-porcelain",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "arita-jingdezhen",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "dutch-east-india-company",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "portuguese-porcelain-trade",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "chinoiserie",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "export-kiln-production",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "yongle-copper-red-dish",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "met-1991-253-33",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "r03",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "r10",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "r32",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "r23",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "yin-hong-xu",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "jean-baptiste-du-halde",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "lettres-edifiantes-porcelaine",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "jingdezhen-taolu",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "meissen-porcelain",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "meissen-jingdezhen",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "sevres-porcelain",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "chinese-bluewhite-global-copy",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "wang-shixing",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "shen-defu",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "wen-zhenheng",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "porcelain-marks",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "reign-marks",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "sweet-white-porcelain",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "markley",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "li-zhengdao",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "zhang-songmao",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "huang-yunpeng",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "liu-yuanchang",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "qin-xilin",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "r13",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "r12",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "r14",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "r15",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "r26",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "r28",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "r30",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "r09",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "r35",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "r21",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "longfellow",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "wang-xiliang",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "r20",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "industry-transition",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "entries",
+      "slug": "jun-kiln",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "mining",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "ore-selection",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "stone-quarrying",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "crushing",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "pounding",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "washing",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "sieving",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "iron-removal",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "settling",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "dewatering",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "batching",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "grinding",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "mixing",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "kneading",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "kneading-by-hand",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "aging",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "portioning",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "clay-quantity",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "mud-washing",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "clay-resting",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "on-wheel",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "centering",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "throwing",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "trimming-greenware",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "molding",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "joining-parts",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "drying-greenware",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "liju",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "gualing",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "finishing",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "foot-cutting",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "foot-finishing",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "water-correction",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "attach-handle-spout-ear",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "incising",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "sgraffito",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "stamping-pattern",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "openwork-carving",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "relief",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "applique-relief",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "design-layout",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "select-cobalt",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "grind-cobalt",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "prepare-underglaze-blue",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "underglaze-blue-painting",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "glazing",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "dipping-glaze",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "swirling-glaze",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "blown-glaze",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "pour-glaze",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "spray-glaze",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "scatter-glaze",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "immersion-glaze",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "brush-glaze",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "dry-glaze",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "saggars-clay",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "saggars-making",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "saggars-repair",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "loading",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "filling-kiln",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "firing-master-control",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "carrying-greenware",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "ignition",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "kiln-firing",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "craft_processes",
+      "slug": "cooling",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "timeline_context",
+      "slug": "arita-kiln",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "timeline_context",
+      "slug": "europe-porcelain",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "timeline_context",
+      "slug": "uk-ceramics",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "timeline_context",
+      "slug": "japan-ceramics",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "timeline_context",
+      "slug": "imperial-kiln",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "timeline_context",
+      "slug": "jingdezhen",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "timeline_context",
+      "slug": "hutian-kiln",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "timeline_context",
+      "slug": "gaoling-mining",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "timeline_context",
+      "slug": "five-dynasties-song",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "timeline_context",
+      "slug": "yuan-blue-white",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "timeline_context",
+      "slug": "ming-imperial-kiln",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "timeline_context",
+      "slug": "qing-colors",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "timeline_context",
+      "slug": "modern-industry",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "timeline_context",
+      "slug": "active-archaeology",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "timeline_context",
+      "slug": "unesco-2026",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    },
+    {
+      "table": "timeline_context",
+      "slug": "jun-kiln",
+      "matches_approved_draft": false,
+      "snapshot_guard": "unchanged"
+    }
+  ]
+}

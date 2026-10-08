@@ -1,0 +1,45 @@
+{
+  "production_code_commit": "e4faee7f7d15cd908c8b2aacd31013947b640d6a",
+  "asset_checks": [
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/visitor-ui.js",
+      "sha256": "ff7aeadeb4f8773405c65ba70cbe22ca439aaf47bc7df8fda6a173ac0163c41d",
+      "matches_committed_source": true
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/network-explorer.js",
+      "sha256": "6278577356d33c3af82655a8f2820d80eb0ba5800fa7ca9804e2626aed9f428a",
+      "matches_committed_source": true
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/timeline-details.js",
+      "sha256": "a55075cb6a103d500d3b4f679598c2c6cae34955011a7b8ee150e847b12da453",
+      "matches_committed_source": true
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/knowledge-store.js",
+      "sha256": "e40833263a988562cd4b5fd0c7a3a1c52d748bbf180c2509ced6c2a058afa78c",
+      "matches_committed_source": true
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/museum.js",
+      "sha256": "1f38ba3f3a52e4fdeec5d17070dddfc5012855488f7dd193b85223478a17dbb9",
+      "matches_committed_source": true
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/javascripts/wiki-enhancements.js",
+      "sha256": "3e60f6fae23b888d9162ed2e41625c294390d2306e90a9ca6451e4595bee8716",
+      "matches_committed_source": true
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/visitor.css",
+      "sha256": "0e723bd93fa00e359daac14b91c25e0fccc4ad18052fd01aea9d3dd8c752cc6e",
+      "matches_committed_source": true
+    },
+    {
+      "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/stylesheets/network-explorer.css",
+      "sha256": "3b52bef87972474f6d7bb1ee22b846800db0c4f3ea180caa37b8b050b36866c0",
+      "matches_committed_source": true
+    }
+  ]
+}

@@ -1,0 +1,566 @@
+[
+  {
+    "baseline": "Before first UX fa567b2",
+    "url": "http://127.0.0.1:8015/jingdezhen-porcelain-wiki/",
+    "viewport": [
+      1440,
+      1000
+    ],
+    "total_height": 7234,
+    "sections": 7,
+    "first_screen": [
+      {
+        "tag": "A",
+        "text": "首页"
+      },
+      {
+        "tag": "A",
+        "text": "景德镇陶瓷数字博物馆\n景德镇陶瓷知识世界"
+      },
+      {
+        "tag": "A",
+        "text": "探索"
+      },
+      {
+        "tag": "A",
+        "text": "博物馆"
+      },
+      {
+        "tag": "A",
+        "text": "时间"
+      },
+      {
+        "tag": "A",
+        "text": "知识网络"
+      },
+      {
+        "tag": "H1",
+        "text": "景德镇陶瓷，\n从材料到世界。"
+      },
+      {
+        "tag": "P",
+        "text": "从青白瓷、青花与彩瓷出发，查阅制作技术、窑址、人物与历史资料，理解器物怎样连接生产和生活。"
+      },
+      {
+        "tag": "A",
+        "text": "探索器物\n→"
+      },
+      {
+        "tag": "A",
+        "text": "进入七个阅读主题 ↓"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "回到页面顶部"
+      }
+    ]
+  },
+  {
+    "baseline": "Round 2 production baseline 4b7a2bd",
+    "url": "http://127.0.0.1:8014/jingdezhen-porcelain-wiki/",
+    "viewport": [
+      1440,
+      1000
+    ],
+    "total_height": 4150,
+    "sections": 6,
+    "first_screen": [
+      {
+        "tag": "A",
+        "text": ""
+      },
+      {
+        "tag": "P",
+        "text": "景德镇陶瓷数字博物馆"
+      },
+      {
+        "tag": "H1",
+        "text": "青花，不止于蓝。"
+      },
+      {
+        "tag": "P",
+        "text": "从一件瓷器出发，认识千年窑火、匠人与世界。"
+      },
+      {
+        "tag": "INPUT",
+        "text": "搜索青花、唐英、湖田窑……"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "搜索"
+      },
+      {
+        "tag": "P",
+        "text": "热门：青花 · 唐英 · 御窑厂 · 粉彩"
+      },
+      {
+        "tag": "A",
+        "text": "青花"
+      },
+      {
+        "tag": "A",
+        "text": "唐英"
+      },
+      {
+        "tag": "A",
+        "text": "御窑厂"
+      },
+      {
+        "tag": "A",
+        "text": "粉彩"
+      },
+      {
+        "tag": "A",
+        "text": "第一次来？从这里开始 ↓"
+      },
+      {
+        "tag": "H2",
+        "text": "第一次来？八步认识景德镇"
+      }
+    ]
+  },
+  {
+    "baseline": "Current production",
+    "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/",
+    "viewport": [
+      1440,
+      1000
+    ],
+    "total_height": 4112,
+    "sections": 6,
+    "first_screen": [
+      {
+        "tag": "A",
+        "text": ""
+      },
+      {
+        "tag": "P",
+        "text": "景德镇陶瓷数字博物馆"
+      },
+      {
+        "tag": "H1",
+        "text": "青花，不止于蓝。"
+      },
+      {
+        "tag": "P",
+        "text": "从一件瓷器出发，认识千年窑火、匠人与世界。"
+      },
+      {
+        "tag": "INPUT",
+        "text": "搜索青花、唐英、湖田窑……"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "搜索"
+      },
+      {
+        "tag": "P",
+        "text": "热门：青花 · 唐英 · 御窑厂 · 粉彩"
+      },
+      {
+        "tag": "A",
+        "text": "青花"
+      },
+      {
+        "tag": "A",
+        "text": "唐英"
+      },
+      {
+        "tag": "A",
+        "text": "御窑厂"
+      },
+      {
+        "tag": "A",
+        "text": "粉彩"
+      },
+      {
+        "tag": "A",
+        "text": "第一次来？从这里开始 ↓"
+      },
+      {
+        "tag": "H2",
+        "text": "第一次来？八步认识景德镇"
+      }
+    ]
+  },
+  {
+    "baseline": "Before first UX fa567b2",
+    "url": "http://127.0.0.1:8015/jingdezhen-porcelain-wiki/",
+    "viewport": [
+      390,
+      844
+    ],
+    "total_height": 8724,
+    "sections": 7,
+    "first_screen": [
+      {
+        "tag": "A",
+        "text": ""
+      },
+      {
+        "tag": "A",
+        "text": "justinxyj/jingdezhen-porcelain-wiki\n0\n0"
+      },
+      {
+        "tag": "A",
+        "text": "首页"
+      },
+      {
+        "tag": "A",
+        "text": "历史总览"
+      },
+      {
+        "tag": "A",
+        "text": "唐五代"
+      },
+      {
+        "tag": "A",
+        "text": "宋元"
+      },
+      {
+        "tag": "A",
+        "text": "明清"
+      },
+      {
+        "tag": "A",
+        "text": "近现代"
+      },
+      {
+        "tag": "A",
+        "text": "外销与跨文化交流"
+      },
+      {
+        "tag": "A",
+        "text": "工艺总览"
+      },
+      {
+        "tag": "A",
+        "text": "制瓷技术树"
+      },
+      {
+        "tag": "A",
+        "text": "原料与配方"
+      },
+      {
+        "tag": "A",
+        "text": "成型与修整"
+      },
+      {
+        "tag": "A",
+        "text": "窑炉与烧成"
+      },
+      {
+        "tag": "A",
+        "text": "青花"
+      },
+      {
+        "tag": "A",
+        "text": "粉彩"
+      },
+      {
+        "tag": "A",
+        "text": "颜色釉"
+      },
+      {
+        "tag": "A",
+        "text": "器物分类"
+      },
+      {
+        "tag": "A",
+        "text": "纹饰与题材"
+      },
+      {
+        "tag": "A",
+        "text": "窑址总览"
+      },
+      {
+        "tag": "A",
+        "text": "御窑厂"
+      },
+      {
+        "tag": "A",
+        "text": "湖田窑"
+      },
+      {
+        "tag": "A",
+        "text": "其他窑址与矿料"
+      },
+      {
+        "tag": "A",
+        "text": "人物总览"
+      },
+      {
+        "tag": "A",
+        "text": "研究规范"
+      },
+      {
+        "tag": "A",
+        "text": "核心文献库"
+      },
+      {
+        "tag": "A",
+        "text": "博物馆资料与图像来源"
+      },
+      {
+        "tag": "A",
+        "text": "文献总库"
+      },
+      {
+        "tag": "A",
+        "text": "考古资料与时间轴"
+      },
+      {
+        "tag": "A",
+        "text": "研究导览"
+      },
+      {
+        "tag": "A",
+        "text": "世界遗产"
+      },
+      {
+        "tag": "A",
+        "text": "补充文献库"
+      },
+      {
+        "tag": "A",
+        "text": "现代总览"
+      },
+      {
+        "tag": "A",
+        "text": "教育与研究"
+      },
+      {
+        "tag": "A",
+        "text": "产业与社会"
+      },
+      {
+        "tag": "A",
+        "text": "当代艺术"
+      },
+      {
+        "tag": "A",
+        "text": "世界遗产与保护"
+      },
+      {
+        "tag": "A",
+        "text": "数字化与未来"
+      },
+      {
+        "tag": "A",
+        "text": "统一搜索"
+      },
+      {
+        "tag": "A",
+        "text": "博物馆总览"
+      },
+      {
+        "tag": "A",
+        "text": "历史时间轴"
+      },
+      {
+        "tag": "A",
+        "text": "窑址地图"
+      },
+      {
+        "tag": "A",
+        "text": "器物图谱"
+      },
+      {
+        "tag": "A",
+        "text": "人物数据库"
+      },
+      {
+        "tag": "A",
+        "text": "制瓷技术树"
+      },
+      {
+        "tag": "A",
+        "text": "图片馆"
+      },
+      {
+        "tag": "A",
+        "text": "名人与书籍"
+      },
+      {
+        "tag": "A",
+        "text": "知识条目"
+      },
+      {
+        "tag": "A",
+        "text": "知识网络总览"
+      },
+      {
+        "tag": "A",
+        "text": "关系探索"
+      },
+      {
+        "tag": "A",
+        "text": "全球陶瓷网络"
+      },
+      {
+        "tag": "A",
+        "text": "景德镇陶瓷数字博物馆\n景德镇陶瓷知识世界"
+      },
+      {
+        "tag": "A",
+        "text": "知识网络"
+      },
+      {
+        "tag": "H1",
+        "text": "景德镇陶瓷，\n从材料到世界。"
+      },
+      {
+        "tag": "P",
+        "text": "从青白瓷、青花与彩瓷出发，查阅制作技术、窑址、人物与历史资料，理解器物怎样连接生产和生活。"
+      },
+      {
+        "tag": "A",
+        "text": "探索器物\n→"
+      },
+      {
+        "tag": "A",
+        "text": "进入七个阅读主题 ↓"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "回到页面顶部"
+      }
+    ]
+  },
+  {
+    "baseline": "Round 2 production baseline 4b7a2bd",
+    "url": "http://127.0.0.1:8014/jingdezhen-porcelain-wiki/",
+    "viewport": [
+      390,
+      844
+    ],
+    "total_height": 5916,
+    "sections": 6,
+    "first_screen": [
+      {
+        "tag": "A",
+        "text": ""
+      },
+      {
+        "tag": "P",
+        "text": "景德镇陶瓷数字博物馆"
+      },
+      {
+        "tag": "H1",
+        "text": "青花，不止于蓝。"
+      },
+      {
+        "tag": "P",
+        "text": "从一件瓷器出发，认识千年窑火、匠人与世界。"
+      },
+      {
+        "tag": "INPUT",
+        "text": "搜索青花、唐英、湖田窑……"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "搜索"
+      },
+      {
+        "tag": "P",
+        "text": "热门：青花 · 唐英 · 御窑厂 · 粉彩"
+      },
+      {
+        "tag": "A",
+        "text": "青花"
+      },
+      {
+        "tag": "A",
+        "text": "唐英"
+      },
+      {
+        "tag": "A",
+        "text": "御窑厂"
+      },
+      {
+        "tag": "A",
+        "text": "粉彩"
+      },
+      {
+        "tag": "A",
+        "text": "第一次来？从这里开始 ↓"
+      },
+      {
+        "tag": "H2",
+        "text": "第一次来？八步认识景德镇"
+      },
+      {
+        "tag": "P",
+        "text": "沿着泥土成为瓷器、瓷器走向世界的过程阅读。每一步都可以单独开始。"
+      }
+    ]
+  },
+  {
+    "baseline": "Current production",
+    "url": "https://justinxyj.github.io/jingdezhen-porcelain-wiki/",
+    "viewport": [
+      390,
+      844
+    ],
+    "total_height": 5880,
+    "sections": 6,
+    "first_screen": [
+      {
+        "tag": "A",
+        "text": ""
+      },
+      {
+        "tag": "P",
+        "text": "景德镇陶瓷数字博物馆"
+      },
+      {
+        "tag": "H1",
+        "text": "青花，不止于蓝。"
+      },
+      {
+        "tag": "P",
+        "text": "从一件瓷器出发，认识千年窑火、匠人与世界。"
+      },
+      {
+        "tag": "INPUT",
+        "text": "搜索青花、唐英、湖田窑……"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "搜索"
+      },
+      {
+        "tag": "P",
+        "text": "热门：青花 · 唐英 · 御窑厂 · 粉彩"
+      },
+      {
+        "tag": "A",
+        "text": "青花"
+      },
+      {
+        "tag": "A",
+        "text": "唐英"
+      },
+      {
+        "tag": "A",
+        "text": "御窑厂"
+      },
+      {
+        "tag": "A",
+        "text": "粉彩"
+      },
+      {
+        "tag": "A",
+        "text": "第一次来？从这里开始 ↓"
+      },
+      {
+        "tag": "H2",
+        "text": "第一次来？八步认识景德镇"
+      },
+      {
+        "tag": "P",
+        "text": "沿着泥土成为瓷器、瓷器走向世界的过程阅读。每一步都可以单独开始。"
+      }
+    ]
+  }
+]

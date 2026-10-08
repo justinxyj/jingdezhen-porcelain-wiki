@@ -1,0 +1,152 @@
+{
+  "states": [
+    {
+      "state": "Global search",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "state": "Global search",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "state": "Mobile filters",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "state": "Mobile filters",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "state": "Image viewer",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "state": "Image viewer",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "state": "Map detail",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "state": "Map detail",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "state": "Timeline detail",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "state": "Timeline detail",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "state": "Expanded graph",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 253
+        }
+      ]
+    },
+    {
+      "state": "Expanded graph",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 250
+        }
+      ]
+    },
+    {
+      "state": "Mobile menu",
+      "scheme": "default",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "state": "Mobile menu",
+      "scheme": "slate",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 2
+        }
+      ]
+    }
+  ],
+  "keyboard": [
+    {
+      "check": "Graph selection retains keyboard focus",
+      "passed": true
+    },
+    {
+      "check": "Expanded graph keyboard node exposed to accessibility tree",
+      "passed": true
+    },
+    {
+      "check": "Truncated graph label retains full accessible description",
+      "passed": true
+    }
+  ]
+}

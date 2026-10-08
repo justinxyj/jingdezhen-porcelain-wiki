@@ -1,0 +1,264 @@
+{
+  "checks": [
+    {
+      "check": "search/?q=青花 default keyboard focus visible",
+      "passed": true
+    },
+    {
+      "check": "search/?q=青花 default reduced motion",
+      "passed": true
+    },
+    {
+      "check": "search/?q=青花 default shared text contrast",
+      "passed": true,
+      "ratios": [
+        {
+          "token": "--visitor-ink",
+          "ratio": 13.119158196607504
+        },
+        {
+          "token": "--visitor-muted",
+          "ratio": 5.693624609650818
+        },
+        {
+          "token": "--visitor-blue",
+          "ratio": 7.590962814828393
+        }
+      ]
+    },
+    {
+      "check": "search/?q=青花 slate keyboard focus visible",
+      "passed": true
+    },
+    {
+      "check": "search/?q=青花 slate reduced motion",
+      "passed": true
+    },
+    {
+      "check": "search/?q=青花 slate shared text contrast",
+      "passed": true,
+      "ratios": [
+        {
+          "token": "--visitor-ink",
+          "ratio": 14.158269592042735
+        },
+        {
+          "token": "--visitor-muted",
+          "ratio": 9.45487583431151
+        },
+        {
+          "token": "--visitor-blue",
+          "ratio": 8.7565085704516
+        }
+      ]
+    },
+    {
+      "check": "museum/timeline/ default keyboard focus visible",
+      "passed": true
+    },
+    {
+      "check": "museum/timeline/ default reduced motion",
+      "passed": true
+    },
+    {
+      "check": "museum/timeline/ default shared text contrast",
+      "passed": true,
+      "ratios": [
+        {
+          "token": "--visitor-ink",
+          "ratio": 13.119158196607504
+        },
+        {
+          "token": "--visitor-muted",
+          "ratio": 5.693624609650818
+        },
+        {
+          "token": "--visitor-blue",
+          "ratio": 7.590962814828393
+        }
+      ]
+    },
+    {
+      "check": "museum/timeline/ slate keyboard focus visible",
+      "passed": true
+    },
+    {
+      "check": "museum/timeline/ slate reduced motion",
+      "passed": true
+    },
+    {
+      "check": "museum/timeline/ slate shared text contrast",
+      "passed": true,
+      "ratios": [
+        {
+          "token": "--visitor-ink",
+          "ratio": 14.158269592042735
+        },
+        {
+          "token": "--visitor-muted",
+          "ratio": 9.45487583431151
+        },
+        {
+          "token": "--visitor-blue",
+          "ratio": 8.7565085704516
+        }
+      ]
+    },
+    {
+      "check": "museum/kiln-map/ default keyboard focus visible",
+      "passed": true
+    },
+    {
+      "check": "museum/kiln-map/ default reduced motion",
+      "passed": true
+    },
+    {
+      "check": "museum/kiln-map/ default shared text contrast",
+      "passed": true,
+      "ratios": [
+        {
+          "token": "--visitor-ink",
+          "ratio": 13.119158196607504
+        },
+        {
+          "token": "--visitor-muted",
+          "ratio": 5.693624609650818
+        },
+        {
+          "token": "--visitor-blue",
+          "ratio": 7.590962814828393
+        }
+      ]
+    },
+    {
+      "check": "museum/kiln-map/ slate keyboard focus visible",
+      "passed": true
+    },
+    {
+      "check": "museum/kiln-map/ slate reduced motion",
+      "passed": true
+    },
+    {
+      "check": "museum/kiln-map/ slate shared text contrast",
+      "passed": true,
+      "ratios": [
+        {
+          "token": "--visitor-ink",
+          "ratio": 14.158269592042735
+        },
+        {
+          "token": "--visitor-muted",
+          "ratio": 9.45487583431151
+        },
+        {
+          "token": "--visitor-blue",
+          "ratio": 8.7565085704516
+        }
+      ]
+    },
+    {
+      "check": "network/relations/ default keyboard focus visible",
+      "passed": true
+    },
+    {
+      "check": "network/relations/ default reduced motion",
+      "passed": true
+    },
+    {
+      "check": "network/relations/ default shared text contrast",
+      "passed": true,
+      "ratios": [
+        {
+          "token": "--visitor-ink",
+          "ratio": 13.119158196607504
+        },
+        {
+          "token": "--visitor-muted",
+          "ratio": 5.693624609650818
+        },
+        {
+          "token": "--visitor-blue",
+          "ratio": 7.590962814828393
+        }
+      ]
+    },
+    {
+      "check": "network/relations/ slate keyboard focus visible",
+      "passed": true
+    },
+    {
+      "check": "network/relations/ slate reduced motion",
+      "passed": true
+    },
+    {
+      "check": "network/relations/ slate shared text contrast",
+      "passed": true,
+      "ratios": [
+        {
+          "token": "--visitor-ink",
+          "ratio": 14.158269592042735
+        },
+        {
+          "token": "--visitor-muted",
+          "ratio": 9.45487583431151
+        },
+        {
+          "token": "--visitor-blue",
+          "ratio": 8.7565085704516
+        }
+      ]
+    },
+    {
+      "check": "entry/blue-and-white/ default keyboard focus visible",
+      "passed": true
+    },
+    {
+      "check": "entry/blue-and-white/ default reduced motion",
+      "passed": true
+    },
+    {
+      "check": "entry/blue-and-white/ default shared text contrast",
+      "passed": true,
+      "ratios": [
+        {
+          "token": "--visitor-ink",
+          "ratio": 13.119158196607504
+        },
+        {
+          "token": "--visitor-muted",
+          "ratio": 5.693624609650818
+        },
+        {
+          "token": "--visitor-blue",
+          "ratio": 7.590962814828393
+        }
+      ]
+    },
+    {
+      "check": "entry/blue-and-white/ slate keyboard focus visible",
+      "passed": true
+    },
+    {
+      "check": "entry/blue-and-white/ slate reduced motion",
+      "passed": true
+    },
+    {
+      "check": "entry/blue-and-white/ slate shared text contrast",
+      "passed": true,
+      "ratios": [
+        {
+          "token": "--visitor-ink",
+          "ratio": 14.158269592042735
+        },
+        {
+          "token": "--visitor-muted",
+          "ratio": 9.45487583431151
+        },
+        {
+          "token": "--visitor-blue",
+          "ratio": 8.7565085704516
+        }
+      ]
+    }
+  ]
+}
