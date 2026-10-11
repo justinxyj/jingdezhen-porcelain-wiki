@@ -34,7 +34,7 @@ with sync_playwright() as p:
  # Keep the article at the same Y position when an external image's much
  # larger fallback SVG replaces the original. Use local data URIs so the
  # regression assertion never depends on a live museum CDN.
- for cover_width in [390,768,1440]:
+ for cover_width in [390,700,768,850,1440]:
   page.set_viewport_size({'width':cover_width,'height':900})
   page.goto(BASE+'entry/blue-and-white/',wait_until='domcontentloaded')
   page.locator('.wiki-entry-body').wait_for(timeout=30000)
@@ -61,7 +61,7 @@ with sync_playwright() as p:
     abs(before_cover['bodyTop']-after_cover['bodyTop'])<=1 and
     before_cover['bodyHTML']==after_cover['bodyHTML'])
    check(f'entry cover fallback preserves footprint {cover_width} {cover_theme}',footprint_ok,measured)
-   if cover_width==768:page.screenshot(path=str(OUT/f'cover-fallback-{cover_width}-{cover_theme}.png'))
+   if cover_width in [700,768]:page.screenshot(path=str(OUT/f'cover-fallback-{cover_width}-{cover_theme}.png'))
 
  page.set_viewport_size({'width':390,'height':844});page.goto(BASE+'museum/catalog/');page.locator('.catalog-card').first.wait_for(timeout=60000)
  panel=page.locator('.visitor-catalog-filters')
