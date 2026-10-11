@@ -30,6 +30,39 @@ with sync_playwright() as p:
    check(f'brand readable {width} {theme}',page.locator('.md-header__topic').first.evaluate('(e)=>e.scrollWidth<=e.clientWidth+1'))
    check(f'hero no overflow {width} {theme}',page.evaluate('document.documentElement.scrollWidth<=innerWidth+1'))
    page.screenshot(path=str(OUT/f'home-{width}-{theme}.png'))
+
+ # Keep the article at the same Y position when an external image's much
+ # larger fallback SVG replaces the original. Use local data URIs so the
+ # regression assertion never depends on a live museum CDN.
+ for cover_width in [390,768,1440]:
+  page.set_viewport_size({'width':cover_width,'height':900})
+  page.goto(BASE+'entry/blue-and-white/',wait_until='domcontentloaded')
+  page.locator('.wiki-entry-body').wait_for(timeout=30000)
+  for cover_theme in ['default','slate']:
+   page.evaluate('(scheme)=>document.body.setAttribute("data-md-color-scheme",scheme)',cover_theme)
+   measured=page.evaluate("""async()=>{
+     const image=document.querySelector('.wiki-entry-cover img');
+     const body=document.querySelector('.wiki-entry-body');
+     if(!image||!body)return {error:'missing cover or body'};
+     const measure=async(w,h)=>{
+       const svg='<svg xmlns="http://www.w3.org/2000/svg" width="'+w+'" height="'+h+'" viewBox="0 0 '+w+' '+h+'"><rect width="'+w+'" height="'+h+'" fill="#d8e1ea"/></svg>';
+       image.src='data:image/svg+xml;charset=UTF-8,'+encodeURIComponent(svg);
+       await image.decode();
+       await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+       const i=image.getBoundingClientRect(),b=body.getBoundingClientRect();
+       return {width:i.width,height:i.height,bodyTop:b.top+scrollY,bodyHTML:body.innerHTML};
+     };
+     return {normal:await measure(480,360),fallback:await measure(1200,800)};
+   }""")
+   before_cover=measured.get('normal');after_cover=measured.get('fallback')
+   footprint_ok=bool(before_cover and after_cover and
+    abs(before_cover['width']-after_cover['width'])<=1 and
+    abs(before_cover['height']-after_cover['height'])<=1 and
+    abs(before_cover['bodyTop']-after_cover['bodyTop'])<=1 and
+    before_cover['bodyHTML']==after_cover['bodyHTML'])
+   check(f'entry cover fallback preserves footprint {cover_width} {cover_theme}',footprint_ok,measured)
+   if cover_width==768:page.screenshot(path=str(OUT/f'cover-fallback-{cover_width}-{cover_theme}.png'))
+
  page.set_viewport_size({'width':390,'height':844});page.goto(BASE+'museum/catalog/');page.locator('.catalog-card').first.wait_for(timeout=60000)
  panel=page.locator('.visitor-catalog-filters')
  check('mobile filters initially folded',panel.get_attribute('open') is None)
