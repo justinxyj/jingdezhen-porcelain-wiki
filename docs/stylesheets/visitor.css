@@ -147,3 +147,23 @@
 @media(min-width:701px){.visitor-catalog-filters summary{display:none}.visitor-catalog-filters>.visitor-catalog-filter-fields{display:grid}.visitor-catalog-filters:not([open])>.visitor-catalog-filter-fields{display:grid}.visitor-catalog-filters{content-visibility:visible}}
 @media(max-width:700px){.visitor-home .visitor-hero{grid-template-columns:1fr;padding:16px;gap:10px}.visitor-hero h1{font-size:32px;margin:10px 0}.visitor-home-search{margin-top:12px}.visitor-hero-object img{height:170px}.visitor-hero-object figcaption{font-size:11px}.visitor-hero-copy>p{margin:8px 0}.visitor-catalog-filter-fields{grid-template-columns:repeat(2,minmax(0,1fr))}.catalog-discovery-toolbar>input{grid-column:1/-1}.visitor-entry-compact{padding:14px!important}.visitor-home .visitor-hero a[href="#first-visit"]{font-size:13px}.md-header__topic:first-child{font-size:13px}}
 .catalog-discovery-toolbar{display:grid;grid-template-columns:minmax(0,1fr) auto}.catalog-discovery-toolbar .visitor-catalog-filters{grid-column:1/-1}.catalog-discovery-toolbar .visitor-filter-status{grid-column:1/-1}.visitor-catalog-filter-fields select:last-of-type{grid-column:auto!important}
+
+
+/* Preserve the Entry cover's dimensions when a remote image is replaced by
+   a larger fallback SVG. Material figure defaults otherwise resize it on
+   701–850px displays and push the authoritative article down. */
+@media (min-width: 701px) and (max-width: 850px) {
+  .wiki-entry-card .wiki-entry-cover {
+    inline-size: min(100%, 520px) !important;
+    max-inline-size: 520px !important;
+    min-inline-size: 0;
+  }
+  .wiki-entry-card .wiki-entry-cover img {
+    display: block;
+    inline-size: 100% !important;
+    max-inline-size: 100%;
+    block-size: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+  }
+}
