@@ -151,8 +151,8 @@
 
 /* Preserve the Entry cover's dimensions when a remote image is replaced by
    a larger fallback SVG. Material figure defaults otherwise resize it on
-   701–850px displays and push the authoritative article down. */
-@media (min-width: 701px) and (max-width: 850px) {
+   mobile/tablet displays through 850px and push the authoritative article down. */
+@media (max-width: 850px) {
   .wiki-entry-card .wiki-entry-cover {
     inline-size: min(100%, 520px) !important;
     max-inline-size: 520px !important;
