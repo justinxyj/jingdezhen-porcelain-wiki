@@ -1,6 +1,6 @@
 # 景德镇陶瓷数字博物馆｜游客体验集中优化最终验收报告
 
-> **状态：等待最终线上验证。** 本报告基于已提交的代码、可核验的 GitHub Actions 和隔离浏览器测试，不将尚未完成的检查写作通过。最终状态将在最新 Pages 与 Validate 完成后更新。
+> **状态：正式游客体验优化验收通过（2026-10-11）。** 本结论由可核验的 GitHub Actions 正式部署、真实浏览器测试及独立回读产物支持；不代表未核实馆藏身份和未来资料维护工作已经完成。
 
 ## 1. 范围和原有成果
 
@@ -35,15 +35,18 @@
 
 前次官方部署工作流 [`37797494149`](https://github.com/justinxyj/jingdezhen-porcelain-wiki/actions/runs/37797494149) 的静态百科稳定性测试 **284通过／1失败**：`private-kiln-high-end-1440-default-normal` 等待 `.wiki-entry-body` 显示超时30秒。页面静态 HTML 中含有正文，故不能据此认定正文数据遗失；也不能仅凭单次超时推定为偶发网络故障。
 
-未删除或放宽测试断言。后续 [PR #33 Validate](https://github.com/justinxyj/jingdezhen-porcelain-wiki/actions/runs/38130946407) 完整验证 **285通过／0失败**，包括该类真实浏览器稳定性检查。最终主分支和部署后测试仍需单独确认。
+未删除或放宽测试断言。后续 [PR #33 Validate](https://github.com/justinxyj/jingdezhen-porcelain-wiki/actions/runs/38130946407) 完整验证 **285通过／0失败**，包括该类真实浏览器稳定性检查。在最终主分支验证与部署后再次测试中，该用例均通过。曾经发生一次超时的事实保留在历史记录中，仍不能反向证明首次超时的全部根因。
 
 ## 4. 已验证与待确认
 
 - PR #33：Validate Museum Build **Success**；250个静态条目和特定弱网／无JS情形合计285个浏览器稳定性用例全部通过；新增封面失败测试通过。
 - 主分支最新代码（含700px断点）：[`ee0c52e4`](https://github.com/justinxyj/jingdezhen-porcelain-wiki/commit/ee0c52e4084e95f043476b30efb3fb92aacdbc49)。
-- 最新 [Validate](https://github.com/justinxyj/jingdezhen-porcelain-wiki/actions/runs/38131677622)：**等待结束**。
-- 最新 [Pages](https://github.com/justinxyj/jingdezhen-porcelain-wiki/actions/runs/38131677633)：**等待结束**。
-- H-3目录检查通过。正式上线验收必须另核对 Pages 的 Build、Deploy、在线 Smoke、Header交互、展览路径、百科DOM稳定性、Supabase ACL 全部检查，不得只凭构建成功宣告运营验收。
+- 最新 [Validate](https://github.com/justinxyj/jingdezhen-porcelain-wiki/actions/runs/38131677622)：**Success**（2026-10-11 UTC）。
+- 最新 [Pages](https://github.com/justinxyj/jingdezhen-porcelain-wiki/actions/runs/38131677633)：**Success**。正式部署完成、Pages Smoke、线上Header交互、游客展览路径、250页稳定性、Supabase ACL均为Success。
+- [H-3目录检查](https://github.com/justinxyj/jingdezhen-porcelain-wiki/actions/runs/38131677624)：**Success**。
+- 从该 Pages 运行的 `entry-render-stability-production` 原始测试产物独立读取：**285/285通过，0失败**；上一轮超时的 `private-kiln-high-end-1440-default-normal` 本轮明确通过。
+- 主分支前置250条静态百科检查同样为 **285/285通过，0失败**；严格的原测试断言及超时阈值均未降低。
+- 此前 `0f0af74` 代码的全站体验优化及本轮仅封面尺寸的补充修复已部署到正式站点，经过上述工作流在线检查。
 
 ## 5. 保护范围和遗留事项
 
@@ -53,4 +56,4 @@
 
 ## 6. 最终签收条件
 
-只有最新主分支 Validate 与 Pages（含部署后全部线上复验）均为Success，且该报告在 `main` 中归档，才能将本次游客体验优化标记为完成。若任一失败，报告保持待验收并记录失败依据。
+**已满足本次集中优化的全部约定收尾条件。** 最新主分支 Validate、H-3目录检查与 Pages（含部署后所有在线复验）均为Success；本报告已归档至 `main`。本次游客体验优化可正式签收，网站转入日常维护。保留先前失败的历史证据与旧云工作区未恢复的说明；不将长期馆藏考证问题当成已解决。
